@@ -26,7 +26,7 @@
     
   
 
-  <title>Process Variables | docs.camunda.org</title>
+  <title>流程变量 | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
   <link rel="shortcut icon" href="http://shaochenfeng.com/camunda-cn/img/favicon.ico" type="image/x-icon" />
@@ -67,13 +67,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <span></span>
       <span></span>
     </button>
-
-    <div class="search-field">
-      <input type="search" class="search-input" placeholder="搜索..." />
-    </div>
+    
+    
 
     <ul class="external-menu">
-      <li class="external"><a href="https://camunda.org">Camunda.org</a></li>
+      <li class="external"><a href="https://docs.camunda.org/manual/latest/">英文文档</a></li>
+      <li class="external"><a href="https://camunda.org">官网首页</a></li>
     </ul>
   </div>
 </nav>
@@ -264,7 +263,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/camunda-cn/user-guide/process-engine/variables/" >Process Variables</a>
+      <a href="/camunda-cn/user-guide/process-engine/variables/" >流程变量</a>
     
   </li>
 
@@ -8140,20 +8139,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       
 <div class="edit-on-github">
-  <a target="_blank" href='https://github.com/zoollcar/camunda-docs-manual-cn/tree/master/content/user-guide/process-engine/variables.md'><i>在 Github 上编辑此页</i> <span class="cam-docs-github"></span></a>
+  <a target="_blank" href='https://github.com/zoollcar/camunda-docs-manual-cn/tree/master/content/user-guide/process-engine/variables.md'>
+    <i>编辑此页</i> <span class="cam-docs-github"></span></a>
 </div>
 
-      <h1 class="page-title">Process Variables</h1>
+      <h1 class="page-title">流程变量</h1>
     </div>
 
     <div class="col-xs-12 content-text">
       
 
-<p>This section describes the concepts of variables in processes. Variables can be used to add data to process runtime state or, more particular, variable scopes. Various API methods that change the state of these entities allow updating of the attached variables. In general, a variable consists of a name and a value. The name is used for identification across process constructs. For example, if one activity sets a variable named <em>var</em>, a follow-up activity can access it by using this name. The value of a variable is a Java object.</p>
+<p>本节描述流程变量的概念。流程变量可以用将数据添加到流程的运行时状态中，或者更具体地说，变量作用域中。改变实体的各种API可以用来更新这些附加的变量。一般来说，一个变量由一个名称和一个值组成。名称用于在整个流程中识别变量。例如，如果一个活动（activity）设置了一个名为 <em>var</em> 的变量，那么后续活动中可以通过使用这个名称来访问它。变量的值是一个 Java 对象。</p>
 
-<h1 id="variable-scopes-and-variable-visibility">Variable Scopes and Variable Visibility</h1>
+<h1 id="变量作用域和变量可访问性">变量作用域和变量可访问性</h1>
 
-<p>All entities that can have variables are called <em>variable scopes</em>. These are executions (which include process instances) and tasks. As described in the  <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/process-engine-concepts/#executions">Concepts section</a>, the runtime state of a process instance is represented by a tree of executions. Consider the following process model where the red dots mark active tasks:</p>
+<p>所有可以拥有变量的实体被称为 <em>变量作用域</em> 。包括执行（包括流程实例在内）和任务。正如在<a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/process-engine-concepts/#executions">概念</a>章节所描述的，流程实例的运行状态由一棵执行树表示。参看下面的流程模型，其中红点标志着活动任务。</p>
 
 <figure class="image">
   <span><img
@@ -8164,7 +8164,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </figure>
 
 
-<p>The runtime structure of this process is as follows:</p>
+<p>这个流程的运行时结构如下：</p>
 
 <figure class="image">
   <span><img
@@ -8175,7 +8175,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </figure>
 
 
-<p>There is a process instance with two child executions, each of which has created a task. All these five entities are variable scopes and the arrows mark a parent-child relationship. A variable that is defined on a parent scope is accessible in every child scope unless a child scope defines a variable of the same name. The other way around, child variables are not accessible from a parent scope. Variables that are directly attached to the scope in question are called <em>local</em> variables. Consider the following assignment of variables to scopes:</p>
+<p>有一个流程实例有两个子执行，每个子执行都创建了一个任务。所有这五个实体都是变量作用域，箭头标志着父-子关系。在父作用域上定义的变量可以在每个子作用域中被访问，除非子作用域定义了同名的变量。反过来说，子变量不能从父作用域访问。直接附属于有关作用域的变量被称为 <em>local</em> 变量。思考一下，下面将变量作用域的分配情况。</p>
 
 <figure class="image">
   <span><img
@@ -8186,11 +8186,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </figure>
 
 
-<p>In this case, when working on <em>Task 1</em> the variables <em>worker</em> and <em>customer</em> are accessible. Note that due to the structure of scopes, the variable <em>worker</em> can be defined twice, so that <em>Task 1</em> accesses a different <em>worker</em> variable than <em>Task 2</em>. However, both share the variable <em>customer</em> which means that if that variable is updated by one of the tasks, this change is also visible to the other.</p>
+<p>在这种情况下，当在 <em>task 1</em> 工作时，可以访问变量 <em>worker</em> 和 <em>customer</em> 。请注意，由于作用域的结构，变量 <em>worker</em> 可以被定义两次，所以 <em>task 1</em> 访问的 <em>worker</em> 变量与 <em>task 2</em> 访问的不同。然而，两者都共享变量 <em>customer</em> ，这意味着如果该变量被其中一个任务更新，这一变化对另一个任务也是可见的。</p>
 
-<p>Both tasks can access two variables each while none of these is a local variable. All  three executions have one local variable each.</p>
+<p>两个任务都可以访问到这两个变量，但这些变量都不是局部变量。所有三个执行任务都有只有一个局部变量。</p>
 
-<p>Now let&rsquo;s say, we set a local variable <em>customer</em> on <em>Task 1</em>:</p>
+<p>现在我们假设，我们在 <em>task 1</em> 上设置了一个局部变量 <em>customer</em> 。</p>
 
 <figure class="image">
   <span><img
@@ -8201,63 +8201,63 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </figure>
 
 
-<p>While two variables named <em>customer</em> and <em>worker</em> can still be accessed from <em>Task 1</em>, the <em>customer</em> variable on <em>Execution 1</em> is hidden, so the accessible <em>customer</em> variable is the local variable of <em>Task 1</em>.</p>
+<p>虽然两个名为 <em>customer</em> 和 <em>worker</em> 的变量仍然可以从 <em>Task 1</em> 访问，但 <em>Execution 1</em> 上的 <em>customer</em> 变量是隐藏的，所以可访问的 <em>customer</em> 变量是 <em>Task 1</em> 的局部变量。</p>
 
-<p>In general, variables are accessible in the following cases:</p>
-
-<ul>
-<li>Instantiating processes</li>
-<li>Delivering messages</li>
-<li>Task lifecycle transitions, such as completion or resolution</li>
-<li>Setting/getting variables from outside</li>
-<li>Setting/getting variables in a <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/delegation-code/">Delegate</a></li>
-<li>Expressions in the process model</li>
-<li>Scripts in the process model</li>
-<li>(Historic) Variable queries</li>
-</ul>
-
-<h1 id="set-and-retrieve-variables-overview">Set and Retrieve Variables - Overview</h1>
-
-<p>To set and retrieve variables, the process engine offers a Java API that allows setting of variables from Java objects and retrieving them in the same form. Internally, the engine persists variables to the database and therefore applies serialization. For most applications, this is a detail of no concern. However, sometimes, when working with custom Java classes, the serialized value of a variable is of interest. Imagine the case of a monitoring application that manages many process applications. It is decoupled from those applications&rsquo; classes and therefore cannot access custom variables in their Java representation. For these cases, the process engine offers a way to retrieve and manipulate the serialized value. This boils down to two APIs:</p>
+<p>一般来说，变量可以被访问 有以下几种情况。</p>
 
 <ul>
-<li><strong>Java Object Value API</strong>: Variables are represented as Java objects. These objects can be directly set as values and retrieved in the same form. This is the more simple API and is the recommended way when implementing code as part of a process application.</li>
-<li><strong>Typed Value API</strong>: Variable values are wrapped in so-called <em>typed values</em> that are used to set and retrieve variables. A typed value offers access to metadata such as the way the engine has serialized the variable and, depending on the type, the serialized representation of the variable. Metadata also contains an information whether a variable is transient or not.</li>
+<li>实例化流程</li>
+<li>传递信息</li>
+<li>任务生命周期的转换，如完成或解决</li>
+<li>从外部设置/获取变量</li>
+<li>设置/获取<a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/delegation-code/">Delegate</a>中的变量</li>
+<li>流程模型中的表达式</li>
+<li>流程模型中的脚本</li>
+<li>（历史性的）变量查询</li>
 </ul>
 
-<p>As an example, the following code retrieves and sets two integer variables using both APIs:</p>
+<h1 id="设置和查询变量-概述">设置和查询变量 - 概述</h1>
 
-<pre><code class="language-java">// Java Object API: Get Variable
+<p>为了设置和查询变量，流程引擎提供了一个Java API，允许从Java中设置变量，并以同样的形式查询它们。在流程引擎内部，引擎使用序列化将变量持久化到数据库中。对于大多数应用程序来说，这是一个无关紧要的细节。然而，有时，当使用自定义的Java类时，变量的序列化值是有意义的。想象一下一个管理许多流程应用程序的监控应用程序的情况。它与这些应用程序的类解耦，因此不能访问其Java表示中的自定义变量。对于这些情况，流程引擎提供了一种查询和操作序列化值的方法。可以归结为两个API。</p>
+
+<ul>
+<li><strong>Java Object Value API</strong>: 变量被表示为Java对象。这些对象可以直接被设置为值，并以同样的形式被检索。这是更简单的API，在实现代码作为流程应用的一部分时，是推荐的方式。</li>
+<li><strong>Typed Value API</strong>: 变量值被包裹在所谓的 <em>typed values</em> 中，用于设置和查询变量。类型化的值提供了对元数据的访问，如引擎对变量进行序列化的方式，以及根据类型，变量的序列化表示。元数据还包含一个信息，即一个变量是否是瞬时的。</li>
+</ul>
+
+<p>例如，下面的代码对两个整数变量使用了两种API查询和设置方式：</p>
+
+<pre><code class="language-java">// Java Object API: 查询变量
 Integer val1 = (Integer) execution.getVariable(&quot;val1&quot;);
 
-// Typed Value API: Get Variable
+// Typed Value API: 查询变量
 IntegerValue typedVal2 = execution.getVariableTyped(&quot;val2&quot;);
 Integer val2 = typedVal2.getValue();
 
 Integer diff = val1 - val2;
 
-// Java Object API: Set Variable
+// Java Object API: 设置变量
 execution.setVariable(&quot;diff&quot;, diff);
 
-// Typed Value API: Set Variable
+// Typed Value API: 设置变量
 IntegerValue typedDiff = Variables.integerValue(diff);
 execution.setVariable(&quot;diff&quot;, typedDiff);
 </code></pre>
 
-<p>The specifics of this code are described in more detail in the sections on the <a href="#java-object-api">Java Object Value API</a> and the <a href="#typed-value-api">Typed Value API</a>.</p>
+<p>这段代码的具体内容在<a href="#java-object-api">Java Object Value API</a> 和 <a href="#typed-value-api">Typed Value API</a>部分有更详细的描述。</p>
 
-<h2 id="setting-variables-to-specific-scope">Setting variables to specific scope</h2>
+<h2 id="将变量设置为特定作用域">将变量设置为特定作用域</h2>
 
-<p>There is a possibility to set variables into specific scope from scripts, input\output mapping, listeners and service tasks. Implementation of this functionality is using activity id in order to identify destination scope and will throw an exception if no scope is located to set a variable. Additionally, once target scope is found, variable will be set locally in it, which means that propagation to the parent scope will not be executed even if destination scope does not have a variable with given id.</p>
+<p>有可能从脚本（scripts）、输入/输出映射（input\output mapping）、监听器（listeners）和服务任务（service tasks）中设置变量到特定的作用域。这个功能的实现是使用活动ID来识别目标作用域，如果没有找到可以设置变量的作用域，就会抛出一个异常。一旦找到目标作用域，变量将被设置在它的本地，这意味着即使目标作用域没有给定id的变量，传播到父作用域的流程也不会被执行。</p>
 
-<p>Here is example usage with script executionListener:</p>
+<p>下面是使用脚本executionListener的例子。</p>
 
 <pre><code class="language-xml">&lt;camunda:executionListener event=&quot;end&quot;&gt;
         &lt;camunda:script scriptFormat=&quot;groovy&quot;&gt;&lt;![CDATA[execution.setVariable(&quot;aVariable&quot;, &quot;aValue&quot;,&quot;aSubProcess&quot;);]]&gt;&lt;/camunda:script&gt;
 &lt;/camunda:executionListener&gt;
 </code></pre>
 
-<p>Another usage example would be input\output mapping using <code>DelegateVariableMapping</code> implementation</p>
+<p>另一个使用例子是使用 &ldquo;DelegateVariableMapping&rdquo;实现的输入/输出映射。</p>
 
 <pre><code class="language-java">public class SetVariableToScopeMappingDelegate implements DelegateVariableMapping {
   @Override
@@ -8271,11 +8271,11 @@ execution.setVariable(&quot;diff&quot;, typedDiff);
 }
 </code></pre>
 
-<p>here variable will be set locally in &ldquo;aSubProcess&rdquo; and not propagated to the parent scope even if variable was not set beforehand locally in &ldquo;aSubProcess&rdquo;.</p>
+<p>这里的变量将在 &ldquo;aSubProcess &ldquo;中本地设置，即使变量没有事先在 &ldquo;aSubProcess&rdquo; 中本地设置。而且不会传播到父作用域。</p>
 
-<h1 id="supported-variable-values">Supported Variable Values</h1>
+<h1 id="支持的变量类型">支持的变量类型</h1>
 
-<p>The process engine supports the following variable value types:</p>
+<p>过程引擎支持以下变量值类型：</p>
 
 <figure class="image">
   <span><img
@@ -8286,45 +8286,43 @@ execution.setVariable(&quot;diff&quot;, typedDiff);
 </figure>
 
 
-<p>Depending on the actual value of a variable, a different type is assigned. Out of the available types, there are nine <em>primitive</em> value types, meaning that they store values of simple standard JDK classes without additional metadata:</p>
+<p>根据一个变量的实际值不同，会分配一个不同的数据类型。在可用的类型中，有9种 <em>原始</em> 的值类型，这意味着它们存储简单的标准JDK类的值，没有额外的元数据：</p>
 
 <ul>
-<li><code>boolean</code>: Instances of <code>java.lang.Boolean</code></li>
-<li><code>bytes</code>: Instances of <code>byte[]</code></li>
-<li><code>short</code>: Instances of <code>java.lang.Short</code></li>
-<li><code>integer</code>: Instances of <code>java.lang.Integer</code></li>
-<li><code>long</code>: Instances of <code>java.lang.Long</code></li>
-<li><code>double</code>: Instances of <code>java.lang.Double</code></li>
-<li><code>date</code>: Instances of <code>java.util.Date</code></li>
-<li><code>string</code>: Instances of <code>java.lang.String</code></li>
-<li><code>null</code>: <code>null</code> references</li>
+<li><code>boolean</code>: 对应 <code>java.lang.Boolean</code></li>
+<li><code>bytes</code>: 对应 <code>byte[]</code></li>
+<li><code>short</code>: 对应 <code>java.lang.Short</code></li>
+<li><code>integer</code>: 对应 <code>java.lang.Integer</code></li>
+<li><code>long</code>: 对应 <code>java.lang.Long</code></li>
+<li><code>double</code>: 对应 <code>java.lang.Double</code></li>
+<li><code>date</code>: 对应 <code>java.util.Date</code></li>
+<li><code>string</code>: 对应 <code>java.lang.String</code></li>
+<li><code>null</code>: 对应 <code>null</code></li>
 </ul>
 
-<p>Primitive values differ from other variable values in that they can be used in API queries such as process instance queries as filtering conditions.</p>
+<p>原始值与其他变量值不同，它们可以在API查询中被使用，如流程实例查询中作为过滤条件。</p>
 
-<p>The type <code>file</code> can be used to store the contents of a file or input stream along with metadata such as a file name, an encoding, and the MIME type the file contents correspond to.</p>
+<p>类型 &ldquo;file&rdquo; 可以用来存储文件或输入流的内容及其元数据，如文件名、编码和文件内容对应的MIME类型。</p>
 
-<p>The value type <code>object</code> represents custom Java objects. When such a variable is persisted, its value is serialized according to a serialization procedure. These procedures are configurable and exchangeable.</p>
+<p>值类型 <code>object</code> 代表自定义的Java对象。当这样的变量被持久化时，它的值会根据一个序列化程序被序列化。这些序列化程序是可配置和可替换的。</p>
 
 
 <div class="note bg-warning docs-warning">
-  <h3>String length restriction</h3>
-  <p><code>string</code> values are stored in the database in a column of type <code>(n)varchar</code>, with a length restriction of 4000 (2000 for Oracle). Depending on the database in use and the
-configured charset, this length restriction can result in different quantities of real characters. Variable value length is not validated inside the Camunda engine, but
- the values are sent to the database &lsquo;as is&rsquo; and, in case the length restriction is exceeded, a database level exception will be thrown. If validation is needed,
- it may be implemented separately and must happen before the Camunda API to set the variables is called.</p>
+  <h3>字符串长度限制</h3>
+  <p><code>string</code> 变量被存储在数据库中的 &ldquo;(n)varchar&rdquo; 类型的列中，其长度限制为4000（Oracle为2000）。取决于使用的数据库和这个长度限制可能导致不同数量的真实字符。变量值的长度在Camunda引擎中不被校验的，但是如果超过了长度限制，将产生一个数据库级别的异常。
+如果需要校验，可以自行实现，必须在调用Camunda API来设置变量之前进行。</p>
 </div>
 
 
-<p>Process variables can be stored in formats like JSON and XML provided by the <a href="http://shaochenfeng.com/camunda-cn/user-guide/data-formats/">Camunda Spin plugin</a>. Spin provides serializers for the variables of type <code>object</code> such that Java variables can be persisted in these formats to the database. Furthermore, it is possible to store JSON and XML documents directly as a Spin object by the value types <code>xml</code> and <code>json</code>. Opposed to plain <code>string</code> variables, Spin objects provide a fluent API to perform common operations on such documents like reading and writing properties.</p>
+<p>过程变量可以用<a href="http://shaochenfeng.com/camunda-cn/user-guide/data-formats/">Camunda Spin插件</a> 提供的JSON和XML等格式存储。Spin为 <code>object</code> 类型的变量提供了序列化器，这样Java变量就可以以这JSON或XML格式持久化到数据库中了。此外，通过<code>xml</code>和<code>json</code>的值类型，可以直接将JSON和XML文档存储为Spin对象。相对于普通的<code>string</code>变量，Spin对象提供了一个流畅的API来对这类文档进行普通的操作，如读写变量对象的属性。</p>
 
-<h2 id="object-value-serialization">Object Value Serialization</h2>
+<h2 id="object值-序列化">Object值 序列化</h2>
 
-<p>When an <code>object</code> value is passed to the process engine, a <em>serialization format</em> can be specified to tell the process engine to store the value in a specific format. Based on this format, the engine looks up a <em>serializer</em>. The serializer is able to serialize a Java object to the specified format and deserialize it from a representation in that format. That means, there may be different serializers for different formats and it is possible to implement custom serializers in order to store custom objects in a specific format.</p>
+<p>当一个 <code>Object</code> 的值被传递给流程引擎时，可以指定一个 <em>序列化格式</em> 来告诉进程引擎以特定的格式来存储这个值。根据这个格式，引擎会查找一个 <em>序列化器</em> 。序列化器能够将一个Java对象序列化为指定的格式，也能从该格式的结果中反序列化它。这意味着，不同的格式可能有不同的序列化器，而且有可能实现自定义的序列化器，以便以特定的格式存储自定义对象。</p>
 
-<p>The process engine ships one built-in object serializer for the format <code>application/x-java-serialized-object</code>. It is able to serialize Java objects that implement the interface <code>java.io.Serializable</code> and applies standard Java object serialization.</p>
+<p>进程引擎为 <code>application/x-java-serialized-object</code> 格式提供了一个内置的对象序列化器。它能够序列化实现了 <code>java.io.Serializable</code> 接口的Java对象，并应用标准的Java对象序列化。</p>
 
-<p>The desired serialization format can be specified when setting a variable using the Typed Value API:</p>
+<p>所需的序列化格式可以在使用类型化值API设置变量时指定。</p>
 
 <pre><code class="language-java">CustomerData customerData = new CustomerData();
 
@@ -8335,25 +8333,25 @@ ObjectValue customerDataValue = Variables.objectValue(customerData)
 execution.setVariable(&quot;someVariable&quot;, customerDataValue);
 </code></pre>
 
-<p>On top of that, the process engine configuration has an option <code>defaultSerializationFormat</code> that is used when no specific format is requested. This option defaults to <code>application/x-java-serialized-object</code>.</p>
+<p>除此之外，流程引擎配置有一个选项 <code>defaultSerializationFormat</code> ，在没有要求特定格式时使用。这个选项默认为 `application/x-java-serialized-object&rsquo;。</p>
 
 
 <div class="note bg-info docs-info">
-  <h3>Using Custom Objects in Task Forms</h3>
-  <p>Note that the built-in serializer converts objects to byte streams that can only be interpreted with the Java class at hand. When implementing task forms that are based on complex objects, a text-based serialization format should be used since Tasklist cannot interpret these byte streams. See the box <em>Serializing Objects to XML and JSON</em> for details on how to integrate serialization formats like XML and JSON.</p>
+  <h3>使用任务表单中的自定义对象</h3>
+  <p>请注意，内置的序列化器将对象转换为字节流，只能解析简单的Java类。当实现基于复杂对象的表单时，应该使用基于文本的序列化格式，因为 Tasklist 不能解释这些字节流。关于如何整合XML和JSON等序列化格式的细节，请参见 <em>将对象序列化为XML和JSON</em> 这一框。</p>
 </div>
 
 
 
 <div class="note bg-info docs-info">
-  <h3>Serializing Objects to XML and JSON</h3>
-  <p>The <a href="http://shaochenfeng.com/camunda-cn/user-guide/data-formats/">Camunda Spin plugin</a> provides serializers that are capable of serializing object values to XML and JSON. They can be used when it is desired that the serialized objects values can be interpreted by humans or when the serialized value should be meaningful without having the corresponding Java class. When using a pre-built Camunda distribution, Camunda Spin is already preconfigured and you can try these formats without further configuration.</p>
+  <h3>将对象序列化为XML和JSON</h3>
+  <p><a href="http://shaochenfeng.com/camunda-cn/user-guide/data-formats/">Camunda Spin 插件</a> 提供了能够将对象序列化为XML和JSON的序列化器。当希望序列化的值可以被人类解释时，或者当序列化的值应该是有意义的而没有相应的Java类时，就可以使用它们。当使用预构建的Camunda发行版时，Camunda Spin 已经预先配置好了，你可以无需进一步配置的尝试使用这些格式。</p>
 </div>
 
 
 <h1 id="java-object-api">Java Object API</h1>
 
-<p>The most convenient way of working with process variables from Java is to use their Java object representation. Wherever the process engine offers variable access, process variables can be accessed in this representation given that for custom objects the engine is aware of the involved classes. For example, the following code sets and retrieves a variable for a given process instance:</p>
+<p>从Java处理流程变量的最方便的方法是使用它们的Java Object表示。只要流程引擎提供变量访问，就可以用这种表示方法访问流程变量，因为对于自定义对象来说，引擎知道所涉及的类。例如，下面的代码为一个给定的流程实例设置和查询一个变量。</p>
 
 <pre><code class="language-java">com.example.Order order = new com.example.Order();
 runtimeService.setVariable(execution.getId(), &quot;order&quot;, order);
@@ -8361,42 +8359,42 @@ runtimeService.setVariable(execution.getId(), &quot;order&quot;, order);
 com.example.Order retrievedOrder = (com.example.Order) runtimeService.getVariable(execution.getId(), &quot;order&quot;);
 </code></pre>
 
-<p>Note that this code sets a variable at the highest possible point in the hierarchy of variable scopes. This means, if the variable is already present (whether in this execution or any of its parent scopes), it is updated. If the variable is not yet present, it is created in the highest scope, i.e. the process instance. If a variable is supposed to be set exactly on the provided execution, the <em>local</em> methods can be used. For example:</p>
+<p>请注意，这段代码在变量作用域的层次结构中尽可能高的位置设置一个变量。这意味着，如果该变量已经存在（无论是在这个执行中还是在它的任何父作用域中），它将被更新。如果变量还不存在，它将在最高的作用域，即进程实例中被创建。如果一个变量应该在所提供的执行中被精确地设置，可以使用 <em>local</em> 方法。例如：</p>
 
 <pre><code class="language-java">com.example.Order order = new com.example.Order();
 runtimeService.setVariableLocal(execution.getId(), &quot;order&quot;, order);
 
 com.example.Order retrievedOrder = (com.example.Order) runtimeService.getVariable(execution.getId(), &quot;order&quot;);
 com.example.Order retrievedOrder = (com.example.Order) runtimeService.getVariableLocal(execution.getId(), &quot;order&quot;);
-// both methods return the variable
+// 两种方法都会返回变量
 </code></pre>
 
-<p>Whenever a variable is set in its Java representation, the process engine automatically determines a suitable value serializer or raises an exception if the provided value cannot be serialized.</p>
+<p>每当一个变量在其Java代码中被设置时，流程引擎会自动确定一个合适的值序列化器，或者在所提供的值不能被序列化时引发一个异常。</p>
 
-<h1 id="typed-value-api">Typed Value API</h1>
+<h1 id="类型值-typed-value-api">类型值（Typed Value） API</h1>
 
-<p>In cases in which it is important to access a variable&rsquo;s serialized representation or in which the engine has to be hinted to serialize a value in a certain format, the typed-value-based API can be used. In comparison to the Java-Object-based API, it wraps a variable value in a so-called <em>Typed Value</em>. Such a typed value allows richer representation of variable values.</p>
+<p>在访问一个变量的序列化方式的情况下，或者在必须提示引擎以某种格式序列化一个值的情况下，可以使用基于类型化值的API。与基于Java-Object的API相比，它将一个变量值赋给一个所谓的 <em>类型值（Typed Value）</em> 中。这样一个类型化的值允许更丰富的变量值的表示。</p>
 
-<p>In order to easily construct typed values, Camunda Platform offers the class <code>org.camunda.bpm.engine.variable.Variables</code>. This class contains static methods that allow creation of single typed values as well as creation of a map of typed values in a fluent way.</p>
+<p>为了方便构建类型值，Camunda平台提供了 <code>org.camunda.bpm.engine.variables</code> 类。该类包含静态方法，允许创建单一类型的值，以及用流畅的方式创建类型值的映射。</p>
 
-<h2 id="primitive-values">Primitive Values</h2>
+<h2 id="原始值">原始值</h2>
 
-<p>The following code sets a single <code>String</code> variable by specifying it as a typed value:</p>
+<p>下面的代码通过指定一个类型的值来设置一个单一的 <code>String</code> 变量。</p>
 
 <pre><code class="language-java">StringValue typedStringValue = Variables.stringValue(&quot;a string value&quot;);
 runtimeService.setVariable(execution.getId(), &quot;stringVariable&quot;, typedStringValue);
 
 StringValue retrievedTypedStringValue = runtimeService.getVariableTyped(execution.getId(), &quot;stringVariable&quot;);
-String stringValue = retrievedTypedStringValue.getValue(); // equals &quot;a string value&quot;
+String stringValue = retrievedTypedStringValue.getValue(); // 结果还是 &quot;a string value&quot;
 </code></pre>
 
-<p>Note that with this API, there is one more level of abstraction around the variable value. Thus, in order to access the true value, it is necessary to <em>unwrap</em> the actual value.</p>
+<p>请注意，在这个API中，围绕着变量值还有一个抽象层次包。因此，为了访问真正的值，有必要 <em>拆包</em> 。</p>
 
-<h2 id="file-values">File Values</h2>
+<h2 id="文件-file-值">文件（File）值</h2>
 
-<p>Of course, for plain <code>String</code> values, the Java-Object-based API is more concise. Let us therefore consider values of richer data structures.</p>
+<p>当然，对于普通的 &ldquo;String&rdquo; 值，基于Java-Object的API更加简洁。因此，让我们考虑更丰富的数据结构的值。</p>
 
-<p>Files can be persisted as BLOBs in the database. The <code>file</code> value type allows to store additional metadata such as a file name and a mime type along with it. The following example code creates a file value from a text file:</p>
+<p>文件可以作为BLOB保存在数据库中。<code>file</code> 值类型允许存储额外的元数据，如文件名和mime类型。下面的示例代码从一个文本文件中创建一个文件值。</p>
 
 <pre><code class="language-java">FileValue typedFileValue = Variables
   .fileValue(&quot;addresses.txt&quot;)
@@ -8413,18 +8411,18 @@ String mimeType = retrievedTypedFileValue.getMimeType(); // equals &quot;text/pl
 String encoding = retrievedTypedFileValue.getEncoding(); // equals &quot;UTF-8&quot;
 </code></pre>
 
-<h3 id="changing-a-file-value">Changing a File Value</h3>
+<h3 id="更改文件值">更改文件值</h3>
 
-<p>To change or update a <code>file</code> value, you have to create a new <code>FileValue</code> with the same name and the new content, because all typed values are immutable:</p>
+<p>要改变或更新一个 <code>文件值</code> ，你必须创建一个具有相同名称和新内容的新<code>文件值</code>来替换旧的，因为所有类型的值都是不可改变的。</p>
 
 <pre><code class="language-java">InputStream newContent = new FileInputStream(&quot;path/to/the/new/file.txt&quot;);
 FileValue fileVariable = execution.getVariableTyped(&quot;addresses.txt&quot;);  
 Variables.fileValue(fileVariable.getName()).file(newContent).encoding(fileVariable.getEncoding()).mimeType(fileVariable.getMimeType()).create();
 </code></pre>
 
-<h2 id="object-values">Object Values</h2>
+<h2 id="对象值">对象值</h2>
 
-<p>Custom Java objects can be serialized with the value type <code>object</code>. Example using the typed value API:</p>
+<p>自定义Java对象可以用值类型 <code>object</code> 进行序列化。使用<code>object</code>值类型API的例子。</p>
 
 <pre><code class="language-java">com.example.Order order = new com.example.Order();
 ObjectValue typedObjectValue = Variables.objectValue(order).create();
@@ -8434,7 +8432,7 @@ ObjectValue retrievedTypedObjectValue = runtimeService.getVariableTyped(executio
 com.example.Order retrievedOrder = (com.example.Order) retrievedTypedObjectValue.getValue();
 </code></pre>
 
-<p>This again is equivalent to the Java-Object-based API. However, it is now possible to tell the engine which serialization format to use when persisting the value. For example:</p>
+<p>这和基于Java-Object的API类似。然而，现在可以告诉引擎在持久化值时使用哪种序列化格式。比如说：</p>
 
 <pre><code class="language-java">ObjectValue typedObjectValue = Variables
   .objectValue(order)
@@ -8442,27 +8440,27 @@ com.example.Order retrievedOrder = (com.example.Order) retrievedTypedObjectValue
   .create();
 </code></pre>
 
-<p>creates a value that gets serialized by the engine&rsquo;s built-in Java object serializer. Also, a retrieved <code>ObjectValue</code> instance provides additional variable details:</p>
+<p>创建一个值，由引擎内置的Java对象序列化器进行序列化。这样，查询到的<code>ObjectValue</code>实例提供了额外的变量细节。</p>
 
-<pre><code class="language-java">// returns true
+<pre><code class="language-java">// 返回 true
 boolean isDeserialized = retrievedTypedObjectValue.isDeserialized();
 
-// returns the format used by the engine to serialize the value into the database
+// 返回引擎使用的格式值序列化为数据库
 String serializationDataFormat = retrievedTypedObjectValue.getSerializationDateFormat();
 
-// returns the serialized representation of the variable; the actual value depends on the serialization format used
+// 返回变量的序列化表示;实际值取决于使用的序列化格式
 String serializedValue = retrievedTypedObjectValue.getValueSerialized();
 
-// returns the class com.example.Order
+// 返回Class com.example.Order
 Class&lt;com.example.Order&gt; valueClass = retrievedTypedObjectValue.getObjectType();
 
-// returns the String &quot;com.example.Order&quot;
+// 返回字符串 &quot;com.example.Order&quot;
 String valueClassName = retrievedTypedObjectValue.getObjectTypeName();
 </code></pre>
 
-<p>The serialization details are useful when the calling application does not possess the classes of the actual variable value (i.e. <code>com.example.Order</code> is not known). In these cases, <code>runtimeService.getVariableTyped(execution.getId(), &quot;order&quot;)</code> will raise an exception since it immediately tries to deserialize the variable value. In such a case, the invocation <code>runtimeService.getVariableTyped(execution.getId(), &quot;order&quot;, false)</code> can be used. The additional boolean parameter tells the process engine to not attempt deserialization. In this case, the invocation <code>isDeserialized()</code> will return <code>false</code> and invocations like <code>getValue()</code> and <code>getObjectType()</code> will raise exceptions. Calling <code>getValueSerialized()</code> and <code>getObjectTypeName()</code> is a way to access the variable nonetheless.</p>
+<p>当调用的应用程序不拥有实际变量值的类时（即<code>com.example.Order</code>不知道）的情况下，<code>runtimeService.getVariableTyped(execution.getId(), &quot;order&quot;)</code>将引发一个异常，因为它立即试图对变量值进行反序列化。在这种情况下，可以使用调用<code>runtimeService.getVariableTyped(execution.getId(), &quot;order&quot;, false)</code>。额外的布尔参数告诉进程引擎不要尝试反序列化。在这种情况下，调用<code>isDeserialized()</code>将返回<code>false</code>，而诸如<code>getValue()</code>和<code>getObjectType()</code>的调用将引发异常。尽管如此，调用<code>getValueSerialized()</code>和<code>getObjectTypeName()</code>也是一种访问变量的方式。</p>
 
-<p>Similarly, it is possible to set a variable from its serialized representation:</p>
+<p>同样地，也可以通过序列化的表示法来设置一个变量。</p>
 
 <pre><code class="language-java">String serializedOrder = &quot;...&quot;;
 ObjectValue serializedValue =
@@ -8480,38 +8478,38 @@ com.example.Order retrievedOrder = (com.example.Order) retrievedTypedObjectValue
 
 
 <div class="note bg-warning docs-warning">
-  <h3>Inconsistent Variable States</h3>
-  <p>When setting a serialized variable value, no checking is done whether the structure of the serialized value is compatible with the class the variable value is supposed to be an instance of. When setting the variable from the above example, the supplied serialized value is not validated against the structure of <code>com.example.Order</code>. Thus, an invalid variable value will only be detected when <code>runtimeService#getVariableTyped</code> is called.</p>
+  <h3>不一致的变量状态</h3>
+  <p>当设置一个序列化的变量值时，不会检查序列化值的结构是否与变量值的类型是否兼容。当设置上述例子中的变量时，提供的序列化值并不会根据<code>com.example.Order</code>的结构进行验证。因此，只有在调用`runtimeService#getVariableTyped&rsquo;时才会发现无效的变量值。</p>
 </div>
 
 
 
 <div class="note bg-warning docs-warning">
   <h3>Java serialization format</h3>
-  <p>Be aware that when using a serialized representation of variables, the Java serialization format is forbidden by default. You should either use another format (JSON or XML) or explicitly enable the Java serialization
-  with the help of the <a href="http://shaochenfeng.com/camunda-cn/reference/deployment-descriptors/tags/process-engine/#javaSerializationFormatEnabled"><code>javaSerializationFormatEnabled</code></a> configuration flag.
-  However, please make sure to read the <a href="http://shaochenfeng.com/camunda-cn/user-guide/security/#variable-values-from-untrusted-sources">Security Implication</a> first before enabling this.</p>
+  <p>请注意，当使用变量的序列化表示时，Java序列化格式默认是被禁止的。你应该使用任意一种格式（JSON或XML）或明确启用Java序列化，
+  可以查看 <a href="http://shaochenfeng.com/camunda-cn/reference/deployment-descriptors/tags/process-engine/#javaSerializationFormatEnabled"><code>javaSerializationFormatEnabled</code></a> 配置。
+  但是，在启用前请务必阅读<a href="http://shaochenfeng.com/camunda-cn/user-guide/security/#variable-values-from-untrusted-sources">安全</a>相关内容。</p>
 </div>
 
 
-<h2 id="json-and-xml-values">JSON and XML Values</h2>
+<h2 id="json和xml值">JSON和XML值</h2>
 
-<p>The Camunda Spin plugin provides an abstraction for JSON and XML documents that facilitate their processing and manipulation. This is often more convenient than storing such documents as plain <code>string</code> variables. See the documentation on Camunda SPIN for <a href="http://shaochenfeng.com/camunda-cn/user-guide/data-formats/json/#native-json-variable-value">storing JSON documents</a> and <a href="http://shaochenfeng.com/camunda-cn/user-guide/data-formats/xml/#native-xml-variable-value">storing XML documents</a> for details.</p>
+<p>Camunda Spin插件为JSON和XML文档提供了一个抽象，以方便它们的处理和操作。这通常比将此类文档存储为普通的 &ldquo;字符串&rdquo; 变量更方便。参见Camunda SPIN的文档<a href="http://shaochenfeng.com/camunda-cn/user-guide/data-formats/json/#native-json-variable-value">存储为JSON</a>和<a href="http://shaochenfeng.com/camunda-cn/user-guide/data-formats/xml/#native-xml-variable-value">存储为XML</a></p>
 
-<h2 id="transient-variables">Transient variables</h2>
+<h2 id="瞬时变量">瞬时变量</h2>
 
-<p>Declaration of transient variables is possible only through the typed-value-based API. They are not saved into the database and exist only during the current transaction. Every waiting state during an execution of a process instance leads to the loss of all transient variables. This happens typically when e.g. an external service is not currently available, an user task has been reached or the process execution is waiting for a message, a signal or a condition. Please use this feature carefully.</p>
+<p>瞬时变量的声明只能通过基于类型值的API来实现。它们不会被保存到数据库中，只会在当前事务中存在。在进程实例的执行过程中，每一个等待状态都会导致所有瞬时变量的丢失。这种情况通常发生在诸如外部服务当前不可用、用户任务已达到或进程执行正在等待一个消息、信号或条件的时候。请谨慎使用这一功能。</p>
 
-<p>Variables of <a href="#supported-variable-values">any type</a> can be declared as transient using the <code>Variables</code> class and setting the parameter <code>isTransient</code> to true.</p>
+<p><a href="#supported-variable-values">任何类型</a> 都可以通过使用<code>Variables</code>类将参数<code>isTransient</code>设置为true来声明为瞬时的。</p>
 
-<pre><code class="language-java">// primitive values
+<pre><code class="language-java">// 原始值
 TypedValue typedTransientStringValue = Variables.stringValue(&quot;foobar&quot;, true);
 
-// object value
+// 对象值
 com.example.Order order = new com.example.Order();
 TypedValue typedTransientObjectValue = Variables.objectValue(order, true).create();
 
-// file value
+// 文件值
 TypedValue typedTransientFileValue = Variables.fileValue(&quot;file.txt&quot;, true)
   .file(new File(&quot;path/to/the/file.txt&quot;))
   .mimeType(&quot;text/plain&quot;)
@@ -8519,11 +8517,11 @@ TypedValue typedTransientFileValue = Variables.fileValue(&quot;file.txt&quot;, t
   .create();
 </code></pre>
 
-<p>Transient variables can be used via REST API, e.g. <a href="http://shaochenfeng.com/camunda-cn/reference/rest/process-definition/post-start-process-instance/">when starting a new process instance</a>.</p>
+<p>瞬时变量可以通过REST API使用，可以查看<a href="http://shaochenfeng.com/camunda-cn/reference/rest/process-definition/post-start-process-instance/">启动一个新的流程实例</a>.</p>
 
-<h2 id="set-multiple-typed-values">Set Multiple Typed Values</h2>
+<h2 id="设置多个类型值-typed-values">设置多个类型值（Typed Values）</h2>
 
-<p>Similar to the Java-Object-based API, it is also possible to set multiple typed values in one API call. The <code>Variables</code> class offers a fluent API to construct a map of typed values:</p>
+<p>与基于Java-Object的API类似，也可以在一次API调用中设置多个类型的值。Variables类提供了一个链式API来构建一个类型值的映射。</p>
 
 <pre><code class="language-java">com.example.Order order = new com.example.Order();
 
@@ -8535,26 +8533,25 @@ VariableMap variables =
 runtimeService.setVariablesLocal(execution.getId(), &quot;order&quot;, variables);
 </code></pre>
 
-<h1 id="interchangeability-of-apis">Interchangeability of APIs</h1>
+<h1 id="api之间的相互替换">API之间的相互替换</h1>
 
-<p>Both APIs offer different views on the same entities and can therefore be combined as is desired. For example, a variable that is set using the Java-Object-based API can be retrieved as a typed value and vice versa. As the class <code>VariableMap</code> implements the <code>Map</code> interface, it is also possible to put plain Java objects as well as typed values into this map.</p>
+<p>这两种API提供了对相同实体的不同处理方式，因此可以根据需要进行组合。例如，使用基于Java-Object的API设置的变量可以作为一个类型值被检索，反之亦然。由于<code>VariableMap</code>类实现了<code>Map</code>接口，所以也可以把普通的Java对象以及类型化的值放入这个Map中。</p>
 
-<p>Which API should you use? The one that fits your purpose best. When you are certain that you always have access to the involved value classes, such as when implementing code in a process application like a <code>JavaDelegate</code>, then the Java-Object-based API is easier to use. When you need to access value-specific metadata such as serialization formats or to define a variable as transient, then the Typed-Value-based API is the way to go.</p>
+<p>你应该使用哪个API？最适合你的目的的那个。当你确定你总是可以访问所涉及的值类时，比如在像 &ldquo;JavaDelegate&rdquo;这样的流程应用中实现代码时，那么基于Java-Object的API就更容易使用。当你需要访问特定的值元数据时，如序列化格式或将变量定义为瞬时变量，那么基于类型值的API是最合适的方式。</p>
 
-<h1 id="input-output-variable-mapping">Input/Output Variable Mapping</h1>
+<h1 id="输入-输出变量映射">输入/输出变量映射</h1>
 
-<p>To improve the reusability of source code and business logic, Camunda Platform offers input/output
-mapping of process variables. This can be used for tasks, events and subprocesses.</p>
+<p>为了提高源代码和业务逻辑的可重用性，Camunda平台提供输入/输出流程变量的映射。
+这可用于任务、事件和子流程中。</p>
 
-<p>In order to use the variable mapping, the Camunda extension element <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#camunda-inputoutput">inputOutput</a> has to be added
-to the element. It can contain multiple <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#inputparameter">inputParameter</a> and <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#outputparameter">outputParameter</a> elements that
-specify which variables should be mapped. The <code>name</code> attribute of an <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#inputparameter">inputParameter</a> denotes
-the variable name inside the activity (a local variable to be created), whereas the <code>name</code> attribute of an <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#outputparameter">outputParameter</a>
-denotes the variable name outside of the activity.</p>
+<p>为了使用变量映射，Camunda扩展元素<a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#camunda-inputoutput">inputOutput</a>必须被添加到
+到该元素中。它可以包含多个<a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#inputparameter">inputParameter</a>和<a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#outputparameter">outputParameter</a>元素。
+指定哪些变量应该被映射。<a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#inputparameter">inputParameter</a> 的<code>name</code>属性表示
+活动中的变量名称（要创建的局部变量），而 <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#outputparameter">outputParameter</a> 的 <code>name</code>属性表示活动外的变量名称。</p>
 
-<p>The content of an input/outputParameter specifies the value that is mapped to the corresponding
-variable. It can be a simple constant string or an expression. An empty body sets the variable
-to the value <code>null</code>.</p>
+<p>inputParameter/outputParameter 的内容指定了被映射到相应的
+变量。它可以是一个简单的常量字符串或一个表达式。
+如果什么都不填则变量为 <code>null</code>。</p>
 
 <pre><code class="language-xml">&lt;camunda:inputOutput&gt;
   &lt;camunda:inputParameter name=&quot;x&quot;&gt;foo&lt;/camunda:inputParameter&gt;
@@ -8564,8 +8561,7 @@ to the value <code>null</code>.</p>
 &lt;/camunda:inputOutput&gt;
 </code></pre>
 
-<p>Even complex structures like <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#camunda-list">lists</a> and <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#camunda-map">maps</a> can be used. Both can also
-be nested.</p>
+<p>甚至可以使用<a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#camunda-list">lists</a>和<a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#camunda-map">maps</a>这样的复杂结构。这两种结构也可以嵌套使用。</p>
 
 <pre><code class="language-xml">&lt;camunda:inputOutput&gt;
   &lt;camunda:inputParameter name=&quot;x&quot;&gt;
@@ -8593,20 +8589,18 @@ be nested.</p>
 &lt;/camunda:inputOutput&gt;
 </code></pre>
 
-<p>A script can also be used to provide the variable value. Please see the corresponding
-<a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/scripting/#use-scripts-as-inputoutput-parameters">section</a> in the scripting chapter for how to specify a script.</p>
+<p>也可以用一个脚本来提供变量值。请参阅相应的
+<a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/scripting/#use-scripts-as-inputoutput-parameters">脚本章节</a> 查看如何指定一个脚本</p>
 
-<p>A simple example of the benefit of input/output mapping is a complex calculation which
-should be part of multiple processes definitions. This calculation can be developed as isolated
-delegation code or a script and be reused in every process, even though the processes use a different variable set.
-An input mapping is used to map the different process variables to
-the required input parameters of the complex calculation activity. Accordingly, an output mapping allows to utilize the
-calculation result in the further process execution.</p>
+<p>输入/输出映射的好处的一个简单例子是复杂的计算。
+一个复杂的计算如果被多个流程定义所使用的。则这个计算可以被开发成独立的委托代码或脚本，并在每个流程中重复使用，即使这些流程使用不同的变量集。
+输入映射被用来将不同的流程变量映射到复杂计算活动所需输入参数。
+输出映射允许在后面的流程执行中继续使用计算结果。</p>
 
-<p>In more detail, let us assume such a calculation is implemented by a Java Delegate class <code>org.camunda.bpm.example.ComplexCalculation</code>.
-This delegate requires a <code>userId</code> and a <code>costSum</code> variable as input
-parameters. It then calculates three values, <code>pessimisticForecast</code>, <code>realisticForecast</code> and <code>optimisticForecast</code>,
-which are different forecasts of the future costs a customer faces. In a first process, both input variables are available as process variables but with different names (<code>id</code>, <code>sum</code>). From the three results, the process only uses <code>realisticForecast</code> which it depends on by the name <code>forecast</code> in follow-up activities. A corresponding input/output mapping looks as follows:</p>
+<p>更详细的一个例子：让我们假设这种计算是由一个Java委托类<code>org.camunda.bpm.example.ComplexCalculation</code>实现的。
+这个委托需要一个<code>userId</code>和一个<code>costSum</code>变量作为输入参数。
+然后它计算三个值：<code>pessimisticForecast</code>, <code>realisticForecast</code> and <code>optimisticForecast</code>。
+这是对客户所需要的未来成本的不同预测。在第一个流程中，两个输入变量都可以作为流程变量，但名称不同（<code>id</code>, <code>sum</code>）。对于三个输出结果，该流程只使用了<code>realisticForecast</code>，它在后续活动中以<code>forecast</code>的名称继续使用。则相应的输入/输出映射看起来如下：</p>
 
 <pre><code class="language-xml">&lt;serviceTask camunda:class=&quot;org.camunda.bpm.example.ComplexCalculation&quot;&gt;
   &lt;extensionElements&gt;
@@ -8619,8 +8613,8 @@ which are different forecasts of the future costs a customer faces. In a first p
 &lt;/serviceTask&gt;
 </code></pre>
 
-<p>In a second process, let us assume the <code>costSum</code> variable has to be calculated from properties of three different maps. Also, the process
-depends on a variable <code>avgForecast</code> as the average value of the three forecasts. In this case, the mapping looks as follows:</p>
+<p>在第二个流程中，让我们假设 &ldquo;costSum&rdquo; 变量必须从三个不同的map中获取。同时，这个流程
+后续需要一个变量 <code>avgForecast</code> 作为三个预测的平均值。在这种情况下，映射看起来如下。</p>
 
 <pre><code class="language-xml">&lt;serviceTask camunda:class=&quot;org.camunda.bpm.example.ComplexCalculation&quot;&gt;
   &lt;extensionElements&gt;
@@ -8637,22 +8631,22 @@ depends on a variable <code>avgForecast</code> as the average value of the three
 &lt;/serviceTask&gt;
 </code></pre>
 
-<h2 id="multi-instance-io-mapping">Multi-instance IO Mapping</h2>
+<h2 id="多实例io映射">多实例IO映射</h2>
 
-<p>Input mappings can also be used with multi-instance constructs, in which the mapping is applied for every instance that is created. For example, for a multi-instance subprocess with five instances, the mapping is executed five times and the involved variables are created in each of the five subprocess scopes such that they can be accessed independently.</p>
+<p>输入映射也可以用于多实例结构，在这种情况下，映射被应用于创建的每个实例。例如，对于一个有五个实例的多实例子流程，映射被执行五次，涉及的变量在五个子流程的每个作用域中被创建，以便它们可以被独立访问。</p>
 
 
 <div class="note bg-info docs-info">
-  <h3>No output mapping for multi-instance constructs</h3>
-  <p>The engine does not support output mappings for multi-instance constructs. Every instance of the output mapping would overwrite the variables set by the previous instances and the final variable state would become hard to predict.</p>
+  <h3>多实例构造不支持输出映射</h3>
+  <p>引擎不支持多实例结构的输出映射。输出映射的每一个实例都会覆盖之前的实例所设置的变量，最终的变量状态将变得难以预测。</p>
 </div>
 
 
-<h2 id="io-mapping-on-canceled-activities">IO Mapping on canceled activities</h2>
+<h2 id="取消的活动的io映射">取消的活动的IO映射</h2>
 
-<p>If an Activity is canceled (e.g. due to throwing a BPMN error), IO mapping is still executed. This can lead to exceptions if the output mapping references variables that do not exist in the scope of the activity at that time.</p>
+<p>如果一个活动被取消（例如由于抛出一个 BPMN 错误），IO 映射仍然被执行。如果输出映射引用了当时不存在于活动范围内的变量，则这可能导致异常。</p>
 
-<p>The default behavior is that the engine still tries to execute output mappings on canceled activities and fails with an exception if a variable is not found. By enabling the <a href="http://shaochenfeng.com/camunda-cn/reference/deployment-descriptors/tags/process-engine/#skipOutputMappingOnCanceledActivities">skipOutputMappingOnCanceledActivities</a> engine configuration flag (i.e. setting it to <code>true</code>) the engine will not perform output mappings on any canceled activity.</p>
+<p>以上是默认行为，引擎会仍然试图在取消的活动上执行输出映射，如果没有找到变量，就会出现异常。可以通过启用 <a href="http://shaochenfeng.com/camunda-cn/reference/deployment-descriptors/tags/process-engine/#skipOutputMappingOnCanceledActivities">跳过取消活动的输出映射</a> 配置项 (设置其为 <code>true</code>) 引擎将不对任何被取消的活动进行输出映射。</p>
 
     </div>
   </div>
@@ -8662,33 +8656,33 @@ depends on a variable <code>avgForecast</code> as the average value of the three
   <h3>目录:</h3>
   <nav id="TableOfContents">
 <ul>
-<li><a href="#variable-scopes-and-variable-visibility">Variable Scopes and Variable Visibility</a></li>
-<li><a href="#set-and-retrieve-variables-overview">Set and Retrieve Variables - Overview</a>
+<li><a href="#变量作用域和变量可访问性">变量作用域和变量可访问性</a></li>
+<li><a href="#设置和查询变量-概述">设置和查询变量 - 概述</a>
 <ul>
-<li><a href="#setting-variables-to-specific-scope">Setting variables to specific scope</a></li>
+<li><a href="#将变量设置为特定作用域">将变量设置为特定作用域</a></li>
 </ul></li>
-<li><a href="#supported-variable-values">Supported Variable Values</a>
+<li><a href="#支持的变量类型">支持的变量类型</a>
 <ul>
-<li><a href="#object-value-serialization">Object Value Serialization</a></li>
+<li><a href="#object值-序列化">Object值 序列化</a></li>
 </ul></li>
 <li><a href="#java-object-api">Java Object API</a></li>
-<li><a href="#typed-value-api">Typed Value API</a>
+<li><a href="#类型值-typed-value-api">类型值（Typed Value） API</a>
 <ul>
-<li><a href="#primitive-values">Primitive Values</a></li>
-<li><a href="#file-values">File Values</a>
+<li><a href="#原始值">原始值</a></li>
+<li><a href="#文件-file-值">文件（File）值</a>
 <ul>
-<li><a href="#changing-a-file-value">Changing a File Value</a></li>
+<li><a href="#更改文件值">更改文件值</a></li>
 </ul></li>
-<li><a href="#object-values">Object Values</a></li>
-<li><a href="#json-and-xml-values">JSON and XML Values</a></li>
-<li><a href="#transient-variables">Transient variables</a></li>
-<li><a href="#set-multiple-typed-values">Set Multiple Typed Values</a></li>
+<li><a href="#对象值">对象值</a></li>
+<li><a href="#json和xml值">JSON和XML值</a></li>
+<li><a href="#瞬时变量">瞬时变量</a></li>
+<li><a href="#设置多个类型值-typed-values">设置多个类型值（Typed Values）</a></li>
 </ul></li>
-<li><a href="#interchangeability-of-apis">Interchangeability of APIs</a></li>
-<li><a href="#input-output-variable-mapping">Input/Output Variable Mapping</a>
+<li><a href="#api之间的相互替换">API之间的相互替换</a></li>
+<li><a href="#输入-输出变量映射">输入/输出变量映射</a>
 <ul>
-<li><a href="#multi-instance-io-mapping">Multi-instance IO Mapping</a></li>
-<li><a href="#io-mapping-on-canceled-activities">IO Mapping on canceled activities</a></li>
+<li><a href="#多实例io映射">多实例IO映射</a></li>
+<li><a href="#取消的活动的io映射">取消的活动的IO映射</a></li>
 </ul></li>
 </ul>
 </nav>

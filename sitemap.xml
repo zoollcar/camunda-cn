@@ -1727,10 +1727,6 @@
   </url>
   
   <url>
-    <loc>http://shaochenfeng.com/camunda-cn/user-guide/process-engine/variables/</loc>
-  </url>
-  
-  <url>
     <loc>http://shaochenfeng.com/camunda-cn/reference/spin/xml/04-querying-xml/</loc>
   </url>
   
@@ -1784,6 +1780,10 @@
   
   <url>
     <loc>http://shaochenfeng.com/camunda-cn/installation/</loc>
+  </url>
+  
+  <url>
+    <loc>http://shaochenfeng.com/camunda-cn/user-guide/process-engine/variables/</loc>
   </url>
   
   <url>

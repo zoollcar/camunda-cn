@@ -4055,15 +4055,6 @@ Example The following example shows a process-archive XML snippet:
     </item>
     
     <item>
-      <title>Process Variables</title>
-      <link>http://shaochenfeng.com/camunda-cn/user-guide/process-engine/variables/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://shaochenfeng.com/camunda-cn/user-guide/process-engine/variables/</guid>
-      <description>This section describes the concepts of variables in processes. Variables can be used to add data to process runtime state or, more particular, variable scopes. Various API methods that change the state of these entities allow updating of the attached variables. In general, a variable consists of a name and a value. The name is used for identification across process constructs. For example, if one activity sets a variable named var, a follow-up activity can access it by using this name.</description>
-    </item>
-    
-    <item>
       <title>Querying XML</title>
       <link>http://shaochenfeng.com/camunda-cn/reference/spin/xml/04-querying-xml/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -4182,6 +4173,24 @@ Enterprise webapps Enterprise FeaturePlease note that this feature is only incl
       <guid>http://shaochenfeng.com/camunda-cn/reference/forms/embedded-forms/json-data/</guid>
       <description>Fetching an existing JSON Variable The Form SDK will only fetch those variables which are actually used in a form. Since a JSON object is usually not bound to a single input field, we cannot use the cam-variable-name directive. We thus need to fetch the variable programatically:
 &amp;lt;script cam-script type=&amp;quot;text/form-script&amp;quot;&amp;gt; camForm.on(&#39;form-loaded&#39;, function() { // tell the form SDK to fetch the variable named &#39;customer&#39; camForm.variableManager.fetchVariable(&#39;customer&#39;); }); camForm.on(&#39;variables-fetched&#39;, function() { // work with the variable (bind it to the current AngularJS $scope) $scope.</description>
+    </item>
+    
+    <item>
+      <title>流程变量</title>
+      <link>http://shaochenfeng.com/camunda-cn/user-guide/process-engine/variables/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://shaochenfeng.com/camunda-cn/user-guide/process-engine/variables/</guid>
+      <description>本节描述流程变量的概念。流程变量可以用将数据添加到流程的运行时状态中，或者更具体地说，变量作用域中。改变实体的各种API可以用来更新这些附加的变量。一般来说，一个变量由一个名称和一个值组成。名称用于在整个流程中识别变量。例如，如果一个活动（activity）设置了一个名为 var 的变量，那么后续活动中可以通过使用这个名称来访问它。变量的值是一个 Java 对象。
+变量作用域和变量可访问性 所有可以拥有变量的实体被称为 变量作用域 。包括执行（包括流程实例在内）和任务。正如在概念章节所描述的，流程实例的运行状态由一棵执行树表示。参看下面的流程模型，其中红点标志着活动任务。
+这个流程的运行时结构如下：
+有一个流程实例有两个子执行，每个子执行都创建了一个任务。所有这五个实体都是变量作用域，箭头标志着父-子关系。在父作用域上定义的变量可以在每个子作用域中被访问，除非子作用域定义了同名的变量。反过来说，子变量不能从父作用域访问。直接附属于有关作用域的变量被称为 local 变量。思考一下，下面将变量作用域的分配情况。
+在这种情况下，当在 task 1 工作时，可以访问变量 worker 和 customer 。请注意，由于作用域的结构，变量 worker 可以被定义两次，所以 task 1 访问的 worker 变量与 task 2 访问的不同。然而，两者都共享变量 customer ，这意味着如果该变量被其中一个任务更新，这一变化对另一个任务也是可见的。
+两个任务都可以访问到这两个变量，但这些变量都不是局部变量。所有三个执行任务都有只有一个局部变量。
+现在我们假设，我们在 task 1 上设置了一个局部变量 customer 。
+虽然两个名为 customer 和 worker 的变量仍然可以从 Task 1 访问，但 Execution 1 上的 customer 变量是隐藏的，所以可访问的 customer 变量是 Task 1 的局部变量。
+一般来说，变量可以被访问 有以下几种情况。
+ 实例化流程 传递信息 任务生命周期的转换，如完成或解决 从外部设置/获取变量 设置/获取Delegate中的变量 流程模型中的表达式 流程模型中的脚本 （历史性的）变量查询  设置和查询变量 - 概述 为了设置和查询变量，流程引擎提供了一个Java API，允许从Java中设置变量，并以同样的形式查询它们。在流程引擎内部，引擎使用序列化将变量持久化到数据库中。对于大多数应用程序来说，这是一个无关紧要的细节。然而，有时，当使用自定义的Java类时，变量的序列化值是有意义的。想象一下一个管理许多流程应用程序的监控应用程序的情况。它与这些应用程序的类解耦，因此不能访问其Java表示中的自定义变量。对于这些情况，流程引擎提供了一种查询和操作序列化值的方法。可以归结为两个API。</description>
     </item>
     
     <item>
