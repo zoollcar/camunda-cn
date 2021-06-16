@@ -1,0 +1,8756 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+  
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PP9MHKW');</script>
+  
+
+  
+  <meta charset="utf-8" />
+
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+  <meta name="viewport" content="width=device-width" />
+
+  <meta name="description" content="documentation of the Camunda Platform" />
+  <meta name="keywords" content="camunda, open source, free, Apache License, Apache 2.0, workflow, BPMN, BPMN 2.0, camunda.org, bpm, BPMS, engine, platform, process, automation, community, documentation" />
+  <meta name="author" content="Camunda Platform community" />
+  
+    
+      <meta name="robots" content="noindex" />
+    
+  
+
+  <title>Process Variables | docs.camunda.org</title>
+
+  <meta name="generator" content="Hugo 0.54.0" />
+  <link rel="shortcut icon" href="/manual/develop/img/favicon.ico" type="image/x-icon" />
+
+  
+
+  <link rel="stylesheet" href="/manual/develop/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
+</head>
+<body class="">
+
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PP9MHKW"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+
+<nav class="navbar navbar-fixed-top">
+  <div class="navbar-container">
+    <div class="navbar-header">
+      <a href="/manual/develop/">
+      <img src="/manual/develop/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+        <span class="brand-name">Camunda</span>
+        <span class="site-name">Docs</span>
+      </a>
+    </div>
+
+    <ul class="header-menu">
+      
+      <li  ><a href="/get-started">Get Started</a></li>
+      
+      <li  class="active"  ><a href="/manual">Camunda Platform</a></li>
+      
+      <li  ><a href="/optimize">Optimize</a></li>
+      
+      <li  ><a href="/cawemo">Cawemo</a></li>
+      
+      <li  ><a href="/enterprise">Enterprise</a></li>
+      
+      <li  ><a href="/security">Security</a></li>
+      
+    </ul>
+
+    <button class="site-menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="search-field">
+      <input type="search" class="search-input" placeholder="Search…" />
+    </div>
+
+    <ul class="external-menu">
+      <li class="external"><a href="https://camunda.org">Camunda.org</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="search-results">
+  <ul class="results-list">
+  </ul>
+  <footer>
+    <button class="btn btn-default page previous">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+    </button>
+
+    <button class="search-close btn btn-default">
+      <span class="glyphicon glyphicon-remove"></span>
+    </button>
+
+    <button class="btn btn-default page next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </button>
+  </footer>
+</div>
+
+<div class="search-underlay"></div>
+
+<div class="site-menu">
+  
+
+
+
+<div class="version versioned">
+  
+    
+      
+    
+       <span class="name">Camunda Platform</span> 
+    
+      
+    
+      
+    
+      
+    
+      
+    
+
+    <span class="number"><a>develop</a>
+      
+        (7.16)
+      
+    </span>
+  
+</div>
+
+<ul class="site-menu-items">
+  
+    
+  <li>
+    
+      <a href="/manual/develop/introduction/" >介绍</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/introduction/downloading-camunda/" >Download</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/introduction/licenses/" >Licenses</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/introduction/implemented-standards/" >Implemented Standards</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/introduction/architecture/" >Architecture Overview</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/introduction/supported-environments/" >Supported Environments</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/introduction/telemetry/" >Telemetry</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/introduction/extensions/" >Extensions</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/introduction/third-party-libraries/" >Third-Party Libraries</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/introduction/third-party-libraries/camunda-bpm-platform-license-book/" >Camunda Platform License Book</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/introduction/third-party-libraries/camunda-bpm-rpa-bridge-license-book/" >Camunda Platform RPA Bridge License Book</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/introduction/public-api/" >Public API</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+  
+    
+  <li>
+    
+      <a href="/manual/develop/user-guide/" >用户指南</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/process-engine/" >流程引擎</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/process-engine/process-engine-bootstrapping/" >流程引擎集成</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/process-engine/process-engine-api/" >流程引擎 API</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/process-engine/process-engine-concepts/" >流程引擎概念</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/process-engine/variables/" >Process Variables</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/process-engine/process-instance-modification/" >Process Instance Modification</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/process-engine/process-instance-restart/" >Process Instance Restart</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/process-engine/delegation-code/" >Delegation Code</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/process-engine/expression-language/" >Expression Language</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/process-engine/scripting/" >Scripting</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/process-engine/templating/" >Templating</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/process-engine/securing-custom-code/" >Custom Code &amp; Security</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/process-engine/external-tasks/" >External Tasks</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/process-engine/connectors/" >Connectors</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/process-engine/process-versioning/" >Process Versioning</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/process-engine/process-instance-migration/" >Process Instance Migration</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/process-engine/database/" >Database</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/process-engine/database/database-schema/" >Database Schema</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/process-engine/database/database-configuration/" >Database Configuration</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/process-engine/database/mssql-configuration/" >Microsoft Sql Server Database Configuration</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/process-engine/database/mariadb-galera-configuration/" >MariaDB Galera Database Configuration</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/process-engine/database/cockroachdb-configuration/" >CockroachDB Database Configuration</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/process-engine/database/mysql-configuration/" >MySQL Database Configuration</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/process-engine/database/performance/" >Performance</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/process-engine/history/" >History and Audit Event Log</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/process-engine/deployment-cache/" >Deployment Cache</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/process-engine/password-hashing/" >Password Hashing</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/process-engine/password-policy/" >Password Policy</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/process-engine/transactions-in-processes/" >Transactions in Processes</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/process-engine/the-job-executor/" >The Job Executor</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/process-engine/multi-tenancy/" >Multi-Tenancy</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/process-engine/id-generator/" >Id Generators</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/process-engine/metrics/" >Metrics</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/process-engine/incidents/" >Incidents</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/process-engine/process-engine-plugins/" >Process Engine Plugins</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/process-engine/identity-service/" >Identity Service</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/process-engine/authorization-service/" >Authorization Service</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/process-engine/deployments/" >Deployments</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/process-engine/process-diagram-api/" >Process Diagram Visualization</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/process-engine/time-zones/" >Time zones</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/process-engine/decisions/" >Decisions</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/process-engine/decisions/configuration/" >Configuration</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/process-engine/decisions/repository/" >Repository</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/process-engine/decisions/decision-service/" >Decision Service</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/process-engine/decisions/bpmn-cmmn/" >Decisions in BPMN &amp; CMMN</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/process-engine/decisions/history/" >History</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/process-engine/batch/" >Batch</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/process-engine/batch-operations/" >Batch operations</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/process-engine/error-handling/" >Error Handling</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/process-applications/" >Process Applications</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/process-applications/the-process-application-class/" >The Process Application class</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/process-applications/the-processes-xml-deployment-descriptor/" >The processes.xml Deployment Descriptor</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/process-applications/process-application-event-listeners/" >Process Application Event Listeners</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/process-applications/process-application-resources/" >Process Application Resource Access</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/process-applications/maven-archetypes/" >Maven Project Templates (Archetypes)</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/runtime-container-integration/" >Runtime Container Integration</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/runtime-container-integration/bpm-platform-services/" >Camunda Platform Services</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/runtime-container-integration/jndi-bindings-for-bpmn-platform-services/" >JNDI Bindings for Camunda Platform Services</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/runtime-container-integration/tomcat/" >Apache Tomcat</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/runtime-container-integration/jboss/" >JBoss/WildFly</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/runtime-container-integration/job-execution-with-managed-resources/" >Job Execution with Managed Resources</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/camunda-bpm-run/" >Camunda Platform Run</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/spring-framework-integration/" >Spring Framework Integration</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/spring-framework-integration/configuration/" >Bootstrapping</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/spring-framework-integration/transactions/" >Transactions</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/spring-framework-integration/deployment/" >Deployment</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/spring-framework-integration/expressions/" >Spring Bean Resolving</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/spring-framework-integration/testing/" >Testing</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/spring-boot-integration/" >Spring Boot Integration</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/spring-boot-integration/version-compatibility/" >Version Compatibility</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/spring-boot-integration/configuration/" >Configuration</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/spring-boot-integration/rest-api/" >REST API</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/spring-boot-integration/webapps/" >Web Applications</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/spring-boot-integration/process-applications/" >Process Applications</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/spring-boot-integration/the-spring-event-bridge/" >Spring Eventing Bridge</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/spring-boot-integration/develop-and-test/" >Developing and Testing</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/cdi-java-ee-integration/" >CDI and Java EE Integration</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/cdi-java-ee-integration/jta-transaction-integration/" >JTA Transaction Integration</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/cdi-java-ee-integration/expression-resolving/" >Expression Resolving</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/cdi-java-ee-integration/contextual-programming-model/" >Contextual Programming Model</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/cdi-java-ee-integration/built-in-beans/" >Built-In Beans</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/cdi-java-ee-integration/the-cdi-event-bridge/" >CDI Event Bridge</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/testing/" >Testing</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/model-api/" >Model API</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/model-api/bpmn-model-api/" >BPMN Model API</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/model-api/bpmn-model-api/read-a-model/" >Read a Model</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/model-api/bpmn-model-api/create-a-model/" >Create a Model</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/model-api/bpmn-model-api/delegation-code/" >Delegation Code</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/model-api/bpmn-model-api/fluent-builder-api/" >Fluent Builder API</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/model-api/bpmn-model-api/respository-service/" >Repository Service</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/model-api/bpmn-model-api/extension-elements/" >Extension Elements</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/model-api/cmmn-model-api/" >CMMN Model API</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/model-api/cmmn-model-api/read-a-model/" >Read a Model</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/model-api/cmmn-model-api/create-a-model/" >Create a Model</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/model-api/cmmn-model-api/delegation-code/" >Delegation Code</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/model-api/cmmn-model-api/repository-service/" >Repository Service</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/model-api/cmmn-model-api/extension-elements/" >Extension Elements</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/model-api/cmmn-model-api/limitations/" >Limitations</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/model-api/dmn-model-api/" >DMN Model API</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/model-api/dmn-model-api/read-a-model/" >Read a Model</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/model-api/dmn-model-api/create-a-model/" >Create a Model</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/model-api/dmn-model-api/repository-service/" >Repository Service</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/model-api/dmn-model-api/extension-attributes/" >Extension Attributes</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/data-formats/" >Data Formats (XML, JSON, Other)</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/data-formats/configuring-spin-integration/" >Configuring Spin Integration</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/data-formats/data-formats-in-processes/" >Data Formats in Processes</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/data-formats/xml/" >XML</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/data-formats/json/" >JSON</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/task-forms/" >User Task Forms</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/task-forms/jsf-task-forms/" >JSF Task Forms</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/dmn-engine/" >DMN Engine</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/dmn-engine/embed/" >Embed</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/dmn-engine/evaluate-decisions/" >Evaluate Decisions</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/dmn-engine/expressions-and-scripts/" >Expressions</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/dmn-engine/feel/" >FEEL Engine</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/dmn-engine/feel/type-handling/" >Type Handling</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/dmn-engine/feel/custom-functions/" >Custom Functions</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/dmn-engine/feel/spin-integration/" >Spin Integration</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/dmn-engine/feel/legacy-behavior/" >Legacy Behavior</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/dmn-engine/data-types/" >Data Types</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/dmn-engine/testing/" >Testing</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/logging/" >Logging</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/security/" >Security Instructions</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/license-use/" >Camunda License Keys</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/ext-client/" >External Task Client</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/ext-client/spring-boot-starter/" >Spring Boot Starter</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/ext-client/compatibility-matrix/" >Version Compatibility</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/user-guide/camunda-bpm-rpa-bridge/" >Camunda Platform RPA Bridge</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+  
+    
+  <li>
+    
+      <a href="/manual/develop/reference/" >参考资料</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/" >Rest Api</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/overview/" >Overview</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/overview/authentication/" >Configure Authentication</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/overview/distro-use/" >Usage with a Pre-Built Distribution</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/overview/embeddability/" >Embed the API</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/overview/hal/" >Hypertext Application Language (HAL)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/overview/variables/" >Variables in the REST API</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/overview/date-format/" >Date Format</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/openapi/" >OpenAPI</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/authorization/" >Authorization</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/authorization/get-query/" >Get List</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/authorization/get-query-count/" >Get List Count</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/authorization/get/" >Get</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/authorization/get-check/" >Check</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/authorization/options/" >Options</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/authorization/post-create/" >Create</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/authorization/put-update/" >Update</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/authorization/delete/" >Delete</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/batch/" >Batch</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/batch/get-query/" >Get List</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/batch/get-query-count/" >Get List Count</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/batch/get/" >Get</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/batch/put-activate-suspend/" >Activate/Suspend</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/batch/delete/" >Delete</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/batch/get-statistics-query/" >Get Statistics</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/batch/get-statistics-query-count/" >Get Statistics Count</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/case-definition/" >Case Definition</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/case-definition/get-query/" >Get List</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/case-definition/get-query-count/" >Get List Count</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/case-definition/get/" >Get</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/case-definition/get-xml/" >Get XML</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/case-definition/get-diagram/" >Get Diagram</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/case-definition/post-create-case-instance/" >Create</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/case-definition/put-history-time-to-live/" >Update history time to live</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/case-execution/" >Case Execution</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/case-execution/local-variables/" >Local Variables</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/case-execution/local-variables/get-local-variable/" >Get</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/case-execution/local-variables/get-local-variable-binary/" >Get (Binary)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/case-execution/local-variables/get-local-variables/" >Get List</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/case-execution/local-variables/put-local-variable/" >Update</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/case-execution/local-variables/put-local-variable-binary/" >Update (Binary)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/case-execution/local-variables/post-local-variables/" >Modify</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/case-execution/local-variables/delete-local-variable/" >Delete</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/case-execution/variables/" >Variables</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/case-execution/variables/get-variable/" >Get</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/case-execution/variables/get-variable-binary/" >Get (Binary)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/case-execution/variables/get-variables/" >Get List</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/case-execution/variables/post-variable-binary/" >Post (Binary)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/case-execution/variables/put-variable/" >Update</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/case-execution/variables/post-variables/" >Modify</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/case-execution/variables/delete-variable/" >Delete</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/case-execution/get-query/" >Get List</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/case-execution/get-query-count/" >Get Count</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/case-execution/get/" >Get</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/case-execution/post-query/" >Get List (POST)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/case-execution/post-query-count/" >Get Count (Post)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/case-execution/post-manual-start/" >Start</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/case-execution/post-complete/" >Complete</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/case-execution/post-disable/" >Disable</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/case-execution/post-reenable/" >Re-enable</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/case-execution/post-terminate/" >Terminate</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/case-instance/" >Case Instance</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/case-instance/variables/" >Variables</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/case-instance/variables/get-variables/" >Get List</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/case-instance/variables/get-variable/" >Get</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/case-instance/variables/get-variable-binary/" >Get (Binary)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/case-instance/variables/post-variables/" >Modify</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/case-instance/variables/put-variable/" >Update</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/case-instance/variables/post-variable-binary/" >POST (Binary)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/case-instance/variables/delete-variable/" >Delete</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/case-instance/get-query/" >Get List</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/case-instance/get-query-count/" >Get List Count</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/case-instance/get/" >Get</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/case-instance/post-query/" >Get List (POST)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/case-instance/post-query-count/" >Get List Count (POST)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/case-instance/post-complete/" >Complete</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/case-instance/post-close/" >Close</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/case-instance/post-terminate/" >Terminate</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/condition/" >Condition</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/condition/post-condition/" >Evaluate</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/decision-definition/" >Decision Definition</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/decision-definition/get-query/" >Get List</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/decision-definition/get-query-count/" >Get List Count</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/decision-definition/get/" >Get</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/decision-definition/get-xml/" >Get XML</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/decision-definition/get-diagram/" >Get Diagram</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/decision-definition/post-evaluate/" >Evaluate</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/decision-definition/put-history-time-to-live/" >Update history time to live</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/decision-requirements-definition/" >Decision Requirements Definition</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/decision-requirements-definition/get-query/" >Get List</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/decision-requirements-definition/get-query-count/" >Get List Count</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/decision-requirements-definition/get/" >Get</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/decision-requirements-definition/get-xml/" >Get DMN XML</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/decision-requirements-definition/get-diagram/" >Get diagram</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/deployment/" >Deployment</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/deployment/get-query/" >Get List</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/deployment/get-query-count/" >Get List Count</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/deployment/get/" >Get</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/deployment/post-deployment/" >Create</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/deployment/post-redeploy-deployment/" >Redeploy</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/deployment/get-resources/" >Get Resources</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/deployment/get-resource/" >Get Resource</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/deployment/get-resource-binary/" >Get Resource (Binary)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/deployment/delete-deployment/" >Delete</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/engine/" >Engine</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/engine/get-names/" >Get List</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/event-subscription/" >Event Subscription</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/event-subscription/get-query/" >Get List</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/event-subscription/get-query-count/" >Get List Count</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/execution/" >Execution</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/execution/local-variables/" >Local Variables</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/execution/local-variables/get-local-variables/" >Get List</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/execution/local-variables/get-local-variable/" >Get</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/execution/local-variables/get-local-variable-binary/" >Get (Binary)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/execution/local-variables/put-local-variable/" >Update</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/execution/local-variables/put-local-variable-binary/" >Post (Binary)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/execution/local-variables/post-local-variables/" >Modify</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/execution/local-variables/delete-local-variable/" >Delete</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/execution/message-event-subscription/" >Message Event Subscription</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/execution/message-event-subscription/get-message-subscription/" >Get</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/execution/message-event-subscription/post-message/" >Trigger</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/execution/get-query/" >Get List</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/execution/get-query-count/" >Get List Count</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/execution/get/" >Get</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/execution/post-create-incident/" >Create Incident</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/execution/post-query/" >Get (POST)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/execution/post-query-count/" >Get List Count (POST)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/execution/post-signal/" >Trigger</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/external-task/" >External Task</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/external-task/get/" >Get</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/external-task/get-query/" >Get List</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/external-task/get-query-count/" >Get List Count</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/external-task/post-query/" >Get List (POST)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/external-task/post-query-count/" >Get List Count (POST)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/external-task/fetch/" >Fetch and Lock</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/external-task/post-complete/" >Complete</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/external-task/get-error-details/" >Get Error Details</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/external-task/get-topic-names/" >Get External Task Topic Names</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/external-task/post-bpmn-error/" >Handle BPMN Error</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/external-task/post-failure/" >Handle Failure</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/external-task/post-lock/" >Lock</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/external-task/post-extend-lock/" >Extend Lock</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/external-task/post-unlock/" >Unlock</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/external-task/put-priority/" >Set Priority</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/external-task/put-retries/" >Set Retries</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/external-task/post-retries-async/" >Set Retries Async</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/external-task/put-retries-sync/" >Set Retries Sync</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/filter/" >Filter</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/filter/get-query/" >Get List</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/filter/get-query-count/" >Get List Count</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/filter/get/" >Get</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/filter/post-create/" >Create</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/filter/put-update/" >Update</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/filter/delete/" >Delete</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/filter/get-execute-single-result/" >Execute</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/filter/post-execute-single-result/" >Execute (POST)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/filter/get-execute-list/" >Execute List</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/filter/post-execute-list/" >Execute List (POST)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/filter/get-execute-count/" >Execute Count</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/filter/post-execute-count/" >Execute Count (POST)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/filter/options/" >Options</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/group/" >Group</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/group/members/" >Group Member</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/group/members/put/" >Create</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/group/members/delete/" >Delete</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/group/members/options/" >Options</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/group/get-query/" >Get List</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/group/get-query-count/" >Get List Count</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/group/get/" >Get</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/group/post-query/" >Get List (POST)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/group/post-query-count/" >Get List Count (POST)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/group/post-create/" >Create</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/group/put-update/" >Update</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/group/options/" >Options</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/group/delete/" >Delete</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/" >History</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/activity-instance/" >Activity Instance</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/activity-instance/get-activity-instance-query/" >Get List</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/activity-instance/get-activity-instance-query-count/" >Get List Count</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/activity-instance/get-activity-instance/" >Get</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/activity-instance/post-activity-instance-query/" >Get List (POST)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/activity-instance/post-activity-instance-query-count/" >Get List Count (POST)</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/batch/" >Batch</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/batch/get-query/" >Get List</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/batch/get-query-count/" >Get List Count</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/batch/get/" >Get</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/batch/delete/" >Delete</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/batch/get-cleanable-batch-report/" >Get Cleanable Batch Report</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/batch/get-cleanable-batch-report-count/" >Get Cleanable Batch Report Count</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/batch/post-batch-set-removal-time/" >Set Removal Time Async (POST)</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/case-definition/" >Case Definition</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/case-definition/get-historic-case-activity-statistics/" >Get Historic Case Activity Statistics</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/case-definition/get-cleanable-case-instance-report/" >Get Cleanable Case Instance Report</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/case-definition/get-cleanable-case-instance-report-count/" >Get Cleanable Case Instance Report Count</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/case-instance/" >Case Instance</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/case-instance/get-case-instance-query/" >Get List</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/case-instance/get-case-instance-query-count/" >Get List Count</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/case-instance/get-case-instance/" >Get</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/case-instance/post-case-instance-query/" >Get List (POST)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/case-instance/post-case-instance-query-count/" >Get List Count (POST)</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/case-activity-instance/" >Case Activity Instance</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/case-activity-instance/get-case-activity-instance-query/" >Get List</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/case-activity-instance/get-case-activity-instance-query-count/" >Get List Count</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/case-activity-instance/get-case-activity-instance/" >Get</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/decision-definition/" >Decision Definition</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/decision-definition/get-cleanable-decision-instance-report/" >Get Cleanable Decision Instance Report</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/decision-definition/get-cleanable-decision-instance-report-count/" >Get Cleanable Decision Instance Report Count</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/decision-instance/" >Decision Instance</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/decision-instance/get-decision-instance-query/" >Get List</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/decision-instance/get-decision-instance-query-count/" >Get List Count</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/decision-instance/get-decision-instance/" >Get</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/decision-instance/post-decision-instance-set-removal-time/" >Set Removal Time Async (POST)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/decision-instance/post-delete/" >Delete Async (POST)</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/decision-requirements-definition/" >Decision Requirements Definition</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/decision-requirements-definition/get-statistics/" >Get Historic Decision Instance Statistics</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/detail/" >Detail</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/detail/get-detail-query/" >Get List</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/detail/post-detail-query/" >Get List (POST)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/detail/get-detail-query-count/" >Get List Count</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/detail/get-detail/" >Get</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/detail/get-detail-binary/" >Get (Binary)</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/identity-links/" >Identity link log</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/identity-links/get-identity-link-query/" >Get List</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/identity-links/get-identity-link-query-count/" >Get List Count</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/incident/" >Incident</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/incident/get-incident-query/" >Get List</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/incident/get-incident-query-count/" >Get List Count</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/external-task-log/" >External Task Log</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/external-task-log/get-external-task-log-query/" >Get List</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/external-task-log/get-external-task-log-query-count/" >Get List Count</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/external-task-log/get-external-task-log/" >Get</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/external-task-log/get-external-task-log-error-details/" >Get Error Details</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/external-task-log/post-external-task-log-query-count/" >Get List Count (POST)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/external-task-log/post-external-task-log-query/" >Get List (POST)</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/history-cleanup/" >History Cleanup</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/history-cleanup/post-history-cleanup/" >Clean up history (POST)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/history-cleanup/get-history-cleanup-jobs/" >Find clean up history jobs (GET)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/history-cleanup/get-cleanup-configuration/" >Get History Cleanup Configuration</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/history-cleanup/get-history-cleanup-job/" >Find clean up history job (GET)</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/job-log/" >Job Log</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/job-log/get-job-log-query/" >Get List</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/job-log/get-job-log-query-count/" >Get List Count</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/job-log/get-job-log/" >Get</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/job-log/get-job-log-stacktrace/" >Get Stacktrace</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/job-log/post-job-log-query-count/" >Get List Count (POST)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/job-log/post-job-log-query/" >Get List (POST)</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/process-definition/" >Process Definition</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/process-definition/get-historic-activity-statistics/" >Get Historic Activity Statistics</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/process-definition/get-cleanable-process-instance-report/" >Get Cleanable Process Instance Report</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/process-definition/get-cleanable-process-instance-report-count/" >Get Cleanable Process Instance Report Count</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/process-instance/" >Process Instance</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/process-instance/get-process-instance-query/" >Get List</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/process-instance/get-process-instance-query-count/" >Get List Count</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/process-instance/get-process-instance/" >Get</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/process-instance/post-process-instance-query/" >Get List (POST)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/process-instance/post-process-instance-query-count/" >Get List Count (POST)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/process-instance/delete-process-instance/" >Delete</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/process-instance/post-process-instance-set-removal-time/" >Set Removal Time Async (POST)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/process-instance/get-duration-report/" >Get Duration Report</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/process-instance/post-delete/" >Delete Async (POST)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/process-instance/delete-variable-instances/" >Delete Variable Instances</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/task/" >Task</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/task/get-task-query/" >Get List</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/task/get-task-query-count/" >Get List Count</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/task/post-task-query/" >Get List (POST)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/task/post-task-query-count/" >Get List Count (POST)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/task/get-task-report/" >Get Task Report</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/user-operation-log/" >User Operation Log</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/user-operation-log/get-user-operation-log-query/" >Get List</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/user-operation-log/get-user-operation-log-query-count/" >Get List Count</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/user-operation-log/set-annotation/" >Set Annotation</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/user-operation-log/clear-annotation/" >Clear Annotation</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/variable-instance/" >Variable Instance</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/variable-instance/get-variable-instance-query/" >Get List</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/variable-instance/get-variable-instance-query-count/" >Get List Count</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/variable-instance/get-variable-instance/" >Get</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/variable-instance/get-variable-instance-binary/" >Get (Binary)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/variable-instance/post-variable-instance-query/" >Get List (POST)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/variable-instance/post-variable-instance-query-count/" >Get List Count (POST)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/history/variable-instance/delete-variable-instance/" >Delete</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/identity/" >Identity</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/identity/get-group-info/" >Get Groups</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/identity/verify-user/" >Verify user</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/identity/get-password-policy/" >Get Password Policy</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/identity/validate-password/" >Validate Password</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/incident/" >Incident</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/incident/get-incident/" >Get Incident</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/incident/get-query/" >Get List</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/incident/get-query-count/" >Get List Count</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/incident/resolve-incident/" >Resolve Incident</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/incident/set-annotation/" >Set Incident Annotation</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/incident/clear-annotation/" >Clear Incident Annotation</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/job/" >Job</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/job/get-query/" >Get List</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/job/get-query-count/" >Get List Count</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/job/get/" >Get</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/job/post-query/" >Get List (POST)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/job/post-query-count/" >Get List Count (POST)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/job/post-execute-job/" >Execute</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/job/put-set-job-duedate/" >Update Due Date</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/job/post-recalculate-job-duedate/" >Recalculate Due Date</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/job/put-set-job-priority/" >Update Priority</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/job/put-set-job-retries/" >Update Retries</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/job/get-exception-stacktrace/" >Get Stacktrace</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/job/put-activate-suspend-by-id/" >Activate/Suspend By Id</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/job/post-set-job-retries/" >Set Job Retries Async (POST)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/job/put-activate-suspend-by-job-def-id/" >Activate/Suspend by Job Definition Id</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/job/put-activate-suspend-by-proc-def-id/" >Activate/Suspend By Process Definition Id</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/job/put-activate-suspend-by-proc-def-key/" >Activate/Suspend By Process Definition Key</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/job/put-activate-suspend-by-proc-inst-id/" >Activate/Suspend By Process Instance Id</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/job/delete-job/" >Delete Job</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/job-definition/" >Job Definition</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/job-definition/get-query/" >Get List</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/job-definition/get-query-count/" >Get List Count</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/job-definition/get/" >Get</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/job-definition/post-query/" >Get List (POST)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/job-definition/post-query-count/" >Get List Count (POST)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/job-definition/put-set-job-priority/" >Set Priority</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/job-definition/put-set-job-retries/" >Set Retries</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/job-definition/put-activate-suspend-by-id/" >Activate/Suspend By Id</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/job-definition/put-activate-suspend-by-proc-def-id/" >Activate/Suspend By Process Definition Id</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/job-definition/put-activate-suspend-by-proc-def-key/" >Activate/Suspend By Process Definition Key</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/message/" >Message</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/message/post-message/" >Correlate</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/metrics/" >Metrics</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/metrics/get-metrics-interval/" >Get Metrics in Interval</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/metrics/get-metrics-sum/" >Get Sum</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/metrics/delete-metrics-task-worker/" >Delete Task Worker Metrics</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/migration/" >Migration</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/migration/generate-migration/" >Generate</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/migration/validate-migration-plan/" >Validate</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/migration/execute-migration/" >Execute</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/migration/execute-migration-async/" >Execute Async (Batch)</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/modification/" >Modification</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/modification/post-modification-sync/" >Execute Modification</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/modification/post-modification-async/" >Execute Modification Async (Batch)</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/process-definition/" >Process Definition</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/process-definition/get-activity-statistics/" >Get Activity Instance Statistics</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/process-definition/get-diagram/" >Get Diagram</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/process-definition/get-form-variables/" >Get Start Form Variables</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/process-definition/get-query-count/" >Get List Count</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/process-definition/get-query/" >Get List</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/process-definition/get-rendered-form/" >Get Rendered Start Form</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/process-definition/get-start-form-key/" >Get Start Form Key</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/process-definition/get-statistics/" >Get Process Instance Statistics</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/process-definition/get-xml/" >Get XML</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/process-definition/get/" >Get</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/process-definition/post-start-process-instance/" >Start Instance</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/process-definition/post-submit-form/" >Submit Start Form</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/process-definition/put-activate-suspend-by-id/" >Activate/Suspend By Id</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/process-definition/put-activate-suspend-by-key/" >Activate/Suspend By Key</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/process-definition/put-history-time-to-live/" >Update history time to live</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/process-definition/delete-process-definition/" >Delete</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/process-definition/delete-by-key/" >Delete By Key</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/process-definition/get-deployed-start-form/" >Get Deployed Start Form</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/process-definition/post-restart-process-instance-sync/" >Restart Process Instance</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/process-definition/post-restart-process-instance-async/" >Restart Process Instance Async</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/process-instance/" >Process Instance</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/process-instance/variables/" >Variables</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/process-instance/variables/delete-variable/" >Delete</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/process-instance/variables/get-variable-binary/" >Get (Binary)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/process-instance/variables/get-variable/" >Get</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/process-instance/variables/get-variables/" >Get List</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/process-instance/variables/post-variable-binary/" >Post (Binary)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/process-instance/variables/post-variables/" >Modify</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/process-instance/variables/put-variable/" >Update</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/process-instance/delete/" >Delete</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/process-instance/get-activity-instances/" >Get Activity Instance</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/process-instance/get-query-count/" >Get List Count</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/process-instance/get-query/" >Get List</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/process-instance/get/" >Get</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/process-instance/post-modification/" >Modify</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/process-instance/post-modification-async/" >Modify Async</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/process-instance/post-delete/" >Delete Async (POST)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/process-instance/post-delete-historic-query-based/" >Delete Async Historic Query Based (POST)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/process-instance/post-query-count/" >Get List Count (POST)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/process-instance/post-set-job-retries/" >Set Job Retries Async (POST)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/process-instance/post-set-job-retries-historic-query-based/" >Set Job Retries Async Historic Query Based (POST)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/process-instance/post-set-variables-async/" >Set Variables Async (POST)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/process-instance/post-query/" >Get List (POST)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/process-instance/put-activate-suspend-by-id/" >Activate/Suspend By Id</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/process-instance/put-activate-suspend-by-proc-def-id/" >Activate/Suspend By Process Definition Id</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/process-instance/put-activate-suspend-by-proc-def-key/" >Activate/Suspend By Process Definition Key</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/process-instance/put-activate-suspend-in-group/" >Activate/Suspend In Group</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/process-instance/post-activate-suspend-in-batch/" >Activate/Suspend In Batch</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/signal/" >Signal</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/signal/post-signal/" >Event</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/schema-log/" >Schema Log</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/schema-log/get-query/" >Get List</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/schema-log/post-query/" >Get List (POST)</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/task/" >Task</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/task/comment/" >Comment</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/task/comment/get-task-comments/" >Get List</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/task/comment/get-task-comment/" >Get</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/task/comment/post-task-comment/" >Create</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/task/attachment/" >Attachment</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/task/attachment/get-task-attachments/" >Get List</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/task/attachment/get-task-attachment/" >Get</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/task/attachment/post-task-attachment/" >Create</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/task/attachment/get-task-attachment-data/" >Get (Binary)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/task/attachment/delete-task-attachment/" >Delete</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/task/identity-links/" >Identity Links</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/task/identity-links/get-identity-links/" >Get List</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/task/identity-links/post-identity-link/" >Add</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/task/identity-links/post-delete-identity-link/" >Delete</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/task/variables/" >Variables</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/task/variables/get-task-variable/" >Get</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/task/variables/get-task-variable-binary/" >Get (Binary)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/task/variables/get-task-variables/" >Get List</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/task/variables/post-modify-task-variables/" >Modify</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/task/variables/put-task-variable/" >Update</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/task/variables/post-task-variable-binary/" >Post (Binary)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/task/variables/delete-task-variable/" >Delete</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/task/local-variables/" >Local Variables</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/task/local-variables/get-local-task-variable/" >Get</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/task/local-variables/get-local-task-variable-binary/" >Get (Binary)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/task/local-variables/get-local-task-variables/" >Get List</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/task/local-variables/post-modify-local-task-variables/" >Modify</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/task/local-variables/put-local-task-variable/" >Update</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/task/local-variables/post-local-task-variable-binary/" >Post (Binary)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/task/local-variables/delete-local-task-variable/" >Delete</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/task/report/" >Report</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/task/report/get-candidate-group-count/" >Get Task Count By Candidate Group</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/task/get/" >Get</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/task/get-query/" >Get List</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/task/post-query/" >Get List (POST)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/task/get-query-count/" >Get List Count</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/task/post-query-count/" >Get List Count (POST)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/task/get-form-key/" >Get Form Key</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/task/post-claim/" >Claim</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/task/post-unclaim/" >Unclaim</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/task/post-complete/" >Complete</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/task/post-submit-form/" >Submit Form</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/task/post-resolve/" >Resolve</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/task/post-assignee/" >Set Assignee</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/task/post-delegate/" >Delegate</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/task/get-deployed-form/" >Get Deployed Form</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/task/get-rendered-form/" >Get Rendered Form</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/task/get-form-variables/" >Get Task Form Variables</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/task/post-create/" >Create</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/task/put-update/" >Update</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/task/post-bpmn-error/" >Handle BPMN Error</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/task/post-bpmn-escalation/" >Handle BPMN Escalation</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/task/delete/" >Delete</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/telemetry/" >Telemetry</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/telemetry/port-telemetry/" >Configure Telemetry</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/telemetry/get-telemetry/" >Fetch Telemetry Configuration</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/tenant/" >Tenant</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/tenant/user-members/" >Tenant User Membership</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/tenant/user-members/put/" >Create</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/tenant/user-members/delete/" >Delete</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/tenant/user-members/options/" >Options</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/tenant/group-members/" >Tenant Group Membership</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/tenant/group-members/put/" >Create</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/tenant/group-members/delete/" >Delete</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/tenant/group-members/options/" >Options</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/tenant/get-query/" >Get List</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/tenant/get-query-count/" >Get List Count</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/tenant/get/" >Get</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/tenant/post-create/" >Create</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/tenant/put-update/" >Update</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/tenant/options/" >Options</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/tenant/delete/" >Delete</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/user/" >User</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/user/delete/" >Delete</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/user/get-query-count/" >Get List Count</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/user/get-query/" >Get List</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/user/get/" >Get Profile</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/user/options/" >Options</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/user/post-create/" >Create</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/user/put-update-credentials/" >Update Credentials</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/user/put-update-profile/" >Update Profile</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/user/unlock/" >Unlock User</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/variable-instance/" >Variable Instance</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/variable-instance/get-binary/" >Get (Binary)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/variable-instance/get-query-count/" >Get List Count</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/variable-instance/get-query/" >Get List</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/variable-instance/get/" >Get</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/variable-instance/post-query/" >Get List (POST)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/variable-instance/post-query-count/" >Get List Count (POST)</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/rest/version/" >Version</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/javadoc/" >Javadoc</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/bpmn20/" >BPMN 2.0</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/bpmn20/tasks/" >tasks 任务</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/bpmn20/tasks/service-task/" >Service Task 服务任务</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/bpmn20/tasks/send-task/" >Send Task 发送消息任务</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/bpmn20/tasks/user-task/" >User Task 人工任务</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/bpmn20/tasks/business-rule-task/" >Business Rule Task 业务规则任务</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/bpmn20/tasks/script-task/" >Script Task 脚本任务</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/bpmn20/tasks/receive-task/" >Receive Task 接收消息任务</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/bpmn20/tasks/manual-task/" >Manual Task 手动任务</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/bpmn20/tasks/task-markers/" >Task Markers 任务标记</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/bpmn20/gateways/" >Gateways</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/bpmn20/gateways/exclusive-gateway/" >Data-based Exclusive Gateway (XOR)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/bpmn20/gateways/sequence-flow/" >Conditional and Default Sequence Flows</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/bpmn20/gateways/parallel-gateway/" >Parallel Gateway</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/bpmn20/gateways/inclusive-gateway/" >Inclusive Gateway</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/bpmn20/gateways/event-based-gateway/" >Event-based Gateway</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/bpmn20/events/" >Events</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/bpmn20/events/start-events/" >Start Events</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/bpmn20/events/none-events/" >None Events</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/bpmn20/events/message-events/" >Message Events</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/bpmn20/events/timer-events/" >Timer Events</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/bpmn20/events/error-events/" >Error Events</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/bpmn20/events/escalation-events/" >Escalation Events</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/bpmn20/events/signal-events/" >Signal Events</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/bpmn20/events/cancel-and-compensation-events/" >Cancel and Compensation Events</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/bpmn20/events/conditional-events/" >Conditional Events</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/bpmn20/events/link-events/" >Link Events</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/bpmn20/events/terminate-event/" >Terminate Events</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/bpmn20/subprocesses/" >Subprocess</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/bpmn20/subprocesses/embedded-subprocess/" >Embedded Subprocess</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/bpmn20/subprocesses/call-activity/" >Call Activity</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/bpmn20/subprocesses/event-subprocess/" >Event Subprocess</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/bpmn20/subprocesses/transaction-subprocess/" >Transaction Subprocess</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/bpmn20/custom-extensions/" >Extension Reference</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/bpmn20/custom-extensions/extension-elements/" >Extension Elements</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/bpmn20/custom-extensions/extension-attributes/" >Extension Attributes</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/dmn/" >DMN 1.3</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/dmn/decision-table/" >Decision Table</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/dmn/decision-table/input/" >Input</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/dmn/decision-table/output/" >Output</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/dmn/decision-table/rule/" >Rule</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/dmn/decision-table/hit-policy/" >Hit Policy</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/dmn/decision-literal-expression/" >Decision Literal Expression</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/dmn/drg/" >Decision Requirements Graph</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/dmn/feel/" >FEEL</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/dmn/feel/legacy/" >Legacy FEEL Reference</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/dmn/feel/legacy/data-types/" >Data Types</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/dmn/feel/legacy/language-elements/" >Language Elements</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/dmn/custom-extensions/" >Extension Reference</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/dmn/custom-extensions/camunda-attributes/" >Extension Attributes</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/cmmn11/" >CMMN 1.1</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/cmmn11/api/classic-vs-fluent/" >Classic vs Fluent API</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/cmmn11/concepts/" >CMMN Concepts</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/cmmn11/concepts/plan-items/" >Plan Items and Item Definitions</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/cmmn11/concepts/lifecycle/" >Plan Item Lifecycles</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/cmmn11/concepts/entry-exit-criteria/" >Entry and Exit Criteria</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/cmmn11/tasks/" >Tasks</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/cmmn11/tasks/human-task/" >Human Task</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/cmmn11/tasks/process-task/" >Process Task</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/cmmn11/tasks/case-task/" >Case Task</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/cmmn11/tasks/decision-task/" >Decision Task</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/cmmn11/grouping-tasks/" >Grouping Tasks</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/cmmn11/grouping-tasks/stage/" >Stage</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/cmmn11/milestone/" >Milestones</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/cmmn11/sentry/" >Sentries</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/cmmn11/markers/" >Markers</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/cmmn11/markers/manual-activation-rule/" >Manual Activation Rule</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/cmmn11/markers/required-rule/" >Required Rule</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/cmmn11/markers/auto-complete/" >Auto Complete</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/cmmn11/markers/repetition-rule/" >Repetition Rule</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/cmmn11/custom-extensions/" >Extension Reference</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/cmmn11/custom-extensions/camunda-elements/" >Extension Elements</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/cmmn11/custom-extensions/camunda-attributes/" >Extension Attributes</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/cmmn11/migration/" >Migration between Specification Versions</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/cmmn11/migration/10-to-11/" >1.0 to 1.1</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/forms/" >Forms</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/forms/embedded-forms/" >Embeded Forms</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/forms/embedded-forms/controls/" >Controls</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/forms/embedded-forms/controls/inputs/" >Text Inputs</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/forms/embedded-forms/controls/textarea/" >Textareas</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/forms/embedded-forms/controls/date-inputs/" >Date Inputs</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/forms/embedded-forms/controls/boolean-inputs/" >Boolean Inputs</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/forms/embedded-forms/controls/select/" >Selects</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/forms/embedded-forms/controls/hidden/" >Hidden Input Fields</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/forms/embedded-forms/controls/files/" >File Upload and Download</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/forms/embedded-forms/controls/bpmn-buttons/" >BPMN Event Buttons</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/forms/embedded-forms/javascript/" >Javascript</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/forms/embedded-forms/javascript/cam-script/" >The cam-script Directive</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/forms/embedded-forms/javascript/api/" >Available API</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/forms/embedded-forms/javascript/lifecycle/" >Participating in the Form Lifecycle</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/forms/embedded-forms/javascript/debugging/" >Debugging Scripts</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/forms/embedded-forms/javascript/generating-businesskey/" >Generating a Business Key</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/forms/embedded-forms/javascript/examples/" >Examples</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/forms/embedded-forms/lifecycle/" >Lifecycle and Events</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/forms/embedded-forms/json-data/" >Working with Json Data</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/forms/embedded-forms/java-objects/" >Working with Java Objects</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/forms/embedded-forms/integrate/" >Integrating the Forms SDK</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/forms/embedded-forms/integrate/getting-a-distribution/" >Getting a Distribution</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/forms/embedded-forms/integrate/bootstrapping/" >Bootstrapping</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/forms/embedded-forms/integrate/angular-js/" >AngularJS Integration</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/forms/embedded-forms/integrate/full-examples/" >Full Example</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/forms/camunda-forms/" >Camunda Forms</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/spin/" >Spin Dataformats</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/spin/xml/" >XML</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/spin/xml/01-reading-xml/" >Reading XML</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/spin/xml/02-manipulating-xml/" >Manipulating XML</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/spin/xml/03-writing-xml/" >Writing XML</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/spin/xml/04-querying-xml/" >Querying XML</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/spin/xml/05-mapping-xml/" >Mapping XML</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/spin/xml/06-configuring-xml/" >Configuring XML Handling</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/spin/json/" >JSON</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/spin/json/01-reading-json/" >Reading JSON</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/spin/json/02-writing-json/" >Writing JSON</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/spin/json/03-querying-json/" >Querying JSON</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/spin/json/04-mapping-json/" >Mapping JSON</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/spin/json/05-configuring-json/" >Configuring JSON Handling</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/spin/extending-spin/" >Extending Spin</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/connect/" >Connectors</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/connect/http-connector/" >HTTP Connector</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/connect/soap-connector/" >SOAP Connector</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/connect/extending-connect/" >Extending Connect</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/deployment-descriptors/" >Deployment Descriptors</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/deployment-descriptors/descriptors/bpm-platform-xml/" >bpm-platform.xml</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/deployment-descriptors/descriptors/processes-xml/" >processes.xml</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/deployment-descriptors/tags/" >Tags</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/deployment-descriptors/tags/job-executor/" >&lt;job-executor /&gt;</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/deployment-descriptors/tags/process-archive/" >&lt;process-archive /&gt;</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/reference/deployment-descriptors/tags/process-engine/" >&lt;process-engine /&gt;</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+  
+    
+  <li>
+    
+      <a href="/manual/develop/installation/" >安装</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/installation/camunda-modeler/" >Camunda Modeler</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/installation/camunda-bpm-run/" >Remote Engine Distribution</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/installation/full/" >Shared Engine Distribution</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/installation/full/tomcat/" >Tomcat</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/installation/full/tomcat/pre-packaged/" >Pre-Packaged Distribution</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/installation/full/tomcat/manual/" >Manual Installation</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/installation/full/tomcat/configuration/" >Configuration</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/installation/full/jboss/" >JBoss/Wildfly</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/installation/full/jboss/pre-packaged/" >Pre-Packaged Distribution</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/installation/full/jboss/manual/" >Manual Installation</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/installation/full/jboss/configuration/" >Configuration</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/installation/full/was/" >IBM WebSphere</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/installation/full/was/manual/" >Manual Installation</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/installation/full/was/configuration/" >Configuration</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/installation/full/wls/" >Oracle WebLogic</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/installation/full/wls/manual/" >Manual Installation</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/installation/full/wls/configuration/" >Configuration</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/installation/docker/" >Docker</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/installation/standalone-webapplication/" >Standalone Webapplication (.war)</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/installation/spring-boot/" >Spring Boot</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/installation/karaf-osgi/" >Karaf / OSGi</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/installation/camunda-bpm-rpa-bridge/" >Camunda Platform RPA Bridge</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+  
+    
+  <li>
+    
+      <a href="/manual/develop/modeler/" >建模工具</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/modeler/bpmn/" >BPMN</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/modeler/dmn/" >DMN</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/modeler/forms/" >Forms</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/modeler/element-templates/" >Element Templates</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+  
+    
+  <li>
+    
+      <a href="/manual/develop/webapps/" >Web应用程序</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/admin/" >Admin</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/admin/user-management/" >User Management</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/admin/group-management/" >Group Management</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/admin/tenant-management/" >Tenant Management</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/admin/authorization-management/" >Authorization Management</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/admin/system-management/" >System Management</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/admin/auditing/" >Auditing</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/admin/configuration/" >Configuration</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/admin/extend/" >Extending</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/admin/extend/plugins/" >Plugins</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/cockpit/" >Cockpit</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/cockpit/dashboard/" >Dashboard</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/cockpit/bpmn/" >BPMN Processes</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/cockpit/bpmn/dashboard/" >Dashboard</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/cockpit/bpmn/process-definition-view/" >Process Definition View</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/cockpit/bpmn/process-instance-view/" >Process Instance View</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/cockpit/bpmn/process-history-views/" >History</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/cockpit/bpmn/process-instance-modification/" >Instance Modification</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/cockpit/bpmn/process-instance-restart/" >Instance Restart</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/cockpit/bpmn/process-instance-migration/" >Instance Migration</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/cockpit/bpmn/failed-jobs/" >Failed Jobs</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/cockpit/bpmn/suspension/" >Suspension</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/cockpit/dmn/" >DMN Decisions</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/cockpit/dmn/dashboard/" >Dashboard</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/cockpit/dmn/decision-definition-view/" >Decision Definition View</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/cockpit/dmn/decision-requirements-instance-view/" >Decision Requirements Definition Instance View</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/cockpit/dmn/decision-requirements-definition-view/" >Decision Requirements Definition View</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/cockpit/dmn/decision-instance-view/" >Decision Instance View</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/cockpit/dmn/live-editing/" >Live Editing</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/cockpit/cmmn/" >CMMN Cases</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/cockpit/cmmn/dashboard/" >Dashboard</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/cockpit/cmmn/case-definition-view/" >Case Definition View</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/cockpit/cmmn/case-instance-view/" >Case Instance View</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/cockpit/cleanup/" >Cleanup</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/cockpit/deployment-view/" >Deployments</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/cockpit/auditing/" >Auditing</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/cockpit/batch/" >Batch</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/cockpit/batch/batch-operation/" >Batch operation</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/cockpit/batch/monitoring/" >Batch View</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/cockpit/reporting/" >Reports</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/cockpit/tasks-dashboard/" >Open Tasks Dashboard</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/cockpit/extend/" >Extending</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/cockpit/extend/configuration/" >Configuration</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/cockpit/extend/plugins/" >Plugins</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/tasklist/" >Tasklist</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/tasklist/working-with-tasklist/" >Working with Tasklist</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/tasklist/dashboard/" >Dashboard</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/tasklist/filters/" >Filters</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/tasklist/user-assignment/" >User Assignment</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/tasklist/task-lifecycle/" >Task Lifecycle</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/tasklist/tasklist-plugins/" >Plugins</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/tasklist/configuration/" >Configuration</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/tasklist/accessibility/" >Accessibility</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/welcome/" >Welcome</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/welcome/welcome-plugins/" >Plugins</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/welcome/configuration/" >Configuration</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/shared-options/" >Shared Configuration Options</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/shared-options/container-based-authentication/" >Container-Based Authentication</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/shared-options/csrf-prevention/" >CSRF Prevention</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/shared-options/cookie-security/" >Cookie Security</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/webapps/shared-options/header-security/" >HTTP Header Security</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+  
+    
+  <li>
+    
+      <a href="/manual/develop/examples/" >案例</a>
+    
+  </li>
+
+  
+    
+  <li>
+    
+      <a href="/manual/develop/update/" >Update &amp; Migration</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/" >Minor Version Update</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/715-to-716/" >7.15 to 7.16</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/715-to-716/jboss/" >JBoss AS/Wildfly</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/715-to-716/tomcat/" >Tomcat</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/715-to-716/wls/" >WebLogic</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/715-to-716/was/" >WebSphere</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/714-to-715/" >7.14 to 7.15</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/714-to-715/jboss/" >JBoss AS/Wildfly</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/714-to-715/tomcat/" >Tomcat</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/714-to-715/wls/" >WebLogic</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/714-to-715/was/" >WebSphere</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/713-to-714/" >7.13 to 7.14</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/713-to-714/jboss/" >JBoss AS/Wildfly</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/713-to-714/tomcat/" >Tomcat</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/713-to-714/wls/" >WebLogic</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/713-to-714/was/" >WebSphere</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/712-to-713/" >7.12 to 7.13</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/712-to-713/jboss/" >JBoss AS/Wildfly</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/712-to-713/tomcat/" >Tomcat</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/712-to-713/wls/" >WebLogic</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/712-to-713/was/" >WebSphere</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/711-to-712/" >7.11 to 7.12</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/711-to-712/jboss/" >JBoss AS/Wildfly</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/711-to-712/tomcat/" >Tomcat</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/711-to-712/wls/" >WebLogic</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/711-to-712/was/" >WebSphere</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/710-to-711/" >7.10 to 7.11</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/710-to-711/jboss/" >JBoss AS/Wildfly</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/710-to-711/tomcat/" >Tomcat</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/710-to-711/wls/" >WebLogic</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/710-to-711/was/" >WebSphere</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/79-to-710/" >7.9 to 7.10</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/79-to-710/jboss/" >JBoss AS/Wildfly</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/79-to-710/tomcat/" >Tomcat</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/79-to-710/wls/" >WebLogic</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/79-to-710/was/" >WebSphere</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/78-to-79/" >7.8 to 7.9</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/78-to-79/jboss/" >JBoss AS/Wildfly</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/78-to-79/tomcat/" >Tomcat</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/78-to-79/wls/" >WebLogic</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/78-to-79/was/" >WebSphere</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/77-to-78/" >7.7 to 7.8</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/77-to-78/jboss/" >JBoss AS/Wildfly</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/77-to-78/tomcat/" >Tomcat</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/77-to-78/wls/" >WebLogic</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/77-to-78/was/" >WebSphere</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/76-to-77/" >7.6 to 7.7</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/76-to-77/jboss/" >JBoss AS/Wildfly</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/76-to-77/tomcat/" >Tomcat</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/76-to-77/webapp/" >Web Application Plugins</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/76-to-77/wls/" >WebLogic</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/76-to-77/was/" >WebSphere</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/75-to-76/" >7.5 to 7.6</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/75-to-76/jboss/" >JBoss AS/Wildfly</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/75-to-76/tomcat/" >Tomcat</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/75-to-76/webapp/" >Web Application Plugins</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/75-to-76/wls/" >WebLogic</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/75-to-76/was/" >WebSphere</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/74-to-75/" >7.4 to 7.5</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/74-to-75/glassfish/" >Glassfish</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/74-to-75/jboss/" >JBoss AS/Wildfly</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/74-to-75/tomcat/" >Tomcat</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/74-to-75/webapp/" >Web Application Plugins</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/74-to-75/wls/" >WebLogic</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/74-to-75/was/" >WebSphere</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/73-to-74/" >7.3 to 7.4</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/73-to-74/glassfish/" >Glassfish</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/73-to-74/jboss/" >JBoss AS/Wildfly</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/73-to-74/tomcat/" >Tomcat</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/73-to-74/wls/" >WebLogic</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/73-to-74/was/" >WebSphere</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/72-to-73/" >7.2 to 7.3</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/72-to-73/glassfish/" >Glassfish</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/72-to-73/jboss/" >JBoss</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/72-to-73/tomcat/" >Tomcat</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/72-to-73/wls/" >WebLogic</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/72-to-73/was/" >WebSphere</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/71-to-72/" >7.1 to 7.2</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/71-to-72/glassfish/" >Glassfish</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/71-to-72/jboss/" >JBoss</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/71-to-72/tomcat/" >Tomcat</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/71-to-72/wls/" >WebLogic</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/71-to-72/was/" >Websphere</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/minor/70-to-71/" >7.0 to 7.1</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/spring-boot-starter/" >Spring Boot Starter Migration and Update</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/spring-boot-starter/migration-22-23/" >2.2.0 to 2.3.0</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/spring-boot-starter/migration-23-30/" >2.3.0 to 3.0.0</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/spring-boot-starter/migration-31-32/" >3.1.0 to 3.2.0</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/spring-boot-starter/migration-33-34/" >3.3.0 to 3.4.0</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/spring-boot-starter/migration-34-713/" >3.4.0 to 7.13.0</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/patch-level/" >Patch Level Update</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/rolling-update/" >Rolling Update</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/manual/develop/update/activiti/" >Activiti Migration</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+  
+</ul>
+
+
+<div class="meta">
+  <h4 class="header">
+    <span class="toggle glyphicon glyphicon-chevron-up"></span>
+    Options
+  </h4>
+
+  <div class="content">
+    <label for="version-select">Version:</label>
+    <select id="version-select" data-basepath="/manual" base-url="/manual/develop/">
+      
+        <option  selected >develop</option>
+      
+    </select>
+  </div>
+</div>
+
+
+
+</div>
+
+
+<div class="page-wrapper">
+
+
+<div class="page-content">
+  <div class="container-fluid">
+    <div class="col-xs-12 content-header">
+      <ul class="social">
+  <li>
+    <a target="_blank" title="Camunda on Twitter" href="//twitter.com/camunda">
+      <span class="cam-docs-twitter"></span>
+    </a>
+  </li>
+  <li>
+    <a target="_blank" title="Camunda related topics on Stackoverflow" href="//stackoverflow.com/questions/tagged/camunda">
+      <span class="cam-docs-stackoverflow"></span>
+    </a>
+  </li>
+  <li>
+    <a target="_blank" title="Camunda Forum" href="//forum.camunda.org">
+      <span class="cam-docs-chat"></span>
+    </a>
+  </li>
+</ul>
+
+      
+<div class="edit-on-github">
+  <a target="_blank" href='https://github.com/zoollcar/camunda-docs-manual-cn/tree/master/content/user-guide/process-engine/variables.md'><i>在 Github 上编辑此页</i> <span class="cam-docs-github"></span></a>
+</div>
+
+      <h1 class="page-title">Process Variables</h1>
+    </div>
+
+    <div class="col-xs-12 content-text">
+      
+
+<p>This section describes the concepts of variables in processes. Variables can be used to add data to process runtime state or, more particular, variable scopes. Various API methods that change the state of these entities allow updating of the attached variables. In general, a variable consists of a name and a value. The name is used for identification across process constructs. For example, if one activity sets a variable named <em>var</em>, a follow-up activity can access it by using this name. The value of a variable is a Java object.</p>
+
+<h1 id="variable-scopes-and-variable-visibility">Variable Scopes and Variable Visibility</h1>
+
+<p>All entities that can have variables are called <em>variable scopes</em>. These are executions (which include process instances) and tasks. As described in the  <a href="/manual/develop/user-guide/process-engine/process-engine-concepts/#executions">Concepts section</a>, the runtime state of a process instance is represented by a tree of executions. Consider the following process model where the red dots mark active tasks:</p>
+
+<figure class="image">
+  <span><img
+      src="../img/variables-3.png"
+      
+          title="Variables"
+       /></span>
+</figure>
+
+
+<p>The runtime structure of this process is as follows:</p>
+
+<figure class="image">
+  <span><img
+      src="../img/variables-4.png"
+      
+          title="Variables"
+       /></span>
+</figure>
+
+
+<p>There is a process instance with two child executions, each of which has created a task. All these five entities are variable scopes and the arrows mark a parent-child relationship. A variable that is defined on a parent scope is accessible in every child scope unless a child scope defines a variable of the same name. The other way around, child variables are not accessible from a parent scope. Variables that are directly attached to the scope in question are called <em>local</em> variables. Consider the following assignment of variables to scopes:</p>
+
+<figure class="image">
+  <span><img
+      src="../img/variables-5.png"
+      
+          title="Variables"
+       /></span>
+</figure>
+
+
+<p>In this case, when working on <em>Task 1</em> the variables <em>worker</em> and <em>customer</em> are accessible. Note that due to the structure of scopes, the variable <em>worker</em> can be defined twice, so that <em>Task 1</em> accesses a different <em>worker</em> variable than <em>Task 2</em>. However, both share the variable <em>customer</em> which means that if that variable is updated by one of the tasks, this change is also visible to the other.</p>
+
+<p>Both tasks can access two variables each while none of these is a local variable. All  three executions have one local variable each.</p>
+
+<p>Now let&rsquo;s say, we set a local variable <em>customer</em> on <em>Task 1</em>:</p>
+
+<figure class="image">
+  <span><img
+      src="../img/variables-6.png"
+      
+          title="Variables"
+       /></span>
+</figure>
+
+
+<p>While two variables named <em>customer</em> and <em>worker</em> can still be accessed from <em>Task 1</em>, the <em>customer</em> variable on <em>Execution 1</em> is hidden, so the accessible <em>customer</em> variable is the local variable of <em>Task 1</em>.</p>
+
+<p>In general, variables are accessible in the following cases:</p>
+
+<ul>
+<li>Instantiating processes</li>
+<li>Delivering messages</li>
+<li>Task lifecycle transitions, such as completion or resolution</li>
+<li>Setting/getting variables from outside</li>
+<li>Setting/getting variables in a <a href="/manual/develop/user-guide/process-engine/delegation-code/">Delegate</a></li>
+<li>Expressions in the process model</li>
+<li>Scripts in the process model</li>
+<li>(Historic) Variable queries</li>
+</ul>
+
+<h1 id="set-and-retrieve-variables-overview">Set and Retrieve Variables - Overview</h1>
+
+<p>To set and retrieve variables, the process engine offers a Java API that allows setting of variables from Java objects and retrieving them in the same form. Internally, the engine persists variables to the database and therefore applies serialization. For most applications, this is a detail of no concern. However, sometimes, when working with custom Java classes, the serialized value of a variable is of interest. Imagine the case of a monitoring application that manages many process applications. It is decoupled from those applications&rsquo; classes and therefore cannot access custom variables in their Java representation. For these cases, the process engine offers a way to retrieve and manipulate the serialized value. This boils down to two APIs:</p>
+
+<ul>
+<li><strong>Java Object Value API</strong>: Variables are represented as Java objects. These objects can be directly set as values and retrieved in the same form. This is the more simple API and is the recommended way when implementing code as part of a process application.</li>
+<li><strong>Typed Value API</strong>: Variable values are wrapped in so-called <em>typed values</em> that are used to set and retrieve variables. A typed value offers access to metadata such as the way the engine has serialized the variable and, depending on the type, the serialized representation of the variable. Metadata also contains an information whether a variable is transient or not.</li>
+</ul>
+
+<p>As an example, the following code retrieves and sets two integer variables using both APIs:</p>
+
+<pre><code class="language-java">// Java Object API: Get Variable
+Integer val1 = (Integer) execution.getVariable(&quot;val1&quot;);
+
+// Typed Value API: Get Variable
+IntegerValue typedVal2 = execution.getVariableTyped(&quot;val2&quot;);
+Integer val2 = typedVal2.getValue();
+
+Integer diff = val1 - val2;
+
+// Java Object API: Set Variable
+execution.setVariable(&quot;diff&quot;, diff);
+
+// Typed Value API: Set Variable
+IntegerValue typedDiff = Variables.integerValue(diff);
+execution.setVariable(&quot;diff&quot;, typedDiff);
+</code></pre>
+
+<p>The specifics of this code are described in more detail in the sections on the <a href="#java-object-api">Java Object Value API</a> and the <a href="#typed-value-api">Typed Value API</a>.</p>
+
+<h2 id="setting-variables-to-specific-scope">Setting variables to specific scope</h2>
+
+<p>There is a possibility to set variables into specific scope from scripts, input\output mapping, listeners and service tasks. Implementation of this functionality is using activity id in order to identify destination scope and will throw an exception if no scope is located to set a variable. Additionally, once target scope is found, variable will be set locally in it, which means that propagation to the parent scope will not be executed even if destination scope does not have a variable with given id.</p>
+
+<p>Here is example usage with script executionListener:</p>
+
+<pre><code class="language-xml">&lt;camunda:executionListener event=&quot;end&quot;&gt;
+        &lt;camunda:script scriptFormat=&quot;groovy&quot;&gt;&lt;![CDATA[execution.setVariable(&quot;aVariable&quot;, &quot;aValue&quot;,&quot;aSubProcess&quot;);]]&gt;&lt;/camunda:script&gt;
+&lt;/camunda:executionListener&gt;
+</code></pre>
+
+<p>Another usage example would be input\output mapping using <code>DelegateVariableMapping</code> implementation</p>
+
+<pre><code class="language-java">public class SetVariableToScopeMappingDelegate implements DelegateVariableMapping {
+  @Override
+  public void mapInputVariables(DelegateExecution superExecution, VariableMap subVariables) {
+  }
+
+  @Override
+  public void mapOutputVariables(DelegateExecution superExecution, VariableScope subInstance) {
+    superExecution.setVariable(&quot;aVariable&quot;,&quot;aValue&quot;,&quot;aSubProcess&quot;);
+  }
+}
+</code></pre>
+
+<p>here variable will be set locally in &ldquo;aSubProcess&rdquo; and not propagated to the parent scope even if variable was not set beforehand locally in &ldquo;aSubProcess&rdquo;.</p>
+
+<h1 id="supported-variable-values">Supported Variable Values</h1>
+
+<p>The process engine supports the following variable value types:</p>
+
+<figure class="image">
+  <span><img
+      src="../img/variables-1.png"
+      
+          title="Variables"
+       /></span>
+</figure>
+
+
+<p>Depending on the actual value of a variable, a different type is assigned. Out of the available types, there are nine <em>primitive</em> value types, meaning that they store values of simple standard JDK classes without additional metadata:</p>
+
+<ul>
+<li><code>boolean</code>: Instances of <code>java.lang.Boolean</code></li>
+<li><code>bytes</code>: Instances of <code>byte[]</code></li>
+<li><code>short</code>: Instances of <code>java.lang.Short</code></li>
+<li><code>integer</code>: Instances of <code>java.lang.Integer</code></li>
+<li><code>long</code>: Instances of <code>java.lang.Long</code></li>
+<li><code>double</code>: Instances of <code>java.lang.Double</code></li>
+<li><code>date</code>: Instances of <code>java.util.Date</code></li>
+<li><code>string</code>: Instances of <code>java.lang.String</code></li>
+<li><code>null</code>: <code>null</code> references</li>
+</ul>
+
+<p>Primitive values differ from other variable values in that they can be used in API queries such as process instance queries as filtering conditions.</p>
+
+<p>The type <code>file</code> can be used to store the contents of a file or input stream along with metadata such as a file name, an encoding, and the MIME type the file contents correspond to.</p>
+
+<p>The value type <code>object</code> represents custom Java objects. When such a variable is persisted, its value is serialized according to a serialization procedure. These procedures are configurable and exchangeable.</p>
+
+
+<div class="note bg-warning docs-warning">
+  <h3>String length restriction</h3>
+  <p><code>string</code> values are stored in the database in a column of type <code>(n)varchar</code>, with a length restriction of 4000 (2000 for Oracle). Depending on the database in use and the
+configured charset, this length restriction can result in different quantities of real characters. Variable value length is not validated inside the Camunda engine, but
+ the values are sent to the database &lsquo;as is&rsquo; and, in case the length restriction is exceeded, a database level exception will be thrown. If validation is needed,
+ it may be implemented separately and must happen before the Camunda API to set the variables is called.</p>
+</div>
+
+
+<p>Process variables can be stored in formats like JSON and XML provided by the <a href="/manual/develop/user-guide/data-formats/">Camunda Spin plugin</a>. Spin provides serializers for the variables of type <code>object</code> such that Java variables can be persisted in these formats to the database. Furthermore, it is possible to store JSON and XML documents directly as a Spin object by the value types <code>xml</code> and <code>json</code>. Opposed to plain <code>string</code> variables, Spin objects provide a fluent API to perform common operations on such documents like reading and writing properties.</p>
+
+<h2 id="object-value-serialization">Object Value Serialization</h2>
+
+<p>When an <code>object</code> value is passed to the process engine, a <em>serialization format</em> can be specified to tell the process engine to store the value in a specific format. Based on this format, the engine looks up a <em>serializer</em>. The serializer is able to serialize a Java object to the specified format and deserialize it from a representation in that format. That means, there may be different serializers for different formats and it is possible to implement custom serializers in order to store custom objects in a specific format.</p>
+
+<p>The process engine ships one built-in object serializer for the format <code>application/x-java-serialized-object</code>. It is able to serialize Java objects that implement the interface <code>java.io.Serializable</code> and applies standard Java object serialization.</p>
+
+<p>The desired serialization format can be specified when setting a variable using the Typed Value API:</p>
+
+<pre><code class="language-java">CustomerData customerData = new CustomerData();
+
+ObjectValue customerDataValue = Variables.objectValue(customerData)
+  .serializationDataFormat(Variables.SerializationDataFormats.JAVA)
+  .create();
+
+execution.setVariable(&quot;someVariable&quot;, customerDataValue);
+</code></pre>
+
+<p>On top of that, the process engine configuration has an option <code>defaultSerializationFormat</code> that is used when no specific format is requested. This option defaults to <code>application/x-java-serialized-object</code>.</p>
+
+
+<div class="note bg-info docs-info">
+  <h3>Using Custom Objects in Task Forms</h3>
+  <p>Note that the built-in serializer converts objects to byte streams that can only be interpreted with the Java class at hand. When implementing task forms that are based on complex objects, a text-based serialization format should be used since Tasklist cannot interpret these byte streams. See the box <em>Serializing Objects to XML and JSON</em> for details on how to integrate serialization formats like XML and JSON.</p>
+</div>
+
+
+
+<div class="note bg-info docs-info">
+  <h3>Serializing Objects to XML and JSON</h3>
+  <p>The <a href="/manual/develop/user-guide/data-formats/">Camunda Spin plugin</a> provides serializers that are capable of serializing object values to XML and JSON. They can be used when it is desired that the serialized objects values can be interpreted by humans or when the serialized value should be meaningful without having the corresponding Java class. When using a pre-built Camunda distribution, Camunda Spin is already preconfigured and you can try these formats without further configuration.</p>
+</div>
+
+
+<h1 id="java-object-api">Java Object API</h1>
+
+<p>The most convenient way of working with process variables from Java is to use their Java object representation. Wherever the process engine offers variable access, process variables can be accessed in this representation given that for custom objects the engine is aware of the involved classes. For example, the following code sets and retrieves a variable for a given process instance:</p>
+
+<pre><code class="language-java">com.example.Order order = new com.example.Order();
+runtimeService.setVariable(execution.getId(), &quot;order&quot;, order);
+
+com.example.Order retrievedOrder = (com.example.Order) runtimeService.getVariable(execution.getId(), &quot;order&quot;);
+</code></pre>
+
+<p>Note that this code sets a variable at the highest possible point in the hierarchy of variable scopes. This means, if the variable is already present (whether in this execution or any of its parent scopes), it is updated. If the variable is not yet present, it is created in the highest scope, i.e. the process instance. If a variable is supposed to be set exactly on the provided execution, the <em>local</em> methods can be used. For example:</p>
+
+<pre><code class="language-java">com.example.Order order = new com.example.Order();
+runtimeService.setVariableLocal(execution.getId(), &quot;order&quot;, order);
+
+com.example.Order retrievedOrder = (com.example.Order) runtimeService.getVariable(execution.getId(), &quot;order&quot;);
+com.example.Order retrievedOrder = (com.example.Order) runtimeService.getVariableLocal(execution.getId(), &quot;order&quot;);
+// both methods return the variable
+</code></pre>
+
+<p>Whenever a variable is set in its Java representation, the process engine automatically determines a suitable value serializer or raises an exception if the provided value cannot be serialized.</p>
+
+<h1 id="typed-value-api">Typed Value API</h1>
+
+<p>In cases in which it is important to access a variable&rsquo;s serialized representation or in which the engine has to be hinted to serialize a value in a certain format, the typed-value-based API can be used. In comparison to the Java-Object-based API, it wraps a variable value in a so-called <em>Typed Value</em>. Such a typed value allows richer representation of variable values.</p>
+
+<p>In order to easily construct typed values, Camunda Platform offers the class <code>org.camunda.bpm.engine.variable.Variables</code>. This class contains static methods that allow creation of single typed values as well as creation of a map of typed values in a fluent way.</p>
+
+<h2 id="primitive-values">Primitive Values</h2>
+
+<p>The following code sets a single <code>String</code> variable by specifying it as a typed value:</p>
+
+<pre><code class="language-java">StringValue typedStringValue = Variables.stringValue(&quot;a string value&quot;);
+runtimeService.setVariable(execution.getId(), &quot;stringVariable&quot;, typedStringValue);
+
+StringValue retrievedTypedStringValue = runtimeService.getVariableTyped(execution.getId(), &quot;stringVariable&quot;);
+String stringValue = retrievedTypedStringValue.getValue(); // equals &quot;a string value&quot;
+</code></pre>
+
+<p>Note that with this API, there is one more level of abstraction around the variable value. Thus, in order to access the true value, it is necessary to <em>unwrap</em> the actual value.</p>
+
+<h2 id="file-values">File Values</h2>
+
+<p>Of course, for plain <code>String</code> values, the Java-Object-based API is more concise. Let us therefore consider values of richer data structures.</p>
+
+<p>Files can be persisted as BLOBs in the database. The <code>file</code> value type allows to store additional metadata such as a file name and a mime type along with it. The following example code creates a file value from a text file:</p>
+
+<pre><code class="language-java">FileValue typedFileValue = Variables
+  .fileValue(&quot;addresses.txt&quot;)
+  .file(new File(&quot;path/to/the/file.txt&quot;))
+  .mimeType(&quot;text/plain&quot;)
+  .encoding(&quot;UTF-8&quot;)
+  .create();
+runtimeService.setVariable(execution.getId(), &quot;fileVariable&quot;, typedFileValue);
+
+FileValue retrievedTypedFileValue = runtimeService.getVariableTyped(execution.getId(), &quot;fileVariable&quot;);
+InputStream fileContent = retrievedTypedFileValue.getValue(); // a byte stream of the file contents
+String fileName = retrievedTypedFileValue.getFilename(); // equals &quot;addresses.txt&quot;
+String mimeType = retrievedTypedFileValue.getMimeType(); // equals &quot;text/plain&quot;
+String encoding = retrievedTypedFileValue.getEncoding(); // equals &quot;UTF-8&quot;
+</code></pre>
+
+<h3 id="changing-a-file-value">Changing a File Value</h3>
+
+<p>To change or update a <code>file</code> value, you have to create a new <code>FileValue</code> with the same name and the new content, because all typed values are immutable:</p>
+
+<pre><code class="language-java">InputStream newContent = new FileInputStream(&quot;path/to/the/new/file.txt&quot;);
+FileValue fileVariable = execution.getVariableTyped(&quot;addresses.txt&quot;);  
+Variables.fileValue(fileVariable.getName()).file(newContent).encoding(fileVariable.getEncoding()).mimeType(fileVariable.getMimeType()).create();
+</code></pre>
+
+<h2 id="object-values">Object Values</h2>
+
+<p>Custom Java objects can be serialized with the value type <code>object</code>. Example using the typed value API:</p>
+
+<pre><code class="language-java">com.example.Order order = new com.example.Order();
+ObjectValue typedObjectValue = Variables.objectValue(order).create();
+runtimeService.setVariableLocal(execution.getId(), &quot;order&quot;, typedObjectValue);
+
+ObjectValue retrievedTypedObjectValue = runtimeService.getVariableTyped(execution.getId(), &quot;order&quot;);
+com.example.Order retrievedOrder = (com.example.Order) retrievedTypedObjectValue.getValue();
+</code></pre>
+
+<p>This again is equivalent to the Java-Object-based API. However, it is now possible to tell the engine which serialization format to use when persisting the value. For example:</p>
+
+<pre><code class="language-java">ObjectValue typedObjectValue = Variables
+  .objectValue(order)
+  .serializationDataFormat(Variables.SerializationDataFormats.JAVA)
+  .create();
+</code></pre>
+
+<p>creates a value that gets serialized by the engine&rsquo;s built-in Java object serializer. Also, a retrieved <code>ObjectValue</code> instance provides additional variable details:</p>
+
+<pre><code class="language-java">// returns true
+boolean isDeserialized = retrievedTypedObjectValue.isDeserialized();
+
+// returns the format used by the engine to serialize the value into the database
+String serializationDataFormat = retrievedTypedObjectValue.getSerializationDateFormat();
+
+// returns the serialized representation of the variable; the actual value depends on the serialization format used
+String serializedValue = retrievedTypedObjectValue.getValueSerialized();
+
+// returns the class com.example.Order
+Class&lt;com.example.Order&gt; valueClass = retrievedTypedObjectValue.getObjectType();
+
+// returns the String &quot;com.example.Order&quot;
+String valueClassName = retrievedTypedObjectValue.getObjectTypeName();
+</code></pre>
+
+<p>The serialization details are useful when the calling application does not possess the classes of the actual variable value (i.e. <code>com.example.Order</code> is not known). In these cases, <code>runtimeService.getVariableTyped(execution.getId(), &quot;order&quot;)</code> will raise an exception since it immediately tries to deserialize the variable value. In such a case, the invocation <code>runtimeService.getVariableTyped(execution.getId(), &quot;order&quot;, false)</code> can be used. The additional boolean parameter tells the process engine to not attempt deserialization. In this case, the invocation <code>isDeserialized()</code> will return <code>false</code> and invocations like <code>getValue()</code> and <code>getObjectType()</code> will raise exceptions. Calling <code>getValueSerialized()</code> and <code>getObjectTypeName()</code> is a way to access the variable nonetheless.</p>
+
+<p>Similarly, it is possible to set a variable from its serialized representation:</p>
+
+<pre><code class="language-java">String serializedOrder = &quot;...&quot;;
+ObjectValue serializedValue =
+  Variables
+    .serializedObjectValue(serializedOrder)
+    .serializationDataFormat(Variables.SerializationDataFormats.JAVA)
+    .objectTypeName(&quot;com.example.Order&quot;)
+    .create();
+
+runtimeService.setVariableLocal(execution.getId(), &quot;order&quot;, serializedValue);
+
+ObjectValue retrievedTypedObjectValue = runtimeService.getVariableTyped(execution.getId(), &quot;order&quot;);
+com.example.Order retrievedOrder = (com.example.Order) retrievedTypedObjectValue.getValue();
+</code></pre>
+
+
+<div class="note bg-warning docs-warning">
+  <h3>Inconsistent Variable States</h3>
+  <p>When setting a serialized variable value, no checking is done whether the structure of the serialized value is compatible with the class the variable value is supposed to be an instance of. When setting the variable from the above example, the supplied serialized value is not validated against the structure of <code>com.example.Order</code>. Thus, an invalid variable value will only be detected when <code>runtimeService#getVariableTyped</code> is called.</p>
+</div>
+
+
+
+<div class="note bg-warning docs-warning">
+  <h3>Java serialization format</h3>
+  <p>Be aware that when using a serialized representation of variables, the Java serialization format is forbidden by default. You should either use another format (JSON or XML) or explicitly enable the Java serialization
+  with the help of the <a href="/manual/develop/reference/deployment-descriptors/tags/process-engine/#javaSerializationFormatEnabled"><code>javaSerializationFormatEnabled</code></a> configuration flag.
+  However, please make sure to read the <a href="/manual/develop/user-guide/security/#variable-values-from-untrusted-sources">Security Implication</a> first before enabling this.</p>
+</div>
+
+
+<h2 id="json-and-xml-values">JSON and XML Values</h2>
+
+<p>The Camunda Spin plugin provides an abstraction for JSON and XML documents that facilitate their processing and manipulation. This is often more convenient than storing such documents as plain <code>string</code> variables. See the documentation on Camunda SPIN for <a href="/manual/develop/user-guide/data-formats/json/#native-json-variable-value">storing JSON documents</a> and <a href="/manual/develop/user-guide/data-formats/xml/#native-xml-variable-value">storing XML documents</a> for details.</p>
+
+<h2 id="transient-variables">Transient variables</h2>
+
+<p>Declaration of transient variables is possible only through the typed-value-based API. They are not saved into the database and exist only during the current transaction. Every waiting state during an execution of a process instance leads to the loss of all transient variables. This happens typically when e.g. an external service is not currently available, an user task has been reached or the process execution is waiting for a message, a signal or a condition. Please use this feature carefully.</p>
+
+<p>Variables of <a href="#supported-variable-values">any type</a> can be declared as transient using the <code>Variables</code> class and setting the parameter <code>isTransient</code> to true.</p>
+
+<pre><code class="language-java">// primitive values
+TypedValue typedTransientStringValue = Variables.stringValue(&quot;foobar&quot;, true);
+
+// object value
+com.example.Order order = new com.example.Order();
+TypedValue typedTransientObjectValue = Variables.objectValue(order, true).create();
+
+// file value
+TypedValue typedTransientFileValue = Variables.fileValue(&quot;file.txt&quot;, true)
+  .file(new File(&quot;path/to/the/file.txt&quot;))
+  .mimeType(&quot;text/plain&quot;)
+  .encoding(&quot;UTF-8&quot;)
+  .create();
+</code></pre>
+
+<p>Transient variables can be used via REST API, e.g. <a href="/manual/develop/reference/rest/process-definition/post-start-process-instance/">when starting a new process instance</a>.</p>
+
+<h2 id="set-multiple-typed-values">Set Multiple Typed Values</h2>
+
+<p>Similar to the Java-Object-based API, it is also possible to set multiple typed values in one API call. The <code>Variables</code> class offers a fluent API to construct a map of typed values:</p>
+
+<pre><code class="language-java">com.example.Order order = new com.example.Order();
+
+VariableMap variables =
+  Variables.createVariables()
+    .putValueTyped(&quot;order&quot;, Variables.objectValue(order).create())
+    .putValueTyped(&quot;string&quot;, Variables.stringValue(&quot;a string value&quot;))
+    .putValueTyped(&quot;stringTransient&quot;, Variables.stringValue(&quot;foobar&quot;, true));
+runtimeService.setVariablesLocal(execution.getId(), &quot;order&quot;, variables);
+</code></pre>
+
+<h1 id="interchangeability-of-apis">Interchangeability of APIs</h1>
+
+<p>Both APIs offer different views on the same entities and can therefore be combined as is desired. For example, a variable that is set using the Java-Object-based API can be retrieved as a typed value and vice versa. As the class <code>VariableMap</code> implements the <code>Map</code> interface, it is also possible to put plain Java objects as well as typed values into this map.</p>
+
+<p>Which API should you use? The one that fits your purpose best. When you are certain that you always have access to the involved value classes, such as when implementing code in a process application like a <code>JavaDelegate</code>, then the Java-Object-based API is easier to use. When you need to access value-specific metadata such as serialization formats or to define a variable as transient, then the Typed-Value-based API is the way to go.</p>
+
+<h1 id="input-output-variable-mapping">Input/Output Variable Mapping</h1>
+
+<p>To improve the reusability of source code and business logic, Camunda Platform offers input/output
+mapping of process variables. This can be used for tasks, events and subprocesses.</p>
+
+<p>In order to use the variable mapping, the Camunda extension element <a href="/manual/develop/reference/bpmn20/custom-extensions/extension-elements/#camunda-inputoutput">inputOutput</a> has to be added
+to the element. It can contain multiple <a href="/manual/develop/reference/bpmn20/custom-extensions/extension-elements/#inputparameter">inputParameter</a> and <a href="/manual/develop/reference/bpmn20/custom-extensions/extension-elements/#outputparameter">outputParameter</a> elements that
+specify which variables should be mapped. The <code>name</code> attribute of an <a href="/manual/develop/reference/bpmn20/custom-extensions/extension-elements/#inputparameter">inputParameter</a> denotes
+the variable name inside the activity (a local variable to be created), whereas the <code>name</code> attribute of an <a href="/manual/develop/reference/bpmn20/custom-extensions/extension-elements/#outputparameter">outputParameter</a>
+denotes the variable name outside of the activity.</p>
+
+<p>The content of an input/outputParameter specifies the value that is mapped to the corresponding
+variable. It can be a simple constant string or an expression. An empty body sets the variable
+to the value <code>null</code>.</p>
+
+<pre><code class="language-xml">&lt;camunda:inputOutput&gt;
+  &lt;camunda:inputParameter name=&quot;x&quot;&gt;foo&lt;/camunda:inputParameter&gt;
+  &lt;camunda:inputParameter name=&quot;willBeNull&quot;/&gt;
+  &lt;camunda:outputParameter name=&quot;y&quot;&gt;${x}&lt;/camunda:outputParameter&gt;
+  &lt;camunda:outputParameter name=&quot;z&quot;&gt;${willBeNull == null}&lt;/camunda:outputParameter&gt;
+&lt;/camunda:inputOutput&gt;
+</code></pre>
+
+<p>Even complex structures like <a href="/manual/develop/reference/bpmn20/custom-extensions/extension-elements/#camunda-list">lists</a> and <a href="/manual/develop/reference/bpmn20/custom-extensions/extension-elements/#camunda-map">maps</a> can be used. Both can also
+be nested.</p>
+
+<pre><code class="language-xml">&lt;camunda:inputOutput&gt;
+  &lt;camunda:inputParameter name=&quot;x&quot;&gt;
+    &lt;camunda:list&gt;
+      &lt;camunda:value&gt;a&lt;/camunda:value&gt;
+      &lt;camunda:value&gt;${1 + 1}&lt;/camunda:value&gt;
+      &lt;camunda:list&gt;
+        &lt;camunda:value&gt;1&lt;/camunda:value&gt;
+        &lt;camunda:value&gt;2&lt;/camunda:value&gt;
+        &lt;camunda:value&gt;3&lt;/camunda:value&gt;
+      &lt;/camunda:list&gt;
+    &lt;/camunda:list&gt;
+  &lt;/camunda:inputParameter&gt;
+  &lt;camunda:outputParameter name=&quot;y&quot;&gt;
+    &lt;camunda:map&gt;
+      &lt;camunda:entry key=&quot;foo&quot;&gt;bar&lt;/camunda:entry&gt;
+      &lt;camunda:entry key=&quot;map&quot;&gt;
+        &lt;camunda:map&gt;
+          &lt;camunda:entry key=&quot;hello&quot;&gt;world&lt;/camunda:entry&gt;
+          &lt;camunda:entry key=&quot;camunda&quot;&gt;bpm&lt;/camunda:entry&gt;
+        &lt;/camunda:map&gt;
+      &lt;/camunda:entry&gt;
+    &lt;/camunda:map&gt;
+  &lt;/camunda:outputParameter&gt;
+&lt;/camunda:inputOutput&gt;
+</code></pre>
+
+<p>A script can also be used to provide the variable value. Please see the corresponding
+<a href="/manual/develop/user-guide/process-engine/scripting/#use-scripts-as-inputoutput-parameters">section</a> in the scripting chapter for how to specify a script.</p>
+
+<p>A simple example of the benefit of input/output mapping is a complex calculation which
+should be part of multiple processes definitions. This calculation can be developed as isolated
+delegation code or a script and be reused in every process, even though the processes use a different variable set.
+An input mapping is used to map the different process variables to
+the required input parameters of the complex calculation activity. Accordingly, an output mapping allows to utilize the
+calculation result in the further process execution.</p>
+
+<p>In more detail, let us assume such a calculation is implemented by a Java Delegate class <code>org.camunda.bpm.example.ComplexCalculation</code>.
+This delegate requires a <code>userId</code> and a <code>costSum</code> variable as input
+parameters. It then calculates three values, <code>pessimisticForecast</code>, <code>realisticForecast</code> and <code>optimisticForecast</code>,
+which are different forecasts of the future costs a customer faces. In a first process, both input variables are available as process variables but with different names (<code>id</code>, <code>sum</code>). From the three results, the process only uses <code>realisticForecast</code> which it depends on by the name <code>forecast</code> in follow-up activities. A corresponding input/output mapping looks as follows:</p>
+
+<pre><code class="language-xml">&lt;serviceTask camunda:class=&quot;org.camunda.bpm.example.ComplexCalculation&quot;&gt;
+  &lt;extensionElements&gt;
+    &lt;camunda:inputOutput&gt;
+      &lt;camunda:inputParameter name=&quot;userId&quot;&gt;${id}&lt;/camunda:inputParameter&gt;
+      &lt;camunda:inputParameter name=&quot;costSum&quot;&gt;${sum}&lt;/camunda:inputParameter&gt;
+      &lt;camunda:outputParameter name=&quot;forecast&quot;&gt;${realisticForecast}&lt;/camunda:outputParameter&gt;
+    &lt;/camunda:inputOutput&gt;
+  &lt;/extensionElements&gt;
+&lt;/serviceTask&gt;
+</code></pre>
+
+<p>In a second process, let us assume the <code>costSum</code> variable has to be calculated from properties of three different maps. Also, the process
+depends on a variable <code>avgForecast</code> as the average value of the three forecasts. In this case, the mapping looks as follows:</p>
+
+<pre><code class="language-xml">&lt;serviceTask camunda:class=&quot;org.camunda.bpm.example.ComplexCalculation&quot;&gt;
+  &lt;extensionElements&gt;
+    &lt;camunda:inputOutput&gt;
+      &lt;camunda:inputParameter name=&quot;userId&quot;&gt;${id}&lt;/camunda:inputParameter&gt;
+      &lt;camunda:inputParameter name=&quot;costSum&quot;&gt;
+        ${mapA[costs] + mapB[costs] + mapC[costs]}
+      &lt;/camunda:inputParameter&gt;
+      &lt;camunda:outputParameter name=&quot;avgForecast&quot;&gt;
+        ${(pessimisticForecast + realisticForecast + optimisticForecast) / 3}
+      &lt;/camunda:outputParameter&gt;
+    &lt;/camunda:inputOutput&gt;
+  &lt;/extensionElements&gt;
+&lt;/serviceTask&gt;
+</code></pre>
+
+<h2 id="multi-instance-io-mapping">Multi-instance IO Mapping</h2>
+
+<p>Input mappings can also be used with multi-instance constructs, in which the mapping is applied for every instance that is created. For example, for a multi-instance subprocess with five instances, the mapping is executed five times and the involved variables are created in each of the five subprocess scopes such that they can be accessed independently.</p>
+
+
+<div class="note bg-info docs-info">
+  <h3>No output mapping for multi-instance constructs</h3>
+  <p>The engine does not support output mappings for multi-instance constructs. Every instance of the output mapping would overwrite the variables set by the previous instances and the final variable state would become hard to predict.</p>
+</div>
+
+
+<h2 id="io-mapping-on-canceled-activities">IO Mapping on canceled activities</h2>
+
+<p>If an Activity is canceled (e.g. due to throwing a BPMN error), IO mapping is still executed. This can lead to exceptions if the output mapping references variables that do not exist in the scope of the activity at that time.</p>
+
+<p>The default behavior is that the engine still tries to execute output mappings on canceled activities and fails with an exception if a variable is not found. By enabling the <a href="/manual/develop/reference/deployment-descriptors/tags/process-engine/#skipOutputMappingOnCanceledActivities">skipOutputMappingOnCanceledActivities</a> engine configuration flag (i.e. setting it to <code>true</code>) the engine will not perform output mappings on any canceled activity.</p>
+
+    </div>
+  </div>
+</div>
+
+<div class="page-toc">
+  <h3>目录:</h3>
+  <nav id="TableOfContents">
+<ul>
+<li><a href="#variable-scopes-and-variable-visibility">Variable Scopes and Variable Visibility</a></li>
+<li><a href="#set-and-retrieve-variables-overview">Set and Retrieve Variables - Overview</a>
+<ul>
+<li><a href="#setting-variables-to-specific-scope">Setting variables to specific scope</a></li>
+</ul></li>
+<li><a href="#supported-variable-values">Supported Variable Values</a>
+<ul>
+<li><a href="#object-value-serialization">Object Value Serialization</a></li>
+</ul></li>
+<li><a href="#java-object-api">Java Object API</a></li>
+<li><a href="#typed-value-api">Typed Value API</a>
+<ul>
+<li><a href="#primitive-values">Primitive Values</a></li>
+<li><a href="#file-values">File Values</a>
+<ul>
+<li><a href="#changing-a-file-value">Changing a File Value</a></li>
+</ul></li>
+<li><a href="#object-values">Object Values</a></li>
+<li><a href="#json-and-xml-values">JSON and XML Values</a></li>
+<li><a href="#transient-variables">Transient variables</a></li>
+<li><a href="#set-multiple-typed-values">Set Multiple Typed Values</a></li>
+</ul></li>
+<li><a href="#interchangeability-of-apis">Interchangeability of APIs</a></li>
+<li><a href="#input-output-variable-mapping">Input/Output Variable Mapping</a>
+<ul>
+<li><a href="#multi-instance-io-mapping">Multi-instance IO Mapping</a></li>
+<li><a href="#io-mapping-on-canceled-activities">IO Mapping on canceled activities</a></li>
+</ul></li>
+</ul>
+</nav>
+  
+</div>
+
+
+    
+    <footer class="page-footer">
+      <div class="row">
+        <div class="col-xs-12">
+
+          <p class="pull-right">
+            <a href="#" target="_self">Back to top</a>
+          </p>
+
+          <p>
+            <a href="http://camunda.org">camunda.org</a> and <a href="/manual/develop/">docs.camunda.org</a> are part of Camunda Platform
+            <span class="splitter">|</span>
+            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2021
+          </p>
+          <p>
+            <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a> The content on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+
+  
+
+  <script type="text/javascript" src="/manual/develop/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+    _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+    _gaq.push(['_setAccount', 'UA-39060941-1']);
+    _gaq.push(['_setDomainName', 'camunda.org']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/4513465.js"></script>
+  
+</body>
+</html>
+
