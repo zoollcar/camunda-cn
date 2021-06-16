@@ -3,3756 +3,3756 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/manual/develop/reference/rest/task/comment/</loc>
+    <loc>/camunda-cn/reference/rest/task/comment/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/group/members/</loc>
+    <loc>/camunda-cn/reference/rest/group/members/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/installation/camunda-modeler/</loc>
+    <loc>/camunda-cn/installation/camunda-modeler/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/case-execution/local-variables/</loc>
+    <loc>/camunda-cn/reference/rest/case-execution/local-variables/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/execution/local-variables/</loc>
+    <loc>/camunda-cn/reference/rest/execution/local-variables/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/tenant/user-members/</loc>
+    <loc>/camunda-cn/reference/rest/tenant/user-members/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/case-instance/variables/</loc>
+    <loc>/camunda-cn/reference/rest/case-instance/variables/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/process-instance/variables/</loc>
+    <loc>/camunda-cn/reference/rest/process-instance/variables/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/task/attachment/</loc>
+    <loc>/camunda-cn/reference/rest/task/attachment/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/task/identity-links/</loc>
+    <loc>/camunda-cn/reference/rest/task/identity-links/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/task/variables/</loc>
+    <loc>/camunda-cn/reference/rest/task/variables/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/cockpit/cmmn/dashboard/</loc>
+    <loc>/camunda-cn/webapps/cockpit/cmmn/dashboard/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/cockpit/dmn/dashboard/</loc>
+    <loc>/camunda-cn/webapps/cockpit/dmn/dashboard/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/installation/camunda-bpm-run/</loc>
+    <loc>/camunda-cn/installation/camunda-bpm-run/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/task/local-variables/</loc>
+    <loc>/camunda-cn/reference/rest/task/local-variables/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/execution/message-event-subscription/</loc>
+    <loc>/camunda-cn/reference/rest/execution/message-event-subscription/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/task/report/</loc>
+    <loc>/camunda-cn/reference/rest/task/report/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/tenant/group-members/</loc>
+    <loc>/camunda-cn/reference/rest/tenant/group-members/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/case-execution/variables/</loc>
+    <loc>/camunda-cn/reference/rest/case-execution/variables/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/715-to-716/</loc>
+    <loc>/camunda-cn/update/minor/715-to-716/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/714-to-715/</loc>
+    <loc>/camunda-cn/update/minor/714-to-715/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/cmmn11/migration/10-to-11/</loc>
+    <loc>/camunda-cn/reference/cmmn11/migration/10-to-11/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/activity-instance/</loc>
+    <loc>/camunda-cn/reference/rest/history/activity-instance/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/cockpit/batch/batch-operation/</loc>
+    <loc>/camunda-cn/webapps/cockpit/batch/batch-operation/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/bpmn20/custom-extensions/extension-elements/</loc>
+    <loc>/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/runtime-container-integration/bpm-platform-services/</loc>
+    <loc>/camunda-cn/user-guide/runtime-container-integration/bpm-platform-services/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/cockpit/cmmn/case-definition-view/</loc>
+    <loc>/camunda-cn/webapps/cockpit/cmmn/case-definition-view/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/cmmn11/api/classic-vs-fluent/</loc>
+    <loc>/camunda-cn/reference/cmmn11/api/classic-vs-fluent/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/cockpit/extend/configuration/</loc>
+    <loc>/camunda-cn/webapps/cockpit/extend/configuration/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/overview/authentication/</loc>
+    <loc>/camunda-cn/reference/rest/overview/authentication/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/telemetry/port-telemetry/</loc>
+    <loc>/camunda-cn/reference/rest/telemetry/port-telemetry/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/process-engine/decisions/configuration/</loc>
+    <loc>/camunda-cn/user-guide/process-engine/decisions/configuration/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/data-formats/configuring-spin-integration/</loc>
+    <loc>/camunda-cn/user-guide/data-formats/configuring-spin-integration/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/shared-options/container-based-authentication/</loc>
+    <loc>/camunda-cn/webapps/shared-options/container-based-authentication/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/forms/embedded-forms/controls/</loc>
+    <loc>/camunda-cn/reference/forms/embedded-forms/controls/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/message/post-message/</loc>
+    <loc>/camunda-cn/reference/rest/message/post-message/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/group/members/put/</loc>
+    <loc>/camunda-cn/reference/rest/group/members/put/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/tenant/group-members/put/</loc>
+    <loc>/camunda-cn/reference/rest/tenant/group-members/put/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/tenant/user-members/put/</loc>
+    <loc>/camunda-cn/reference/rest/tenant/user-members/put/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/dmn/decision-table/</loc>
+    <loc>/camunda-cn/reference/dmn/decision-table/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/dmn/decision-table/input/</loc>
+    <loc>/camunda-cn/reference/dmn/decision-table/input/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/cockpit/bpmn/dashboard/</loc>
+    <loc>/camunda-cn/webapps/cockpit/bpmn/dashboard/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/cockpit/dashboard/</loc>
+    <loc>/camunda-cn/webapps/cockpit/dashboard/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/bpmn20/gateways/exclusive-gateway/</loc>
+    <loc>/camunda-cn/reference/bpmn20/gateways/exclusive-gateway/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/process-engine/database/database-schema/</loc>
+    <loc>/camunda-cn/user-guide/process-engine/database/database-schema/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/cockpit/dmn/decision-definition-view/</loc>
+    <loc>/camunda-cn/webapps/cockpit/dmn/decision-definition-view/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/cockpit/dmn/decision-requirements-instance-view/</loc>
+    <loc>/camunda-cn/webapps/cockpit/dmn/decision-requirements-instance-view/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/cockpit/dmn/decision-requirements-definition-view/</loc>
+    <loc>/camunda-cn/webapps/cockpit/dmn/decision-requirements-definition-view/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/process-instance/variables/delete-variable/</loc>
+    <loc>/camunda-cn/reference/rest/process-instance/variables/delete-variable/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/user/delete/</loc>
+    <loc>/camunda-cn/reference/rest/user/delete/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/introduction/downloading-camunda/</loc>
+    <loc>/camunda-cn/introduction/downloading-camunda/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/bpmn20/subprocesses/embedded-subprocess/</loc>
+    <loc>/camunda-cn/reference/bpmn20/subprocesses/embedded-subprocess/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/dmn-engine/embed/</loc>
+    <loc>/camunda-cn/user-guide/dmn-engine/embed/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/condition/post-condition/</loc>
+    <loc>/camunda-cn/reference/rest/condition/post-condition/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/cmmn11/custom-extensions/camunda-elements/</loc>
+    <loc>/camunda-cn/reference/cmmn11/custom-extensions/camunda-elements/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/dmn/feel/legacy/data-types/</loc>
+    <loc>/camunda-cn/reference/dmn/feel/legacy/data-types/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/dmn-engine/feel/type-handling/</loc>
+    <loc>/camunda-cn/user-guide/dmn-engine/feel/type-handling/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/telemetry/get-telemetry/</loc>
+    <loc>/camunda-cn/reference/rest/telemetry/get-telemetry/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/migration/generate-migration/</loc>
+    <loc>/camunda-cn/reference/rest/migration/generate-migration/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/process-definition/get-activity-statistics/</loc>
+    <loc>/camunda-cn/reference/rest/process-definition/get-activity-statistics/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/authorization/get-query/</loc>
+    <loc>/camunda-cn/reference/rest/authorization/get-query/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/batch/get-query/</loc>
+    <loc>/camunda-cn/reference/rest/batch/get-query/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/case-definition/get-query/</loc>
+    <loc>/camunda-cn/reference/rest/case-definition/get-query/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/case-execution/get-query/</loc>
+    <loc>/camunda-cn/reference/rest/case-execution/get-query/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/case-instance/get-query/</loc>
+    <loc>/camunda-cn/reference/rest/case-instance/get-query/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/decision-definition/get-cleanable-decision-instance-report/</loc>
+    <loc>/camunda-cn/reference/rest/history/decision-definition/get-cleanable-decision-instance-report/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/decision-definition/get-query/</loc>
+    <loc>/camunda-cn/reference/rest/decision-definition/get-query/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/decision-requirements-definition/get-query/</loc>
+    <loc>/camunda-cn/reference/rest/decision-requirements-definition/get-query/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/deployment/get-query/</loc>
+    <loc>/camunda-cn/reference/rest/deployment/get-query/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/engine/get-names/</loc>
+    <loc>/camunda-cn/reference/rest/engine/get-names/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/execution/get-query/</loc>
+    <loc>/camunda-cn/reference/rest/execution/get-query/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/external-task/get/</loc>
+    <loc>/camunda-cn/reference/rest/external-task/get/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/external-task-log/get-external-task-log-query/</loc>
+    <loc>/camunda-cn/reference/rest/history/external-task-log/get-external-task-log-query/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/filter/get-query/</loc>
+    <loc>/camunda-cn/reference/rest/filter/get-query/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/group/get-query/</loc>
+    <loc>/camunda-cn/reference/rest/group/get-query/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/activity-instance/get-activity-instance-query/</loc>
+    <loc>/camunda-cn/reference/rest/history/activity-instance/get-activity-instance-query/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/process-definition/get-historic-activity-statistics/</loc>
+    <loc>/camunda-cn/reference/rest/history/process-definition/get-historic-activity-statistics/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/batch/get-query/</loc>
+    <loc>/camunda-cn/reference/rest/history/batch/get-query/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/case-activity-instance/get-case-activity-instance-query/</loc>
+    <loc>/camunda-cn/reference/rest/history/case-activity-instance/get-case-activity-instance-query/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/case-definition/get-historic-case-activity-statistics/</loc>
+    <loc>/camunda-cn/reference/rest/history/case-definition/get-historic-case-activity-statistics/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/case-instance/get-case-instance-query/</loc>
+    <loc>/camunda-cn/reference/rest/history/case-instance/get-case-instance-query/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/decision-instance/get-decision-instance-query/</loc>
+    <loc>/camunda-cn/reference/rest/history/decision-instance/get-decision-instance-query/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/detail/get-detail-query/</loc>
+    <loc>/camunda-cn/reference/rest/history/detail/get-detail-query/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/detail/post-detail-query/</loc>
+    <loc>/camunda-cn/reference/rest/history/detail/post-detail-query/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/identity-links/get-identity-link-query/</loc>
+    <loc>/camunda-cn/reference/rest/history/identity-links/get-identity-link-query/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/incident/get-incident/</loc>
+    <loc>/camunda-cn/reference/rest/incident/get-incident/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/incident/get-query-count/</loc>
+    <loc>/camunda-cn/reference/rest/incident/get-query-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/incident/get-incident-query/</loc>
+    <loc>/camunda-cn/reference/rest/history/incident/get-incident-query/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/incident/get-query/</loc>
+    <loc>/camunda-cn/reference/rest/incident/get-query/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/job-definition/get-query/</loc>
+    <loc>/camunda-cn/reference/rest/job-definition/get-query/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/job-log/get-job-log-query/</loc>
+    <loc>/camunda-cn/reference/rest/history/job-log/get-job-log-query/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/job/get-query/</loc>
+    <loc>/camunda-cn/reference/rest/job/get-query/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/metrics/get-metrics-interval/</loc>
+    <loc>/camunda-cn/reference/rest/metrics/get-metrics-interval/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/process-instance/get-process-instance-query/</loc>
+    <loc>/camunda-cn/reference/rest/history/process-instance/get-process-instance-query/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/schema-log/get-query/</loc>
+    <loc>/camunda-cn/reference/rest/schema-log/get-query/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/metrics/get-metrics-sum/</loc>
+    <loc>/camunda-cn/reference/rest/metrics/get-metrics-sum/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/task/get/</loc>
+    <loc>/camunda-cn/reference/rest/task/get/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/task/get-task-query/</loc>
+    <loc>/camunda-cn/reference/rest/history/task/get-task-query/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/tenant/get-query/</loc>
+    <loc>/camunda-cn/reference/rest/tenant/get-query/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/user-operation-log/get-user-operation-log-query/</loc>
+    <loc>/camunda-cn/reference/rest/history/user-operation-log/get-user-operation-log-query/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/variable-instance/get-binary/</loc>
+    <loc>/camunda-cn/reference/rest/variable-instance/get-binary/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/variable-instance/get-variable-instance-query/</loc>
+    <loc>/camunda-cn/reference/rest/history/variable-instance/get-variable-instance-query/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/identity/get-group-info/</loc>
+    <loc>/camunda-cn/reference/rest/identity/get-group-info/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/forms/embedded-forms/integrate/getting-a-distribution/</loc>
+    <loc>/camunda-cn/reference/forms/embedded-forms/integrate/getting-a-distribution/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/connect/http-connector/</loc>
+    <loc>/camunda-cn/reference/connect/http-connector/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/spin/xml/</loc>
+    <loc>/camunda-cn/reference/spin/xml/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/cmmn11/tasks/human-task/</loc>
+    <loc>/camunda-cn/reference/cmmn11/tasks/human-task/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/installation/full/tomcat/</loc>
+    <loc>/camunda-cn/installation/full/tomcat/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/installation/full/tomcat/pre-packaged/</loc>
+    <loc>/camunda-cn/installation/full/tomcat/pre-packaged/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/installation/full/</loc>
+    <loc>/camunda-cn/installation/full/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/installation/full/jboss/pre-packaged/</loc>
+    <loc>/camunda-cn/installation/full/jboss/pre-packaged/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/cmmn11/markers/manual-activation-rule/</loc>
+    <loc>/camunda-cn/reference/cmmn11/markers/manual-activation-rule/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/spring-boot-starter/migration-22-23/</loc>
+    <loc>/camunda-cn/update/spring-boot-starter/migration-22-23/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/spring-boot-starter/migration-23-30/</loc>
+    <loc>/camunda-cn/update/spring-boot-starter/migration-23-30/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/spring-boot-starter/migration-31-32/</loc>
+    <loc>/camunda-cn/update/spring-boot-starter/migration-31-32/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/spring-boot-starter/migration-33-34/</loc>
+    <loc>/camunda-cn/update/spring-boot-starter/migration-33-34/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/spring-boot-starter/migration-34-713/</loc>
+    <loc>/camunda-cn/update/spring-boot-starter/migration-34-713/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/modeler/bpmn/</loc>
+    <loc>/camunda-cn/modeler/bpmn/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/overview/</loc>
+    <loc>/camunda-cn/reference/rest/overview/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/cmmn11/concepts/plan-items/</loc>
+    <loc>/camunda-cn/reference/cmmn11/concepts/plan-items/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/spring-framework-integration/configuration/</loc>
+    <loc>/camunda-cn/user-guide/spring-framework-integration/configuration/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/model-api/bpmn-model-api/read-a-model/</loc>
+    <loc>/camunda-cn/user-guide/model-api/bpmn-model-api/read-a-model/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/model-api/cmmn-model-api/read-a-model/</loc>
+    <loc>/camunda-cn/user-guide/model-api/cmmn-model-api/read-a-model/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/model-api/dmn-model-api/read-a-model/</loc>
+    <loc>/camunda-cn/user-guide/model-api/dmn-model-api/read-a-model/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/spin/json/01-reading-json/</loc>
+    <loc>/camunda-cn/reference/spin/json/01-reading-json/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/spin/xml/01-reading-xml/</loc>
+    <loc>/camunda-cn/reference/spin/xml/01-reading-xml/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/incident/resolve-incident/</loc>
+    <loc>/camunda-cn/reference/rest/incident/resolve-incident/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/</loc>
+    <loc>/camunda-cn/reference/rest/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/bpmn20/tasks/service-task/</loc>
+    <loc>/camunda-cn/reference/bpmn20/tasks/service-task/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/spring-boot-starter/</loc>
+    <loc>/camunda-cn/update/spring-boot-starter/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/spring-boot-integration/version-compatibility/</loc>
+    <loc>/camunda-cn/user-guide/spring-boot-integration/version-compatibility/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/cmmn11/grouping-tasks/stage/</loc>
+    <loc>/camunda-cn/reference/cmmn11/grouping-tasks/stage/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/bpmn20/events/start-events/</loc>
+    <loc>/camunda-cn/reference/bpmn20/events/start-events/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/forms/embedded-forms/controls/inputs/</loc>
+    <loc>/camunda-cn/reference/forms/embedded-forms/controls/inputs/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/process-applications/the-process-application-class/</loc>
+    <loc>/camunda-cn/user-guide/process-applications/the-process-application-class/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/forms/embedded-forms/javascript/cam-script/</loc>
+    <loc>/camunda-cn/reference/forms/embedded-forms/javascript/cam-script/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/signal/post-signal/</loc>
+    <loc>/camunda-cn/reference/rest/signal/post-signal/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/713-to-714/</loc>
+    <loc>/camunda-cn/update/minor/713-to-714/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/</loc>
+    <loc>/camunda-cn/update/minor/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/admin/user-management/</loc>
+    <loc>/camunda-cn/webapps/admin/user-management/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/tasklist/working-with-tasklist/</loc>
+    <loc>/camunda-cn/webapps/tasklist/working-with-tasklist/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/deployment-descriptors/descriptors/bpm-platform-xml/</loc>
+    <loc>/camunda-cn/reference/deployment-descriptors/descriptors/bpm-platform-xml/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/bpmn20/tasks/</loc>
+    <loc>/camunda-cn/reference/bpmn20/tasks/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/introduction/</loc>
+    <loc>/camunda-cn/introduction/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/process-engine/process-engine-bootstrapping/</loc>
+    <loc>/camunda-cn/user-guide/process-engine/process-engine-bootstrapping/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/batch/</loc>
+    <loc>/camunda-cn/reference/rest/history/batch/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/case-definition/</loc>
+    <loc>/camunda-cn/reference/rest/history/case-definition/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/dmn/decision-literal-expression/</loc>
+    <loc>/camunda-cn/reference/dmn/decision-literal-expression/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/javadoc/</loc>
+    <loc>/camunda-cn/reference/javadoc/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/introduction/licenses/</loc>
+    <loc>/camunda-cn/introduction/licenses/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/openapi/</loc>
+    <loc>/camunda-cn/reference/rest/openapi/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/admin/extend/plugins/</loc>
+    <loc>/camunda-cn/webapps/admin/extend/plugins/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/authorization/</loc>
+    <loc>/camunda-cn/reference/rest/authorization/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/forms/embedded-forms/javascript/api/</loc>
+    <loc>/camunda-cn/reference/forms/embedded-forms/javascript/api/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/bpmn20/</loc>
+    <loc>/camunda-cn/reference/bpmn20/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/model-api/bpmn-model-api/</loc>
+    <loc>/camunda-cn/user-guide/model-api/bpmn-model-api/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/cockpit/bpmn/</loc>
+    <loc>/camunda-cn/webapps/cockpit/bpmn/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/forms/embedded-forms/integrate/bootstrapping/</loc>
+    <loc>/camunda-cn/reference/forms/embedded-forms/integrate/bootstrapping/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/cmmn11/concepts/</loc>
+    <loc>/camunda-cn/reference/cmmn11/concepts/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/shared-options/csrf-prevention/</loc>
+    <loc>/camunda-cn/webapps/shared-options/csrf-prevention/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/bpmn20/subprocesses/call-activity/</loc>
+    <loc>/camunda-cn/reference/bpmn20/subprocesses/call-activity/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/bpmn20/custom-extensions/extension-attributes/</loc>
+    <loc>/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/introduction/third-party-libraries/camunda-bpm-platform-license-book/</loc>
+    <loc>/camunda-cn/introduction/third-party-libraries/camunda-bpm-platform-license-book/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/case-instance/</loc>
+    <loc>/camunda-cn/reference/rest/history/case-instance/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/cockpit/cmmn/case-instance-view/</loc>
+    <loc>/camunda-cn/webapps/cockpit/cmmn/case-instance-view/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/cockpit/extend/plugins/</loc>
+    <loc>/camunda-cn/webapps/cockpit/extend/plugins/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/bpmn20/gateways/sequence-flow/</loc>
+    <loc>/camunda-cn/reference/bpmn20/gateways/sequence-flow/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/shared-options/cookie-security/</loc>
+    <loc>/camunda-cn/webapps/shared-options/cookie-security/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/model-api/bpmn-model-api/create-a-model/</loc>
+    <loc>/camunda-cn/user-guide/model-api/bpmn-model-api/create-a-model/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/model-api/cmmn-model-api/create-a-model/</loc>
+    <loc>/camunda-cn/user-guide/model-api/cmmn-model-api/create-a-model/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/model-api/dmn-model-api/create-a-model/</loc>
+    <loc>/camunda-cn/user-guide/model-api/dmn-model-api/create-a-model/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/dmn/decision-table/output/</loc>
+    <loc>/camunda-cn/reference/dmn/decision-table/output/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/tasklist/dashboard/</loc>
+    <loc>/camunda-cn/webapps/tasklist/dashboard/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/data-formats/data-formats-in-processes/</loc>
+    <loc>/camunda-cn/user-guide/data-formats/data-formats-in-processes/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/process-engine/database/database-configuration/</loc>
+    <loc>/camunda-cn/user-guide/process-engine/database/database-configuration/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/cockpit/dmn/decision-instance-view/</loc>
+    <loc>/camunda-cn/webapps/cockpit/dmn/decision-instance-view/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/dmn/drg/</loc>
+    <loc>/camunda-cn/reference/dmn/drg/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/process-engine/decisions/repository/</loc>
+    <loc>/camunda-cn/user-guide/process-engine/decisions/repository/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/model-api/bpmn-model-api/delegation-code/</loc>
+    <loc>/camunda-cn/user-guide/model-api/bpmn-model-api/delegation-code/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/model-api/cmmn-model-api/delegation-code/</loc>
+    <loc>/camunda-cn/user-guide/model-api/cmmn-model-api/delegation-code/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/process-instance/delete/</loc>
+    <loc>/camunda-cn/reference/rest/process-instance/delete/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/group/members/delete/</loc>
+    <loc>/camunda-cn/reference/rest/group/members/delete/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/tenant/group-members/delete/</loc>
+    <loc>/camunda-cn/reference/rest/tenant/group-members/delete/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/tenant/user-members/delete/</loc>
+    <loc>/camunda-cn/reference/rest/tenant/user-members/delete/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/modeler/dmn/</loc>
+    <loc>/camunda-cn/modeler/dmn/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/dmn-engine/evaluate-decisions/</loc>
+    <loc>/camunda-cn/user-guide/dmn-engine/evaluate-decisions/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/cmmn11/custom-extensions/camunda-attributes/</loc>
+    <loc>/camunda-cn/reference/cmmn11/custom-extensions/camunda-attributes/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/dmn/custom-extensions/camunda-attributes/</loc>
+    <loc>/camunda-cn/reference/dmn/custom-extensions/camunda-attributes/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/dmn-engine/feel/custom-functions/</loc>
+    <loc>/camunda-cn/user-guide/dmn-engine/feel/custom-functions/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/dmn/feel/legacy/language-elements/</loc>
+    <loc>/camunda-cn/reference/dmn/feel/legacy/language-elements/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/dmn/feel/</loc>
+    <loc>/camunda-cn/reference/dmn/feel/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/bpmn20/gateways/</loc>
+    <loc>/camunda-cn/reference/bpmn20/gateways/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/authorization/get-query-count/</loc>
+    <loc>/camunda-cn/reference/rest/authorization/get-query-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/batch/get-query-count/</loc>
+    <loc>/camunda-cn/reference/rest/batch/get-query-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/case-definition/get-query-count/</loc>
+    <loc>/camunda-cn/reference/rest/case-definition/get-query-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/case-execution/get-query-count/</loc>
+    <loc>/camunda-cn/reference/rest/case-execution/get-query-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/case-instance/get-query-count/</loc>
+    <loc>/camunda-cn/reference/rest/case-instance/get-query-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/case-definition/get-cleanable-case-instance-report/</loc>
+    <loc>/camunda-cn/reference/rest/history/case-definition/get-cleanable-case-instance-report/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/decision-definition/get-cleanable-decision-instance-report-count/</loc>
+    <loc>/camunda-cn/reference/rest/history/decision-definition/get-cleanable-decision-instance-report-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/process-definition/get-cleanable-process-instance-report/</loc>
+    <loc>/camunda-cn/reference/rest/history/process-definition/get-cleanable-process-instance-report/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/decision-definition/get-query-count/</loc>
+    <loc>/camunda-cn/reference/rest/decision-definition/get-query-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/decision-requirements-definition/get-query-count/</loc>
+    <loc>/camunda-cn/reference/rest/decision-requirements-definition/get-query-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/deployment/get-query-count/</loc>
+    <loc>/camunda-cn/reference/rest/deployment/get-query-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/execution/get-query-count/</loc>
+    <loc>/camunda-cn/reference/rest/execution/get-query-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/external-task-log/get-external-task-log-query-count/</loc>
+    <loc>/camunda-cn/reference/rest/history/external-task-log/get-external-task-log-query-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/external-task/get-query/</loc>
+    <loc>/camunda-cn/reference/rest/external-task/get-query/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/filter/get-query-count/</loc>
+    <loc>/camunda-cn/reference/rest/filter/get-query-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/group/get-query-count/</loc>
+    <loc>/camunda-cn/reference/rest/group/get-query-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/activity-instance/get-activity-instance-query-count/</loc>
+    <loc>/camunda-cn/reference/rest/history/activity-instance/get-activity-instance-query-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/batch/get-query-count/</loc>
+    <loc>/camunda-cn/reference/rest/history/batch/get-query-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/case-activity-instance/get-case-activity-instance-query-count/</loc>
+    <loc>/camunda-cn/reference/rest/history/case-activity-instance/get-case-activity-instance-query-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/case-instance/get-case-instance-query-count/</loc>
+    <loc>/camunda-cn/reference/rest/history/case-instance/get-case-instance-query-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/decision-instance/get-decision-instance-query-count/</loc>
+    <loc>/camunda-cn/reference/rest/history/decision-instance/get-decision-instance-query-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/detail/get-detail-query-count/</loc>
+    <loc>/camunda-cn/reference/rest/history/detail/get-detail-query-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/identity-links/get-identity-link-query-count/</loc>
+    <loc>/camunda-cn/reference/rest/history/identity-links/get-identity-link-query-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/incident/get-incident-query-count/</loc>
+    <loc>/camunda-cn/reference/rest/history/incident/get-incident-query-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/job/get-query-count/</loc>
+    <loc>/camunda-cn/reference/rest/job/get-query-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/job-definition/get-query-count/</loc>
+    <loc>/camunda-cn/reference/rest/job-definition/get-query-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/job-log/get-job-log-query-count/</loc>
+    <loc>/camunda-cn/reference/rest/history/job-log/get-job-log-query-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/process-definition/get-diagram/</loc>
+    <loc>/camunda-cn/reference/rest/process-definition/get-diagram/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/process-instance/get-process-instance-query-count/</loc>
+    <loc>/camunda-cn/reference/rest/history/process-instance/get-process-instance-query-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/schema-log/post-query/</loc>
+    <loc>/camunda-cn/reference/rest/schema-log/post-query/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/task/get-task-query-count/</loc>
+    <loc>/camunda-cn/reference/rest/history/task/get-task-query-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/task/get-query/</loc>
+    <loc>/camunda-cn/reference/rest/task/get-query/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/tenant/get-query-count/</loc>
+    <loc>/camunda-cn/reference/rest/tenant/get-query-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/user/get-query-count/</loc>
+    <loc>/camunda-cn/reference/rest/user/get-query-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/user-operation-log/get-user-operation-log-query-count/</loc>
+    <loc>/camunda-cn/reference/rest/history/user-operation-log/get-user-operation-log-query-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/variable-instance/get-variable-instance-query-count/</loc>
+    <loc>/camunda-cn/reference/rest/history/variable-instance/get-variable-instance-query-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/variable-instance/get-query-count/</loc>
+    <loc>/camunda-cn/reference/rest/variable-instance/get-query-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/admin/group-management/</loc>
+    <loc>/camunda-cn/webapps/admin/group-management/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/shared-options/header-security/</loc>
+    <loc>/camunda-cn/webapps/shared-options/header-security/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/spin/json/</loc>
+    <loc>/camunda-cn/reference/spin/json/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/introduction/implemented-standards/</loc>
+    <loc>/camunda-cn/introduction/implemented-standards/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/installation/full/jboss/</loc>
+    <loc>/camunda-cn/installation/full/jboss/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/installation/full/wls/manual/</loc>
+    <loc>/camunda-cn/installation/full/wls/manual/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/installation/full/jboss/manual/</loc>
+    <loc>/camunda-cn/installation/full/jboss/manual/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/installation/full/tomcat/manual/</loc>
+    <loc>/camunda-cn/installation/full/tomcat/manual/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/installation/full/was/manual/</loc>
+    <loc>/camunda-cn/installation/full/was/manual/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/installation/standalone-webapplication/</loc>
+    <loc>/camunda-cn/installation/standalone-webapplication/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/runtime-container-integration/jndi-bindings-for-bpmn-platform-services/</loc>
+    <loc>/camunda-cn/user-guide/runtime-container-integration/jndi-bindings-for-bpmn-platform-services/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/cdi-java-ee-integration/jta-transaction-integration/</loc>
+    <loc>/camunda-cn/user-guide/cdi-java-ee-integration/jta-transaction-integration/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/forms/embedded-forms/javascript/</loc>
+    <loc>/camunda-cn/reference/forms/embedded-forms/javascript/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/dmn/feel/legacy/</loc>
+    <loc>/camunda-cn/reference/dmn/feel/legacy/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/spin/xml/02-manipulating-xml/</loc>
+    <loc>/camunda-cn/reference/spin/xml/02-manipulating-xml/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/bpmn20/events/none-events/</loc>
+    <loc>/camunda-cn/reference/bpmn20/events/none-events/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/patch-level/</loc>
+    <loc>/camunda-cn/update/patch-level/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/cmmn11/concepts/lifecycle/</loc>
+    <loc>/camunda-cn/reference/cmmn11/concepts/lifecycle/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/cockpit/bpmn/process-definition-view/</loc>
+    <loc>/camunda-cn/webapps/cockpit/bpmn/process-definition-view/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/spring-boot-integration/configuration/</loc>
+    <loc>/camunda-cn/user-guide/spring-boot-integration/configuration/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/cmmn11/tasks/process-task/</loc>
+    <loc>/camunda-cn/reference/cmmn11/tasks/process-task/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/cmmn11/markers/required-rule/</loc>
+    <loc>/camunda-cn/reference/cmmn11/markers/required-rule/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/rolling-update/</loc>
+    <loc>/camunda-cn/update/rolling-update/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/installation/docker/</loc>
+    <loc>/camunda-cn/installation/docker/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/connect/soap-connector/</loc>
+    <loc>/camunda-cn/reference/connect/soap-connector/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/bpmn20/tasks/send-task/</loc>
+    <loc>/camunda-cn/reference/bpmn20/tasks/send-task/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/spring-framework-integration/transactions/</loc>
+    <loc>/camunda-cn/user-guide/spring-framework-integration/transactions/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/admin/tenant-management/</loc>
+    <loc>/camunda-cn/webapps/admin/tenant-management/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/forms/embedded-forms/controls/textarea/</loc>
+    <loc>/camunda-cn/reference/forms/embedded-forms/controls/textarea/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/process-applications/the-processes-xml-deployment-descriptor/</loc>
+    <loc>/camunda-cn/user-guide/process-applications/the-processes-xml-deployment-descriptor/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/712-to-713/</loc>
+    <loc>/camunda-cn/update/minor/712-to-713/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/overview/distro-use/</loc>
+    <loc>/camunda-cn/reference/rest/overview/distro-use/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/migration/validate-migration-plan/</loc>
+    <loc>/camunda-cn/reference/rest/migration/validate-migration-plan/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/identity/verify-user/</loc>
+    <loc>/camunda-cn/reference/rest/identity/verify-user/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/spin/json/02-writing-json/</loc>
+    <loc>/camunda-cn/reference/spin/json/02-writing-json/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/deployment-descriptors/descriptors/processes-xml/</loc>
+    <loc>/camunda-cn/reference/deployment-descriptors/descriptors/processes-xml/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/process-engine/</loc>
+    <loc>/camunda-cn/user-guide/process-engine/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/process-engine/process-engine-api/</loc>
+    <loc>/camunda-cn/user-guide/process-engine/process-engine-api/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/</loc>
+    <loc>/camunda-cn/user-guide/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/installation/spring-boot/</loc>
+    <loc>/camunda-cn/installation/spring-boot/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/batch/</loc>
+    <loc>/camunda-cn/reference/rest/batch/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/modeler/forms/</loc>
+    <loc>/camunda-cn/modeler/forms/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/dmn/</loc>
+    <loc>/camunda-cn/reference/dmn/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/modeler/element-templates/</loc>
+    <loc>/camunda-cn/modeler/element-templates/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/activiti/</loc>
+    <loc>/camunda-cn/update/activiti/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/forms/embedded-forms/integrate/angular-js/</loc>
+    <loc>/camunda-cn/reference/forms/embedded-forms/integrate/angular-js/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/runtime-container-integration/tomcat/</loc>
+    <loc>/camunda-cn/user-guide/runtime-container-integration/tomcat/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/introduction/architecture/</loc>
+    <loc>/camunda-cn/introduction/architecture/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/admin/authorization-management/</loc>
+    <loc>/camunda-cn/webapps/admin/authorization-management/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/cmmn11/markers/auto-complete/</loc>
+    <loc>/camunda-cn/reference/cmmn11/markers/auto-complete/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/spring-framework-integration/deployment/</loc>
+    <loc>/camunda-cn/user-guide/spring-framework-integration/deployment/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/case-activity-instance/</loc>
+    <loc>/camunda-cn/reference/rest/history/case-activity-instance/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/case-definition/</loc>
+    <loc>/camunda-cn/reference/rest/case-definition/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/cmmn11/tasks/case-task/</loc>
+    <loc>/camunda-cn/reference/cmmn11/tasks/case-task/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/installation/full/was/configuration/</loc>
+    <loc>/camunda-cn/installation/full/was/configuration/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/installation/full/jboss/configuration/</loc>
+    <loc>/camunda-cn/installation/full/jboss/configuration/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/installation/full/wls/configuration/</loc>
+    <loc>/camunda-cn/installation/full/wls/configuration/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/installation/full/tomcat/configuration/</loc>
+    <loc>/camunda-cn/installation/full/tomcat/configuration/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/dmn/decision-table/rule/</loc>
+    <loc>/camunda-cn/reference/dmn/decision-table/rule/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/cockpit/dmn/</loc>
+    <loc>/camunda-cn/webapps/cockpit/dmn/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/forms/embedded-forms/controls/date-inputs/</loc>
+    <loc>/camunda-cn/reference/forms/embedded-forms/controls/date-inputs/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/process-engine/decisions/decision-service/</loc>
+    <loc>/camunda-cn/user-guide/process-engine/decisions/decision-service/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/metrics/delete-metrics-task-worker/</loc>
+    <loc>/camunda-cn/reference/rest/metrics/delete-metrics-task-worker/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/overview/embeddability/</loc>
+    <loc>/camunda-cn/reference/rest/overview/embeddability/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/cmmn11/concepts/entry-exit-criteria/</loc>
+    <loc>/camunda-cn/reference/cmmn11/concepts/entry-exit-criteria/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/bpmn20/subprocesses/event-subprocess/</loc>
+    <loc>/camunda-cn/reference/bpmn20/subprocesses/event-subprocess/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/bpmn20/events/</loc>
+    <loc>/camunda-cn/reference/bpmn20/events/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/migration/execute-migration/</loc>
+    <loc>/camunda-cn/reference/rest/migration/execute-migration/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/modification/post-modification-sync/</loc>
+    <loc>/camunda-cn/reference/rest/modification/post-modification-sync/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/modification/post-modification-async/</loc>
+    <loc>/camunda-cn/reference/rest/modification/post-modification-async/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/cdi-java-ee-integration/expression-resolving/</loc>
+    <loc>/camunda-cn/user-guide/cdi-java-ee-integration/expression-resolving/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/dmn-engine/expressions-and-scripts/</loc>
+    <loc>/camunda-cn/user-guide/dmn-engine/expressions-and-scripts/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/connect/extending-connect/</loc>
+    <loc>/camunda-cn/reference/connect/extending-connect/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/spin/extending-spin/</loc>
+    <loc>/camunda-cn/reference/spin/extending-spin/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/dmn-engine/feel/</loc>
+    <loc>/camunda-cn/user-guide/dmn-engine/feel/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/dmn-engine/feel/spin-integration/</loc>
+    <loc>/camunda-cn/user-guide/dmn-engine/feel/spin-integration/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/tasklist/filters/</loc>
+    <loc>/camunda-cn/webapps/tasklist/filters/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/process-instance/get-activity-instances/</loc>
+    <loc>/camunda-cn/reference/rest/process-instance/get-activity-instances/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/authorization/get/</loc>
+    <loc>/camunda-cn/reference/rest/authorization/get/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/batch/get/</loc>
+    <loc>/camunda-cn/reference/rest/batch/get/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/case-definition/get/</loc>
+    <loc>/camunda-cn/reference/rest/case-definition/get/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/case-execution/get/</loc>
+    <loc>/camunda-cn/reference/rest/case-execution/get/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/case-instance/get/</loc>
+    <loc>/camunda-cn/reference/rest/case-instance/get/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/case-definition/get-cleanable-case-instance-report-count/</loc>
+    <loc>/camunda-cn/reference/rest/history/case-definition/get-cleanable-case-instance-report-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/process-definition/get-cleanable-process-instance-report-count/</loc>
+    <loc>/camunda-cn/reference/rest/history/process-definition/get-cleanable-process-instance-report-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/decision-definition/get/</loc>
+    <loc>/camunda-cn/reference/rest/decision-definition/get/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/decision-requirements-definition/get/</loc>
+    <loc>/camunda-cn/reference/rest/decision-requirements-definition/get/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/deployment/get/</loc>
+    <loc>/camunda-cn/reference/rest/deployment/get/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/execution/get/</loc>
+    <loc>/camunda-cn/reference/rest/execution/get/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/external-task/get-query-count/</loc>
+    <loc>/camunda-cn/reference/rest/external-task/get-query-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/external-task-log/get-external-task-log/</loc>
+    <loc>/camunda-cn/reference/rest/history/external-task-log/get-external-task-log/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/group/get/</loc>
+    <loc>/camunda-cn/reference/rest/group/get/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/activity-instance/get-activity-instance/</loc>
+    <loc>/camunda-cn/reference/rest/history/activity-instance/get-activity-instance/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/batch/get/</loc>
+    <loc>/camunda-cn/reference/rest/history/batch/get/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/case-activity-instance/get-case-activity-instance/</loc>
+    <loc>/camunda-cn/reference/rest/history/case-activity-instance/get-case-activity-instance/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/case-instance/get-case-instance/</loc>
+    <loc>/camunda-cn/reference/rest/history/case-instance/get-case-instance/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/decision-instance/get-decision-instance/</loc>
+    <loc>/camunda-cn/reference/rest/history/decision-instance/get-decision-instance/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/detail/get-detail/</loc>
+    <loc>/camunda-cn/reference/rest/history/detail/get-detail/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/job/get/</loc>
+    <loc>/camunda-cn/reference/rest/job/get/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/job-definition/get/</loc>
+    <loc>/camunda-cn/reference/rest/job-definition/get/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/job-log/get-job-log/</loc>
+    <loc>/camunda-cn/reference/rest/history/job-log/get-job-log/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/identity/get-password-policy/</loc>
+    <loc>/camunda-cn/reference/rest/identity/get-password-policy/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/process-instance/get-process-instance/</loc>
+    <loc>/camunda-cn/reference/rest/history/process-instance/get-process-instance/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/filter/get/</loc>
+    <loc>/camunda-cn/reference/rest/filter/get/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/process-definition/get-form-variables/</loc>
+    <loc>/camunda-cn/reference/rest/process-definition/get-form-variables/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/task/get-query-count/</loc>
+    <loc>/camunda-cn/reference/rest/task/get-query-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/task/post-task-query/</loc>
+    <loc>/camunda-cn/reference/rest/history/task/post-task-query/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/task/post-query/</loc>
+    <loc>/camunda-cn/reference/rest/task/post-query/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/tenant/get/</loc>
+    <loc>/camunda-cn/reference/rest/tenant/get/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/user/get-query/</loc>
+    <loc>/camunda-cn/reference/rest/user/get-query/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/variable-instance/get-variable-instance/</loc>
+    <loc>/camunda-cn/reference/rest/history/variable-instance/get-variable-instance/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/variable-instance/get-query/</loc>
+    <loc>/camunda-cn/reference/rest/variable-instance/get-query/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/group/members/options/</loc>
+    <loc>/camunda-cn/reference/rest/group/members/options/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/deployment-descriptors/tags/job-executor/</loc>
+    <loc>/camunda-cn/reference/deployment-descriptors/tags/job-executor/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/forms/embedded-forms/lifecycle/</loc>
+    <loc>/camunda-cn/reference/forms/embedded-forms/lifecycle/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/cockpit/dmn/live-editing/</loc>
+    <loc>/camunda-cn/webapps/cockpit/dmn/live-editing/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/bpmn20/events/message-events/</loc>
+    <loc>/camunda-cn/reference/bpmn20/events/message-events/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/process-engine/database/mssql-configuration/</loc>
+    <loc>/camunda-cn/user-guide/process-engine/database/mssql-configuration/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/bpmn20/gateways/parallel-gateway/</loc>
+    <loc>/camunda-cn/reference/bpmn20/gateways/parallel-gateway/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/forms/embedded-forms/javascript/lifecycle/</loc>
+    <loc>/camunda-cn/reference/forms/embedded-forms/javascript/lifecycle/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/process-applications/process-application-event-listeners/</loc>
+    <loc>/camunda-cn/user-guide/process-applications/process-application-event-listeners/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/process-applications/</loc>
+    <loc>/camunda-cn/user-guide/process-applications/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/cockpit/bpmn/process-instance-view/</loc>
+    <loc>/camunda-cn/webapps/cockpit/bpmn/process-instance-view/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/spin/json/03-querying-json/</loc>
+    <loc>/camunda-cn/reference/spin/json/03-querying-json/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/spring-boot-integration/rest-api/</loc>
+    <loc>/camunda-cn/user-guide/spring-boot-integration/rest-api/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/user-operation-log/set-annotation/</loc>
+    <loc>/camunda-cn/reference/rest/history/user-operation-log/set-annotation/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/cmmn11/tasks/</loc>
+    <loc>/camunda-cn/reference/cmmn11/tasks/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/tenant/group-members/options/</loc>
+    <loc>/camunda-cn/reference/rest/tenant/group-members/options/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/tenant/user-members/options/</loc>
+    <loc>/camunda-cn/reference/rest/tenant/user-members/options/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/711-to-712/</loc>
+    <loc>/camunda-cn/update/minor/711-to-712/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/bpmn20/tasks/user-task/</loc>
+    <loc>/camunda-cn/reference/bpmn20/tasks/user-task/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/spin/xml/03-writing-xml/</loc>
+    <loc>/camunda-cn/reference/spin/xml/03-writing-xml/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/data-formats/xml/</loc>
+    <loc>/camunda-cn/user-guide/data-formats/xml/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/</loc>
+    <loc>/camunda-cn/reference/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/process-engine/process-engine-concepts/</loc>
+    <loc>/camunda-cn/user-guide/process-engine/process-engine-concepts/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/process-applications/process-application-resources/</loc>
+    <loc>/camunda-cn/user-guide/process-applications/process-application-resources/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/group/post-query/</loc>
+    <loc>/camunda-cn/reference/rest/group/post-query/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/cockpit/cmmn/</loc>
+    <loc>/camunda-cn/webapps/cockpit/cmmn/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/group/post-query-count/</loc>
+    <loc>/camunda-cn/reference/rest/group/post-query-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/installation/karaf-osgi/</loc>
+    <loc>/camunda-cn/installation/karaf-osgi/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/batch/put-activate-suspend/</loc>
+    <loc>/camunda-cn/reference/rest/batch/put-activate-suspend/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/forms/embedded-forms/controls/boolean-inputs/</loc>
+    <loc>/camunda-cn/reference/forms/embedded-forms/controls/boolean-inputs/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/bpmn20/tasks/business-rule-task/</loc>
+    <loc>/camunda-cn/reference/bpmn20/tasks/business-rule-task/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/cmmn11/</loc>
+    <loc>/camunda-cn/reference/cmmn11/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/case-execution/</loc>
+    <loc>/camunda-cn/reference/rest/case-execution/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/history-cleanup/post-history-cleanup/</loc>
+    <loc>/camunda-cn/reference/rest/history/history-cleanup/post-history-cleanup/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/cockpit/cleanup/</loc>
+    <loc>/camunda-cn/webapps/cockpit/cleanup/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/user-operation-log/clear-annotation/</loc>
+    <loc>/camunda-cn/reference/rest/history/user-operation-log/clear-annotation/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/cdi-java-ee-integration/contextual-programming-model/</loc>
+    <loc>/camunda-cn/user-guide/cdi-java-ee-integration/contextual-programming-model/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/filter/post-create/</loc>
+    <loc>/camunda-cn/reference/rest/filter/post-create/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/execution/post-create-incident/</loc>
+    <loc>/camunda-cn/reference/rest/execution/post-create-incident/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/group/post-create/</loc>
+    <loc>/camunda-cn/reference/rest/group/post-create/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/tenant/post-create/</loc>
+    <loc>/camunda-cn/reference/rest/tenant/post-create/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/dmn/decision-table/hit-policy/</loc>
+    <loc>/camunda-cn/reference/dmn/decision-table/hit-policy/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/dmn-engine/data-types/</loc>
+    <loc>/camunda-cn/user-guide/dmn-engine/data-types/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/forms/embedded-forms/javascript/debugging/</loc>
+    <loc>/camunda-cn/reference/forms/embedded-forms/javascript/debugging/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/decision-definition/</loc>
+    <loc>/camunda-cn/reference/rest/history/decision-definition/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/decision-instance/</loc>
+    <loc>/camunda-cn/reference/rest/history/decision-instance/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/cmmn11/tasks/decision-task/</loc>
+    <loc>/camunda-cn/reference/cmmn11/tasks/decision-task/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/batch/delete/</loc>
+    <loc>/camunda-cn/reference/rest/history/batch/delete/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/cockpit/deployment-view/</loc>
+    <loc>/camunda-cn/webapps/cockpit/deployment-view/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/migration/execute-migration-async/</loc>
+    <loc>/camunda-cn/reference/rest/migration/execute-migration-async/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/history-cleanup/get-history-cleanup-jobs/</loc>
+    <loc>/camunda-cn/reference/rest/history/history-cleanup/get-history-cleanup-jobs/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/model-api/bpmn-model-api/fluent-builder-api/</loc>
+    <loc>/camunda-cn/user-guide/model-api/bpmn-model-api/fluent-builder-api/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/forms/embedded-forms/integrate/full-examples/</loc>
+    <loc>/camunda-cn/reference/forms/embedded-forms/integrate/full-examples/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/case-definition/get-xml/</loc>
+    <loc>/camunda-cn/reference/rest/case-definition/get-xml/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/case-execution/post-query/</loc>
+    <loc>/camunda-cn/reference/rest/case-execution/post-query/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/case-instance/post-query/</loc>
+    <loc>/camunda-cn/reference/rest/case-instance/post-query/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/decision-definition/get-xml/</loc>
+    <loc>/camunda-cn/reference/rest/decision-definition/get-xml/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/decision-requirements-definition/get-xml/</loc>
+    <loc>/camunda-cn/reference/rest/decision-requirements-definition/get-xml/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/process-definition/get-query-count/</loc>
+    <loc>/camunda-cn/reference/rest/process-definition/get-query-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/event-subscription/get-query/</loc>
+    <loc>/camunda-cn/reference/rest/event-subscription/get-query/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/execution/post-query/</loc>
+    <loc>/camunda-cn/reference/rest/execution/post-query/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/external-task-log/get-external-task-log-error-details/</loc>
+    <loc>/camunda-cn/reference/rest/history/external-task-log/get-external-task-log-error-details/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/external-task/post-query/</loc>
+    <loc>/camunda-cn/reference/rest/external-task/post-query/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/activity-instance/post-activity-instance-query/</loc>
+    <loc>/camunda-cn/reference/rest/history/activity-instance/post-activity-instance-query/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/case-instance/post-case-instance-query/</loc>
+    <loc>/camunda-cn/reference/rest/history/case-instance/post-case-instance-query/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/detail/get-detail-binary/</loc>
+    <loc>/camunda-cn/reference/rest/history/detail/get-detail-binary/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/history-cleanup/get-cleanup-configuration/</loc>
+    <loc>/camunda-cn/reference/rest/history/history-cleanup/get-cleanup-configuration/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/process-instance/get-query-count/</loc>
+    <loc>/camunda-cn/reference/rest/process-instance/get-query-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/job-definition/post-query/</loc>
+    <loc>/camunda-cn/reference/rest/job-definition/post-query/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/job-log/get-job-log-stacktrace/</loc>
+    <loc>/camunda-cn/reference/rest/history/job-log/get-job-log-stacktrace/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/job/post-query/</loc>
+    <loc>/camunda-cn/reference/rest/job/post-query/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/process-instance/post-process-instance-query/</loc>
+    <loc>/camunda-cn/reference/rest/history/process-instance/post-process-instance-query/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/task/post-task-query-count/</loc>
+    <loc>/camunda-cn/reference/rest/history/task/post-task-query-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/task/post-query-count/</loc>
+    <loc>/camunda-cn/reference/rest/task/post-query-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/variable-instance/get/</loc>
+    <loc>/camunda-cn/reference/rest/variable-instance/get/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/variable-instance/get-variable-instance-binary/</loc>
+    <loc>/camunda-cn/reference/rest/history/variable-instance/get-variable-instance-binary/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/user/get/</loc>
+    <loc>/camunda-cn/reference/rest/user/get/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/cmmn11/grouping-tasks/</loc>
+    <loc>/camunda-cn/reference/cmmn11/grouping-tasks/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/cockpit/bpmn/process-history-views/</loc>
+    <loc>/camunda-cn/webapps/cockpit/bpmn/process-history-views/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/overview/hal/</loc>
+    <loc>/camunda-cn/reference/rest/overview/hal/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/bpmn20/gateways/inclusive-gateway/</loc>
+    <loc>/camunda-cn/reference/bpmn20/gateways/inclusive-gateway/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/installation/full/was/</loc>
+    <loc>/camunda-cn/installation/full/was/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/process-engine/decisions/bpmn-cmmn/</loc>
+    <loc>/camunda-cn/user-guide/process-engine/decisions/bpmn-cmmn/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/data-formats/json/</loc>
+    <loc>/camunda-cn/user-guide/data-formats/json/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/spin/json/04-mapping-json/</loc>
+    <loc>/camunda-cn/reference/spin/json/04-mapping-json/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/process-engine/database/mariadb-galera-configuration/</loc>
+    <loc>/camunda-cn/user-guide/process-engine/database/mariadb-galera-configuration/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/process-applications/maven-archetypes/</loc>
+    <loc>/camunda-cn/user-guide/process-applications/maven-archetypes/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/authorization/get-check/</loc>
+    <loc>/camunda-cn/reference/rest/authorization/get-check/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/deployment/post-deployment/</loc>
+    <loc>/camunda-cn/reference/rest/deployment/post-deployment/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/deployment-descriptors/tags/process-archive/</loc>
+    <loc>/camunda-cn/reference/deployment-descriptors/tags/process-archive/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/process-engine/variables/</loc>
+    <loc>/camunda-cn/user-guide/process-engine/variables/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/spin/xml/04-querying-xml/</loc>
+    <loc>/camunda-cn/reference/spin/xml/04-querying-xml/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/cmmn11/markers/repetition-rule/</loc>
+    <loc>/camunda-cn/reference/cmmn11/markers/repetition-rule/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/runtime-container-integration/</loc>
+    <loc>/camunda-cn/user-guide/runtime-container-integration/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/spring-framework-integration/expressions/</loc>
+    <loc>/camunda-cn/user-guide/spring-framework-integration/expressions/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/bpmn20/subprocesses/</loc>
+    <loc>/camunda-cn/reference/bpmn20/subprocesses/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/introduction/supported-environments/</loc>
+    <loc>/camunda-cn/introduction/supported-environments/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/admin/system-management/</loc>
+    <loc>/camunda-cn/webapps/admin/system-management/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/bpmn20/events/timer-events/</loc>
+    <loc>/camunda-cn/reference/bpmn20/events/timer-events/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/bpmn20/subprocesses/transaction-subprocess/</loc>
+    <loc>/camunda-cn/reference/bpmn20/subprocesses/transaction-subprocess/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/tasklist/user-assignment/</loc>
+    <loc>/camunda-cn/webapps/tasklist/user-assignment/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/identity/validate-password/</loc>
+    <loc>/camunda-cn/reference/rest/identity/validate-password/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/spring-boot-integration/webapps/</loc>
+    <loc>/camunda-cn/user-guide/spring-boot-integration/webapps/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/forms/embedded-forms/json-data/</loc>
+    <loc>/camunda-cn/reference/forms/embedded-forms/json-data/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/installation/</loc>
+    <loc>/camunda-cn/installation/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/decision-requirements-definition/</loc>
+    <loc>/camunda-cn/reference/rest/history/decision-requirements-definition/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/710-to-711/</loc>
+    <loc>/camunda-cn/update/minor/710-to-711/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/cockpit/auditing/</loc>
+    <loc>/camunda-cn/webapps/cockpit/auditing/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/modeler/</loc>
+    <loc>/camunda-cn/modeler/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/deployment/post-redeploy-deployment/</loc>
+    <loc>/camunda-cn/reference/rest/deployment/post-redeploy-deployment/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/introduction/telemetry/</loc>
+    <loc>/camunda-cn/introduction/telemetry/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/79-to-710/</loc>
+    <loc>/camunda-cn/update/minor/79-to-710/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/admin/auditing/</loc>
+    <loc>/camunda-cn/webapps/admin/auditing/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/authorization/options/</loc>
+    <loc>/camunda-cn/reference/rest/authorization/options/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/cockpit/batch/</loc>
+    <loc>/camunda-cn/webapps/cockpit/batch/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/cockpit/batch/monitoring/</loc>
+    <loc>/camunda-cn/webapps/cockpit/batch/monitoring/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/cdi-java-ee-integration/built-in-beans/</loc>
+    <loc>/camunda-cn/user-guide/cdi-java-ee-integration/built-in-beans/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/model-api/cmmn-model-api/</loc>
+    <loc>/camunda-cn/user-guide/model-api/cmmn-model-api/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/camunda-bpm-run/</loc>
+    <loc>/camunda-cn/user-guide/camunda-bpm-run/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/case-instance/</loc>
+    <loc>/camunda-cn/reference/rest/case-instance/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/process-engine/database/cockroachdb-configuration/</loc>
+    <loc>/camunda-cn/user-guide/process-engine/database/cockroachdb-configuration/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/admin/configuration/</loc>
+    <loc>/camunda-cn/webapps/admin/configuration/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/spin/json/05-configuring-json/</loc>
+    <loc>/camunda-cn/reference/spin/json/05-configuring-json/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/model-api/dmn-model-api/</loc>
+    <loc>/camunda-cn/user-guide/model-api/dmn-model-api/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/batch/delete/</loc>
+    <loc>/camunda-cn/reference/rest/batch/delete/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/detail/</loc>
+    <loc>/camunda-cn/reference/rest/history/detail/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/forms/embedded-forms/</loc>
+    <loc>/camunda-cn/reference/forms/embedded-forms/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/bpmn20/events/error-events/</loc>
+    <loc>/camunda-cn/reference/bpmn20/events/error-events/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/bpmn20/gateways/event-based-gateway/</loc>
+    <loc>/camunda-cn/reference/bpmn20/gateways/event-based-gateway/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/admin/extend/</loc>
+    <loc>/camunda-cn/webapps/admin/extend/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/bpmn20/custom-extensions/</loc>
+    <loc>/camunda-cn/reference/bpmn20/custom-extensions/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/introduction/extensions/</loc>
+    <loc>/camunda-cn/introduction/extensions/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/dmn-engine/feel/legacy-behavior/</loc>
+    <loc>/camunda-cn/user-guide/dmn-engine/feel/legacy-behavior/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/forms/</loc>
+    <loc>/camunda-cn/reference/forms/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/forms/embedded-forms/javascript/generating-businesskey/</loc>
+    <loc>/camunda-cn/reference/forms/embedded-forms/javascript/generating-businesskey/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/case-definition/get-diagram/</loc>
+    <loc>/camunda-cn/reference/rest/case-definition/get-diagram/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/case-execution/post-query-count/</loc>
+    <loc>/camunda-cn/reference/rest/case-execution/post-query-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/case-instance/post-query-count/</loc>
+    <loc>/camunda-cn/reference/rest/case-instance/post-query-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/batch/get-cleanable-batch-report/</loc>
+    <loc>/camunda-cn/reference/rest/history/batch/get-cleanable-batch-report/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/decision-definition/get-diagram/</loc>
+    <loc>/camunda-cn/reference/rest/decision-definition/get-diagram/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/decision-requirements-definition/get-diagram/</loc>
+    <loc>/camunda-cn/reference/rest/decision-requirements-definition/get-diagram/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/process-definition/get-query/</loc>
+    <loc>/camunda-cn/reference/rest/process-definition/get-query/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/deployment/get-resources/</loc>
+    <loc>/camunda-cn/reference/rest/deployment/get-resources/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/event-subscription/get-query-count/</loc>
+    <loc>/camunda-cn/reference/rest/event-subscription/get-query-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/execution/post-query-count/</loc>
+    <loc>/camunda-cn/reference/rest/execution/post-query-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/external-task/post-query-count/</loc>
+    <loc>/camunda-cn/reference/rest/external-task/post-query-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/external-task-log/post-external-task-log-query-count/</loc>
+    <loc>/camunda-cn/reference/rest/history/external-task-log/post-external-task-log-query-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/task/get-form-key/</loc>
+    <loc>/camunda-cn/reference/rest/task/get-form-key/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/activity-instance/post-activity-instance-query-count/</loc>
+    <loc>/camunda-cn/reference/rest/history/activity-instance/post-activity-instance-query-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/case-instance/post-case-instance-query-count/</loc>
+    <loc>/camunda-cn/reference/rest/history/case-instance/post-case-instance-query-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/process-instance/get-query/</loc>
+    <loc>/camunda-cn/reference/rest/process-instance/get-query/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/job/post-query-count/</loc>
+    <loc>/camunda-cn/reference/rest/job/post-query-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/job-definition/post-query-count/</loc>
+    <loc>/camunda-cn/reference/rest/job-definition/post-query-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/job-log/post-job-log-query-count/</loc>
+    <loc>/camunda-cn/reference/rest/history/job-log/post-job-log-query-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/process-instance/post-process-instance-query-count/</loc>
+    <loc>/camunda-cn/reference/rest/history/process-instance/post-process-instance-query-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/installation/camunda-bpm-rpa-bridge/</loc>
+    <loc>/camunda-cn/installation/camunda-bpm-rpa-bridge/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/task/report/get-candidate-group-count/</loc>
+    <loc>/camunda-cn/reference/rest/task/report/get-candidate-group-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/task/get-task-report/</loc>
+    <loc>/camunda-cn/reference/rest/history/task/get-task-report/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/variable-instance/post-query-count/</loc>
+    <loc>/camunda-cn/reference/rest/variable-instance/post-query-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/variable-instance/post-variable-instance-query/</loc>
+    <loc>/camunda-cn/reference/rest/history/variable-instance/post-variable-instance-query/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/variable-instance/post-query/</loc>
+    <loc>/camunda-cn/reference/rest/variable-instance/post-query/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/process-engine/decisions/history/</loc>
+    <loc>/camunda-cn/user-guide/process-engine/decisions/history/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/installation/full/wls/</loc>
+    <loc>/camunda-cn/installation/full/wls/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/cockpit/bpmn/process-instance-restart/</loc>
+    <loc>/camunda-cn/webapps/cockpit/bpmn/process-instance-restart/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/spin/xml/05-mapping-xml/</loc>
+    <loc>/camunda-cn/reference/spin/xml/05-mapping-xml/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/cmmn11/milestone/</loc>
+    <loc>/camunda-cn/reference/cmmn11/milestone/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/process-engine/database/mysql-configuration/</loc>
+    <loc>/camunda-cn/user-guide/process-engine/database/mysql-configuration/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/deployment-descriptors/tags/process-engine/</loc>
+    <loc>/camunda-cn/reference/deployment-descriptors/tags/process-engine/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/process-engine/process-instance-modification/</loc>
+    <loc>/camunda-cn/user-guide/process-engine/process-instance-modification/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/cockpit/bpmn/process-instance-modification/</loc>
+    <loc>/camunda-cn/webapps/cockpit/bpmn/process-instance-modification/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/process-engine/process-instance-restart/</loc>
+    <loc>/camunda-cn/user-guide/process-engine/process-instance-restart/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/spring-boot-integration/process-applications/</loc>
+    <loc>/camunda-cn/user-guide/spring-boot-integration/process-applications/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/model-api/bpmn-model-api/respository-service/</loc>
+    <loc>/camunda-cn/user-guide/model-api/bpmn-model-api/respository-service/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/model-api/cmmn-model-api/repository-service/</loc>
+    <loc>/camunda-cn/user-guide/model-api/cmmn-model-api/repository-service/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/model-api/dmn-model-api/repository-service/</loc>
+    <loc>/camunda-cn/user-guide/model-api/dmn-model-api/repository-service/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/bpmn20/tasks/script-task/</loc>
+    <loc>/camunda-cn/reference/bpmn20/tasks/script-task/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/forms/embedded-forms/controls/select/</loc>
+    <loc>/camunda-cn/reference/forms/embedded-forms/controls/select/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/incident/set-annotation/</loc>
+    <loc>/camunda-cn/reference/rest/incident/set-annotation/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/spring-framework-integration/</loc>
+    <loc>/camunda-cn/user-guide/spring-framework-integration/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/spring-framework-integration/testing/</loc>
+    <loc>/camunda-cn/user-guide/spring-framework-integration/testing/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/tasklist/task-lifecycle/</loc>
+    <loc>/camunda-cn/webapps/tasklist/task-lifecycle/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/dmn-engine/testing/</loc>
+    <loc>/camunda-cn/user-guide/dmn-engine/testing/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/runtime-container-integration/jboss/</loc>
+    <loc>/camunda-cn/user-guide/runtime-container-integration/jboss/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/filter/put-update/</loc>
+    <loc>/camunda-cn/reference/rest/filter/put-update/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/78-to-79/</loc>
+    <loc>/camunda-cn/update/minor/78-to-79/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/group/put-update/</loc>
+    <loc>/camunda-cn/reference/rest/group/put-update/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/tenant/put-update/</loc>
+    <loc>/camunda-cn/reference/rest/tenant/put-update/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/user/options/</loc>
+    <loc>/camunda-cn/reference/rest/user/options/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/overview/variables/</loc>
+    <loc>/camunda-cn/reference/rest/overview/variables/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/</loc>
+    <loc>/camunda-cn/webapps/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/forms/embedded-forms/java-objects/</loc>
+    <loc>/camunda-cn/reference/forms/embedded-forms/java-objects/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/condition/</loc>
+    <loc>/camunda-cn/reference/rest/condition/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/decision-definition/</loc>
+    <loc>/camunda-cn/reference/rest/decision-definition/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/bpmn20/events/escalation-events/</loc>
+    <loc>/camunda-cn/reference/bpmn20/events/escalation-events/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/cockpit/bpmn/process-instance-migration/</loc>
+    <loc>/camunda-cn/webapps/cockpit/bpmn/process-instance-migration/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/spring-boot-integration/</loc>
+    <loc>/camunda-cn/user-guide/spring-boot-integration/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/77-to-78/</loc>
+    <loc>/camunda-cn/update/minor/77-to-78/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/decision-requirements-definition/</loc>
+    <loc>/camunda-cn/reference/rest/decision-requirements-definition/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/cdi-java-ee-integration/the-cdi-event-bridge/</loc>
+    <loc>/camunda-cn/user-guide/cdi-java-ee-integration/the-cdi-event-bridge/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/cdi-java-ee-integration/</loc>
+    <loc>/camunda-cn/user-guide/cdi-java-ee-integration/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/forms/camunda-forms/</loc>
+    <loc>/camunda-cn/reference/forms/camunda-forms/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/spin/</loc>
+    <loc>/camunda-cn/reference/spin/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/task/post-claim/</loc>
+    <loc>/camunda-cn/reference/rest/task/post-claim/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/incident/clear-annotation/</loc>
+    <loc>/camunda-cn/reference/rest/incident/clear-annotation/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/case-instance/post-complete/</loc>
+    <loc>/camunda-cn/reference/rest/case-instance/post-complete/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/spin/xml/06-configuring-xml/</loc>
+    <loc>/camunda-cn/reference/spin/xml/06-configuring-xml/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/case-definition/post-create-case-instance/</loc>
+    <loc>/camunda-cn/reference/rest/case-definition/post-create-case-instance/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/authorization/post-create/</loc>
+    <loc>/camunda-cn/reference/rest/authorization/post-create/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/user/post-create/</loc>
+    <loc>/camunda-cn/reference/rest/user/post-create/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/overview/date-format/</loc>
+    <loc>/camunda-cn/reference/rest/overview/date-format/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/process-engine/delegation-code/</loc>
+    <loc>/camunda-cn/user-guide/process-engine/delegation-code/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/filter/delete/</loc>
+    <loc>/camunda-cn/reference/rest/filter/delete/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/process-instance/delete-process-instance/</loc>
+    <loc>/camunda-cn/reference/rest/history/process-instance/delete-process-instance/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/deployment/</loc>
+    <loc>/camunda-cn/reference/rest/deployment/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/decision-definition/post-evaluate/</loc>
+    <loc>/camunda-cn/reference/rest/decision-definition/post-evaluate/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/forms/embedded-forms/javascript/examples/</loc>
+    <loc>/camunda-cn/reference/forms/embedded-forms/javascript/examples/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/job/post-execute-job/</loc>
+    <loc>/camunda-cn/reference/rest/job/post-execute-job/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/model-api/dmn-model-api/extension-attributes/</loc>
+    <loc>/camunda-cn/user-guide/model-api/dmn-model-api/extension-attributes/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/model-api/bpmn-model-api/extension-elements/</loc>
+    <loc>/camunda-cn/user-guide/model-api/bpmn-model-api/extension-elements/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/model-api/cmmn-model-api/extension-elements/</loc>
+    <loc>/camunda-cn/user-guide/model-api/cmmn-model-api/extension-elements/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/cockpit/bpmn/failed-jobs/</loc>
+    <loc>/camunda-cn/webapps/cockpit/bpmn/failed-jobs/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/external-task/fetch/</loc>
+    <loc>/camunda-cn/reference/rest/external-task/fetch/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/history-cleanup/get-history-cleanup-job/</loc>
+    <loc>/camunda-cn/reference/rest/history/history-cleanup/get-history-cleanup-job/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/batch/get-statistics-query/</loc>
+    <loc>/camunda-cn/reference/rest/batch/get-statistics-query/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/batch/get-cleanable-batch-report-count/</loc>
+    <loc>/camunda-cn/reference/rest/history/batch/get-cleanable-batch-report-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/decision-requirements-definition/get-statistics/</loc>
+    <loc>/camunda-cn/reference/rest/history/decision-requirements-definition/get-statistics/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/deployment/get-resource/</loc>
+    <loc>/camunda-cn/reference/rest/deployment/get-resource/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/external-task-log/post-external-task-log-query/</loc>
+    <loc>/camunda-cn/reference/rest/history/external-task-log/post-external-task-log-query/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/job-log/post-job-log-query/</loc>
+    <loc>/camunda-cn/reference/rest/history/job-log/post-job-log-query/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/execution/local-variables/get-local-variables/</loc>
+    <loc>/camunda-cn/reference/rest/execution/local-variables/get-local-variables/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/process-instance/variables/get-variable-binary/</loc>
+    <loc>/camunda-cn/reference/rest/process-instance/variables/get-variable-binary/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/process-definition/get-rendered-form/</loc>
+    <loc>/camunda-cn/reference/rest/process-definition/get-rendered-form/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/variable-instance/post-variable-instance-query-count/</loc>
+    <loc>/camunda-cn/reference/rest/history/variable-instance/post-variable-instance-query-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/group/options/</loc>
+    <loc>/camunda-cn/reference/rest/group/options/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/forms/embedded-forms/controls/hidden/</loc>
+    <loc>/camunda-cn/reference/forms/embedded-forms/controls/hidden/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/identity-links/</loc>
+    <loc>/camunda-cn/reference/rest/history/identity-links/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/incident/</loc>
+    <loc>/camunda-cn/reference/rest/history/incident/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/forms/embedded-forms/integrate/</loc>
+    <loc>/camunda-cn/reference/forms/embedded-forms/integrate/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/runtime-container-integration/job-execution-with-managed-resources/</loc>
+    <loc>/camunda-cn/user-guide/runtime-container-integration/job-execution-with-managed-resources/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/process-engine/database/performance/</loc>
+    <loc>/camunda-cn/user-guide/process-engine/database/performance/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/tasklist/tasklist-plugins/</loc>
+    <loc>/camunda-cn/webapps/tasklist/tasklist-plugins/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/welcome/welcome-plugins/</loc>
+    <loc>/camunda-cn/webapps/welcome/welcome-plugins/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/bpmn20/tasks/receive-task/</loc>
+    <loc>/camunda-cn/reference/bpmn20/tasks/receive-task/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/cockpit/reporting/</loc>
+    <loc>/camunda-cn/webapps/cockpit/reporting/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/cmmn11/sentry/</loc>
+    <loc>/camunda-cn/reference/cmmn11/sentry/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/job-definition/put-set-job-priority/</loc>
+    <loc>/camunda-cn/reference/rest/job-definition/put-set-job-priority/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/batch/post-batch-set-removal-time/</loc>
+    <loc>/camunda-cn/reference/rest/history/batch/post-batch-set-removal-time/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/decision-instance/post-decision-instance-set-removal-time/</loc>
+    <loc>/camunda-cn/reference/rest/history/decision-instance/post-decision-instance-set-removal-time/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/process-instance/post-process-instance-set-removal-time/</loc>
+    <loc>/camunda-cn/reference/rest/history/process-instance/post-process-instance-set-removal-time/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/bpmn20/events/signal-events/</loc>
+    <loc>/camunda-cn/reference/bpmn20/events/signal-events/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/spring-boot-integration/the-spring-event-bridge/</loc>
+    <loc>/camunda-cn/user-guide/spring-boot-integration/the-spring-event-bridge/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/case-execution/post-manual-start/</loc>
+    <loc>/camunda-cn/reference/rest/case-execution/post-manual-start/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/tenant/options/</loc>
+    <loc>/camunda-cn/reference/rest/tenant/options/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/76-to-77/</loc>
+    <loc>/camunda-cn/update/minor/76-to-77/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/examples/</loc>
+    <loc>/camunda-cn/examples/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/connect/</loc>
+    <loc>/camunda-cn/reference/connect/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/introduction/third-party-libraries/camunda-bpm-rpa-bridge-license-book/</loc>
+    <loc>/camunda-cn/introduction/third-party-libraries/camunda-bpm-rpa-bridge-license-book/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/bpmn20/events/cancel-and-compensation-events/</loc>
+    <loc>/camunda-cn/reference/bpmn20/events/cancel-and-compensation-events/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/case-instance/post-close/</loc>
+    <loc>/camunda-cn/reference/rest/case-instance/post-close/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/case-execution/post-complete/</loc>
+    <loc>/camunda-cn/reference/rest/case-execution/post-complete/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/external-task/post-complete/</loc>
+    <loc>/camunda-cn/reference/rest/external-task/post-complete/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/bpmn20/events/conditional-events/</loc>
+    <loc>/camunda-cn/reference/bpmn20/events/conditional-events/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/tasklist/configuration/</loc>
+    <loc>/camunda-cn/webapps/tasklist/configuration/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/welcome/configuration/</loc>
+    <loc>/camunda-cn/webapps/welcome/configuration/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/group/delete/</loc>
+    <loc>/camunda-cn/reference/rest/group/delete/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/tenant/delete/</loc>
+    <loc>/camunda-cn/reference/rest/tenant/delete/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/variable-instance/delete-variable-instance/</loc>
+    <loc>/camunda-cn/reference/rest/history/variable-instance/delete-variable-instance/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/spring-boot-integration/develop-and-test/</loc>
+    <loc>/camunda-cn/user-guide/spring-boot-integration/develop-and-test/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/engine/</loc>
+    <loc>/camunda-cn/reference/rest/engine/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/filter/get-execute-single-result/</loc>
+    <loc>/camunda-cn/reference/rest/filter/get-execute-single-result/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/process-engine/expression-language/</loc>
+    <loc>/camunda-cn/user-guide/process-engine/expression-language/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/external-task-log/</loc>
+    <loc>/camunda-cn/reference/rest/history/external-task-log/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/forms/embedded-forms/controls/files/</loc>
+    <loc>/camunda-cn/reference/forms/embedded-forms/controls/files/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/batch/get-statistics-query-count/</loc>
+    <loc>/camunda-cn/reference/rest/batch/get-statistics-query-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/deployment/get-resource-binary/</loc>
+    <loc>/camunda-cn/reference/rest/deployment/get-resource-binary/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/execution/local-variables/get-local-variable/</loc>
+    <loc>/camunda-cn/reference/rest/execution/local-variables/get-local-variable/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/process-instance/get-duration-report/</loc>
+    <loc>/camunda-cn/reference/rest/history/process-instance/get-duration-report/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/process-instance/variables/get-variable/</loc>
+    <loc>/camunda-cn/reference/rest/process-instance/variables/get-variable/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/process-definition/get-start-form-key/</loc>
+    <loc>/camunda-cn/reference/rest/process-definition/get-start-form-key/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/history-cleanup/</loc>
+    <loc>/camunda-cn/reference/rest/history/history-cleanup/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/job-log/</loc>
+    <loc>/camunda-cn/reference/rest/history/job-log/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/bpmn20/tasks/manual-task/</loc>
+    <loc>/camunda-cn/reference/bpmn20/tasks/manual-task/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/cmmn11/markers/</loc>
+    <loc>/camunda-cn/reference/cmmn11/markers/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/cockpit/tasks-dashboard/</loc>
+    <loc>/camunda-cn/webapps/cockpit/tasks-dashboard/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/job/put-set-job-duedate/</loc>
+    <loc>/camunda-cn/reference/rest/job/put-set-job-duedate/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/job-definition/put-set-job-retries/</loc>
+    <loc>/camunda-cn/reference/rest/job-definition/put-set-job-retries/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/cockpit/bpmn/suspension/</loc>
+    <loc>/camunda-cn/webapps/cockpit/bpmn/suspension/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/case-instance/post-terminate/</loc>
+    <loc>/camunda-cn/reference/rest/case-instance/post-terminate/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/testing/</loc>
+    <loc>/camunda-cn/user-guide/testing/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/introduction/third-party-libraries/</loc>
+    <loc>/camunda-cn/introduction/third-party-libraries/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/task/post-unclaim/</loc>
+    <loc>/camunda-cn/reference/rest/task/post-unclaim/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/user/put-update-credentials/</loc>
+    <loc>/camunda-cn/reference/rest/user/put-update-credentials/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/authorization/put-update/</loc>
+    <loc>/camunda-cn/reference/rest/authorization/put-update/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/</loc>
+    <loc>/camunda-cn/update/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/75-to-76/</loc>
+    <loc>/camunda-cn/update/minor/75-to-76/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/case-definition/put-history-time-to-live/</loc>
+    <loc>/camunda-cn/reference/rest/case-definition/put-history-time-to-live/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/decision-definition/put-history-time-to-live/</loc>
+    <loc>/camunda-cn/reference/rest/decision-definition/put-history-time-to-live/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/event-subscription/</loc>
+    <loc>/camunda-cn/reference/rest/event-subscription/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/job/post-recalculate-job-duedate/</loc>
+    <loc>/camunda-cn/reference/rest/job/post-recalculate-job-duedate/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/tasklist/accessibility/</loc>
+    <loc>/camunda-cn/webapps/tasklist/accessibility/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/job-definition/put-activate-suspend-by-id/</loc>
+    <loc>/camunda-cn/reference/rest/job-definition/put-activate-suspend-by-id/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/task/post-complete/</loc>
+    <loc>/camunda-cn/reference/rest/task/post-complete/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/authorization/delete/</loc>
+    <loc>/camunda-cn/reference/rest/authorization/delete/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/deployment/delete-deployment/</loc>
+    <loc>/camunda-cn/reference/rest/deployment/delete-deployment/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/deployment-descriptors/</loc>
+    <loc>/camunda-cn/reference/deployment-descriptors/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/case-execution/post-disable/</loc>
+    <loc>/camunda-cn/reference/rest/case-execution/post-disable/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/filter/post-execute-single-result/</loc>
+    <loc>/camunda-cn/reference/rest/filter/post-execute-single-result/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/execution/</loc>
+    <loc>/camunda-cn/reference/rest/execution/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/cockpit/extend/</loc>
+    <loc>/camunda-cn/webapps/cockpit/extend/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/cmmn11/custom-extensions/</loc>
+    <loc>/camunda-cn/reference/cmmn11/custom-extensions/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/case-instance/variables/get-variables/</loc>
+    <loc>/camunda-cn/reference/rest/case-instance/variables/get-variables/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/external-task/get-error-details/</loc>
+    <loc>/camunda-cn/reference/rest/external-task/get-error-details/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/external-task/get-topic-names/</loc>
+    <loc>/camunda-cn/reference/rest/external-task/get-topic-names/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/execution/local-variables/get-local-variable-binary/</loc>
+    <loc>/camunda-cn/reference/rest/execution/local-variables/get-local-variable-binary/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/process-definition/get-statistics/</loc>
+    <loc>/camunda-cn/reference/rest/process-definition/get-statistics/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/process-instance/variables/get-variables/</loc>
+    <loc>/camunda-cn/reference/rest/process-instance/variables/get-variables/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/external-task/post-bpmn-error/</loc>
+    <loc>/camunda-cn/reference/rest/external-task/post-bpmn-error/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/external-task/post-failure/</loc>
+    <loc>/camunda-cn/reference/rest/external-task/post-failure/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/bpmn20/events/link-events/</loc>
+    <loc>/camunda-cn/reference/bpmn20/events/link-events/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/model-api/</loc>
+    <loc>/camunda-cn/user-guide/model-api/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/process-definition/</loc>
+    <loc>/camunda-cn/reference/rest/history/process-definition/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/introduction/public-api/</loc>
+    <loc>/camunda-cn/introduction/public-api/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/process-engine/scripting/</loc>
+    <loc>/camunda-cn/user-guide/process-engine/scripting/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/job/put-set-job-priority/</loc>
+    <loc>/camunda-cn/reference/rest/job/put-set-job-priority/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/deployment-descriptors/tags/</loc>
+    <loc>/camunda-cn/reference/deployment-descriptors/tags/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/bpmn20/tasks/task-markers/</loc>
+    <loc>/camunda-cn/reference/bpmn20/tasks/task-markers/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/user/put-update-profile/</loc>
+    <loc>/camunda-cn/reference/rest/user/put-update-profile/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/74-to-75/</loc>
+    <loc>/camunda-cn/update/minor/74-to-75/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/external-task/</loc>
+    <loc>/camunda-cn/reference/rest/external-task/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/job-definition/put-activate-suspend-by-proc-def-id/</loc>
+    <loc>/camunda-cn/reference/rest/job-definition/put-activate-suspend-by-proc-def-id/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/forms/embedded-forms/controls/bpmn-buttons/</loc>
+    <loc>/camunda-cn/reference/forms/embedded-forms/controls/bpmn-buttons/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/data-formats/</loc>
+    <loc>/camunda-cn/user-guide/data-formats/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/filter/get-execute-list/</loc>
+    <loc>/camunda-cn/reference/rest/filter/get-execute-list/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/filter/</loc>
+    <loc>/camunda-cn/reference/rest/filter/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/process-definition/get-xml/</loc>
+    <loc>/camunda-cn/reference/rest/process-definition/get-xml/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/case-instance/variables/get-variable/</loc>
+    <loc>/camunda-cn/reference/rest/case-instance/variables/get-variable/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/process-instance/get/</loc>
+    <loc>/camunda-cn/reference/rest/process-instance/get/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/external-task/post-lock/</loc>
+    <loc>/camunda-cn/reference/rest/external-task/post-lock/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/process-instance/</loc>
+    <loc>/camunda-cn/reference/rest/history/process-instance/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/execution/local-variables/put-local-variable/</loc>
+    <loc>/camunda-cn/reference/rest/execution/local-variables/put-local-variable/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/case-execution/post-reenable/</loc>
+    <loc>/camunda-cn/reference/rest/case-execution/post-reenable/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/job/put-set-job-retries/</loc>
+    <loc>/camunda-cn/reference/rest/job/put-set-job-retries/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/task/post-submit-form/</loc>
+    <loc>/camunda-cn/reference/rest/task/post-submit-form/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/process-engine/templating/</loc>
+    <loc>/camunda-cn/user-guide/process-engine/templating/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/case-execution/post-terminate/</loc>
+    <loc>/camunda-cn/reference/rest/case-execution/post-terminate/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/bpmn20/events/terminate-event/</loc>
+    <loc>/camunda-cn/reference/bpmn20/events/terminate-event/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/73-to-74/</loc>
+    <loc>/camunda-cn/update/minor/73-to-74/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/process-engine/securing-custom-code/</loc>
+    <loc>/camunda-cn/user-guide/process-engine/securing-custom-code/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/process-engine/external-tasks/</loc>
+    <loc>/camunda-cn/user-guide/process-engine/external-tasks/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/job-definition/put-activate-suspend-by-proc-def-key/</loc>
+    <loc>/camunda-cn/reference/rest/job-definition/put-activate-suspend-by-proc-def-key/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/process-engine/connectors/</loc>
+    <loc>/camunda-cn/user-guide/process-engine/connectors/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/filter/post-execute-list/</loc>
+    <loc>/camunda-cn/reference/rest/filter/post-execute-list/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/external-task/post-extend-lock/</loc>
+    <loc>/camunda-cn/reference/rest/external-task/post-extend-lock/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/dmn/custom-extensions/</loc>
+    <loc>/camunda-cn/reference/dmn/custom-extensions/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/case-instance/variables/get-variable-binary/</loc>
+    <loc>/camunda-cn/reference/rest/case-instance/variables/get-variable-binary/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/process-definition/get/</loc>
+    <loc>/camunda-cn/reference/rest/process-definition/get/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/job/get-exception-stacktrace/</loc>
+    <loc>/camunda-cn/reference/rest/job/get-exception-stacktrace/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/group/</loc>
+    <loc>/camunda-cn/reference/rest/group/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/model-api/cmmn-model-api/limitations/</loc>
+    <loc>/camunda-cn/user-guide/model-api/cmmn-model-api/limitations/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/cmmn11/migration/</loc>
+    <loc>/camunda-cn/reference/cmmn11/migration/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/process-instance/post-modification/</loc>
+    <loc>/camunda-cn/reference/rest/process-instance/post-modification/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/execution/local-variables/put-local-variable-binary/</loc>
+    <loc>/camunda-cn/reference/rest/execution/local-variables/put-local-variable-binary/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/task/post-resolve/</loc>
+    <loc>/camunda-cn/reference/rest/task/post-resolve/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/task/post-assignee/</loc>
+    <loc>/camunda-cn/reference/rest/task/post-assignee/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/task/</loc>
+    <loc>/camunda-cn/reference/rest/history/task/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/user/unlock/</loc>
+    <loc>/camunda-cn/reference/rest/user/unlock/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/72-to-73/</loc>
+    <loc>/camunda-cn/update/minor/72-to-73/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/task-forms/</loc>
+    <loc>/camunda-cn/user-guide/task-forms/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/process-instance/post-modification-async/</loc>
+    <loc>/camunda-cn/reference/rest/process-instance/post-modification-async/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/job/put-activate-suspend-by-id/</loc>
+    <loc>/camunda-cn/reference/rest/job/put-activate-suspend-by-id/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/admin/</loc>
+    <loc>/camunda-cn/webapps/admin/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/task/post-delegate/</loc>
+    <loc>/camunda-cn/reference/rest/task/post-delegate/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/decision-instance/post-delete/</loc>
+    <loc>/camunda-cn/reference/rest/history/decision-instance/post-delete/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/process-instance/post-delete/</loc>
+    <loc>/camunda-cn/reference/rest/history/process-instance/post-delete/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/process-instance/post-delete/</loc>
+    <loc>/camunda-cn/reference/rest/process-instance/post-delete/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/process-instance/post-delete-historic-query-based/</loc>
+    <loc>/camunda-cn/reference/rest/process-instance/post-delete-historic-query-based/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/filter/get-execute-count/</loc>
+    <loc>/camunda-cn/reference/rest/filter/get-execute-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/case-execution/variables/get-variable/</loc>
+    <loc>/camunda-cn/reference/rest/case-execution/variables/get-variable/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/process-instance/post-query-count/</loc>
+    <loc>/camunda-cn/reference/rest/process-instance/post-query-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/case-execution/local-variables/get-local-variable/</loc>
+    <loc>/camunda-cn/reference/rest/case-execution/local-variables/get-local-variable/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/</loc>
+    <loc>/camunda-cn/reference/rest/history/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/task-forms/jsf-task-forms/</loc>
+    <loc>/camunda-cn/user-guide/task-forms/jsf-task-forms/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/process-engine/process-versioning/</loc>
+    <loc>/camunda-cn/user-guide/process-engine/process-versioning/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/job/post-set-job-retries/</loc>
+    <loc>/camunda-cn/reference/rest/job/post-set-job-retries/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/process-instance/post-set-job-retries/</loc>
+    <loc>/camunda-cn/reference/rest/process-instance/post-set-job-retries/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/process-instance/post-set-job-retries-historic-query-based/</loc>
+    <loc>/camunda-cn/reference/rest/process-instance/post-set-job-retries-historic-query-based/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/process-instance/post-set-variables-async/</loc>
+    <loc>/camunda-cn/reference/rest/process-instance/post-set-variables-async/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/process-definition/post-start-process-instance/</loc>
+    <loc>/camunda-cn/reference/rest/process-definition/post-start-process-instance/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/external-task/post-unlock/</loc>
+    <loc>/camunda-cn/reference/rest/external-task/post-unlock/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/71-to-72/</loc>
+    <loc>/camunda-cn/update/minor/71-to-72/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/case-instance/variables/post-variables/</loc>
+    <loc>/camunda-cn/reference/rest/case-instance/variables/post-variables/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/execution/local-variables/post-local-variables/</loc>
+    <loc>/camunda-cn/reference/rest/execution/local-variables/post-local-variables/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/user-operation-log/</loc>
+    <loc>/camunda-cn/reference/rest/history/user-operation-log/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/process-engine/process-instance-migration/</loc>
+    <loc>/camunda-cn/user-guide/process-engine/process-instance-migration/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/job/put-activate-suspend-by-job-def-id/</loc>
+    <loc>/camunda-cn/reference/rest/job/put-activate-suspend-by-job-def-id/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/cockpit/</loc>
+    <loc>/camunda-cn/webapps/cockpit/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/process-engine/database/</loc>
+    <loc>/camunda-cn/user-guide/process-engine/database/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/execution/local-variables/delete-local-variable/</loc>
+    <loc>/camunda-cn/reference/rest/execution/local-variables/delete-local-variable/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/process-instance/delete-variable-instances/</loc>
+    <loc>/camunda-cn/reference/rest/history/process-instance/delete-variable-instances/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/filter/post-execute-count/</loc>
+    <loc>/camunda-cn/reference/rest/filter/post-execute-count/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/case-execution/variables/get-variable-binary/</loc>
+    <loc>/camunda-cn/reference/rest/case-execution/variables/get-variable-binary/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/task/identity-links/get-identity-links/</loc>
+    <loc>/camunda-cn/reference/rest/task/identity-links/get-identity-links/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/process-instance/post-query/</loc>
+    <loc>/camunda-cn/reference/rest/process-instance/post-query/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/case-execution/local-variables/get-local-variable-binary/</loc>
+    <loc>/camunda-cn/reference/rest/case-execution/local-variables/get-local-variable-binary/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/identity/</loc>
+    <loc>/camunda-cn/reference/rest/identity/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/case-instance/variables/put-variable/</loc>
+    <loc>/camunda-cn/reference/rest/case-instance/variables/put-variable/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/external-task/put-priority/</loc>
+    <loc>/camunda-cn/reference/rest/external-task/put-priority/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/external-task/put-retries/</loc>
+    <loc>/camunda-cn/reference/rest/external-task/put-retries/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/external-task/post-retries-async/</loc>
+    <loc>/camunda-cn/reference/rest/external-task/post-retries-async/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/external-task/put-retries-sync/</loc>
+    <loc>/camunda-cn/reference/rest/external-task/put-retries-sync/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/process-definition/post-submit-form/</loc>
+    <loc>/camunda-cn/reference/rest/process-definition/post-submit-form/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/70-to-71/</loc>
+    <loc>/camunda-cn/update/minor/70-to-71/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/history/variable-instance/</loc>
+    <loc>/camunda-cn/reference/rest/history/variable-instance/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/job/put-activate-suspend-by-proc-def-id/</loc>
+    <loc>/camunda-cn/reference/rest/job/put-activate-suspend-by-proc-def-id/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/process-definition/put-activate-suspend-by-id/</loc>
+    <loc>/camunda-cn/reference/rest/process-definition/put-activate-suspend-by-id/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/task/identity-links/post-identity-link/</loc>
+    <loc>/camunda-cn/reference/rest/task/identity-links/post-identity-link/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/filter/options/</loc>
+    <loc>/camunda-cn/reference/rest/filter/options/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/case-execution/variables/get-variables/</loc>
+    <loc>/camunda-cn/reference/rest/case-execution/variables/get-variables/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/case-execution/local-variables/get-local-variables/</loc>
+    <loc>/camunda-cn/reference/rest/case-execution/local-variables/get-local-variables/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/execution/message-event-subscription/get-message-subscription/</loc>
+    <loc>/camunda-cn/reference/rest/execution/message-event-subscription/get-message-subscription/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/incident/</loc>
+    <loc>/camunda-cn/reference/rest/incident/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/case-instance/variables/post-variable-binary/</loc>
+    <loc>/camunda-cn/reference/rest/case-instance/variables/post-variable-binary/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/process-instance/variables/post-variable-binary/</loc>
+    <loc>/camunda-cn/reference/rest/process-instance/variables/post-variable-binary/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/tasklist/</loc>
+    <loc>/camunda-cn/webapps/tasklist/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/welcome/</loc>
+    <loc>/camunda-cn/webapps/welcome/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/job/put-activate-suspend-by-proc-def-key/</loc>
+    <loc>/camunda-cn/reference/rest/job/put-activate-suspend-by-proc-def-key/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/process-definition/put-activate-suspend-by-key/</loc>
+    <loc>/camunda-cn/reference/rest/process-definition/put-activate-suspend-by-key/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/case-instance/variables/delete-variable/</loc>
+    <loc>/camunda-cn/reference/rest/case-instance/variables/delete-variable/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/task/identity-links/post-delete-identity-link/</loc>
+    <loc>/camunda-cn/reference/rest/task/identity-links/post-delete-identity-link/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/process-engine/history/</loc>
+    <loc>/camunda-cn/user-guide/process-engine/history/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/job/</loc>
+    <loc>/camunda-cn/reference/rest/job/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/case-execution/variables/post-variable-binary/</loc>
+    <loc>/camunda-cn/reference/rest/case-execution/variables/post-variable-binary/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/execution/message-event-subscription/post-message/</loc>
+    <loc>/camunda-cn/reference/rest/execution/message-event-subscription/post-message/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/process-instance/variables/post-variables/</loc>
+    <loc>/camunda-cn/reference/rest/process-instance/variables/post-variables/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/process-definition/put-history-time-to-live/</loc>
+    <loc>/camunda-cn/reference/rest/process-definition/put-history-time-to-live/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/job/put-activate-suspend-by-proc-inst-id/</loc>
+    <loc>/camunda-cn/reference/rest/job/put-activate-suspend-by-proc-inst-id/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/process-instance/put-activate-suspend-by-id/</loc>
+    <loc>/camunda-cn/reference/rest/process-instance/put-activate-suspend-by-id/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/process-definition/delete-by-key/</loc>
+    <loc>/camunda-cn/reference/rest/process-definition/delete-by-key/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/process-definition/delete-process-definition/</loc>
+    <loc>/camunda-cn/reference/rest/process-definition/delete-process-definition/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/process-engine/deployment-cache/</loc>
+    <loc>/camunda-cn/user-guide/process-engine/deployment-cache/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/task/get-deployed-form/</loc>
+    <loc>/camunda-cn/reference/rest/task/get-deployed-form/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/process-definition/get-deployed-start-form/</loc>
+    <loc>/camunda-cn/reference/rest/process-definition/get-deployed-start-form/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/task/get-rendered-form/</loc>
+    <loc>/camunda-cn/reference/rest/task/get-rendered-form/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/job-definition/</loc>
+    <loc>/camunda-cn/reference/rest/job-definition/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/process-engine/password-hashing/</loc>
+    <loc>/camunda-cn/user-guide/process-engine/password-hashing/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/case-execution/variables/put-variable/</loc>
+    <loc>/camunda-cn/reference/rest/case-execution/variables/put-variable/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/webapps/shared-options/</loc>
+    <loc>/camunda-cn/webapps/shared-options/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/execution/post-signal/</loc>
+    <loc>/camunda-cn/reference/rest/execution/post-signal/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/process-engine/password-policy/</loc>
+    <loc>/camunda-cn/user-guide/process-engine/password-policy/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/process-instance/put-activate-suspend-by-proc-def-id/</loc>
+    <loc>/camunda-cn/reference/rest/process-instance/put-activate-suspend-by-proc-def-id/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/job/delete-job/</loc>
+    <loc>/camunda-cn/reference/rest/job/delete-job/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/task/comment/get-task-comments/</loc>
+    <loc>/camunda-cn/reference/rest/task/comment/get-task-comments/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/message/</loc>
+    <loc>/camunda-cn/reference/rest/message/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/case-execution/local-variables/put-local-variable/</loc>
+    <loc>/camunda-cn/reference/rest/case-execution/local-variables/put-local-variable/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/process-engine/transactions-in-processes/</loc>
+    <loc>/camunda-cn/user-guide/process-engine/transactions-in-processes/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/case-execution/variables/post-variables/</loc>
+    <loc>/camunda-cn/reference/rest/case-execution/variables/post-variables/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/process-instance/put-activate-suspend-by-proc-def-key/</loc>
+    <loc>/camunda-cn/reference/rest/process-instance/put-activate-suspend-by-proc-def-key/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/case-execution/variables/delete-variable/</loc>
+    <loc>/camunda-cn/reference/rest/case-execution/variables/delete-variable/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/task/comment/get-task-comment/</loc>
+    <loc>/camunda-cn/reference/rest/task/comment/get-task-comment/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/metrics/</loc>
+    <loc>/camunda-cn/reference/rest/metrics/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/case-execution/local-variables/put-local-variable-binary/</loc>
+    <loc>/camunda-cn/reference/rest/case-execution/local-variables/put-local-variable-binary/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/process-definition/post-restart-process-instance-sync/</loc>
+    <loc>/camunda-cn/reference/rest/process-definition/post-restart-process-instance-sync/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/process-definition/post-restart-process-instance-async/</loc>
+    <loc>/camunda-cn/reference/rest/process-definition/post-restart-process-instance-async/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/process-engine/the-job-executor/</loc>
+    <loc>/camunda-cn/user-guide/process-engine/the-job-executor/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/migration/</loc>
+    <loc>/camunda-cn/reference/rest/migration/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/modification/</loc>
+    <loc>/camunda-cn/reference/rest/modification/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/process-instance/put-activate-suspend-in-group/</loc>
+    <loc>/camunda-cn/reference/rest/process-instance/put-activate-suspend-in-group/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/process-engine/multi-tenancy/</loc>
+    <loc>/camunda-cn/user-guide/process-engine/multi-tenancy/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/task/comment/post-task-comment/</loc>
+    <loc>/camunda-cn/reference/rest/task/comment/post-task-comment/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/process-definition/</loc>
+    <loc>/camunda-cn/reference/rest/process-definition/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/process-instance/variables/put-variable/</loc>
+    <loc>/camunda-cn/reference/rest/process-instance/variables/put-variable/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/case-execution/local-variables/post-local-variables/</loc>
+    <loc>/camunda-cn/reference/rest/case-execution/local-variables/post-local-variables/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/process-instance/post-activate-suspend-in-batch/</loc>
+    <loc>/camunda-cn/reference/rest/process-instance/post-activate-suspend-in-batch/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/task/attachment/get-task-attachments/</loc>
+    <loc>/camunda-cn/reference/rest/task/attachment/get-task-attachments/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/process-engine/id-generator/</loc>
+    <loc>/camunda-cn/user-guide/process-engine/id-generator/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/process-instance/</loc>
+    <loc>/camunda-cn/reference/rest/process-instance/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/signal/</loc>
+    <loc>/camunda-cn/reference/rest/signal/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/schema-log/</loc>
+    <loc>/camunda-cn/reference/rest/schema-log/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/dmn-engine/</loc>
+    <loc>/camunda-cn/user-guide/dmn-engine/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/ext-client/spring-boot-starter/</loc>
+    <loc>/camunda-cn/user-guide/ext-client/spring-boot-starter/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/task/attachment/get-task-attachment/</loc>
+    <loc>/camunda-cn/reference/rest/task/attachment/get-task-attachment/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/logging/</loc>
+    <loc>/camunda-cn/user-guide/logging/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/task/</loc>
+    <loc>/camunda-cn/reference/rest/task/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/telemetry/</loc>
+    <loc>/camunda-cn/reference/rest/telemetry/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/process-engine/metrics/</loc>
+    <loc>/camunda-cn/user-guide/process-engine/metrics/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/tenant/</loc>
+    <loc>/camunda-cn/reference/rest/tenant/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/process-engine/incidents/</loc>
+    <loc>/camunda-cn/user-guide/process-engine/incidents/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/task/attachment/post-task-attachment/</loc>
+    <loc>/camunda-cn/reference/rest/task/attachment/post-task-attachment/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/security/</loc>
+    <loc>/camunda-cn/user-guide/security/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/user/</loc>
+    <loc>/camunda-cn/reference/rest/user/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/license-use/</loc>
+    <loc>/camunda-cn/user-guide/license-use/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/task/attachment/get-task-attachment-data/</loc>
+    <loc>/camunda-cn/reference/rest/task/attachment/get-task-attachment-data/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/process-engine/process-engine-plugins/</loc>
+    <loc>/camunda-cn/user-guide/process-engine/process-engine-plugins/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/variable-instance/</loc>
+    <loc>/camunda-cn/reference/rest/variable-instance/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/task/attachment/delete-task-attachment/</loc>
+    <loc>/camunda-cn/reference/rest/task/attachment/delete-task-attachment/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/process-engine/identity-service/</loc>
+    <loc>/camunda-cn/user-guide/process-engine/identity-service/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/version/</loc>
+    <loc>/camunda-cn/reference/rest/version/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/process-engine/authorization-service/</loc>
+    <loc>/camunda-cn/user-guide/process-engine/authorization-service/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/case-execution/local-variables/delete-local-variable/</loc>
+    <loc>/camunda-cn/reference/rest/case-execution/local-variables/delete-local-variable/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/process-engine/deployments/</loc>
+    <loc>/camunda-cn/user-guide/process-engine/deployments/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/task/local-variables/get-local-task-variable/</loc>
+    <loc>/camunda-cn/reference/rest/task/local-variables/get-local-task-variable/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/task/local-variables/get-local-task-variable-binary/</loc>
+    <loc>/camunda-cn/reference/rest/task/local-variables/get-local-task-variable-binary/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/task/variables/get-task-variable/</loc>
+    <loc>/camunda-cn/reference/rest/task/variables/get-task-variable/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/task/variables/get-task-variable-binary/</loc>
+    <loc>/camunda-cn/reference/rest/task/variables/get-task-variable-binary/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/process-engine/process-diagram-api/</loc>
+    <loc>/camunda-cn/user-guide/process-engine/process-diagram-api/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/process-engine/time-zones/</loc>
+    <loc>/camunda-cn/user-guide/process-engine/time-zones/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/process-engine/decisions/</loc>
+    <loc>/camunda-cn/user-guide/process-engine/decisions/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/task/local-variables/get-local-task-variables/</loc>
+    <loc>/camunda-cn/reference/rest/task/local-variables/get-local-task-variables/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/task/variables/get-task-variables/</loc>
+    <loc>/camunda-cn/reference/rest/task/variables/get-task-variables/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/process-engine/batch/</loc>
+    <loc>/camunda-cn/user-guide/process-engine/batch/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/ext-client/</loc>
+    <loc>/camunda-cn/user-guide/ext-client/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/task/local-variables/post-modify-local-task-variables/</loc>
+    <loc>/camunda-cn/reference/rest/task/local-variables/post-modify-local-task-variables/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/task/variables/post-modify-task-variables/</loc>
+    <loc>/camunda-cn/reference/rest/task/variables/post-modify-task-variables/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/process-engine/batch-operations/</loc>
+    <loc>/camunda-cn/user-guide/process-engine/batch-operations/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/process-engine/error-handling/</loc>
+    <loc>/camunda-cn/user-guide/process-engine/error-handling/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/task/local-variables/put-local-task-variable/</loc>
+    <loc>/camunda-cn/reference/rest/task/local-variables/put-local-task-variable/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/task/variables/put-task-variable/</loc>
+    <loc>/camunda-cn/reference/rest/task/variables/put-task-variable/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/task/local-variables/post-local-task-variable-binary/</loc>
+    <loc>/camunda-cn/reference/rest/task/local-variables/post-local-task-variable-binary/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/task/variables/post-task-variable-binary/</loc>
+    <loc>/camunda-cn/reference/rest/task/variables/post-task-variable-binary/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/camunda-bpm-rpa-bridge/</loc>
+    <loc>/camunda-cn/user-guide/camunda-bpm-rpa-bridge/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/task/local-variables/delete-local-task-variable/</loc>
+    <loc>/camunda-cn/reference/rest/task/local-variables/delete-local-task-variable/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/task/variables/delete-task-variable/</loc>
+    <loc>/camunda-cn/reference/rest/task/variables/delete-task-variable/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/user-guide/ext-client/compatibility-matrix/</loc>
+    <loc>/camunda-cn/user-guide/ext-client/compatibility-matrix/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/task/get-form-variables/</loc>
+    <loc>/camunda-cn/reference/rest/task/get-form-variables/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/task/post-create/</loc>
+    <loc>/camunda-cn/reference/rest/task/post-create/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/task/put-update/</loc>
+    <loc>/camunda-cn/reference/rest/task/put-update/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/task/post-bpmn-error/</loc>
+    <loc>/camunda-cn/reference/rest/task/post-bpmn-error/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/task/post-bpmn-escalation/</loc>
+    <loc>/camunda-cn/reference/rest/task/post-bpmn-escalation/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/reference/rest/task/delete/</loc>
+    <loc>/camunda-cn/reference/rest/task/delete/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/</loc>
+    <loc>/camunda-cn/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/74-to-75/webapp/</loc>
+    <loc>/camunda-cn/update/minor/74-to-75/webapp/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/75-to-76/webapp/</loc>
+    <loc>/camunda-cn/update/minor/75-to-76/webapp/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/76-to-77/webapp/</loc>
+    <loc>/camunda-cn/update/minor/76-to-77/webapp/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/71-to-72/glassfish/</loc>
+    <loc>/camunda-cn/update/minor/71-to-72/glassfish/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/72-to-73/glassfish/</loc>
+    <loc>/camunda-cn/update/minor/72-to-73/glassfish/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/73-to-74/glassfish/</loc>
+    <loc>/camunda-cn/update/minor/73-to-74/glassfish/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/74-to-75/glassfish/</loc>
+    <loc>/camunda-cn/update/minor/74-to-75/glassfish/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/71-to-72/jboss/</loc>
+    <loc>/camunda-cn/update/minor/71-to-72/jboss/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/72-to-73/jboss/</loc>
+    <loc>/camunda-cn/update/minor/72-to-73/jboss/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/73-to-74/jboss/</loc>
+    <loc>/camunda-cn/update/minor/73-to-74/jboss/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/710-to-711/jboss/</loc>
+    <loc>/camunda-cn/update/minor/710-to-711/jboss/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/711-to-712/jboss/</loc>
+    <loc>/camunda-cn/update/minor/711-to-712/jboss/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/712-to-713/jboss/</loc>
+    <loc>/camunda-cn/update/minor/712-to-713/jboss/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/713-to-714/jboss/</loc>
+    <loc>/camunda-cn/update/minor/713-to-714/jboss/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/714-to-715/jboss/</loc>
+    <loc>/camunda-cn/update/minor/714-to-715/jboss/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/715-to-716/jboss/</loc>
+    <loc>/camunda-cn/update/minor/715-to-716/jboss/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/74-to-75/jboss/</loc>
+    <loc>/camunda-cn/update/minor/74-to-75/jboss/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/75-to-76/jboss/</loc>
+    <loc>/camunda-cn/update/minor/75-to-76/jboss/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/76-to-77/jboss/</loc>
+    <loc>/camunda-cn/update/minor/76-to-77/jboss/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/77-to-78/jboss/</loc>
+    <loc>/camunda-cn/update/minor/77-to-78/jboss/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/78-to-79/jboss/</loc>
+    <loc>/camunda-cn/update/minor/78-to-79/jboss/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/79-to-710/jboss/</loc>
+    <loc>/camunda-cn/update/minor/79-to-710/jboss/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/71-to-72/tomcat/</loc>
+    <loc>/camunda-cn/update/minor/71-to-72/tomcat/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/710-to-711/tomcat/</loc>
+    <loc>/camunda-cn/update/minor/710-to-711/tomcat/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/711-to-712/tomcat/</loc>
+    <loc>/camunda-cn/update/minor/711-to-712/tomcat/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/712-to-713/tomcat/</loc>
+    <loc>/camunda-cn/update/minor/712-to-713/tomcat/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/713-to-714/tomcat/</loc>
+    <loc>/camunda-cn/update/minor/713-to-714/tomcat/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/714-to-715/tomcat/</loc>
+    <loc>/camunda-cn/update/minor/714-to-715/tomcat/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/715-to-716/tomcat/</loc>
+    <loc>/camunda-cn/update/minor/715-to-716/tomcat/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/72-to-73/tomcat/</loc>
+    <loc>/camunda-cn/update/minor/72-to-73/tomcat/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/73-to-74/tomcat/</loc>
+    <loc>/camunda-cn/update/minor/73-to-74/tomcat/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/74-to-75/tomcat/</loc>
+    <loc>/camunda-cn/update/minor/74-to-75/tomcat/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/75-to-76/tomcat/</loc>
+    <loc>/camunda-cn/update/minor/75-to-76/tomcat/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/76-to-77/tomcat/</loc>
+    <loc>/camunda-cn/update/minor/76-to-77/tomcat/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/77-to-78/tomcat/</loc>
+    <loc>/camunda-cn/update/minor/77-to-78/tomcat/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/78-to-79/tomcat/</loc>
+    <loc>/camunda-cn/update/minor/78-to-79/tomcat/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/79-to-710/tomcat/</loc>
+    <loc>/camunda-cn/update/minor/79-to-710/tomcat/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/71-to-72/was/</loc>
+    <loc>/camunda-cn/update/minor/71-to-72/was/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/710-to-711/was/</loc>
+    <loc>/camunda-cn/update/minor/710-to-711/was/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/711-to-712/was/</loc>
+    <loc>/camunda-cn/update/minor/711-to-712/was/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/712-to-713/was/</loc>
+    <loc>/camunda-cn/update/minor/712-to-713/was/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/713-to-714/was/</loc>
+    <loc>/camunda-cn/update/minor/713-to-714/was/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/714-to-715/was/</loc>
+    <loc>/camunda-cn/update/minor/714-to-715/was/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/715-to-716/was/</loc>
+    <loc>/camunda-cn/update/minor/715-to-716/was/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/72-to-73/was/</loc>
+    <loc>/camunda-cn/update/minor/72-to-73/was/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/73-to-74/was/</loc>
+    <loc>/camunda-cn/update/minor/73-to-74/was/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/74-to-75/was/</loc>
+    <loc>/camunda-cn/update/minor/74-to-75/was/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/75-to-76/was/</loc>
+    <loc>/camunda-cn/update/minor/75-to-76/was/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/76-to-77/was/</loc>
+    <loc>/camunda-cn/update/minor/76-to-77/was/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/77-to-78/was/</loc>
+    <loc>/camunda-cn/update/minor/77-to-78/was/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/78-to-79/was/</loc>
+    <loc>/camunda-cn/update/minor/78-to-79/was/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/79-to-710/was/</loc>
+    <loc>/camunda-cn/update/minor/79-to-710/was/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/71-to-72/wls/</loc>
+    <loc>/camunda-cn/update/minor/71-to-72/wls/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/710-to-711/wls/</loc>
+    <loc>/camunda-cn/update/minor/710-to-711/wls/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/711-to-712/wls/</loc>
+    <loc>/camunda-cn/update/minor/711-to-712/wls/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/712-to-713/wls/</loc>
+    <loc>/camunda-cn/update/minor/712-to-713/wls/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/713-to-714/wls/</loc>
+    <loc>/camunda-cn/update/minor/713-to-714/wls/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/714-to-715/wls/</loc>
+    <loc>/camunda-cn/update/minor/714-to-715/wls/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/715-to-716/wls/</loc>
+    <loc>/camunda-cn/update/minor/715-to-716/wls/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/72-to-73/wls/</loc>
+    <loc>/camunda-cn/update/minor/72-to-73/wls/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/73-to-74/wls/</loc>
+    <loc>/camunda-cn/update/minor/73-to-74/wls/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/74-to-75/wls/</loc>
+    <loc>/camunda-cn/update/minor/74-to-75/wls/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/75-to-76/wls/</loc>
+    <loc>/camunda-cn/update/minor/75-to-76/wls/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/76-to-77/wls/</loc>
+    <loc>/camunda-cn/update/minor/76-to-77/wls/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/77-to-78/wls/</loc>
+    <loc>/camunda-cn/update/minor/77-to-78/wls/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/78-to-79/wls/</loc>
+    <loc>/camunda-cn/update/minor/78-to-79/wls/</loc>
   </url>
   
   <url>
-    <loc>/manual/develop/update/minor/79-to-710/wls/</loc>
+    <loc>/camunda-cn/update/minor/79-to-710/wls/</loc>
   </url>
   
 </urlset>
