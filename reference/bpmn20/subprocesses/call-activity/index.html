@@ -29,11 +29,11 @@
   <title>Call Activity | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="/camunda-cn/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="http://shaochenfeng.com/camunda-cn/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
+  <link rel="stylesheet" href="http://shaochenfeng.com/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
 </head>
 <body class="">
 
@@ -45,8 +45,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="/camunda-cn/">
-      <img src="/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="http://shaochenfeng.com/camunda-cn/">
+      <img src="http://shaochenfeng.com/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">Docs</span>
       </a>
@@ -8113,7 +8113,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="/camunda-cn/">
+    <select id="version-select" data-basepath="/manual" base-url="http://shaochenfeng.com/camunda-cn/">
       
         <option  selected >develop</option>
       
@@ -8188,8 +8188,8 @@ To call another version of the subprocess it is possible to define the attribute
 <ul>
 <li>latest: always call the latest process definition version (which is also the default behaviour if the attribute isn&rsquo;t defined)</li>
 <li>deployment: if called process definition is part of the same deployment as the calling process definition, use the version from deployment</li>
-<li>version: call a fixed version of the process definition, in this case <code>calledElementVersion</code> is required. The version number can either be specified in the BPMN XML or returned by an expression (see <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#calledelementversion">custom extensions</a>)</li>
-<li>versionTag: call a fixed version tag of the process definition, in this case <code>calledElementVersionTag</code> is required. The version tag can either be specified in the BPMN XML or returned by an expression (see <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#calledelementversiontag">custom extensions</a>)</li>
+<li>version: call a fixed version of the process definition, in this case <code>calledElementVersion</code> is required. The version number can either be specified in the BPMN XML or returned by an expression (see <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#calledelementversion">custom extensions</a>)</li>
+<li>versionTag: call a fixed version tag of the process definition, in this case <code>calledElementVersionTag</code> is required. The version tag can either be specified in the BPMN XML or returned by an expression (see <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#calledelementversiontag">custom extensions</a>)</li>
 </ul>
 
 <pre><code class="language-xml">&lt;callActivity id=&quot;callSubProcess&quot; calledElement=&quot;checkCreditProcess&quot;
@@ -8287,7 +8287,7 @@ If the calling process definition has a tenant id, a process definition with the
 
 <h2 id="combination-with-input-output-parameters">Combination with Input/Output parameters</h2>
 
-<p>Call activities can be combined with <a href="/camunda-cn/user-guide/process-engine/variables/#input-output-variable-mapping">Input/Output parameters</a> as well. This allows for an even more flexible mapping of variables into the called process. In order to only map variables that are declared in the <code>inputOutput</code> mapping, the attribute <code>local</code> can be used. Consider the following XML:</p>
+<p>Call activities can be combined with <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/variables/#input-output-variable-mapping">Input/Output parameters</a> as well. This allows for an even more flexible mapping of variables into the called process. In order to only map variables that are declared in the <code>inputOutput</code> mapping, the attribute <code>local</code> can be used. Consider the following XML:</p>
 
 <pre><code class="language-xml">&lt;callActivity id=&quot;callSubProcess&quot; calledElement=&quot;checkCreditProcess&quot; &gt;
   &lt;extensionElements&gt;
@@ -8338,7 +8338,7 @@ If the calling process definition has a tenant id, a process definition with the
 <h2 id="delegation-of-variable-mapping">Delegation of Variable Mapping</h2>
 
 <p>The mapping of input and output variables can also be delegated. This means the passing of input or/and output variables can be done in Java code.
-For this the <a href="/camunda-cn/user-guide/process-engine/delegation-code/#delegate-variable-mapping">Delegate Variable Mapping</a> interface must be implemented.</p>
+For this the <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/delegation-code/#delegate-variable-mapping">Delegate Variable Mapping</a> interface must be implemented.</p>
 
 <p>There are two possible ways to use delegation for variable mapping.</p>
 
@@ -8389,7 +8389,7 @@ This allows to specify an expression that resolves to an object implementing the
   &lt;/process&gt;
 </code></pre>
 
-<p>See <a href="/camunda-cn/user-guide/process-engine/delegation-code/#delegate-variable-mapping">Delegate Variable Mapping</a> for further information of implementing the interface.</p>
+<p>See <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/delegation-code/#delegate-variable-mapping">Delegate Variable Mapping</a> for further information of implementing the interface.</p>
 
 <h1 id="passing-business-key">Passing Business Key</h1>
 
@@ -8479,29 +8479,29 @@ This allows to specify an expression that resolves to an object implementing the
   <tr>
     <th>Attributes</th>
     <td>
-      <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#asyncbefore">camunda:asyncBefore</a>,
-      <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#asyncafter">camunda:asyncAfter</a>,
-      <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#calledelementbinding">camunda:calledElementBinding</a>,
-      <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#calledelementversion">camunda:calledElementVersion</a>,
-      <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#calledelementversiontag">camunda:calledElementVersionTag</a>,
-      <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#calledelementtenantid">camunda:calledElementTenantId</a>,
-      <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#casebinding">camunda:caseBinding</a>,
-      <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#caseref">camunda:caseRef</a>,
-      <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#caseversion">camunda:caseVersion</a>,
-      <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#casetenantid">camunda:caseTenantId</a>,
-      <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#exclusive">camunda:exclusive</a>,
-      <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#jobpriority">camunda:jobPriority</a>,
-      <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#variablemappingclass">camunda:variableMappingClass</a>,
-      <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#variablemappingdelegateexpression">camunda:variableMappingDelegateExpression</a>
+      <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#asyncbefore">camunda:asyncBefore</a>,
+      <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#asyncafter">camunda:asyncAfter</a>,
+      <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#calledelementbinding">camunda:calledElementBinding</a>,
+      <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#calledelementversion">camunda:calledElementVersion</a>,
+      <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#calledelementversiontag">camunda:calledElementVersionTag</a>,
+      <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#calledelementtenantid">camunda:calledElementTenantId</a>,
+      <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#casebinding">camunda:caseBinding</a>,
+      <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#caseref">camunda:caseRef</a>,
+      <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#caseversion">camunda:caseVersion</a>,
+      <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#casetenantid">camunda:caseTenantId</a>,
+      <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#exclusive">camunda:exclusive</a>,
+      <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#jobpriority">camunda:jobPriority</a>,
+      <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#variablemappingclass">camunda:variableMappingClass</a>,
+      <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#variablemappingdelegateexpression">camunda:variableMappingDelegateExpression</a>
     </td>
   </tr>
   <tr>
     <th>Extension Elements</th>
     <td>
-      <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#in">camunda:in</a>,
-      <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#out">camunda:out</a>,
-      <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#inputoutput">camunda:inputOutput</a>,
-      <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#failedjobretrytimecycle">camunda:failedJobRetryTimeCycle</a>
+      <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#in">camunda:in</a>,
+      <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#out">camunda:out</a>,
+      <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#inputoutput">camunda:inputOutput</a>,
+      <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#failedjobretrytimecycle">camunda:failedJobRetryTimeCycle</a>
     </td>
   </tr>
   <tr>
@@ -8589,7 +8589,7 @@ This allows to specify an expression that resolves to an object implementing the
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="http://shaochenfeng.com/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
             Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2021
           </p>
@@ -8604,7 +8604,7 @@ This allows to specify an expression that resolves to an object implementing the
 
   
 
-  <script type="text/javascript" src="/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
+  <script type="text/javascript" src="http://shaochenfeng.com/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

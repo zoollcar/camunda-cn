@@ -29,11 +29,11 @@
   <title>Update from 7.1 to 7.2 | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="/camunda-cn/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="http://shaochenfeng.com/camunda-cn/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
+  <link rel="stylesheet" href="http://shaochenfeng.com/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
 </head>
 <body class="">
 
@@ -45,8 +45,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="/camunda-cn/">
-      <img src="/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="http://shaochenfeng.com/camunda-cn/">
+      <img src="http://shaochenfeng.com/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">Docs</span>
       </a>
@@ -8113,7 +8113,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="/camunda-cn/">
+    <select id="version-select" data-basepath="/manual" base-url="http://shaochenfeng.com/camunda-cn/">
       
         <option  selected >develop</option>
       
@@ -8176,9 +8176,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>Noteworthy new Features in 7.2:</p>
 
 <ul>
-<li><strong>CMMN:</strong> <a href="/camunda-cn/reference/cmmn11/">Case Management Model And Notation</a> (CMMN) is a modelling standard similar to BPMN that focuses on human-centric processes. Camunda Platform 7.2 implements this standard and therefore extends the database schema during update. If you do not plan to use CMMN, these tables will stay empty.</li>
-<li><strong>Spin/Connect:</strong> Camunda <a href="/camunda-cn/user-guide/data-formats/">Spin</a> and <a href="/camunda-cn/user-guide/process-engine/connectors/">Connect</a> are optional Camunda extensions that ease the use of text-based data formats and connectivity in processes. Spin and Connect are separate modules that have to be explicitly added to and configured in an existing installation. This guide shows you how to enable/disable the usage of Spin and Connect.</li>
-<li><strong>Freemarker:</strong> This optional Camunda extension provides a <a href="/camunda-cn/user-guide/process-engine/templating/">scripting engine for the templating language Freemarker</a> that allows to use Freemarker as scripts in process constructs.</li>
+<li><strong>CMMN:</strong> <a href="http://shaochenfeng.com/camunda-cn/reference/cmmn11/">Case Management Model And Notation</a> (CMMN) is a modelling standard similar to BPMN that focuses on human-centric processes. Camunda Platform 7.2 implements this standard and therefore extends the database schema during update. If you do not plan to use CMMN, these tables will stay empty.</li>
+<li><strong>Spin/Connect:</strong> Camunda <a href="http://shaochenfeng.com/camunda-cn/user-guide/data-formats/">Spin</a> and <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/connectors/">Connect</a> are optional Camunda extensions that ease the use of text-based data formats and connectivity in processes. Spin and Connect are separate modules that have to be explicitly added to and configured in an existing installation. This guide shows you how to enable/disable the usage of Spin and Connect.</li>
+<li><strong>Freemarker:</strong> This optional Camunda extension provides a <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/templating/">scripting engine for the templating language Freemarker</a> that allows to use Freemarker as scripts in process constructs.</li>
 </ul>
 
 <p>Before migrating, decide whether you additionally want to enable Spin/Connect and Freemarker. Based on this decision, you may have to carry out additional migration steps.</p>
@@ -8195,7 +8195,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>The first step consists in updating the database.</p>
 
 <ol>
-<li><p>Check for <a href="/camunda-cn/update/patch-level/#database-patches">available database patch scripts</a> for your database that are within the bounds of your update path.
+<li><p>Check for <a href="http://shaochenfeng.com/camunda-cn/update/patch-level/#database-patches">available database patch scripts</a> for your database that are within the bounds of your update path.
 Locate the scripts at <code>$DISTRIBUTION_PATH/sql/upgrade</code> in the pre-packaged distribution or in the <a href="https://app.camunda.com/nexus/service/rest/repository/browse/public/org/camunda/bpm/distro/camunda-sql-scripts/">Camunda Nexus</a>.
 We highly recommend to execute these patches before updating. Execute them in ascending order by version number.
 The naming pattern is <code>$DATABASENAME_engine_7.1_patch_?.sql</code>.</p></li>
@@ -8214,7 +8214,7 @@ The naming pattern is <code>$DATABASENAME_engine_7.1_patch_?.sql</code>.</p></li
 
 <h1 id="full-distribution">Full Distribution</h1>
 
-<p>This section is applicable if you installed the <a href="/camunda-cn/introduction/downloading-camunda/#full-distribution">Full Distribution</a> with a <strong>shared process engine</strong>.</p>
+<p>This section is applicable if you installed the <a href="http://shaochenfeng.com/camunda-cn/introduction/downloading-camunda/#full-distribution">Full Distribution</a> with a <strong>shared process engine</strong>.</p>
 
 <p>The following steps are required:</p>
 
@@ -8230,11 +8230,11 @@ The naming pattern is <code>$DATABASENAME_engine_7.1_patch_?.sql</code>.</p></li
 <p>Please choose the application server you are working with from the following list:</p>
 
 <ul>
-<li><a href="/camunda-cn/update/minor/71-to-72/tomcat/">Apache Tomcat</a></li>
-<li><a href="/camunda-cn/update/minor/71-to-72/jboss/">JBoss/Wildfly</a></li>
-<li><a href="/camunda-cn/update/minor/71-to-72/glassfish/">Glassfish</a></li>
-<li><a href="/camunda-cn/update/minor/71-to-72/was/">IBM WebSphere</a></li>
-<li><a href="/camunda-cn/update/minor/71-to-72/wls/">Oracle WebLogic</a></li>
+<li><a href="http://shaochenfeng.com/camunda-cn/update/minor/71-to-72/tomcat/">Apache Tomcat</a></li>
+<li><a href="http://shaochenfeng.com/camunda-cn/update/minor/71-to-72/jboss/">JBoss/Wildfly</a></li>
+<li><a href="http://shaochenfeng.com/camunda-cn/update/minor/71-to-72/glassfish/">Glassfish</a></li>
+<li><a href="http://shaochenfeng.com/camunda-cn/update/minor/71-to-72/was/">IBM WebSphere</a></li>
+<li><a href="http://shaochenfeng.com/camunda-cn/update/minor/71-to-72/wls/">Oracle WebLogic</a></li>
 </ul>
 
 <h2 id="custom-process-applications">Custom Process Applications</h2>
@@ -8285,7 +8285,7 @@ The naming pattern is <code>$DATABASENAME_engine_7.1_patch_?.sql</code>.</p></li
 <p>Embedded form support has been redesigned in Camunda Platform 7.2 and existing forms must be migrated.</p>
 
 <blockquote>
-<p>Documentation on embedded forms support in 7.2 can be found in the <a href="/camunda-cn/reference/forms/embedded-forms/">Embedded Forms Reference</a></p>
+<p>Documentation on embedded forms support in 7.2 can be found in the <a href="http://shaochenfeng.com/camunda-cn/reference/forms/embedded-forms/">Embedded Forms Reference</a></p>
 </blockquote>
 
 <h2 id="overview">Overview</h2>
@@ -8698,7 +8698,7 @@ $http.post(Uri.appUri('plugin://base/:engine/incident/count'), params).then(func
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="http://shaochenfeng.com/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
             Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2021
           </p>
@@ -8713,7 +8713,7 @@ $http.post(Uri.appUri('plugin://base/:engine/incident/count'), params).then(func
 
   
 
-  <script type="text/javascript" src="/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
+  <script type="text/javascript" src="http://shaochenfeng.com/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

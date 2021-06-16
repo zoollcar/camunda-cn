@@ -29,11 +29,11 @@
   <title>External Tasks | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="/camunda-cn/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="http://shaochenfeng.com/camunda-cn/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
+  <link rel="stylesheet" href="http://shaochenfeng.com/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
 </head>
 <body class="">
 
@@ -45,8 +45,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="/camunda-cn/">
-      <img src="/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="http://shaochenfeng.com/camunda-cn/">
+      <img src="http://shaochenfeng.com/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">Docs</span>
       </a>
@@ -8113,7 +8113,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="/camunda-cn/">
+    <select id="version-select" data-basepath="/manual" base-url="http://shaochenfeng.com/camunda-cn/">
       
         <option  selected >develop</option>
       
@@ -8168,7 +8168,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <li>External tasks: Providing a unit of work in a list that can be polled by workers</li>
 </ol>
 
-<p>The first option is used when code is implemented as <a href="/camunda-cn/user-guide/process-engine/delegation-code/">Delegation Code</a> or as a <a href="/camunda-cn/user-guide/process-engine/scripting/">Script</a>. By contrast, external (service) tasks work in a way that the process engine publishes a unit of work to a worker to fetch and complete. We refer to this as the <em>external task pattern</em>.</p>
+<p>The first option is used when code is implemented as <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/delegation-code/">Delegation Code</a> or as a <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/scripting/">Script</a>. By contrast, external (service) tasks work in a way that the process engine publishes a unit of work to a worker to fetch and complete. We refer to this as the <em>external task pattern</em>.</p>
 
 <p>Note that the above distinction does not say whether the actual &ldquo;business logic&rdquo; is implemented locally or as a remote service. The Java Delegate invoked by an internal service task may either implement the business logic itself or it may call out to a web/rest service, send a message to another system and so forth. The same is true for an external worker. The worker can implement the business logic directly or again delegate to a remote system.</p>
 
@@ -8225,19 +8225,19 @@ User tasks are created by the process engine and added to a task list. The proce
   camunda:topic=&quot;AddressValidation&quot; /&gt;
 </code></pre>
 
-<p>It is possible to define the topic name by using an <a href="/camunda-cn/user-guide/process-engine/expression-language/">expression</a> instead of a constant value.</p>
+<p>It is possible to define the topic name by using an <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/expression-language/">expression</a> instead of a constant value.</p>
 
-<p>In addition, other <em>service-task-like</em> elements such as send tasks, business rule tasks, and throwing message events can be implemented with the external task pattern. See the <a href="/camunda-cn/reference/bpmn20/">BPMN 2.0 implementation reference</a> for details.</p>
+<p>In addition, other <em>service-task-like</em> elements such as send tasks, business rule tasks, and throwing message events can be implemented with the external task pattern. See the <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/">BPMN 2.0 implementation reference</a> for details.</p>
 
 <h3 id="error-event-definitions">Error Event Definitions</h3>
 
-<p>External tasks allow for the definition of error events that throw a specified BPMN error. This can be done by adding a <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#erroreventdefinition">camunda:errorEventDefinition</a> extension element to the task&rsquo;s definition. Compared to the <code>bpmn:errorEventDefinition</code>, the <code>camunda:errorEventDefinition</code> elements accept an additional <code>expression</code> attribute which supports any JUEL expression. Within the expression, you have access to the <a href="/camunda-cn/reference/javadoc/?org/camunda/bpm/engine/externaltask/ExternalTask.html">ExternalTaskEntity</a>
+<p>External tasks allow for the definition of error events that throw a specified BPMN error. This can be done by adding a <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#erroreventdefinition">camunda:errorEventDefinition</a> extension element to the task&rsquo;s definition. Compared to the <code>bpmn:errorEventDefinition</code>, the <code>camunda:errorEventDefinition</code> elements accept an additional <code>expression</code> attribute which supports any JUEL expression. Within the expression, you have access to the <a href="http://shaochenfeng.com/camunda-cn/reference/javadoc/?org/camunda/bpm/engine/externaltask/ExternalTask.html">ExternalTaskEntity</a>
  object via the key <code>externalTask</code> which provides getter methods
 for <code>errorMessage</code>, <code>errorDetails</code>, <code>workerId</code>, <code>retries</code> and more.</p>
 
 <p>The expression is evaluated on invocations of <code>ExternalTaskService#complete</code> and
 <code>ExternalTaskService#handleFailure</code>. If the expression evaluates to <code>true</code>, the actual method execution is canceled and replaced by throwing the respective BPMN error. This error can be caught by an
-<a href="/camunda-cn/reference/bpmn20/events/error-events/#error-boundary-event">Error Boundary Event</a>. This implies that the error event definition can be used in success and failure scenarios alike - even if the task was completed successfully, you can still decide to throw a BPMN error.</p>
+<a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/events/error-events/#error-boundary-event">Error Boundary Event</a>. This implies that the error event definition can be used in success and failure scenarios alike - even if the task was completed successfully, you can still decide to throw a BPMN error.</p>
 
 <pre><code class="language-xml">&lt;serviceTask id=&quot;validateAddressTask&quot;
   name=&quot;Validate Address&quot;
@@ -8251,11 +8251,11 @@ for <code>errorMessage</code>, <code>errorDetails</code>, <code>workerId</code>,
 &lt;/serviceTask&gt;
 </code></pre>
 
-<p>Further information on the functionality of error event definitions on external tasks can be found in the <a href="/camunda-cn/user-guide/process-engine/expression-language/#external-task-error-handling">expression language user guide</a>. The specific use in external tasks for RPA orchestration scenarios is described in the <a href="/camunda-cn/user-guide/camunda-bpm-rpa-bridge/#error-handling">Camunda Platform RPA Bridge</a>.</p>
+<p>Further information on the functionality of error event definitions on external tasks can be found in the <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/expression-language/#external-task-error-handling">expression language user guide</a>. The specific use in external tasks for RPA orchestration scenarios is described in the <a href="http://shaochenfeng.com/camunda-cn/user-guide/camunda-bpm-rpa-bridge/#error-handling">Camunda Platform RPA Bridge</a>.</p>
 
 <h2 id="rest-api">Rest API</h2>
 
-<p>See the <a href="/camunda-cn/reference/rest/external-task/">REST API documentation</a> for how the API operations can be accessed via HTTP.</p>
+<p>See the <a href="http://shaochenfeng.com/camunda-cn/reference/rest/external-task/">REST API documentation</a> for how the API operations can be accessed via HTTP.</p>
 
 <h3 id="long-polling-to-fetch-and-lock-external-tasks">Long Polling to Fetch and Lock External Tasks</h3>
 
@@ -8277,7 +8277,7 @@ configurable period of time (timeout).</p>
 <p>Long polling significantly reduces the number of requests and enables using resources more efficiently on both
 the server and the client side.</p>
 
-<p>Please also see the <a href="/camunda-cn/reference/rest/external-task/fetch/">REST API documentation</a>.</p>
+<p>Please also see the <a href="http://shaochenfeng.com/camunda-cn/reference/rest/external-task/fetch/">REST API documentation</a>.</p>
 
 
 <div class="note bg-info docs-info">
@@ -8380,7 +8380,7 @@ for (LockedExternalTask task : tasks) {
 }
 </code></pre>
 
-<p>The resulting tasks then contain the current values of the requested variable. Note that the variable values are the values that are visible in the scope hierarchy from the external task&rsquo;s execution. See the chapter on <a href="/camunda-cn/user-guide/process-engine/variables/#variable-scopes-and-variable-visibility">Variable Scopes and Variable Visibility</a> for details.</p>
+<p>The resulting tasks then contain the current values of the requested variable. Note that the variable values are the values that are visible in the scope hierarchy from the external task&rsquo;s execution. See the chapter on <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/variables/#variable-scopes-and-variable-visibility">Variable Scopes and Variable Visibility</a> for details.</p>
 
 <p>In order to fetch all variables, call to <code>variables()</code> method should be omitted</p>
 
@@ -8417,7 +8417,7 @@ for (LockedExternalTask task : tasks) {
 <h3 id="external-task-prioritization">External Task Prioritization</h3>
 
 <p>External task prioritization is similar to job prioritization. The same problem exists with starvation which should be considered.
-For further details, see the section on <a href="/camunda-cn/user-guide/process-engine/the-job-executor/#the-job-priority">Job Prioritization</a>.</p>
+For further details, see the section on <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/the-job-executor/#the-job-priority">Job Prioritization</a>.</p>
 
 <h3 id="configure-the-process-engine-for-external-task-priorities">Configure the Process Engine for External Task Priorities</h3>
 
@@ -8435,7 +8435,7 @@ For details on how to specify external task priorities and how the process engin
 
 <p>External task priorities can be assigned at the process or the activity level. To achieve this, the Camunda extension attribute <code>camunda:taskPriority</code> can be used.</p>
 
-<p>For specifying the priority, both constant values and <a href="/camunda-cn/user-guide/process-engine/expression-language/">expressions</a> are supported.
+<p>For specifying the priority, both constant values and <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/expression-language/">expressions</a> are supported.
 When using a constant value, the same priority is assigned to all instances of the process or activity.
 Expressions, on the other hand, allow assigning a different priority to each instance of the process or activity. Expression must evaluate to a number in the Java <code>long</code> range.
 The concrete value can be the result of a complex calculation and be based on user-provided data (resulting from a task form or other sources).</p>
@@ -8514,7 +8514,7 @@ for (LockedExternalTask task : tasks) {
 
 <div class="note bg-info docs-info">
   <h3>Error Events</h3>
-  <p>External tasks can include <a href="/camunda-cn/user-guide/process-engine/external-tasks/#error-event-definitions">error event definitions</a> that can cancel the execution of <code>#complete</code> in case the error event&rsquo;s expression evaluates to <code>true</code>. In case an error event&rsquo;s expression evaluation raises an exception, the call to <code>#complete</code> will fail with that same exception.</p>
+  <p>External tasks can include <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/external-tasks/#error-event-definitions">error event definitions</a> that can cancel the execution of <code>#complete</code> in case the error event&rsquo;s expression evaluates to <code>true</code>. In case an error event&rsquo;s expression evaluation raises an exception, the call to <code>#complete</code> will fail with that same exception.</p>
 </div>
 
 
@@ -8556,13 +8556,13 @@ externalTaskService.getExternalTaskErrorDetails(task.getId());
 
 <div class="note bg-info docs-info">
   <h3>Error Events</h3>
-  <p>External tasks can include <a href="/camunda-cn/user-guide/process-engine/external-tasks/#error-event-definitions">error event definitions</a> that can cancel the execution of <code>#handleFailure</code> in case the error event&rsquo;s expression evaluates to <code>true</code>. In case an error event&rsquo;s expression evaluation raises an exception, this expression will be considered as evaluating to <code>false</code>.</p>
+  <p>External tasks can include <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/external-tasks/#error-event-definitions">error event definitions</a> that can cancel the execution of <code>#handleFailure</code> in case the error event&rsquo;s expression evaluates to <code>true</code>. In case an error event&rsquo;s expression evaluation raises an exception, this expression will be considered as evaluating to <code>false</code>.</p>
 </div>
 
 
 <h3 id="reporting-bpmn-error">Reporting BPMN Error</h3>
 
-<p>See the documentation for <a href="/camunda-cn/reference/bpmn20/events/error-events/#error-boundary-event">Error Boundary Events</a>.</p>
+<p>See the documentation for <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/events/error-events/#error-boundary-event">Error Boundary Events</a>.</p>
 
 <p>For some reason a business error can appear during execution. In this case, the worker can report a BPMN error to the process engine by using <code>ExternalTaskService#handleBpmnError</code>.
 Like <code>#complete</code> or <code>#handleFailure</code>, it can only be invoked by the worker possessing the most recent lock for a task.
@@ -8661,7 +8661,7 @@ be set to a higher value for more important or to a lower value for less importa
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="http://shaochenfeng.com/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
             Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2021
           </p>
@@ -8676,7 +8676,7 @@ be set to a higher value for more important or to a lower value for less importa
 
   
 
-  <script type="text/javascript" src="/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
+  <script type="text/javascript" src="http://shaochenfeng.com/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

@@ -29,11 +29,11 @@
   <title>Scripting | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="/camunda-cn/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="http://shaochenfeng.com/camunda-cn/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
+  <link rel="stylesheet" href="http://shaochenfeng.com/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
 </head>
 <body class="">
 
@@ -45,8 +45,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="/camunda-cn/">
-      <img src="/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="http://shaochenfeng.com/camunda-cn/">
+      <img src="http://shaochenfeng.com/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">Docs</span>
       </a>
@@ -8113,7 +8113,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="/camunda-cn/">
+    <select id="version-select" data-basepath="/manual" base-url="http://shaochenfeng.com/camunda-cn/">
       
         <option  selected >develop</option>
       
@@ -8224,7 +8224,7 @@ scripts.</p>
 <h1 id="use-script-tasks">Use Script Tasks</h1>
 
 <p>With a BPMN 2.0 script task you can add a script to your BPM process (for more information see the
-<a href="/camunda-cn/reference/bpmn20/tasks/script-task/">BPMN 2.0 reference</a>.</p>
+<a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/tasks/script-task/">BPMN 2.0 reference</a>.</p>
 
 <p>The following process is a simple example with a Groovy script task that sums up the elements of an array.</p>
 
@@ -8264,7 +8264,7 @@ runtimeService.startProcessInstanceByKey(&quot;process&quot;, variables);
 
 <p>Besides Java code and expression language, Camunda Platform also supports the execution of a script
 as an execution listener. For general information about execution listeners see the corresponding
-<a href="/camunda-cn/user-guide/process-engine/delegation-code/#execution-listener">section</a>.</p>
+<a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/delegation-code/#execution-listener">section</a>.</p>
 
 <p>To use a script as an execution listener, a <code>camunda:script</code> element has to be added as a child
 element of the <code>camunda:executionListener</code> element. During script evaluation, the variable <code>execution</code> is
@@ -8308,7 +8308,7 @@ available, which corresponds to the <code>DelegateExecution</code> interface.</p
 
 <p>Similar to execution listeners, task listeners can also be implemented as scripts. For general
 information about task listeners see the corresponding
-<a href="/camunda-cn/user-guide/process-engine/delegation-code/#task-listener">section</a>.</p>
+<a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/delegation-code/#task-listener">section</a>.</p>
 
 <p>To use a script as a task listener, a <code>camunda:script</code> element has to be added as a child element of
 the <code>camunda:taskListener</code> element. Inside the script, the variable <code>task</code> is available, which corresponds to
@@ -8428,7 +8428,7 @@ for <a href="#script-source">script tasks</a>.</p>
 
 <p>Whenever the process engine reaches a point where a script has to be executed, the process engine looks for a Script Engine by a language name. The default behavior is that if it is the first request, a new Script Engine is created. If the Script Engine declares to be thread safe, it is also cached. The caching prevents the process engine from creating a new Script Engine for each request for the same script language.</p>
 
-<p>By default the caching of Script Engines happens at process application level. Each process application holds an own instance of a Script Engine for a given language. This behavior can be disabled by setting the process engine configuration flag named <code>enableFetchScriptEngineFromProcessApplication</code> to false. Consequently, the Script Engines are cached globally at process engine level and they are shared between each process application. For further details about the process engine configuration flag <code>enableFetchScriptEngineFromProcessApplication</code>, please read the section about <a href="/camunda-cn/user-guide/process-engine/scripting/#reference-process-application-provided-classes">referencing process application classes</a>.</p>
+<p>By default the caching of Script Engines happens at process application level. Each process application holds an own instance of a Script Engine for a given language. This behavior can be disabled by setting the process engine configuration flag named <code>enableFetchScriptEngineFromProcessApplication</code> to false. Consequently, the Script Engines are cached globally at process engine level and they are shared between each process application. For further details about the process engine configuration flag <code>enableFetchScriptEngineFromProcessApplication</code>, please read the section about <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/scripting/#reference-process-application-provided-classes">referencing process application classes</a>.</p>
 
 <p>If it is not desired to cache Script Engines in general, it can be disabled by setting the process engine configuration flag name <code>enableScriptEngineCaching</code> to false.</p>
 
@@ -8607,8 +8607,8 @@ script task.</p>
 </code></pre>
 
 <p>For more information, see the
-<a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#resource">camunda:resource</a>
-section of the <a href="/camunda-cn/reference/bpmn20/custom-extensions/">Custom Extensions</a> chapter.</p>
+<a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#resource">camunda:resource</a>
+section of the <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/">Custom Extensions</a> chapter.</p>
 
     </div>
   </div>
@@ -8647,7 +8647,7 @@ section of the <a href="/camunda-cn/reference/bpmn20/custom-extensions/">Custom 
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="http://shaochenfeng.com/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
             Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2021
           </p>
@@ -8662,7 +8662,7 @@ section of the <a href="/camunda-cn/reference/bpmn20/custom-extensions/">Custom 
 
   
 
-  <script type="text/javascript" src="/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
+  <script type="text/javascript" src="http://shaochenfeng.com/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

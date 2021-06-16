@@ -29,11 +29,11 @@
   <title>Process Application Event Listeners | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="/camunda-cn/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="http://shaochenfeng.com/camunda-cn/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
+  <link rel="stylesheet" href="http://shaochenfeng.com/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
 </head>
 <body class="">
 
@@ -45,8 +45,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="/camunda-cn/">
-      <img src="/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="http://shaochenfeng.com/camunda-cn/">
+      <img src="http://shaochenfeng.com/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">Docs</span>
       </a>
@@ -8113,7 +8113,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="/camunda-cn/">
+    <select id="version-select" data-basepath="/manual" base-url="http://shaochenfeng.com/camunda-cn/">
       
         <option  selected >develop</option>
       
@@ -8159,10 +8159,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <div class="col-xs-12 content-text">
-      <p>The process engine supports defining two types of event listeners: <a href="/camunda-cn/user-guide/process-engine/delegation-code/#execution-listener">Task Event Listeners and Execution Event Listeners</a>.
+      <p>The process engine supports defining two types of event listeners: <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/delegation-code/#execution-listener">Task Event Listeners and Execution Event Listeners</a>.
 Task Event listeners allow to react to Task Events (Tasks are Created, Assigned, Completed). Execution Listeners allow to react to events fired as execution progresses through the diagram: Activities are Started, Ended and Transitions are being taken.</p>
 
-<p>When using the process application API, the process engine makes sure that Events are delegated to the right process application. For example, assume there is a process application deployed as &ldquo;invoice.war&rdquo; which deploys a process definition named &ldquo;invoice&rdquo;. The invoice process has a task named &ldquo;archive invoice&rdquo;. The application &ldquo;invoice.war&rdquo; further provides a Java Class implementing the <a href="/camunda-cn/user-guide/process-engine/delegation-code/#execution-listener">ExecutionListener</a> interface and is configured to be invoked whenever the END event is fired on the &ldquo;archive invoice&rdquo; activity. The process engine makes sure that the event is delegated to the listener class located inside the process application:</p>
+<p>When using the process application API, the process engine makes sure that Events are delegated to the right process application. For example, assume there is a process application deployed as &ldquo;invoice.war&rdquo; which deploys a process definition named &ldquo;invoice&rdquo;. The invoice process has a task named &ldquo;archive invoice&rdquo;. The application &ldquo;invoice.war&rdquo; further provides a Java Class implementing the <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/delegation-code/#execution-listener">ExecutionListener</a> interface and is configured to be invoked whenever the END event is fired on the &ldquo;archive invoice&rdquo; activity. The process engine makes sure that the event is delegated to the listener class located inside the process application:</p>
 
 <figure class="image">
   <span><img
@@ -8173,7 +8173,7 @@ Task Event listeners allow to react to Task Events (Tasks are Created, Assigned,
 </figure>
 
 
-<p>On top of the Execution and Task Listeners which are <a href="/camunda-cn/user-guide/process-engine/delegation-code/#execution-listener">explicitly configured in the BPMN 2.0 XML</a>, the process application API supports defining a global ExecutionListener and a global TaskListener which are notified about <em>all events</em> happening in the processes deployed by a process application:</p>
+<p>On top of the Execution and Task Listeners which are <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/delegation-code/#execution-listener">explicitly configured in the BPMN 2.0 XML</a>, the process application API supports defining a global ExecutionListener and a global TaskListener which are notified about <em>all events</em> happening in the processes deployed by a process application:</p>
 
 <pre><code>@ProcessApplication
 public class InvoiceProcessApplication extends ServletProcessApplication {
@@ -8196,7 +8196,7 @@ public class InvoiceProcessApplication extends ServletProcessApplication {
 }
 </code></pre>
 
-<p>To use the global process application Event Listeners, you need to activate the corresponding <a href="/camunda-cn/user-guide/process-engine/process-engine-plugins/">Process Engine Plugin</a>:</p>
+<p>To use the global process application Event Listeners, you need to activate the corresponding <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/process-engine-plugins/">Process Engine Plugin</a>:</p>
 
 <pre><code>&lt;process-engine name=&quot;default&quot;&gt;
   ...
@@ -8210,7 +8210,7 @@ public class InvoiceProcessApplication extends ServletProcessApplication {
 
 <p>Note that the plugin is activated by default in the pre-packaged Camunda Platform distributions.</p>
 
-<p>The process application Event Listener interface is also a good place for adding the CdiEventListener bridge if you want to <a href="/camunda-cn/user-guide/cdi-java-ee-integration/the-cdi-event-bridge/">use CDI Events in combination with the shared process engine</a>.</p>
+<p>The process application Event Listener interface is also a good place for adding the CdiEventListener bridge if you want to <a href="http://shaochenfeng.com/camunda-cn/user-guide/cdi-java-ee-integration/the-cdi-event-bridge/">use CDI Events in combination with the shared process engine</a>.</p>
 
     </div>
   </div>
@@ -8233,7 +8233,7 @@ public class InvoiceProcessApplication extends ServletProcessApplication {
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="http://shaochenfeng.com/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
             Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2021
           </p>
@@ -8248,7 +8248,7 @@ public class InvoiceProcessApplication extends ServletProcessApplication {
 
   
 
-  <script type="text/javascript" src="/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
+  <script type="text/javascript" src="http://shaochenfeng.com/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

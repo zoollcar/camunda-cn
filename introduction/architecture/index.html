@@ -29,11 +29,11 @@
   <title>Architecture Overview | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="/camunda-cn/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="http://shaochenfeng.com/camunda-cn/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
+  <link rel="stylesheet" href="http://shaochenfeng.com/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
 </head>
 <body class="">
 
@@ -45,8 +45,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="/camunda-cn/">
-      <img src="/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="http://shaochenfeng.com/camunda-cn/">
+      <img src="http://shaochenfeng.com/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">Docs</span>
       </a>
@@ -8113,7 +8113,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="/camunda-cn/">
+    <select id="version-select" data-basepath="/manual" base-url="http://shaochenfeng.com/camunda-cn/">
       
         <option  selected >develop</option>
       
@@ -8163,7 +8163,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <p>Camunda Platform is a Java-based framework. The main components are written in Java and we have a general focus on providing Java developers with the tools they need for designing, implementing and running business processes and workflows on the JVM. Nevertheless, we also want to make the process engine technology available to non-Java developers. This is why Camunda Platform also provides a REST API which allows you to build applications connecting to a remote process engine.</p>
 
-<p>Camunda Platform can be used both as a standalone process engine server or embedded inside custom Java applications. The embeddability requirement is at the heart of many architectural decisions within Camunda Platform. For instance, we work hard to make the process engine component a lightweight component with as little dependencies on <a href="/camunda-cn/introduction/third-party-libraries/">third-party libraries</a> as possible. Furthermore, the embeddability motivates programming model choices such as the capabilities of the process engine to participate in Spring Managed or JTA <a href="/camunda-cn/user-guide/process-engine/transactions-in-processes/">transactions and the threading model</a>.</p>
+<p>Camunda Platform can be used both as a standalone process engine server or embedded inside custom Java applications. The embeddability requirement is at the heart of many architectural decisions within Camunda Platform. For instance, we work hard to make the process engine component a lightweight component with as little dependencies on <a href="http://shaochenfeng.com/camunda-cn/introduction/third-party-libraries/">third-party libraries</a> as possible. Furthermore, the embeddability motivates programming model choices such as the capabilities of the process engine to participate in Spring Managed or JTA <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/transactions-in-processes/">transactions and the threading model</a>.</p>
 
 <h1 id="process-engine-architecture">Process Engine Architecture</h1>
 
@@ -8177,15 +8177,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 <ul>
-<li><a href="/camunda-cn/user-guide/process-engine/process-engine-api/">Process Engine Public API</a>: Service-oriented API allowing Java applications to interact with the process engine. The different responsibilities of the process engine (i.e., Process Repository, Runtime Process Interaction, Task Management, &hellip;) are separated into individual services. The public API features a <a href="http://en.wikipedia.org/wiki/Command_pattern">command-style access pattern</a>: Threads entering the process engine are routed through a Command Interceptor which is used for setting up Thread Context such as Transactions.</li>
+<li><a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/process-engine-api/">Process Engine Public API</a>: Service-oriented API allowing Java applications to interact with the process engine. The different responsibilities of the process engine (i.e., Process Repository, Runtime Process Interaction, Task Management, &hellip;) are separated into individual services. The public API features a <a href="http://en.wikipedia.org/wiki/Command_pattern">command-style access pattern</a>: Threads entering the process engine are routed through a Command Interceptor which is used for setting up Thread Context such as Transactions.</li>
 <li><strong>BPMN 2.0 Core Engine</strong>: This is the core of the process engine. It features a lightweight execution engine for graph structures (PVM - Process Virtual Machine), a BPMN 2.0 parser which transforms BPMN 2.0 XML files into Java Objects and a set of BPMN Behavior implementations (providing the implementation for BPMN 2.0 constructs such as Gateways or Service Tasks).</li>
-<li><a href="/camunda-cn/user-guide/process-engine/the-job-executor/">Job Executor</a>: The Job Executor is responsible for processing asynchronous background work such as Timers or asynchronous continuations in a process.</li>
+<li><a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/the-job-executor/">Job Executor</a>: The Job Executor is responsible for processing asynchronous background work such as Timers or asynchronous continuations in a process.</li>
 <li><strong>The Persistence Layer</strong>: The process engine features a persistence layer responsible for persisting process instance state to a relational database. We use the MyBatis mapping engine for object relational mapping.</li>
 </ul>
 
 <h2 id="required-third-party-libraries">Required Third-Party Libraries</h2>
 
-<p>See the section on <a href="/camunda-cn/introduction/third-party-libraries/">third-party libraries</a>.</p>
+<p>See the section on <a href="http://shaochenfeng.com/camunda-cn/introduction/third-party-libraries/">third-party libraries</a>.</p>
 
 <h1 id="camunda-platform-architecture">Camunda Platform Architecture</h1>
 
@@ -8260,12 +8260,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <h2 id="the-job-executor-in-a-clustered-environment">The Job Executor in a Clustered Environment</h2>
 
-<p>The process engine <a href="/camunda-cn/user-guide/process-engine/the-job-executor/">job executor</a> is also clustered and runs on each node. This way, there is no single point of failure as far as the process engine is concerned. The job executor can run in both <a href="/camunda-cn/user-guide/process-engine/the-job-executor/#cluster-setups">homogeneous and heterogeneous clusters</a>.</p>
+<p>The process engine <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/the-job-executor/">job executor</a> is also clustered and runs on each node. This way, there is no single point of failure as far as the process engine is concerned. The job executor can run in both <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/the-job-executor/#cluster-setups">homogeneous and heterogeneous clusters</a>.</p>
 
 
 <div class="note bg-info docs-info">
   <h3>Time zones</h3>
-  <p>The are some limitations on <a href="/camunda-cn/user-guide/process-engine/time-zones/#cluster-setup">time zone usage in a cluster</a>.</p>
+  <p>The are some limitations on <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/time-zones/#cluster-setup">time zone usage in a cluster</a>.</p>
 </div>
 
 
@@ -8281,7 +8281,7 @@ multi-tenancy. The following multi tenancy models are supported:</p>
 
 <p>Users should choose the model which fits their data separation needs. Camunda&rsquo;s APIs provide access
 to processes and related data specific to each tenant.
-More details can be found in the <a href="/camunda-cn/user-guide/process-engine/multi-tenancy/">multi-tenancy section</a>.</p>
+More details can be found in the <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/multi-tenancy/">multi-tenancy section</a>.</p>
 
 <h1 id="web-application-architecture">Web Application Architecture</h1>
 
@@ -8346,7 +8346,7 @@ More details can be found in the <a href="/camunda-cn/user-guide/process-engine/
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="http://shaochenfeng.com/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
             Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2021
           </p>
@@ -8361,7 +8361,7 @@ More details can be found in the <a href="/camunda-cn/user-guide/process-engine/
 
   
 
-  <script type="text/javascript" src="/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
+  <script type="text/javascript" src="http://shaochenfeng.com/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

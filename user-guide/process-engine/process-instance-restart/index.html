@@ -29,11 +29,11 @@
   <title>Process Instance Restart | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="/camunda-cn/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="http://shaochenfeng.com/camunda-cn/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
+  <link rel="stylesheet" href="http://shaochenfeng.com/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
 </head>
 <body class="">
 
@@ -45,8 +45,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="/camunda-cn/">
-      <img src="/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="http://shaochenfeng.com/camunda-cn/">
+      <img src="http://shaochenfeng.com/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">Docs</span>
       </a>
@@ -8113,7 +8113,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="/camunda-cn/">
+    <select id="version-select" data-basepath="/manual" base-url="http://shaochenfeng.com/camunda-cn/">
       
         <option  selected >develop</option>
       
@@ -8171,7 +8171,7 @@ This can, for example, be useful when termination did not proceed in a desired w
 
 <p>To perform such an operation the process engine offers <em>the process instance restart API</em>, that is entered via <code>RuntimeService.restartProcessInstances(...)</code>. This API allows to specify multiple instantiation instructions in one call by using a fluent builder.</p>
 
-<p>Note that these operations are also available via REST: <a href="/camunda-cn/reference/rest/process-definition/post-restart-process-instance-sync/">Restart Process Instance</a> and <a href="/camunda-cn/reference/rest/process-definition/post-restart-process-instance-async/">Restart Process Instance (async)</a></p>
+<p>Note that these operations are also available via REST: <a href="http://shaochenfeng.com/camunda-cn/reference/rest/process-definition/post-restart-process-instance-sync/">Restart Process Instance</a> and <a href="http://shaochenfeng.com/camunda-cn/reference/rest/process-definition/post-restart-process-instance-async/">Restart Process Instance (async)</a></p>
 
 <h1 id="process-instance-restart-by-example">Process Instance Restart by Example</h1>
 
@@ -8230,7 +8230,7 @@ Local variables can be set manually, for example by calling <code>RuntimeService
 </ul>
 
 <p>For information about the instruction types, please refer to the similar
- <a href="/camunda-cn/user-guide/process-engine/process-instance-modification/#modification-instruction-types">modification instruction types</a> section.</p>
+ <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/process-instance-modification/#modification-instruction-types">modification instruction types</a> section.</p>
 
 <h2 id="selecting-process-instances-to-restart">Selecting process instances to restart</h2>
 
@@ -8335,7 +8335,7 @@ runtimeService.restartProcessInstances(processDefinition.getId())
 <h2 id="execution">Execution</h2>
 
 <p>The restart can either be executed synchronously (blocking) or asynchronously
-(non-blocking) by using a <a href="/camunda-cn/user-guide/process-engine/batch/">batch</a> .</p>
+(non-blocking) by using a <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/batch/">batch</a> .</p>
 
 <p>The following are some reasons to prefer either one or the other:</p>
 
@@ -8392,7 +8392,7 @@ Batch batch = runtimeService.restartProcessInstances(processDefinition.getId())
 
 <p>Using a batch, the process instance restart is split into several jobs which
 are executed asynchronously. These batch jobs are executed by the job executor.
-See the <a href="/camunda-cn/user-guide/process-engine/batch/">batch</a> section for more
+See the <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/batch/">batch</a> section for more
 information. A batch is completed if all batch execution jobs are successfully
 completed. However, in contrast to the synchronous execution, it is not guaranteed
 that either all or no process instances are restarted. As the restart is split into
@@ -8446,7 +8446,7 @@ does not affect the batch beyond that.</p>
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="http://shaochenfeng.com/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
             Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2021
           </p>
@@ -8461,7 +8461,7 @@ does not affect the batch beyond that.</p>
 
   
 
-  <script type="text/javascript" src="/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
+  <script type="text/javascript" src="http://shaochenfeng.com/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

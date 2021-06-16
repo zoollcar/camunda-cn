@@ -29,11 +29,11 @@
   <title>Expression Language | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="/camunda-cn/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="http://shaochenfeng.com/camunda-cn/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
+  <link rel="stylesheet" href="http://shaochenfeng.com/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
 </head>
 <body class="">
 
@@ -45,8 +45,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="/camunda-cn/">
-      <img src="/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="http://shaochenfeng.com/camunda-cn/">
+      <img src="http://shaochenfeng.com/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">Docs</span>
       </a>
@@ -8113,7 +8113,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="/camunda-cn/">
+    <select id="version-select" data-basepath="/manual" base-url="http://shaochenfeng.com/camunda-cn/">
       
         <option  selected >develop</option>
       
@@ -8211,7 +8211,7 @@ usage of EL.</p>
   </tr>
   <tr>
     <td>
-      <a href="/camunda-cn/user-guide/process-engine/the-job-executor/#specifying-priorities-in-bpmn-xml">
+      <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/the-job-executor/#specifying-priorities-in-bpmn-xml">
         All Flow Nodes, Process Definition
       </a>
     </td>
@@ -8225,14 +8225,14 @@ usage of EL.</p>
 
 <p>Besides Java code, Camunda Platform also supports the evaluation of expressions as delegation code. For
 general information about delegation code, see the corresponding
-<a href="/camunda-cn/user-guide/process-engine/delegation-code/">section</a>.</p>
+<a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/delegation-code/">section</a>.</p>
 
 <p>Two types of expressions are currently supported: <code>camunda:expression</code> and
 <code>camunda:delegateExpression</code>.</p>
 
 <p>With <code>camunda:expression</code> it is possible to evaluate a value expression or to invoke
 a method expression. You can use special variables which are available inside an expression or
-Spring and CDI beans. For more information about <a href="#availability-of-variables-and-functions-inside-expression-language">variables</a> and <a href="/camunda-cn/user-guide/spring-framework-integration/#expression-resolving">Spring</a>, respectively <a href="/camunda-cn/user-guide/cdi-java-ee-integration/expression-resolving/">CDI</a> beans,
+Spring and CDI beans. For more information about <a href="#availability-of-variables-and-functions-inside-expression-language">variables</a> and <a href="http://shaochenfeng.com/camunda-cn/user-guide/spring-framework-integration/#expression-resolving">Spring</a>, respectively <a href="http://shaochenfeng.com/camunda-cn/user-guide/cdi-java-ee-integration/expression-resolving/">CDI</a> beans,
 please see the corresponding sections.</p>
 
 <pre><code class="language-xml">  &lt;process id=&quot;process&quot;&gt;
@@ -8325,12 +8325,12 @@ a bean.</p>
 <h2 id="external-task-error-handling">External Task Error Handling</h2>
 
 <p>For External Tasks it is possible to define
-<a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#erroreventdefinition">camunda:errorEventDefinition</a>
+<a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#erroreventdefinition">camunda:errorEventDefinition</a>
 elements which can be provided with a JUEL expression. The expression is evaluated on <code>ExternalTaskService#complete</code> and
 <code>ExternalTaskService#handleFailure</code>. If the expression evaluates to <code>true</code>, a BPMN error is thrown which can be caught by an
-<a href="/camunda-cn/reference/bpmn20/events/error-events/#error-boundary-event">Error Boundary Event</a>.</p>
+<a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/events/error-events/#error-boundary-event">Error Boundary Event</a>.</p>
 
-<p>In the scope of an External Task, expressions have access to the <a href="/camunda-cn/reference/javadoc/?org/camunda/bpm/engine/externaltask/ExternalTask.html">ExternalTaskEntity</a>
+<p>In the scope of an External Task, expressions have access to the <a href="http://shaochenfeng.com/camunda-cn/reference/javadoc/?org/camunda/bpm/engine/externaltask/ExternalTask.html">ExternalTaskEntity</a>
  object via the key <code>externalTask</code> which provides getter methods for <code>errorMessage</code>, <code>errorDetails</code>, <code>workerId</code>, <code>retries</code> and more.</p>
 
 <p><strong>Examples:</strong></p>
@@ -8353,12 +8353,12 @@ elements which can be provided with a JUEL expression. The expression is evaluat
 &lt;/bpmn:serviceTask&gt;
 </code></pre>
 
-<p>For further details on the functionality of error event definitions in the context of external tasks, consult the <a href="/camunda-cn/user-guide/process-engine/external-tasks/#error-event-definitions">External Tasks Guide</a>.</p>
+<p>For further details on the functionality of error event definitions in the context of external tasks, consult the <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/external-tasks/#error-event-definitions">External Tasks Guide</a>.</p>
 
 <h2 id="value">Value</h2>
 
 <p>Different BPMN and CMMN elements allow to specify their content or an attribute value by an
-expression. Please see the corresponding sections for <a href="/camunda-cn/reference/bpmn20/">BPMN</a> and <a href="/camunda-cn/reference/cmmn11/">CMMN</a> in the references
+expression. Please see the corresponding sections for <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/">BPMN</a> and <a href="http://shaochenfeng.com/camunda-cn/reference/cmmn11/">CMMN</a> in the references
 for more detailed examples.</p>
 
 <h1 id="availability-of-variables-and-functions-inside-expression-language">Availability of Variables and Functions Inside Expression Language</h1>
@@ -8391,7 +8391,7 @@ evaluating expressions:</p>
   <tbody>
     <tr>
       <td><code>execution</code></td>
-      <td><code><a href="/camunda-cn/reference/javadoc/?org/camunda/bpm/engine/delegate/DelegateExecution.html">DelegateExecution</a>
+      <td><code><a href="http://shaochenfeng.com/camunda-cn/reference/javadoc/?org/camunda/bpm/engine/delegate/DelegateExecution.html">DelegateExecution</a>
 </code></td>
       <td>
         Available in a BPMN execution context like a service task, execution listener or sequence
@@ -8400,19 +8400,19 @@ evaluating expressions:</p>
     </tr>
     <tr>
       <td><code>task</code></td>
-      <td><code><a href="/camunda-cn/reference/javadoc/?org/camunda/bpm/engine/delegate/DelegateTask.html">DelegateTask</a>
+      <td><code><a href="http://shaochenfeng.com/camunda-cn/reference/javadoc/?org/camunda/bpm/engine/delegate/DelegateTask.html">DelegateTask</a>
 </code></td>
       <td>Available in a task context like a task listener.</td>
     </tr>
     <tr>
       <td><code>externalTask</code></td>
-      <td><code><a href="/camunda-cn/reference/javadoc/?org/camunda/bpm/engine/externaltask/ExternalTask.html">ExternalTask</a>
+      <td><code><a href="http://shaochenfeng.com/camunda-cn/reference/javadoc/?org/camunda/bpm/engine/externaltask/ExternalTask.html">ExternalTask</a>
 </code></td>
-      <td>Available during an external task context activity (e.g. in <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#erroreventdefinition">camunda:errorEventDefinition</a> expressions).</td>
+      <td>Available during an external task context activity (e.g. in <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#erroreventdefinition">camunda:errorEventDefinition</a> expressions).</td>
     </tr>
     <tr>
       <td><code>caseExecution</code></td>
-      <td><code><a href="/camunda-cn/reference/javadoc/?org/camunda/bpm/engine/delegate/DelegateCaseExecution.html">DelegateCaseExecution</a>
+      <td><code><a href="http://shaochenfeng.com/camunda-cn/reference/javadoc/?org/camunda/bpm/engine/delegate/DelegateCaseExecution.html">DelegateCaseExecution</a>
 </code></td>
       <td>Available in a CMMN execution context.</td>
     </tr>
@@ -8438,7 +8438,7 @@ event name of an execution listener.</p>
 <h2 id="external-context-variables-with-spring-and-cdi">External Context Variables With Spring and CDI</h2>
 
 <p>If the process engine is integrated with Spring or CDI, it is possible to access Spring and CDI
-beans inside of expressions. Please see the corresponding sections for <a href="/camunda-cn/user-guide/spring-framework-integration/#expression-resolving">Spring</a> and <a href="/camunda-cn/user-guide/cdi-java-ee-integration/expression-resolving/">CDI</a>
+beans inside of expressions. Please see the corresponding sections for <a href="http://shaochenfeng.com/camunda-cn/user-guide/spring-framework-integration/#expression-resolving">Spring</a> and <a href="http://shaochenfeng.com/camunda-cn/user-guide/cdi-java-ee-integration/expression-resolving/">CDI</a>
 for more information. The following example shows the usage of a bean which implements the
 <code>JavaDelegate</code> interface as delegateExecution.</p>
 
@@ -8503,7 +8503,7 @@ of the task.</p>
 <h2 id="built-in-camunda-spin-functions">Built-In Camunda Spin Functions</h2>
 
 <p>If the Camunda Spin process engine plugin is activated, the Spin functions <code>S</code>,
-<code>XML</code> and <code>JSON</code> are also available inside of an expression. See the <a href="/camunda-cn/user-guide/data-formats/">Data Formats section</a> for a detailed explanation.</p>
+<code>XML</code> and <code>JSON</code> are also available inside of an expression. See the <a href="http://shaochenfeng.com/camunda-cn/user-guide/data-formats/">Data Formats section</a> for a detailed explanation.</p>
 
 <pre><code class="language-xml">  &lt;serviceTask id=&quot;task&quot; camunda:expression=&quot;${XML(xml).attr('test').value()}&quot; resultVariable=&quot;test&quot; /&gt;
 </code></pre>
@@ -8548,7 +8548,7 @@ of the task.</p>
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="http://shaochenfeng.com/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
             Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2021
           </p>
@@ -8563,7 +8563,7 @@ of the task.</p>
 
   
 
-  <script type="text/javascript" src="/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
+  <script type="text/javascript" src="http://shaochenfeng.com/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

@@ -29,11 +29,11 @@
   <title>Testing | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="/camunda-cn/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="http://shaochenfeng.com/camunda-cn/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
+  <link rel="stylesheet" href="http://shaochenfeng.com/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
 </head>
 <body class="">
 
@@ -45,8 +45,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="/camunda-cn/">
-      <img src="/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="http://shaochenfeng.com/camunda-cn/">
+      <img src="http://shaochenfeng.com/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">Docs</span>
       </a>
@@ -8113,7 +8113,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="/camunda-cn/">
+    <select id="version-select" data-basepath="/manual" base-url="http://shaochenfeng.com/camunda-cn/">
       
         <option  selected >develop</option>
       
@@ -8170,7 +8170,7 @@ This section explains how to write unit tests and integration tests with Camunda
 
 <h2 id="junit-4">JUnit 4</h2>
 
-<p>Using the JUnit 4 style of writing unit tests, the <a href="/camunda-cn/reference/javadoc/?org/camunda/bpm/engine/test/ProcessEngineRule.html">ProcessEngineRule</a>
+<p>Using the JUnit 4 style of writing unit tests, the <a href="http://shaochenfeng.com/camunda-cn/reference/javadoc/?org/camunda/bpm/engine/test/ProcessEngineRule.html">ProcessEngineRule</a>
  must be used. Through this rule, the process engine and services are available through getters. As with the ProcessEngineTestCase (see above), including this rule will look for the default configuration file on the classpath. Process engines are statically cached over multiple unit tests when using the same configuration resource.</p>
 
 <p>The following code snippet shows an example of using the JUnit 4 style of testing and the usage of the ProcessEngineRule.</p>
@@ -8199,13 +8199,13 @@ This section explains how to write unit tests and integration tests with Camunda
 
 <div class="note bg-info docs-info">
   <h3></h3>
-  <p>Our <a href="/camunda-cn/user-guide/process-applications/maven-archetypes/">Project Templates for Maven</a> give you a complete running project including a JUnit test out of the box.</p>
+  <p>Our <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-applications/maven-archetypes/">Project Templates for Maven</a> give you a complete running project including a JUnit test out of the box.</p>
 </div>
 
 
 <h2 id="junit-3">JUnit 3</h2>
 
-<p>In the JUnit 3 style, the <a href="/camunda-cn/reference/javadoc/?org/camunda/bpm/engine/test/ProcessEngineTestCase.html">ProcessEngineTestCase</a>
+<p>In the JUnit 3 style, the <a href="http://shaochenfeng.com/camunda-cn/reference/javadoc/?org/camunda/bpm/engine/test/ProcessEngineTestCase.html">ProcessEngineTestCase</a>
  must be extended. This will make the ProcessEngine and the services available through protected member fields. In the <code>setup()</code> of the test, the processEngine will be initialized by default with the <code>camunda.cfg.xml</code> resource on the classpath. To specify a different configuration file, override the getConfigurationResource() method. Process engines are cached statically over multiple unit tests when the configuration resource is the same.</p>
 
 <p>A JUnit 3 style test can look as follows:</p>
@@ -8227,7 +8227,7 @@ This section explains how to write unit tests and integration tests with Camunda
 
 <h2 id="deploy-test-resources">Deploy Test Resources</h2>
 
-<p>You can annotate test classes and methods with <a href="/camunda-cn/reference/javadoc/?org/camunda/bpm/engine/test/Deployment.html">@Deployment</a>
+<p>You can annotate test classes and methods with <a href="http://shaochenfeng.com/camunda-cn/reference/javadoc/?org/camunda/bpm/engine/test/Deployment.html">@Deployment</a>
 . Before the test is run, a resource file named <code>TestClassName.bpmn20.xml</code> (for a class-level annotation) or <code>TestClassName.testMethod.bpmn20.xml</code> (for a method-level annotation), in the same package as the test class, will be deployed. At the end of the test the deployment will be deleted, including all related process instances, tasks, etc. The <code>@Deployment</code> annotation also supports setting the resource location explicitly.</p>
 
 <pre><code>@Deployment(resources = {&quot;myProcess.bpmn&quot;, &quot;mySubprocess.bpmn&quot;})
@@ -8235,14 +8235,14 @@ This section explains how to write unit tests and integration tests with Camunda
 
 <p>will pick the files <code>myProcess.bpmn</code> and <code>mySubProcess.bpmn</code> directly from the top of the classpath.</p>
 
-<p>Method-level annotations override class-level annotations. See the Javadocs for <a href="/camunda-cn/reference/javadoc/?org/camunda/bpm/engine/test/Deployment.html">@Deployment</a>
+<p>Method-level annotations override class-level annotations. See the Javadocs for <a href="http://shaochenfeng.com/camunda-cn/reference/javadoc/?org/camunda/bpm/engine/test/Deployment.html">@Deployment</a>
 more details.</p>
 
 <p>The annotation is supported for <a href="#junit-3">JUnit 3</a> and <a href="#junit-4">JUnit 4</a> style of testing.</p>
 
 <h2 id="specify-the-required-history-level">Specify the required History Level</h2>
 
-<p>If a test requires a specific history level (e.g., because it uses the HistoryService) then you can annotate the test class or method with <a href="/camunda-cn/reference/javadoc/?org/camunda/bpm/engine/test/RequiredHistoryLevel.html">@RequiredHistoryLevel</a>
+<p>If a test requires a specific history level (e.g., because it uses the HistoryService) then you can annotate the test class or method with <a href="http://shaochenfeng.com/camunda-cn/reference/javadoc/?org/camunda/bpm/engine/test/RequiredHistoryLevel.html">@RequiredHistoryLevel</a>
  and specify the required history level (e.g., &ldquo;activity&rdquo;, &ldquo;full&rdquo;). Before the test is run, it checks the current history level of the process engine and skip the test if the history level is lower than the specified one.</p>
 
 <p>A JUnit 4 style test can look as follows:</p>
@@ -8274,7 +8274,7 @@ more details.</p>
 
 <h2 id="disabling-telemetry">Disabling Telemetry</h2>
 
-<p>Telemetry reports are introduced with Camunda Platform 7.14.0. To prevent sending data generated during testing, we encourage you to disable the <a href="/camunda-cn/reference/deployment-descriptors/tags/process-engine/#telemetryReporterActivate">telemetry reporter</a>. Please read more about the topic in the dedicated page for <a href="/camunda-cn/introduction/telemetry/#initial-data-report">Telemetry</a>.</p>
+<p>Telemetry reports are introduced with Camunda Platform 7.14.0. To prevent sending data generated during testing, we encourage you to disable the <a href="http://shaochenfeng.com/camunda-cn/reference/deployment-descriptors/tags/process-engine/#telemetryReporterActivate">telemetry reporter</a>. Please read more about the topic in the dedicated page for <a href="http://shaochenfeng.com/camunda-cn/introduction/telemetry/#initial-data-report">Telemetry</a>.</p>
 
 <p>Example of disabling the reporter in XML-based configuration:</p>
 
@@ -8556,13 +8556,13 @@ one should make sure, that they are registered before the deployment happens. E.
 <code>@Deployment</code> annotation, beans should not be registered in <code>@Before</code> method, but rather the separate test rule can be created, that registers beans on startup,
 and chained before <code>ProcessEngineRule</code>.</p>
 
-<p><strong>The mocked beans feature should be used for testing purposes only.</strong> Beans that are stored with <code>Mocks</code> are exclusively available within the respective storing thread as it is based on <code>ThreadLocal</code>. In most productive environments, it is not possible to access mocked beans during process execution due to the reason that jobs are executed by the multi-threaded Job Executor. Since the <a href="/camunda-cn/user-guide/process-engine/the-job-executor/#job-executor-in-a-unit-test">Job Executor is disabled in unit test scenarios</a>, the thread of process execution is the same that creates mocked bean instances.</p>
+<p><strong>The mocked beans feature should be used for testing purposes only.</strong> Beans that are stored with <code>Mocks</code> are exclusively available within the respective storing thread as it is based on <code>ThreadLocal</code>. In most productive environments, it is not possible to access mocked beans during process execution due to the reason that jobs are executed by the multi-threaded Job Executor. Since the <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/the-job-executor/#job-executor-in-a-unit-test">Job Executor is disabled in unit test scenarios</a>, the thread of process execution is the same that creates mocked bean instances.</p>
 
 <h1 id="best-practice">Best Practice</h1>
 
 <h2 id="write-focused-tests">Write Focused Tests</h2>
 
-<p>The feature to <a href="/camunda-cn/user-guide/process-engine/process-engine-concepts/#start-a-process-instance-at-any-set-of-activities">start a process instance at a set of activities</a> can be used to to create a very specific scenario without much setup. Similarly, certain activities can be skipped by using <a href="/camunda-cn/user-guide/process-engine/process-instance-modification/">process instance modification</a>.</p>
+<p>The feature to <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/process-engine-concepts/#start-a-process-instance-at-any-set-of-activities">start a process instance at a set of activities</a> can be used to to create a very specific scenario without much setup. Similarly, certain activities can be skipped by using <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/process-instance-modification/">process instance modification</a>.</p>
 
 <h2 id="scoping-tests">Scoping Tests</h2>
 
@@ -8649,7 +8649,7 @@ and chained before <code>ProcessEngineRule</code>.</p>
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="http://shaochenfeng.com/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
             Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2021
           </p>
@@ -8664,7 +8664,7 @@ and chained before <code>ProcessEngineRule</code>.</p>
 
   
 
-  <script type="text/javascript" src="/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
+  <script type="text/javascript" src="http://shaochenfeng.com/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

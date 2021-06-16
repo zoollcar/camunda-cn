@@ -29,11 +29,11 @@
   <title>Error Events | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="/camunda-cn/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="http://shaochenfeng.com/camunda-cn/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
+  <link rel="stylesheet" href="http://shaochenfeng.com/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
 </head>
 <body class="">
 
@@ -45,8 +45,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="/camunda-cn/">
-      <img src="/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="http://shaochenfeng.com/camunda-cn/">
+      <img src="http://shaochenfeng.com/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">Docs</span>
       </a>
@@ -8113,7 +8113,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="/camunda-cn/">
+    <select id="version-select" data-basepath="/manual" base-url="http://shaochenfeng.com/camunda-cn/">
       
         <option  selected >develop</option>
       
@@ -8169,7 +8169,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <p>A BPMN error is meant for business errors - which are different than technical exceptions. So, this is different than Java exceptions - which are, by default, handled in their own way.</p>
 
-<p>You might also want to check out the basics of <a href="/camunda-cn/user-guide/process-engine/transactions-in-processes/#transaction-boundaries">Threading and Transactions</a> in the <a href="/camunda-cn/user-guide/">User Guide</a> first.</p>
+<p>You might also want to check out the basics of <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/transactions-in-processes/#transaction-boundaries">Threading and Transactions</a> in the <a href="http://shaochenfeng.com/camunda-cn/user-guide/">User Guide</a> first.</p>
 
 <h1 id="defining-an-error">Defining an Error</h1>
 
@@ -8188,7 +8188,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </code></pre>
 
 <p>You can trigger this error event either with a throwing error event within your process definition or from Delegation Code, see the
-<a href="/camunda-cn/user-guide/process-engine/delegation-code/#throw-bpmn-errors-from-delegation-code">Throwing BPMN Errors from Delegation Code</a> section of the <a href="/camunda-cn/user-guide/">User Guide</a> for more information.</p>
+<a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/delegation-code/#throw-bpmn-errors-from-delegation-code">Throwing BPMN Errors from Delegation Code</a> section of the <a href="http://shaochenfeng.com/camunda-cn/user-guide/">User Guide</a> for more information.</p>
 
 <p>Another possibility to define an error is setting of the type (class name) of any Java Exception as error code. Example:</p>
 
@@ -8209,8 +8209,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <p>An error event handler references the same error element to declare that it catches the error.</p>
 
-<p>It is also possible to define an error message with the <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#errormessage"><code>camunda:errorMessage</code></a> extension for an error element to give further information about the error.
-The referencing error event definition must specify <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#errormessagevariable"><code>camunda:errorMessageVariable</code></a> to receive the error message. The error message can also contain <a href="/camunda-cn/user-guide/process-engine/expression-language/">expressions</a>.</p>
+<p>It is also possible to define an error message with the <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#errormessage"><code>camunda:errorMessage</code></a> extension for an error element to give further information about the error.
+The referencing error event definition must specify <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#errormessagevariable"><code>camunda:errorMessageVariable</code></a> to receive the error message. The error message can also contain <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/expression-language/">expressions</a>.</p>
 
 <pre><code class="language-xml">&lt;definitions&gt;
   &lt;error id=&quot;myError&quot; errorCode=&quot;ERROR-OCCURED&quot; name=&quot;ERROR-OCCURED&quot; 
@@ -8227,7 +8227,7 @@ The referencing error event definition must specify <a href="/camunda-cn/referen
 
 <p>When the error thrown by the error end event is catched a process variable with the name <code>err</code> will be created that holds the evaluated message.</p>
 
-<p>For External Tasks, it is also possible to define error events by using a <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#erroreventdefinition">camunda:errorEventDefinition</a> as shown in the following example. It additionally requires an expression that must evaluate to <code>true</code> in order for the BPMN error to be thrown. For further details on how to use those error events, consult the <a href="/camunda-cn/user-guide/process-engine/external-tasks/#error-event-definitions">External Tasks Guide</a>.</p>
+<p>For External Tasks, it is also possible to define error events by using a <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#erroreventdefinition">camunda:errorEventDefinition</a> as shown in the following example. It additionally requires an expression that must evaluate to <code>true</code> in order for the BPMN error to be thrown. For further details on how to use those error events, consult the <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/external-tasks/#error-event-definitions">External Tasks Guide</a>.</p>
 
 <pre><code class="language-xml">&lt;serviceTask id=&quot;validateAddressTask&quot;
   name=&quot;Validate Address&quot;
@@ -8286,18 +8286,18 @@ The referencing error event definition must specify <a href="/camunda-cn/referen
   <tr>
     <th>Attributes</th>
     <td>
-      <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#asyncbefore">camunda:asyncBefore</a>,
-      <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#asyncafter">camunda:asyncAfter</a>,
-      <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#errorcodevariable">camunda:errorCodeVariable</a>,
-      <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#errormessagevariable">camunda:errorMessageVariable</a>,
-      <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#exclusive">camunda:exclusive</a>,
-      <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#jobpriority">camunda:jobPriority</a>
+      <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#asyncbefore">camunda:asyncBefore</a>,
+      <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#asyncafter">camunda:asyncAfter</a>,
+      <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#errorcodevariable">camunda:errorCodeVariable</a>,
+      <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#errormessagevariable">camunda:errorMessageVariable</a>,
+      <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#exclusive">camunda:exclusive</a>,
+      <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#jobpriority">camunda:jobPriority</a>
     </td>
   </tr>
   <tr>
     <th>Extension Elements</th>
     <td>
-      <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#inputoutput">camunda:inputOutput</a>
+      <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#inputoutput">camunda:inputOutput</a>
     </td>
   </tr>
   <tr>
@@ -8312,7 +8312,7 @@ The referencing error event definition must specify <a href="/camunda-cn/referen
   <tr>
     <th>Attributes</th>
     <td>
-      <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#errormessage">camunda:errorMessage</a>
+      <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#errormessage">camunda:errorMessage</a>
     </td>
   </tr>
   <tr>
@@ -8378,7 +8378,7 @@ This behaviour can be changed with <code>enableExceptionsAfterUnhandledBpmnError
 
 <ul>
 <li><a href="http://camunda.org/bpmn/reference.html#events-error">Error Events</a> in the <a href="http://camunda.org/bpmn/reference.html">BPMN 2.0 Modeling Reference</a></li>
-<li><a href="/camunda-cn/user-guide/process-engine/incidents/">Incidents</a> in the <a href="/camunda-cn/user-guide/">User Guide</a></li>
+<li><a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/incidents/">Incidents</a> in the <a href="http://shaochenfeng.com/camunda-cn/user-guide/">User Guide</a></li>
 </ul>
 
     </div>
@@ -8422,7 +8422,7 @@ This behaviour can be changed with <code>enableExceptionsAfterUnhandledBpmnError
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="http://shaochenfeng.com/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
             Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2021
           </p>
@@ -8437,7 +8437,7 @@ This behaviour can be changed with <code>enableExceptionsAfterUnhandledBpmnError
 
   
 
-  <script type="text/javascript" src="/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
+  <script type="text/javascript" src="http://shaochenfeng.com/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

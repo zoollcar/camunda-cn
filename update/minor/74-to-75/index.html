@@ -29,11 +29,11 @@
   <title>Update from 7.4 to 7.5 | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="/camunda-cn/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="http://shaochenfeng.com/camunda-cn/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
+  <link rel="stylesheet" href="http://shaochenfeng.com/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
 </head>
 <body class="">
 
@@ -45,8 +45,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="/camunda-cn/">
-      <img src="/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="http://shaochenfeng.com/camunda-cn/">
+      <img src="http://shaochenfeng.com/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">Docs</span>
       </a>
@@ -8113,7 +8113,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="/camunda-cn/">
+    <select id="version-select" data-basepath="/manual" base-url="http://shaochenfeng.com/camunda-cn/">
       
         <option  selected >develop</option>
       
@@ -8176,7 +8176,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>Noteworthy new Features and Changes in 7.5:</p>
 
 <ul>
-<li><strong>Multi-Tenancy:</strong> In addition to the existing approach for <a href="/camunda-cn/user-guide/process-engine/multi-tenancy/">multi-tenancy</a> with multiple process engines and database, schema or table isolation, Camunda 7.5 offers a new approach using a single process engine. The engine stores the data of all tenants in one table and separates them by a tenant-identifier which makes it easier to manage a large tenant base.</li>
+<li><strong>Multi-Tenancy:</strong> In addition to the existing approach for <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/multi-tenancy/">multi-tenancy</a> with multiple process engines and database, schema or table isolation, Camunda 7.5 offers a new approach using a single process engine. The engine stores the data of all tenants in one table and separates them by a tenant-identifier which makes it easier to manage a large tenant base.</li>
 </ul>
 
 
@@ -8193,7 +8193,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2 id="procedure">Procedure</h2>
 
 <ol>
-<li><p>Check for <a href="/camunda-cn/update/patch-level/#database-patches">available database patch scripts</a> for your database that are within the bounds of your update path.
+<li><p>Check for <a href="http://shaochenfeng.com/camunda-cn/update/patch-level/#database-patches">available database patch scripts</a> for your database that are within the bounds of your update path.
 Locate the scripts at <code>$DISTRIBUTION_PATH/sql/upgrade</code> in the pre-packaged distribution (where <code>$DISTRIBUTION_PATH</code> is the path of an unpacked distribution) or in the <a href="https://app.camunda.com/nexus/service/rest/repository/browse/public/org/camunda/bpm/distro/camunda-sql-scripts/">Camunda Nexus</a>.
 We highly recommend to execute these patches before updating. Execute them in ascending order by version number.
 The naming pattern is <code>$DATABASENAME_engine_7.4_patch_?.sql</code>.</p></li>
@@ -8225,7 +8225,7 @@ The naming pattern is <code>$DATABASENAME_engine_7.4_patch_?.sql</code>.</p></li
 
 <h1 id="full-distribution">Full Distribution</h1>
 
-<p>This section is applicable if you installed the <a href="/camunda-cn/introduction/downloading-camunda/#full-distribution">Full Distribution</a> with a <strong>shared process engine</strong>.</p>
+<p>This section is applicable if you installed the <a href="http://shaochenfeng.com/camunda-cn/introduction/downloading-camunda/#full-distribution">Full Distribution</a> with a <strong>shared process engine</strong>.</p>
 
 <p>The following steps are required:</p>
 
@@ -8241,11 +8241,11 @@ The naming pattern is <code>$DATABASENAME_engine_7.4_patch_?.sql</code>.</p></li
 <p>Please choose the application server you are working with from the following list:</p>
 
 <ul>
-<li><a href="/camunda-cn/update/minor/74-to-75/tomcat/">Apache Tomcat</a></li>
-<li><a href="/camunda-cn/update/minor/74-to-75/jboss/">JBoss AS/Wildfly</a></li>
-<li><a href="/camunda-cn/update/minor/74-to-75/glassfish/">Glassfish</a></li>
-<li><a href="/camunda-cn/update/minor/74-to-75/was/">IBM WebSphere</a></li>
-<li><a href="/camunda-cn/update/minor/74-to-75/wls/">Oracle WebLogic</a></li>
+<li><a href="http://shaochenfeng.com/camunda-cn/update/minor/74-to-75/tomcat/">Apache Tomcat</a></li>
+<li><a href="http://shaochenfeng.com/camunda-cn/update/minor/74-to-75/jboss/">JBoss AS/Wildfly</a></li>
+<li><a href="http://shaochenfeng.com/camunda-cn/update/minor/74-to-75/glassfish/">Glassfish</a></li>
+<li><a href="http://shaochenfeng.com/camunda-cn/update/minor/74-to-75/was/">IBM WebSphere</a></li>
+<li><a href="http://shaochenfeng.com/camunda-cn/update/minor/74-to-75/wls/">Oracle WebLogic</a></li>
 </ul>
 
 <h2 id="custom-process-applications">Custom Process Applications</h2>
@@ -8271,7 +8271,7 @@ The naming pattern is <code>$DATABASENAME_engine_7.4_patch_?.sql</code>.</p></li
 <li>Undeploy the current version of the standalone web application</li>
 <li>Update the database to the new schema as described in the <a href="#database-updates">database
 update</a> section</li>
-<li>Reconfigure the database as described in the <a href="/camunda-cn/installation/standalone-webapplication/#database-configuration">installation</a>
+<li>Reconfigure the database as described in the <a href="http://shaochenfeng.com/camunda-cn/installation/standalone-webapplication/#database-configuration">installation</a>
 section</li>
 
 <li><p><strong>Important:</strong> The configured history level of the embedded process engine
@@ -8330,17 +8330,17 @@ in the process engine configuration found in</p>
 
 <h3 id="incident-handler">Incident Handler</h3>
 
-<p>The interface of an <a href="/camunda-cn/reference/javadoc/?org/camunda/bpm/engine/impl/incident/IncidentHandler.html">Incident Handler</a>
+<p>The interface of an <a href="http://shaochenfeng.com/camunda-cn/reference/javadoc/?org/camunda/bpm/engine/impl/incident/IncidentHandler.html">Incident Handler</a>
  has changed. Instead of a long parameter list, the methods pass a context object which bundles all required information, like process definition id, execution id and tenant id.</p>
 
 <h3 id="correlation-handler">Correlation Handler</h3>
 
-<p>A new method has been added to the interface of a <a href="/camunda-cn/reference/javadoc/?org/camunda/bpm/engine/impl/runtime/CorrelationHandler.html">Correlation Handler</a>
+<p>A new method has been added to the interface of a <a href="http://shaochenfeng.com/camunda-cn/reference/javadoc/?org/camunda/bpm/engine/impl/runtime/CorrelationHandler.html">Correlation Handler</a>
 . The new method <code>correlateStartMessage()</code> allows to explicitly trigger a message start event of a process definition.</p>
 
 <h3 id="job-handler">Job Handler</h3>
 
-<p>The interface of a <a href="/camunda-cn/reference/javadoc/?org/camunda/bpm/engine/impl/jobexecutor/JobHandler.html">Job Handler</a>
+<p>The interface of a <a href="http://shaochenfeng.com/camunda-cn/reference/javadoc/?org/camunda/bpm/engine/impl/jobexecutor/JobHandler.html">Job Handler</a>
  has changed to support multi-tenancy and separate the parsing of the configuration.</p>
 
 <h1 id="authorizations">Authorizations</h1>
@@ -8348,14 +8348,14 @@ in the process engine configuration found in</p>
 <p>7.5.0 introduces a new authorization check algorithm which scales a lot better than the algorithm used before. The new algorithm can only be used if no Revoke authorizations are used. Consider refraining from the use of Revoke authorizations and adjust the process engine configuration as explained in the Authorization Section:</p>
 
 <ul>
-<li><a href="/camunda-cn/user-guide/process-engine/authorization-service/#configuration-options">New authorization related Configuration Options</a></li>
-<li><a href="/camunda-cn/user-guide/process-engine/authorization-service/#performance-considerations">Authorization related Performance Considerations</a></li>
+<li><a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/authorization-service/#configuration-options">New authorization related Configuration Options</a></li>
+<li><a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/authorization-service/#performance-considerations">Authorization related Performance Considerations</a></li>
 </ul>
 
 <h1 id="custom-styles">Custom styles</h1>
 
 <p>The HTML markup of the front-ends changed and some adjustments may be needed.
-Read the <a href="/camunda-cn/webapps/tasklist/configuration/#logo-and-header-color">customization section</a> for more information.</p>
+Read the <a href="http://shaochenfeng.com/camunda-cn/webapps/tasklist/configuration/#logo-and-header-color">customization section</a> for more information.</p>
 
     </div>
   </div>
@@ -8409,7 +8409,7 @@ Read the <a href="/camunda-cn/webapps/tasklist/configuration/#logo-and-header-co
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="http://shaochenfeng.com/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
             Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2021
           </p>
@@ -8424,7 +8424,7 @@ Read the <a href="/camunda-cn/webapps/tasklist/configuration/#logo-and-header-co
 
   
 
-  <script type="text/javascript" src="/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
+  <script type="text/javascript" src="http://shaochenfeng.com/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

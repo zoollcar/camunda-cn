@@ -29,11 +29,11 @@
   <title>Update from 7.10 to 7.11 | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="/camunda-cn/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="http://shaochenfeng.com/camunda-cn/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
+  <link rel="stylesheet" href="http://shaochenfeng.com/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
 </head>
 <body class="">
 
@@ -45,8 +45,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="/camunda-cn/">
-      <img src="/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="http://shaochenfeng.com/camunda-cn/">
+      <img src="http://shaochenfeng.com/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">Docs</span>
       </a>
@@ -8113,7 +8113,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="/camunda-cn/">
+    <select id="version-select" data-basepath="/manual" base-url="http://shaochenfeng.com/camunda-cn/">
       
         <option  selected >develop</option>
       
@@ -8187,7 +8187,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2 id="procedure">Procedure</h2>
 
 <ol>
-<li><p>Check for <a href="/camunda-cn/update/patch-level/#database-patches">available database patch scripts</a> for your database that are within the bounds of your update path.
+<li><p>Check for <a href="http://shaochenfeng.com/camunda-cn/update/patch-level/#database-patches">available database patch scripts</a> for your database that are within the bounds of your update path.
 Locate the scripts at <code>$DISTRIBUTION_PATH/sql/upgrade</code> in the pre-packaged distribution (where <code>$DISTRIBUTION_PATH</code> is the path of an unpacked distribution) or in the <a href="https://app.camunda.com/nexus/service/rest/repository/browse/public/org/camunda/bpm/distro/camunda-sql-scripts/">Camunda Nexus</a>.
 We highly recommend to execute these patches before updating. Execute them in ascending order by version number.
 The naming pattern is <code>$DATABASENAME_engine_7.10_patch_?.sql</code>.</p></li>
@@ -8213,7 +8213,7 @@ The naming pattern is <code>$DATABASENAME_engine_7.10_patch_?.sql</code>.</p></l
 
 <h1 id="full-distribution">Full Distribution</h1>
 
-<p>This section is applicable if you installed the <a href="/camunda-cn/introduction/downloading-camunda/#full-distribution">Full Distribution</a> with a <strong>shared process engine</strong>.</p>
+<p>This section is applicable if you installed the <a href="http://shaochenfeng.com/camunda-cn/introduction/downloading-camunda/#full-distribution">Full Distribution</a> with a <strong>shared process engine</strong>.</p>
 
 <p>The following steps are required:</p>
 
@@ -8229,10 +8229,10 @@ The naming pattern is <code>$DATABASENAME_engine_7.10_patch_?.sql</code>.</p></l
 <p>Please choose the application server you are working with from the following list:</p>
 
 <ul>
-<li><a href="/camunda-cn/update/minor/710-to-711/tomcat/">Apache Tomcat</a></li>
-<li><a href="/camunda-cn/update/minor/710-to-711/jboss/">JBoss AS/Wildfly</a></li>
-<li><a href="/camunda-cn/update/minor/710-to-711/was/">IBM WebSphere</a></li>
-<li><a href="/camunda-cn/update/minor/710-to-711/wls/">Oracle WebLogic</a></li>
+<li><a href="http://shaochenfeng.com/camunda-cn/update/minor/710-to-711/tomcat/">Apache Tomcat</a></li>
+<li><a href="http://shaochenfeng.com/camunda-cn/update/minor/710-to-711/jboss/">JBoss AS/Wildfly</a></li>
+<li><a href="http://shaochenfeng.com/camunda-cn/update/minor/710-to-711/was/">IBM WebSphere</a></li>
+<li><a href="http://shaochenfeng.com/camunda-cn/update/minor/710-to-711/wls/">Oracle WebLogic</a></li>
 </ul>
 
 <h2 id="custom-process-applications">Custom Process Applications</h2>
@@ -8257,7 +8257,7 @@ The naming pattern is <code>$DATABASENAME_engine_7.10_patch_?.sql</code>.</p></l
 <ol>
 <li>Undeploy the current version of the standalone web application</li>
 <li>Update the database to the new schema as described in the <a href="#database-updates">database update</a> section</li>
-<li>Reconfigure the database as described in the <a href="/camunda-cn/installation/standalone-webapplication/#database-configuration">installation</a>
+<li>Reconfigure the database as described in the <a href="http://shaochenfeng.com/camunda-cn/installation/standalone-webapplication/#database-configuration">installation</a>
 section</li>
 <li>Deploy the new and configured standalone web application to the server</li>
 </ol>
@@ -8267,7 +8267,7 @@ section</li>
 <p>If you are using Camunda Spring Boot Starter within you Spring Boot application, then you need to:</p>
 
 <ol>
-<li>Check <a href="/camunda-cn/user-guide/spring-boot-integration/version-compatibility/">Version Compatibility Matrix</a></li>
+<li>Check <a href="http://shaochenfeng.com/camunda-cn/user-guide/spring-boot-integration/version-compatibility/">Version Compatibility Matrix</a></li>
 <li>Update <strong>Spring Boot Starter</strong> and, when required, Spring Boot versions in your <code>pom.xml</code>.</li>
 <li>Update the Camunda Platform version in your <code>pom.xml</code> in case you override it before (e.g. when using the enterprise version or a patch releases)</li>
 </ol>
@@ -8309,13 +8309,13 @@ following Spring artifacts:</p>
 <p>If you are using the <strong>Camunda External Task Client</strong>, please make sure to:</p>
 
 <ol>
-<li>Check out the <a href="/camunda-cn/user-guide/ext-client/compatibility-matrix/">Version Compatibility Matrix</a></li>
+<li>Check out the <a href="http://shaochenfeng.com/camunda-cn/user-guide/ext-client/compatibility-matrix/">Version Compatibility Matrix</a></li>
 <li>Update the version in your <code>pom.xml</code> (Java) or <code>package.json</code> (NodeJs)</li>
 </ol>
 
 <h1 id="changes-affecting-custom-permissions-resources">Changes Affecting Custom Permissions/Resources</h1>
 
-<p>This section concerns you in case the <a href="/camunda-cn/user-guide/process-engine/authorization-service/#enable-authorization-checks">authorization checks</a> are enabled and you use custom permissions or resources.</p>
+<p>This section concerns you in case the <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/authorization-service/#enable-authorization-checks">authorization checks</a> are enabled and you use custom permissions or resources.</p>
 
 <p>An Authorization assigns a set of Permissions to an identity to interact with a given Resource.
 The build-in <a href="https://docs.camunda.org/javadoc/camunda-bpm-platform/7.11/org/camunda/bpm/engine/authorization/Permissions.html">Permissions</a> define the way an identity is allowed to interact with a certain resource.
@@ -8379,7 +8379,7 @@ In case you have at least one of these custom implementations please have a look
 
 <ol>
 <li>Check if any of your custom permissions is in conflict with one of the built-in permissions: Check the permission enums in the <a href="https://docs.camunda.org/javadoc/camunda-bpm-platform/7.11/index.html?org/camunda/bpm/engine/authorization/package-summary.html">org.camunda.bpm.engine.authorization</a> package. Determine if there is any permission that applies to the same resource and has the same value as one of your custom permissions.</li>
-<li>Deactivate this built-in permission via a <a href="/camunda-cn/reference/deployment-descriptors/tags/process-engine/#disabledPermissions">process engine configuration property</a>. Note that in this case Camunda no longer enforces the disabled permissions.</li>
+<li>Deactivate this built-in permission via a <a href="http://shaochenfeng.com/camunda-cn/reference/deployment-descriptors/tags/process-engine/#disabledPermissions">process engine configuration property</a>. Note that in this case Camunda no longer enforces the disabled permissions.</li>
 </ol>
 
 <h1 id="user-operation-log-permissions">User Operation Log Permissions</h1>
@@ -8401,8 +8401,8 @@ In case you have at least one of these custom implementations please have a look
 <li>permission <code>READ</code> (or <code>DELETE</code>) on resource <code>UserOperationLogCategory</code> with the resource id set to the respective category of the entry or <code>*</code></li>
 </ul>
 
-<p>An overview of the operation logs and their categories can be found at <a href="/camunda-cn/user-guide/process-engine/history/#glossary-of-operations-logged-in-the-user-operation-log">User Operation Log</a>.
-Authorization management is detailed in <a href="/camunda-cn/user-guide/process-engine/authorization-service/">Authorization Service</a>.</p>
+<p>An overview of the operation logs and their categories can be found at <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/history/#glossary-of-operations-logged-in-the-user-operation-log">User Operation Log</a>.
+Authorization management is detailed in <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/authorization-service/">Authorization Service</a>.</p>
 
 <h1 id="custom-writableidentityprovider">Custom WritableIdentityProvider</h1>
 
@@ -8435,16 +8435,16 @@ This includes all interface methods except <code>createNewUser(String)</code>, <
 
 <h1 id="exception-handling-in-processes">Exception Handling in Processes</h1>
 
-<p>As of 7.11.0, exceptions thrown from execution and task listeners can trigger BPMN error events (for more information, please check the <a href="/camunda-cn/user-guide/process-engine/delegation-code/#throw-bpmn-errors-from-listeners">User Guide</a>). Accordingly, the semantics of existing processes may change if there is an error event that catches the exception.</p>
+<p>As of 7.11.0, exceptions thrown from execution and task listeners can trigger BPMN error events (for more information, please check the <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/delegation-code/#throw-bpmn-errors-from-listeners">User Guide</a>). Accordingly, the semantics of existing processes may change if there is an error event that catches the exception.</p>
 
 <h1 id="updated-front-end-libraries">Updated Front End Libraries</h1>
 
 <p>With this release, we updated all front end libraries. Changes introduced with newer package versions might impacting:</p>
 
 <ul>
-<li><a href="/camunda-cn/user-guide/task-forms/#embedded-task-forms">Embedded Task Forms</a></li>
-<li><a href="/camunda-cn/webapps/cockpit/extend/configuration/#custom-scripts">Custom Scripts</a></li>
-<li><a href="/camunda-cn/webapps/cockpit/extend/plugins/">Cockpit Plugins</a> or <a href="/camunda-cn/webapps/tasklist/tasklist-plugins/">Tasklist Plugins</a></li>
+<li><a href="http://shaochenfeng.com/camunda-cn/user-guide/task-forms/#embedded-task-forms">Embedded Task Forms</a></li>
+<li><a href="http://shaochenfeng.com/camunda-cn/webapps/cockpit/extend/configuration/#custom-scripts">Custom Scripts</a></li>
+<li><a href="http://shaochenfeng.com/camunda-cn/webapps/cockpit/extend/plugins/">Cockpit Plugins</a> or <a href="http://shaochenfeng.com/camunda-cn/webapps/tasklist/tasklist-plugins/">Tasklist Plugins</a></li>
 </ul>
 
 <p>Please find below a complete table of the updated front end libraries.</p>
@@ -8596,7 +8596,7 @@ we have added the XSS Protection Header to all server responses in conjunction w
 
 <p>By default, the XSS Protection HTTP Header is configured in a way that a page gets blocked as soon as the browser detects
 a cross-site scripting attack. You can either loosen this behavior or even disable the XSS Protection Header. Learn more
-about how to configure the <a href="/camunda-cn/webapps/shared-options/header-security/">HTTP Header Security Filter</a>.</p>
+about how to configure the <a href="http://shaochenfeng.com/camunda-cn/webapps/shared-options/header-security/">HTTP Header Security Filter</a>.</p>
 
 <p>For further reading on how the XSS protection header works in detail,
 please see <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection">Mozillas MDN Web Docs</a>.</p>
@@ -8656,7 +8656,7 @@ please see <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="http://shaochenfeng.com/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
             Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2021
           </p>
@@ -8671,7 +8671,7 @@ please see <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-
 
   
 
-  <script type="text/javascript" src="/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
+  <script type="text/javascript" src="http://shaochenfeng.com/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

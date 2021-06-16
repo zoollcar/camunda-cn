@@ -29,11 +29,11 @@
   <title>Process Instance Modification | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="/camunda-cn/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="http://shaochenfeng.com/camunda-cn/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
+  <link rel="stylesheet" href="http://shaochenfeng.com/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
 </head>
 <body class="">
 
@@ -45,8 +45,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="/camunda-cn/">
-      <img src="/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="http://shaochenfeng.com/camunda-cn/">
+      <img src="http://shaochenfeng.com/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">Docs</span>
       </a>
@@ -8113,7 +8113,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="/camunda-cn/">
+    <select id="version-select" data-basepath="/manual" base-url="http://shaochenfeng.com/camunda-cn/">
       
         <option  selected >develop</option>
       
@@ -8191,7 +8191,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="note enterprise-feature">
   <h3>Enterprise Feature</h3>
 
-  <p class="description">The Camunda enterprise edition provides a user interface to compose process instance modifications visually on the BPMN diagram in <a href="/camunda-cn/webapps/cockpit/bpmn/process-instance-modification/">Camunda Cockpit</a></p>
+  <p class="description">The Camunda enterprise edition provides a user interface to compose process instance modifications visually on the BPMN diagram in <a href="http://shaochenfeng.com/camunda-cn/webapps/cockpit/bpmn/process-instance-modification/">Camunda Cockpit</a></p>
 
   <p>
     Check the <a href="http://camunda.com/bpm/enterprise/">Camunda enterprise homepage</a>
@@ -8323,7 +8323,7 @@ runtimeService.createProcessInstanceModification(processInstance.getId())
 ProcessInstanceModificationBuilder#startBeforeActivity(String activityId, String ancestorActivityInstanceId)
 </code></pre>
 
-<p>Starting before an activity  via <code>startBeforeActivity</code> means that execution is started before entering the activity. The instruction respects an <code>asyncBefore</code> flag, meaning that a job will be created if the activity is <code>asyncBefore</code>. In general, this instruction executes the process model beginning with the specified activity until a wait state is reached. See the documentation on <a href="/camunda-cn/user-guide/process-engine/transactions-in-processes/">Transactions in Processes</a> for details on wait states.</p>
+<p>Starting before an activity  via <code>startBeforeActivity</code> means that execution is started before entering the activity. The instruction respects an <code>asyncBefore</code> flag, meaning that a job will be created if the activity is <code>asyncBefore</code>. In general, this instruction executes the process model beginning with the specified activity until a wait state is reached. See the documentation on <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/transactions-in-processes/">Transactions in Processes</a> for details on wait states.</p>
 
 <h3 id="start-after-an-activity">Start After an Activity</h3>
 
@@ -8376,7 +8376,7 @@ The API offers the methods</p>
 
 <p>Variables are set <strong>after</strong> the <a href="#nested-instantiation">necessary scopes for instantiation are created</a> and <strong>before</strong> the actual execution of the specified element begins. That means, in the process engine history these variables do not appear as if they were set during execution of the specified activity for <code>startBefore</code> and <code>startAfter</code> instructions. Local variables are set on the execution that is about to perform the instruction, i.e., that enters the activity etc.</p>
 
-<p>See the <a href="/camunda-cn/user-guide/process-engine/variables/">variables section of this guide</a> for details on variables and scopes in general.</p>
+<p>See the <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/variables/">variables section of this guide</a> for details on variables and scopes in general.</p>
 
 <h2 id="activity-instance-based-api">Activity-Instance-based API</h2>
 
@@ -8653,7 +8653,7 @@ runtimeService.createProcessInstanceModification(processInstance.getId())
 
 <h2 id="asynchronous-modification-of-a-process-instance">Asynchronous modification of a process instance</h2>
 
-<p>It is possible to execute modification of single process instance asynchronous. The <a href="/camunda-cn/user-guide/process-engine/process-instance-modification/#modification-instruction-types">modification</a> instructions are the same as the synchronous modification and the syntax of fluent builder is the following:</p>
+<p>It is possible to execute modification of single process instance asynchronous. The <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/process-instance-modification/#modification-instruction-types">modification</a> instructions are the same as the synchronous modification and the syntax of fluent builder is the following:</p>
 
 <pre><code class="language-java">Batch modificationBatch = runtimeService.createProcessInstanceModification(processInstanceId)
         .cancelActivityInstance(&quot;exampleActivityId:1&quot;)
@@ -8661,7 +8661,7 @@ runtimeService.createProcessInstanceModification(processInstance.getId())
         .executeAsync();
 </code></pre>
 
-<p>This would create a modification <a href="/camunda-cn/user-guide/process-engine/batch/">batch</a> which will be executed asynchronously.
+<p>This would create a modification <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/batch/">batch</a> which will be executed asynchronously.
 Providing variables is not supported when executing async modification of single process instance.</p>
 
 <h2 id="modification-of-multiple-process-instances">Modification of Multiple Process Instances</h2>
@@ -8693,7 +8693,7 @@ runtimeService.createModification(&quot;exampleProcessDefinitionId&quot;)
 
 <p>The modification of multiple process instances can be executed synchronously or asynchronously.
 For more information about the difference between synchronous and asynchronous execution, please refer to the related
-section of the <a href="/camunda-cn/user-guide/process-engine/process-instance-migration/#executing-a-migration-plan">user guide</a>.</p>
+section of the <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/process-instance-migration/#executing-a-migration-plan">user guide</a>.</p>
 
 <p>An example for synchronous execution:</p>
 
@@ -8728,7 +8728,7 @@ section of the <a href="/camunda-cn/user-guide/process-engine/process-instance-m
   .execute();
 </code></pre>
 
-<p>It will be visible in <a href="/camunda-cn/user-guide/process-engine/history/#annotation-of-user-operation-logs">User Operation Log</a> for the performed modification.</p>
+<p>It will be visible in <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/history/#annotation-of-user-operation-logs">User Operation Log</a> for the performed modification.</p>
 
 <h2 id="soundness-checks">Soundness Checks</h2>
 
@@ -8793,7 +8793,7 @@ section of the <a href="/camunda-cn/user-guide/process-engine/process-instance-m
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="http://shaochenfeng.com/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
             Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2021
           </p>
@@ -8808,7 +8808,7 @@ section of the <a href="/camunda-cn/user-guide/process-engine/process-instance-m
 
   
 
-  <script type="text/javascript" src="/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
+  <script type="text/javascript" src="http://shaochenfeng.com/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

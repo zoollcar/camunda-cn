@@ -29,11 +29,11 @@
   <title>Business Rule Task 业务规则任务 | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="/camunda-cn/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="http://shaochenfeng.com/camunda-cn/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
+  <link rel="stylesheet" href="http://shaochenfeng.com/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
 </head>
 <body class="">
 
@@ -45,8 +45,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="/camunda-cn/">
-      <img src="/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="http://shaochenfeng.com/camunda-cn/">
+      <img src="http://shaochenfeng.com/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">Docs</span>
       </a>
@@ -8113,7 +8113,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="/camunda-cn/">
+    <select id="version-select" data-basepath="/manual" base-url="http://shaochenfeng.com/camunda-cn/">
       
         <option  selected >develop</option>
       
@@ -8163,7 +8163,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <p>一个业务规则任务可以同步执行一个或多个规则，可以调用Java代码或外部工作者（external worker）来实现，或者以异步方式调用以Web服务形式实现的逻辑。</p>
 
-<div class="bpmn-symbol"><img src="/camunda-cn//img/short-codes/bpmn-business-rule-task.png" /></div>
+<div class="bpmn-symbol"><img src="http://shaochenfeng.com/camunda-cn//img/short-codes/bpmn-business-rule-task.png" /></div>
 
 
 <h1 id="使用-camunda-dmn-引擎">使用 Camunda DMN 引擎</h1>
@@ -8201,7 +8201,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     camunda:decisionRefVersion=&quot;${decisionVersion}&quot; /&gt;
 </code></pre>
 
-<p>决策的输出，也称为决策结果，不会自动保存为流程变量。它必须通过使用<a href="/camunda-cn/user-guide/process-engine/decisions/bpmn-cmmn/#predefined-mapping-of-the-decision-result">预定义</a>或者<a href="/camunda-cn/user-guide/process-engine/decisions/bpmn-cmmn/#custom-mapping-into-process-variables">定制</a>的方式传递到一个流程变量中。</p>
+<p>决策的输出，也称为决策结果，不会自动保存为流程变量。它必须通过使用<a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/decisions/bpmn-cmmn/#predefined-mapping-of-the-decision-result">预定义</a>或者<a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/decisions/bpmn-cmmn/#custom-mapping-into-process-variables">定制</a>的方式传递到一个流程变量中。</p>
 
 <p>如果是预定义的映射，<code>camunda:mapDecisionResult</code>属性会引用要使用的映射器。映射的结果被保存在由<code>camunda:resultVariable</code>属性指定的变量中。如果没有设置预定义的映射器，那么默认使用 <code>resultList</code> 映射器。</p>
 
@@ -8211,7 +8211,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     camunda:resultVariable=&quot;result&quot; /&gt;
 </code></pre>
 
-<p>参见 <a href="/camunda-cn/user-guide/process-engine/decisions/bpmn-cmmn/#the-decision-result">用户指南</a> 有关映射的详细信息。</p>
+<p>参见 <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/decisions/bpmn-cmmn/#the-decision-result">用户指南</a> 有关映射的详细信息。</p>
 
 
 <div class="note bg-warning docs-warning">
@@ -8272,7 +8272,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <h1 id="实现为外部任务">实现为外部任务</h1>
 
-<p>除上述内容外，还可以通过<a href="/camunda-cn/user-guide/process-engine/external-tasks/">外部任务</a>机制实现业务规则任务，
+<p>除上述内容外，还可以通过<a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/external-tasks/">外部任务</a>机制实现业务规则任务，
 外部系统会轮询流程引擎的工作。参见<a href="/camunda-cn/reference/bpmn20/tasks/service-task/#external-tasks">服务任务</a>一节，
 了解更多关于如何配置外部任务的信息。</p>
 
@@ -8282,32 +8282,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <tr>
     <th>属性</th>
     <td>
-      <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#asyncbefore">camunda:asyncBefore</a>,
-      <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#asyncafter">camunda:asyncAfter</a>,
-      <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#class">camunda:class</a>,
-      <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#decisionref">camunda:decisionRef</a>,
-      <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#decisionrefbinding">camunda:decisionRefBinding</a>,
-      <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#decisionreftenantid">camunda:decisionRefTenantId</a>,
-      <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#decisionrefversion">camunda:decisionRefVersion</a>,
-      <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#decisionrefversiontag">camunda:decisionRefVersionTag</a>,
-      <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#delegateexpression">camunda:delegateExpression</a>,
-      <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#exclusive">camunda:exclusive</a>,
-      <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#expression">camunda:expression</a>,
-      <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#jobpriority">camunda:jobPriority</a>,
-      <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#mapdecisionresult">camunda:mapDecisionResult</a>,
-      <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#resultvariable">camunda:resultVariable</a>,
-      <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#topic">camunda:topic</a>,
-      <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#type">camunda:type</a>,
-      <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#taskpriority">camunda:taskPriority</a>
+      <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#asyncbefore">camunda:asyncBefore</a>,
+      <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#asyncafter">camunda:asyncAfter</a>,
+      <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#class">camunda:class</a>,
+      <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#decisionref">camunda:decisionRef</a>,
+      <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#decisionrefbinding">camunda:decisionRefBinding</a>,
+      <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#decisionreftenantid">camunda:decisionRefTenantId</a>,
+      <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#decisionrefversion">camunda:decisionRefVersion</a>,
+      <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#decisionrefversiontag">camunda:decisionRefVersionTag</a>,
+      <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#delegateexpression">camunda:delegateExpression</a>,
+      <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#exclusive">camunda:exclusive</a>,
+      <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#expression">camunda:expression</a>,
+      <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#jobpriority">camunda:jobPriority</a>,
+      <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#mapdecisionresult">camunda:mapDecisionResult</a>,
+      <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#resultvariable">camunda:resultVariable</a>,
+      <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#topic">camunda:topic</a>,
+      <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#type">camunda:type</a>,
+      <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#taskpriority">camunda:taskPriority</a>
     </td>
   </tr>
   <tr>
     <th>扩展元素</th>
     <td>
-      <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#failedjobretrytimecycle">camunda:failedJobRetryTimeCycle</a>,
-      <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#field">camunda:field</a>,
-      <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#connector">camunda:connector</a>,
-      <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#inputoutput">camunda:inputOutput</a>
+      <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#failedjobretrytimecycle">camunda:failedJobRetryTimeCycle</a>,
+      <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#field">camunda:field</a>,
+      <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#connector">camunda:connector</a>,
+      <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#inputoutput">camunda:inputOutput</a>
     </td>
   </tr>
   <tr>
@@ -8348,8 +8348,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h1 id="额外资料">额外资料</h1>
 
 <ul>
-<li><a href="/camunda-cn/user-guide/process-engine/decisions/">决策</a></li>
-<li><a href="/camunda-cn/reference/bpmn20/tasks/service-task/">服务任务</a></li>
+<li><a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/decisions/">决策</a></li>
+<li><a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/tasks/service-task/">服务任务</a></li>
 <li><a href="http://camunda.org/bpmn/reference.html#activities-task">Tasks</a> in the <a href="http://camunda.org/bpmn/reference.html">BPMN 2.0 Modeling Reference</a></li>
 <li><a href="https://github.com/camunda/camunda-consulting/tree/master/one-time-examples/order-confirmation-rules">Demo using Drools on the Business Rule Task</a></li>
 </ul>
@@ -8389,7 +8389,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="http://shaochenfeng.com/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
             Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2021
           </p>
@@ -8404,7 +8404,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   
 
-  <script type="text/javascript" src="/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
+  <script type="text/javascript" src="http://shaochenfeng.com/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

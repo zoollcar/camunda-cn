@@ -29,11 +29,11 @@
   <title>Camunda Platform RPA Bridge | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="/camunda-cn/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="http://shaochenfeng.com/camunda-cn/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
+  <link rel="stylesheet" href="http://shaochenfeng.com/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
 </head>
 <body class="">
 
@@ -45,8 +45,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="/camunda-cn/">
-      <img src="/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="http://shaochenfeng.com/camunda-cn/">
+      <img src="http://shaochenfeng.com/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">Docs</span>
       </a>
@@ -8113,7 +8113,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="/camunda-cn/">
+    <select id="version-select" data-basepath="/manual" base-url="http://shaochenfeng.com/camunda-cn/">
       
         <option  selected >develop</option>
       
@@ -8163,7 +8163,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <p>The Camunda RPA Bridge is a standalone application that allows calling RPA (robotic process automation) bots from BPMN models deployed to a Camunda engine. RPA bots can be orchestrated as External Tasks using the Camunda Modeler and Cawemo.</p>
 
-<p>For detailed instructions on how to connect your first RPA bot to a BPMN model (using Cawemo and the Camunda Modeler) and execute it from a running process instance using the Camunda engine, head over to our <a href="/camunda-cn/installation/camunda-bpm-rpa-bridge/">installation guide</a> or the <a href="https://docs.camunda.org/get-started/rpa">Getting Started Guide</a>.</p>
+<p>For detailed instructions on how to connect your first RPA bot to a BPMN model (using Cawemo and the Camunda Modeler) and execute it from a running process instance using the Camunda engine, head over to our <a href="http://shaochenfeng.com/camunda-cn/installation/camunda-bpm-rpa-bridge/">installation guide</a> or the <a href="https://docs.camunda.org/get-started/rpa">Getting Started Guide</a>.</p>
 
 <div class="note enterprise-feature">
   <h3>Enterprise Feature</h3>
@@ -8531,13 +8531,13 @@ logging.level.&lt;Logger&gt;: DEBUG
 
 <h1 id="set-up-an-rpa-task">Set up an RPA Task</h1>
 
-<p>The RPA bridge is a regular Java external task client and RPA tasks are <a href="/camunda-cn/user-guide/process-engine/external-tasks/">external tasks</a> with specific settings.</p>
+<p>The RPA bridge is a regular Java external task client and RPA tasks are <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/external-tasks/">external tasks</a> with specific settings.</p>
 
 <p>The bridge listens for tasks with the topics configured in the <code>application.yml</code> file. When a process instance reaches an external task with one of these topics, the bridge will fetch and lock them. Once a task is locked, the bridge forwards it to the configured RPA vendor, which will take care of executing the associated robots.</p>
 
 <h2 id="map-a-task-to-an-rpa-bot">Map a Task to an RPA Bot</h2>
 
-<p>It is necessary to add an <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#properties">extension property</a> with the name <code>bot</code> and a value that references the bot inside the RPA platform to tell the bridge for which RPA process a bot should be started. The different vendors have different ways of referencing RPA bots. Find the details in the table below.</p>
+<p>It is necessary to add an <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#properties">extension property</a> with the name <code>bot</code> and a value that references the bot inside the RPA platform to tell the bridge for which RPA process a bot should be started. The different vendors have different ways of referencing RPA bots. Find the details in the table below.</p>
 
 <table class="table table-striped">
   <tr>
@@ -8576,7 +8576,7 @@ This example shows an external task that will trigger the RPA bot <code>myRobot<
 
 <h2 id="variables">Variables</h2>
 
-<p>You can send/receive variables to/from an RPA bot by using <a href="/camunda-cn/user-guide/process-engine/variables/#input-output-variable-mapping">input and output mapping</a> on the external task.
+<p>You can send/receive variables to/from an RPA bot by using <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/variables/#input-output-variable-mapping">input and output mapping</a> on the external task.
 All local variables of the external task will be made available to the RPA bot. In return, all variables that the RPA bot exports will be returned back to the task and should be mapped to a higher scope via output mapping (if the rest of the process should have access to them).
 Make sure to define input variables in your RPA bot to access them.</p>
 
@@ -8600,7 +8600,7 @@ The bot might return more variables that are ignored in this case.</p>
 
 <p>It is important to keep in mind that the Camunda engine does not have any control over the RPA bot execution. An RPA bot might return one set of variables if it succeeds and a different set in case of failure.
 If you configure output mapping for a variable that returns from the bot you are relying on that bot to always return this variable. If the bot does not return the correct variable, the output mapping will fail with an exception.
-To prevent that, you can enable an engine configuration flag called <a href="/camunda-cn/reference/deployment-descriptors/tags/process-engine/#skipOutputMappingOnCanceledActivities">skipOutputMappingOnCanceledActivities</a>. The flag will cause all activities (not only RPA tasks) to skip the output mapping if they are canceled.</p>
+To prevent that, you can enable an engine configuration flag called <a href="http://shaochenfeng.com/camunda-cn/reference/deployment-descriptors/tags/process-engine/#skipOutputMappingOnCanceledActivities">skipOutputMappingOnCanceledActivities</a>. The flag will cause all activities (not only RPA tasks) to skip the output mapping if they are canceled.</p>
 
 <h3 id="variable-conversion-with-uipath">Variable Conversion with UiPath</h3>
 
@@ -8620,10 +8620,10 @@ To prevent that, you can enable an engine configuration flag called <a href="/ca
 
 <h2 id="error-handling">Error Handling</h2>
 
-<p>In case an RPA bot fails for any reason, you might want to react to the failure by throwing a <a href="/camunda-cn/reference/bpmn20/events/error-events/">BPMN error</a>.
-You can do that by adding the <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#erroreventdefinition">camunda:errorEventDefinition</a> extension element to a service task.</p>
+<p>In case an RPA bot fails for any reason, you might want to react to the failure by throwing a <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/events/error-events/">BPMN error</a>.
+You can do that by adding the <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#erroreventdefinition">camunda:errorEventDefinition</a> extension element to a service task.</p>
 
-<p>Compared to the <code>bpmn:errorEventDefinition</code>, the <code>camunda:errorEventDefinition</code> elements accept an additional <code>expression</code> attribute which supports any JUEL expression. Within the expression you have access to the <code>ExternalTaskEntity</code> object like shown in the example below. For more information about External Task error handling via <code>camunda:errorEventDefinition</code> have a look at the <a href="/camunda-cn/user-guide/process-engine/external-tasks/#error-event-definitions">External Tasks Guide</a>.</p>
+<p>Compared to the <code>bpmn:errorEventDefinition</code>, the <code>camunda:errorEventDefinition</code> elements accept an additional <code>expression</code> attribute which supports any JUEL expression. Within the expression you have access to the <code>ExternalTaskEntity</code> object like shown in the example below. For more information about External Task error handling via <code>camunda:errorEventDefinition</code> have a look at the <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/external-tasks/#error-event-definitions">External Tasks Guide</a>.</p>
 
 <p>You can use this feature regardless of the outcome of the RPA bot. Even if the bot was executed successfully, you could still decide to throw a BPMN error. Also note, that
 the RPA bot&rsquo;s variables are available for mapping and error handling via <code>camunda:errorEventDefinition</code>, even if the bot failed.</p>
@@ -8708,9 +8708,9 @@ the RPA bot&rsquo;s variables are available for mapping and error handling via <
 
 <p>At Camunda, we strive to offer an excellent user experience at a high and stable level. On a strict opt-in basis, we are looking to collect environment and usage data to further improve the user experience for you. These insights help us to understand typical environment setups and product usage patterns and will be used to make informed product improvement decisions to your benefit.</p>
 
-<p>Find more information on the <a href="/camunda-cn/introduction/telemetry/">general telemetry introduction page</a></p>
+<p>Find more information on the <a href="http://shaochenfeng.com/camunda-cn/introduction/telemetry/">general telemetry introduction page</a></p>
 
-<p>When enabled via including <code>org.camunda.bpm.rpa.enable-telemetry=true</code> in the <a href="/camunda-cn/user-guide/camunda-bpm-rpa-bridge/#enable-telemetry">configuration file</a>, the bridge will collect the following data and securely send them to a Camunda server.</p>
+<p>When enabled via including <code>org.camunda.bpm.rpa.enable-telemetry=true</code> in the <a href="http://shaochenfeng.com/camunda-cn/user-guide/camunda-bpm-rpa-bridge/#enable-telemetry">configuration file</a>, the bridge will collect the following data and securely send them to a Camunda server.</p>
 
 <h2 id="general-data">General Data</h2>
 
@@ -8735,7 +8735,7 @@ the RPA bot&rsquo;s variables are available for mapping and error handling via <
 
 <h2 id="legal-note">Legal Note</h2>
 
-<p>Before you install a Camunda Platform Runtime version &gt;= 7.14.0-alpha1 or activate the telemetry functionality, please make sure that you are authorized to take this step and that the installation or activation of the <a href="/camunda-cn/user-guide/camunda-bpm-rpa-bridge/#enable-telemetry">telemetry functionality</a> is not in conflict with any company-internal policies, compliance guidelines, any contractual or other provisions or obligations of your company.</p>
+<p>Before you install a Camunda Platform Runtime version &gt;= 7.14.0-alpha1 or activate the telemetry functionality, please make sure that you are authorized to take this step and that the installation or activation of the <a href="http://shaochenfeng.com/camunda-cn/user-guide/camunda-bpm-rpa-bridge/#enable-telemetry">telemetry functionality</a> is not in conflict with any company-internal policies, compliance guidelines, any contractual or other provisions or obligations of your company.</p>
 
 <p>Camunda cannot be held responsible in the event of unauthorized installation or activation of this function.</p>
 
@@ -8832,7 +8832,7 @@ the RPA bot&rsquo;s variables are available for mapping and error handling via <
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="http://shaochenfeng.com/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
             Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2021
           </p>
@@ -8847,7 +8847,7 @@ the RPA bot&rsquo;s variables are available for mapping and error handling via <
 
   
 
-  <script type="text/javascript" src="/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
+  <script type="text/javascript" src="http://shaochenfeng.com/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

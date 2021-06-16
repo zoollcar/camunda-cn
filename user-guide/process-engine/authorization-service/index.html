@@ -29,11 +29,11 @@
   <title>Authorization Service | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="/camunda-cn/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="http://shaochenfeng.com/camunda-cn/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
+  <link rel="stylesheet" href="http://shaochenfeng.com/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
 </head>
 <body class="">
 
@@ -45,8 +45,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="/camunda-cn/">
-      <img src="/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="http://shaochenfeng.com/camunda-cn/">
+      <img src="http://shaochenfeng.com/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">Docs</span>
       </a>
@@ -8113,7 +8113,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="/camunda-cn/">
+    <select id="version-select" data-basepath="/manual" base-url="http://shaochenfeng.com/camunda-cn/">
       
         <option  selected >develop</option>
       
@@ -8564,7 +8564,7 @@ The following table gives an overview for which resources they are available:</p
   </tbody>
 </table>
 
-<p>To execute an operation <a href="/camunda-cn/user-guide/process-engine/batch/">asynchronously</a>, only a &ldquo;Create&rdquo; permission on the Batch Resource is required. However, when executing the same operation synchronously, the specific permissions (e.g. &ldquo;Delete&rdquo; on Process Instance Resource) are checked.</p>
+<p>To execute an operation <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/batch/">asynchronously</a>, only a &ldquo;Create&rdquo; permission on the Batch Resource is required. However, when executing the same operation synchronously, the specific permissions (e.g. &ldquo;Delete&rdquo; on Process Instance Resource) are checked.</p>
 
 <p>For example, a user without the &ldquo;Update&rdquo; permission on the Process Instance Resource and granted &ldquo;Create&rdquo; permission on the Batch Resource can modify multiple Process Instances asynchronously by creating a batch, although he could not execute this operation synchronously.</p>
 
@@ -8831,10 +8831,10 @@ Out of the box, it can be granted for the following categories (resource ids):</
 <p>The resources control whether a user can read the history related to a specific instance.</p>
 
 <p>Compared to runtime permissions, historic permissions are not immediately removed when the related
-instance has been finished. The <a href="/camunda-cn/user-guide/process-engine/history/#removal-time-based-strategy">Removal-Time-based History Cleanup Strategy</a> removes historic
+instance has been finished. The <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/history/#removal-time-based-strategy">Removal-Time-based History Cleanup Strategy</a> removes historic
 permissions at a later point.</p>
 
-<p>You can enable the permissions with the help of a <a href="/camunda-cn/reference/deployment-descriptors/tags/process-engine/#enable-historic-instance-permissions">process engine configuration flag</a>:</p>
+<p>You can enable the permissions with the help of a <a href="http://shaochenfeng.com/camunda-cn/reference/deployment-descriptors/tags/process-engine/#enable-historic-instance-permissions">process engine configuration flag</a>:</p>
 
 <pre><code class="language-xml">&lt;property name=&quot;enableHistoricInstancePermissions&quot;&gt;true&lt;/property&gt;
 </code></pre>
@@ -8888,7 +8888,7 @@ retrieve the entities related to the Historic Process Instance:</p>
 
 <p>When downloading the Camunda Platform distribution, the invoice example application creates a group with id <code>camunda-admin</code> and grants all authorizations on all resources to this group.</p>
 
-<p>In absense of the demo application, this task is performed by the <a href="/camunda-cn/webapps/admin/user-management/#initial-user-setup">Camunda Admin Web Application</a>. If the Camunda webapplication is started for the first time and no user exists in the database, it asks you to perform the &ldquo;initial setup&rdquo;. In this process, the <code>camunda-admin</code> group is created and granted all permissions on all resources.</p>
+<p>In absense of the demo application, this task is performed by the <a href="http://shaochenfeng.com/camunda-cn/webapps/admin/user-management/#initial-user-setup">Camunda Admin Web Application</a>. If the Camunda webapplication is started for the first time and no user exists in the database, it asks you to perform the &ldquo;initial setup&rdquo;. In this process, the <code>camunda-admin</code> group is created and granted all permissions on all resources.</p>
 
 
 <div class="note bg-info docs-info">
@@ -9030,7 +9030,7 @@ authorizationService.saveAuthorization(authProcessInstance);
 
 <h1 id="camunda-admin-webapp">Camunda Admin Webapp</h1>
 
-<p>The Camunda Admin Webapplication provides an out of the box <a href="/camunda-cn/webapps/admin/authorization-management/">UI for configuring Authorizations</a>.</p>
+<p>The Camunda Admin Webapplication provides an out of the box <a href="http://shaochenfeng.com/camunda-cn/webapps/admin/authorization-management/">UI for configuring Authorizations</a>.</p>
 
 <h1 id="performance-considerations">Performance Considerations</h1>
 
@@ -9126,7 +9126,7 @@ authorizationService.saveAuthorization(authProcessInstance);
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="http://shaochenfeng.com/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
             Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2021
           </p>
@@ -9141,7 +9141,7 @@ authorizationService.saveAuthorization(authProcessInstance);
 
   
 
-  <script type="text/javascript" src="/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
+  <script type="text/javascript" src="http://shaochenfeng.com/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

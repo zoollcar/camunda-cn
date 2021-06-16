@@ -29,11 +29,11 @@
   <title>Decision Service in the Process Engine | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="/camunda-cn/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="http://shaochenfeng.com/camunda-cn/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
+  <link rel="stylesheet" href="http://shaochenfeng.com/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
 </head>
 <body class="">
 
@@ -45,8 +45,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="/camunda-cn/">
-      <img src="/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="http://shaochenfeng.com/camunda-cn/">
+      <img src="http://shaochenfeng.com/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">Docs</span>
       </a>
@@ -8113,7 +8113,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="/camunda-cn/">
+    <select id="version-select" data-basepath="/manual" base-url="http://shaochenfeng.com/camunda-cn/">
       
         <option  selected >develop</option>
       
@@ -8161,7 +8161,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="col-xs-12 content-text">
       
 
-<p>The decision service is a part of the process engine&rsquo;s <a href="/camunda-cn/user-guide/process-engine/process-engine-api/#services-api">Services API</a>. It allows
+<p>The decision service is a part of the process engine&rsquo;s <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/process-engine-api/#services-api">Services API</a>. It allows
 to evaluate a deployed decision definition independently from BPMN and CMMN.</p>
 
 <h1 id="evaluating-a-decision">Evaluating a Decision</h1>
@@ -8192,7 +8192,7 @@ DmnDecisionTableResult decisionResult = decisionService
 
 <p>The key of a decision definition is specified by the <code>id</code> attribute of the
 <code>decision</code> element in the DMN XML. The different naming is related to the
-<a href="/camunda-cn/user-guide/process-engine/decisions/repository/#versioning-of-decisions">Versioning of Decisions</a>. Since a key can reference multiple versions of a
+<a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/decisions/repository/#versioning-of-decisions">Versioning of Decisions</a>. Since a key can reference multiple versions of a
 decision definition, the id specifies exactly one version.</p>
 
 <h2 id="passing-data">Passing Data</h2>
@@ -8202,7 +8202,7 @@ referenced in an input expression or an input entry of a decision table. The
 variables are passed to the decision service as key-value pairs. Each pair
 specifies the name and the value of a variable.</p>
 
-<p>For more information on the different expressions see the <a href="/camunda-cn/reference/dmn/decision-table/">DMN 1.3 reference</a>.</p>
+<p>For more information on the different expressions see the <a href="http://shaochenfeng.com/camunda-cn/reference/dmn/decision-table/">DMN 1.3 reference</a>.</p>
 
 <h1 id="authorizations-for-evaluating-decisions">Authorizations for Evaluating Decisions</h1>
 
@@ -8210,7 +8210,7 @@ specifies the name and the value of a variable.</p>
 <code>DECISION_DEFINITION</code> to evaluate decisions. The resource id of the
 authorization is the decision definition key.</p>
 
-<p>For more information about authorizations please refer to the <a href="/camunda-cn/user-guide/process-engine/authorization-service/">Authorization
+<p>For more information about authorizations please refer to the <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/authorization-service/">Authorization
 Service</a> section.</p>
 
 <h1 id="working-with-the-decision-result">Working with the Decision Result</h1>
@@ -8218,11 +8218,11 @@ Service</a> section.</p>
 <p>The result of an evaluation is called decision result. The decision result is a complex object
 of type <code>DmnDecisionResult</code>. Think of it as a list of key-value pairs.</p>
 
-<p>If the decision is implemented as <a href="/camunda-cn/reference/dmn/decision-table/">decision table</a> then each entry in the list represents one matched rule. The output entries of this
+<p>If the decision is implemented as <a href="http://shaochenfeng.com/camunda-cn/reference/dmn/decision-table/">decision table</a> then each entry in the list represents one matched rule. The output entries of this
 rule are represented by the key-value pairs. The key of a pair is specified by
 the name of the output.</p>
 
-<p>Instead, if the decision is implemented as <a href="/camunda-cn/reference/dmn/decision-literal-expression/">decision literal expression</a> then the list contains only one entry. This entry represents the expression value and is mapped by the variable name.</p>
+<p>Instead, if the decision is implemented as <a href="http://shaochenfeng.com/camunda-cn/reference/dmn/decision-literal-expression/">decision literal expression</a> then the list contains only one entry. This entry represents the expression value and is mapped by the variable name.</p>
 
 <p>The decision result provides methods from interface <code>List&lt;Map&lt;String,
 Object&gt;&gt;</code> and some convenience methods.</p>
@@ -8247,12 +8247,12 @@ String result = decisionResult.getSingleEntry();
 </code></pre>
 
 <p>Note that the decision result also provides methods to get typed output entries.
-A complete list of all methods can be found in the <a href="/camunda-cn/reference/javadoc/?org/camunda/bpm/dmn/engine/DmnDecisionResult">Java Docs</a>
+A complete list of all methods can be found in the <a href="http://shaochenfeng.com/camunda-cn/reference/javadoc/?org/camunda/bpm/dmn/engine/DmnDecisionResult">Java Docs</a>
 .</p>
 
-<p>If the decision is implemented as <a href="/camunda-cn/reference/dmn/decision-table/">decision table</a> then it can also be evaluated using one of the
-<a href="/camunda-cn/reference/javadoc/?org/camunda/bpm/engine/DecisionService.html##evaluateDecisionTableByKey%28java.lang.String%29">evaluateDecisionTable</a>
- methods. In this case, the evaluation returns a <a href="/camunda-cn/reference/javadoc/?org/camunda/bpm/dmn/engine/DmnDecisionTableResult.html">DmnDecisionTableResult</a>
+<p>If the decision is implemented as <a href="http://shaochenfeng.com/camunda-cn/reference/dmn/decision-table/">decision table</a> then it can also be evaluated using one of the
+<a href="http://shaochenfeng.com/camunda-cn/reference/javadoc/?org/camunda/bpm/engine/DecisionService.html##evaluateDecisionTableByKey%28java.lang.String%29">evaluateDecisionTable</a>
+ methods. In this case, the evaluation returns a <a href="http://shaochenfeng.com/camunda-cn/reference/javadoc/?org/camunda/bpm/dmn/engine/DmnDecisionTableResult.html">DmnDecisionTableResult</a>
  which is semantically equal and provide the same methods as a
 <code>DmnDecisionResult</code>.</p>
 
@@ -8271,7 +8271,7 @@ the decision. The history can be queried by the history service.</p>
   .list();
 </code></pre>
 
-<p>For more information about this, please refer to the <a href="/camunda-cn/user-guide/process-engine/decisions/history/">History for DMN Decisions</a>.</p>
+<p>For more information about this, please refer to the <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/decisions/history/">History for DMN Decisions</a>.</p>
 
     </div>
   </div>
@@ -8305,7 +8305,7 @@ the decision. The history can be queried by the history service.</p>
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="http://shaochenfeng.com/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
             Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2021
           </p>
@@ -8320,7 +8320,7 @@ the decision. The history can be queried by the history service.</p>
 
   
 
-  <script type="text/javascript" src="/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
+  <script type="text/javascript" src="http://shaochenfeng.com/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

@@ -29,11 +29,11 @@
   <title>Error Handling | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="/camunda-cn/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="http://shaochenfeng.com/camunda-cn/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
+  <link rel="stylesheet" href="http://shaochenfeng.com/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
 </head>
 <body class="">
 
@@ -45,8 +45,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="/camunda-cn/">
-      <img src="/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="http://shaochenfeng.com/camunda-cn/">
+      <img src="http://shaochenfeng.com/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">Docs</span>
       </a>
@@ -8113,7 +8113,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="/camunda-cn/">
+    <select id="version-select" data-basepath="/manual" base-url="http://shaochenfeng.com/camunda-cn/">
       
         <option  selected >develop</option>
       
@@ -8174,13 +8174,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <h2 id="transaction-rollbacks">Transaction Rollbacks</h2>
 
-<p>The standard handling strategy is that exceptions are thrown to the client, meaning that the current transaction is rolled back. This means that the process state is rolled back to the last wait state. This behavior is described in detail in the <a href="/camunda-cn/user-guide/process-engine/transactions-in-processes/">Transactions in Processes</a> section of the <a href="/camunda-cn/user-guide/">User Guide</a>. Error handling is delegated to the client by the engine.</p>
+<p>The standard handling strategy is that exceptions are thrown to the client, meaning that the current transaction is rolled back. This means that the process state is rolled back to the last wait state. This behavior is described in detail in the <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/transactions-in-processes/">Transactions in Processes</a> section of the <a href="http://shaochenfeng.com/camunda-cn/user-guide/">User Guide</a>. Error handling is delegated to the client by the engine.</p>
 
 <p>Let&rsquo;s show this in a concrete example: the user gets an error dialog on the frontend stating that the stock management software is currently not reachable due to network errors. To perform a retry, the user might have to click the same button again. Even if this is often not desired it is still a simple strategy applicable in a lot of situations.</p>
 
 <h2 id="async-and-failed-jobs">Async and Failed Jobs</h2>
 
-<p>If you don&rsquo;t want the exception being shown to the user, one option is to make service calls, which might cause an error, async (as described in <a href="/camunda-cn/user-guide/process-engine/transactions-in-processes/">Transactions in Processes</a>). In that case the exception is stored in the process engine database and the <a href="/camunda-cn/user-guide/process-engine/the-job-executor/">Job</a> in the background is marked as failed (to be more precise, the exception is stored and some retry counter is decremented).</p>
+<p>If you don&rsquo;t want the exception being shown to the user, one option is to make service calls, which might cause an error, async (as described in <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/transactions-in-processes/">Transactions in Processes</a>). In that case the exception is stored in the process engine database and the <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/the-job-executor/">Job</a> in the background is marked as failed (to be more precise, the exception is stored and some retry counter is decremented).</p>
 
 <p>In the example above this means that the user will not see an error but an &ldquo;everything successful&rdquo; dialog. The exception is stored on the job. Now either a clever retry strategy will automatically re-trigger the job later on (when the network is available again) or an operator needs to have a look at the error and trigger an additional retry. This is shown later in more detail.</p>
 
@@ -8218,11 +8218,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </figure>
 
 
-<p>See the <a href="/camunda-cn/reference/bpmn20/events/error-events/">Error Events</a> section of the <a href="/camunda-cn/reference/bpmn20/">BPMN 2.0 Implementation Reference</a> and the <a href="/camunda-cn/user-guide/process-engine/delegation-code/#throw-bpmn-errors-from-delegation-code">Throwing Errors from Delegation Code</a> section of the <a href="/camunda-cn/user-guide/">User Guide</a> for more information.</p>
+<p>See the <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/events/error-events/">Error Events</a> section of the <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/">BPMN 2.0 Implementation Reference</a> and the <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/delegation-code/#throw-bpmn-errors-from-delegation-code">Throwing Errors from Delegation Code</a> section of the <a href="http://shaochenfeng.com/camunda-cn/user-guide/">User Guide</a> for more information.</p>
 
 <h2 id="bpmn-2-0-compensation-and-business-transactions">BPMN 2.0 Compensation and Business Transactions</h2>
 
-<p>BPMN 2.0 transactions and compensations allow you to model business transaction boundaries (however, not in a technical ACID manner) and make sure already executed actions are compensated during a rollback. Compensation means to make the effect of the action invisible, e.g. book in goods if you have previously booked out the goods. See the <a href="/camunda-cn/reference/bpmn20/events/cancel-and-compensation-events/">BPMN Compensation event</a> and the <a href="/camunda-cn/reference/bpmn20/subprocesses/transaction-subprocess/">BPMN Transaction Subprocess</a> sections of the <a href="/camunda-cn/reference/bpmn20/">BPMN 2.0 Implementation Reference</a> for details.</p>
+<p>BPMN 2.0 transactions and compensations allow you to model business transaction boundaries (however, not in a technical ACID manner) and make sure already executed actions are compensated during a rollback. Compensation means to make the effect of the action invisible, e.g. book in goods if you have previously booked out the goods. See the <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/events/cancel-and-compensation-events/">BPMN Compensation event</a> and the <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/subprocesses/transaction-subprocess/">BPMN Transaction Subprocess</a> sections of the <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/">BPMN 2.0 Implementation Reference</a> for details.</p>
 
 <h1 id="monitoring-and-recovery-strategies">Monitoring and Recovery Strategies</h1>
 
@@ -8234,9 +8234,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <h2 id="retry-failed-jobs">Retry Failed Jobs</h2>
 
-<p>If you use Jobs (<code>async</code>), you can leverage Cockpit as monitoring tool to handle failed jobs, in this case no end user sees the exception. Then you normally see failures in cockpit when the retries are depleted (see the <a href="/camunda-cn/user-guide/process-engine/the-job-executor/#failed-jobs">Failed Jobs</a> section of the <a href="/camunda-cn/webapps/cockpit/">Web Applications</a> for more information).</p>
+<p>If you use Jobs (<code>async</code>), you can leverage Cockpit as monitoring tool to handle failed jobs, in this case no end user sees the exception. Then you normally see failures in cockpit when the retries are depleted (see the <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/the-job-executor/#failed-jobs">Failed Jobs</a> section of the <a href="http://shaochenfeng.com/camunda-cn/webapps/cockpit/">Web Applications</a> for more information).</p>
 
-<p>See the <a href="/camunda-cn/webapps/cockpit/bpmn/failed-jobs/">Failed Jobs in Cockpit</a> section of the <a href="/camunda-cn/webapps/cockpit/">Web Applications</a> for more details.</p>
+<p>See the <a href="http://shaochenfeng.com/camunda-cn/webapps/cockpit/bpmn/failed-jobs/">Failed Jobs in Cockpit</a> section of the <a href="http://shaochenfeng.com/camunda-cn/webapps/cockpit/">Web Applications</a> for more details.</p>
 
 <p>If you don&rsquo;t want to use Cockpit, you can also find the failed jobs via the API yourself:</p>
 
@@ -8317,7 +8317,7 @@ for (Job failedJob : failedJobs) {
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="http://shaochenfeng.com/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
             Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2021
           </p>
@@ -8332,7 +8332,7 @@ for (Job failedJob : failedJobs) {
 
   
 
-  <script type="text/javascript" src="/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
+  <script type="text/javascript" src="http://shaochenfeng.com/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

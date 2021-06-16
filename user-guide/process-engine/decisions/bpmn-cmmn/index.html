@@ -29,11 +29,11 @@
   <title>Invoke Decisions from Processes and Cases | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="/camunda-cn/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="http://shaochenfeng.com/camunda-cn/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
+  <link rel="stylesheet" href="http://shaochenfeng.com/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
 </head>
 <body class="">
 
@@ -45,8 +45,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="/camunda-cn/">
-      <img src="/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="http://shaochenfeng.com/camunda-cn/">
+      <img src="http://shaochenfeng.com/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">Docs</span>
       </a>
@@ -8113,7 +8113,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="/camunda-cn/">
+    <select id="version-select" data-basepath="/manual" base-url="http://shaochenfeng.com/camunda-cn/">
       
         <option  selected >develop</option>
       
@@ -8167,7 +8167,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <h2 id="bpmn-business-rule-task">BPMN Business Rule Task</h2>
 
-<p>The BPMN business rule task can reference a <a href="/camunda-cn/user-guide/process-engine/decisions/repository/">deployed</a> decision
+<p>The BPMN business rule task can reference a <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/decisions/repository/">deployed</a> decision
 definition. The decision definition is evaluated when the task is executed.</p>
 
 <pre><code class="language-xml">&lt;definitions id=&quot;taskAssigneeExample&quot;
@@ -8191,11 +8191,11 @@ definition. The decision definition is evaluated when the task is executed.</p>
 </code></pre>
 
 <p>For more information on how to reference a decision definition from a business
-rule task, please refer to the <a href="/camunda-cn/reference/bpmn20/tasks/business-rule-task/">BPMN 2.0 reference</a>.</p>
+rule task, please refer to the <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/tasks/business-rule-task/">BPMN 2.0 reference</a>.</p>
 
 <h2 id="dmn-decision-task">DMN Decision Task</h2>
 
-<p>The CMMN decision task references a <a href="/camunda-cn/user-guide/process-engine/decisions/repository/">deployed</a> decision definition.
+<p>The CMMN decision task references a <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/decisions/repository/">deployed</a> decision definition.
 The decision definition is invoked when the task is activated.</p>
 
 <pre><code class="language-xml">&lt;definitions id=&quot;definitions&quot;
@@ -8216,18 +8216,18 @@ The decision definition is invoked when the task is activated.</p>
 </code></pre>
 
 <p>For more information on how to reference a decision definition from a decision
-task, please refer to the <a href="/camunda-cn/reference/cmmn11/tasks/decision-task/">CMMN 1.1 reference</a>.</p>
+task, please refer to the <a href="http://shaochenfeng.com/camunda-cn/reference/cmmn11/tasks/decision-task/">CMMN 1.1 reference</a>.</p>
 
 <h1 id="the-decision-result">The Decision Result</h1>
 
 <p>The output of the decision, also called decision result, is a complex object of
 type <code>DmnDecisionResult</code>. Generally, it is a list of key-value pairs.</p>
 
-<p>If the decision is implemented as <a href="/camunda-cn/reference/dmn/decision-table/">decision table</a> then each entry in the list represents one matched rule. The output entries of this
+<p>If the decision is implemented as <a href="http://shaochenfeng.com/camunda-cn/reference/dmn/decision-table/">decision table</a> then each entry in the list represents one matched rule. The output entries of this
 rule are represented by the key-value pairs. The key of a pair is specified by
 the name of the output.</p>
 
-<p>Instead, if the decision is implemented as <a href="/camunda-cn/reference/dmn/decision-literal-expression/">decision literal expression</a> then the list contains only one entry. This entry represents the expression value and is mapped by the variable name.</p>
+<p>Instead, if the decision is implemented as <a href="http://shaochenfeng.com/camunda-cn/reference/dmn/decision-literal-expression/">decision literal expression</a> then the list contains only one entry. This entry represents the expression value and is mapped by the variable name.</p>
 
 <p>The type <code>DmnDecisionResult</code> provides methods from the <code>List</code> interface
 and some convenience methods like <code>getSingleResult()</code> or <code>getFirstResult()</code> to
@@ -8250,9 +8250,9 @@ Object value = decisionResult
 </code></pre>
 
 <p>It also provides methods to get typed output entries like
-<code>getSingleEntryTyped()</code>. Please refer to the <a href="/camunda-cn/user-guide/process-engine/variables/#typed-value-api">User Guide</a> for
+<code>getSingleEntryTyped()</code>. Please refer to the <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/variables/#typed-value-api">User Guide</a> for
 details about typed values. A complete list of all methods can be found in the
-<a href="/camunda-cn/reference/javadoc/?org/camunda/bpm/dmn/engine/DmnDecisionResult">Java Docs</a>
+<a href="http://shaochenfeng.com/camunda-cn/reference/javadoc/?org/camunda/bpm/dmn/engine/DmnDecisionResult">Java Docs</a>
 .</p>
 
 <p>The decision result is available in the local scope of the executing task as a
@@ -8262,7 +8262,7 @@ using a predefined or a custom mapping of the decision result, if necessary.</p>
 <h2 id="predefined-mapping-of-the-decision-result">Predefined Mapping of the Decision Result</h2>
 
 <p>The engine includes predefined mappings of the decision result for common use
-cases. The mapping is similar to an <a href="/camunda-cn/user-guide/process-engine/variables/#input-output-variable-mapping">output variable mapping</a>. It extracts a
+cases. The mapping is similar to an <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/variables/#input-output-variable-mapping">output variable mapping</a>. It extracts a
 value from the decision result which is saved in a process/case variable. The
 following mappings are available:</p>
 
@@ -8295,7 +8295,7 @@ following mappings are available:</p>
   </tr>
 </table>
 
-<p>Only the <code>singleEntry</code> mapper returns a <a href="/camunda-cn/user-guide/process-engine/variables/#typed-value-api">typed value</a> that
+<p>Only the <code>singleEntry</code> mapper returns a <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/variables/#typed-value-api">typed value</a> that
 wraps the value of the output entry and additional type information. The
 other mappers return collections which contain the value of the output entries
 as normal Java objects without additional type information.</p>
@@ -8357,7 +8357,7 @@ consider the <a href="#limitations-of-the-serialization-of-the-mapping-result">l
 
 <p>If a business rule task is used to invoke a decision inside a BPMN process,
 then the decision result can be passed into process variables by using an
-<a href="/camunda-cn/user-guide/process-engine/variables/#input-output-variable-mapping">output variable mapping</a>.</p>
+<a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/variables/#input-output-variable-mapping">output variable mapping</a>.</p>
 
 <p>For example, if the decision result has multiple output values which should be
 saved in separate process variables this can be done achieved by defining an
@@ -8378,7 +8378,7 @@ output mapping on the business rule task.</p>
 </code></pre>
 
 <p>In addition to an output variable mapping, the decision result can also be
-processed by an <a href="/camunda-cn/user-guide/process-engine/delegation-code/#execution-listener">execution listener</a>, which is attached to the business rule
+processed by an <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/delegation-code/#execution-listener">execution listener</a>, which is attached to the business rule
 task.</p>
 
 <pre><code class="language-xml">&lt;businessRuleTask id=&quot;businessRuleTask&quot; camunda:decisionRef=&quot;myDecision&quot;&gt;
@@ -8437,7 +8437,7 @@ listener which is attached to the decision task.</p>
 the decision result to Java collections. The implementation of the collections
 depends on the used JDK and contains untyped values as Objects. When a collection
 is saved as process/case variable then it is serialized as object value because
-there is no suitable primitive value type. Depending on the used <a href="/camunda-cn/user-guide/process-engine/variables/#object-value-serialization">object value
+there is no suitable primitive value type. Depending on the used <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/variables/#object-value-serialization">object value
 serialization</a>, this can lead to deserialization problems.</p>
 
 <p>In case you are using the default built-in object serialization, the variable
@@ -8462,7 +8462,7 @@ by yourself.</p>
 
 <p>DMN Decision tables and Decision Literal Expressions contain multiple expressions which will be evaluated by the
 DMN engine. For more information about the expressions of a decision
-please see our <a href="/camunda-cn/reference/dmn/decision-table/">DMN 1.3 reference</a>. These expressions can
+please see our <a href="http://shaochenfeng.com/camunda-cn/reference/dmn/decision-table/">DMN 1.3 reference</a>. These expressions can
 access all process/case variables which are available in the scope of the
 calling task. The variables are provided through a read-only variable context.</p>
 
@@ -8483,7 +8483,7 @@ by its name.</p>
 </code></pre>
 
 <p>The returned value of the process/case variable in the expression will
-be a normal object and not a <a href="/camunda-cn/user-guide/process-engine/variables/#typed-value-api">typed value</a>. If you want
+be a normal object and not a <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/variables/#typed-value-api">typed value</a>. If you want
 to use the typed value in your expression, you have to get the variable
 from the variable context. The following snippet does the same as the above
 example. It gets the variable <code>foo</code> from the variable context and returns
@@ -8504,9 +8504,9 @@ its unwrapped value.</p>
 
 <h1 id="expression-language-integration">Expression Language Integration</h1>
 
-<p>By default, the DMN engine uses <a href="/camunda-cn/reference/dmn/feel/">FEEL</a> as expression language for input
+<p>By default, the DMN engine uses <a href="http://shaochenfeng.com/camunda-cn/reference/dmn/feel/">FEEL</a> as expression language for input
 expressions, input entries, output entries and literal expressions.
-Please see the <a href="/camunda-cn/user-guide/dmn-engine/expressions-and-scripts/">DMN engine</a> guide for more
+Please see the <a href="http://shaochenfeng.com/camunda-cn/user-guide/dmn-engine/expressions-and-scripts/">DMN engine</a> guide for more
 information about expression languages.</p>
 
 <h2 id="accessing-beans">Accessing Beans</h2>
@@ -8515,7 +8515,7 @@ information about expression languages.</p>
 JUEL configuration as the Camunda Platform engine. Therefore, it is also
 possible to access Spring and CDI Beans from JUEL expressions in decisions.
 For more information on this integration, please see the corresponding
-section in the <a href="/camunda-cn/user-guide/spring-framework-integration/#expression-resolving">Spring</a> and <a href="/camunda-cn/user-guide/cdi-java-ee-integration/expression-resolving/">CDI</a> guides.</p>
+section in the <a href="http://shaochenfeng.com/camunda-cn/user-guide/spring-framework-integration/#expression-resolving">Spring</a> and <a href="http://shaochenfeng.com/camunda-cn/user-guide/cdi-java-ee-integration/expression-resolving/">CDI</a> guides.</p>
 
 
 <div class="note bg-info docs-info">
@@ -8529,12 +8529,12 @@ section in the <a href="/camunda-cn/user-guide/spring-framework-integration/#exp
 
 <div class="note bg-warning docs-warning">
   <h3>Use of Internal API</h3>
-  <p>These APIs are <strong>not</strong> part of the <a href="/camunda-cn/introduction/public-api/">public API</a> and may change in later releases.</p>
+  <p>These APIs are <strong>not</strong> part of the <a href="http://shaochenfeng.com/camunda-cn/introduction/public-api/">public API</a> and may change in later releases.</p>
 </div>
 
 
 <p>It is possible to add own functions which can be used inside JUEL expressions.
-Therefore a new <a href="/camunda-cn/reference/javadoc/?org/camunda/bpm/engine/impl/javax/el/FunctionMapper.html">FunctionMapper</a>
+Therefore a new <a href="http://shaochenfeng.com/camunda-cn/reference/javadoc/?org/camunda/bpm/engine/impl/javax/el/FunctionMapper.html">FunctionMapper</a>
  has to be implemented. The function mapper than
 has to be added to the process engine configuration after it was
 initialized.</p>
@@ -8547,7 +8547,7 @@ processEngineConfiguration
   .addFunctionMapper(new MyFunctionMapper());
 </code></pre>
 
-<p>This can be done, for example, by creating a <a href="/camunda-cn/user-guide/process-engine/process-engine-plugins/">process engine plugin</a>.</p>
+<p>This can be done, for example, by creating a <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/process-engine-plugins/">process engine plugin</a>.</p>
 
 <p>Please <strong>note</strong> that these functions are available in all JUEL expressions
 in the platform, not only in DMN decisions.</p>
@@ -8597,7 +8597,7 @@ in the platform, not only in DMN decisions.</p>
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="http://shaochenfeng.com/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
             Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2021
           </p>
@@ -8612,7 +8612,7 @@ in the platform, not only in DMN decisions.</p>
 
   
 
-  <script type="text/javascript" src="/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
+  <script type="text/javascript" src="http://shaochenfeng.com/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

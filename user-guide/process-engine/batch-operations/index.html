@@ -29,11 +29,11 @@
   <title>Batch operations | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="/camunda-cn/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="http://shaochenfeng.com/camunda-cn/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
+  <link rel="stylesheet" href="http://shaochenfeng.com/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
 </head>
 <body class="">
 
@@ -45,8 +45,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="/camunda-cn/">
-      <img src="/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="http://shaochenfeng.com/camunda-cn/">
+      <img src="http://shaochenfeng.com/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">Docs</span>
       </a>
@@ -8113,7 +8113,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="/camunda-cn/">
+    <select id="version-select" data-basepath="/manual" base-url="http://shaochenfeng.com/camunda-cn/">
       
         <option  selected >develop</option>
       
@@ -8164,13 +8164,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>The following operations can be executed asynchronously</p>
 
 <ul>
-<li><a href="/camunda-cn/user-guide/process-engine/process-instance-migration/#asynchronous-batch-migration-execution">Process Instance Migration</a></li>
+<li><a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/process-instance-migration/#asynchronous-batch-migration-execution">Process Instance Migration</a></li>
 <li><a href="#cancellation-of-running-process-instances">Cancellation of running Process Instances</a></li>
 <li><a href="#deletion-of-historic-process-instances">Deletion of Historic Process Instances</a></li>
 <li><a href="#update-suspend-state-of-process-instances">Update suspend state of process instances</a></li>
 <li><a href="#setting-retries-of-jobs-associated-with-process-instances">Setting retries of jobs associated with Process Instances</a></li>
-<li><a href="/camunda-cn/user-guide/process-engine/process-instance-modification/#modification-of-multiple-process-instances">Process Instance Modification</a></li>
-<li><a href="/camunda-cn/user-guide/process-engine/process-instance-restart/#asynchronous-batch-execution">Process Instance Restart</a></li>
+<li><a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/process-instance-modification/#modification-of-multiple-process-instances">Process Instance Modification</a></li>
+<li><a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/process-instance-restart/#asynchronous-batch-execution">Process Instance Restart</a></li>
 <li><a href="#setting-retries-of-external-tasks">Setting retries of external tasks</a></li>
 <li><a href="#set-variables-to-process-instances">Set Variables to Process Instances</a></li>
 <li><a href="#historic-process-instances">Set a Removal Time to Historic Process Instances</a></li>
@@ -8179,7 +8179,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </ul>
 
 <p>All batch operations rely on corresponding methods that provide the possibility to
-operate on a list of entities synchronously. Please refer to the general <a href="/camunda-cn/user-guide/process-engine/batch/">Batch</a> documentation to
+operate on a list of entities synchronously. Please refer to the general <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/batch/">Batch</a> documentation to
 understand the creation process better.</p>
 
 <p>Asynchronous operations can be performed based on a list of specific instances as well as on the result of a query providing a
@@ -8187,7 +8187,7 @@ resulting list of instances. If both a list of instances and a query are provide
 will consist of the union of those two subsets.</p>
 
 <p>All listed batch operations, except <a href="#historic-batches">Set a Removal Time to Historic Batches</a>, are deployment-aware.
-In particular, this means that the seed job and execution jobs will receive a <code>deploymentId</code> so <a href="/camunda-cn/user-guide/process-engine/the-job-executor/#job-execution-in-heterogeneous-clusters">deployment-aware job executors</a> can pick up those jobs of a batch that need to be executed on their nodes. The deployment id of the seed job is chosen from the list of involved deployments. This list is derived from the resulting set of affected instances. Execution jobs only contain elements of the same deployment and are bound to that deployment&rsquo;s id.</p>
+In particular, this means that the seed job and execution jobs will receive a <code>deploymentId</code> so <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/the-job-executor/#job-execution-in-heterogeneous-clusters">deployment-aware job executors</a> can pick up those jobs of a batch that need to be executed on their nodes. The deployment id of the seed job is chosen from the list of involved deployments. This list is derived from the resulting set of affected instances. Execution jobs only contain elements of the same deployment and are bound to that deployment&rsquo;s id.</p>
 
 <h2 id="cancellation-of-running-process-instances">Cancellation Of Running Process Instances</h2>
 
@@ -8256,7 +8256,7 @@ runtimeService.setVariablesAsync(processInstanceIds, variables);
 <h3 id="known-limitation">Known Limitation</h3>
 
 <p>Currently, it is not possible to set transient variables via batch operation. However,
-you can <a href="/camunda-cn/user-guide/process-engine/variables/#transient-variables">set transient variables</a> synchronously.</p>
+you can <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/variables/#transient-variables">set transient variables</a> synchronously.</p>
 
 <h2 id="set-a-removal-time">Set a Removal Time</h2>
 
@@ -8384,7 +8384,7 @@ Batch batch = historyService.setRemovalTimeToHistoricBatches()
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="http://shaochenfeng.com/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
             Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2021
           </p>
@@ -8399,7 +8399,7 @@ Batch batch = historyService.setRemovalTimeToHistoricBatches()
 
   
 
-  <script type="text/javascript" src="/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
+  <script type="text/javascript" src="http://shaochenfeng.com/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

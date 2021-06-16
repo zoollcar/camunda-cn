@@ -29,11 +29,11 @@
   <title>Process Application Resource Access | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="/camunda-cn/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="http://shaochenfeng.com/camunda-cn/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
+  <link rel="stylesheet" href="http://shaochenfeng.com/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
 </head>
 <body class="">
 
@@ -45,8 +45,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="/camunda-cn/">
-      <img src="/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="http://shaochenfeng.com/camunda-cn/">
+      <img src="http://shaochenfeng.com/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">Docs</span>
       </a>
@@ -8113,7 +8113,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="/camunda-cn/">
+    <select id="version-select" data-basepath="/manual" base-url="http://shaochenfeng.com/camunda-cn/">
       
         <option  selected >develop</option>
       
@@ -8161,7 +8161,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="col-xs-12 content-text">
       
 
-<p>Process applications provide and logically group resources specific to the processes they contain. There are resources that are part of the application itself, like a classloader and its classes and resources, as well as resources managed by the process engine at runtime, like a set of <a href="/camunda-cn/user-guide/process-engine/scripting/">scripting engines</a> or <a href="/camunda-cn/user-guide/data-formats/">Spin data formats</a>. This section describes under which conditions the process engine looks up resources on process application level and how that lookup can be enforced.</p>
+<p>Process applications provide and logically group resources specific to the processes they contain. There are resources that are part of the application itself, like a classloader and its classes and resources, as well as resources managed by the process engine at runtime, like a set of <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/scripting/">scripting engines</a> or <a href="http://shaochenfeng.com/camunda-cn/user-guide/data-formats/">Spin data formats</a>. This section describes under which conditions the process engine looks up resources on process application level and how that lookup can be enforced.</p>
 
 <figure class="image">
   <span><img
@@ -8186,7 +8186,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="note ">
   <h3>Mechanics behind the Context Switch</h3>
-  <p>Note that the actual mechanics behind the context switch are platform dependent. For example: in a servlet container like Apache Tomcat, it is only necessary to set the Thread&rsquo;s current Context Classloader to the web application Classloader. Context specific operations like the resolution of application-local JNDI names all build on this. In an EJB container, this is more complex. This is why the ProcessApplication class is an EJB itself in that environment (see: <a href="/camunda-cn/user-guide/process-applications/the-process-application-class/#invocation-semantics-of-the-ejbprocessapplication">Ejb Process Application</a>). The process engine can then add an invocation of a business method of that EJB to the call stack and have the Application Server perform its specific logic behind the scenes.</p>
+  <p>Note that the actual mechanics behind the context switch are platform dependent. For example: in a servlet container like Apache Tomcat, it is only necessary to set the Thread&rsquo;s current Context Classloader to the web application Classloader. Context specific operations like the resolution of application-local JNDI names all build on this. In an EJB container, this is more complex. This is why the ProcessApplication class is an EJB itself in that environment (see: <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-applications/the-process-application-class/#invocation-semantics-of-the-ejbprocessapplication">Ejb Process Application</a>). The process engine can then add an invocation of a business method of that EJB to the call stack and have the Application Server perform its specific logic behind the scenes.</p>
 </div>
 
 
@@ -8203,7 +8203,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <h2 id="example">Example</h2>
 
-<p>To clarify the use case, we assume that a process application employs the <a href="/camunda-cn/user-guide/data-formats/json/#serializing-process-variables">feature to serialize object-type variables in the JSON format</a>. However, for that application JSON serialization shall be customized (think about the numerous ways to serialize a date as a JSON string). The process application therefore contains a Camunda Spin data format configurator implementation that configures the Spin JSON data format in the desired way. In turn, the process engine manages a Spin data format for that specific process application to serialize object values with. Now, we assume that a Java servlet calls the process engine API to submit a Java object and serialize it with the JSON format. The code might look as follows:</p>
+<p>To clarify the use case, we assume that a process application employs the <a href="http://shaochenfeng.com/camunda-cn/user-guide/data-formats/json/#serializing-process-variables">feature to serialize object-type variables in the JSON format</a>. However, for that application JSON serialization shall be customized (think about the numerous ways to serialize a date as a JSON string). The process application therefore contains a Camunda Spin data format configurator implementation that configures the Spin JSON data format in the desired way. In turn, the process engine manages a Spin data format for that specific process application to serialize object values with. Now, we assume that a Java servlet calls the process engine API to submit a Java object and serialize it with the JSON format. The code might look as follows:</p>
 
 <pre><code class="language-java">public class ObjectValueServlet extends HttpServlet {
 
@@ -8273,7 +8273,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="http://shaochenfeng.com/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
             Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2021
           </p>
@@ -8288,7 +8288,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   
 
-  <script type="text/javascript" src="/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
+  <script type="text/javascript" src="http://shaochenfeng.com/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

@@ -29,11 +29,11 @@
   <title>Multi-Tenancy | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="/camunda-cn/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="http://shaochenfeng.com/camunda-cn/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
+  <link rel="stylesheet" href="http://shaochenfeng.com/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
 </head>
 <body class="">
 
@@ -45,8 +45,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="/camunda-cn/">
-      <img src="/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="http://shaochenfeng.com/camunda-cn/">
+      <img src="http://shaochenfeng.com/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">Docs</span>
       </a>
@@ -8113,7 +8113,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="/camunda-cn/">
+    <select id="version-select" data-basepath="/manual" base-url="http://shaochenfeng.com/camunda-cn/">
       
         <option  selected >develop</option>
       
@@ -8205,7 +8205,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <h3 id="specify-the-tenant-identifier-via-java-api">Specify the Tenant Identifier via Java API</h3>
 
-<p>When a deployment is created using the Repository Service, the tenant identifier can be set on the <a href="/camunda-cn/reference/javadoc/?org/camunda/bpm/engine/repository/DeploymentBuilder.html">DeploymentBuilder</a>
+<p>When a deployment is created using the Repository Service, the tenant identifier can be set on the <a href="http://shaochenfeng.com/camunda-cn/reference/javadoc/?org/camunda/bpm/engine/repository/DeploymentBuilder.html">DeploymentBuilder</a>
 .</p>
 
 <pre><code class="language-java">repositoryService
@@ -8217,7 +8217,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <h3 id="specify-the-tenant-identifier-via-deployment-descriptor">Specify the Tenant Identifier via Deployment Descriptor</h3>
 
-<p>In case of a process application, the deployment is specified by a <a href="/camunda-cn/user-guide/process-applications/the-processes-xml-deployment-descriptor/">processes.xml</a> Deployment Descriptor. Since the descriptor can contain multiple process-archives (i.e., deployments), the tenant identifier can be set on each process-archive as <code>tenantId</code> attribute.</p>
+<p>In case of a process application, the deployment is specified by a <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-applications/the-processes-xml-deployment-descriptor/">processes.xml</a> Deployment Descriptor. Since the descriptor can contain multiple process-archives (i.e., deployments), the tenant identifier can be set on each process-archive as <code>tenantId</code> attribute.</p>
 
 <pre><code class="language-xml">&lt;process-application
   xmlns=&quot;http://www.camunda.org/schema/1.0/ProcessApplication&quot;
@@ -8236,7 +8236,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <h3 id="specify-the-tenant-identifier-via-spring-configuration">Specify the Tenant Identifier via Spring Configuration</h3>
 
-<p>When the <a href="/camunda-cn/user-guide/spring-framework-integration/deployment/">Automatic Resource Deployment</a> of the Spring Framework Integration is used, the tenant identifier can be specified in the Process Engine Configuration as <code>deploymentTenantId</code> property.</p>
+<p>When the <a href="http://shaochenfeng.com/camunda-cn/user-guide/spring-framework-integration/deployment/">Automatic Resource Deployment</a> of the Spring Framework Integration is used, the tenant identifier can be specified in the Process Engine Configuration as <code>deploymentTenantId</code> property.</p>
 
 <pre><code class="language-xml">&lt;bean id=&quot;processEngineConfiguration&quot; class=&quot;org.camunda.bpm.engine.spring.SpringProcessEngineConfiguration&quot;&gt;
   &lt;property name=&quot;deploymentResources&quot;&gt;
@@ -8251,7 +8251,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <h3 id="versioning-of-tenant-specific-definitions">Versioning of Tenant-Specific Definitions</h3>
 
-<p>When a definition is deployed for a tenant then it is assigned a version which is independent from definitions of other tenants. For example, if a new process definition is deployed for two tenants then both definitions are assigned the version <code>1</code>. The versioning within one tenant works like the <a href="/camunda-cn/user-guide/process-engine/process-versioning/">versioning of definitions</a> that belong to no tenant.</p>
+<p>When a definition is deployed for a tenant then it is assigned a version which is independent from definitions of other tenants. For example, if a new process definition is deployed for two tenants then both definitions are assigned the version <code>1</code>. The versioning within one tenant works like the <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/process-versioning/">versioning of definitions</a> that belong to no tenant.</p>
 
 <h2 id="query-data-of-a-tenant">Query Data of a Tenant</h2>
 
@@ -8307,7 +8307,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <h3 id="create-a-process-instance">Create a Process Instance</h3>
 
-<p>To create an instance by key of a process definition which is deployed for multiple tenants, the tenant identifier has to be passed to the <a href="/camunda-cn/reference/javadoc/?org/camunda/bpm/engine/runtime/ProcessInstantiationBuilder.html">ProcessInstantiationBuilder</a>
+<p>To create an instance by key of a process definition which is deployed for multiple tenants, the tenant identifier has to be passed to the <a href="http://shaochenfeng.com/camunda-cn/reference/javadoc/?org/camunda/bpm/engine/runtime/ProcessInstantiationBuilder.html">ProcessInstantiationBuilder</a>
 .</p>
 
 <pre><code class="language-java">runtimeService
@@ -8318,7 +8318,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <h3 id="correlate-a-message">Correlate a Message</h3>
 
-<p>The <a href="/camunda-cn/reference/bpmn20/events/message-events/#message-api">Message API</a> can be used to correlate a message to one or all tenants. In case a message can correlate to definitions or executions of multiple tenants, the tenant identifier has to be passed to the <a href="/camunda-cn/reference/javadoc/?org/camunda/bpm/engine/runtime/MessageCorrelationBuilder.html">MessageCorrelationBuilder</a>
+<p>The <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/events/message-events/#message-api">Message API</a> can be used to correlate a message to one or all tenants. In case a message can correlate to definitions or executions of multiple tenants, the tenant identifier has to be passed to the <a href="http://shaochenfeng.com/camunda-cn/reference/javadoc/?org/camunda/bpm/engine/runtime/MessageCorrelationBuilder.html">MessageCorrelationBuilder</a>
 . Otherwise, a <code>MismatchingMessageCorrelationException</code> is thrown.</p>
 
 <pre><code class="language-java">runtimeService
@@ -8336,7 +8336,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <h3 id="send-a-signal">Send a Signal</h3>
 
-<p>The <a href="/camunda-cn/reference/bpmn20/events/signal-events/#signal-api">Signal API</a> can be used to deliver a signal to one or all tenants. Pass the tenant identifier to the <a href="/camunda-cn/reference/javadoc/?org/camunda/bpm/engine/runtime/SignalEventReceivedBuilder.html">SignalEventReceivedBuilder</a>
+<p>The <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/events/signal-events/#signal-api">Signal API</a> can be used to deliver a signal to one or all tenants. Pass the tenant identifier to the <a href="http://shaochenfeng.com/camunda-cn/reference/javadoc/?org/camunda/bpm/engine/runtime/SignalEventReceivedBuilder.html">SignalEventReceivedBuilder</a>
  to deliver the signal to a specific tenant. If no identifier is passed then the signal is delivered to all tenants.</p>
 
 <pre><code class="language-java">runtimeService
@@ -8349,7 +8349,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <h3 id="create-a-case-instance">Create a Case Instance</h3>
 
-<p>To create an instance by key of a case definition which is deployed for multiple tenants, the tenant identifier has to be passed to the <a href="/camunda-cn/reference/javadoc/?org/camunda/bpm/engine/runtime/CaseInstanceBuilder.html">CaseInstanceBuilder</a>
+<p>To create an instance by key of a case definition which is deployed for multiple tenants, the tenant identifier has to be passed to the <a href="http://shaochenfeng.com/camunda-cn/reference/javadoc/?org/camunda/bpm/engine/runtime/CaseInstanceBuilder.html">CaseInstanceBuilder</a>
 .</p>
 
 <pre><code class="language-java">caseService
@@ -8360,7 +8360,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <h3 id="evaluate-a-decision-table">Evaluate a Decision Table</h3>
 
-<p>To evaluate a decision table by key which is deployed for multiple tenants, the tenant identifier has to be passed to the <a href="/camunda-cn/reference/javadoc/?org/camunda/bpm/engine/dmn/DecisionEvaluationBuilder.html">DecisionEvaluationBuilder</a>
+<p>To evaluate a decision table by key which is deployed for multiple tenants, the tenant identifier has to be passed to the <a href="http://shaochenfeng.com/camunda-cn/reference/javadoc/?org/camunda/bpm/engine/dmn/DecisionEvaluationBuilder.html">DecisionEvaluationBuilder</a>
 .</p>
 
 <pre><code class="language-java">decisionService
@@ -8454,19 +8454,19 @@ finally {
 
 <div class="note bg-info docs-info">
   <h3>LDAP Identity Service</h3>
-  <p>The above example only works with the <a href="/camunda-cn/user-guide/process-engine/identity-service/#the-database-identity-service">Database Identity Service</a> (i.e., the default implementation). The <a href="/camunda-cn/user-guide/process-engine/identity-service/#the-ldap-identity-service">LDAP Identity Service</a> doesn&rsquo;t support tenants.</p>
+  <p>The above example only works with the <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/identity-service/#the-database-identity-service">Database Identity Service</a> (i.e., the default implementation). The <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/identity-service/#the-ldap-identity-service">LDAP Identity Service</a> doesn&rsquo;t support tenants.</p>
 </div>
 
 
 <h3 id="camunda-rest-api-and-web-applications">Camunda Rest API and Web Applications</h3>
 
-<p>The Camunda <a href="/camunda-cn/reference/rest/">Rest API</a> and the web applications Cockpit and Tasklist support the transparent access restrictions. When a user logs in then he only sees and can only access the data (e.g., process definitions) that belongs to one of his tenants.</p>
+<p>The Camunda <a href="http://shaochenfeng.com/camunda-cn/reference/rest/">Rest API</a> and the web applications Cockpit and Tasklist support the transparent access restrictions. When a user logs in then he only sees and can only access the data (e.g., process definitions) that belongs to one of his tenants.</p>
 
-<p>Tenants and their memberships can be managed in the <a href="/camunda-cn/webapps/admin/tenant-management/">Admin</a> web application.</p>
+<p>Tenants and their memberships can be managed in the <a href="http://shaochenfeng.com/camunda-cn/webapps/admin/tenant-management/">Admin</a> web application.</p>
 
 <h3 id="disable-the-transparent-access-restrictions">Disable the Transparent Access Restrictions</h3>
 
-<p>The transparent access restrictions are enabled by default. To disable the restrictions, set the <code>tenantCheckEnabled</code> property in the <a href="/camunda-cn/user-guide/process-engine/process-engine-bootstrapping/#processengineconfiguration-bean">ProcessEngineConfiguration</a> to <code>false</code>.</p>
+<p>The transparent access restrictions are enabled by default. To disable the restrictions, set the <code>tenantCheckEnabled</code> property in the <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/process-engine-bootstrapping/#processengineconfiguration-bean">ProcessEngineConfiguration</a> to <code>false</code>.</p>
 
 <p>Additionally, it is also possible to disable the restrictions for a single command (e.g., for a maintenance task). Use the <code>CommandContext</code> to disable and enable the restrictions for the current command.</p>
 
@@ -8531,7 +8531,7 @@ In a multi tenancy context with shared resources we want the list to include def
 <h3 id="instantiate-a-shared-definition">Instantiate a Shared Definition</h3>
 
 <p>When creating (starting) a new process instance, the tenant id of the process definition is propagated to the process instance.
-Shared resources  do not have a tenant id which means that no tenant id is propagated automatically. To have the tenant id of the user who starts the process instances assigned  to the process instance, an implementation of the <a href="/camunda-cn/reference/javadoc/?org/camunda/bpm/engine/impl/cfg/multitenancy/TenantIdProvider.html">TenantIdProvider</a>
+Shared resources  do not have a tenant id which means that no tenant id is propagated automatically. To have the tenant id of the user who starts the process instances assigned  to the process instance, an implementation of the <a href="http://shaochenfeng.com/camunda-cn/reference/javadoc/?org/camunda/bpm/engine/impl/cfg/multitenancy/TenantIdProvider.html">TenantIdProvider</a>
  SPI needs to be provided.</p>
 
 <p>The <code>TenantIdProvider</code> receives a callback when an instance of a process definition, case definition or decision definition is created. It can then assign a tenant id to the newly created instance (or not).</p>
@@ -8594,7 +8594,7 @@ Shared resources  do not have a tenant id which means that no tenant id is propa
 &lt;/beans&gt;
 </code></pre>
 
-<p>In case of a shared process engine, the provider can be set via <a href="/camunda-cn/user-guide/process-engine/process-engine-plugins/">Process Engine Plugin</a>.</p>
+<p>In case of a shared process engine, the provider can be set via <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/process-engine-plugins/">Process Engine Plugin</a>.</p>
 
 <h3 id="tenant-specific-behavior-with-call-activities">Tenant-specific behavior with Call Activities</h3>
 
@@ -8608,9 +8608,9 @@ Shared resources  do not have a tenant id which means that no tenant id is propa
 
 <ul>
 <li><a href="https://github.com/camunda/camunda-bpm-examples/tree/master/multi-tenancy/tenant-identifier-shared-definitions">Shared Resources Example</a></li>
-<li><a href="/camunda-cn/reference/bpmn20/subprocesses/call-activity/#calledelement-tenant-id">Called Element Tenant Id</a></li>
-<li><a href="/camunda-cn/reference/bpmn20/subprocesses/call-activity/#case-tenant-id">Case Tenant Id</a> for call activities.</li>
-<li><a href="/camunda-cn/reference/bpmn20/tasks/business-rule-task/#decisionref-tenant-id">Decision Ref Tenant Id</a> for business rule tasks.</li>
+<li><a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/subprocesses/call-activity/#calledelement-tenant-id">Called Element Tenant Id</a></li>
+<li><a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/subprocesses/call-activity/#case-tenant-id">Case Tenant Id</a> for call activities.</li>
+<li><a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/tasks/business-rule-task/#decisionref-tenant-id">Decision Ref Tenant Id</a> for business rule tasks.</li>
 </ul>
 
 <h1 id="one-process-engine-per-tenant">One Process Engine Per Tenant</h1>
@@ -8637,7 +8637,7 @@ Shared resources  do not have a tenant id which means that no tenant id is propa
 
 <h2 id="configure-the-process-engines">Configure the Process Engines</h2>
 
-<p>The process engines can be configured in a configuration file or via Java API. Each engine should have a name that is related to a tenant such that it can be identified based on the tenant. For example, each engine can be named after the tenant it serves. See the <a href="/camunda-cn/user-guide/process-engine/process-engine-bootstrapping/">Process Engine Bootstrapping</a> section for details.</p>
+<p>The process engines can be configured in a configuration file or via Java API. Each engine should have a name that is related to a tenant such that it can be identified based on the tenant. For example, each engine can be named after the tenant it serves. See the <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/process-engine-bootstrapping/">Process Engine Bootstrapping</a> section for details.</p>
 
 <h3 id="database-isolation">Database Isolation</h3>
 
@@ -8649,7 +8649,7 @@ Shared resources  do not have a tenant id which means that no tenant id is propa
 To achieve this,</p>
 
 <ul>
-<li>the configuration option <a href="/camunda-cn/reference/deployment-descriptors/tags/process-engine/#configuration-protperties">databaseTablePrefix</a> can be used to configure database access.</li>
+<li>the configuration option <a href="http://shaochenfeng.com/camunda-cn/reference/deployment-descriptors/tags/process-engine/#configuration-protperties">databaseTablePrefix</a> can be used to configure database access.</li>
 <li>consider switching on the setting <code>useSharedSqlSessionFactory</code>. The setting controls whether each process engine instance should parse and maintain a local copy of the mybatis mapping files or whether a single, shared copy can be used. Since the mappings require a lot of heap (&gt;30MB), it is recommended to switch this on. This way only one copy needs to be allocated.</li>
 </ul>
 
@@ -8673,11 +8673,11 @@ manually by setting it to null explicitly via</li>
 
 <h3 id="job-executor-for-multiple-process-engines">Job Executor for Multiple Process Engines</h3>
 
-<p>For background execution of processes and tasks, the process engine has a component called <a href="/camunda-cn/user-guide/process-engine/the-job-executor/">job executor</a>. The job executor periodically acquires jobs from the database and submits them to a thread pool for execution. For all process applications on one server, one thread pool is used for job execution. Furthermore, it is possible to share the acquisition thread between multiple engines. This way, resources are still manageable even when a large amount of process engines are used. See the section <a href="/camunda-cn/user-guide/process-engine/the-job-executor/#the-job-executor-and-multiple-process-engines">The Job Executor and Multiple Process Engines</a> for details.</p>
+<p>For background execution of processes and tasks, the process engine has a component called <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/the-job-executor/">job executor</a>. The job executor periodically acquires jobs from the database and submits them to a thread pool for execution. For all process applications on one server, one thread pool is used for job execution. Furthermore, it is possible to share the acquisition thread between multiple engines. This way, resources are still manageable even when a large amount of process engines are used. See the section <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/the-job-executor/#the-job-executor-and-multiple-process-engines">The Job Executor and Multiple Process Engines</a> for details.</p>
 
 <h3 id="example-configuration-for-schema-isolation">Example Configuration for Schema Isolation</h3>
 
-<p>Multi-Tenancy settings can be applied in the various ways of configuring a process engine. The following is an example of a <a href="/camunda-cn/user-guide/process-engine/process-engine-bootstrapping/#configure-process-engine-in-bpm-platformxml">bpm-platform.xml</a> file that specifies engines for two tenants that share the same database but work on different schemas:</p>
+<p>Multi-Tenancy settings can be applied in the various ways of configuring a process engine. The following is an example of a <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/process-engine-bootstrapping/#configure-process-engine-in-bpm-platformxml">bpm-platform.xml</a> file that specifies engines for two tenants that share the same database but work on different schemas:</p>
 
 <pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;bpm-platform xmlns=&quot;http://www.camunda.org/schema/1.0/BpmPlatform&quot;
@@ -8722,7 +8722,7 @@ manually by setting it to null explicitly via</li>
 
 <h2 id="deploy-definitions-for-a-tenant-1">Deploy Definitions for a Tenant</h2>
 
-<p>When developing process applications, i.e., process definitions and supplementary code, some processes may be deployed to every tenant&rsquo;s engine while others are tenant-specific. The processes.xml deployment descriptor that is part of every process application offers this kind of flexibility by the concept of <em>process archives</em>. One application can contain any number of process archive deployments, each of which can be deployed to a different process engine with different resources. See the section on the <a href="/camunda-cn/user-guide/process-applications/the-processes-xml-deployment-descriptor/">processes.xml deployment descriptor</a> for details.</p>
+<p>When developing process applications, i.e., process definitions and supplementary code, some processes may be deployed to every tenant&rsquo;s engine while others are tenant-specific. The processes.xml deployment descriptor that is part of every process application offers this kind of flexibility by the concept of <em>process archives</em>. One application can contain any number of process archive deployments, each of which can be deployed to a different process engine with different resources. See the section on the <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-applications/the-processes-xml-deployment-descriptor/">processes.xml deployment descriptor</a> for details.</p>
 
 <p>The following is an example that deploys different process definitions for two tenants. It uses the configuration property <code>resourceRootPath</code> that specifies a path in the deployment that contains process definitions to deploy. Accordingly, all the processes under <code>processes/tenant1</code> on the application&rsquo;s classpath are deployed to engine <code>tenant1</code>, while all the processes under <code>processes/tenant2</code> are deployed to engine <code>tenant2</code>.</p>
 
@@ -8758,12 +8758,12 @@ manually by setting it to null explicitly via</li>
 <p>To access a specific tenant&rsquo;s process engine at runtime, it has to be identified by its name. The Camunda engine offers access to named engines in various programming models:</p>
 
 <ul>
-<li><strong>Plain Java API</strong>: Via the <a href="/camunda-cn/user-guide/runtime-container-integration/bpm-platform-services/#processengineservice">ProcessEngineService</a> any named engine can be accessed.</li>
-<li><strong>CDI Integration</strong>: Named engine beans can be injected out of the box. The <a href="/camunda-cn/user-guide/cdi-java-ee-integration/built-in-beans/">built-in CDI bean producer</a> can be specialized to access the engine of the current tenant dynamically.</li>
-<li><strong>Via JNDI on JBoss/Wildfly</strong>: On JBoss and Wildfly, every container-managed process engine can be <a href="/camunda-cn/user-guide/runtime-container-integration/jboss/#look-up-a-process-engine-in-jndi">looked up via JNDI</a>.</li>
+<li><strong>Plain Java API</strong>: Via the <a href="http://shaochenfeng.com/camunda-cn/user-guide/runtime-container-integration/bpm-platform-services/#processengineservice">ProcessEngineService</a> any named engine can be accessed.</li>
+<li><strong>CDI Integration</strong>: Named engine beans can be injected out of the box. The <a href="http://shaochenfeng.com/camunda-cn/user-guide/cdi-java-ee-integration/built-in-beans/">built-in CDI bean producer</a> can be specialized to access the engine of the current tenant dynamically.</li>
+<li><strong>Via JNDI on JBoss/Wildfly</strong>: On JBoss and Wildfly, every container-managed process engine can be <a href="http://shaochenfeng.com/camunda-cn/user-guide/runtime-container-integration/jboss/#look-up-a-process-engine-in-jndi">looked up via JNDI</a>.</li>
 </ul>
 
-<p>The Camunda web applications Cockpit, Tasklist and Admin offer tenant-specific views out of the box by <a href="/camunda-cn/webapps/cockpit/dashboard/#multi-engine">switching between different process engines</a>.</p>
+<p>The Camunda web applications Cockpit, Tasklist and Admin offer tenant-specific views out of the box by <a href="http://shaochenfeng.com/camunda-cn/webapps/cockpit/dashboard/#multi-engine">switching between different process engines</a>.</p>
 
     </div>
   </div>
@@ -8840,7 +8840,7 @@ manually by setting it to null explicitly via</li>
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="http://shaochenfeng.com/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
             Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2021
           </p>
@@ -8855,7 +8855,7 @@ manually by setting it to null explicitly via</li>
 
   
 
-  <script type="text/javascript" src="/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
+  <script type="text/javascript" src="http://shaochenfeng.com/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

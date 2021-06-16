@@ -29,11 +29,11 @@
   <title>Conditional Events | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="/camunda-cn/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="http://shaochenfeng.com/camunda-cn/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
+  <link rel="stylesheet" href="http://shaochenfeng.com/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
 </head>
 <body class="">
 
@@ -45,8 +45,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="/camunda-cn/">
-      <img src="/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="http://shaochenfeng.com/camunda-cn/">
+      <img src="http://shaochenfeng.com/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">Docs</span>
       </a>
@@ -8113,7 +8113,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="/camunda-cn/">
+    <select id="version-select" data-basepath="/manual" base-url="http://shaochenfeng.com/camunda-cn/">
       
         <option  selected >develop</option>
       
@@ -8198,7 +8198,7 @@ This will cancel the current processing of the application.</p>
 </code></pre>
 
 <p>The specified condition can be an EL expression and has access to the process instance variables.
-For information about EL expressions, see the <a href="/camunda-cn/user-guide/process-engine/expression-language/">Expression Language</a>
+For information about EL expressions, see the <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/expression-language/">Expression Language</a>
 section. A condition is evaluated every time a variable changes, see the <a href="#trigger-conditional-events">Trigger Conditional Events</a> section for details.</p>
 
 <p>To prevent the continuous evaluation of a condition, the evaluation can be restricted to specific variable changes.
@@ -8329,7 +8329,7 @@ That is the case if a variable is created, updated or deleted.</p>
 
 <h3 id="set-variable-from-outside">Set Variable From Outside</h3>
 
-<p>Variables can be changed from the outside with the help of the <a href="/camunda-cn/user-guide/process-engine/variables/">variable API</a>.
+<p>Variables can be changed from the outside with the help of the <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/variables/">variable API</a>.
 See the following example how to set a variable on the variable scope of the process instance:</p>
 
 <pre><code class="language-java">  //set variable on process instance
@@ -8340,7 +8340,7 @@ See the following example how to set a variable on the variable scope of the pro
 
 <h3 id="set-variable-from-delegation-code">Set Variable From Delegation Code</h3>
 
-<p>Variables can not only be set from outside, but also also from within a process instance via <a href="/camunda-cn/user-guide/process-engine/delegation-code/">delegation code</a>.</p>
+<p>Variables can not only be set from outside, but also also from within a process instance via <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/delegation-code/">delegation code</a>.</p>
 
 <p>For example:</p>
 
@@ -8395,7 +8395,7 @@ That means if a variable changes, only those conditional events are evaluated th
 
 <div data-bpmn-diagram="../bpmn/conditionalEventScopes" ></div>
 
-<p>If we have started the process above and <code>UserTask B</code> and <code>UserTask A</code> are active, then the <a href="/camunda-cn/user-guide/process-engine/process-engine-concepts/#activity-instances">activity instance</a> hierarchy is:</p>
+<p>If we have started the process above and <code>UserTask B</code> and <code>UserTask A</code> are active, then the <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/process-engine-concepts/#activity-instances">activity instance</a> hierarchy is:</p>
 
 <pre><code>ProcessInstance
    UserTask A
@@ -8403,7 +8403,7 @@ That means if a variable changes, only those conditional events are evaluated th
      UserTask B
 </code></pre>
 
-<p>If a variable is set in the context of the <code>SubProcess</code> instance, then only the conditional boundary event of <code>UserTask B</code> is evaluated. The boundary event of <code>UserTask A</code> cannot trigger as the variable is not <em>visible</em> in its context. The user guide section on <a href="/camunda-cn/user-guide/process-engine/variables/#variable-scopes-and-variable-visibility">variable scopes and variable visibility</a> provides details on the general concept.</p>
+<p>If a variable is set in the context of the <code>SubProcess</code> instance, then only the conditional boundary event of <code>UserTask B</code> is evaluated. The boundary event of <code>UserTask A</code> cannot trigger as the variable is not <em>visible</em> in its context. The user guide section on <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/variables/#variable-scopes-and-variable-visibility">variable scopes and variable visibility</a> provides details on the general concept.</p>
 
 <h1 id="camunda-extensions">Camunda Extensions</h1>
 
@@ -8411,8 +8411,8 @@ That means if a variable changes, only those conditional events are evaluated th
   <tr>
     <th>Attributes</th>
     <td>
-      <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#variablename">camunda:variableName</a>,
-      <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#variableevents">camunda:variableEvents</a>,
+      <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#variablename">camunda:variableName</a>,
+      <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#variableevents">camunda:variableEvents</a>,
     </td>
   </tr>
   <tr>
@@ -8475,7 +8475,7 @@ That means if a variable changes, only those conditional events are evaluated th
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="http://shaochenfeng.com/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
             Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2021
           </p>
@@ -8490,7 +8490,7 @@ That means if a variable changes, only those conditional events are evaluated th
 
   
 
-  <script type="text/javascript" src="/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
+  <script type="text/javascript" src="http://shaochenfeng.com/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

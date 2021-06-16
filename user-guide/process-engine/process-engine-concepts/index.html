@@ -29,11 +29,11 @@
   <title>流程引擎概念 | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="/camunda-cn/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="http://shaochenfeng.com/camunda-cn/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
+  <link rel="stylesheet" href="http://shaochenfeng.com/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
 </head>
 <body class="">
 
@@ -45,8 +45,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="/camunda-cn/">
-      <img src="/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="http://shaochenfeng.com/camunda-cn/">
+      <img src="http://shaochenfeng.com/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">Docs</span>
       </a>
@@ -8113,7 +8113,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="/camunda-cn/">
+    <select id="version-select" data-basepath="/manual" base-url="http://shaochenfeng.com/camunda-cn/">
       
         <option  selected >develop</option>
       
@@ -8174,7 +8174,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <ul>
 <li><a href="http://camunda.org/bpmn/reference.html#!/reference">BPMN 2.0 建模参考</a> 介绍了BPMN 2.0的基本原理，帮助你开始对流程进行建模。(请确保同时阅读<a href="http://camunda.org/bpmn/tutorial.html">教程</a>。)</li>
-<li><a href="/camunda-cn/reference/bpmn20/">BPMN 2.0 实现参考</a> 涵盖了Camunda平台中各个BPMN 2.0构造的实现。如果你想实现和执行BPMN流程，你应该阅读这个参考资料。</li>
+<li><a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/">BPMN 2.0 实现参考</a> 涵盖了Camunda平台中各个BPMN 2.0构造的实现。如果你想实现和执行BPMN流程，你应该阅读这个参考资料。</li>
 </ul>
 </p>
 </div>
@@ -8195,7 +8195,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <p>上面的查询返回所有已部署的流程定义，关键是<code>invoice</code>，按其<code>version</code>属性排序。</p>
 
-<p>你也可以<a href="/camunda-cn/reference/rest/process-definition/get-query/">使用REST API查询流程定义</a>.</p>
+<p>你也可以<a href="http://shaochenfeng.com/camunda-cn/reference/rest/process-definition/get-query/">使用REST API查询流程定义</a>.</p>
 
 <h2 id="key和版本">Key和版本</h2>
 
@@ -8206,7 +8206,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 &lt;/process&gt;
 </code></pre>
 
-<p>如果你用同一个key部署了多个流程，流程引擎会将它们视为同一流程定义的不同版本。请参考<a href="/camunda-cn/user-guide/process-engine/process-versioning/">流程版本管理</a>了解详情。</p>
+<p>如果你用同一个key部署了多个流程，流程引擎会将它们视为同一流程定义的不同版本。请参考<a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/process-versioning/">流程版本管理</a>了解详情。</p>
 
 <h2 id="禁用流程定义">禁用流程定义</h2>
 
@@ -8216,7 +8216,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <p>流程实例是一个流程定义的单独执行。流程实例与流程定义的关系与面向对象编程中<strong>对象</strong>和<strong>类</strong>的关系类似（流程实例扮演对象的角色，流程定义扮演类的角色）。</p>
 
-<p>流程引擎负责创建流程实例并管理其状态。如果你启动一个包含等待状态的流程实例，例如一个<a href="/camunda-cn/reference/bpmn20/tasks/user-task/">用户任务</a>，流程引擎必须确保流程实例的状态被捕获并存储在数据库内，直到离开等待状态（用户任务被完成）。</p>
+<p>流程引擎负责创建流程实例并管理其状态。如果你启动一个包含等待状态的流程实例，例如一个<a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/tasks/user-task/">用户任务</a>，流程引擎必须确保流程实例的状态被捕获并存储在数据库内，直到离开等待状态（用户任务被完成）。</p>
 
 <h2 id="启动流程实例">启动流程实例</h2>
 
@@ -8234,12 +8234,12 @@ ProcessInstance instance = runtimeService.startProcessInstanceByKey(&quot;invoic
 
 <p>流程变量对流程实例中的所有任务来说都是可用的，并且在流程实例到达等待状态时自动持久化到数据库。</p>
 
-<p>也可以<a href="/camunda-cn/reference/rest/process-definition/post-start-process-instance/">使用REST API启动一个流程实例</a>.</p>
+<p>也可以<a href="http://shaochenfeng.com/camunda-cn/reference/rest/process-definition/post-start-process-instance/">使用REST API启动一个流程实例</a>.</p>
 
 <h3 id="通过-tasklist-创建流程实例">通过 Tasklist 创建流程实例</h3>
 
-<p>你可以使用 <a href="/camunda-cn/webapps/tasklist/working-with-tasklist/#start-a-process">Tasklist</a> 创建流程实例，
-<a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#isstartableintasklist"><code>startableInTasklist</code></a> 选项的存在是为了指定哪些流程是可以被用户启动的。</p>
+<p>你可以使用 <a href="http://shaochenfeng.com/camunda-cn/webapps/tasklist/working-with-tasklist/#start-a-process">Tasklist</a> 创建流程实例，
+<a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-attributes/#isstartableintasklist"><code>startableInTasklist</code></a> 选项的存在是为了指定哪些流程是可以被用户启动的。</p>
 
 <p>例如，如果只应启动父流程而不启动子流程，请按以下方式调整子流程xml文件是明智的（*.bpmn）。</p>
 
@@ -8294,7 +8294,7 @@ ProcessInstance instance = runtimeService.startProcessInstanceByKey(&quot;invoic
 
 <p>上面的查询将选择 <code>invoice</code> 流程的所有流程实例，其中 <code>creditor</code> 是 <code>Nice Pizza Inc.</code>。</p>
 
-<p>您还可以<a href="/camunda-cn/reference/rest/process-instance/get-query/">使用REST API查询流程实例</a>.</p>
+<p>您还可以<a href="http://shaochenfeng.com/camunda-cn/reference/rest/process-instance/get-query/">使用REST API查询流程实例</a>.</p>
 
 <h2 id="流程变量的交互">流程变量的交互</h2>
 
@@ -8304,8 +8304,8 @@ ProcessInstance instance = runtimeService.startProcessInstanceByKey(&quot;invoic
 <li>触发它（使其继续执行）：
 
 <ul>
-<li>通过 <a href="/camunda-cn/reference/bpmn20/events/message-events/">消息事件</a></li>
-<li>通过 <a href="/camunda-cn/reference/bpmn20/events/signal-events/">信号事件</a></li>
+<li>通过 <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/events/message-events/">消息事件</a></li>
+<li>通过 <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/events/signal-events/">信号事件</a></li>
 </ul></li>
 <li>取消它：
 
@@ -8315,7 +8315,7 @@ ProcessInstance instance = runtimeService.startProcessInstanceByKey(&quot;invoic
 <li>启动/取消任何活动：
 
 <ul>
-<li>使用 <a href="/camunda-cn/user-guide/process-engine/process-instance-modification/">process instance modification feature</a></li>
+<li>使用 <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/process-instance-modification/">process instance modification feature</a></li>
 </ul></li>
 </ul>
 
@@ -8335,7 +8335,7 @@ ProcessInstance instance = runtimeService.startProcessInstanceByKey(&quot;invoic
 
 <h1 id="执行-executions">执行（Executions）</h1>
 
-<p>如果你的流程实例包含多个执行路径（例如<a href="/camunda-cn/reference/bpmn20/gateways/parallel-gateway/">并行网关</a>），你必须能够区分流程实例内当前的活动路径。在下面的例子中，两个用户任务“receive payment”和“ship order”可以同时执行。</p>
+<p>如果你的流程实例包含多个执行路径（例如<a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/gateways/parallel-gateway/">并行网关</a>），你必须能够区分流程实例内当前的活动路径。在下面的例子中，两个用户任务“receive payment”和“ship order”可以同时执行。</p>
 
 <figure class="image">
   <span><img
@@ -8347,10 +8347,10 @@ ProcessInstance instance = runtimeService.startProcessInstanceByKey(&quot;invoic
 
 
 <p>在内部实现中，流程引擎在流程实例遇到并行网关时会创建两个并发的执行，每个并发的执行都有一个执行路径。
-或者“范围”也会创建新的执行，例如，如果流程引擎到达一个<a href="/camunda-cn/reference/bpmn20/subprocesses/embedded-subprocess/">嵌入式子流程</a>，就会创建执行。
-或者<a href="/camunda-cn/reference/bpmn20/tasks/task-markers/">多实例</a>也会创建新的执行。</p>
+或者“范围”也会创建新的执行，例如，如果流程引擎到达一个<a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/subprocesses/embedded-subprocess/">嵌入式子流程</a>，就会创建执行。
+或者<a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/tasks/task-markers/">多实例</a>也会创建新的执行。</p>
 
-<p>执行是分层次的，一个流程实例内的所有执行组成一棵树，流程实例是树上的根节点。注意：流程实例本身就是一个执行。执行属于<a href="/camunda-cn/user-guide/process-engine/variables/">变量范围</a>, 意味着动态数据可以与之关联。</p>
+<p>执行是分层次的，一个流程实例内的所有执行组成一棵树，流程实例是树上的根节点。注意：流程实例本身就是一个执行。执行属于<a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/variables/">变量范围</a>, 意味着动态数据可以与之关联。</p>
 
 <h2 id="执行的查询">执行的查询</h2>
 
@@ -8363,7 +8363,7 @@ ProcessInstance instance = runtimeService.startProcessInstanceByKey(&quot;invoic
 
 <p>上述查询返回一个给定进程实例的所有执行情况。</p>
 
-<p>你也可以<a href="/camunda-cn/reference/rest/execution/get/">使用REST API查询执行情况</a>.</p>
+<p>你也可以<a href="http://shaochenfeng.com/camunda-cn/reference/rest/execution/get/">使用REST API查询执行情况</a>.</p>
 
 <h1 id="活动实例-activity-instances">活动实例（Activity Instances）</h1>
 
@@ -8371,7 +8371,7 @@ ProcessInstance instance = runtimeService.startProcessInstanceByKey(&quot;invoic
 
 <p>活动实例也构成一棵树，遵循 BPMN 2.0 所提供的范围标准。处于 &ldquo;同一层次的子流程&rdquo;（即，同一范围的一部分，包含在同一子流程中）的活动，其活动实例会处于树的同一层次。</p>
 
-<p>例如，活动实例被用来进行<a href="/camunda-cn/user-guide/process-engine/process-instance-modification/">流程实例的修改</a> 和查看 <a href="/camunda-cn/webapps/cockpit/bpmn/process-instance-view/#activity-instance-tree">Cockpit中的活动实例树</a>.</p>
+<p>例如，活动实例被用来进行<a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/process-instance-modification/">流程实例的修改</a> 和查看 <a href="http://shaochenfeng.com/camunda-cn/webapps/cockpit/bpmn/process-instance-view/#activity-instance-tree">Cockpit中的活动实例树</a>.</p>
 
 <p>例如:</p>
 
@@ -8431,7 +8431,7 @@ ProcessInstance instance = runtimeService.startProcessInstanceByKey(&quot;invoic
 <pre><code class="language-java">ActivityInstance rootActivityInstance = runtimeService.getActivityInstance(processInstance.getProcessInstanceId());
 </code></pre>
 
-<p>你也可以<a href="/camunda-cn/reference/rest/process-instance/get-activity-instances/">使用REST API检索活动实例树</a>。</p>
+<p>你也可以<a href="http://shaochenfeng.com/camunda-cn/reference/rest/process-instance/get-activity-instances/">使用REST API检索活动实例树</a>。</p>
 
 <h2 id="身份-与-唯一性">身份 与 唯一性</h2>
 
@@ -8556,7 +8556,7 @@ for (JobDefinition jobDefinition : jobDefinitions) {
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="http://shaochenfeng.com/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
             Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2021
           </p>
@@ -8571,7 +8571,7 @@ for (JobDefinition jobDefinition : jobDefinitions) {
 
   
 
-  <script type="text/javascript" src="/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
+  <script type="text/javascript" src="http://shaochenfeng.com/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

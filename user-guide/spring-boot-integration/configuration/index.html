@@ -29,11 +29,11 @@
   <title>Process Engine Configuration | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="/camunda-cn/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="http://shaochenfeng.com/camunda-cn/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
+  <link rel="stylesheet" href="http://shaochenfeng.com/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
 </head>
 <body class="">
 
@@ -45,8 +45,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="/camunda-cn/">
-      <img src="/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="http://shaochenfeng.com/camunda-cn/">
+      <img src="http://shaochenfeng.com/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">Docs</span>
       </a>
@@ -8113,7 +8113,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="/camunda-cn/">
+    <select id="version-select" data-basepath="/manual" base-url="http://shaochenfeng.com/camunda-cn/">
       
         <option  selected >develop</option>
       
@@ -8188,7 +8188,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <h3 id="defaultdatasourceconfiguration"><code>DefaultDatasourceConfiguration</code></h3>
 
-<p>Configures the Camunda data source and enables <a href="/camunda-cn/user-guide/spring-framework-integration/transactions/">transaction integration</a>. By default, the primary <code>DataSource</code> and <code>PlatformTransactionManager</code> beans are wired with the process engine configuration.</p>
+<p>Configures the Camunda data source and enables <a href="http://shaochenfeng.com/camunda-cn/user-guide/spring-framework-integration/transactions/">transaction integration</a>. By default, the primary <code>DataSource</code> and <code>PlatformTransactionManager</code> beans are wired with the process engine configuration.</p>
 
 <p>If you want to <a href="http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#howto-two-datasources">configure more than one datasource</a>
 and don&rsquo;t want to use the <code>@Primary</code> one for the process engine, then you can create a separate
@@ -8233,7 +8233,7 @@ public PlatformTransactionManager camundaTransactionManager(@Qualifier(&quot;cam
 
 <h3 id="defaulthistoryconfiguration"><code>DefaultHistoryConfiguration</code></h3>
 
-<p>Applies the history configuration to the process engine. If not configured, the history level <a href="/camunda-cn/user-guide/process-engine/history/#choose-a-history-level">FULL</a> is used.
+<p>Applies the history configuration to the process engine. If not configured, the history level <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/history/#choose-a-history-level">FULL</a> is used.
 If you want to use a custom <code>HistoryEventHandler</code>, you just have to provide a bean implementing the interface.</p>
 
 <pre><code class="language-java">@Bean
@@ -8431,7 +8431,7 @@ can be found in the <a href="https://docs.camunda.org/get-started/spring-boot/co
 <tr>
 <td><a name="license-file"></a><code>.license-file</code></td>
 <td>Provides a URL to your Camunda license file and is automatically inserted into the DB when the application starts (but only if no valid license key is found in the DB).</br></br>
-<b>Note:</b> This property is only available when using the <a href="/camunda-cn/user-guide/spring-boot-integration/webapps/#enterprise-webapps">camunda-bpm-spring-boot-starter-webapp-ee</a>
+<b>Note:</b> This property is only available when using the <a href="http://shaochenfeng.com/camunda-cn/user-guide/spring-boot-integration/webapps/#enterprise-webapps">camunda-bpm-spring-boot-starter-webapp-ee</a>
 </td>
 <td>By default, the license key will be loaded:
  <ol>
@@ -8440,7 +8440,7 @@ can be found in the <a href="https://docs.camunda.org/get-started/spring-boot/co
   <li>from path <i>${user.home}/.camunda/license.txt</i> (if present)</li>
  </ol>
  The license must be exactly in the format as we sent it to you including the header and footer line. Bear in mind 
- that for some licenses there is a minimum <a href="/camunda-cn/user-guide/license-use/#license-compatibility">version requirement</a>.
+ that for some licenses there is a minimum <a href="http://shaochenfeng.com/camunda-cn/user-guide/license-use/#license-compatibility">version requirement</a>.
 </td>
 </tr>
 
@@ -8574,7 +8574,7 @@ can be found in the <a href="https://docs.camunda.org/get-started/spring-boot/co
 <td><code>.jdbc-batch-processing</code></td>
 <td>Controls if the engine executes the jdbc statements as Batch or not.
 It has to be disabled for some databases.
-See the <a href="/camunda-cn/user-guide/process-engine/database/database-configuration/#jdbc-batch-processing">user guide</a> for further details.</td>
+See the <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/database/database-configuration/#jdbc-batch-processing">user guide</a> for further details.</td>
 <td><i>Camunda default value: true</i></td>
 </tr>
 
@@ -8583,21 +8583,21 @@ See the <a href="/camunda-cn/user-guide/process-engine/database/database-configu
 <td rowspan="3"><code>camunda.bpm.eventing</code></td>
 <td><code>.execution</code></td>
 <td>Enables eventing of delegate execution events.
-See the <a href="/camunda-cn/user-guide/spring-boot-integration/the-spring-event-bridge/">user guide</a> for further details.</td>
+See the <a href="http://shaochenfeng.com/camunda-cn/user-guide/spring-boot-integration/the-spring-event-bridge/">user guide</a> for further details.</td>
 <td><code>true</code></td>
 </tr>
 
 <tr>
 <td><code>.history</code></td>
 <td>Enables eventing of history events.
-See the <a href="/camunda-cn/user-guide/spring-boot-integration/the-spring-event-bridge/">user guide</a> for further details.</td>
+See the <a href="http://shaochenfeng.com/camunda-cn/user-guide/spring-boot-integration/the-spring-event-bridge/">user guide</a> for further details.</td>
 <td><code>true</code></td>
 </tr>
 
 <tr>
 <td><code>.task</code></td>
 <td>Enables eventing of task events.
-See the <a href="/camunda-cn/user-guide/spring-boot-integration/the-spring-event-bridge/">user guide</a> for further details.</td>
+See the <a href="http://shaochenfeng.com/camunda-cn/user-guide/spring-boot-integration/the-spring-event-bridge/">user guide</a> for further details.</td>
 <td><code>true</code></td>
 </tr>
 
@@ -8683,35 +8683,35 @@ When setting to <code>/</code>, the legacy behavior of Camunda Spring Boot Start
 </tr>
 <tr>
 <td><code>.target-origin</code></td>
-<td>Sets the application expected deployment domain. See the <a href="/camunda-cn/webapps/shared-options/csrf-prevention/">user guide</a> for details.</td>
+<td>Sets the application expected deployment domain. See the <a href="http://shaochenfeng.com/camunda-cn/webapps/shared-options/csrf-prevention/">user guide</a> for details.</td>
 <td><i>Not set</i></td>
 </tr>
 <tr>
 <td><code>.deny-status</code></td>
-<td>Sets the HTTP response status code used for a denied request. See the <a href="/camunda-cn/webapps/shared-options/csrf-prevention/">user guide</a> for details.</td>
+<td>Sets the HTTP response status code used for a denied request. See the <a href="http://shaochenfeng.com/camunda-cn/webapps/shared-options/csrf-prevention/">user guide</a> for details.</td>
 <td><code>403</code></td>
 </tr>
 <tr>
 <td><code>.random-class</code></td>
-<td>Sets the name of the class used to generate tokens. See the <a href="/camunda-cn/webapps/shared-options/csrf-prevention/">user guide</a> for details.</td>
+<td>Sets the name of the class used to generate tokens. See the <a href="http://shaochenfeng.com/camunda-cn/webapps/shared-options/csrf-prevention/">user guide</a> for details.</td>
 <td><code>java.security.SecureRandom</code></td>
 </tr>
 <tr>
 <td><code>.entry-points</code></td>
-<td>Sets additional URLs that will not be tested for the presence of a valid token. See the <a href="/camunda-cn/webapps/shared-options/csrf-prevention/">user guide</a> for details.</td>
+<td>Sets additional URLs that will not be tested for the presence of a valid token. See the <a href="http://shaochenfeng.com/camunda-cn/webapps/shared-options/csrf-prevention/">user guide</a> for details.</td>
 <td><i>Not set</i></td>
 </tr>
 <tr>
   <td><code>.enable-secure-cookie</code></td>
   <td>
-    If set to <code>true</code>, the cookie flag <a href="/camunda-cn/webapps/shared-options/cookie-security/#secure">Secure</a> is enabled.
+    If set to <code>true</code>, the cookie flag <a href="http://shaochenfeng.com/camunda-cn/webapps/shared-options/cookie-security/#secure">Secure</a> is enabled.
   </td>
   <td><code>false</code></td>
 </tr>
 <tr>
   <td><code>.enable-same-site-cookie</code></td>
   <td>
-    If set to <code>false</code>, the cookie flag <a href="/camunda-cn/webapps/shared-options/cookie-security/#samesite">SameSite</a> is disabled. The default value of the <code>SameSite</code> cookie is <code>LAX</code> and it can be changed via <code>same-site-cookie-option</code> configuration property.
+    If set to <code>false</code>, the cookie flag <a href="http://shaochenfeng.com/camunda-cn/webapps/shared-options/cookie-security/#samesite">SameSite</a> is disabled. The default value of the <code>SameSite</code> cookie is <code>LAX</code> and it can be changed via <code>same-site-cookie-option</code> configuration property.
   </td>
   <td><code>true</code></td>
 </tr>
@@ -8744,7 +8744,7 @@ When setting to <code>/</code>, the legacy behavior of Camunda Spring Boot Start
   <td>
       A custom value to change the cookie name.<br>
       <strong>Note:</strong> Please make sure to additionally change the cookie name for each webapp 
-      (e. g. <a href="/camunda-cn/webapps/cockpit/extend/configuration/#change-csrf-cookie-name">Cockpit
+      (e. g. <a href="http://shaochenfeng.com/camunda-cn/webapps/cockpit/extend/configuration/#change-csrf-cookie-name">Cockpit
       </a>) separately.
   </td>
   <td><code>XSRF-TOKEN</code></td>
@@ -9016,7 +9016,7 @@ needs to be included as a dependency as well for the auto-configurators to work.
 <code>camunda-spin-dataformat-all</code> as a dependency. The <code>camunda-spin-dataformat-all</code> artifact shades the
 Jackson libraries, which breaks compatibility with the regular Jackson modules. If usage of
 <code>camunda-spin-dataformat-all</code> is necessary, please use the standard method for
-<a href="/camunda-cn/reference/spin/extending-spin/#custom-dataformats">Spin Custom DataFormat configuration</a>.</p>
+<a href="http://shaochenfeng.com/camunda-cn/reference/spin/extending-spin/#custom-dataformats">Spin Custom DataFormat configuration</a>.</p>
 </div>
 
 
@@ -9099,7 +9099,7 @@ implementation to the <code>META-INF/spring.factories</code> file;</li>
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="http://shaochenfeng.com/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
             Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2021
           </p>
@@ -9114,7 +9114,7 @@ implementation to the <code>META-INF/spring.factories</code> file;</li>
 
   
 
-  <script type="text/javascript" src="/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
+  <script type="text/javascript" src="http://shaochenfeng.com/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

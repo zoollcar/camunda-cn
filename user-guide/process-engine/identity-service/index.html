@@ -29,11 +29,11 @@
   <title>Identity Service | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="/camunda-cn/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="http://shaochenfeng.com/camunda-cn/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
+  <link rel="stylesheet" href="http://shaochenfeng.com/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
 </head>
 <body class="">
 
@@ -45,8 +45,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="/camunda-cn/">
-      <img src="/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="http://shaochenfeng.com/camunda-cn/">
+      <img src="http://shaochenfeng.com/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">Docs</span>
       </a>
@@ -8113,7 +8113,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="/camunda-cn/">
+    <select id="version-select" data-basepath="/manual" base-url="http://shaochenfeng.com/camunda-cn/">
       
         <option  selected >develop</option>
       
@@ -8184,9 +8184,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>To provide a custom identity provider implementation, the following interfaces can be implemented:</p>
 
 <ul>
-<li><a href="/camunda-cn/reference/javadoc/?org/camunda/bpm/engine/impl/identity/ReadOnlyIdentityProvider.html">org.camunda.bpm.engine.impl.identity.ReadOnlyIdentityProvider</a>
+<li><a href="http://shaochenfeng.com/camunda-cn/reference/javadoc/?org/camunda/bpm/engine/impl/identity/ReadOnlyIdentityProvider.html">org.camunda.bpm.engine.impl.identity.ReadOnlyIdentityProvider</a>
 </li>
-<li><a href="/camunda-cn/reference/javadoc/?org/camunda/bpm/engine/impl/identity/WritableIdentityProvider.html">org.camunda.bpm.engine.impl.identity.WritableIdentityProvider</a>
+<li><a href="http://shaochenfeng.com/camunda-cn/reference/javadoc/?org/camunda/bpm/engine/impl/identity/WritableIdentityProvider.html">org.camunda.bpm.engine.impl.identity.WritableIdentityProvider</a>
 </li>
 </ul>
 
@@ -8216,7 +8216,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <h1 id="the-ldap-identity-service">The LDAP Identity Service</h1>
 
-<p>The LDAP identity service provides read-only access to an LDAP-based user/group repository. The identity service provider is implemented as a <a href="/camunda-cn/user-guide/process-engine/process-engine-plugins/">Process Engine Plugin</a> and can be added to the process engine configuration. In that case it replaces the default database identity service.</p>
+<p>The LDAP identity service provides read-only access to an LDAP-based user/group repository. The identity service provider is implemented as a <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/process-engine-plugins/">Process Engine Plugin</a> and can be added to the process engine configuration. In that case it replaces the default database identity service.</p>
 
 <p>To use the LDAP identity service, the <code>camunda-identity-ldap.jar</code> library has to be added to the classloader of the process engine.</p>
 
@@ -8321,14 +8321,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="note bg-info docs-info">
   <h3>Administrator Authorization Plugin</h3>
-  <p>The LDAP Identity Provider Plugin is usually used in combination with the <a href="/camunda-cn/user-guide/process-engine/authorization-service/#the-administrator-authorization-plugin">Administrator Authorization Plugin</a> which allows you to grant administrator authorizations for a particular LDAP User/Group.</p>
+  <p>The LDAP Identity Provider Plugin is usually used in combination with the <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/authorization-service/#the-administrator-authorization-plugin">Administrator Authorization Plugin</a> which allows you to grant administrator authorizations for a particular LDAP User/Group.</p>
 </div>
 
 
 
 <div class="note bg-info docs-info">
   <h3>Multi-Tenancy</h3>
-  <p>Currently, the LDPA Identity Service doesn&rsquo;t support <a href="/camunda-cn/user-guide/process-engine/multi-tenancy/#single-process-engine-with-tenant-identifiers">multi-tenancy</a>. That means it is not possible to get tenants from LDAP and the transparent multi-tenancy access restrictions don&rsquo;t work by default.</p>
+  <p>Currently, the LDPA Identity Service doesn&rsquo;t support <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/multi-tenancy/#single-process-engine-with-tenant-identifiers">multi-tenancy</a>. That means it is not possible to get tenants from LDAP and the transparent multi-tenancy access restrictions don&rsquo;t work by default.</p>
 </div>
 
 
@@ -8514,7 +8514,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <p>A mechanism exists for preventing subsequent unsuccessful login attempts.The essence of it is that the user is not able to log in for a specific amount of time after unsuccessful login attempts.
 The amount of time is calculated after each attempt but it is limited by maximum delay time.
-After a predefined number of unsuccessful attempts, the user will be locked and only an administrator has permissions to <a href="/camunda-cn/webapps/admin/user-management/">unlock</a> them.</p>
+After a predefined number of unsuccessful attempts, the user will be locked and only an administrator has permissions to <a href="http://shaochenfeng.com/camunda-cn/webapps/admin/user-management/">unlock</a> them.</p>
 
 <p>The mechanism is configurable with the following properties and respective default values.</p>
 
@@ -8525,7 +8525,7 @@ After a predefined number of unsuccessful attempts, the user will be locked and 
 <li><code>loginDelayBase=3</code></li>
 </ul>
 
-<p>For more information, please check the process engine&rsquo;s <a href="/camunda-cn/reference/deployment-descriptors/tags/process-engine/#login-parameters">login properties</a> section.</p>
+<p>For more information, please check the process engine&rsquo;s <a href="http://shaochenfeng.com/camunda-cn/reference/deployment-descriptors/tags/process-engine/#login-parameters">login properties</a> section.</p>
 
 <p>Calculation of the delay is done via the formula: <code>baseTime * factor^(attempt-1)</code>.
 The behaviour with the default configuration will be:
@@ -8570,7 +8570,7 @@ The behaviour with the default configuration will be:
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="http://shaochenfeng.com/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
             Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2021
           </p>
@@ -8585,7 +8585,7 @@ The behaviour with the default configuration will be:
 
   
 
-  <script type="text/javascript" src="/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
+  <script type="text/javascript" src="http://shaochenfeng.com/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

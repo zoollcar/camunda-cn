@@ -29,11 +29,11 @@
   <title>Sentries | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="/camunda-cn/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="http://shaochenfeng.com/camunda-cn/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
+  <link rel="stylesheet" href="http://shaochenfeng.com/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
 </head>
 <body class="">
 
@@ -45,8 +45,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="/camunda-cn/">
-      <img src="/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="http://shaochenfeng.com/camunda-cn/">
+      <img src="http://shaochenfeng.com/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">Docs</span>
       </a>
@@ -8113,7 +8113,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="/camunda-cn/">
+    <select id="version-select" data-basepath="/manual" base-url="http://shaochenfeng.com/camunda-cn/">
       
         <option  selected >develop</option>
       
@@ -8161,12 +8161,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="col-xs-12 content-text">
       
 
-<p>A <em>sentry</em> captures the occurrence of a certain event occurring or a condition being fulfilled within a case. Sentries are used as <a href="/camunda-cn/reference/cmmn11/concepts/entry-exit-criteria/">entry and exit criteria</a>. Note that the black and white diamonds represent the criteria. A sentry itself has no graphical representation.</p>
+<p>A <em>sentry</em> captures the occurrence of a certain event occurring or a condition being fulfilled within a case. Sentries are used as <a href="http://shaochenfeng.com/camunda-cn/reference/cmmn11/concepts/entry-exit-criteria/">entry and exit criteria</a>. Note that the black and white diamonds represent the criteria. A sentry itself has no graphical representation.</p>
 
-<div class="cmmn-symbol"><img src="/camunda-cn//img/short-codes/cmmn-marker-entry-criterion.png" /></div>
+<div class="cmmn-symbol"><img src="http://shaochenfeng.com/camunda-cn//img/short-codes/cmmn-marker-entry-criterion.png" /></div>
 
 
-<div class="cmmn-symbol"><img src="/camunda-cn//img/short-codes/cmmn-marker-exit-criterion.png" /></div>
+<div class="cmmn-symbol"><img src="http://shaochenfeng.com/camunda-cn//img/short-codes/cmmn-marker-exit-criterion.png" /></div>
 
 
 <p>In XML, a sentry can be specified as follows:</p>
@@ -8188,7 +8188,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 &lt;humanTask id=&quot;HumanTask_1&quot;/&gt;
 </code></pre>
 
-<p>The above example defines a sentry that is fulfilled when the plan item <code>PlanItem_HumanTask_1</code> performs the state transition <code>complete</code> (note the <code>planItemOnPart</code> element) and a variable named <code>myVar</code> has a value greater than 100 (note the <code>ifPart</code> element). Furthermore, it serves as an <a href="/camunda-cn/reference/cmmn11/concepts/entry-exit-criteria/">entry criterion</a> for the plan item <code>PlanItem_HumanTask_2</code> that becomes <code>ENABLED</code> as soon as the sentry is fulfilled (note the <code>entryCriterion</code> child element of the element <code>PlanItem_HumanTask_2</code>).</p>
+<p>The above example defines a sentry that is fulfilled when the plan item <code>PlanItem_HumanTask_1</code> performs the state transition <code>complete</code> (note the <code>planItemOnPart</code> element) and a variable named <code>myVar</code> has a value greater than 100 (note the <code>ifPart</code> element). Furthermore, it serves as an <a href="http://shaochenfeng.com/camunda-cn/reference/cmmn11/concepts/entry-exit-criteria/">entry criterion</a> for the plan item <code>PlanItem_HumanTask_2</code> that becomes <code>ENABLED</code> as soon as the sentry is fulfilled (note the <code>entryCriterion</code> child element of the element <code>PlanItem_HumanTask_2</code>).</p>
 
 <p>As conditions or event triggers, sentries may define the following elements:</p>
 
@@ -8208,7 +8208,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 &lt;/sentry&gt;
 </code></pre>
 
-<p>A <code>planItemOnPart</code> must always reference a plan item by the attribute <code>sourceRef</code>. This plan item must be contained by the same stage the sentry is defined in. The child element <code>standardEvent</code> can the identifier of any lifecycle transition from that plan item&rsquo;s lifecycle and that is supported by the camunda engine. Note that different plan item definitions define different lifecycles. For details on valid lifecycle transitions, see the <a href="/camunda-cn/reference/cmmn11/concepts/lifecycle/">Lifecycles</a> section.</p>
+<p>A <code>planItemOnPart</code> must always reference a plan item by the attribute <code>sourceRef</code>. This plan item must be contained by the same stage the sentry is defined in. The child element <code>standardEvent</code> can the identifier of any lifecycle transition from that plan item&rsquo;s lifecycle and that is supported by the camunda engine. Note that different plan item definitions define different lifecycles. For details on valid lifecycle transitions, see the <a href="http://shaochenfeng.com/camunda-cn/reference/cmmn11/concepts/lifecycle/">Lifecycles</a> section.</p>
 
 <p>As an alternative to <code>sourceRef</code>, the CMMN specification allows to define an attribute <code>sentryRef</code> responsible for referencing another sentry such that the onPart is fulfilled when the plan item that sentry references performs the <em>exit</em> state transition. This attribute is currently not supported by the Camunda engine.</p>
 
@@ -8332,7 +8332,7 @@ Each human task is attached with a entry criterion sentry and both the sentries 
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="http://shaochenfeng.com/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
             Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2021
           </p>
@@ -8347,7 +8347,7 @@ Each human task is attached with a entry criterion sentry and both the sentries 
 
   
 
-  <script type="text/javascript" src="/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
+  <script type="text/javascript" src="http://shaochenfeng.com/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

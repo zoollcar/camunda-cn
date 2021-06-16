@@ -29,11 +29,11 @@
   <title>流程引擎集成 | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="/camunda-cn/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="http://shaochenfeng.com/camunda-cn/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
+  <link rel="stylesheet" href="http://shaochenfeng.com/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
 </head>
 <body class="">
 
@@ -45,8 +45,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="/camunda-cn/">
-      <img src="/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="http://shaochenfeng.com/camunda-cn/">
+      <img src="http://shaochenfeng.com/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">Docs</span>
       </a>
@@ -8113,7 +8113,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="/camunda-cn/">
+    <select id="version-select" data-basepath="/manual" base-url="http://shaochenfeng.com/camunda-cn/">
       
         <option  selected >develop</option>
       
@@ -8170,16 +8170,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <ul>
 <li><a href="#bootstrap-a-process-engine-using-the-java-api">通过Java API以编程方式管理</a></li>
 <li><a href="#configure-process-engine-using-camunda-cfg-xml">通过XML配置</a></li>
-<li><a href="/camunda-cn/user-guide/spring-framework-integration/">通过 Spring</a></li>
+<li><a href="http://shaochenfeng.com/camunda-cn/user-guide/spring-framework-integration/">通过 Spring</a></li>
 </ul>
 
 <h1 id="共享的-容器化管理流程引擎">共享的，容器化管理流程引擎</h1>
 
-<p>你选择的容器（例如Tomcat、JBoss或IBM WebSphere）为你管理进程引擎。配置是以一种特定的容器方式进行的，详情见<a href="/camunda-cn/user-guide/runtime-container-integration/">运行时容器集成</a>.</p>
+<p>你选择的容器（例如Tomcat、JBoss或IBM WebSphere）为你管理进程引擎。配置是以一种特定的容器方式进行的，详情见<a href="http://shaochenfeng.com/camunda-cn/user-guide/runtime-container-integration/">运行时容器集成</a>.</p>
 
 <h2 id="processengineconfiguration-bean-流程引擎配置bean">ProcessEngineConfiguration Bean （流程引擎配置Bean）</h2>
 
-<p>Camunda引擎使用 <a href="/camunda-cn/reference/javadoc/?org/camunda/bpm/engine/ProcessEngineConfiguration.html">ProcessEngineConfiguration bean</a>
+<p>Camunda引擎使用 <a href="http://shaochenfeng.com/camunda-cn/reference/javadoc/?org/camunda/bpm/engine/ProcessEngineConfiguration.html">ProcessEngineConfiguration bean</a>
  来配置和构建一个独立的流程引擎。它有多个可用的子类，可以用来定义进程引擎的配置。这些类代表不同的环境，并相应地设置默认值。最好的做法是选择与你的环境相匹配（大部分）的类，以尽量减少配置引擎所需的属性数量。目前有以下几个类。</p>
 
 <ul>
@@ -8303,13 +8303,13 @@ ProcessEngineConfiguration.createStandaloneInMemProcessEngineConfiguration();
 &lt;/bpm-platform&gt;
 </code></pre>
 
-<p>见<a href="/camunda-cn/reference/deployment-descriptors/descriptors/bpm-platform-xml/">部署描述符参考</a> 以获得关于<code>bpm-platform.xml</code>文件语法的完整文档。</p>
+<p>见<a href="http://shaochenfeng.com/camunda-cn/reference/deployment-descriptors/descriptors/bpm-platform-xml/">部署描述符参考</a> 以获得关于<code>bpm-platform.xml</code>文件语法的完整文档。</p>
 
 <h2 id="在-processes-xml中配置进程引擎">在 processes.xml中配置进程引擎</h2>
 
-<p>进程引擎也可以使用<code>META-INF/processes.xml</code>文件进行配置和引导。 见<a href="/camunda-cn/user-guide/process-applications/the-processes-xml-deployment-descriptor/">processes.xml 文件</a> 了解详情。</p>
+<p>进程引擎也可以使用<code>META-INF/processes.xml</code>文件进行配置和引导。 见<a href="http://shaochenfeng.com/camunda-cn/user-guide/process-applications/the-processes-xml-deployment-descriptor/">processes.xml 文件</a> 了解详情。</p>
 
-<p>见 <a href="/camunda-cn/reference/deployment-descriptors/descriptors/processes-xml/">部署描述符参考</a> 以获得关于<code>processes.xml</code>文件语法的完整文档。</p>
+<p>见 <a href="http://shaochenfeng.com/camunda-cn/reference/deployment-descriptors/descriptors/processes-xml/">部署描述符参考</a> 以获得关于<code>processes.xml</code>文件语法的完整文档。</p>
 
     </div>
   </div>
@@ -8344,7 +8344,7 @@ ProcessEngineConfiguration.createStandaloneInMemProcessEngineConfiguration();
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="http://shaochenfeng.com/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
             Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2021
           </p>
@@ -8359,7 +8359,7 @@ ProcessEngineConfiguration.createStandaloneInMemProcessEngineConfiguration();
 
   
 
-  <script type="text/javascript" src="/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
+  <script type="text/javascript" src="http://shaochenfeng.com/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

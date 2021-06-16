@@ -29,11 +29,11 @@
   <title>The Job Executor | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="/camunda-cn/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="http://shaochenfeng.com/camunda-cn/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
+  <link rel="stylesheet" href="http://shaochenfeng.com/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
 </head>
 <body class="">
 
@@ -45,8 +45,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="/camunda-cn/">
-      <img src="/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="http://shaochenfeng.com/camunda-cn/">
+      <img src="http://shaochenfeng.com/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">Docs</span>
       </a>
@@ -8113,7 +8113,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="/camunda-cn/">
+    <select id="version-select" data-basepath="/manual" base-url="http://shaochenfeng.com/camunda-cn/">
       
         <option  selected >develop</option>
       
@@ -8161,7 +8161,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="col-xs-12 content-text">
       
 
-<p>A job is an explicit representation of a task to trigger process execution. A job is created when a timer event or a task marked for asynchronous execution (see <a href="/camunda-cn/user-guide/process-engine/transactions-in-processes/">transaction boundaries</a>) is approached. Job processing can therefore be separated into three phases:</p>
+<p>A job is an explicit representation of a task to trigger process execution. A job is created when a timer event or a task marked for asynchronous execution (see <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/transactions-in-processes/">transaction boundaries</a>) is approached. Job processing can therefore be separated into three phases:</p>
 
 <ul>
 <li><a href="#job-creation">Job Creation</a></li>
@@ -8203,7 +8203,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>Jobs are created for a range of purposes by the process engine. The following job types exist:</p>
 
 <ul>
-<li>Asynchronous continuations to set <a href="/camunda-cn/user-guide/process-engine/transactions-in-processes/">transaction boundaries</a> in the process</li>
+<li>Asynchronous continuations to set <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/transactions-in-processes/">transaction boundaries</a> in the process</li>
 <li>Timer jobs for BPMN timer events</li>
 <li>Asynchronous handling of BPMN events</li>
 </ul>
@@ -8262,7 +8262,7 @@ For details on how to specify job priorities and how the process engine assigns 
 
 <p>Job Priorities can be assigned at the process or the activity level. To achieve this the Camunda extension attribute <code>camunda:jobPriority</code> can be used.</p>
 
-<p>For specifying the priority, both constant values and <a href="/camunda-cn/user-guide/process-engine/expression-language/">expressions</a> are supported. When using a constant value, the same priority is assigned to all instances of the process or activity. Expressions, on the other hand, allow assigning a different priority to each instance of the process or activity. Expression must evaluate to a number in the Java <code>long</code> range.
+<p>For specifying the priority, both constant values and <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/expression-language/">expressions</a> are supported. When using a constant value, the same priority is assigned to all instances of the process or activity. Expressions, on the other hand, allow assigning a different priority to each instance of the process or activity. Expression must evaluate to a number in the Java <code>long</code> range.
 The concrete value can be the result of a complex calculation and be based on user-provided data (resulting from a task form or other sources).</p>
 
 <h4 id="priorities-at-the-process-level">Priorities at the Process Level</h4>
@@ -8313,7 +8313,7 @@ The priority overrides a process level priority. See also: <a href="#job-priorit
 <h4 id="resolution-context-of-priority-expressions">Resolution Context of Priority Expressions</h4>
 
 <p>This section explains which context variables and functions are available when evaluating priority expressions.
-For some general documentation on this, see the corresponding <a href="/camunda-cn/user-guide/process-engine/expression-language/#availability-of-variables-and-functions-inside-expression-language">documentation section</a>.</p>
+For some general documentation on this, see the corresponding <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/expression-language/#availability-of-variables-and-functions-inside-expression-language">documentation section</a>.</p>
 
 <p>All priority expressions are evaluated in the context of an existing execution. This means that variable <code>execution</code> is implicitly defined as well as all of the execution&rsquo;s variables by their name.</p>
 
@@ -8329,7 +8329,7 @@ Examples:</p>
 
 <p>When starting a process instance via a call activity, you sometimes want the process instance to &ldquo;inherit&rdquo; the priority of the calling process instance.
 The easiest way to achieve this is by passing the priority using a variable and referencing it using an expression in the called process.
-See also <a href="/camunda-cn/reference/bpmn20/subprocesses/call-activity/#passing-variables">Call Activity Parameters</a> for details on how to pass variables using call activities.</p>
+See also <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/subprocesses/call-activity/#passing-variables">Call Activity Parameters</a> for details on how to pass variables using call activities.</p>
 
 <h3 id="set-job-definition-priorities-via-managementservice-api">Set Job Definition Priorities via ManagementService API</h3>
 
@@ -8413,10 +8413,10 @@ managementService.setOverridingJobPriorityForJobDefinition(jobDefinition.getId()
 
 <p>To optimize the acquisition of jobs that need to be executed immediately, the <code>DUEDATE_</code> column is not set (<code>null</code>) and a (positive) null check is added as a condition for acquisition.</p>
 
-<p>In case each job must have a <code>DUEDATE_</code> set, the optimisation can be disabled. This can be done by setting the <code>ensureJobDueDateNotNull</code> <a href="/camunda-cn/reference/deployment-descriptors/tags/process-engine/#ensureJobDueDateNotNull">process engine configuration flag</a> to <code>true</code>.</p>
+<p>In case each job must have a <code>DUEDATE_</code> set, the optimisation can be disabled. This can be done by setting the <code>ensureJobDueDateNotNull</code> <a href="http://shaochenfeng.com/camunda-cn/reference/deployment-descriptors/tags/process-engine/#ensureJobDueDateNotNull">process engine configuration flag</a> to <code>true</code>.</p>
 
-<p>However, any jobs created with a <code>null</code> value for <code>DUEDATE_</code> before disabling the optimisation will not be picked up by the Job Acquisition phase, unless the jobs are explicitly updated with a due date through the <a href="/camunda-cn/reference/javadoc/?org/camunda/bpm/engine/ManagementService.html#setJobDuedate-java.lang.String-java.util.Date-">Java</a>
-/<a href="/camunda-cn/reference/rest/job/put-set-job-duedate/">Rest</a> API.</p>
+<p>However, any jobs created with a <code>null</code> value for <code>DUEDATE_</code> before disabling the optimisation will not be picked up by the Job Acquisition phase, unless the jobs are explicitly updated with a due date through the <a href="http://shaochenfeng.com/camunda-cn/reference/javadoc/?org/camunda/bpm/engine/ManagementService.html#setJobDuedate-java.lang.String-java.util.Date-">Java</a>
+/<a href="http://shaochenfeng.com/camunda-cn/reference/rest/job/put-set-job-duedate/">Rest</a> API.</p>
 
 <h2 id="the-two-phases-of-job-acquisition">The Two Phases of Job Acquisition</h2>
 
@@ -8539,7 +8539,7 @@ The default maximum wait time is 60 seconds. You can decrease the delay by setti
 
 <p>Acquired jobs are executed by a thread pool. The thread pool consumes jobs from the acquired jobs queue. The acquired jobs queue is an in-memory queue with a fixed capacity. When an executor starts executing a job, it is first removed from the queue.</p>
 
-<p>In the scenario of an embedded process engine, the default implementation for this thread pool is a <code>java.util.concurrent.ThreadPoolExecutor</code>. However, this is not allowed in Java EE environments. There we hook into the application server capabilities of thread management. See the platform-specific information in the <a href="/camunda-cn/user-guide/runtime-container-integration/">Runtime Container Integration</a> section on how this achieved.</p>
+<p>In the scenario of an embedded process engine, the default implementation for this thread pool is a <code>java.util.concurrent.ThreadPoolExecutor</code>. However, this is not allowed in Java EE environments. There we hook into the application server capabilities of thread management. See the platform-specific information in the <a href="http://shaochenfeng.com/camunda-cn/user-guide/runtime-container-integration/">Runtime Container Integration</a> section on how this achieved.</p>
 
 <h2 id="failed-jobs">Failed Jobs</h2>
 
@@ -8556,7 +8556,7 @@ is exhausted (the value of the RETRIES&#95; column equals 0), the job is not exe
 </div>
 
 
-<p>If incident creation is enabled for jobs, then once job retries are depleted, an incident is created (see <a href="/camunda-cn/user-guide/process-engine/incidents/#de-activate-incidents">(De-)Activate Incidents</a>).
+<p>If incident creation is enabled for jobs, then once job retries are depleted, an incident is created (see <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/incidents/#de-activate-incidents">(De-)Activate Incidents</a>).
 Incidents and historic incidents related to the job can be requested via Java API like this:</p>
 
 <pre><code class="language-java">List&lt;Incident&gt; incidents = engineRule.getRuntimeService()
@@ -8643,7 +8643,7 @@ List&lt;HistoricIncident&gt; historicIncidents = engineRule.getHistoryService()
 
 <h4 id="use-a-custom-job-retry-configuration-for-multi-instance-activities">Use a Custom Job Retry Configuration for Multi-Instance Activities</h4>
 
-<p>If the retry configuration is set for a multi-instance activity then the configuration is applied to the <a href="/camunda-cn/user-guide/process-engine/transactions-in-processes/#asynchronous-continuations-of-multi-instance-activities">multi-instance body</a>. Additionally, the retries of the inner activities can also be configured using the extension element as child of the <code>multiInstanceLoopCharacteristics</code> element.</p>
+<p>If the retry configuration is set for a multi-instance activity then the configuration is applied to the <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/transactions-in-processes/#asynchronous-continuations-of-multi-instance-activities">multi-instance body</a>. Additionally, the retries of the inner activities can also be configured using the extension element as child of the <code>multiInstanceLoopCharacteristics</code> element.</p>
 
 <p>The following example defines the retries of a multi-instance service task with asynchronous continuation of the multi-instance body and the inner activity. If a failure occur during one of the five parallel instances then the job of the failed instance will be retried up to 3 times with a delay of 5 seconds. In case all instances ended successful and a failure occur during the transaction which follows the task, the job will be retried up to 5 times with a delay of 5 minutes.</p>
 
@@ -8719,7 +8719,7 @@ Here is an example of the process engine configuration:</p>
 </figure>
 
 
-<p>We have a parallel gateway followed by three service tasks which all perform an <a href="/camunda-cn/user-guide/process-engine/transactions-in-processes/#asynchronous-continuations">asynchronous continuation</a>. As a result of this, three jobs are added to the database. Once such a job is present in the database it can be processed by the job executor. It acquires the jobs and delegates them to a thread pool of worker threads which actually process the jobs. This means that using an asynchronous continuation, you can distribute the work to this thread pool (and in a clustered scenario even across multiple thread pools in the cluster).</p>
+<p>We have a parallel gateway followed by three service tasks which all perform an <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/transactions-in-processes/#asynchronous-continuations">asynchronous continuation</a>. As a result of this, three jobs are added to the database. Once such a job is present in the database it can be processed by the job executor. It acquires the jobs and delegates them to a thread pool of worker threads which actually process the jobs. This means that using an asynchronous continuation, you can distribute the work to this thread pool (and in a clustered scenario even across multiple thread pools in the cluster).</p>
 
 <p>This is usually a good thing. However it also bears an inherent problem: consistency. Consider the parallel join after the service tasks. When the execution of a service task is completed, we arrive at the parallel join and need to decide whether to wait for the other executions or whether we can move forward. That means, for each branch arriving at the parallel join, we need to take a decision whether we can continue or whether we need to wait for one or more other executions from the other branches.</p>
 
@@ -8770,7 +8770,7 @@ Here is an example of the process engine configuration:</p>
 
 
 <p><strong>This setup enables centralized monitoring of job acquisition and execution</strong>.
-See the platform-specific information in the <a href="/camunda-cn/user-guide/runtime-container-integration/">Runtime Container Integration</a> section on how the thread pooling is implemented on the different platforms.</p>
+See the platform-specific information in the <a href="http://shaochenfeng.com/camunda-cn/user-guide/runtime-container-integration/">Runtime Container Integration</a> section on how the thread pooling is implemented on the different platforms.</p>
 
 <p>Different job acquisitions can also be configured differently, e.g. to meet business requirements like SLAs. For example, the acquisition&rsquo;s timeout when no more executable jobs are present can be configured differently per acquisition.</p>
 
@@ -8782,7 +8782,7 @@ See the platform-specific information in the <a href="/camunda-cn/user-guide/run
 &lt;/process-engine&gt;
 </code></pre>
 
-<p>Job acquisitions have to be declared in the Camunda Platform&rsquo;s deployment descriptor, see <a href="/camunda-cn/user-guide/runtime-container-integration/">the container-specific configuration options</a>.</p>
+<p>Job acquisitions have to be declared in the Camunda Platform&rsquo;s deployment descriptor, see <a href="http://shaochenfeng.com/camunda-cn/user-guide/runtime-container-integration/">the container-specific configuration options</a>.</p>
 
 <h1 id="cluster-setups">Cluster Setups</h1>
 
@@ -8911,7 +8911,7 @@ See the platform-specific information in the <a href="/camunda-cn/user-guide/run
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="http://shaochenfeng.com/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
             Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2021
           </p>
@@ -8926,7 +8926,7 @@ See the platform-specific information in the <a href="/camunda-cn/user-guide/run
 
   
 
-  <script type="text/javascript" src="/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
+  <script type="text/javascript" src="http://shaochenfeng.com/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

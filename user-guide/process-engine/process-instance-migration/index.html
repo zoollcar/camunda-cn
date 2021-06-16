@@ -29,11 +29,11 @@
   <title>Process Instance Migration | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="/camunda-cn/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="http://shaochenfeng.com/camunda-cn/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
+  <link rel="stylesheet" href="http://shaochenfeng.com/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
 </head>
 <body class="">
 
@@ -45,8 +45,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="/camunda-cn/">
-      <img src="/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="http://shaochenfeng.com/camunda-cn/">
+      <img src="http://shaochenfeng.com/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">Docs</span>
       </a>
@@ -8113,7 +8113,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="/camunda-cn/">
+    <select id="version-select" data-basepath="/manual" base-url="http://shaochenfeng.com/camunda-cn/">
       
         <option  selected >develop</option>
       
@@ -8188,7 +8188,7 @@ is mostly transparent, so that a task that was started before migration can be c
 The same principle is applied to the other BPMN element types.</p>
 
 <p>For cases in which activities are not semantically equivalent,
-we recommend combining migration with the <a href="/camunda-cn/user-guide/process-engine/process-instance-modification/">process instance modification API</a>, e.g.,
+we recommend combining migration with the <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/process-instance-modification/">process instance modification API</a>, e.g.,
 canceling an activity instance before migration and starting a new instance after migration.</p>
 
 <p>In the remainder of this section, the following process models are used to illustrate the API and effects of migration unless otherwise noted:</p>
@@ -8204,7 +8204,7 @@ canceling an activity instance before migration and starting a new instance afte
 <div class="note enterprise-feature">
   <h3>Enterprise Feature</h3>
 
-  <p class="description">The Camunda enterprise edition provides a user interface to migrate process instances in <a href="/camunda-cn/webapps/cockpit/bpmn/process-instance-migration/">Camunda Cockpit</a></p>
+  <p class="description">The Camunda enterprise edition provides a user interface to migrate process instances in <a href="http://shaochenfeng.com/camunda-cn/webapps/cockpit/bpmn/process-instance-migration/">Camunda Cockpit</a></p>
 
   <p>
     Check the <a href="http://camunda.com/bpm/enterprise/">Camunda enterprise homepage</a>
@@ -8277,7 +8277,7 @@ From the accountant&rsquo;s perspective, migration is completely transparent whi
 <h1 id="api">API</h1>
 
 <p>The following gives a structured overview of the Java API for process instance migration. Note that these operations are also available
-via <a href="/camunda-cn/reference/rest/migration/">REST</a>.</p>
+via <a href="http://shaochenfeng.com/camunda-cn/reference/rest/migration/">REST</a>.</p>
 
 <h2 id="creating-a-migration-plan">Creating a Migration Plan</h2>
 
@@ -8376,7 +8376,7 @@ MigrationPlan migrationPlan = processEngine.getRuntimeService()
 <h4 id="known-limitation">Known Limitation</h4>
 
 <p>Currently, it is not possible to set transient variables asynchronously. However,
-you can <a href="/camunda-cn/user-guide/process-engine/variables/#transient-variables">set transient variables</a> synchronously.</p>
+you can <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/variables/#transient-variables">set transient variables</a> synchronously.</p>
 
 <h2 id="generating-a-migration-plan">Generating a migration plan</h2>
 
@@ -8426,7 +8426,7 @@ which are generated.</p>
 definition by using the API Method <code>RuntimeService#newMigration</code>.</p>
 
 <p>The migration can either be executed synchronously (blocking) or asynchronously
-(non-blocking) using a <a href="/camunda-cn/user-guide/process-engine/batch/">batch</a>.</p>
+(non-blocking) using a <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/batch/">batch</a>.</p>
 
 <p>The following are some reasons to prefer either one or the other:</p>
 
@@ -8553,7 +8553,7 @@ Batch batch = runtimeService.newMigration(migrationPlan)
 
 <p>Using a batch, the process instance migration is split into several jobs which
 are executed asynchronously. These batch jobs are executed by the job executor.
-See the <a href="/camunda-cn/user-guide/process-engine/batch/">batch</a> section for more information. A batch is completed if all
+See the <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/batch/">batch</a> section for more information. A batch is completed if all
 batch execution jobs are successfully completed. However, in contrast to the
 synchronous migration, it is not guaranteed that either all or no process
 instances are migrated. As the migration is split into several independent jobs,
@@ -8567,7 +8567,7 @@ does not affect the batch beyond that.</p>
 
 <h4 id="batch-migration-in-a-heterogeneous-cluster">Batch migration in a heterogeneous cluster</h4>
 
-<p>As described in the <a href="/camunda-cn/user-guide/process-engine/the-job-executor/#job-execution-in-heterogeneous-clusters">job executor</a> section of the user guide, the process engine
+<p>As described in the <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/the-job-executor/#job-execution-in-heterogeneous-clusters">job executor</a> section of the user guide, the process engine
 can be used in a heterogeneous cluster where deployments are unevenly distributed across cluster nodes.
 The <em>deployment-aware</em> job executor only executes jobs for deployments registered with it.
 In a heterogeneous cluster, this avoids problems with accessing deployment resources.</p>
@@ -8930,7 +8930,7 @@ the following requirements:</p>
 
 <ul>
 <li>Validation is skipped when the engine configuration flag <code>javaSerializationFormatEnabled</code> is set to <code>true</code></li>
-<li>Please see <a href="/camunda-cn/reference/deployment-descriptors/tags/process-engine/#javaSerializationFormatEnabled">Process Engine Configuration Reference</a> for more details</li>
+<li>Please see <a href="http://shaochenfeng.com/camunda-cn/reference/deployment-descriptors/tags/process-engine/#javaSerializationFormatEnabled">Process Engine Configuration Reference</a> for more details</li>
 </ul></li>
 </ul>
 
@@ -8943,7 +8943,7 @@ validation errors.</p>
 <p>An activity must stay a descendant of its closest ancestor scope that migrates (i.e., that is not cancelled during migration).</p>
 
 <p>Consider the following migration plan for the example processes shown at the
-<a href="/camunda-cn/user-guide/process-engine/process-instance-migration/">beginning of this chapter</a>:</p>
+<a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/process-instance-migration/">beginning of this chapter</a>:</p>
 
 <pre><code class="language-java">MigrationPlan migrationPlan = processEngine.getRuntimeService()
   .createMigrationPlan(&quot;exampleProcess:1&quot;, &quot;exampleProcess:2&quot;)
@@ -9062,7 +9062,7 @@ Validation cannot ensure that such data is useful in the context of the target p
 
 <h4 id="deserialization-of-object-variables">Deserialization of Object Variables</h4>
 
-<p><a href="/camunda-cn/user-guide/process-engine/variables/#supported-variable-values">Object type variables</a> represent Java objects. That means they have a serialized value along with a Java type name that is used to deserialize the value into a Java object. When migrating between processes of different process
+<p><a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/variables/#supported-variable-values">Object type variables</a> represent Java objects. That means they have a serialized value along with a Java type name that is used to deserialize the value into a Java object. When migrating between processes of different process
 applications, it may occur that an Object variable refers to a Java class that does not exist in the process
 application of the target process.</p>
 
@@ -9201,7 +9201,7 @@ that situation:</p>
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="http://shaochenfeng.com/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
             Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2021
           </p>
@@ -9216,7 +9216,7 @@ that situation:</p>
 
   
 
-  <script type="text/javascript" src="/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
+  <script type="text/javascript" src="http://shaochenfeng.com/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

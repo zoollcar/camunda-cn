@@ -29,11 +29,11 @@
   <title>Configure the DMN engine | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="/camunda-cn/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="http://shaochenfeng.com/camunda-cn/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
+  <link rel="stylesheet" href="http://shaochenfeng.com/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
 </head>
 <body class="">
 
@@ -45,8 +45,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="/camunda-cn/">
-      <img src="/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="http://shaochenfeng.com/camunda-cn/">
+      <img src="http://shaochenfeng.com/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">Docs</span>
       </a>
@@ -8113,7 +8113,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="/camunda-cn/">
+    <select id="version-select" data-basepath="/manual" base-url="http://shaochenfeng.com/camunda-cn/">
       
         <option  selected >develop</option>
       
@@ -8161,7 +8161,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="col-xs-12 content-text">
       
 
-<p>The configuration of the DMN engine is a part of the process engine configuration. It depends on whether you use an application managed or a shared, container managed process engine. Please refer to the <a href="/camunda-cn/user-guide/process-engine/process-engine-bootstrapping/">Process Engine Bootstrapping</a> for details.</p>
+<p>The configuration of the DMN engine is a part of the process engine configuration. It depends on whether you use an application managed or a shared, container managed process engine. Please refer to the <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/process-engine-bootstrapping/">Process Engine Bootstrapping</a> for details.</p>
 
 <p>This section shows how to configure the DMN engine:</p>
 
@@ -8170,11 +8170,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <li><a href="#configure-the-dmn-engine-using-spring-xml">Declarative via XML configuration</a></li>
 </ul>
 
-<p>In the examples the default expression language of the input expressions is set to <code>groovy</code>. A list of all possible configurations can be found in the <a href="/camunda-cn/user-guide/dmn-engine/embed/#configuration-of-the-dmn-engine">DMN Engine Configuration</a> section.</p>
+<p>In the examples the default expression language of the input expressions is set to <code>groovy</code>. A list of all possible configurations can be found in the <a href="http://shaochenfeng.com/camunda-cn/user-guide/dmn-engine/embed/#configuration-of-the-dmn-engine">DMN Engine Configuration</a> section.</p>
 
 <h1 id="configure-the-dmn-engine-using-java-api">Configure the DMN Engine using Java API</h1>
 
-<p>First, you need to create a <a href="/camunda-cn/user-guide/process-engine/process-engine-bootstrapping/#bootstrap-a-process-engine-using-the-java-api">ProcessEngineConfiguration</a> object for the process engine and a <code>DmnEngineConfiguration</code> object for the DMN engine. Now you can configure the DMN engine using the <code>DmnEngineConfiguration</code> object. When you are done, set the object on the <code>ProcessEngineConfiguration</code> and call <code>buildProcessEngine()</code> to create the process engine.</p>
+<p>First, you need to create a <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/process-engine-bootstrapping/#bootstrap-a-process-engine-using-the-java-api">ProcessEngineConfiguration</a> object for the process engine and a <code>DmnEngineConfiguration</code> object for the DMN engine. Now you can configure the DMN engine using the <code>DmnEngineConfiguration</code> object. When you are done, set the object on the <code>ProcessEngineConfiguration</code> and call <code>buildProcessEngine()</code> to create the process engine.</p>
 
 <pre><code class="language-java">// create the process engine configuration
 ProcessEngineConfigurationImpl processEngineConfiguration = // ...
@@ -8196,7 +8196,7 @@ processEngineConfiguration.buildProcessEngine();
 
 <h1 id="configure-the-dmn-engine-using-spring-xml">Configure the DMN Engine using Spring XML</h1>
 
-<p>Follow the <a href="/camunda-cn/user-guide/process-engine/process-engine-bootstrapping/#configure-process-engine-using-spring-xml">instructions</a> to create a base <code>camunda.cfg.xml</code> XML configuration for the process engine.</p>
+<p>Follow the <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/process-engine-bootstrapping/#configure-process-engine-using-spring-xml">instructions</a> to create a base <code>camunda.cfg.xml</code> XML configuration for the process engine.</p>
 
 <p>Add a new configuration bean of class <code>org.camunda.bpm.dmn.engine.impl.DefaultDmnEngineConfiguration</code>. Configure the DMN engine using the bean and set it as <code>dmnEngineConfiguration</code> property on the <code>processEngineConfiguration</code> bean.</p>
 
@@ -8247,7 +8247,7 @@ processEngineConfiguration.buildProcessEngine();
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="http://shaochenfeng.com/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
             Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2021
           </p>
@@ -8262,7 +8262,7 @@ processEngineConfiguration.buildProcessEngine();
 
   
 
-  <script type="text/javascript" src="/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
+  <script type="text/javascript" src="http://shaochenfeng.com/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

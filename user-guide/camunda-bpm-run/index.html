@@ -29,11 +29,11 @@
   <title>Camunda Platform Run | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="/camunda-cn/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="http://shaochenfeng.com/camunda-cn/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
+  <link rel="stylesheet" href="http://shaochenfeng.com/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
 </head>
 <body class="">
 
@@ -45,8 +45,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="/camunda-cn/">
-      <img src="/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="http://shaochenfeng.com/camunda-cn/">
+      <img src="http://shaochenfeng.com/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">Docs</span>
       </a>
@@ -8113,7 +8113,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="/camunda-cn/">
+    <select id="version-select" data-basepath="/manual" base-url="http://shaochenfeng.com/camunda-cn/">
       
         <option  selected >develop</option>
       
@@ -8165,9 +8165,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <h1 id="prerequisites-and-audience">Prerequisites and audience</h1>
 
-<p>To use this guide, you should at least know what Camunda Platform is and what it does. Check out the <a href="https://docs.camunda.org/get-started/quick-start/">Get Started guides</a> if you have never used Camunda Platform before. The <a href="/camunda-cn/installation/camunda-bpm-run/">Installation guide</a> is also worth looking at if you are completely new to Camunda Platform.</p>
+<p>To use this guide, you should at least know what Camunda Platform is and what it does. Check out the <a href="https://docs.camunda.org/get-started/quick-start/">Get Started guides</a> if you have never used Camunda Platform before. The <a href="http://shaochenfeng.com/camunda-cn/installation/camunda-bpm-run/">Installation guide</a> is also worth looking at if you are completely new to Camunda Platform.</p>
 
-<p>This guide will teach you about Camunda Platform Run and how to configure it. It can serve as a reference page for configuration and operation options. It will not give you a step-by-step guide on how to install Camunda Platform Run. Head over to the <a href="/camunda-cn/installation/camunda-bpm-run/">Installation guide</a> for details on how to install and start Camunda Platform Run.</p>
+<p>This guide will teach you about Camunda Platform Run and how to configure it. It can serve as a reference page for configuration and operation options. It will not give you a step-by-step guide on how to install Camunda Platform Run. Head over to the <a href="http://shaochenfeng.com/camunda-cn/installation/camunda-bpm-run/">Installation guide</a> for details on how to install and start Camunda Platform Run.</p>
 
 <h1 id="what-is-camunda-platform-run">What is Camunda Platform Run?</h1>
 
@@ -8181,7 +8181,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <li>Tasklist</li>
 <li>Admin</li>
 </ul></li>
-<li><a href="/camunda-cn/reference/rest/overview/">REST API</a></li>
+<li><a href="http://shaochenfeng.com/camunda-cn/reference/rest/overview/">REST API</a></li>
 <li><a href="https://github.com/swagger-api/swagger-ui">Swagger UI</a> (web application for exploring the REST API)</li>
 </ul>
 
@@ -8210,7 +8210,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <h2 id="starting-camunda-platform-run-using-docker">Starting Camunda Platform Run using Docker</h2>
 
-<p>Camunda Platform Run is also available as a Docker image. Please see the Camunda Platform Run section of the Camunda Docker documentation <a href="/camunda-cn/installation/docker/#start-camunda-bpm-run-using-docker">here</a> for more details.</p>
+<p>Camunda Platform Run is also available as a Docker image. Please see the Camunda Platform Run section of the Camunda Docker documentation <a href="http://shaochenfeng.com/camunda-cn/installation/docker/#start-camunda-bpm-run-using-docker">here</a> for more details.</p>
 
 <h2 id="disable-components">Disable components</h2>
 
@@ -8222,7 +8222,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <ul>
 <li>The <code>default.yml</code> configuration only contains necessary configuration like the H2 database, a demo user and <a href="#cross-origin-resource-sharing">CORS</a> for REST calls from a client application.</li>
-<li>The <code>production.yml</code> configuration is intended to provide the recommended properties according to the <a href="/camunda-cn/user-guide/security/">Security Instructions</a>.
+<li>The <code>production.yml</code> configuration is intended to provide the recommended properties according to the <a href="http://shaochenfeng.com/camunda-cn/user-guide/security/">Security Instructions</a>.
 When using Camunda Platform Run in a production environment, make sure to base your custom configuration on this one and carefully read through the security instructions.</li>
 </ul>
 
@@ -8234,7 +8234,7 @@ Using <code>--production</code> disables Swagger UI. It can be enabled by explic
 <p>Camunda Platform Run is pre-configured to use a file-based H2 database for testing. The database schema and all required tables are automatically created when the engine starts up for the first time. If you want to use a custom standalone database, follow these steps:</p>
 
 <ol>
-<li>Make sure your database is among the <a href="/camunda-cn/introduction/supported-environments/#supported-database-products">supported database systems</a>.</li>
+<li>Make sure your database is among the <a href="http://shaochenfeng.com/camunda-cn/introduction/supported-environments/#supported-database-products">supported database systems</a>.</li>
 <li>Create a database schema for the Camunda Platform yourself.</li>
 <li>Execute the SQL DDL scripts which create all required tables and default indices. The scripts can be found in the <code>configuration/sql/create</code> folder.</li>
 <li>Drop a JDBC driver jar for your database system in the <code>configuration/userlib</code> folder.</li>
@@ -8246,12 +8246,12 @@ Using <code>--production</code> disables Swagger UI. It can be enabled by explic
 
 <p>In the unpacked distro, you will find a <code>resources</code> folder. All files (including BPMN, DMN, CMMN, form, and script files) will be deployed when you start Camunda Platform Run.</p>
 
-<p>Deployments via the <a href="/camunda-cn/reference/rest/deployment/post-deployment/">REST API</a> are still possible.</p>
+<p>Deployments via the <a href="http://shaochenfeng.com/camunda-cn/reference/rest/deployment/post-deployment/">REST API</a> are still possible.</p>
 
 <h2 id="automatic-license-pickup">Automatic License Pickup</h2>
 
 <p>If you downloaded the enterprise version of Camunda Platform Run, you will need a license key to enable the enterprise
-features. Please see the <a href="/camunda-cn/user-guide/license-use/#with-the-camunda-spring-boot-starter-camunda-run">dedicated License section</a>
+features. Please see the <a href="http://shaochenfeng.com/camunda-cn/user-guide/license-use/#with-the-camunda-spring-boot-starter-camunda-run">dedicated License section</a>
 of the docs, to learn more.</p>
 
 <h1 id="configure-camunda-platform-run">Configure Camunda Platform Run</h1>
@@ -8262,7 +8262,7 @@ of the docs, to learn more.</p>
 <div class="note bg-info docs-info">
   <h3>Note:</h3>
   <p>Camunda Platform Run is based on the <a href="https://github.com/camunda/camunda-bpm-spring-boot-starter">Camunda Spring Boot Starter</a>.
-All <a href="/camunda-cn/user-guide/spring-boot-integration/configuration/#camunda-engine-properties">configuration properties</a> from the camunda-spring-boot-starter are available to customize Camunda Platform Run.</p>
+All <a href="http://shaochenfeng.com/camunda-cn/user-guide/spring-boot-integration/configuration/#camunda-engine-properties">configuration properties</a> from the camunda-spring-boot-starter are available to customize Camunda Platform Run.</p>
 </div>
 
 
@@ -8302,7 +8302,7 @@ All <a href="/camunda-cn/user-guide/spring-boot-integration/configuration/#camun
 
 <h2 id="authentication">Authentication</h2>
 
-<p>To add authentication to requests against the <a href="/camunda-cn/reference/rest/overview/">REST API</a>, you can enable basic authentication.</p>
+<p>To add authentication to requests against the <a href="http://shaochenfeng.com/camunda-cn/reference/rest/overview/">REST API</a>, you can enable basic authentication.</p>
 
 <table class="table desc-table">
   <tr>
@@ -8326,7 +8326,7 @@ All <a href="/camunda-cn/user-guide/spring-boot-integration/configuration/#camun
 
 <h2 id="cross-origin-resource-sharing">Cross-Origin Resource Sharing</h2>
 
-<p>If you want to allow cross-origin requests to the <a href="/camunda-cn/reference/rest/overview/">REST API</a>, you need to enable CORS.
+<p>If you want to allow cross-origin requests to the <a href="http://shaochenfeng.com/camunda-cn/reference/rest/overview/">REST API</a>, you need to enable CORS.
 <table class="table desc-table">
   <tr>
       <th>Prefix</th>
@@ -8349,10 +8349,10 @@ All <a href="/camunda-cn/user-guide/spring-boot-integration/configuration/#camun
 
 <h2 id="ldap-identity-service">LDAP Identity Service</h2>
 
-<p>Camunda Platform can manage users and authorizations on its own, but if you want to use an existing LDAP authentication database you can enable the <a href="/camunda-cn/user-guide/process-engine/identity-service/#the-ldap-identity-service">LDAP Identity Service Plugin</a>
+<p>Camunda Platform can manage users and authorizations on its own, but if you want to use an existing LDAP authentication database you can enable the <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/identity-service/#the-ldap-identity-service">LDAP Identity Service Plugin</a>
 which provides read-only access to the LDAP repository.</p>
 
-<p>Find all available configuration properties in the <a href="/camunda-cn/user-guide/process-engine/identity-service/#configuration-properties-of-the-ldap-plugin">LDAP Plugin Guide</a></p>
+<p>Find all available configuration properties in the <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/identity-service/#configuration-properties-of-the-ldap-plugin">LDAP Plugin Guide</a></p>
 
 <table class="table desc-table">
   <tr>
@@ -8423,7 +8423,7 @@ For testing, we included a self-signed certificate. You should not use this in p
 
 <h2 id="logging">Logging</h2>
 
-<p>Camunda Platform provides fine-grained and customizable logging. An overview of the available logging categories can be found in the <a href="/camunda-cn/user-guide/logging/#process-engine">Logging User Guide</a>.
+<p>Camunda Platform provides fine-grained and customizable logging. An overview of the available logging categories can be found in the <a href="http://shaochenfeng.com/camunda-cn/user-guide/logging/#process-engine">Logging User Guide</a>.
 To configure the logging behavior in Camunda Platform Run, customize your configuration file with the following properties.</p>
 
 <p>For more information on logging configuration visit the <a href="https://docs.spring.io/spring-boot/docs/2.4.0/reference/html/spring-boot-features.html#boot-features-logging">Spring Boot Logging Guide</a>.</p>
@@ -8443,7 +8443,7 @@ To configure the logging behavior in Camunda Platform Run, customize your config
   </tr>
   <tr>
       <td><code>.level.{logger-name}</code></td>
-      <td>Set a logging level for a specific logging category. Find an overview over the available categories in the <a href="/camunda-cn/user-guide/logging/#process-engine">Logging User Guide</a>.
+      <td>Set a logging level for a specific logging category. Find an overview over the available categories in the <a href="http://shaochenfeng.com/camunda-cn/user-guide/logging/#process-engine">Logging User Guide</a>.
       Value can be one of the following: <code>OFF</code>. <code>ERROR</code>. <code>WARN</code>. <code>INFO</code>. <code>DEBUG</code>. <code>ALL</code></td>
       <td><code>-</code></td>
   </tr>
@@ -8498,7 +8498,7 @@ To configure the logging behavior in Camunda Platform Run, customize your config
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="http://shaochenfeng.com/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
             Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2021
           </p>
@@ -8513,7 +8513,7 @@ To configure the logging behavior in Camunda Platform Run, customize your config
 
   
 
-  <script type="text/javascript" src="/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
+  <script type="text/javascript" src="http://shaochenfeng.com/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

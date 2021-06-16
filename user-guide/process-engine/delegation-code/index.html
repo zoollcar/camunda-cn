@@ -29,11 +29,11 @@
   <title>Delegation Code | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="/camunda-cn/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="http://shaochenfeng.com/camunda-cn/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
+  <link rel="stylesheet" href="http://shaochenfeng.com/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
 </head>
 <body class="">
 
@@ -45,8 +45,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="/camunda-cn/">
-      <img src="/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="http://shaochenfeng.com/camunda-cn/">
+      <img src="http://shaochenfeng.com/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">Docs</span>
       </a>
@@ -8113,7 +8113,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="/camunda-cn/">
+    <select id="version-select" data-basepath="/manual" base-url="http://shaochenfeng.com/camunda-cn/">
       
         <option  selected >develop</option>
       
@@ -8167,8 +8167,8 @@ certain events occur during process execution.</p>
 <p>There are different types of Delegation Code:</p>
 
 <ul>
-<li><strong>Java Delegates</strong> can be attached to a <a href="/camunda-cn/reference/bpmn20/tasks/service-task/">BPMN Service Task</a>.</li>
-<li><strong>Delegate Variable Mapping</strong> can be attached to a <a href="/camunda-cn/reference/bpmn20/subprocesses/call-activity/">Call Activity</a>.</li>
+<li><strong>Java Delegates</strong> can be attached to a <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/tasks/service-task/">BPMN Service Task</a>.</li>
+<li><strong>Delegate Variable Mapping</strong> can be attached to a <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/subprocesses/call-activity/">Call Activity</a>.</li>
 <li><strong>Execution Listeners</strong> can be attached to any event within the normal token flow, e.g., starting a process instance or entering an activity.</li>
 <li><strong>Task Listeners</strong> can be attached to events within the user task lifecycle, e.g., creation or completion of a user task.</li>
 </ul>
@@ -8190,7 +8190,7 @@ interface, which requires us to implement the <code>execute(DelegateExecution)</
 method. It&rsquo;s this operation that will be called by the engine and
 which needs to contain the business logic. Process instance
 information such as process variables and other information can be accessed and
-manipulated through the <a href="/camunda-cn/reference/javadoc/?org/camunda/bpm/engine/delegate/DelegateExecution.html">DelegateExecution</a>
+manipulated through the <a href="http://shaochenfeng.com/camunda-cn/reference/javadoc/?org/camunda/bpm/engine/delegate/DelegateExecution.html">DelegateExecution</a>
  interface (click on the link for a detailed Javadoc of its operations).</p>
 
 <pre><code class="language-java">  public class ToUppercase implements JavaDelegate {
@@ -8371,7 +8371,7 @@ See the following example:</p>
 The input variables should be put into the given variables map.
 The <code>mapOutputVariables</code> method is called after the call activity was executed, to map the output variables.
 The output variables can be directly set into the caller execution.
-The behavior of the class loading is similar to the class loading on <a href="/camunda-cn/user-guide/process-engine/delegation-code/#java-delegate">Java Delegates</a>.</p>
+The behavior of the class loading is similar to the class loading on <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/delegation-code/#java-delegate">Java Delegates</a>.</p>
 
 <h1 id="execution-listener">Execution Listener</h1>
 
@@ -8443,9 +8443,9 @@ The behavior of the class loading is similar to the class loading on <a href="/c
 <p>The second execution listener is called when the transition is taken. Note that the listener element
 doesn&rsquo;t define an event, since only take events are fired on transitions. Values in the event
 attribute are ignored when a listener is defined on a transition. Also it contains a
-<a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#camunda-script">camunda:script</a> child element which defines a script which
+<a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#camunda-script">camunda:script</a> child element which defines a script which
 will be executed as execution listener. Alternatively it is possible to specify the script source
-code as external resources (see the documentation about <a href="/camunda-cn/user-guide/process-engine/scripting/#script-source">script sources</a> of script
+code as external resources (see the documentation about <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/scripting/#script-source">script sources</a> of script
 tasks).</p>
 
 <p>The last execution listener is called when activity secondTask ends. Instead of using the class on the listener declaration, a expression is defined instead which is evaluated/invoked when the event is fired.</p>
@@ -8550,8 +8550,8 @@ event loop.</p>
 Possible events are: <strong>create</strong>, <strong>assignment</strong>, <strong>update</strong>, <strong>complete</strong>, <strong>delete</strong> and
  <strong>timeout</strong>;</p>
 
-<p>Note that the <strong>timeout</strong> event requires a <a href="/camunda-cn/reference/bpmn20/events/timer-events/#defining-a-timer">timerEventDefinition</a> child
-element in the task listener and will only be fired if the <a href="/camunda-cn/user-guide/process-engine/the-job-executor/">Job Executor</a> is enabled.</p></li>
+<p>Note that the <strong>timeout</strong> event requires a <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/events/timer-events/#defining-a-timer">timerEventDefinition</a> child
+element in the task listener and will only be fired if the <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/the-job-executor/">Job Executor</a> is enabled.</p></li>
 
 <li><p><strong>class</strong>: the delegation class that must be called. This class must implement the <code>org.camunda.bpm.engine.impl.pvm.delegate.TaskListener</code> interface.</p>
 
@@ -8580,9 +8580,9 @@ element in the task listener and will only be fired if the <a href="/camunda-cn/
 </ul>
 
 <p>Besides the <code>class</code>, <code>expression</code> and <code>delegateExpression</code> attributes, a
-<a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#camunda-script">camunda:script</a> child element can be used to specify a script as task listener.
+<a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#camunda-script">camunda:script</a> child element can be used to specify a script as task listener.
 An external script resource can also be declared with the resource attribute of the
-<code>camunda:script</code> element (see the documentation about <a href="/camunda-cn/user-guide/process-engine/scripting/#script-source">script sources</a> of script
+<code>camunda:script</code> element (see the documentation about <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/scripting/#script-source">script sources</a> of script
 tasks).</p>
 
 <pre><code class="language-xml">  &lt;userTask id=&quot;task&quot;&gt;
@@ -8596,8 +8596,8 @@ tasks).</p>
   &lt;/userTask&gt;
 </code></pre>
 
-<p>Furthermore, a <a href="/camunda-cn/reference/bpmn20/events/timer-events/#defining-a-timer">timerEventDefinition</a> child element can be used in conjunction with the <code>event</code> type <code>timeout</code>
-in order to define the associated timer. The specified delegate will be called by the <a href="/camunda-cn/user-guide/process-engine/the-job-executor/">Job Executor</a> when the timer is due.
+<p>Furthermore, a <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/events/timer-events/#defining-a-timer">timerEventDefinition</a> child element can be used in conjunction with the <code>event</code> type <code>timeout</code>
+in order to define the associated timer. The specified delegate will be called by the <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/the-job-executor/">Job Executor</a> when the timer is due.
 The execution of the user task will <strong>not</strong> be interrupted by this.</p>
 
 <pre><code class="language-xml">  &lt;userTask id=&quot;task&quot;&gt;
@@ -8732,7 +8732,7 @@ how to access the <code>TaskService</code> from a <code>JavaDelegate</code> impl
 
 <div class="note bg-info docs-info">
   <h3>Note!</h3>
-  <p>Throwing a <code>BpmnError</code> in the delegation code behaves like modelling an error end event. See the <a href="/camunda-cn/reference/bpmn20/events/error-events/#error-boundary-event">reference guide</a> about the details on the behavior, especially the error boundary event. If no error boundary event is found on the scope, the execution is ended.</p>
+  <p>Throwing a <code>BpmnError</code> in the delegation code behaves like modelling an error end event. See the <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/events/error-events/#error-boundary-event">reference guide</a> about the details on the behavior, especially the error boundary event. If no error boundary event is found on the scope, the execution is ended.</p>
 </div>
 
 
@@ -8796,7 +8796,7 @@ how to access the <code>TaskService</code> from a <code>JavaDelegate</code> impl
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="http://shaochenfeng.com/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
             Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2021
           </p>
@@ -8811,7 +8811,7 @@ how to access the <code>TaskService</code> from a <code>JavaDelegate</code> impl
 
   
 
-  <script type="text/javascript" src="/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
+  <script type="text/javascript" src="http://shaochenfeng.com/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

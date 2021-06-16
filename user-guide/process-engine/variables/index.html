@@ -29,11 +29,11 @@
   <title>Process Variables | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="/camunda-cn/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="http://shaochenfeng.com/camunda-cn/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
+  <link rel="stylesheet" href="http://shaochenfeng.com/camunda-cn/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=">
 </head>
 <body class="">
 
@@ -45,8 +45,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="/camunda-cn/">
-      <img src="/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="http://shaochenfeng.com/camunda-cn/">
+      <img src="http://shaochenfeng.com/camunda-cn/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">Docs</span>
       </a>
@@ -8113,7 +8113,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="/camunda-cn/">
+    <select id="version-select" data-basepath="/manual" base-url="http://shaochenfeng.com/camunda-cn/">
       
         <option  selected >develop</option>
       
@@ -8165,7 +8165,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <h1 id="variable-scopes-and-variable-visibility">Variable Scopes and Variable Visibility</h1>
 
-<p>All entities that can have variables are called <em>variable scopes</em>. These are executions (which include process instances) and tasks. As described in the  <a href="/camunda-cn/user-guide/process-engine/process-engine-concepts/#executions">Concepts section</a>, the runtime state of a process instance is represented by a tree of executions. Consider the following process model where the red dots mark active tasks:</p>
+<p>All entities that can have variables are called <em>variable scopes</em>. These are executions (which include process instances) and tasks. As described in the  <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/process-engine-concepts/#executions">Concepts section</a>, the runtime state of a process instance is represented by a tree of executions. Consider the following process model where the red dots mark active tasks:</p>
 
 <figure class="image">
   <span><img
@@ -8222,7 +8222,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <li>Delivering messages</li>
 <li>Task lifecycle transitions, such as completion or resolution</li>
 <li>Setting/getting variables from outside</li>
-<li>Setting/getting variables in a <a href="/camunda-cn/user-guide/process-engine/delegation-code/">Delegate</a></li>
+<li>Setting/getting variables in a <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/delegation-code/">Delegate</a></li>
 <li>Expressions in the process model</li>
 <li>Scripts in the process model</li>
 <li>(Historic) Variable queries</li>
@@ -8328,7 +8328,7 @@ configured charset, this length restriction can result in different quantities o
 </div>
 
 
-<p>Process variables can be stored in formats like JSON and XML provided by the <a href="/camunda-cn/user-guide/data-formats/">Camunda Spin plugin</a>. Spin provides serializers for the variables of type <code>object</code> such that Java variables can be persisted in these formats to the database. Furthermore, it is possible to store JSON and XML documents directly as a Spin object by the value types <code>xml</code> and <code>json</code>. Opposed to plain <code>string</code> variables, Spin objects provide a fluent API to perform common operations on such documents like reading and writing properties.</p>
+<p>Process variables can be stored in formats like JSON and XML provided by the <a href="http://shaochenfeng.com/camunda-cn/user-guide/data-formats/">Camunda Spin plugin</a>. Spin provides serializers for the variables of type <code>object</code> such that Java variables can be persisted in these formats to the database. Furthermore, it is possible to store JSON and XML documents directly as a Spin object by the value types <code>xml</code> and <code>json</code>. Opposed to plain <code>string</code> variables, Spin objects provide a fluent API to perform common operations on such documents like reading and writing properties.</p>
 
 <h2 id="object-value-serialization">Object Value Serialization</h2>
 
@@ -8359,7 +8359,7 @@ execution.setVariable(&quot;someVariable&quot;, customerDataValue);
 
 <div class="note bg-info docs-info">
   <h3>Serializing Objects to XML and JSON</h3>
-  <p>The <a href="/camunda-cn/user-guide/data-formats/">Camunda Spin plugin</a> provides serializers that are capable of serializing object values to XML and JSON. They can be used when it is desired that the serialized objects values can be interpreted by humans or when the serialized value should be meaningful without having the corresponding Java class. When using a pre-built Camunda distribution, Camunda Spin is already preconfigured and you can try these formats without further configuration.</p>
+  <p>The <a href="http://shaochenfeng.com/camunda-cn/user-guide/data-formats/">Camunda Spin plugin</a> provides serializers that are capable of serializing object values to XML and JSON. They can be used when it is desired that the serialized objects values can be interpreted by humans or when the serialized value should be meaningful without having the corresponding Java class. When using a pre-built Camunda distribution, Camunda Spin is already preconfigured and you can try these formats without further configuration.</p>
 </div>
 
 
@@ -8501,14 +8501,14 @@ com.example.Order retrievedOrder = (com.example.Order) retrievedTypedObjectValue
 <div class="note bg-warning docs-warning">
   <h3>Java serialization format</h3>
   <p>Be aware that when using a serialized representation of variables, the Java serialization format is forbidden by default. You should either use another format (JSON or XML) or explicitly enable the Java serialization
-  with the help of the <a href="/camunda-cn/reference/deployment-descriptors/tags/process-engine/#javaSerializationFormatEnabled"><code>javaSerializationFormatEnabled</code></a> configuration flag.
-  However, please make sure to read the <a href="/camunda-cn/user-guide/security/#variable-values-from-untrusted-sources">Security Implication</a> first before enabling this.</p>
+  with the help of the <a href="http://shaochenfeng.com/camunda-cn/reference/deployment-descriptors/tags/process-engine/#javaSerializationFormatEnabled"><code>javaSerializationFormatEnabled</code></a> configuration flag.
+  However, please make sure to read the <a href="http://shaochenfeng.com/camunda-cn/user-guide/security/#variable-values-from-untrusted-sources">Security Implication</a> first before enabling this.</p>
 </div>
 
 
 <h2 id="json-and-xml-values">JSON and XML Values</h2>
 
-<p>The Camunda Spin plugin provides an abstraction for JSON and XML documents that facilitate their processing and manipulation. This is often more convenient than storing such documents as plain <code>string</code> variables. See the documentation on Camunda SPIN for <a href="/camunda-cn/user-guide/data-formats/json/#native-json-variable-value">storing JSON documents</a> and <a href="/camunda-cn/user-guide/data-formats/xml/#native-xml-variable-value">storing XML documents</a> for details.</p>
+<p>The Camunda Spin plugin provides an abstraction for JSON and XML documents that facilitate their processing and manipulation. This is often more convenient than storing such documents as plain <code>string</code> variables. See the documentation on Camunda SPIN for <a href="http://shaochenfeng.com/camunda-cn/user-guide/data-formats/json/#native-json-variable-value">storing JSON documents</a> and <a href="http://shaochenfeng.com/camunda-cn/user-guide/data-formats/xml/#native-xml-variable-value">storing XML documents</a> for details.</p>
 
 <h2 id="transient-variables">Transient variables</h2>
 
@@ -8531,7 +8531,7 @@ TypedValue typedTransientFileValue = Variables.fileValue(&quot;file.txt&quot;, t
   .create();
 </code></pre>
 
-<p>Transient variables can be used via REST API, e.g. <a href="/camunda-cn/reference/rest/process-definition/post-start-process-instance/">when starting a new process instance</a>.</p>
+<p>Transient variables can be used via REST API, e.g. <a href="http://shaochenfeng.com/camunda-cn/reference/rest/process-definition/post-start-process-instance/">when starting a new process instance</a>.</p>
 
 <h2 id="set-multiple-typed-values">Set Multiple Typed Values</h2>
 
@@ -8558,10 +8558,10 @@ runtimeService.setVariablesLocal(execution.getId(), &quot;order&quot;, variables
 <p>To improve the reusability of source code and business logic, Camunda Platform offers input/output
 mapping of process variables. This can be used for tasks, events and subprocesses.</p>
 
-<p>In order to use the variable mapping, the Camunda extension element <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#camunda-inputoutput">inputOutput</a> has to be added
-to the element. It can contain multiple <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#inputparameter">inputParameter</a> and <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#outputparameter">outputParameter</a> elements that
-specify which variables should be mapped. The <code>name</code> attribute of an <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#inputparameter">inputParameter</a> denotes
-the variable name inside the activity (a local variable to be created), whereas the <code>name</code> attribute of an <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#outputparameter">outputParameter</a>
+<p>In order to use the variable mapping, the Camunda extension element <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#camunda-inputoutput">inputOutput</a> has to be added
+to the element. It can contain multiple <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#inputparameter">inputParameter</a> and <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#outputparameter">outputParameter</a> elements that
+specify which variables should be mapped. The <code>name</code> attribute of an <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#inputparameter">inputParameter</a> denotes
+the variable name inside the activity (a local variable to be created), whereas the <code>name</code> attribute of an <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#outputparameter">outputParameter</a>
 denotes the variable name outside of the activity.</p>
 
 <p>The content of an input/outputParameter specifies the value that is mapped to the corresponding
@@ -8576,7 +8576,7 @@ to the value <code>null</code>.</p>
 &lt;/camunda:inputOutput&gt;
 </code></pre>
 
-<p>Even complex structures like <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#camunda-list">lists</a> and <a href="/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#camunda-map">maps</a> can be used. Both can also
+<p>Even complex structures like <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#camunda-list">lists</a> and <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#camunda-map">maps</a> can be used. Both can also
 be nested.</p>
 
 <pre><code class="language-xml">&lt;camunda:inputOutput&gt;
@@ -8606,7 +8606,7 @@ be nested.</p>
 </code></pre>
 
 <p>A script can also be used to provide the variable value. Please see the corresponding
-<a href="/camunda-cn/user-guide/process-engine/scripting/#use-scripts-as-inputoutput-parameters">section</a> in the scripting chapter for how to specify a script.</p>
+<a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/scripting/#use-scripts-as-inputoutput-parameters">section</a> in the scripting chapter for how to specify a script.</p>
 
 <p>A simple example of the benefit of input/output mapping is a complex calculation which
 should be part of multiple processes definitions. This calculation can be developed as isolated
@@ -8664,7 +8664,7 @@ depends on a variable <code>avgForecast</code> as the average value of the three
 
 <p>If an Activity is canceled (e.g. due to throwing a BPMN error), IO mapping is still executed. This can lead to exceptions if the output mapping references variables that do not exist in the scope of the activity at that time.</p>
 
-<p>The default behavior is that the engine still tries to execute output mappings on canceled activities and fails with an exception if a variable is not found. By enabling the <a href="/camunda-cn/reference/deployment-descriptors/tags/process-engine/#skipOutputMappingOnCanceledActivities">skipOutputMappingOnCanceledActivities</a> engine configuration flag (i.e. setting it to <code>true</code>) the engine will not perform output mappings on any canceled activity.</p>
+<p>The default behavior is that the engine still tries to execute output mappings on canceled activities and fails with an exception if a variable is not found. By enabling the <a href="http://shaochenfeng.com/camunda-cn/reference/deployment-descriptors/tags/process-engine/#skipOutputMappingOnCanceledActivities">skipOutputMappingOnCanceledActivities</a> engine configuration flag (i.e. setting it to <code>true</code>) the engine will not perform output mappings on any canceled activity.</p>
 
     </div>
   </div>
@@ -8718,7 +8718,7 @@ depends on a variable <code>avgForecast</code> as the average value of the three
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="http://shaochenfeng.com/camunda-cn/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
             Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2021
           </p>
@@ -8733,7 +8733,7 @@ depends on a variable <code>avgForecast</code> as the average value of the three
 
   
 
-  <script type="text/javascript" src="/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
+  <script type="text/javascript" src="http://shaochenfeng.com/camunda-cn/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4="></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
