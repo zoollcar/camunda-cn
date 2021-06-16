@@ -1,3 +1,5 @@
 # camunda 中文站
-此仓库为Github Page公开仓库
-源码见：https://github.com/camunda/camunda-docs-manual
+
+此仓库为 Github Page 仓库
+
+源码见：https://github.com/zoollcar/camunda-docs-manual-cn
