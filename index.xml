@@ -336,18 +336,6 @@ Response Codes  Code Media type Description   204 application/json Request succe
     </item>
     
     <item>
-      <title>Download</title>
-      <link>http://shaochenfeng.com/camunda-cn/introduction/downloading-camunda/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://shaochenfeng.com/camunda-cn/introduction/downloading-camunda/</guid>
-      <description>Prerequisites Before downloading Camunda, make sure you have a JRE (Java Runtime Environment), or better, a JDK (Java Development Kit) installed. Please check the supported Java versions.
-Download JDK
-Download the Runtime Camunda is a flexible framework which can be used in different contexts. See Architecture Overview for more details. Based on how you want to use Camunda, you can choose a different distribution.
-Community vs. Enterprise Edition Camunda provides separate runtime downloads for community users and enterprise subscription customers:</description>
-    </item>
-    
-    <item>
       <title>Embedded Subprocess</title>
       <link>http://shaochenfeng.com/camunda-cn/reference/bpmn20/subprocesses/embedded-subprocess/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1264,6 +1252,23 @@ Start a Process To start a process instance via Tasklist, click on Start process
     </item>
     
     <item>
+      <title>下载</title>
+      <link>http://shaochenfeng.com/camunda-cn/introduction/downloading-camunda/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://shaochenfeng.com/camunda-cn/introduction/downloading-camunda/</guid>
+      <description>先决条件 在下载 Camunda 之前，首先你需要安装 JRE (Java Runtime Environment) 或者 JDK (Java Development Kit)（JDK是更好的选择）。 检查你的Java版本是否是 支持的 Java 版本.
+JDK 下载地址
+下载运行时 Camunda是一个灵活的框架，可以用在不同的环境中运行。详情参见架构概述。 根据你想使用Camunda的方式，你可以选择不同的运行方式。
+社区版 vs. 企业版 Camunda为社区用户和企业订阅客户提供不同的运行时下载：
+ 社区版下载地址 企业版下载地址  也可以通过Spring Boot 和 Docker的方式运行Camunda平台。
+整合包 如果你想使用 分布式流程引擎 或者想快速了解Camunda，不想做任何额外的设置或安装步骤，可以下载整合包。
+整合包捆绑包括了：
+ 配置好的 分布式流程引擎, 网络应用程序 (Tasklist, Cockpit, Admin), Rest Api 接口, 容器/应用服务器本身.  服务器/容器如果你下载了开源应用服务器/容器的整合包，那么容器本身也会包括在内。例如，如果你下载tomcat发行版，tomcat本身就包括在内，Camunda二进制文件（流程引擎和网络应用程序）也会预先安装在容器中。而Oracle WebLogic和IBM WebSphere的下载则不会这样的。这些包是不包括应用服务器本身。
+Wildfly应用程序服务器Wildfly应用服务器是作为档案的一部分提供的，作为一种方便。 关于源代码的副本、版权声明以及其他相关信息，请参见https://github.com/wildfly/wildfly。如果你[联系我们的开源合规团队](https://docs.camunda.org/manual/latest/introduction/licenses/#contact)，我们也会向你提供一份源代码的副本。 在您下载存档后三年内的任何时候（我们可能会对此收取象征性的费用）。Wildfly应用服务器的版权属于 copyright © JBoss, Home of Professional Open Source, 2010, Red Hat Middleware LLC [.</description>
+    </item>
+    
+    <item>
       <title>流程引擎集成</title>
       <link>http://shaochenfeng.com/camunda-cn/user-guide/process-engine/process-engine-bootstrapping/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1291,18 +1296,18 @@ ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine()  camunda.
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://shaochenfeng.com/camunda-cn/reference/javadoc/</guid>
-      <description></description>
+      <description>https://docs.camunda.org/javadoc/camunda-bpm-platform/7.16/</description>
     </item>
     
     <item>
-      <title>Licenses</title>
+      <title>许可协议</title>
       <link>http://shaochenfeng.com/camunda-cn/introduction/licenses/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://shaochenfeng.com/camunda-cn/introduction/licenses/</guid>
-      <description>Camunda Platform The Camunda Platform is a Java-based framework.
-Community Edition If you are using the community edition, the software is provided under various open source licenses (mainly Apache 2.0 and MIT). Which components are published under an open source license is clearly stated in the licensing header of a source file or a LICENSE file present in the root directory of the software source code repository.
-Enterprise Edition If you are using the Enterprise Platform, the software is provided under a license agreement containing restrictions on use and disclosure and is protected by intellectual property laws.</description>
+      <description>Camunda平台 Camunda平台是一个基于Java的框架。
+社区版 If you are using the community edition, the software is provided under various open source licenses (mainly Apache 2.0 and MIT). Which components are published under an open source license is clearly stated in the licensing header of a source file or a LICENSE file present in the root directory of the software source code repository.
+企业版 If you are using the Enterprise Platform, the software is provided under a license agreement containing restrictions on use and disclosure and is protected by intellectual property laws.</description>
     </item>
     
     <item>
@@ -2071,18 +2076,6 @@ XSS Protection If the XSS Protection header is enabled some cross-site scripting
     </item>
     
     <item>
-      <title>Implemented Standards</title>
-      <link>http://shaochenfeng.com/camunda-cn/introduction/implemented-standards/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://shaochenfeng.com/camunda-cn/introduction/implemented-standards/</guid>
-      <description>Camunda implements three different standards in the Business Process Management scope: BPMN 2.0, CMMN 1.1 and DMN 1.3. These three standards are defined by the Object Management Group with active collaboration of Camunda.
-Camunda Platform provides open source implementations of execution and modeling tools.
-BPMN Business Process Model and Notation (BPMN) is a standard for Workflow and Process Automation. Camunda supports the 2.0 version of BPMN.
- Getting started implementing BPMN Processes: Quick Start (Java / JS) Getting to Know BPMN as a Modeling Language: BPMN Modeling Tutorial Modeling BPMN: BPMN Modeling Reference Tool for modeling BPMN: BPMN Modeler Implementing BPMN Processes: BPMN Implementation Reference Executing BPMN: Process Engine  CMMN Case Management Model and Notation (CMMN) is a standard for Case Management.</description>
-    </item>
-    
-    <item>
       <title>Install the Full Distribution on Oracle WebLogic Application Server</title>
       <link>http://shaochenfeng.com/camunda-cn/installation/full/wls/manual/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2398,6 +2391,21 @@ ProcessEngineConfiguration .createProcessEngineConfigurationFromInputStream(inpu
     </item>
     
     <item>
+      <title>遵循的标准</title>
+      <link>http://shaochenfeng.com/camunda-cn/introduction/implemented-standards/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://shaochenfeng.com/camunda-cn/introduction/implemented-standards/</guid>
+      <description>Camunda在业务流程方面实现了三种不同的标准：BPMN 2.0、CMMN 1.1和DMN 1.3。 这三个标准是由Object Management Group在Camunda的积极合作下定义的。
+Camunda平台提供执行和建模工具的开源实现。
+BPMN Business Process Model and Notation (BPMN) 是一个工作流和流程自动化标准。
+Camunda 支持 BPMN 的 2.0 版本
+ 快速入门实现BPMN流程: Quick Start (Java / JS) 快速了解BPMN建模语言: BPMN Modeling Tutorial BPMN建模相关信息: BPMN Modeling Reference BPMN建模工具: BPMN Modeler 实现BPMN 流程: BPMN Implementation Reference 执行BPMN: Process Engine  CMMN Case Management Model and Notation (CMMN) 是一个案例管理标准
+Camunda 支持 CMMN 的 1.1 版本。
+ 快速入门实现CMMN案件: [CMMN Getting Started] 实现CMMN案例: CMMN Implementation Reference 执行CMMN: Process Engine  DMN Decision Model and Notation (DMN) 是一个业务决策标准。</description>
+    </item>
+    
+    <item>
       <title>Run Camunda Platform using Spring Boot</title>
       <link>http://shaochenfeng.com/camunda-cn/installation/spring-boot/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2458,15 +2466,6 @@ angular.bootstrap(window.document, [&#39;cam.embedded.forms&#39;, ...]);  Angula
       <description>JNDI Bindings To use the JNDI Bindings for Camunda Platform Services on Apache Tomcat you have to add the file META-INF/context.xml to your process application and add the following ResourceLinks:
 &amp;lt;Context&amp;gt; &amp;lt;ResourceLink name=&amp;quot;ProcessEngineService&amp;quot; global=&amp;quot;global/camunda-bpm-platform/process-engine/ProcessEngineService!org.camunda.bpm.ProcessEngineService&amp;quot; type=&amp;quot;org.camunda.bpm.ProcessEngineService&amp;quot; /&amp;gt; &amp;lt;ResourceLink name=&amp;quot;ProcessApplicationService&amp;quot; global=&amp;quot;global/camunda-bpm-platform/process-engine/ProcessApplicationService!org.camunda.bpm.ProcessApplicationService&amp;quot; type=&amp;quot;org.camunda.bpm.ProcessApplicationService&amp;quot; /&amp;gt; &amp;lt;/Context&amp;gt;  These elements are used to create a link to the global JNDI Resources defined in $TOMCAT_HOME/conf/server.xml.
 Furthermore, declare the dependency on the JNDI binding inside the WEB-INF/web.</description>
-    </item>
-    
-    <item>
-      <title>Architecture Overview</title>
-      <link>http://shaochenfeng.com/camunda-cn/introduction/architecture/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://shaochenfeng.com/camunda-cn/introduction/architecture/</guid>
-      <description>Camunda Platform is a Java-based framework. The main components are written in Java and we have a general focus on providing Java developers with the tools they need for designing, implementing and running business processes and workflows on the JVM. Nevertheless, we also want to make the process engine technology available to non-Java developers. This is why Camunda Platform also provides a REST API which allows you to build applications connecting to a remote process engine.</description>
     </item>
     
     <item>
@@ -3365,6 +3364,28 @@ ProcessInstance instance = runtimeService.</description>
     </item>
     
     <item>
+      <title>软件架构总览</title>
+      <link>http://shaochenfeng.com/camunda-cn/introduction/architecture/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://shaochenfeng.com/camunda-cn/introduction/architecture/</guid>
+      <description>Camunda平台是一个基于Java的框架。主要组件是用Java编写的，我们总体上专注于为Java开发者提供他们在JVM上设计、实施和运行业务流程和工作流所需的工具。然而，我们也想让非Java开发者也能使用流程引擎技术。这就是为什么Camunda平台还提供了REST API，允许你与远程流程引擎应用建立连接。
+Camunda平台既可以作为一个独立的流程引擎服务器使用，也可以嵌入到定制的Java应用程序中。可嵌入性要求是Camunda平台许多架构决定的核心。例如，我们努力使流程引擎组件成为一个轻量级的组件，尽量减少对第三方库的依赖性。此外，可嵌入性促使流程引擎支持使用Spring Managed或JTA事务和线程模型的能力。
+流程引擎架构  流程引擎公共API： 面向服务的API允许Java应用程序与流程引擎交互。流程引擎的不同部分（即流程存储库、运行时的流程交互、任务管理等）被分离到各个服务中。公共API具有命令式访问模式的特点：进入流程引擎的流程要经过一个命令拦截器，该拦截器用于设置流程上下文。 BPMN 2.0 核心引擎: 这是流程引擎的核心。它有一个轻量级的图结构执行引擎（PVM - Process Virtual Machine），一个将BPMN 2.0 XML文件转化为Java对象的BPMN 2.0解析器，以及一套BPMN行为实现（为BPMN 2.0结构提供实现，如网关或服务任务）。 Job 执行器: Job执行者负责处理异步的后台工作，如流程中的定时器或异步连续。 持久层: 流程引擎有一个持久层，负责将流程实例状态持久化到关系数据库中。我们使用MyBatis映射引擎来实现对象的关系映射。  依赖的第三方库 见第三方库一节。
+Camunda平台 架构 Camunda平台是一个灵活的框架，可以部署在不同的场景中。本节对最常见的部署场景进行了概述。
+嵌入式流程引擎 在这种情况下，流程引擎被作为一个库添加到一个自定义的应用程序中。这样，流程引擎可以很容易地随着应用程序的生命周期启动和停止。也可以在一个共享数据库之上运行多个嵌入式流程引擎。
+分布式的、由容器管理的流程引擎 在这种情况下，流程引擎在运行时容器（Servlet容器、应用服务器&amp;hellip;）内启动。流程引擎作为容器服务提供的，可以被部署在容器内的所有应用程序共享。这个概念就像JMS消息队列，它由运行时提供，可以被所有应用程序使用。流程部署和应用程序之间有一对一的映射：流程引擎跟踪应用程序部署的流程定义，并将执行委托给相对应的应用程序。
+独立运行的（远程）流程引擎服务 在这种情况下，流程引擎被作为一个网络服务提供。在网络上运行的不同应用程序可以通过一个远程通信与流程引擎进行交互。使流程引擎可以远程访问的最简单方法是使用内置的REST API。不同的通信渠道，如SOAP Webservices或JMS也是可以的，但需要由用户自行实现。
+集群 为了提供扩展或故障转移能力，流程引擎可以发布到集群中的不同节点。然后每个流程引擎实例必须连接到同一个共享数据库。
+各个流程引擎实例不会在事务中维护会话状态。每当流程引擎运行一个事务时，完整的状态被储存到共享数据库。这使得将在同一力促恒实例中进行工作的后续请求路由到不同的集群节点成为可能。这个处理方式非常简单，容易理解，在部署集群安装时，它的限制也很有限。就流程引擎而言，用于扩展的设置和用于故障转移的设置之间没有区别（因为流程引擎在事务之中不保留会话状态）。
+集群环境中的会话状态 Camunda平台不提供开箱即用的负载均衡功能和会话复制功能。负载均衡功能需要由第三方系统提供，而会话复制则需要由主机应用服务器提供。
+在集群设置中，如果用户要登录到网络应用程序，需要采取额外的步骤来确保用户不会被要求多次登录。有两个方法：
+ 可以在你的负载平衡解决方案中配置和启用 &amp;ldquo;粘性会话&amp;rdquo;。这将确保在一个可配置的时间段内，所有来自特定用户的请求都被引导到同一个实例。 会话共享可以在你的应用服务器中启用，这样应用服务器实例就可以共享会话状态。这将允许一个用户连接到集群中的多个实例，而不会被要求多次登录。  如果以上两种方法都没有在集群设置中实现，那么连接到多个节点，无论是故意的或通过负载平衡解决方案的，都将导致多次登录请求。
+集群环境中的 Job 执行器 流程引擎 job 执行器 也是集群的，在每个节点上都存在。这样，就流程引擎而言，就没有单点故障。job执行器可以同时在同质和异质集群中运行。
+时区camunda对集群中的时区选择有一些限制。</description>
+    </item>
+    
+    <item>
       <title>Process Application Resource Access</title>
       <link>http://shaochenfeng.com/camunda-cn/user-guide/process-applications/process-application-resources/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -4086,16 +4107,6 @@ In XML, a repetition rule can be specified for an individual plan item or for a 
     </item>
     
     <item>
-      <title>Supported Environments</title>
-      <link>http://shaochenfeng.com/camunda-cn/introduction/supported-environments/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://shaochenfeng.com/camunda-cn/introduction/supported-environments/</guid>
-      <description>Run the Camunda Platform in every Java-runnable environment. Camunda Platform is supported with our QA infrastructure in the following environments. Here you can find more information about our enterprise support.
-Supported EnvironmentsPlease note that the environments listed in this section depend on the version of the Camunda Platform. Please select the corresponding version of this documentation to see the environment that fits to your version of the Camunda Platform.</description>
-    </item>
-    
-    <item>
       <title>System Management</title>
       <link>http://shaochenfeng.com/camunda-cn/webapps/admin/system-management/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -4176,6 +4187,17 @@ Enterprise webapps Enterprise FeaturePlease note that this feature is only incl
     </item>
     
     <item>
+      <title>支持的运行环境</title>
+      <link>http://shaochenfeng.com/camunda-cn/introduction/supported-environments/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://shaochenfeng.com/camunda-cn/introduction/supported-environments/</guid>
+      <description>你可以在任何可运行Java的环境中运行Camunda平台。但以下环境中运行可以得到了我们的质量保证。你可以在我们的企业支持页面中获得更多的信息。
+支持的运行环境请注意，本节中列出的环境与Camunda平台的版本有关。请选择本文档的相应版本，以查看适合您的Camunda平台版本的环境。例如，7.3版本的支持环境。
+容器/应用 服务器 嵌入应用程序的流程引擎  所有的 Java 应用服务器 Camunda Spring Boot Starter: 启用 Tomcat （参见 支持的版本 和 部署场景）  容器管理的流程引擎 和 Camunda Cockpit, Tasklist, Admin  Apache Tomcat 9.0 JBoss EAP 6.4 / 7.0 / 7.1 / 7.2 / 7.3 Wildfly Application Server 12.0 / 13.0 / 14.0 / 15.0 / 16.0 / 17.0 / 18.0 / 19.0 / 20.0 / 21.0 / 22.0 IBM WebSphere Application Server 8.</description>
+    </item>
+    
+    <item>
       <title>流程变量</title>
       <link>http://shaochenfeng.com/camunda-cn/user-guide/process-engine/variables/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -4215,7 +4237,7 @@ Security ConsiderationDeployments can contain custom code in form of scripts or
     </item>
     
     <item>
-      <title>Telemetry</title>
+      <title>Telemetry 遥测</title>
       <link>http://shaochenfeng.com/camunda-cn/introduction/telemetry/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -4333,16 +4355,6 @@ Defining an Error An error event definition references an error element.</descri
       <guid>http://shaochenfeng.com/camunda-cn/reference/bpmn20/gateways/event-based-gateway/</guid>
       <description>The event-based Gateway allows you to make a decision based on events. Each outgoing sequence flow of the gateway needs to be connected to an intermediate catching event. When process execution reaches an event-based Gateway, the gateway acts like a wait state: execution is suspended. In addition, an event subscription is created for each outgoing sequence flow.
 Note that the sequence flows running out of an event-based Gateway are different than ordinary sequence flows.</description>
-    </item>
-    
-    <item>
-      <title>Extensions</title>
-      <link>http://shaochenfeng.com/camunda-cn/introduction/extensions/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://shaochenfeng.com/camunda-cn/introduction/extensions/</guid>
-      <description>Camunda Platform is developed by Camunda as an open source project in collaboration with the community. The &amp;ldquo;core project&amp;rdquo; (namely &amp;ldquo;Camunda Platform&amp;rdquo;) is the basis for the Camunda Platform product which is provided by Camunda as a commercial offering. The commercial Camunda Platform product contains additional (non-open source) features and is provided to Camunda Platform customers with service offerings such as enterprise support and bug fix releases.
-Community Extensions Camunda supports the community in its effort to build additional community extensions under the Camunda Platform umbrella.</description>
     </item>
     
     <item>
@@ -4736,16 +4748,6 @@ Example The following example shows an XML snippet which can be placed in both p
     
     <item>
       <title>Process Instance Modification</title>
-      <link>http://shaochenfeng.com/camunda-cn/user-guide/process-engine/process-instance-modification/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://shaochenfeng.com/camunda-cn/user-guide/process-engine/process-instance-modification/</guid>
-      <description>While the process model contains sequence flows that define in which order activities must be executed, sometimes it is desired to flexibly start an activity again or cancel a running activity. For example, this can be useful when the process model contains an error, such as a wrong sequence flow condition, and running process instances need to be corrected. Use cases for this API may be
- Repairing process instances in which some steps have to be repeated or skipped Migrating process instances from one version of a process definition to another Testing: Activities can be skipped or repeated for isolated testing of individual process segments  To perform such an operation, the process engine offers the process instance modification API that is entered via RuntimeService.</description>
-    </item>
-    
-    <item>
-      <title>Process Instance Modification</title>
       <link>http://shaochenfeng.com/camunda-cn/webapps/cockpit/bpmn/process-instance-modification/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -4958,6 +4960,28 @@ Serialized and Deserialized Object Values Object Values are instances of (non pr
       <description>This section explains how to work with serialized Java Objects in embedded task forms.
 Out of the box, you can only work with Java Objects which are serialized in JSON format If Java Classes are serialized using JAX-B, you need to add custom XML parsing and writing logic to the embedded form. Java Objects serialized using Java Serialization cannot be used in forms.
 Fetching an existing Serialized Java Object Variable The Form SDK will only fetch those variables which are actually used in a form.</description>
+    </item>
+    
+    <item>
+      <title>修改流程实例</title>
+      <link>http://shaochenfeng.com/camunda-cn/user-guide/process-engine/process-instance-modification/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://shaochenfeng.com/camunda-cn/user-guide/process-engine/process-instance-modification/</guid>
+      <description>While the process model contains sequence flows that define in which order activities must be executed, sometimes it is desired to flexibly start an activity again or cancel a running activity. For example, this can be useful when the process model contains an error, such as a wrong sequence flow condition, and running process instances need to be corrected. Use cases for this API may be
+ Repairing process instances in which some steps have to be repeated or skipped Migrating process instances from one version of a process definition to another Testing: Activities can be skipped or repeated for isolated testing of individual process segments  To perform such an operation, the process engine offers the process instance modification API that is entered via RuntimeService.</description>
+    </item>
+    
+    <item>
+      <title>扩展（插件）</title>
+      <link>http://shaochenfeng.com/camunda-cn/introduction/extensions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://shaochenfeng.com/camunda-cn/introduction/extensions/</guid>
+      <description>Camunda平台是由Camunda与社区合作开发的一个开源项目。“核心项目”（即 &amp;ldquo;Camunda平台&amp;rdquo;）是Camunda平台产品的基础，该产品由Camunda以商业形式提供。商业化的Camunda平台产品包含额外的（非开源）功能，并通过提供企业支持和错误修复版本等服务提供给Camunda平台客户。
+社区扩展 Camunda支持社区在Camunda平台的框架下建立更多的社区扩展。这些社区扩展由社区维护，不属于Camunda平台的商业产品。
+Chamunda支持Camunda does not support community extensions as part of its commercial services to enterprise subscription customers
+The Camunda Community Hub is a GitHub Organization that serves as the home of Camunda open source community-contributed extensions. You can migrate an extension you&amp;rsquo;ve built to the Hub, search for existing extensions, or get started with open source by helping community extension maintainers with open issue or pull request triage.</description>
     </item>
     
     <item>
@@ -6092,19 +6116,6 @@ Parameters Path Parameters  Name Description   id The id of the external task to
     </item>
     
     <item>
-      <title>Public API</title>
-      <link>http://shaochenfeng.com/camunda-cn/introduction/public-api/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://shaochenfeng.com/camunda-cn/introduction/public-api/</guid>
-      <description>The Camunda platform provides a public API. This section covers the definition of the public API and backwards compatibility for version updates.
-Definition of Public API The Camunda Platform public API is limited to the following items:
-Java API:
-All non-implementation Java packages (package name does not contain impl) of the following modules.
- camunda-engine camunda-engine-spring camunda-engine-cdi camunda-engine-dmn camunda-bpmn-model camunda-cmmn-model camunda-dmn-model camunda-spin-core camunda-connect-core camunda-commons-typed-values  HTTP API (REST API):</description>
-    </item>
-    
-    <item>
       <title>Scripting</title>
       <link>http://shaochenfeng.com/camunda-cn/user-guide/process-engine/scripting/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -6157,6 +6168,20 @@ Response Codes  Code Media type Description   204  Request successful.</descript
 Method PUT /user/{id}/profile
 Parameters Path Parameters  Name Type Description   id String The id of the user.   Request Body A JSON object with the following properties:
  Name Type Description   id String The id of the user.   firstName String The first name of the user.   lastName String The last name of the user.</description>
+    </item>
+    
+    <item>
+      <title>公共API</title>
+      <link>http://shaochenfeng.com/camunda-cn/introduction/public-api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://shaochenfeng.com/camunda-cn/introduction/public-api/</guid>
+      <description>Camunda平台提供了一个公共API。本节主要包括公共API的定义和版本更新的向后兼容性问题。
+公共 API 的定义 Camunda平台的公共API包含两部分：
+Java API:
+以下模块的所有非实现的Java包（包名不包含impl，也就是接口类）：
+ camunda-engine camunda-engine-spring camunda-engine-cdi camunda-engine-dmn camunda-bpmn-model camunda-cmmn-model camunda-dmn-model camunda-spin-core camunda-connect-core camunda-commons-typed-values  HTTP API (REST API):
+ camunda-engine-rest: HTTP接口（REST API接受的一组HTTP请求，详情见REST API参考。Java类不是公共API的一部分.  公共API的向后兼容 Camunda的版本管理方案遵循语义化版本提出的 大版本号.小版本号.补丁 模式。Camunda将保持小版本号版本更新是向后兼容性的。例如：从版本 7.1.x 到 7.2.x 公共API是向后兼容的。</description>
     </item>
     
     <item>

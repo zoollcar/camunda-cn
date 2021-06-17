@@ -131,7 +131,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/camunda-cn/introduction/downloading-camunda/" >Download</a>
+      <a href="/camunda-cn/introduction/downloading-camunda/" >下载</a>
     
   </li>
 
@@ -139,7 +139,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/camunda-cn/introduction/licenses/" >Licenses</a>
+      <a href="/camunda-cn/introduction/licenses/" >许可协议</a>
     
   </li>
 
@@ -147,7 +147,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/camunda-cn/introduction/implemented-standards/" >Implemented Standards</a>
+      <a href="/camunda-cn/introduction/implemented-standards/" >遵循的标准</a>
     
   </li>
 
@@ -155,7 +155,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/camunda-cn/introduction/architecture/" >Architecture Overview</a>
+      <a href="/camunda-cn/introduction/architecture/" >软件架构总览</a>
     
   </li>
 
@@ -163,7 +163,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/camunda-cn/introduction/supported-environments/" >Supported Environments</a>
+      <a href="/camunda-cn/introduction/supported-environments/" >支持的运行环境</a>
     
   </li>
 
@@ -171,7 +171,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/camunda-cn/introduction/telemetry/" >Telemetry</a>
+      <a href="/camunda-cn/introduction/telemetry/" >Telemetry 遥测</a>
     
   </li>
 
@@ -179,7 +179,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/camunda-cn/introduction/extensions/" >Extensions</a>
+      <a href="/camunda-cn/introduction/extensions/" >扩展（插件）</a>
     
   </li>
 
@@ -187,7 +187,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/camunda-cn/introduction/third-party-libraries/" >Third-Party Libraries</a>
+      <a href="/camunda-cn/introduction/third-party-libraries/" >第三方库</a>
       <ul>
         
           
@@ -214,7 +214,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/camunda-cn/introduction/public-api/" >Public API</a>
+      <a href="/camunda-cn/introduction/public-api/" >公共API</a>
     
   </li>
 
@@ -271,7 +271,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/camunda-cn/user-guide/process-engine/process-instance-modification/" >Process Instance Modification</a>
+      <a href="/camunda-cn/user-guide/process-engine/process-instance-restart/" >Process Instance Restart</a>
     
   </li>
 
@@ -279,7 +279,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/camunda-cn/user-guide/process-engine/process-instance-restart/" >Process Instance Restart</a>
+      <a href="/camunda-cn/user-guide/process-engine/process-instance-modification/" >修改流程实例</a>
     
   </li>
 
@@ -8295,6 +8295,20 @@ not want this message to be shown, you can disable it by adjusting the <code>con
 
 <p><strong>Note:</strong> This does only affect the Tasklist login page. For other webapps, you need to adjust the corresponding config file as well.</p>
 
+<h1 id="assign-process-instance-id-to-task-comments">Assign Process Instance Id to Task Comments</h1>
+
+<p>When creating a Task Comment, the process instance ID is not assigned by default.
+Queries for comments by process instance ID will not include those comments.
+When you set the flag <code>assignProcessInstanceIdToTaskComment</code> to <code>true</code>, Tasklist assigns both the task id
+and the process instance id to newly created Task Comments. This allows you to query Task Comments by
+process instance id and by task id.</p>
+
+<pre><code class="language-javascript">export default {
+  // …
+  assignProcessInstanceIdToTaskComment: true
+}
+</code></pre>
+
 <h1 id="advanced-styles-customization">Advanced Styles Customization</h1>
 
 <p>In addition to the basic <code>user-styles.css</code> file, you can edit the source style- and layout files
@@ -8337,6 +8351,7 @@ overrides some Bootstrap variables (above) and add some custom ones</li>
 <li><a href="#logo-and-header-color">Logo and Header Color</a></li>
 <li><a href="#change-csrf-cookie-name">Change CSRF Cookie Name</a></li>
 <li><a href="#disable-welcome-message-for-new-users">Disable Welcome Message for new Users</a></li>
+<li><a href="#assign-process-instance-id-to-task-comments">Assign Process Instance Id to Task Comments</a></li>
 <li><a href="#advanced-styles-customization">Advanced Styles Customization</a>
 <ul>
 <li><a href="#compiling-with-grunt">Compiling with Grunt</a></li>

@@ -203,10 +203,6 @@
   </url>
   
   <url>
-    <loc>http://shaochenfeng.com/camunda-cn/introduction/downloading-camunda/</loc>
-  </url>
-  
-  <url>
     <loc>http://shaochenfeng.com/camunda-cn/reference/bpmn20/subprocesses/embedded-subprocess/</loc>
   </url>
   
@@ -575,6 +571,10 @@
   </url>
   
   <url>
+    <loc>http://shaochenfeng.com/camunda-cn/introduction/downloading-camunda/</loc>
+  </url>
+  
+  <url>
     <loc>http://shaochenfeng.com/camunda-cn/introduction/</loc>
   </url>
   
@@ -599,11 +599,11 @@
   </url>
   
   <url>
-    <loc>http://shaochenfeng.com/camunda-cn/introduction/licenses/</loc>
+    <loc>http://shaochenfeng.com/camunda-cn/reference/rest/openapi/</loc>
   </url>
   
   <url>
-    <loc>http://shaochenfeng.com/camunda-cn/reference/rest/openapi/</loc>
+    <loc>http://shaochenfeng.com/camunda-cn/introduction/licenses/</loc>
   </url>
   
   <url>
@@ -931,10 +931,6 @@
   </url>
   
   <url>
-    <loc>http://shaochenfeng.com/camunda-cn/introduction/implemented-standards/</loc>
-  </url>
-  
-  <url>
     <loc>http://shaochenfeng.com/camunda-cn/installation/full/jboss/</loc>
   </url>
   
@@ -1075,6 +1071,10 @@
   </url>
   
   <url>
+    <loc>http://shaochenfeng.com/camunda-cn/introduction/implemented-standards/</loc>
+  </url>
+  
+  <url>
     <loc>http://shaochenfeng.com/camunda-cn/installation/spring-boot/</loc>
   </url>
   
@@ -1104,10 +1104,6 @@
   
   <url>
     <loc>http://shaochenfeng.com/camunda-cn/user-guide/runtime-container-integration/tomcat/</loc>
-  </url>
-  
-  <url>
-    <loc>http://shaochenfeng.com/camunda-cn/introduction/architecture/</loc>
   </url>
   
   <url>
@@ -1459,6 +1455,10 @@
   </url>
   
   <url>
+    <loc>http://shaochenfeng.com/camunda-cn/introduction/architecture/</loc>
+  </url>
+  
+  <url>
     <loc>http://shaochenfeng.com/camunda-cn/user-guide/process-applications/process-application-resources/</loc>
   </url>
   
@@ -1747,10 +1747,6 @@
   </url>
   
   <url>
-    <loc>http://shaochenfeng.com/camunda-cn/introduction/supported-environments/</loc>
-  </url>
-  
-  <url>
     <loc>http://shaochenfeng.com/camunda-cn/webapps/admin/system-management/</loc>
   </url>
   
@@ -1780,6 +1776,10 @@
   
   <url>
     <loc>http://shaochenfeng.com/camunda-cn/installation/</loc>
+  </url>
+  
+  <url>
+    <loc>http://shaochenfeng.com/camunda-cn/introduction/supported-environments/</loc>
   </url>
   
   <url>
@@ -1888,10 +1888,6 @@
   
   <url>
     <loc>http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/</loc>
-  </url>
-  
-  <url>
-    <loc>http://shaochenfeng.com/camunda-cn/introduction/extensions/</loc>
   </url>
   
   <url>
@@ -2039,10 +2035,6 @@
   </url>
   
   <url>
-    <loc>http://shaochenfeng.com/camunda-cn/user-guide/process-engine/process-instance-modification/</loc>
-  </url>
-  
-  <url>
     <loc>http://shaochenfeng.com/camunda-cn/webapps/cockpit/bpmn/process-instance-modification/</loc>
   </url>
   
@@ -2128,6 +2120,14 @@
   
   <url>
     <loc>http://shaochenfeng.com/camunda-cn/reference/forms/embedded-forms/java-objects/</loc>
+  </url>
+  
+  <url>
+    <loc>http://shaochenfeng.com/camunda-cn/user-guide/process-engine/process-instance-modification/</loc>
+  </url>
+  
+  <url>
+    <loc>http://shaochenfeng.com/camunda-cn/introduction/extensions/</loc>
   </url>
   
   <url>
@@ -2523,10 +2523,6 @@
   </url>
   
   <url>
-    <loc>http://shaochenfeng.com/camunda-cn/introduction/third-party-libraries/</loc>
-  </url>
-  
-  <url>
     <loc>http://shaochenfeng.com/camunda-cn/reference/rest/task/post-unclaim/</loc>
   </url>
   
@@ -2552,6 +2548,10 @@
   
   <url>
     <loc>http://shaochenfeng.com/camunda-cn/reference/rest/decision-definition/put-history-time-to-live/</loc>
+  </url>
+  
+  <url>
+    <loc>http://shaochenfeng.com/camunda-cn/introduction/third-party-libraries/</loc>
   </url>
   
   <url>
@@ -2651,10 +2651,6 @@
   </url>
   
   <url>
-    <loc>http://shaochenfeng.com/camunda-cn/introduction/public-api/</loc>
-  </url>
-  
-  <url>
     <loc>http://shaochenfeng.com/camunda-cn/user-guide/process-engine/scripting/</loc>
   </url>
   
@@ -2676,6 +2672,10 @@
   
   <url>
     <loc>http://shaochenfeng.com/camunda-cn/update/minor/74-to-75/</loc>
+  </url>
+  
+  <url>
+    <loc>http://shaochenfeng.com/camunda-cn/introduction/public-api/</loc>
   </url>
   
   <url>

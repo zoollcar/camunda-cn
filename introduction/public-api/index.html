@@ -26,7 +26,7 @@
     
   
 
-  <title>Public API | docs.camunda.org</title>
+  <title>公共API | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
   <link rel="shortcut icon" href="http://shaochenfeng.com/camunda-cn/img/favicon.ico" type="image/x-icon" />
@@ -131,7 +131,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/camunda-cn/introduction/downloading-camunda/" >Download</a>
+      <a href="/camunda-cn/introduction/downloading-camunda/" >下载</a>
     
   </li>
 
@@ -139,7 +139,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/camunda-cn/introduction/licenses/" >Licenses</a>
+      <a href="/camunda-cn/introduction/licenses/" >许可协议</a>
     
   </li>
 
@@ -147,7 +147,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/camunda-cn/introduction/implemented-standards/" >Implemented Standards</a>
+      <a href="/camunda-cn/introduction/implemented-standards/" >遵循的标准</a>
     
   </li>
 
@@ -155,7 +155,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/camunda-cn/introduction/architecture/" >Architecture Overview</a>
+      <a href="/camunda-cn/introduction/architecture/" >软件架构总览</a>
     
   </li>
 
@@ -163,7 +163,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/camunda-cn/introduction/supported-environments/" >Supported Environments</a>
+      <a href="/camunda-cn/introduction/supported-environments/" >支持的运行环境</a>
     
   </li>
 
@@ -171,7 +171,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/camunda-cn/introduction/telemetry/" >Telemetry</a>
+      <a href="/camunda-cn/introduction/telemetry/" >Telemetry 遥测</a>
     
   </li>
 
@@ -179,7 +179,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/camunda-cn/introduction/extensions/" >Extensions</a>
+      <a href="/camunda-cn/introduction/extensions/" >扩展（插件）</a>
     
   </li>
 
@@ -187,7 +187,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/camunda-cn/introduction/third-party-libraries/" >Third-Party Libraries</a>
+      <a href="/camunda-cn/introduction/third-party-libraries/" >第三方库</a>
       <ul>
         
           
@@ -214,7 +214,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/camunda-cn/introduction/public-api/" >Public API</a>
+      <a href="/camunda-cn/introduction/public-api/" >公共API</a>
     
   </li>
 
@@ -271,7 +271,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/camunda-cn/user-guide/process-engine/process-instance-modification/" >Process Instance Modification</a>
+      <a href="/camunda-cn/user-guide/process-engine/process-instance-restart/" >Process Instance Restart</a>
     
   </li>
 
@@ -279,7 +279,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/camunda-cn/user-guide/process-engine/process-instance-restart/" >Process Instance Restart</a>
+      <a href="/camunda-cn/user-guide/process-engine/process-instance-modification/" >修改流程实例</a>
     
   </li>
 
@@ -8143,21 +8143,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <i>编辑此页</i> <span class="cam-docs-github"></span></a>
 </div>
 
-      <h1 class="page-title">Public API</h1>
+      <h1 class="page-title">公共API</h1>
     </div>
 
     <div class="col-xs-12 content-text">
       
 
-<p>The Camunda platform provides a public API. This section covers the definition of the public API and backwards compatibility for version updates.</p>
+<p>Camunda平台提供了一个公共API。本节主要包括公共API的定义和版本更新的向后兼容性问题。</p>
 
-<h1 id="definition-of-public-api">Definition of Public API</h1>
+<h1 id="公共-api-的定义">公共 API 的定义</h1>
 
-<p>The Camunda Platform public API is limited to the following items:</p>
+<p>Camunda平台的公共API包含两部分：</p>
 
 <p>Java API:</p>
 
-<p>All non-implementation Java packages (package name does not contain <code>impl</code>) of the following modules.</p>
+<p>以下模块的所有非实现的Java包（包名不包含<code>impl</code>，也就是接口类）：</p>
 
 <ul>
 <li><code>camunda-engine</code></li>
@@ -8175,12 +8175,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>HTTP API (REST API):</p>
 
 <ul>
-<li><code>camunda-engine-rest</code>: HTTP interface (set of HTTP requests accepted by the REST API as documented in <a href="http://shaochenfeng.com/camunda-cn/reference/rest/">REST API reference</a>. Java classes are not part of the public API.</li>
+<li><code>camunda-engine-rest</code>: HTTP接口（REST API接受的一组HTTP请求，详情见<a href="http://shaochenfeng.com/camunda-cn/reference/rest/">REST API参考</a>。Java类不是公共API的一部分.</li>
 </ul>
 
-<h1 id="backwards-compatibility-for-public-api">Backwards Compatibility for Public API</h1>
+<h1 id="公共api的向后兼容">公共API的向后兼容</h1>
 
-<p>The Camunda versioning scheme follows the MAJOR.MINOR.PATCH pattern put forward by <a href="http://semver.org/">Semantic Versioning</a>. Camunda will maintain public API backwards compatibility for MINOR version updates. Example: Update from version <code>7.1.x</code> to <code>7.2.x</code> will not break the public API.</p>
+<p>Camunda的版本管理方案遵循<a href="http://semver.org/">语义化版本</a>提出的 大版本号.小版本号.补丁 模式。Camunda将保持小版本号版本更新是向后兼容性的。例如：从版本 <code>7.1.x</code> 到 <code>7.2.x</code> 公共API是向后兼容的。</p>
 
     </div>
   </div>
@@ -8190,8 +8190,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <h3>目录:</h3>
   <nav id="TableOfContents">
 <ul>
-<li><a href="#definition-of-public-api">Definition of Public API</a></li>
-<li><a href="#backwards-compatibility-for-public-api">Backwards Compatibility for Public API</a></li>
+<li><a href="#公共-api-的定义">公共 API 的定义</a></li>
+<li><a href="#公共api的向后兼容">公共API的向后兼容</a></li>
 </ul>
 </nav>
   
