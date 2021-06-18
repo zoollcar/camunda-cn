@@ -2207,10 +2207,6 @@
   </url>
   
   <url>
-    <loc>http://shaochenfeng.com/camunda-cn/user-guide/process-engine/delegation-code/</loc>
-  </url>
-  
-  <url>
     <loc>http://shaochenfeng.com/camunda-cn/reference/rest/filter/delete/</loc>
   </url>
   
@@ -2380,6 +2376,10 @@
   
   <url>
     <loc>http://shaochenfeng.com/camunda-cn/update/minor/76-to-77/</loc>
+  </url>
+  
+  <url>
+    <loc>http://shaochenfeng.com/camunda-cn/user-guide/process-engine/delegation-code/</loc>
   </url>
   
   <url>

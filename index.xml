@@ -5129,17 +5129,6 @@ Custom Date Format A custom date format can be configured in the web.xml file of
     </item>
     
     <item>
-      <title>Delegation Code</title>
-      <link>http://shaochenfeng.com/camunda-cn/user-guide/process-engine/delegation-code/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://shaochenfeng.com/camunda-cn/user-guide/process-engine/delegation-code/</guid>
-      <description>Delegation Code allows you to execute external Java code, scripts or evaluate expressions when certain events occur during process execution.
-There are different types of Delegation Code:
- Java Delegates can be attached to a BPMN Service Task. Delegate Variable Mapping can be attached to a Call Activity. Execution Listeners can be attached to any event within the normal token flow, e.g., starting a process instance or entering an activity.</description>
-    </item>
-    
-    <item>
       <title>Delete Filter</title>
       <link>http://shaochenfeng.com/camunda-cn/reference/rest/filter/delete/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -5574,6 +5563,21 @@ Parameters Path Parameters  Name Description   id The id of the case execution t
       
       <guid>http://shaochenfeng.com/camunda-cn/reference/rest/tenant/options/</guid>
       <description>The /tenant resource supports two custom OPTIONS requests, one for the resource as such and one for individual tenant instances. The OPTIONS request allows checking for the set of available operations that the currently authenticated user can perform on the /tenant resource. If the user can perform an operation or not may depend on various things, including the users authorizations to interact with this resource and the internal configuration of the process engine.</description>
+    </item>
+    
+    <item>
+      <title>委托代码</title>
+      <link>http://shaochenfeng.com/camunda-cn/user-guide/process-engine/delegation-code/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://shaochenfeng.com/camunda-cn/user-guide/process-engine/delegation-code/</guid>
+      <description>委托代码允许你在进程执行期间发生某些事件时执行外部Java代码、脚本或评估表达式。
+有不同类型委托代码：
+ Java 代理类（JAVA Delegates） 可以附加到 BPMN 服务任务。 变量映射（Delegate Variable Mapping） 可以附加到 发起活动。 执行监听器（Execution Listeners） 可以附加到令牌流动的任何实践，例如，启动一个流程实例或进入一个活动。 任务监听器（Task Listeners） 可以附加到用户任务生命周期内的任何事件，例如，用户任务的创建或完成。  你可以通过BPMN 2.0 XML创建通用的委托代码，并使用字段注入来配置。
+Java 代理类 在流程运行中调用的Java代理类，需要实现 org.camunda.bpm.engine.delegate.JavaDelegate 接口，并实现 execute 方法。当流程执行到达这个特定的步骤时，它将执行该方法中定义的这个方法，并以默认的BPMN 2.0方式完成活动。
+举个例子，让我们先创建一个Java类，它可以用来将一个流程变量String改为大写字母。这个类需要实现org.camunda.bpm.engine.delegate.JavaDelegate接口，这要求我们实现execute(DelegateExecution)方法。这个操作将被引擎调用，并且包含所需要的业务逻辑。（可以通过 DelegateExecution接口访问和操作流程实例信息，如流程变量和其他信息）
+public class ToUppercase implements JavaDelegate { public void execute(DelegateExecution execution) throws Exception { String var = (String) execution.getVariable(&amp;quot;input&amp;quot;); var = var.toUpperCase(); execution.setVariable(&amp;quot;input&amp;quot;, var); } }  新的实例!每次执行引用活动的委托类时，都会创建这个类的一个新的实例。这意味着，每次活动被执行时，将使用该类的另一个实例来调用 execute(DelegateExecution)。
+在流程定义中引用的类（即通过使用 camunda:class 引用的类）在部署期间 不会 被实例化。只有当流程执行到达流程中第一次使用类的地方时，才会创建该类的实例。如果找不到该类，将抛出一个 &amp;ldquo;ProcessEngineException&amp;rdquo;。因为，你在部署时的环境（更确切地说，是classpath）往往与实际运行时的环境不同。</description>
     </item>
     
     <item>

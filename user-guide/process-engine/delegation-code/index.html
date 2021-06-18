@@ -26,7 +26,7 @@
     
   
 
-  <title>Delegation Code | docs.camunda.org</title>
+  <title>委托代码 | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
   <link rel="shortcut icon" href="http://shaochenfeng.com/camunda-cn/img/favicon.ico" type="image/x-icon" />
@@ -287,7 +287,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/camunda-cn/user-guide/process-engine/delegation-code/" >Delegation Code</a>
+      <a href="/camunda-cn/user-guide/process-engine/delegation-code/" >委托代码</a>
     
   </li>
 
@@ -8143,43 +8143,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <i>编辑此页</i> <span class="cam-docs-github"></span></a>
 </div>
 
-      <h1 class="page-title">Delegation Code</h1>
+      <h1 class="page-title">委托代码</h1>
     </div>
 
     <div class="col-xs-12 content-text">
       
 
-<p>Delegation Code allows you to execute external Java code, scripts or evaluate expressions when
-certain events occur during process execution.</p>
+<p>委托代码允许你在进程执行期间发生某些事件时执行外部Java代码、脚本或评估表达式。</p>
 
-<p>There are different types of Delegation Code:</p>
+<p>有不同类型委托代码：</p>
 
 <ul>
-<li><strong>Java Delegates</strong> can be attached to a <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/tasks/service-task/">BPMN Service Task</a>.</li>
-<li><strong>Delegate Variable Mapping</strong> can be attached to a <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/subprocesses/call-activity/">Call Activity</a>.</li>
-<li><strong>Execution Listeners</strong> can be attached to any event within the normal token flow, e.g., starting a process instance or entering an activity.</li>
-<li><strong>Task Listeners</strong> can be attached to events within the user task lifecycle, e.g., creation or completion of a user task.</li>
+<li><strong>Java 代理类（JAVA Delegates）</strong> 可以附加到 <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/tasks/service-task/">BPMN 服务任务</a>。</li>
+<li><strong>变量映射（Delegate Variable Mapping）</strong> 可以附加到 <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/subprocesses/call-activity/">发起活动</a>。</li>
+<li><strong>执行监听器（Execution Listeners）</strong> 可以附加到令牌流动的任何实践，例如，启动一个流程实例或进入一个活动。</li>
+<li><strong>任务监听器（Task Listeners）</strong> 可以附加到用户任务生命周期内的任何事件，例如，用户任务的创建或完成。</li>
 </ul>
 
-<p>You can create generic Delegation Code and configure this via the BPMN 2.0 XML using so called Field Injection.</p>
+<p>你可以通过BPMN 2.0 XML创建通用的委托代码，并使用字段注入来配置。</p>
 
-<h1 id="java-delegate">Java Delegate</h1>
+<h1 id="java-代理类">Java 代理类</h1>
 
-<p>To implement a class that can be called during process execution, this class needs to implement the <code>org.camunda.bpm.engine.delegate.JavaDelegate</code>
-interface and provide the required logic in the <code>execute</code>
-method. When process execution arrives at this particular step, it
-will execute this logic defined in that method and leave the activity
-in the default BPMN 2.0 way.</p>
+<p>在流程运行中调用的Java代理类，需要实现 <code>org.camunda.bpm.engine.delegate.JavaDelegate</code> 接口，并实现 <code>execute</code> 方法。当流程执行到达这个特定的步骤时，它将执行该方法中定义的这个方法，并以默认的BPMN 2.0方式完成活动。</p>
 
-<p>As an example let&rsquo;s create a Java class that can be used to change a
-process variable String to uppercase. This class needs to implement
-the <code>org.camunda.bpm.engine.delegate.JavaDelegate</code>
-interface, which requires us to implement the <code>execute(DelegateExecution)</code>
-method. It&rsquo;s this operation that will be called by the engine and
-which needs to contain the business logic. Process instance
-information such as process variables and other information can be accessed and
-manipulated through the <a href="http://shaochenfeng.com/camunda-cn/reference/javadoc/?org/camunda/bpm/engine/delegate/DelegateExecution.html">DelegateExecution</a>
- interface (click on the link for a detailed Javadoc of its operations).</p>
+<p>举个例子，让我们先创建一个Java类，它可以用来将一个流程变量String改为大写字母。这个类需要实现<code>org.camunda.bpm.engine.delegate.JavaDelegate</code>接口，这要求我们实现<code>execute(DelegateExecution)</code>方法。这个操作将被引擎调用，并且包含所需要的业务逻辑。（可以通过 <a href="http://shaochenfeng.com/camunda-cn/reference/javadoc/?org/camunda/bpm/engine/delegate/DelegateExecution.html">DelegateExecution</a>
+ 接口访问和操作流程实例信息，如流程变量和其他信息）</p>
 
 <pre><code class="language-java">  public class ToUppercase implements JavaDelegate {
 
@@ -8194,38 +8182,27 @@ manipulated through the <a href="http://shaochenfeng.com/camunda-cn/reference/ja
 
 
 <div class="note bg-info docs-info">
-  <h3>Note!</h3>
-  <p>Each time a delegation class referencing activity is executed, a separate instance of this class will be created. This means that each time an activity is executed there will be used another instance of the class to call <code>execute(DelegateExecution)</code>.</p>
+  <h3>新的实例!</h3>
+  <p>每次执行引用活动的委托类时，都会创建这个类的一个新的实例。这意味着，每次活动被执行时，将使用该类的另一个实例来调用 <code>execute(DelegateExecution)</code>。</p>
 </div>
 
 
-<p>The classes that are referenced in the process definition (i.e., by using
-<code>camunda:class</code>  ) are <strong>NOT instantiated during deployment</strong>.
-Only when a process execution arrives at the point in the process where the class is used for the
-first time, an instance of that class will be created. If the class cannot be found,
-a <code>ProcessEngineException</code> will be thrown. The reason for this is that the environment (and
-more specifically the classpath) when you are deploying is often different than the actual runtime
-environment.</p>
+<p>在流程定义中引用的类（即通过使用 <code>camunda:class</code> 引用的类）在部署期间 <strong>不会</strong> 被实例化。只有当流程执行到达流程中第一次使用类的地方时，才会创建该类的实例。如果找不到该类，将抛出一个 &ldquo;ProcessEngineException&rdquo;。因为，你在部署时的环境（更确切地说，是classpath）往往与实际运行时的环境不同。</p>
 
-<h1 id="activity-behavior">Activity Behavior</h1>
+<h1 id="活动行为">活动行为</h1>
 
-<p>Instead of writing a Java Delegate, it is also possible to provide a class that implements the <code>org.camunda.bpm.engine.impl.pvm.delegate.ActivityBehavior</code>
-interface. Implementations then have access to the more powerful <code>ActivityExecution</code> that for example also allows to influence the control flow of the process. However, note that this is not a very good practice and should be avoided as much as possible. So, it is advised to only use the <code>ActivityBehavior</code> interface for advanced use cases and if you know exactly what you&rsquo;re doing.</p>
+<p>不写Java代理类，也可以提供一个实现<code>org.camunda.bpm.engine.impl.pvm.delegate.ActivityBehavior</code>接口的类。然后，实现有更大能力的<code>ActivityExecution</code>，例如，还可以影响流程的控制流。然而，请注意，这不是一个很好的做法，应该尽量避免。建议只在高级用例中使用 &ldquo;ActivityBehavior&rdquo;接口，你需要清楚地知道自己在做什么。</p>
 
-<h1 id="field-injection">Field Injection</h1>
+<h1 id="字段-属性-注入">字段（属性）注入</h1>
 
-<p>It is possible to inject values into the fields of the delegated classes. The following types of injection are supported:</p>
+<p>可以向委托类的字段中注入数据。支持以下类型的注入</p>
 
 <ul>
-<li>Fixed string values</li>
-<li>Expressions</li>
+<li>固定字符串值</li>
+<li>表达式</li>
 </ul>
 
-<p>If available, the value is injected through a public setter method on
-your delegated class, following the Java Bean naming conventions (e.g.,
-field <code>firstName</code> has setter <code>setFirstName(...)</code>).
-If no setter is available for that field, the value of private
-member will be set on the delegate (but using private fields is <strong>not</strong> recommended - see warning below).</p>
+<p>如果可用，该值将通过委托类上的公共setter方法注入，并遵循Java Bean的命名惯例（例如，字段<code>firstName</code>有setter<code>setFirstName(..)</code>）。如果该字段没有setter，私有成员的值将在委托中被设置（但不建议使用私有字段，见下面的警告）。</p>
 
 <p><strong>Regardless of the type of value declared in the process-definition, the type of the
 setter/private field on the injection target should always be <code>org.camunda.bpm.engine.delegate.Expression</code></strong>.</p>
@@ -8233,16 +8210,11 @@ setter/private field on the injection target should always be <code>org.camunda.
 
 <div class="note bg-warning docs-warning">
   <h3></h3>
-  <p>Private fields cannot always be modified! It does <strong>not work</strong> with e.g.,
-  CDI beans (because you have proxies instead of real objects) or with some SecurityManager configurations.
-  Please always use a public setter-method for the fields you want to have injected!</p>
+  <p>私有字段并不总是能够修改的! 它对CDI Bean（因为你有代理而不是真实的对象）或一些SecurityManager配置不起作用。请始终为你想注入的字段使用一个public的setter方法。</p>
 </div>
 
 
-<p>The following code snippet shows how to inject a constant value into a field.
-Field Injection is supported when using the <code>class</code> or <code>delegateExpression</code> attribute. Note that we need
-to declare a <code>extensionElements</code> XML element before the actual field injection
-declarations, which is a requirement of the BPMN 2.0 XML Schema.</p>
+<p>下面的代码片段显示了如何将一个常量值注入到一个字段。当使用<code>class</code>或<code>delegateExpression</code>属性时，支持字段注入。请注意，在实际的字段注入声明之前，我们需要声明一个<code>extensionElements</code>的XML元素，这是BPMN 2.0 XML Schema的一个要求。</p>
 
 <pre><code class="language-xml">  &lt;serviceTask id=&quot;javaService&quot;
                name=&quot;Java service invocation&quot;
@@ -8253,13 +8225,9 @@ declarations, which is a requirement of the BPMN 2.0 XML Schema.</p>
   &lt;/serviceTask&gt;
 </code></pre>
 
-<p>The class <code>ToUpperCaseFieldInjected</code> has a field
-<code>text</code> which is of type <code>org.camunda.bpm.engine.delegate.Expression</code>.
-When calling <code>text.getValue(execution)</code>, the configured string value
-<code>Hello World</code> will be returned.</p>
+<p>类<code>ToUpperCaseFieldInjected</code>有一个字段<code>text</code>，其类型为<code>org.camunda.bpm.engine.delegate.Expression</code>。当调用<code>text.getValue(execution)</code>时，将返回配置的字符串值<code>Hello World</code>。</p>
 
-<p>Alternatively, for longs texts (e.g., an inline e-mail) the <code>camunda:string</code> sub element can be
-used:</p>
+<p>另外，对于长文本（例如，内嵌的电子邮件），可以使用<code>camunda:string</code>子元素。</p>
 
 <pre><code class="language-xml">  &lt;serviceTask id=&quot;javaService&quot;
                name=&quot;Java service invocation&quot;
@@ -8274,14 +8242,7 @@ used:</p>
   &lt;/serviceTask&gt;
 </code></pre>
 
-<p>To inject values that are dynamically resolved at runtime, expressions
-can be used. Those expressions can use process variables, CDI or Spring
-beans. As already noted, a separate instance of the Java class will be created
-each time the service task is executed. To have dynamic injection of
-values in fields, you can inject value and method expressions in an
-<code>org.camunda.bpm.engine.delegate.Expression</code>
-which can be evaluated/invoked using the <code>DelegateExecution</code>
-passed in the <code>execute</code> method.</p>
+<p>为了注入在运行时动态解析的值，也可以使用表达式。这些表达式可以使用流程变量、CDI或Spring Bean。如前所述，每次执行服务任务时，都会创建一个单独的Java类实例。为了在字段中动态注入值，你可以在<code>org.camunda.bpm.engine.delegate.Expression</code>中注入值和方法表达式，该表达式可以使用<code>execute</code>方法中传递的<code>DelegateExecution</code>进行计算/调用。</p>
 
 <pre><code class="language-xml">  &lt;serviceTask id=&quot;javaService&quot; name=&quot;Java service invocation&quot;
                camunda:class=&quot;org.camunda.bpm.examples.bpmn.servicetask.ReverseStringsFieldInjected&quot;&gt;
@@ -8297,8 +8258,7 @@ passed in the <code>execute</code> method.</p>
   &lt;/serviceTask&gt;
 </code></pre>
 
-<p>The example class below uses the injected expressions and resolves
-them using the current <code>DelegateExecution</code>.</p>
+<p>下面的例子中使用注入的表达式，并且使用当前的 &ldquo;DelegateExecution&rdquo; 来解决它们：</p>
 
 <pre><code class="language-java">  public class ReverseStringsFieldInjected implements JavaDelegate {
 
@@ -8315,7 +8275,7 @@ them using the current <code>DelegateExecution</code>.</p>
   }
 </code></pre>
 
-<p>Alternatively, you can also set the expressions as an attribute instead of a child-element, to make the XML less verbose.</p>
+<p>另外，你也可以把表达式设置为一个属性，而不是一个子元素，以使XML不那么冗长。</p>
 
 <pre><code class="language-xml">  &lt;camunda:field name=&quot;text1&quot; expression=&quot;${genderBean.getGenderString(gender)}&quot; /&gt;
   &lt;camunda:field name=&quot;text2&quot; expression=&quot;Hello ${gender == 'male' ? 'Mr.' : 'Mrs.'} ${name}&quot; /&gt;
@@ -8323,23 +8283,21 @@ them using the current <code>DelegateExecution</code>.</p>
 
 
 <div class="note bg-info docs-info">
-  <h3>Note!</h3>
-  <p>The injection happens each time the service task is called since a separate instance of the class will be created. When the fields are altered by your code, the values will be re-injected when the activity is executed next time.</p>
+  <h3>笔记!</h3>
+  <p>由于该类的一个新的实例将被创建，所以每次服务任务被调用时都会发生注入。当字段被你的代码改变后，这些值将在下次执行该活动时被重新注入覆盖掉。</p>
 </div>
 
 
 
 <div class="note bg-warning docs-warning">
   <h3></h3>
-  <p>For the same reasons as mentioned above, field injection should not be (usually) used with Spring beans, which are singletons by default. Otherwise, you may run into inconsistencies due to concurrent modification of the bean fields.</p>
+  <p>出于上述同样的原因，字段注入不应该（通常）用于Spring Bean，因为Spring Bean默认是单例的。所以，你可能会因为同时修改Bean的字段而遇到不一致的情况。</p>
 </div>
 
 
-<h1 id="delegate-variable-mapping">Delegate Variable Mapping</h1>
+<h1 id="变量映射">变量映射</h1>
 
-<p>To implement a class that delegates the input and output variable mapping for a call activity, this class needs to implement the <code>org.camunda.bpm.engine.delegate.DelegateVariableMapping</code>
-interface. The implementation must provide the methods <code>mapInputVariables(DelegateExecution, VariableMap)</code> and <code>mapOutputVariables(DelegateExecution, VariableScope)</code>.
-See the following example:</p>
+<p>要实现一个为输入和输出变量映射的类，这个类需要实现<code>org.camunda.bpm.engine.delegate.DelegateVariableMapping</code>接口。该实现必须提供<code>mapInputVariables(DelegateExecution, VariableMap)</code>和<code>mapOutputVariables(DelegateExecution, VariableScope)</code>方法。请看下面的例子：</p>
 
 <pre><code class="language-java">public class DelegatedVarMapping implements DelegateVariableMapping {
 
@@ -8355,26 +8313,26 @@ See the following example:</p>
 }
 </code></pre>
 
-<p>The <code>mapInputVariables</code> method is called before the call activity is executed, to map the input variables.
-The input variables should be put into the given variables map.
-The <code>mapOutputVariables</code> method is called after the call activity was executed, to map the output variables.
-The output variables can be directly set into the caller execution.
-The behavior of the class loading is similar to the class loading on <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/delegation-code/#java-delegate">Java Delegates</a>.</p>
+<p><code>mapInputVariables</code> 方法在调用活动执行之前被调用，以映射输入变量。
+输入变量应该被放入给定的变量map中。
+<code>mapOutputVariables</code> 方法在调用活动被执行后被调用，以映射输出变量。
+输出变量应该直接设置到调用者的执行中。
+类加载的方法类似于<a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/delegation-code/#java-delegate">Java 代理类</a>。</p>
 
-<h1 id="execution-listener">Execution Listener</h1>
+<h1 id="执行监听器">执行监听器</h1>
 
-<p>Execution listeners allow you to execute external Java code or evaluate an expression when certain events occur during process execution. The events that can be captured are:</p>
+<p>执行监听器允许你在进程执行过程中发生某些事件时执行外部Java代码或计算一个表达式。可以捕获的事件有：</p>
 
 <ul>
-<li>Start and end of a process instance.</li>
-<li>Taking a transition.</li>
-<li>Start and end of an activity.</li>
-<li>Start and end of a gateway.</li>
-<li>Start and end of intermediate events.</li>
-<li>Ending a start event or starting an end event.</li>
+<li>启动或结束一个流程实例。</li>
+<li>进行一个过渡（Transition）。</li>
+<li>启动或结束一个活动。</li>
+<li>启动或结束一个网关。</li>
+<li>启动或结束一个中间事件。</li>
+<li>结束一个 start event 或启动一个 end event.</li>
 </ul>
 
-<p>The following process definition contains 3 execution listeners:</p>
+<p>下面的流程定义中包含3个执行监听器：</p>
 
 <pre><code class="language-xml">  &lt;process id=&quot;executionListenersProcess&quot;&gt;
     &lt;extensionElements&gt;
@@ -8415,7 +8373,7 @@ The behavior of the class loading is similar to the class loading on <a href="ht
   &lt;/process&gt;
 </code></pre>
 
-<p>The first execution listener is notified when the process starts. The listener is an external Java-class (like ExampleExecutionListenerOne) and should implement the <code>org.camunda.bpm.engine.delegate.ExecutionListener</code> interface. When the event occurs (in this case end event) the method <code>notify(DelegateExecution execution)</code> is called.</p>
+<p>第一个执行监听器在进程开始时被通知。该监听器是一个外部Java类（如ExampleExecutionListenerOne），并且应该实现了<code>org.camunda.bpm.engine.delegate.ExecutionListener</code>接口。当事件发生时（本例为结束事件），<code>notify(DelegateExecution execution)</code>方法被调用。</p>
 
 <pre><code class="language-java">  public class ExampleExecutionListenerOne implements ExecutionListener {
 
@@ -8426,31 +8384,25 @@ The behavior of the class loading is similar to the class loading on <a href="ht
   }
 </code></pre>
 
-<p>It is also possible to use a delegation class that implements the <code>org.camunda.bpm.engine.delegate.JavaDelegate</code> interface. These delegation classes can then be reused in other constructs, such as a delegation for a service task.</p>
+<p>也可以使用实现了<code>org.camunda.bpm.engine.delegate.JavaDelegate</code>接口的委托类。然后，这些委托类可以在其他结构中重复使用，比如服务任务。</p>
 
-<p>The second execution listener is called when the transition is taken. Note that the listener element
-doesn&rsquo;t define an event, since only take events are fired on transitions. Values in the event
-attribute are ignored when a listener is defined on a transition. Also it contains a
-<a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#camunda-script">camunda:script</a> child element which defines a script which
-will be executed as execution listener. Alternatively it is possible to specify the script source
-code as external resources (see the documentation about <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/scripting/#script-source">script sources</a> of script
-tasks).</p>
+<p>第二个执行监听器在执行过渡时被调用。请注意，监听器元素并没有定义事件，因为只有事件是在执行过渡时被触发。当监听器被定义在一个过渡上时，事件属性中的值会被忽略。它还包含一个 <a href="http://shaochenfeng.com/camunda-cn/reference/bpmn20/custom-extensions/extension-elements/#camunda-script">camunda:script</a> 子元素，它定义了一个将被执行监听器执行的脚本。另外，也可以将脚本源代码指定为外部资源（见关于脚本任务的 <a href="http://shaochenfeng.com/camunda-cn/user-guide/process-engine/scripting/#script-source">script sources</a> 的文档）。</p>
 
-<p>The last execution listener is called when activity secondTask ends. Instead of using the class on the listener declaration, a expression is defined instead which is evaluated/invoked when the event is fired.</p>
+<p>最后一个执行监听器在活动secondTask结束时被调用。与其在监听器声明中使用类，不如定义一个表达式，当事件被触发时被计算或调用</p>
 
 <pre><code class="language-xml">  &lt;camunda:executionListener expression=&quot;${myPojo.myMethod(execution.eventName)}&quot; event=&quot;end&quot; /&gt;
 </code></pre>
 
-<p>As with other expressions, execution variables are resolved and can be used. Because the execution implementation object has a property that exposes the event name, it&rsquo;s possible to pass the event-name to your methods using execution.eventName.</p>
+<p>与其他表达式一样，流程变量可以被使用。因为execution有一个暴露事件名称的属性，所以可以使用execution.eventName将事件名称传递给你的方法。</p>
 
-<p>Execution listeners also support using a delegateExpression, similar to a service task.</p>
+<p>执行监听器也支持使用delegateExpression，类似于服务任务。</p>
 
 <pre><code class="language-xml">  &lt;camunda:executionListener event=&quot;start&quot; delegateExpression=&quot;${myExecutionListenerBean}&quot; /&gt;
 </code></pre>
 
-<h1 id="task-listener">Task Listener</h1>
+<h1 id="任务监听器">任务监听器</h1>
 
-<p>A task listener is used to execute custom Java logic or an expression upon the occurrence of a certain task-related event. It can only be added in the process definition as a child element of a user task. Note that this also must happen as a child of the BPMN 2.0 extensionElements and in the Camunda namespace, since a task listener is a construct specifically for the Camunda engine.</p>
+<p>任务监听器被用来在某个任务相关事件发生时执行自定义的Java逻辑或表达式。它只能作为用户任务的一个子元素添加到流程定义中。请注意，这也必须作为BPMN 2.0 extensionElements的一个子元素，并在Camunda命名空间中定义，因为任务监听器是Camunda引擎专用的。</p>
 
 <pre><code class="language-xml">  &lt;userTask id=&quot;myTask&quot; name=&quot;My Task&quot; &gt;
     &lt;extensionElements&gt;
@@ -8459,54 +8411,37 @@ tasks).</p>
   &lt;/userTask&gt;
 </code></pre>
 
-<h2 id="task-listener-event-lifecycle">Task Listener Event Lifecycle</h2>
+<h2 id="任务监听器事件生命周期">任务监听器事件生命周期</h2>
 
-<p>The execution of Task Listeners is dependent on the order of firing of
-the following task-related events:</p>
+<p>任务监听器的执行取决于以下任务相关事件的启动顺序。</p>
 
-<p>The <strong>create</strong> event fires when the task has been created and all task properties are set. No
-other task-related event will be fired before the <em>create</em> event. The event allows us to inspect
-all properties of the task when we receive it in the create listener.</p>
+<p>当任务被创建并且所有的任务属性被设置时， <strong>create</strong> 事件被触发。在 <strong>create</strong> 事件之前，没有其他与任务相关的事件会被触发。该事件允许我们在监听器中收到创建任务时检查其所有属性。</p>
 
-<p>The <strong>update</strong> event occurs when a task property (e.g. assignee, owner, priority, etc.) on an already
-created task is changed. This includes attributes of a task  (e.g. assignee, owner, priority, etc.),
-as well as dependent entities (e.g. attachments, comments, task-local variables).
-Note that the initialization of a task does not fire an update event (the task is being created).
-This also means that the <em>update</em> event will always occur after a <em>create</em> event has already occurred.</p>
+<p>当一个已经创建的任务上的任务属性（如受让人、所有者、优先级等）被改变时，<strong>update</strong> 事件就会发生。不但包括这包括任务的属性（如受让人、所有者、优先级等）发生改变，还包括附属实体（如附件、评论、任务本地变量）的变化。请注意，任务的初始化并不触发更新事件（任务正在被创建）。这也意味着 <em>update</em> 事件总是在 <em>create</em> 事件已经发生之后发生。</p>
 
-<p>The <strong>assignment</strong> event specifically tracks the changes of the Task&rsquo;s <code>assignee</code> property. The event
-may be fired on two occasions:</p>
+<p><strong>assignment</strong> 事件专门跟踪任务的 <code>受让人（assignee）</code> 属性的变化。该事件可能在两种情况下被触发。</p>
 
 <ol>
-<li>When a task with an <code>assignee</code> explicitly defined in the process definition has been
-created. In this case, the <em>assignment</em> event will be fired after the <em>create</em> event.</li>
-<li>When an already created task is assigned, i.e. the Task&rsquo;s <code>assignee</code> property is changed. In
-this case, the <em>assignment</em> event will follow the <em>update</em> event since changing the <code>assignee</code>
-property results in an updated task.</li>
+<li>当一个在流程定义中明确定义了 &ldquo;受让人&rdquo; 的任务被创建。在这种情况下， <em>assignment</em> 事件将在 <em>create</em> 事件之后被触发。</li>
+<li>当一个已经创建的任务被分配，即任务的 &ldquo;受让人&rdquo; 属性被改变。因为改变 <code>assignee</code> 属性会导致一个 <em>update</em> 的事件，在这种情况下，<em>assignment</em> 事件将在 <em>update</em> 事件之后发生。</li>
 </ol>
 
-<p>The assignment event can be used for a more fine grained inspection, when the assignee is
-actually set.</p>
+<p>当受让人被设置， <em>assignment</em> 事件可用于更精细的检查。</p>
 
-<p>The <strong>timeout</strong> event occurs when a Timer, associated with this Task Listener, is due. Note that
-this requires for a Timer to be defined. The <code>timeout</code> event may occur after a Task has been
-<code>created</code>, and before it has been <code>completed</code>.</p>
+<p>当与该任务监听器相关的定时器到期后，<strong>timeout</strong> 事件就会发生。注意，这需要定义一个定时器。&rdquo;timeout&rdquo; 事件可能发生在一个任务被 &ldquo;create&rdquo; 之后和 &ldquo;complete&rdquo; 之前。</p>
 
-<p>The <strong>complete</strong> event occurs when the task is <em>successfully</em> completed and just before the task
-is deleted from the runtime data. A successful execution of a task&rsquo;s <strong>complete</strong> Task Listeners
-results in an end of the task event lifecycle.</p>
+<p>当任务成功完成时，在任务从运行时数据库中删除之前，会发生 <strong>complete</strong> 事件。一个任务的 <strong>complete</strong> 任务监听器的成功执行后任务事件生命周期才会结束。</p>
 
-<p>The <strong>delete</strong> event occurs just before the task is deleted from the runtime data, because of:</p>
+<p>在任务从运行时数据库中被删除之前，只有在如下情况下， <strong>delete</strong> 事件会发生：</p>
 
 <ol>
-<li>An interrupting Boundary Event;</li>
-<li>An interrupting Event Subprocess;</li>
-<li>A Process Instance deletion;</li>
-<li>A BPMN Error thrown inside a Task Listener.</li>
+<li>一个中断的边界事件。</li>
+<li>一个中断的事件子进程。</li>
+<li>一个进程实例的删除。</li>
+<li>任务监听器内抛出的BPMN错误。</li>
 </ol>
 
-<p>No other event is fired after the <em>delete</em> event since it results in an end of the task event
-lifecycle. This means that the <em>delete</em> event is mutually exclusive with the <em>complete</em> event.</p>
+<p>在 <em>delete</em> 事件之后，没有其他事件被触发，因为它将导致任务事件生命周期的结束。这意味着， <em>delete</em> 事件与 <em>complete</em> 事件互斥的。</p>
 
 <h3 id="task-event-chaining">Task Event Chaining</h3>
 
@@ -8748,14 +8683,14 @@ how to access the <code>TaskService</code> from a <code>JavaDelegate</code> impl
   <h3>目录:</h3>
   <nav id="TableOfContents">
 <ul>
-<li><a href="#java-delegate">Java Delegate</a></li>
-<li><a href="#activity-behavior">Activity Behavior</a></li>
-<li><a href="#field-injection">Field Injection</a></li>
-<li><a href="#delegate-variable-mapping">Delegate Variable Mapping</a></li>
-<li><a href="#execution-listener">Execution Listener</a></li>
-<li><a href="#task-listener">Task Listener</a>
+<li><a href="#java-代理类">Java 代理类</a></li>
+<li><a href="#活动行为">活动行为</a></li>
+<li><a href="#字段-属性-注入">字段（属性）注入</a></li>
+<li><a href="#变量映射">变量映射</a></li>
+<li><a href="#执行监听器">执行监听器</a></li>
+<li><a href="#任务监听器">任务监听器</a>
 <ul>
-<li><a href="#task-listener-event-lifecycle">Task Listener Event Lifecycle</a>
+<li><a href="#任务监听器事件生命周期">任务监听器事件生命周期</a>
 <ul>
 <li><a href="#task-event-chaining">Task Event Chaining</a></li>
 </ul></li>
