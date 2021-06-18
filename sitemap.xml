@@ -2039,10 +2039,6 @@
   </url>
   
   <url>
-    <loc>http://shaochenfeng.com/camunda-cn/user-guide/process-engine/process-instance-restart/</loc>
-  </url>
-  
-  <url>
     <loc>http://shaochenfeng.com/camunda-cn/user-guide/spring-boot-integration/process-applications/</loc>
   </url>
   
@@ -2128,6 +2124,10 @@
   
   <url>
     <loc>http://shaochenfeng.com/camunda-cn/introduction/extensions/</loc>
+  </url>
+  
+  <url>
+    <loc>http://shaochenfeng.com/camunda-cn/user-guide/process-engine/process-instance-restart/</loc>
   </url>
   
   <url>

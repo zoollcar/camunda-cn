@@ -4758,16 +4758,6 @@ Example The following example shows an XML snippet which can be placed in both p
     </item>
     
     <item>
-      <title>Process Instance Restart</title>
-      <link>http://shaochenfeng.com/camunda-cn/user-guide/process-engine/process-instance-restart/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://shaochenfeng.com/camunda-cn/user-guide/process-engine/process-instance-restart/</guid>
-      <description>After a process instance termination, its historic data still exists and can be accessed to restore a process instance, provided that the history level is set to FULL. This can, for example, be useful when termination did not proceed in a desired way. Use cases for this API may be:
- Restoring the last state of process instances that have been erroneously canceled Restarting process instances after a termination caused by a wrong decision  To perform such an operation the process engine offers the process instance restart API, that is entered via RuntimeService.</description>
-    </item>
-    
-    <item>
       <title>Process applications</title>
       <link>http://shaochenfeng.com/camunda-cn/user-guide/spring-boot-integration/process-applications/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -4968,8 +4958,14 @@ Serialized and Deserialized Object Values Object Values are instances of (non pr
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://shaochenfeng.com/camunda-cn/user-guide/process-engine/process-instance-modification/</guid>
-      <description>While the process model contains sequence flows that define in which order activities must be executed, sometimes it is desired to flexibly start an activity again or cancel a running activity. For example, this can be useful when the process model contains an error, such as a wrong sequence flow condition, and running process instances need to be corrected. Use cases for this API may be
- Repairing process instances in which some steps have to be repeated or skipped Migrating process instances from one version of a process definition to another Testing: Activities can be skipped or repeated for isolated testing of individual process segments  To perform such an operation, the process engine offers the process instance modification API that is entered via RuntimeService.</description>
+      <description>虽然流程定义模型必须包含以何种顺序执行活动的顺序流，但有时也需要灵活地再次启动一个活动或取消一个正在运行的活动。例如，当流程模型存在错误（例如顺序流条件写错了）并且运行中的流程实例需要被纠正时，则以下API可以提供帮助：
+ 修复流程实例，其中一些步骤必须重复执行或跳过 将流程实例从流程定义的一个版本迁移到另一个版本 测试阶段：可以跳过或重复做一些活动，以便对个别流程段进行独立测试。  为了执行这样的操作，流程引擎提供 流程实例修改API ，包括 RuntimeService.createProcessInstanceModification(..)或 RuntimeService.createModification(...)。这些API允许通过使用流式的构造器在一次调用中指定多个 修改指令 。而且它还能做到：
+ 在一个活动之前就开始执行 在离开活动的序列流上开始执行 取消一个正在运行的活动实例 取消一个给定活动的所有运行实例 设置变量  流程实例自己修改自己不建议流程实例自己修改自己 ，试图修改它自己的流程实例的行为会导致不确定的结果，这应该被避免。
+Enterprise FeatureCamunda企业版提供了一个用户界面，可以在Camunda Cockpit的BPMN图上直观地对流程实例的进行修改。
+Check the Camunda enterprise homepagefor more information or get yourfree trial version.修改流程实例——案例 作为一个例子，请考虑以下流程模型。
+ 该模型显示了一个处理贷款申请的简单流程。让我们假设一份贷款申请已经到达，贷款申请已经被评估，并被确定为需要拒绝。这意味着，该流程实例有以下活动实例状态。
+ProcessInstance Decline Loan Application  现在，执行 Decline Loan Application 任务的工作人员认识到了评估结果是错误的，并得出结论，该申请还是应该被接受。虽然这种灵活性并不是流程的一部分，但对流程实例的修改允许纠正运行中的流程实例。使用下面的API调用就可以做到这一点：
+ProcessInstance processInstance = runtimeService.createProcessInstanceQuery().singleResult(); runtimeService.createProcessInstanceModification(processInstance.getId()) .startBeforeActivity(&amp;quot;acceptLoanApplication&amp;quot;) .cancelAllForActivity(&amp;quot;declineLoanApplication&amp;quot;) .execute();  这个命令首先在活动 Accept Loan Application 之前开始执行，直到达到一个等待状态&amp;ndash;在这种情况下是用户任务的创建。之后，它取消了活动 Decline Loan Application 的所有运行实例。在工作者的任务列表中， Decline 任务已被删除，而 Accept 任务已出现。最后活动实例的状态是：</description>
     </item>
     
     <item>
@@ -4982,6 +4978,29 @@ Serialized and Deserialized Object Values Object Values are instances of (non pr
 社区扩展 Camunda支持社区在Camunda平台的框架下建立更多的社区扩展。这些社区扩展由社区维护，不属于Camunda平台的商业产品。
 Chamunda支持Camunda does not support community extensions as part of its commercial services to enterprise subscription customers
 The Camunda Community Hub is a GitHub Organization that serves as the home of Camunda open source community-contributed extensions. You can migrate an extension you&amp;rsquo;ve built to the Hub, search for existing extensions, or get started with open source by helping community extension maintainers with open issue or pull request triage.</description>
+    </item>
+    
+    <item>
+      <title>重启/恢复流程实例</title>
+      <link>http://shaochenfeng.com/camunda-cn/user-guide/process-engine/process-instance-restart/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://shaochenfeng.com/camunda-cn/user-guide/process-engine/process-instance-restart/</guid>
+      <description>在流程实例终止后，其历史数据仍然存在，并且可以被访问以重启流程实例，前提是历史级别被设置为FULL。 例如，当流程没有以期望的方式终止时，重启流程实例是有用的。这个API的使用的其他可能情况有：
+ 恢复被错误地取消的流程实例的到最后状态 由于错误路由导致流程实例终止后，重启流程实例  为了执行这样的操作，进程引擎提供了 流程实例重启API RuntimeService.restartProcessInstances(..) 。该API允许通过使用流式构建器在一次调用中指定多个实例化指令。
+请注意，这些操作也可以通过REST方式进行。重启流程实例和重启流程实例（async）
+流程实例重启的例子 考虑以下流程模型，其中红点标志着活动任务：
+让我们假设流程实例已经被别人用以下代码从外部取消了：
+ProcessInstance processInstance = runtimeService.createProcessInstanceQuery().singleResult(); runtimeService.deleteProcessInstance(processInstance.getId(), &amp;quot;any reason&amp;quot;);  之后，我们决定恢复该流程实例到最后状态：
+runtimeService.restartProcessInstance(processInstance.getProcessDefinitionId()) .startBeforeActivity(&amp;quot;receivePayment&amp;quot;) .startBeforeActivity(&amp;quot;shipOrder&amp;quot;) .processInstanceIds(processInstance.getId()) .execute();  流程实例已经用最后一组变量重启了。然而，在重启的流程实例中，只有全局变量被恢复了。 本地变量还需要调用 RuntimeService.setVariableLocal(..) 手动设置。
+从技术上讲，创建的是一个新的流程实例。
+请注意: 历史流程和重启的流程实例的id是不同的。
+操作语义 在下文中，将描述流程实例恢复功能的确切语义。建议阅读本节，以充分了解该功能的效果、能力和限制。
+实例化指令类型 流式流程实例重启构建器提供了以下的方法，可以调用。
+ startBeforeActivity(String activityId) startAfterActivity(String activityId) startTransition(String transitionId)  关于指令类型的信息，请参考类似的 修改指令类型 section.
+选择要重启的流程实例 可以通过提供一组流程实例ID来选择流程实例进行重启 或者提供一个历史流程实例查询。也可以同时指定一个流程实例id列表和一个查询。 然后，要重启的流程实例将是所产生的集合的并集。
+流程实例列表 应该被重启的进程实例可以是一个进程实例ID的列表。
+ProcessDefinition processDefinition = ...; List&amp;lt;String&amp;gt; processInstanceIds = ...; runtimeService.</description>
     </item>
     
     <item>
@@ -5440,7 +5459,7 @@ Plugin point Name: welcome.dashboard.
 &amp;lt;definitions ...&amp;gt; &amp;lt;message id=&amp;quot;newInvoice&amp;quot; name=&amp;quot;newInvoiceMessage&amp;quot;/&amp;gt; &amp;lt;process ...&amp;gt; &amp;lt;receiveTask id=&amp;quot;waitState&amp;quot; name=&amp;quot;wait&amp;quot; messageRef=&amp;quot;newInvoice&amp;quot;&amp;gt; ...  然后你可以将它和消息关联起来。
 // 关联消息 runtimeService.createMessageCorrelation(subscription.getEventName()) .processInstanceBusinessKey(&amp;quot;AB-123&amp;quot;) .correlate();  或者明确地查询订阅并触发它：
 ProcessInstance pi = runtimeService.startProcessInstanceByKey(&amp;quot;processWaitingInReceiveTask&amp;quot;); EventSubscription subscription = runtimeService.createEventSubscriptionQuery() .processInstanceId(pi.getId()).eventType(&amp;quot;message&amp;quot;).singleResult(); runtimeService.messageEventReceived(subscription.getEventName(), subscription.getExecutionId());  并行多实例的相关性是不可能的，因为订阅不能被明确地识别。
-要继续一个当前在接收任务中等待的进程实例，而没有消息参考，可以调用runtimeService.signal(executionId)，使用接收任务中的执行的id。
+要继续一个当前在接收任务中等待的流程实例，而没有消息参考，可以调用runtimeService.signal(executionId)，使用接收任务中的执行的id。
 &amp;lt;receiveTask id=&amp;quot;waitState&amp;quot; name=&amp;quot;wait&amp;quot; /&amp;gt;  以下代码段显示在实践中如何运作：
 ProcessInstance pi = runtimeService.startProcessInstanceByKey(&amp;quot;receiveTask&amp;quot;); Execution execution = runtimeService.createExecutionQuery() .processInstanceId(pi.getId()).activityId(&amp;quot;waitState&amp;quot;).singleResult(); runtimeService.signal(execution.getId());  Camunda 扩展  属性  camunda:asyncBefore, camunda:asyncAfter, camunda:exclusive, camunda:jobPriority    扩展元素  camunda:failedJobRetryTimeCycle, camunda:inputOutput    约束  The camunda:exclusive attribute is only evaluated if the attribute camunda:asyncBefore or camunda:asyncAfter is set to true    额外资料  Tasks in the BPMN 2.</description>
     </item>
@@ -6153,7 +6172,7 @@ Response Codes  Code Media type Description   204  Request successful.</descript
 如果一个活动是多实例的，这将由活动底部的三条短线表示。三条垂直线表示实例将以并行方式执行，而三条水平线表示顺序执行。
  按照规范的要求，每个实例所创建的执行的每个父执行将有以下变量：
  nrOfInstances: 实例的总数量 nrOfActiveInstances: 当前活动的，即尚未完成的实例的数量。对于一个连续的多实例，这将永远是1。 nrOfCompletedInstances: 已经完成的实例的数量。  这些值可以通过调用 &amp;ldquo;execution.getVariable(x) &amp;ldquo;方法检索。
-此外，每个创建的执行将有一个执行本地变量（即对其他执行不可见，也不存储在进程实例级别）。
+此外，每个创建的执行将有一个执行本地变量（即对其他执行不可见，也不存储在流程实例级别）。
  loopCounter: 表示该特定实例的for each循环中的索引  为了使一个活动成为多实例，活动xml元素必须有一个multiInstanceLoopCharacteristics子元素。
 &amp;lt;multiInstanceLoopCharacteristics isSequential=&amp;quot;false|true&amp;quot;&amp;gt; ... &amp;lt;/multiInstanceLoopCharacteristics&amp;gt;  isSequential属性表示该活动的实例是按顺序执行还是并行执行。</description>
     </item>

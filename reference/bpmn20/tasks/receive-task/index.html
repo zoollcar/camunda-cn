@@ -271,7 +271,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/camunda-cn/user-guide/process-engine/process-instance-restart/" >Process Instance Restart</a>
+      <a href="/camunda-cn/user-guide/process-engine/process-instance-modification/" >修改流程实例</a>
     
   </li>
 
@@ -279,7 +279,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/camunda-cn/user-guide/process-engine/process-instance-modification/" >修改流程实例</a>
+      <a href="/camunda-cn/user-guide/process-engine/process-instance-restart/" >重启/恢复流程实例</a>
     
   </li>
 
@@ -8188,7 +8188,7 @@ runtimeService.messageEventReceived(subscription.getEventName(), subscription.ge
 </div>
 
 
-<p>要继续一个当前在接收任务中等待的进程实例，而没有消息参考，可以调用<code>runtimeService.signal(executionId)</code>，使用接收任务中的执行的id。</p>
+<p>要继续一个当前在接收任务中等待的流程实例，而没有消息参考，可以调用<code>runtimeService.signal(executionId)</code>，使用接收任务中的执行的id。</p>
 
 <pre><code class="language-xml">&lt;receiveTask id=&quot;waitState&quot; name=&quot;wait&quot; /&gt;
 </code></pre>
