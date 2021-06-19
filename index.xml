@@ -5943,8 +5943,10 @@ Parameters Path Parameters  Name Description   id The id of the decision definit
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/expression-language/</guid>
-      <description>Camunda Platform supports Unified Expression Language (EL), specified as part of the JSP 2.1 standard (JSR-245). To do so, it uses the open source JUEL implementation. To get more general information about the usage of Expression Language, please read the official documentation. Especially the provided examples give a good overview of the syntax of expressions.
-Within Camunda Platform, EL can be used in many circumstances to evaluate small script-like expressions.</description>
+      <description>Camunda平台支持统一表达式语言（EL），它是JSP 2.1标准的一部分（JSR-245）。使用了开源的JUEL实现。要获得更多关于表达式语言使用的一般信息，请阅读官方文档。
+Especially the provided examples give a good overview of the syntax of expressions. 特别是提供了很好的实例，对学习表达式语法有很方便。
+在Camunda平台内，EL可以在许多情况下用于评估小型的脚本式表达。下面的例子是一个使用了EL的BPMN元素：
+ BPMN element EL support    Service Task, Business Rule Task, Send Task, Message Intermediate Throwing Event, Message End Event, Execution Listener and Task Listener   Expression language as delegation code    Sequence Flows, Conditional Events   Expression language as condition expression    All Tasks, All Events, Transaction, Subprocess and Connector   Expression language inside an inputOutput parameter mapping    Different Elements   Expression language as the value of an attribute or element    All Flow Nodes, Process Definition   Expression language to determine the priority of a job   表达式语言的用法 委托代码 除了Java代码，Camunda平台还支持将表达式作为委托代码进行计算。关于委托代码的信息，请参见相应的章节.</description>
     </item>
     
     <item>
