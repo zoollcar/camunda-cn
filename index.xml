@@ -4194,7 +4194,7 @@ Enterprise webapps Enterprise FeaturePlease note that this feature is only incl
       <guid>http://camunda-cn.shaochenfeng.com/introduction/supported-environments/</guid>
       <description>你可以在任何可运行Java的环境中运行Camunda平台。但以下环境中运行可以得到了我们的质量保证。你可以在我们的企业支持页面中获得更多的信息。
 支持的运行环境请注意，本节中列出的环境与Camunda平台的版本有关。请选择本文档的相应版本，以查看适合您的Camunda平台版本的环境。例如，7.3版本的支持环境。
-容器/应用 服务器 嵌入应用程序的流程引擎  所有的 Java 应用服务器 Camunda Spring Boot Starter: 启用 Tomcat （参见 支持的版本 和 部署场景）  容器管理的流程引擎 和 Camunda Cockpit, Tasklist, Admin  Apache Tomcat 9.0 JBoss EAP 6.4 / 7.0 / 7.1 / 7.2 / 7.3 Wildfly Application Server 12.0 / 13.0 / 14.0 / 15.0 / 16.0 / 17.0 / 18.0 / 19.0 / 20.0 / 21.0 / 22.0 IBM WebSphere Application Server 8.</description>
+容器/应用 服务器 嵌入应用程序的流程引擎  所有的 Java 应用服务器 Camunda Spring Boot Starter: 启用 Tomcat （参见 支持的版本 和 部署场景）  容器管理的流程引擎 和 Camunda Cockpit, Tasklist, Admin  Apache Tomcat 9.0 JBoss EAP 7.0 / 7.1 / 7.2 / 7.3 Wildfly Application Server 13.0 / 14.0 / 15.0 / 16.0 / 17.0 / 18.0 / 19.0 / 20.0 / 21.0 / 22.0 IBM WebSphere Application Server 8.5 / 9.</description>
     </item>
     
     <item>
@@ -6203,10 +6203,11 @@ Java API:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/scripting/</guid>
-      <description>Camunda Platform supports scripting with JSR-223 compatible script engine implementations. Currently we test the integration for Groovy, JavaScript, JRuby and Jython. To use a scripting engine it is necessary to add the corresponding jar to the classpath.
-JavaScript is part of the Java Runtime (JRE) and thus available out of the box.
-We include Groovy in the pre-packaged Camunda distributions.
-The following table provides an overview of the BPMN elements which support the execution of scripts.</description>
+      <description>Camunda平台支持与JSR-223兼容的脚本语言。目前，我们对Groovy、JavaScript、JRuby和Jython进行了测试。为了使用一个脚本语言，有必要在classpath中添加相应的jar。
+JavaScript 是Java Runtime（JRE）的一部分，因此开箱即用。
+Groovy 也包含在预编译的Camunda发行版中。
+下表展示了支持执行脚本的BPMN元素：
+ BPMN element Script support   Script Task Script inside a script task    Processes, Activities, Sequence Flows, Gateways and Events   Script as an execution listener    User Tasks   Script as a task listener    Sequence Flows   Script as condition expression of a sequence flow    All Tasks, All Events, Transactions, Subprocesses and Connectors   Script inside an inputOutput parameter mapping   使用脚本任务 通过BPMN 2.</description>
     </item>
     
     <item>
@@ -6365,19 +6366,36 @@ If you use it on the process instance level, the whole process is terminated. On
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/templating/</guid>
-      <description>Camunda Platform supports template engines which are implemented as script engines compatible with JSR-223. As a result, templates can be used everywhere where scripts can be used.
-In community distributions of Camunda Platform, the following template engine is provided out of the box:
- FreeMarker  The following template engine is provided as optional add-on:
- Apache Velocity  The script engine wrapper implementations can be found in the camunda-template-engines repository.</description>
+      <description>Camunda平台支持模板引擎，兼容JSR-223的脚本引擎。因此，模板用于任何可以使用脚本的地方。
+在Camunda平台的社区版本中，以下模板引擎是开箱即用的：
+ FreeMarker  以下模板引擎是作为插件添加：
+ Apache Velocity  脚本引擎包装器的实现可以在camunda-template-engines资源库中找到。
+此外，以下模板引擎可以在企业版中使用：
+ XSLT  安装一个模板引擎 为嵌入式流程引擎安装模板引擎 模板引擎和脚本引擎是用相同方式安装的。这意味着模板引擎必须被添加到进程引擎的classpath中。
+使用嵌入式流程引擎时，模板引擎库必须添加到应用程序部署中。在mavenwar项目中使用流程引擎时，模板引擎依赖必须作为依赖项添加到mavenpom.xml文件中。
+请导入Camunda BOM，以确保Camunda项目的版本是正确的。
+&amp;lt;dependencies&amp;gt; &amp;lt;!-- freemarker --&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.camunda.template-engines&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;camunda-template-engines-freemarker&amp;lt;/artifactId&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;!-- apache velocity --&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.camunda.template-engines&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;camunda-template-engines-velocity&amp;lt;/artifactId&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;/dependencies&amp;gt;  为分布式流程引擎安装一个模板引擎 当使用一个分布式流程引擎时，模板需要添加到分布式流程引擎的classpath中。classpath的位置取决于应用服务器。在Apache Tomcat中，库必须被添加到共享的lib/文件夹中。
+FreeMarker 是封装在Camunda预编译发行版中的。
+使用模板引擎 如果模板引擎库在classpath中，你可以在BPMN流程中任何可以使用脚本的地方使用模板，例如作为一个脚本任务或输入输出映射。 FreeMarker模板引擎是Camunda平台发布的一部分。
+在模板内部，BPMN元素范围的所有流程变量都是可用的。模板也可以从外部资源加载，如脚本源部分所述。
+下面的例子显示了一个FreeMarker模板，它的结果被保存在流程变量text中：
+&amp;lt;scriptTask id=&amp;quot;templateScript&amp;quot; scriptFormat=&amp;quot;freemarker&amp;quot; camunda:resultVariable=&amp;quot;text&amp;quot;&amp;gt; &amp;lt;script&amp;gt; Dear ${customer}, thank you for working with Camunda Platform ${version}. Greetings, Camunda Developers &amp;lt;/script&amp;gt; &amp;lt;/scriptTask&amp;gt;  在输入输出映射中，使用外部模板来生成 &amp;ldquo;camunda:connector&amp;rdquo; 的有效载荷是非常有用的。</description>
     </item>
     
     <item>
-      <title>Custom Code &amp; Security</title>
+      <title>自定义代码的安全性</title>
       <link>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/securing-custom-code/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/securing-custom-code/</guid>
-      <description>The process engine offers numerous extension points for customization of process behavior by using Java Code, Expression Language, Scripts and Templates. While these extension points allow for great flexibility in process implementation, they open up the possibility to perform malicious actions when in the wrong hands. It is therefore advisable to restrict access to API that allows custom code submission to trusted parties only. The following concepts exist that allow submitting custom code (via Java or REST API):</description>
+      <description> 流程引擎提供了许多外部扩展点，可以通过使用Java代码、表达式语言、 脚本 和 模板来定制流程的行为。虽然这些外部扩展点给了流程实施方面很大的灵活性，但如果落入坏人之手，它们就有可能执行恶意代码。因此，最好限制对允许提交自定义代码的API的访问，只允许受信任的人使用。在提交自定义代码（通过Java或REST API）时，存在以下概念：
+ 部署: 大部分的自定义逻辑是随着流程、案例或决策模型的部署而提交的。例如，在BPMN 2.0的XML中定义了一个执行监听器的调用。 查询: 一些查询可以提交具有动态表达式的参数（目前只有任务查询）。这使用户能够定义可重复使用的查询，这些查询可以重复执行并动态地适应不断变化的情况。例如，任务查询 taskService.createTaskQuery().dueBeforeExpression(${now()}).list(); 使用了一个表达式，总是返回当前到期的任务。Camunda Tasklist 的 任务过滤器（task filters）提供了这样的查询方法。  只有受信任的人才应被授权与这些端点进行互动的能力。如何限制访问，将在接下来的章节中概述。
+如果Camunda平台自身在受信任的环境 如果Camunda平台部署在一个只有受信任方能访问系统的环境中时（例如由于防火墙策略），任何不受信任方都不能访问API以提交自定义代码，因此无需遵守以下建议。
+部署 可以通过使用授权框架来限制对执行部署的访问，并对任何可能不受信任的一方可能访问的端点激活认证检查。进行部署的关键权限是 &amp;ldquo;部署/创建&amp;rdquo;。不受信任的用户不应该被授予这个权限。
+查询 查询访问一般不能用授权来限制。相反，一个查询的结果被简化为用户被授权访问的实体。因此，授权权限不能被用来保护查询中的表达式计算。
+流程引擎配置提供了两个标志 adhoc 和 stored 来切换对查询中表达式的计算。临时查询是直接提交的查询。例如，taskService.createTaskQuery().list();会创建并执行一个 adhoc 查询。这样，存储查询会与过滤器一起被持久化，并在过滤器被执行时被执行。通过将配置属性enableExpressionsInAdhocQueries设置为false，可以禁用临时查询中的表达式。相应地，属性enableExpressionsInStoredQueries会禁用存储查询中的表达式。如果在禁用表达式计算的情况下使用表达式，流程引擎会在计算表达式之前引发一个异常，从而防止恶意代码被执行。
+存在以下配置组合：
+ enableExpressionsInAdhocQueries=true, enableExpressionsInStoredQueries=true。表达式评估在任何查询中都被启用。如果所有用户都被信任，请使用此设置。 enableExpressionsInAdhocQueries=false, enableExpressionsInStoredQueries=true: 默认设置。临时查询不能使用表达式，但是可以定义和执行带有表达式的过滤器。可以通过授予授权权限 Filter/Create 来限制创建过滤器的权限。如果所有被授权创建过滤器的用户都是被信任的，请使用此设置。 enableExpressionsInAdhocQueries=false, enableExpressionsInStoredQueries=false: 表达式在所有查询中被禁用。如果上述设置都不能保证安全，请使用此设置。  </description>
     </item>
     
     <item>
@@ -6386,8 +6404,16 @@ In community distributions of Camunda Platform, the following template engine is
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/external-tasks/</guid>
-      <description>The process engine supports two ways of executing service tasks:
- Internal Service tasks: Synchronous invocation of code deployed along with a process application External tasks: Providing a unit of work in a list that can be polled by workers  The first option is used when code is implemented as Delegation Code or as a Script. By contrast, external (service) tasks work in a way that the process engine publishes a unit of work to a worker to fetch and complete.</description>
+      <description>流程引擎支持两种执行服务任务的方式。
+ 内部服务任务：同步调用与进程应用程序一起部署的代码 外部任务：在一个可以被工作者轮询的列表中提供一个工作单元  当代码被实现为委托代码或 脚本时，会使用第一个内部服务任务。外部（服务）任务的工作方式是：进程引擎将一个工作单元发布给外部工作者去完成。我们把这称为 外部任务模式 。
+请注意，上面的区别并没有说实际的 &amp;ldquo;业务逻辑&amp;rdquo; 是在本地实现还是作为远程服务实现。内部服务任务调用的 Java代理类 也可以自己实现业务逻辑，也可以调用 Web/rest 服务，向另一个系统发送消息等等。对于外部工作者也是如此。外部工作者可以直接实现业务逻辑或再次委托给远程服务实现。
+外部任务模式 执行外部任务的流程可以分为三个步骤，如下图所示：
+ 流程引擎（Process Engine）: 创建外部任务实例 外部工作者（External Worker）: 获取和锁定外部任务 外部工作者（External Worker）和 流程引擎（Process Engine）: 完整的外部任务实例  当流程引擎遇到一个被配置为外部处理的服务任务时，它会创建一个外部任务实例并将其添加到外部任务列表中（步骤1）。该任务实例接收一个主题（topic）*，该主题确定了要执行的工作的性质。在未来的某个时间，一个外部工作者可以为一组特定的主题获取并锁定任务（步骤2）。为了防止一个任务被多个工作者同时获取，一个任务有一个基于时间戳的锁，这个锁在任务被获取时被设置。只有当锁过期时，另一个工作者才能再次获取该任务。当外部工作者完成了所需的工作，它可以向进程引擎发出信号，然后流程引擎继续执行流程（步骤3）。
+类比 **用户任务**外部任务在概念上与用户任务非常相似。在第一次尝试理解外部任务模式时，将其与用户任务进行类比思考可能会有所帮助。 用户任务由流程引擎创建并添加到任务列表中。然后，流程引擎等待人类用户查询该列表，提出任务要求，然后完成它。外部任务是类似的。一个外部任务被创建，然后被添加到一个主题。然后，一个外部应用程序查询该主题并锁定该任务。在任务被锁定后，外部应用程序可以完成它。
+这种模式的本质是，执行实际工作的程序独立于流程引擎，并通过轮询流程引擎的API的方式接收工作项。这样做有以下好处：
+ 解耦系统: 外部工作者与流程引擎不需要在同一Java进程中、同一机器上、同一集群中或甚至在同一大陆上运行。只需要它能够访问进程引擎的API（通过REST或Java）。由于采用了轮询模式，外部工作者不需要暴露任何接口供进程引擎访问。 解耦技术选择: 外部工作者不需要用Java实现。相反，可以使用任何最适合执行工作项的技术，并且可以用来访问流程引擎的API（通过REST或Java）。 外部工作者可以专注某个主题: 外部工作者不需要是一个通用的应用程序。每个外部任务实例都会收到要执行的任务性质的主题名。外部工作者可以只轮询它们可以做到的任务主题。 细粒度扩展: 如果某主题服务任务具有较高的负载，相应主题的外部工作者的数量可以独立于进程引擎来扩展。 独立维护: 工作者可以独立于流程引擎进行维护，而不会破坏操作。例如，如果有某个特定主题的工作者停机一段时间（例如，由于更新停机），对进程引擎没有直接影响。这类工作者的外部任务的执行会优雅的存储在外部任务列表中，直到外部工作者恢复并运行。  使用外部任务 为了使用外部任务，它们必须在BPMN XML中声明。在运行时，可以通过Java和REST API访问外部任务实例。下面将解释API的概念，并重点介绍Java API。通常情况下，REST API在这种情况下更适合，特别是在不同地域，使用不同技术的外部工作者。
+BPMN 在流程定义的BPMN XML中，可以通过使用属性camunda:type和camunda:topic来声明服务任务由外部工作者执行。例如，服务任务 Validate Address 可以被配置为主题 AddressValidation ，如下所示：
+&amp;lt;serviceTask id=&amp;quot;validateAddressTask&amp;quot; name=&amp;quot;Validate Address&amp;quot; camunda:type=&amp;quot;external&amp;quot; camunda:topic=&amp;quot;AddressValidation&amp;quot; /&amp;gt;  也可以使用表达式而不是固定值定义主题的名字。</description>
     </item>
     
     <item>

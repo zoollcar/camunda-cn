@@ -352,7 +352,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/process-engine/securing-custom-code/" >Custom Code &amp; Security</a>
+      <a href="/user-guide/process-engine/securing-custom-code/" >自定义代码的安全性</a>
     
   </li>
 
@@ -8182,46 +8182,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="col-xs-12 content-text">
       
 
-<p>Camunda Platform supports template engines which are implemented as script engines compatible with
-JSR-223. As a result, templates can be used everywhere where scripts can be used.</p>
+<p>Camunda平台支持模板引擎，兼容JSR-223的脚本引擎。因此，模板用于任何可以使用脚本的地方。</p>
 
-<p>In community distributions of Camunda Platform, the following template engine is provided out of the
-box:</p>
+<p>在Camunda平台的社区版本中，以下模板引擎是开箱即用的：</p>
 
 <ul>
 <li><a href="http://freemarker.org/">FreeMarker</a></li>
 </ul>
 
-<p>The following template engine is provided as optional add-on:</p>
+<p>以下模板引擎是作为插件添加：</p>
 
 <ul>
 <li><a href="http://velocity.apache.org/">Apache Velocity</a></li>
 </ul>
 
-<p>The script engine wrapper implementations can be found in the
-<a href="https://github.com/camunda/camunda-template-engines-jsr223">camunda-template-engines</a> repository.</p>
+<p>脚本引擎包装器的实现可以在<a href="https://github.com/camunda/camunda-template-engines-jsr223">camunda-template-engines</a>资源库中找到。</p>
 
-<p>Additionally, the following template engine is supported as enterprise extension:</p>
+<p>此外，以下模板引擎可以在企业版中使用：</p>
 
 <ul>
 <li><a href="/enterprise/download/#additional-information">XSLT</a></li>
 </ul>
 
-<h1 id="install-a-template-engine">Install a Template Engine</h1>
+<h1 id="安装一个模板引擎">安装一个模板引擎</h1>
 
-<h2 id="install-a-template-engine-for-an-embedded-process-engine">Install a Template Engine for an Embedded Process Engine</h2>
+<h2 id="为嵌入式流程引擎安装模板引擎">为嵌入式流程引擎安装模板引擎</h2>
 
-<p>A template engine must be installed in the same way as a script engine. This means that the template
-engine must be added to the process engine classpath.</p>
+<p>模板引擎和脚本引擎是用相同方式安装的。这意味着模板引擎必须被添加到进程引擎的classpath中。</p>
 
-<p>When using an embedded process engine, the template engine libraries must be added to the
-application deployment. When using the process engine in a maven <code>war</code> project, the template engine
-dependencies must be added as dependencies to the maven <code>pom.xml</code> file:</p>
+<p>使用嵌入式流程引擎时，模板引擎库必须添加到应用程序部署中。在maven<code>war</code>项目中使用流程引擎时，模板引擎依赖必须作为依赖项添加到maven<code>pom.xml</code>文件中。</p>
 
 
 <div class="note bg-info docs-info">
   <h3></h3>
-  <p>Please import the <a href="/get-started/apache-maven/">Camunda BOM</a> to ensure correct versions for every Camunda project.</p>
+  <p>请导入<a href="/get-started/apache-maven/">Camunda BOM</a>，以确保Camunda项目的版本是正确的。</p>
 </div>
 
 
@@ -8242,31 +8236,25 @@ dependencies must be added as dependencies to the maven <code>pom.xml</code> fil
 &lt;/dependencies&gt;
 </code></pre>
 
-<h2 id="install-a-template-engine-for-a-shared-process-engine">Install a Template Engine for a Shared Process Engine</h2>
+<h2 id="为分布式流程引擎安装一个模板引擎">为分布式流程引擎安装一个模板引擎</h2>
 
-<p>When using a shared process engine, the template engine must be added to the shared process engine
-classpath. The procedure for this depends on the application server. In Apache Tomcat, the
-libraries have to be added to the shared <code>lib/</code> folder.</p>
+<p>当使用一个分布式流程引擎时，模板需要添加到分布式流程引擎的classpath中。classpath的位置取决于应用服务器。在Apache Tomcat中，库必须被添加到共享的<code>lib/</code>文件夹中。</p>
 
 
 <div class="note bg-info docs-info">
   <h3></h3>
-  <p><a href="http://freemarker.org/">FreeMarker</a> is pre-installed in the Camunda pre-packaged distribution.</p>
+  <p><a href="http://freemarker.org/">FreeMarker</a> 是封装在Camunda预编译发行版中的。</p>
 </div>
 
 
-<h1 id="use-a-template-engine">Use a Template Engine</h1>
+<h1 id="使用模板引擎">使用模板引擎</h1>
 
-<p>If the template engine library is in the classpath, you can use templates everywhere in the BPMN
-process where you can <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/scripting/">use scripts</a>, for example as a script task or inputOutput mapping.
-The FreeMarker template engine is part of the Camunda Platform distribution.</p>
+<p>如果模板引擎库在classpath中，你可以在BPMN流程中任何可以<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/scripting/">使用脚本</a>的地方使用模板，例如作为一个脚本任务或输入输出映射。
+FreeMarker模板引擎是Camunda平台发布的一部分。</p>
 
-<p>Inside the template, all process variables of the BPMN element scope are available. The
-template can also be loaded from an external resource as described in the <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/scripting/#script-source">script source
-section</a>.</p>
+<p>在模板内部，BPMN元素范围的所有流程变量都是可用的。模板也可以从外部资源加载，如<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/scripting/#script-source">脚本源部分</a>所述。</p>
 
-<p>The following example shows a FreeMarker template, of which the result is saved in the process variable
-<code>text</code>.</p>
+<p>下面的例子显示了一个FreeMarker模板，它的结果被保存在流程变量<code>text</code>中：</p>
 
 <pre><code class="language-xml">&lt;scriptTask id=&quot;templateScript&quot; scriptFormat=&quot;freemarker&quot; camunda:resultVariable=&quot;text&quot;&gt;
   &lt;script&gt;
@@ -8280,8 +8268,7 @@ section</a>.</p>
 &lt;/scriptTask&gt;
 </code></pre>
 
-<p>In an inputOutput mapping it can be very useful to use an external template to generate the
-payload of a <code>camunda:connector</code>.</p>
+<p>在输入输出映射中，使用外部模板来生成 &ldquo;camunda:connector&rdquo; 的有效载荷是非常有用的。</p>
 
 <pre><code class="language-xml">&lt;bpmn2:serviceTask id=&quot;soapTask&quot; name=&quot;Send SOAP request&quot;&gt;
   &lt;bpmn2:extensionElements&gt;
@@ -8301,12 +8288,12 @@ payload of a <code>camunda:connector</code>.</p>
 &lt;/bpmn2:serviceTask&gt;
 </code></pre>
 
-<h1 id="use-xslt-as-template-engine">Use XSLT as Template Engine</h1>
+<h1 id="使用模板引擎-xslt">使用模板引擎 XSLT</h1>
 
 <div class="note enterprise-feature">
   <h3>Enterprise Feature</h3>
 
-  <p class="description">Please note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.</p>
+  <p class="description">请注意，该功能只包含在Camunda平台的企业版中，社区版中没有。</p>
 
   <p>
     Check the <a href="http://camunda.com/bpm/enterprise/">Camunda enterprise homepage</a>
@@ -8316,13 +8303,13 @@ payload of a <code>camunda:connector</code>.</p>
 </div>
 
 
-<h2 id="install-the-xslt-template-engine">Install the XSLT Template Engine</h2>
+<h2 id="安装-xslt-模板引擎">安装 XSLT 模板引擎</h2>
 
 <p>The XSLT Template Engine can be downloaded from the <a href="/enterprise/download/#additional-information">Enterprise Edition Download page</a>.</p>
 
 <p>Instructions on how to install the template engine can be found inside the downloaded distribution.</p>
 
-<h2 id="use-xslt-template-engine-with-an-embedded-process-engine">Use XSLT Template Engine with an embedded process engine</h2>
+<h2 id="在嵌入式流程引擎中使用xslt模板引擎">在嵌入式流程引擎中使用XSLT模板引擎</h2>
 
 <p>When using an embedded process engine, the XSLT template engine library must be added to the
 application deployment. When using the process engine in a maven <code>war</code> project, the template engine
@@ -8346,7 +8333,7 @@ dependency must be added as dependencies to the maven <code>pom.xml</code> file:
 &lt;/dependencies&gt;
 </code></pre>
 
-<h2 id="use-xslt-templates">Use XSLT Templates</h2>
+<h2 id="使用-xslt-模板">使用 XSLT 模板</h2>
 
 <p>The following is an example of a BPMN ScriptTask used to execute an XSLT Template:</p>
 
@@ -8385,17 +8372,17 @@ examples repository..</p>
   <h3>目录:</h3>
   <nav id="TableOfContents">
 <ul>
-<li><a href="#install-a-template-engine">Install a Template Engine</a>
+<li><a href="#安装一个模板引擎">安装一个模板引擎</a>
 <ul>
-<li><a href="#install-a-template-engine-for-an-embedded-process-engine">Install a Template Engine for an Embedded Process Engine</a></li>
-<li><a href="#install-a-template-engine-for-a-shared-process-engine">Install a Template Engine for a Shared Process Engine</a></li>
+<li><a href="#为嵌入式流程引擎安装模板引擎">为嵌入式流程引擎安装模板引擎</a></li>
+<li><a href="#为分布式流程引擎安装一个模板引擎">为分布式流程引擎安装一个模板引擎</a></li>
 </ul></li>
-<li><a href="#use-a-template-engine">Use a Template Engine</a></li>
-<li><a href="#use-xslt-as-template-engine">Use XSLT as Template Engine</a>
+<li><a href="#使用模板引擎">使用模板引擎</a></li>
+<li><a href="#使用模板引擎-xslt">使用模板引擎 XSLT</a>
 <ul>
-<li><a href="#install-the-xslt-template-engine">Install the XSLT Template Engine</a></li>
-<li><a href="#use-xslt-template-engine-with-an-embedded-process-engine">Use XSLT Template Engine with an embedded process engine</a></li>
-<li><a href="#use-xslt-templates">Use XSLT Templates</a></li>
+<li><a href="#安装-xslt-模板引擎">安装 XSLT 模板引擎</a></li>
+<li><a href="#在嵌入式流程引擎中使用xslt模板引擎">在嵌入式流程引擎中使用XSLT模板引擎</a></li>
+<li><a href="#使用-xslt-模板">使用 XSLT 模板</a></li>
 </ul></li>
 </ul>
 </nav>
