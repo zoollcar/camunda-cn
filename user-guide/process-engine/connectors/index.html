@@ -59,7 +59,7 @@ var _mtac = {};
     
   
 
-  <title>Connectors | docs.camunda.org</title>
+  <title>连接器 | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
   <link rel="shortcut icon" href="http://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
@@ -368,7 +368,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/process-engine/connectors/" >Connectors</a>
+      <a href="/user-guide/process-engine/connectors/" >连接器</a>
     
   </li>
 
@@ -8176,14 +8176,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <i>编辑此页</i> <span class="cam-docs-github"></span></a>
 </div>
 
-      <h1 class="page-title">Connectors</h1>
+      <h1 class="page-title">连接器</h1>
     </div>
 
     <div class="col-xs-12 content-text">
       
 
-<p>With the dependency <a href="https://github.com/camunda/camunda-connect">camunda-connect</a>, the process engine supports simple
-connectors. Currently the following connector implementations exist:</p>
+<p>通过依赖项目<a href="https://github.com/camunda/camunda-connect">camunda-connect</a>，流程引擎支持简单的连接器。以下是目前已实现的连接器：</p>
 
 <table class="table">
   <tr>
@@ -8200,32 +8199,32 @@ connectors. Currently the following connector implementations exist:</p>
   </tr>
 </table>
 
-<p>It is also possible to implement your own custom connector in camunda. For more information about extending connectors please visit the <a href="http://camunda-cn.shaochenfeng.com/reference/connect/extending-connect/">Connector reference</a>.</p>
+<p>也可以在camunda中实现你自己的自定义连接器。关于扩展连接器的更多信息，请访问<a href="http://camunda-cn.shaochenfeng.com/reference/connect/extending-connect/">外部连接器</a>章节。</p>
 
-<h1 id="configure-camunda-connect">Configure Camunda Connect</h1>
+<h1 id="配置-camunda连接器">配置 Camunda连接器</h1>
 
-<p>As Camunda Connect is available only partially when using the process engine (check the list below). With a pre-built distribution, Camunda Connect is already preconfigured.</p>
+<p>由于Camunda连接器只有在使用流程引擎时才部分可用（查看下面的列表）。通过使用预建的发行版，Camunda连接器已经被预先配置好了。</p>
 
-<p>The following <code>connect</code> artifacts exist:</p>
+<p>存在以下 &ldquo;连接&rdquo; 组件：</p>
 
 <ul>
-<li><code>camunda-connect-core</code>: a jar that contains only the core Connect classes. The artifact already is available as dependency to the process engine. In addition to <code>camunda-connect-core</code>, single connector implementations like <code>camunda-connect-http-client</code> and <code>camunda-connect-soap-http-client</code> exist. These dependencies should be used when the default connectors have to be reconfigured or when custom connector implementations are used.</li>
-<li><code>camunda-connect-connectors-all</code>: a single jar without dependencies that contains the HTTP and SOAP connectors.</li>
-<li><code>camunda-engine-plugin-connect</code>: a process engine plugin to add Connect to the Camunda Platform.</li>
+<li><code>camunda-connect-core</code>: 一个只包含核心连接类的jar。该组价已经可以作为流程引擎的依赖项。除了 &ldquo;camunda-connect-core&rdquo; 之外，还有 &ldquo;camunda-connect-http-client&rdquo; 和 &ldquo;camunda-connect-soap-http-client&rdquo; 等单个连接器的实现。当需要重新配置默认连接器或使用自定义连接器实现时，应使用这些依赖关系。</li>
+<li><code>camunda-connect-connectors-all</code>: 没有依赖关系的单一jar，包含HTTP和SOAP连接器。</li>
+<li><code>camunda-engine-plugin-connect</code>: 是一个流程引擎插件，用于向Camunda平台添加连接器。</li>
 </ul>
 
-<h1 id="maven-coordinates">Maven Coordinates</h1>
+<h1 id="maven方式导入">Maven方式导入</h1>
 
 
 <div class="note bg-info docs-info">
   <h3></h3>
-  <p>Please import the <a href="/get-started/apache-maven/">Camunda BOM</a> to ensure correct versions for every Camunda project.</p>
+  <p>请导入<a href="/get-started/apache-maven/">Camunda BOM</a>，以确保每个Camunda项目的版本正确。</p>
 </div>
 
 
 <h2 id="camunda-connect-core">camunda-connect-core</h2>
 
-<p><code>camunda-connect-core</code> contains the core classes of Connect. Additionally, the HTTP and SOAP connectors can be added with the dependencies <code>camunda-connect-http-client</code> and <code>camunda-connect-soap-http-client</code>. These artifacts will transitively pull in their dependencies, like Apache HTTP client. For integration with the engine, the artifact <code>camunda-engine-plugin-connect</code> is needed. Given that the BOM is imported, the Maven coordinates are as follows:</p>
+<p><code>camunda-connect-core</code>包含连接器的核心类。此外，HTTP和SOAP连接器可以通过<code>camunda-connect-http-client</code>和<code>camunda-connect-soap-http-client</code>的依赖来添加。这些组件将引入他们自身的依赖，如Apache HTTP客户端。为了与流程引擎集成，需要<code>camunda-engine-plugin-connect</code>这个工件。Maven的坐标如下：</p>
 
 <pre><code class="language-xml">&lt;dependency&gt;
   &lt;groupId&gt;org.camunda.connect&lt;/groupId&gt;
@@ -8253,7 +8252,7 @@ connectors. Currently the following connector implementations exist:</p>
 
 <h2 id="camunda-connect-connectors-all">camunda-connect-connectors-all</h2>
 
-<p>This artifact contains the HTTP and SOAP connectors as well as their dependencies. To avoid conflicts with other versions of these dependencies, the dependencies are relocated to different packages. <code>camunda-connect-connectors-all</code> has the following Maven coordinates:</p>
+<p>这个组件包含HTTP和SOAP连接器以及它们的依赖关系。为了避免与这些依赖的其他版本冲突，这些依赖被重新定位到不同的包中。<code>camunda-connect-connectors-all</code>的Maven坐标如下。</p>
 
 <pre><code class="language-xml">&lt;dependency&gt;
   &lt;groupId&gt;org.camunda.connect&lt;/groupId&gt;
@@ -8261,9 +8260,9 @@ connectors. Currently the following connector implementations exist:</p>
 &lt;/dependency&gt;
 </code></pre>
 
-<h2 id="configure-the-process-engine-plugin">Configure the Process Engine Plugin</h2>
+<h2 id="配置流程引擎插件">配置流程引擎插件</h2>
 
-<p><code>camunda-engine-plugin-connect</code> contains a class called <code>org.camunda.connect.plugin.impl.ConnectProcessEnginePlugin</code> that can be registered with a process engine using the <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-plugins/">plugin mechanism</a>. For example, a <code>bpm-platform.xml</code> file with the plugin enabled would look as follows:</p>
+<p><code>camunda-engine-plugin-connect</code>包含一个名为<code>org.camunda.connect.plugin.impl.ConnectProcessEnginePlugin</code>的类，可以使用<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-plugins/">插件机制</a>在流程引擎中注册。 例如，如下<code>bpm-platform.xml</code>配置了该插件：</p>
 
 <pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;bpm-platform xmlns=&quot;http://www.camunda.org/schema/1.0/BpmPlatform&quot;
@@ -8285,15 +8284,15 @@ connectors. Currently the following connector implementations exist:</p>
 
 <div class="note bg-info docs-info">
   <h3></h3>
-  <p>When using a pre-built distribution of Camunda Platform, the plugin is already pre-configured.</p>
+  <p>当使用预编译的Camunda平台发行版时，该插件已经预先配置好了。</p>
 </div>
 
 
-<h1 id="use-connectors">Use Connectors</h1>
+<h1 id="使用连接器">使用连接器</h1>
 
-<p>To use a connector, you have to add the Camunda extension element <a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/extension-elements/#camunda-connector">connector</a>. The connector is configured by a unique <a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/extension-elements/#camunda-connectorid">connectorId</a>, which specifies the used connector implementation. The ids of the currently supported connectors can be found at the beginning of this section. Additionally, an <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/variables/#input-output-variable-mapping">input/output mapping</a> is used to configure the connector. The required input parameters and the available output parameters depend on the connector implementation. Additional input parameters can also be provided to be used within the connector.</p>
+<p>你需要添加Camunda 额外元素<a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/extension-elements/#camunda-connector">connector</a>来使用连接器。connector使用唯一的<a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/extension-elements/#camunda-connectorid">connectorId</a>来配置的。它指定了所使用的连接器实现。目前支持的连接器的ID可以在本节的开头找到。此外，可以用<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/variables/#input-output-variable-mapping">输入/输出映射</a>配置连接器。所需的输入参数和可用的输出参数取决于连接器的实现。也可以提供额外的输入参数，以便在连接器中使用。</p>
 
-<p>As an example, a shortened configuration of the Camunda SOAP connector implementation is shown. A complete <a href="https://github.com/camunda/camunda-bpm-examples/tree/master/servicetask/soap-service">example</a> can be found in the <a href="https://github.com/camunda/camunda-bpm-examples">Camunda examples repository</a> on GitHub.</p>
+<p>作为一个例子，我们展示了Camunda SOAP连接器实现的一个简略配置。可以在GitHub上的<a href="https://github.com/camunda/camunda-bpm-examples">Camunda示例库</a>找到完整的<a href="https://github.com/camunda/camunda-bpm-examples/tree/master/servicetask/soap-service">案例</a>源码。</p>
 
 <pre><code class="language-xml">&lt;serviceTask id=&quot;soapRequest&quot; name=&quot;Simple SOAP Request&quot;&gt;
   &lt;extensionElements&gt;
@@ -8321,7 +8320,7 @@ connectors. Currently the following connector implementations exist:</p>
 &lt;/serviceTask&gt;
 </code></pre>
 
-<p>A full <a href="https://github.com/camunda/camunda-bpm-examples/tree/master/servicetask/rest-service">example</a> of the REST connector can also be found in the <a href="https://github.com/camunda/camunda-bpm-examples">Camunda examples repository</a> on GitHub.</p>
+<p>REST连接器的完整<a href="https://github.com/camunda/camunda-bpm-examples/tree/master/servicetask/rest-service">示例</a>也可以在GitHub的<a href="https://github.com/camunda/camunda-bpm-examples">Camunda示例库</a>中找到。</p>
 
     </div>
   </div>
@@ -8331,14 +8330,14 @@ connectors. Currently the following connector implementations exist:</p>
   <h3>目录:</h3>
   <nav id="TableOfContents">
 <ul>
-<li><a href="#configure-camunda-connect">Configure Camunda Connect</a></li>
-<li><a href="#maven-coordinates">Maven Coordinates</a>
+<li><a href="#配置-camunda连接器">配置 Camunda连接器</a></li>
+<li><a href="#maven方式导入">Maven方式导入</a>
 <ul>
 <li><a href="#camunda-connect-core">camunda-connect-core</a></li>
 <li><a href="#camunda-connect-connectors-all">camunda-connect-connectors-all</a></li>
-<li><a href="#configure-the-process-engine-plugin">Configure the Process Engine Plugin</a></li>
+<li><a href="#配置流程引擎插件">配置流程引擎插件</a></li>
 </ul></li>
-<li><a href="#use-connectors">Use Connectors</a></li>
+<li><a href="#使用连接器">使用连接器</a></li>
 </ul>
 </nav>
   

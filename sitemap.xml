@@ -2767,10 +2767,6 @@
   </url>
   
   <url>
-    <loc>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/connectors/</loc>
-  </url>
-  
-  <url>
     <loc>http://camunda-cn.shaochenfeng.com/reference/rest/filter/post-execute-list/</loc>
   </url>
   
@@ -2836,6 +2832,10 @@
   
   <url>
     <loc>http://camunda-cn.shaochenfeng.com/user-guide/task-forms/</loc>
+  </url>
+  
+  <url>
+    <loc>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/connectors/</loc>
   </url>
   
   <url>

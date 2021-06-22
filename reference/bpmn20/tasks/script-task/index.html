@@ -368,7 +368,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/process-engine/connectors/" >Connectors</a>
+      <a href="/user-guide/process-engine/connectors/" >连接器</a>
     
   </li>
 
@@ -8182,7 +8182,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="col-xs-12 content-text">
       
 
-<p>脚本任务是自动活动。当进程执行到达脚本任务时，执行相应的脚本。</p>
+<p>脚本任务是自动活动。当流程执行到达脚本任务时，执行相应的脚本。</p>
 
 <div class="bpmn-symbol"><img src="http://camunda-cn.shaochenfeng.com//img/short-codes/bpmn-script-task.png" /></div>
 
@@ -8206,7 +8206,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 关于提供脚本源代码的可能方式的更多信息，请参见相应的
 <a href="http://camunda-cn.shaochenfeng.com/user-guide/">用户指南</a> 的 <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/scripting/#script-source">脚本来源</a> 章节。</p>
 
-<p>关于进程引擎中脚本的一般信息，请参见<a href="http://camunda-cn.shaochenfeng.com/user-guide/">用户指南</a>中的<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/scripting/">脚本</a>部分。</p>
+<p>关于流程引擎中脚本的一般信息，请参见<a href="http://camunda-cn.shaochenfeng.com/user-guide/">用户指南</a>中的<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/scripting/">脚本</a>部分。</p>
 
 
 <div class="note bg-info docs-info">
@@ -8217,7 +8217,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <h1 id="脚本中的变量">脚本中的变量</h1>
 
-<p>所有通过执行到达脚本任务中的进程变量都可以在脚本中使用。在下面的例子中，脚本变量<code>inputArray</code>实际上是一个流程变量（一个整数的列表）。</p>
+<p>所有通过执行到达脚本任务中的流程变量都可以在脚本中使用。在下面的例子中，脚本变量<code>inputArray</code>实际上是一个流程变量（一个整数的列表）。</p>
 
 <pre><code class="language-xml">&lt;script&gt;
     sum = 0
@@ -8245,8 +8245,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>要使用这一功能，你必须</p>
 
 <ul>
-<li>在进程引擎配置中把 <code>autooStoreScriptVariables</code> 设置为 <code>true</code>。</li>
-<li>用<code>def</code>关键字声明给所有不应该被存储为脚本变量的脚本变量：<code>def sum = 0</code>。在这种情况下，变量<code>sum</code>将不会被存储为进程变量。</li>
+<li>在流程引擎配置中把 <code>autooStoreScriptVariables</code> 设置为 <code>true</code>。</li>
+<li>用<code>def</code>关键字声明给所有不应该被存储为脚本变量的脚本变量：<code>def sum = 0</code>。在这种情况下，变量<code>sum</code>将不会被存储为流程变量。</li>
 </ul>
 
 
@@ -8263,7 +8263,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <h1 id="脚本返回结果">脚本返回结果</h1>
 
-<p>脚本任务的返回值可以分配给先前存在的或新的进程变量，方法是将进程变量名称作为脚本任务定义的<code>camunda:resultVariable</code>属性的字面值。特定过程变量的任何现有值将被脚本执行的结果值所覆盖。当没有指定结果变量名称时，脚本的结果值会被忽略。</p>
+<p>脚本任务的返回值可以分配给先前存在的或新的流程变量，方法是将流程变量名称作为脚本任务定义的<code>camunda:resultVariable</code>属性的字面值。特定过程变量的任何现有值将被脚本执行的结果值所覆盖。当没有指定结果变量名称时，脚本的结果值会被忽略。</p>
 
 <pre><code class="language-xml">&lt;scriptTask id=&quot;theScriptTask&quot; name=&quot;Execute script&quot; scriptFormat=&quot;juel&quot; camunda:resultVariable=&quot;myVar&quot;&gt;
   &lt;script&gt;#{echo}&lt;/script&gt;
@@ -8275,7 +8275,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="note bg-warning docs-warning">
   <h3>结果变量和多实例</h3>
-  <p>请注意，当您在多实例构造中使用<code>camunda:resultVariable</code>时，例如在多实例子进程中，每次任务完成后，结果变量都会被覆盖，这可能会表现为随机行为。参见<a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/extension-attributes/#resultvariable">camunda:resultVariable</a>了解详情。</p>
+  <p>请注意，当您在多实例构造中使用<code>camunda:resultVariable</code>时，例如在多实例子流程中，每次任务完成后，结果变量都会被覆盖，这可能会表现为随机行为。参见<a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/extension-attributes/#resultvariable">camunda:resultVariable</a>了解详情。</p>
 </div>
 
 

@@ -368,7 +368,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/process-engine/connectors/" >Connectors</a>
+      <a href="/user-guide/process-engine/connectors/" >连接器</a>
     
   </li>
 
@@ -8585,7 +8585,7 @@ runtimeService.createProcessInstanceModification(processInstance.getId())
   .execute();
 </code></pre>
 
-<p>由于 <em>Cancel Evaluation</em> 子进程的启动事件是中断的，它将取消 <em>Assess Credit Worthiness</em> 的运行实例。当事件子进程的启动事件通过以下方式启动时，也会发生同样的情况：</p>
+<p>由于 <em>Cancel Evaluation</em> 子流程的启动事件是中断的，它将取消 <em>Assess Credit Worthiness</em> 的运行实例。当事件子流程的启动事件通过以下方式启动时，也会发生同样的情况：</p>
 
 <pre><code class="language-java">ProcessInstance processInstance = ...;
 runtimeService.createProcessInstanceModification(processInstance.getId())

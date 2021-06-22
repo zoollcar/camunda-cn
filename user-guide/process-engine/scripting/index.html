@@ -368,7 +368,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/process-engine/connectors/" >Connectors</a>
+      <a href="/user-guide/process-engine/connectors/" >连接器</a>
     
   </li>
 
@@ -8203,7 +8203,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </tr>
   <tr>
     <td><a href="#use-script-tasks">Script Task</a></td>
-    <td>Script inside a script task</td>
+    <td>嵌入在脚本任务中的脚本</td>
   </tr>
   <tr>
     <td>
@@ -8211,7 +8211,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         Processes, Activities, Sequence Flows, Gateways and Events
       </a>
     </td>
-    <td>Script as an execution listener</td>
+    <td>作为执行监听器的脚本</td>
   </tr>
   <tr>
     <td>
@@ -8219,7 +8219,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         User Tasks
       </a>
     </td>
-    <td>Script as a task listener</td>
+    <td>作为任务监听器的脚本</td>
   </tr>
   <tr>
     <td>
@@ -8227,7 +8227,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         Sequence Flows
       </a>
     </td>
-    <td>Script as condition expression of a sequence flow</td>
+    <td>作为顺序流条件表达式的脚本</td>
   </tr>
   <tr>
     <td>
@@ -8235,7 +8235,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           All Tasks, All Events, Transactions, Subprocesses and Connectors
         </a>
     </td>
-    <td>Script inside an inputOutput parameter mapping</td>
+    <td>输入输出参数映射中的脚本</td>
   </tr>
 </table>
 
@@ -8500,13 +8500,11 @@ task = execution.getProcessEngineServices().getTaskService()
 
 <p>Camunda 的 Java API 提供的访问流程引擎服务可以用脚本来访问：</p>
 
-<a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/engine/ProcessEngineServices.html">Process Engine Services</a>
+<p><a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/engine/ProcessEngineServices.html">Process Engine Services</a>
 
-
+<br/>
 <a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/engine/package-summary.html">Public Java API of Camunda Platform Engine</a>
-
-
-<p>Example of creating a BPMN Message that correlates with the message key &ldquo;work&rdquo;:</p>
+</p>
 
 <p>下面的案例，创建了一个 message key 为 &ldquo;work&rdquo; 的BPMN消息：</p>
 
@@ -8540,7 +8538,7 @@ system.out.println('This prints to the console');
 
 <p>如果你使用的是表达式语言以外的另一种脚本语言，你也可以将脚本源指定为一个表达式，该表达式返回要执行的源代码。例如，源代码可以设置在一个流程变量中。</p>
 
-<p>在下面的例子中，进程引擎将在每次执行元素时在当前上下文中评估表达式<code>${sourceCode}</code>：</p>
+<p>在下面的例子中，流程引擎将在每次执行元素时在当前上下文中评估表达式<code>${sourceCode}</code>：</p>
 
 <pre><code class="language-xml">&lt;!-- 在脚本任务中 --&gt;
 &lt;scriptTask scriptFormat=&quot;groovy&quot;&gt;

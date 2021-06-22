@@ -368,7 +368,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/process-engine/connectors/" >Connectors</a>
+      <a href="/user-guide/process-engine/connectors/" >连接器</a>
     
   </li>
 
@@ -8196,12 +8196,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <h1 id="共享的-容器化管理流程引擎">共享的，容器化管理流程引擎</h1>
 
-<p>你选择的容器（例如Tomcat、JBoss或IBM WebSphere）为你管理进程引擎。配置是以一种特定的容器方式进行的，详情见<a href="http://camunda-cn.shaochenfeng.com/user-guide/runtime-container-integration/">运行时容器集成</a>.</p>
+<p>你选择的容器（例如Tomcat、JBoss或IBM WebSphere）为你管理流程引擎。配置是以一种特定的容器方式进行的，详情见<a href="http://camunda-cn.shaochenfeng.com/user-guide/runtime-container-integration/">运行时容器集成</a>.</p>
 
 <h2 id="processengineconfiguration-bean-流程引擎配置bean">ProcessEngineConfiguration Bean （流程引擎配置Bean）</h2>
 
 <p>Camunda引擎使用 <a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/engine/ProcessEngineConfiguration.html">ProcessEngineConfiguration bean</a>
- 来配置和构建一个独立的流程引擎。它有多个可用的子类，可以用来定义进程引擎的配置。这些类代表不同的环境，并相应地设置默认值。最好的做法是选择与你的环境相匹配（大部分）的类，以尽量减少配置引擎所需的属性数量。目前有以下几个类。</p>
+ 来配置和构建一个独立的流程引擎。它有多个可用的子类，可以用来定义流程引擎的配置。这些类代表不同的环境，并相应地设置默认值。最好的做法是选择与你的环境相匹配（大部分）的类，以尽量减少配置引擎所需的属性数量。目前有以下几个类。</p>
 
 <ul>
 <li><code>org.camunda.bpm.engine.impl.cfg.StandaloneProcessEngineConfiguration</code><br />
@@ -8222,7 +8222,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 ProcessEngineConfiguration.createStandaloneInMemProcessEngineConfiguration();
 </code></pre>
 
-<p>现在你可以调用<code>buildProcessEngine()</code>操作来创建一个进程引擎。</p>
+<p>现在你可以调用<code>buildProcessEngine()</code>操作来创建一个流程引擎。</p>
 
 <pre><code class="language-java">ProcessEngine processEngine = ProcessEngineConfiguration.createStandaloneInMemProcessEngineConfiguration()
   .setDatabaseSchemaUpdate(ProcessEngineConfiguration.DB_SCHEMA_UPDATE_FALSE)
@@ -8298,7 +8298,7 @@ ProcessEngineConfiguration.createStandaloneInMemProcessEngineConfiguration();
 <li>Oracle WebLogic Application Server</li>
 </ul>
 
-<p><code>&lt;process-engine ... /&gt;</code> xml标签允许你定义一个进程引擎。</p>
+<p><code>&lt;process-engine ... /&gt;</code> xml标签允许你定义一个流程引擎。</p>
 
 <pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;bpm-platform xmlns=&quot;http://www.camunda.org/schema/1.0/BpmPlatform&quot;
@@ -8326,9 +8326,9 @@ ProcessEngineConfiguration.createStandaloneInMemProcessEngineConfiguration();
 
 <p>见<a href="http://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/descriptors/bpm-platform-xml/">部署描述符参考</a> 以获得关于<code>bpm-platform.xml</code>文件语法的完整文档。</p>
 
-<h2 id="在-processes-xml中配置进程引擎">在 processes.xml中配置进程引擎</h2>
+<h2 id="在-processes-xml中配置流程引擎">在 processes.xml中配置流程引擎</h2>
 
-<p>进程引擎也可以使用<code>META-INF/processes.xml</code>文件进行配置和引导。 见<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-applications/the-processes-xml-deployment-descriptor/">processes.xml 文件</a> 了解详情。</p>
+<p>流程引擎也可以使用<code>META-INF/processes.xml</code>文件进行配置和引导。 见<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-applications/the-processes-xml-deployment-descriptor/">processes.xml 文件</a> 了解详情。</p>
 
 <p>见 <a href="http://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/descriptors/processes-xml/">部署描述符参考</a> 以获得关于<code>processes.xml</code>文件语法的完整文档。</p>
 
@@ -8347,7 +8347,7 @@ ProcessEngineConfiguration.createStandaloneInMemProcessEngineConfiguration();
 <li><a href="#使用java-api启动流程引擎">使用Java API启动流程引擎</a></li>
 <li><a href="#使用camunda-cfg-xml配置流程引擎">使用camunda cfg XML配置流程引擎</a></li>
 <li><a href="#在bpm-platform-xml中配置流程引擎">在bpm-platform.xml中配置流程引擎</a></li>
-<li><a href="#在-processes-xml中配置进程引擎">在 processes.xml中配置进程引擎</a></li>
+<li><a href="#在-processes-xml中配置流程引擎">在 processes.xml中配置流程引擎</a></li>
 </ul></li>
 </ul>
 </nav>

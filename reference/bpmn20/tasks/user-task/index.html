@@ -368,7 +368,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/process-engine/connectors/" >Connectors</a>
+      <a href="/user-guide/process-engine/connectors/" >连接器</a>
     
   </li>
 
@@ -8182,7 +8182,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="col-xs-12 content-text">
       
 
-<p>用户任务用于模拟人类演员需要完成的工作。当进程执行到达这样的用户任务时，在分配给该任务的用户或组的任务列表中创建一个新任务。</p>
+<p>用户任务用于模拟人类演员需要完成的工作。当流程执行到达这样的用户任务时，在分配给该任务的用户或组的任务列表中创建一个新任务。</p>
 
 <div class="bpmn-symbol"><img src="http://camunda-cn.shaochenfeng.com//img/short-codes/bpmn-user-task.png" /></div>
 
@@ -8461,7 +8461,7 @@ taskService.handleBpmnError(
 
 <p>查看<a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/events/escalation-events/#catching-escalation-events">捕获升级事件</a>的文档。</p>
 
-<p>在用户任务执行过程中报告升级可以通过<code>TaskService#handleEscalation</code>实现。调用时用户任务应处于活动状态，<code>escalationCode</code>是调用升级的必要参数，这个代码标识了一个预定义的升级。如果给定的<code>escalationCode</code>不存在，将抛出进程引擎异常。请看下面的例子：</p>
+<p>在用户任务执行过程中报告升级可以通过<code>TaskService#handleEscalation</code>实现。调用时用户任务应处于活动状态，<code>escalationCode</code>是调用升级的必要参数，这个代码标识了一个预定义的升级。如果给定的<code>escalationCode</code>不存在，将抛出流程引擎异常。请看下面的例子：</p>
 
 <pre><code class="language-java">taskService.handleEscalation(
   taskId,
@@ -8523,7 +8523,7 @@ for(Task task : tasks) {
 
 <h2 id="表格提交">表格提交</h2>
 
-<p>提交表单时，可以获取进程变量以返回：</p>
+<p>提交表单时，可以获取流程变量以返回：</p>
 
 <pre><code class="language-java">VariableMap processVariables = formService
   .submitTaskFormWithVariablesInReturn(taskId, properties, shouldDeserializeValues);

@@ -1134,7 +1134,7 @@ Response Codes  Code Media type Description   204 application/json Request succe
       <guid>http://camunda-cn.shaochenfeng.com/reference/bpmn20/tasks/service-task/</guid>
       <description>服务任务用于调用服务。在Camunda中，这是通过调用Java代码来完成的，或者为外部工作者提供的工作项来完成以异步或直接调用Web服务的形式实现逻辑。
 调用Java Code. 有四种方式配置如何调用Java逻辑：
- 指定实现Java委托或活动行为的类 计算解析为委派对象的表达式 调用方法表达式 计算表达式  要指定在进程执行期间调用的类，所需的完全限定类名需要由camunda:class属性提供。
+ 指定实现Java委托或活动行为的类 计算解析为委派对象的表达式 调用方法表达式 计算表达式  要指定在流程执行期间调用的类，所需的完全限定类名需要由camunda:class属性提供。
 &amp;lt;serviceTask id=&amp;quot;javaService&amp;quot; name=&amp;quot;My Java Service Task&amp;quot; camunda:class=&amp;quot;org.camunda.bpm.MyJavaDelegate&amp;quot; /&amp;gt;  请参阅User Guide 中的 Java 委托类 章节，了解有关如何实现Java委托的详细信息。
 还可以使用解析为对象的表达式。这个对象必须遵循使用与Camunda：Class属性时创建的对象相同的规则。
 &amp;lt;serviceTask id=&amp;quot;beanService&amp;quot; name=&amp;quot;My Bean Service Task&amp;quot; camunda:delegateExpression=&amp;quot;${myDelegateBean}&amp;quot; /&amp;gt;  或调用方法或解析值的表达式。
@@ -1276,14 +1276,14 @@ JDK 下载地址
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-bootstrapping/</guid>
       <description>你有许多选项来配置并创建一个流程引擎，这取决于你打算使用一个应用管理流程引擎的还是一个共享的、容器管理流程引擎。
 应用程序管理流程引擎 你将流程引擎为应用程序的一部分。可以配置以下方式来配置它：
- 通过Java API以编程方式管理 通过XML配置 通过 Spring  共享的，容器化管理流程引擎 你选择的容器（例如Tomcat、JBoss或IBM WebSphere）为你管理进程引擎。配置是以一种特定的容器方式进行的，详情见运行时容器集成.
-ProcessEngineConfiguration Bean （流程引擎配置Bean） Camunda引擎使用 ProcessEngineConfiguration bean来配置和构建一个独立的流程引擎。它有多个可用的子类，可以用来定义进程引擎的配置。这些类代表不同的环境，并相应地设置默认值。最好的做法是选择与你的环境相匹配（大部分）的类，以尽量减少配置引擎所需的属性数量。目前有以下几个类。
+ 通过Java API以编程方式管理 通过XML配置 通过 Spring  共享的，容器化管理流程引擎 你选择的容器（例如Tomcat、JBoss或IBM WebSphere）为你管理流程引擎。配置是以一种特定的容器方式进行的，详情见运行时容器集成.
+ProcessEngineConfiguration Bean （流程引擎配置Bean） Camunda引擎使用 ProcessEngineConfiguration bean来配置和构建一个独立的流程引擎。它有多个可用的子类，可以用来定义流程引擎的配置。这些类代表不同的环境，并相应地设置默认值。最好的做法是选择与你的环境相匹配（大部分）的类，以尽量减少配置引擎所需的属性数量。目前有以下几个类。
  org.camunda.bpm.engine.impl.cfg.StandaloneProcessEngineConfiguration
 流程引擎是以独立的方式使用的。引擎本身将负责处理事务。默认情况下，只有在引擎启动时才会检查数据库（如果没有数据库模式或模式版本不正确，会抛出一个异常）。 org.camunda.bpm.engine.impl.cfg.StandaloneInMemProcessEngineConfiguration
 这是一个用于单元测试的工具类。引擎本身将负责处理事务。默认使用H2内存数据库。该数据库将在引擎启动和关闭时被创建和删除。当使用这个时，可能不需要额外的配置（除了，当使用作业执行器（job executor）或邮件功能时）。 org.camunda.bpm.engine.spring.SpringProcessEngineConfiguration
 当流程引擎被用于Spring环境时使用。更多信息请参见Spring集成部分。 org.camunda.bpm.engine.impl.cfg.JtaProcessEngineConfiguration
 当引擎以独立模式运行时，使用JTA事务。  使用Java API启动流程引擎 你可以通过创建正确的ProcessEngineConfiguration对象或使用一些预定义的对象，以编程方式配置流程引擎。
-ProcessEngineConfiguration.createStandaloneProcessEngineConfiguration(); ProcessEngineConfiguration.createStandaloneInMemProcessEngineConfiguration();  现在你可以调用buildProcessEngine()操作来创建一个进程引擎。
+ProcessEngineConfiguration.createStandaloneProcessEngineConfiguration(); ProcessEngineConfiguration.createStandaloneInMemProcessEngineConfiguration();  现在你可以调用buildProcessEngine()操作来创建一个流程引擎。
 ProcessEngine processEngine = ProcessEngineConfiguration.createStandaloneInMemProcessEngineConfiguration() .setDatabaseSchemaUpdate(ProcessEngineConfiguration.DB_SCHEMA_UPDATE_FALSE) .setJdbcUrl(&amp;quot;jdbc:h2:mem:my-own-db;DB_CLOSE_DELAY=1000&amp;quot;) .setJobExecutorActivate(true) .buildProcessEngine();  使用camunda cfg XML配置流程引擎 配置你的过程引擎的最简单的方法是通过一个叫做camunda.cfg.xml的XML文件。使用这个文件，你可以简单这样做:
 ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine()  camunda.cfg.xml必须包含一个id为processEngineConfiguration的bean，选择最适合你需求的ProcessEngineConfiguration类。
 &amp;lt;bean id=&amp;quot;processEngineConfiguration&amp;quot; class=&amp;quot;org.camunda.bpm.engine.impl.cfg.StandaloneProcessEngineConfiguration&amp;quot;&amp;gt;  这将在classpath上寻找一个camunda.cfg.xml文件，并根据该文件中的配置构建一个引擎。下面的片段显示了一个配置的例子：
@@ -2382,12 +2382,12 @@ The data source that is constructed based on the provided JDBC properties will h
       
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-api/</guid>
       <description>服务API Java API是与引擎互动的最常见方式。中心起点是ProcessEngine，它可以通过几种方式创建，如配置部分所述。从ProcessEngine中，你可以获得包含工作流/BPM方法的各种服务。ProcessEngine和服务对象是线程安全的。所以你可以为整个服务器保留对其中一个对象的引用。
-ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine(); RepositoryService repositoryService = processEngine.getRepositoryService(); RuntimeService runtimeService = processEngine.getRuntimeService(); TaskService taskService = processEngine.getTaskService(); IdentityService identityService = processEngine.getIdentityService(); FormService formService = processEngine.getFormService(); HistoryService historyService = processEngine.getHistoryService(); ManagementService managementService = processEngine.getManagementService(); FilterService filterService = processEngine.getFilterService(); ExternalTaskService externalTaskService = processEngine.getExternalTaskService(); CaseService caseService = processEngine.getCaseService(); DecisionService decisionService = processEngine.getDecisionService();  ProcessEngines.getDefaultProcessEngine() 将在第一次调用时初始化并建立一个进程引擎，此后总是返回相同的进程引擎。所有进程引擎的正确创建和关闭可以通过ProcessEngines.init()和ProcessEngines.destroy()完成。
+ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine(); RepositoryService repositoryService = processEngine.getRepositoryService(); RuntimeService runtimeService = processEngine.getRuntimeService(); TaskService taskService = processEngine.getTaskService(); IdentityService identityService = processEngine.getIdentityService(); FormService formService = processEngine.getFormService(); HistoryService historyService = processEngine.getHistoryService(); ManagementService managementService = processEngine.getManagementService(); FilterService filterService = processEngine.getFilterService(); ExternalTaskService externalTaskService = processEngine.getExternalTaskService(); CaseService caseService = processEngine.getCaseService(); DecisionService decisionService = processEngine.getDecisionService();  ProcessEngines.getDefaultProcessEngine() 将在第一次调用时初始化并建立一个流程引擎，此后总是返回相同的流程引擎。所有流程引擎的正确创建和关闭可以通过ProcessEngines.init()和ProcessEngines.destroy()完成。
 ProcessEngines类将扫描所有camunda.cfg.xml和activiti.cfg.xml文件。
-对于所有camunda.cfg.xml文件，进程引擎将以典型的方式建立。
-ProcessEngineConfiguration .createProcessEngineConfigurationFromInputStream(inputStream) .buildProcessEngine()  对于所有的activiti.cfg.xml文件，进程引擎将以Spring的方式构建：首先创建Spring应用上下文，然后从该应用上下文中获得进程引擎。
+对于所有camunda.cfg.xml文件，流程引擎将以典型的方式建立。
+ProcessEngineConfiguration .createProcessEngineConfigurationFromInputStream(inputStream) .buildProcessEngine()  对于所有的activiti.cfg.xml文件，流程引擎将以Spring的方式构建：首先创建Spring应用上下文，然后从该应用上下文中获得流程引擎。
 所有的服务都是无状态的。这意味着你可以很容易地在一个集群的多个节点上运行Camunda平台，每个节点都去同一个数据库，而不必担心哪个机器实际执行了以前的调用。对任何服务的任何调用都是无状态的，无论它在哪里执行。
-当使用Camunda引擎时，仓库服务（RepositoryService）可能是第一个需要的服务。这个服务提供了管理和操纵部署和流程定义的操作。流程定义是BPMN 2.0流程的Java对应物，这里就不多说了。它是一个流程的每个步骤的结构和行为的表示。部署是引擎中的包装单元。一个部署可以包含多个BPMN 2.0 XML文件和任何其他资源。一个部署中包含的内容的选择由开发者决定。它的范围可以从一个单一的流程BPMN 2.0 XML文件到整个流程和相关资源包（例如，部署 &amp;ldquo;hr-processes &amp;ldquo;可以包含与hr流程相关的一切内容）。RepositoryService允许部署这种包。进行一次部署意味着部署内容被上传到引擎，在那里所有的流程都被检查和解析，然后被存储在数据库中。从那时起，系统就知道该部署了，并且任何包含在部署中的进程现在都可以被启动。</description>
+当使用Camunda引擎时，仓库服务（RepositoryService）可能是第一个需要的服务。这个服务提供了管理和操纵部署和流程定义的操作。流程定义是BPMN 2.0流程的Java对应物，这里就不多说了。它是一个流程的每个步骤的结构和行为的表示。部署是引擎中的包装单元。一个部署可以包含多个BPMN 2.0 XML文件和任何其他资源。一个部署中包含的内容的选择由开发者决定。它的范围可以从一个单一的流程BPMN 2.0 XML文件到整个流程和相关资源包（例如，部署 &amp;ldquo;hr-processes &amp;ldquo;可以包含与hr流程相关的一切内容）。RepositoryService允许部署这种包。进行一次部署意味着部署内容被上传到引擎，在那里所有的流程都被检查和解析，然后被存储在数据库中。从那时起，系统就知道该部署了，并且任何包含在部署中的流程现在都可以被启动。</description>
     </item>
     
     <item>
@@ -3310,7 +3310,7 @@ Parameters Path Parameters  Name Description   id The id of the tenant   Result 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/reference/bpmn20/tasks/user-task/</guid>
-      <description>用户任务用于模拟人类演员需要完成的工作。当进程执行到达这样的用户任务时，在分配给该任务的用户或组的任务列表中创建一个新任务。
+      <description>用户任务用于模拟人类演员需要完成的工作。当流程执行到达这样的用户任务时，在分配给该任务的用户或组的任务列表中创建一个新任务。
 用户任务在XML中定义如下。 id属性是必需的，而name属性是可选的。
 &amp;lt;userTask id=&amp;quot;theTask&amp;quot; name=&amp;quot;Important task&amp;quot; /&amp;gt;  描述 用户任务还可以具有描述。事实上，任何BPMN 2.0元素可以有描述。通过添加 documentation 元素来定义描述。
 &amp;lt;userTask id=&amp;quot;theTask&amp;quot; name=&amp;quot;Schedule meeting&amp;quot; &amp;gt; &amp;lt;documentation&amp;gt; Schedule an engineering meeting for next week with the new hire. &amp;lt;/documentation&amp;gt;  可以从标准Ja​​va方式中的任务中检索 documentation 文本：
@@ -4794,13 +4794,13 @@ public void testRepositoryService() { String decisionDefinitionId = repositorySe
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/reference/bpmn20/tasks/script-task/</guid>
-      <description>脚本任务是自动活动。当进程执行到达脚本任务时，执行相应的脚本。
+      <description>脚本任务是自动活动。当流程执行到达脚本任务时，执行相应的脚本。
 通过指定脚本内容和脚本格式来定义脚本任务：
 &amp;lt;scriptTask id=&amp;quot;theScriptTask&amp;quot; name=&amp;quot;Execute script&amp;quot; scriptFormat=&amp;quot;groovy&amp;quot;&amp;gt; &amp;lt;script&amp;gt; sum = 0 for ( i in inputArray ) { sum += i } &amp;lt;/script&amp;gt; &amp;lt;/scriptTask&amp;gt;  scriptFormat属性的值必须是一个与JSR-223（Java平台的脚本）兼容的名称。如果你想使用一个（与JSR-223兼容的）脚本引擎，你需要在classpath中添加相应的jar，并使用适当的名称。
 脚本源代码必须作为script子元素的文本内容添加。 或者，源代码可以被指定为表达式或外部资源。更多 关于提供脚本源代码的可能方式的更多信息，请参见相应的 用户指南 的 脚本来源 章节。
-关于进程引擎中脚本的一般信息，请参见用户指南中的脚本部分。
+关于流程引擎中脚本的一般信息，请参见用户指南中的脚本部分。
 支持的脚本语言Camunda平台应该可以与大多数JSR-223兼容的脚本引擎实现协同工作。我们测试了Groovy、JavaScript、JRuby和Jython的集成。请参阅用户指南 的 第三方依赖性部分了解更多细节。
-脚本中的变量 所有通过执行到达脚本任务中的进程变量都可以在脚本中使用。在下面的例子中，脚本变量inputArray实际上是一个流程变量（一个整数的列表）。
+脚本中的变量 所有通过执行到达脚本任务中的流程变量都可以在脚本中使用。在下面的例子中，脚本变量inputArray实际上是一个流程变量（一个整数的列表）。
 &amp;lt;script&amp;gt; sum = 0 for ( i in inputArray ) { sum += i } &amp;lt;/script&amp;gt;  也可以在脚本中设置过程变量。变量可以通过使用VariableScope接口提供的setVariable(..)方法来设置。
 &amp;lt;script&amp;gt; sum = 0 for ( i in inputArray ) { sum += i } execution.</description>
     </item>
@@ -4987,7 +4987,7 @@ Prerequisites and audience To use this guide, you should at least know what Camu
       
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-instance-restart/</guid>
       <description>在流程实例终止后，其历史数据仍然存在，并且可以被访问以重启流程实例，前提是历史级别被设置为FULL。 例如，当流程没有以期望的方式终止时，重启流程实例是有用的。这个API的使用的其他可能情况有：
- 恢复被错误地取消的流程实例的到最后状态 由于错误路由导致流程实例终止后，重启流程实例  为了执行这样的操作，进程引擎提供了 流程实例重启API RuntimeService.restartProcessInstances(..) 。该API允许通过使用流式构建器在一次调用中指定多个实例化指令。
+ 恢复被错误地取消的流程实例的到最后状态 由于错误路由导致流程实例终止后，重启流程实例  为了执行这样的操作，流程引擎提供了 流程实例重启API RuntimeService.restartProcessInstances(..) 。该API允许通过使用流式构建器在一次调用中指定多个实例化指令。
 请注意，这些操作也可以通过REST方式进行。重启流程实例和重启流程实例（async）
 流程实例重启的例子 考虑以下流程模型，其中红点标志着活动任务：
 让我们假设流程实例已经被别人用以下代码从外部取消了：
@@ -4999,7 +4999,7 @@ runtimeService.restartProcessInstance(processInstance.getProcessDefinitionId()) 
 实例化指令类型 流式流程实例重启构建器提供了以下的方法，可以调用。
  startBeforeActivity(String activityId) startAfterActivity(String activityId) startTransition(String transitionId)  关于指令类型的信息，请参考类似的 修改指令类型 section.
 选择要重启的流程实例 可以通过提供一组流程实例ID来选择流程实例进行重启 或者提供一个历史流程实例查询。也可以同时指定一个流程实例id列表和一个查询。 然后，要重启的流程实例将是所产生的集合的并集。
-流程实例列表 应该被重启的进程实例可以是一个进程实例ID的列表。
+流程实例列表 应该被重启的流程实例可以是一个流程实例ID的列表。
 ProcessDefinition processDefinition = ...; List&amp;lt;String&amp;gt; processInstanceIds = ...; runtimeService.</description>
     </item>
     
@@ -5432,7 +5432,7 @@ Plugin point Name: welcome.dashboard.
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/reference/bpmn20/tasks/receive-task/</guid>
-      <description>一个接收任务是一个简单的任务，它等待某个消息的到来。当进程的执行到达一个接收任务时，进程的状态被提交到持久性存储中。这意味着进程将一直处于这种等待状态，直到引擎收到一个特定的消息，从而触发进程在接收任务之外的继续执行。
+      <description>一个接收任务是一个简单的任务，它等待某个消息的到来。当流程的执行到达一个接收任务时，流程的状态被提交到持久性存储中。这意味着流程将一直处于这种等待状态，直到引擎收到一个特定的消息，从而触发流程在接收任务之外的继续执行。
 一个有消息参考的接收任务可以像普通事件一样被触发。
 &amp;lt;definitions ...&amp;gt; &amp;lt;message id=&amp;quot;newInvoice&amp;quot; name=&amp;quot;newInvoiceMessage&amp;quot;/&amp;gt; &amp;lt;process ...&amp;gt; &amp;lt;receiveTask id=&amp;quot;waitState&amp;quot; name=&amp;quot;wait&amp;quot; messageRef=&amp;quot;newInvoice&amp;quot;&amp;gt; ...  然后你可以将它和消息关联起来。
 // 关联消息 runtimeService.createMessageCorrelation(subscription.getEventName()) .processInstanceBusinessKey(&amp;quot;AB-123&amp;quot;) .correlate();  或者明确地查询订阅并触发它：
@@ -5944,7 +5944,7 @@ Parameters Path Parameters  Name Description   id The id of the decision definit
       
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/expression-language/</guid>
       <description>Camunda平台支持统一表达式语言（EL），它是JSP 2.1标准的一部分（JSR-245）。使用了开源的JUEL实现。要获得更多关于表达式语言使用的一般信息，请阅读官方文档。
-Especially the provided examples give a good overview of the syntax of expressions. 特别是提供了很好的实例，对学习表达式语法有很方便。
+特别是提供了很好的实例，可以方便的学习表达式语法。
 在Camunda平台内，EL可以在许多情况下用于评估小型的脚本式表达。下面的例子是一个使用了EL的BPMN元素：
  BPMN element EL support    Service Task, Business Rule Task, Send Task, Message Intermediate Throwing Event, Message End Event, Execution Listener and Task Listener   Expression language as delegation code    Sequence Flows, Conditional Events   Expression language as condition expression    All Tasks, All Events, Transaction, Subprocess and Connector   Expression language inside an inputOutput parameter mapping    Different Elements   Expression language as the value of an attribute or element    All Flow Nodes, Process Definition   Expression language to determine the priority of a job   表达式语言的用法 委托代码 除了Java代码，Camunda平台还支持将表达式作为委托代码进行计算。关于委托代码的信息，请参见相应的章节.</description>
     </item>
@@ -6207,7 +6207,8 @@ Java API:
 JavaScript 是Java Runtime（JRE）的一部分，因此开箱即用。
 Groovy 也包含在预编译的Camunda发行版中。
 下表展示了支持执行脚本的BPMN元素：
- BPMN element Script support   Script Task Script inside a script task    Processes, Activities, Sequence Flows, Gateways and Events   Script as an execution listener    User Tasks   Script as a task listener    Sequence Flows   Script as condition expression of a sequence flow    All Tasks, All Events, Transactions, Subprocesses and Connectors   Script inside an inputOutput parameter mapping   使用脚本任务 通过BPMN 2.</description>
+ BPMN element Script support   Script Task 嵌入在脚本任务中的脚本    Processes, Activities, Sequence Flows, Gateways and Events   作为执行监听器的脚本    User Tasks   作为任务监听器的脚本    Sequence Flows   作为顺序流条件表达式的脚本    All Tasks, All Events, Transactions, Subprocesses and Connectors   输入输出参数映射中的脚本   使用脚本任务 通过BPMN 2.0脚本任务，你可以向你的BPM流程添加一个脚本（更多信息请参见BPMN 2.0参考）。
+下面的流程是一个简单的例子，有一个Groovy脚本任务，对一个数组的元素进行求和：</description>
     </item>
     
     <item>
@@ -6371,7 +6372,7 @@ If you use it on the process instance level, the whole process is terminated. On
  FreeMarker  以下模板引擎是作为插件添加：
  Apache Velocity  脚本引擎包装器的实现可以在camunda-template-engines资源库中找到。
 此外，以下模板引擎可以在企业版中使用：
- XSLT  安装一个模板引擎 为嵌入式流程引擎安装模板引擎 模板引擎和脚本引擎是用相同方式安装的。这意味着模板引擎必须被添加到进程引擎的classpath中。
+ XSLT  安装一个模板引擎 为嵌入式流程引擎安装模板引擎 模板引擎和脚本引擎是用相同方式安装的。这意味着模板引擎必须被添加到流程引擎的classpath中。
 使用嵌入式流程引擎时，模板引擎库必须添加到应用程序部署中。在mavenwar项目中使用流程引擎时，模板引擎依赖必须作为依赖项添加到mavenpom.xml文件中。
 请导入Camunda BOM，以确保Camunda项目的版本是正确的。
 &amp;lt;dependencies&amp;gt; &amp;lt;!-- freemarker --&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.camunda.template-engines&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;camunda-template-engines-freemarker&amp;lt;/artifactId&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;!-- apache velocity --&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.camunda.template-engines&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;camunda-template-engines-velocity&amp;lt;/artifactId&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;/dependencies&amp;gt;  为分布式流程引擎安装一个模板引擎 当使用一个分布式流程引擎时，模板需要添加到分布式流程引擎的classpath中。classpath的位置取决于应用服务器。在Apache Tomcat中，库必须被添加到共享的lib/文件夹中。
@@ -6405,13 +6406,13 @@ If you use it on the process instance level, the whole process is terminated. On
       
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/external-tasks/</guid>
       <description>流程引擎支持两种执行服务任务的方式。
- 内部服务任务：同步调用与进程应用程序一起部署的代码 外部任务：在一个可以被工作者轮询的列表中提供一个工作单元  当代码被实现为委托代码或 脚本时，会使用第一个内部服务任务。外部（服务）任务的工作方式是：进程引擎将一个工作单元发布给外部工作者去完成。我们把这称为 外部任务模式 。
+ 内部服务任务：同步调用与流程应用程序一起部署的代码 外部任务：在一个可以被工作者轮询的列表中提供一个工作单元  当代码被实现为委托代码或 脚本时，会使用第一个内部服务任务。外部（服务）任务的工作方式是：流程引擎将一个工作单元发布给外部工作者去完成。我们把这称为 外部任务模式 。
 请注意，上面的区别并没有说实际的 &amp;ldquo;业务逻辑&amp;rdquo; 是在本地实现还是作为远程服务实现。内部服务任务调用的 Java代理类 也可以自己实现业务逻辑，也可以调用 Web/rest 服务，向另一个系统发送消息等等。对于外部工作者也是如此。外部工作者可以直接实现业务逻辑或再次委托给远程服务实现。
 外部任务模式 执行外部任务的流程可以分为三个步骤，如下图所示：
- 流程引擎（Process Engine）: 创建外部任务实例 外部工作者（External Worker）: 获取和锁定外部任务 外部工作者（External Worker）和 流程引擎（Process Engine）: 完整的外部任务实例  当流程引擎遇到一个被配置为外部处理的服务任务时，它会创建一个外部任务实例并将其添加到外部任务列表中（步骤1）。该任务实例接收一个主题（topic）*，该主题确定了要执行的工作的性质。在未来的某个时间，一个外部工作者可以为一组特定的主题获取并锁定任务（步骤2）。为了防止一个任务被多个工作者同时获取，一个任务有一个基于时间戳的锁，这个锁在任务被获取时被设置。只有当锁过期时，另一个工作者才能再次获取该任务。当外部工作者完成了所需的工作，它可以向进程引擎发出信号，然后流程引擎继续执行流程（步骤3）。
+ 流程引擎（Process Engine）: 创建外部任务实例 外部工作者（External Worker）: 获取和锁定外部任务 外部工作者（External Worker）和 流程引擎（Process Engine）: 完整的外部任务实例  当流程引擎遇到一个被配置为外部处理的服务任务时，它会创建一个外部任务实例并将其添加到外部任务列表中（步骤1）。该任务实例接收一个主题（topic）*，该主题确定了要执行的工作的性质。在未来的某个时间，一个外部工作者可以为一组特定的主题获取并锁定任务（步骤2）。为了防止一个任务被多个工作者同时获取，一个任务有一个基于时间戳的锁，这个锁在任务被获取时被设置。只有当锁过期时，另一个工作者才能再次获取该任务。当外部工作者完成了所需的工作，它可以向流程引擎发出信号，然后流程引擎继续执行流程（步骤3）。
 类比 **用户任务**外部任务在概念上与用户任务非常相似。在第一次尝试理解外部任务模式时，将其与用户任务进行类比思考可能会有所帮助。 用户任务由流程引擎创建并添加到任务列表中。然后，流程引擎等待人类用户查询该列表，提出任务要求，然后完成它。外部任务是类似的。一个外部任务被创建，然后被添加到一个主题。然后，一个外部应用程序查询该主题并锁定该任务。在任务被锁定后，外部应用程序可以完成它。
 这种模式的本质是，执行实际工作的程序独立于流程引擎，并通过轮询流程引擎的API的方式接收工作项。这样做有以下好处：
- 解耦系统: 外部工作者与流程引擎不需要在同一Java进程中、同一机器上、同一集群中或甚至在同一大陆上运行。只需要它能够访问进程引擎的API（通过REST或Java）。由于采用了轮询模式，外部工作者不需要暴露任何接口供进程引擎访问。 解耦技术选择: 外部工作者不需要用Java实现。相反，可以使用任何最适合执行工作项的技术，并且可以用来访问流程引擎的API（通过REST或Java）。 外部工作者可以专注某个主题: 外部工作者不需要是一个通用的应用程序。每个外部任务实例都会收到要执行的任务性质的主题名。外部工作者可以只轮询它们可以做到的任务主题。 细粒度扩展: 如果某主题服务任务具有较高的负载，相应主题的外部工作者的数量可以独立于进程引擎来扩展。 独立维护: 工作者可以独立于流程引擎进行维护，而不会破坏操作。例如，如果有某个特定主题的工作者停机一段时间（例如，由于更新停机），对进程引擎没有直接影响。这类工作者的外部任务的执行会优雅的存储在外部任务列表中，直到外部工作者恢复并运行。  使用外部任务 为了使用外部任务，它们必须在BPMN XML中声明。在运行时，可以通过Java和REST API访问外部任务实例。下面将解释API的概念，并重点介绍Java API。通常情况下，REST API在这种情况下更适合，特别是在不同地域，使用不同技术的外部工作者。
+ 解耦系统: 外部工作者与流程引擎不需要在同一Java容器中、同一机器上、同一集群中或甚至在同一大陆上运行。只需要它能够访问流程引擎的API（通过REST或Java）。由于采用了轮询模式，外部工作者不需要暴露任何接口供流程引擎访问。 解耦技术选择: 外部工作者不需要用Java实现。相反，可以使用任何最适合执行工作项的技术，并且可以用来访问流程引擎的API（通过REST或Java）。 外部工作者可以专注某个主题: 外部工作者不需要是一个通用的应用程序。每个外部任务实例都会收到要执行的任务性质的主题名。外部工作者可以只轮询它们可以做到的任务主题。 细粒度扩展: 如果某主题服务任务具有较高的负载，相应主题的外部工作者的数量可以独立于流程引擎来扩展。 独立维护: 工作者可以独立于流程引擎进行维护，而不会破坏操作。例如，如果有某个特定主题的工作者停机一段时间（例如，由于更新停机），对流程引擎没有直接影响。这类工作者的外部任务的执行会优雅的存储在外部任务列表中，直到外部工作者恢复并运行。  使用外部任务 为了使用外部任务，它们必须在BPMN XML中声明。在运行时，可以通过Java和REST API访问外部任务实例。下面将解释API的概念，并重点介绍Java API。通常情况下，REST API在这种情况下更适合，特别是在不同地域，使用不同技术的外部工作者。
 BPMN 在流程定义的BPMN XML中，可以通过使用属性camunda:type和camunda:topic来声明服务任务由外部工作者执行。例如，服务任务 Validate Address 可以被配置为主题 AddressValidation ，如下所示：
 &amp;lt;serviceTask id=&amp;quot;validateAddressTask&amp;quot; name=&amp;quot;Validate Address&amp;quot; camunda:type=&amp;quot;external&amp;quot; camunda:topic=&amp;quot;AddressValidation&amp;quot; /&amp;gt;  也可以使用表达式而不是固定值定义主题的名字。</description>
     </item>
@@ -6426,17 +6427,6 @@ BPMN 在流程定义的BPMN XML中，可以通过使用属性camunda:type和camu
 Method PUT /job-definition/suspended
 Parameters Request Body A JSON object with the following properties:
  Name Description   processDefinitionKey The process definition key of the job definitions to activate or suspend.   processDefinitionTenantId Only activate or suspend job definitions of a process definition which belongs to a tenant with the given id.   processDefinitionWithoutTenantId Only activate or suspend job definitions of a process definition which belongs to no tenant.</description>
-    </item>
-    
-    <item>
-      <title>Connectors</title>
-      <link>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/connectors/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/connectors/</guid>
-      <description>With the dependency camunda-connect, the process engine supports simple connectors. Currently the following connector implementations exist:
- Connector ID   REST HTTP http-connector   SOAP HTTP soap-http-connector   It is also possible to implement your own custom connector in camunda. For more information about extending connectors please visit the Connector reference.
-Configure Camunda Connect As Camunda Connect is available only partially when using the process engine (check the list below).</description>
     </item>
     
     <item>
@@ -6563,6 +6553,22 @@ Parameters Path Parameters  Name Description   id The id of the task to set the 
 Method POST /user/{id}/unlock
 Parameters Path Parameters  Name Description   id The id of the user to be unlocked.   Result This method returns no content.
 Response Codes  Code Media type Description   204 application/json Request successful.   403 application/json If the user who perform the operation is not a camunda admin user.   404 application/json User cannot be found.</description>
+    </item>
+    
+    <item>
+      <title>连接器</title>
+      <link>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/connectors/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/connectors/</guid>
+      <description>通过依赖项目camunda-connect，流程引擎支持简单的连接器。以下是目前已实现的连接器：
+ Connector ID   REST HTTP http-connector   SOAP HTTP soap-http-connector   也可以在camunda中实现你自己的自定义连接器。关于扩展连接器的更多信息，请访问外部连接器章节。
+配置 Camunda连接器 由于Camunda连接器只有在使用流程引擎时才部分可用（查看下面的列表）。通过使用预建的发行版，Camunda连接器已经被预先配置好了。
+存在以下 &amp;ldquo;连接&amp;rdquo; 组件：
+ camunda-connect-core: 一个只包含核心连接类的jar。该组价已经可以作为流程引擎的依赖项。除了 &amp;ldquo;camunda-connect-core&amp;rdquo; 之外，还有 &amp;ldquo;camunda-connect-http-client&amp;rdquo; 和 &amp;ldquo;camunda-connect-soap-http-client&amp;rdquo; 等单个连接器的实现。当需要重新配置默认连接器或使用自定义连接器实现时，应使用这些依赖关系。 camunda-connect-connectors-all: 没有依赖关系的单一jar，包含HTTP和SOAP连接器。 camunda-engine-plugin-connect: 是一个流程引擎插件，用于向Camunda平台添加连接器。  Maven方式导入 请导入Camunda BOM，以确保每个Camunda项目的版本正确。
+camunda-connect-core camunda-connect-core包含连接器的核心类。此外，HTTP和SOAP连接器可以通过camunda-connect-http-client和camunda-connect-soap-http-client的依赖来添加。这些组件将引入他们自身的依赖，如Apache HTTP客户端。为了与流程引擎集成，需要camunda-engine-plugin-connect这个工件。Maven的坐标如下：
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.camunda.connect&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;camunda-connect-core&amp;lt;/artifactId&amp;gt; &amp;lt;/dependency&amp;gt;  &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.camunda.connect&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;camunda-connect-http-client&amp;lt;/artifactId&amp;gt; &amp;lt;/dependency&amp;gt;  &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.camunda.connect&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;camunda-connect-soap-http-client&amp;lt;/artifactId&amp;gt; &amp;lt;/dependency&amp;gt;  &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.camunda.bpm&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;camunda-engine-plugin-connect&amp;lt;/artifactId&amp;gt; &amp;lt;/dependency&amp;gt;  camunda-connect-connectors-all 这个组件包含HTTP和SOAP连接器以及它们的依赖关系。为了避免与这些依赖的其他版本冲突，这些依赖被重新定位到不同的包中。camunda-connect-connectors-all的Maven坐标如下。
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.camunda.connect&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;camunda-connect-connectors-all&amp;lt;/artifactId&amp;gt; &amp;lt;/dependency&amp;gt;  配置流程引擎插件 camunda-engine-plugin-connect包含一个名为org.</description>
     </item>
     
     <item>
@@ -6809,9 +6815,16 @@ Parameters Path Parameters  Name Description   id The id of the execution to set
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-versioning/</guid>
-      <description>Versioning of Process Definitions Business Processes are by nature long running. The process instances will maybe last for weeks, or months. In the meantime the state of the process instance is stored to the database. But sooner or later you might want to change the process definition even if there are still running instances.
-This is supported by the process engine:
- If you redeploy a changed process definition, you get a new version in the database.</description>
+      <description>流程定义的版本管理 业务流程本质上是需要长期运行的。流程实例可能会持续数周，或数月。在这期间，流程实例的状态被存储到数据库中。但总有那么一天，你需要在仍有运行中的实例的情况下改变流程定义。
+流程引擎支持这一点：
+ 如果你重新部署一个改变了的流程定义，你会在数据库中得到一个新的版本。 正在运行的流程实例将继续在它所在的旧版本执行。 新的流程实例将在新的版本中运行 - 除非明确指定执行版本。 在一定范围内支持将流程实例迁移到新版本。  你可以在流程定义表中看到不同的版本，以及流程实例与版本的关联。
+多租户如果你正在使用以tenantID区分的多租户，那么每个租户都有自己的流程定义，其版本与其他租户无关。参见多租户部分。
+流程实例会使用哪个版本 当你：
+ 通过 key 启动一个流程实例时。它启动一个 最新部署版本 的流程定义的实例。 *通过 id 启动一个流程实例时。它以数据库ID启动已部署的流程定义的一个实例。通过使用它，你可以启动一个 特定版本 的流程。  默认和推荐的用法是使用 startProcessInstanceByKey ，它总是使用最新的版本。
+processEngine.getRuntimeService().startProcessInstanceByKey(&amp;quot;invoice&amp;quot;); // will use the latest version (2 in our example)  如果你想专门启动一个旧版本的流程实例，可以在流程定义中查询来找到正确的流程定义id，然后使用startProcessInstanceById。
+ProcessDefinition pd = processEngine.getRepositoryService().createProcessDefinitionQuery() .processDefinitionKey(&amp;quot;invoice&amp;quot;) .processDefinitionVersion(1).singleResult(); processEngine.getRuntimeService().startProcessInstanceById(pd.getId());  当你使用 BPMN CallActivities 时，你可以配置使用哪个版本:
+&amp;lt;callActivity id=&amp;quot;callSubProcess&amp;quot; calledElement=&amp;quot;checkCreditProcess&amp;quot; camunda:calledElementBinding=&amp;quot;latest|deployment|version&amp;quot; camunda:calledElementVersion=&amp;quot;17&amp;quot;&amp;gt; &amp;lt;/callActivity&amp;gt;  or
+&amp;lt;callActivity id=&amp;quot;callSubProcess&amp;quot; calledElement=&amp;quot;checkCreditProcess&amp;quot; camunda:calledElementBinding=&amp;quot;versionTag&amp;quot; camunda:calledElementVersionTag=&amp;quot;ver-tag-1.</description>
     </item>
     
     <item>
