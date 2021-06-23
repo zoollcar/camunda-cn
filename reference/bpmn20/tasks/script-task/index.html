@@ -376,7 +376,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/process-engine/process-versioning/" >流程版本控制</a>
+      <a href="/user-guide/process-engine/process-versioning/" >流程定义版本控制</a>
     
   </li>
 
@@ -384,7 +384,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/process-engine/process-instance-migration/" >过程实例迁移</a>
+      <a href="/user-guide/process-engine/process-instance-migration/" >流程实例迁移</a>
     
   </li>
 
@@ -1355,7 +1355,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/reference/rest/" >Rest Api</a>
+      <a href="/reference/rest/" >REST API</a>
       <ul>
         
           
@@ -8227,7 +8227,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 &lt;/script&gt;
 </code></pre>
 
-<p>也可以在脚本中设置过程变量。变量可以通过使用<code>VariableScope</code>接口提供的<code>setVariable(..)</code>方法来设置。</p>
+<p>也可以在脚本中设置流程变量。变量可以通过使用<code>VariableScope</code>接口提供的<code>setVariable(..)</code>方法来设置。</p>
 
 <pre><code class="language-xml">&lt;script&gt;
     sum = 0
@@ -8263,7 +8263,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <h1 id="脚本返回结果">脚本返回结果</h1>
 
-<p>脚本任务的返回值可以分配给先前存在的或新的流程变量，方法是将流程变量名称作为脚本任务定义的<code>camunda:resultVariable</code>属性的字面值。特定过程变量的任何现有值将被脚本执行的结果值所覆盖。当没有指定结果变量名称时，脚本的结果值会被忽略。</p>
+<p>脚本任务的返回值可以分配给先前存在的或新的流程变量，方法是将流程变量名称作为脚本任务定义的<code>camunda:resultVariable</code>属性的字面值。特定流程变量的任何现有值将被脚本执行的结果值所覆盖。当没有指定结果变量名称时，脚本的结果值会被忽略。</p>
 
 <pre><code class="language-xml">&lt;scriptTask id=&quot;theScriptTask&quot; name=&quot;Execute script&quot; scriptFormat=&quot;juel&quot; camunda:resultVariable=&quot;myVar&quot;&gt;
   &lt;script&gt;#{echo}&lt;/script&gt;

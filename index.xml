@@ -28,8 +28,9 @@ Requirements Operation Systems Officially supported on the following operating s
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/webapps/cockpit/cmmn/dashboard/</guid>
-      <description>Enterprise FeaturePlease note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
-Check the Camunda enterprise homepagefor more information or get yourfree trial version.The CMMN Cases dashboard of Cockpit is the entry point for case monitoring. It comes with a pre-installed plugin, which lets you see deployed case definitions. Additional plugins can be added to the cases dashboard.</description>
+      <description>企业版特征Please note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
+查看 Camunda 企业版主页了解更多信息以及获得免费试用版。The CMMN Cases dashboard of Cockpit is the entry point for case monitoring. It comes with a pre-installed plugin, which lets you see deployed case definitions. Additional plugins can be added to the cases dashboard.
+Search At the top of the dashboard, you can search for case instances which fulfill certain search criteria.</description>
     </item>
     
     <item>
@@ -72,9 +73,9 @@ java -version  If you need to install Java Runtime Environment, you can find the
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/webapps/cockpit/batch/batch-operation/</guid>
-      <description>Enterprise FeaturePlease note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
-Check the Camunda enterprise homepagefor more information or get yourfree trial version.Definition Of Operation It is possible to execute the following batch operations:
- Delete running process instances. Delete finished process instances. Set retries of Jobs belonging to process instances.</description>
+      <description>企业版特征Please note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
+查看 Camunda 企业版主页了解更多信息以及获得免费试用版。Definition Of Operation It is possible to execute the following batch operations:
+ Delete running process instances. Delete finished process instances. Set retries of Jobs belonging to process instances. Set retries of external tasks belonging to process instances.</description>
     </item>
     
     <item>
@@ -103,8 +104,8 @@ ProcessEngineService The ProcessEngineServicecan be accessed by calling BpmPlat
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/webapps/cockpit/cmmn/case-definition-view/</guid>
-      <description>Enterprise FeaturePlease note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
-Check the Camunda enterprise homepagefor more information or get yourfree trial version.On the case definition view, you can find a diagram of the deployed case definition. Use the mouse to navigate through the diagram. By turning the mouse wheel you can zoom in and out.</description>
+      <description>企业版特征Please note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
+查看 Camunda 企业版主页了解更多信息以及获得免费试用版。On the case definition view, you can find a diagram of the deployed case definition. Use the mouse to navigate through the diagram. By turning the mouse wheel you can zoom in and out. Hold the left mouse button to pan the diagram in the desired direction.</description>
     </item>
     
     <item>
@@ -287,8 +288,8 @@ At the top of the dashboard you can see a plugin with pie charts that display th
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/webapps/cockpit/dmn/decision-requirements-instance-view/</guid>
-      <description>Enterprise FeaturePlease note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
-Check the Camunda enterprise homepagefor more information or get yourfree trial version.On the decision requirements definition instance view, you can find a diagram of the deployed decision requirements definition. Use the mouse to navigate through the diagram. By turning the mouse wheel you can zoom in and out.</description>
+      <description>企业版特征Please note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
+查看 Camunda 企业版主页了解更多信息以及获得免费试用版。On the decision requirements definition instance view, you can find a diagram of the deployed decision requirements definition. Use the mouse to navigate through the diagram. By turning the mouse wheel you can zoom in and out.</description>
     </item>
     
     <item>
@@ -297,8 +298,8 @@ At the top of the dashboard you can see a plugin with pie charts that display th
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/webapps/cockpit/dmn/decision-requirements-definition-view/</guid>
-      <description>Enterprise FeaturePlease note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
-Check the Camunda enterprise homepagefor more information or get yourfree trial version.On the decision requirements definition view, you can find a diagram of the deployed decision requirements definition. Use the mouse to navigate through the diagram. By turning the mouse wheel you can zoom in and out.</description>
+      <description>企业版特征Please note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
+查看 Camunda 企业版主页了解更多信息以及获得免费试用版。On the decision requirements definition view, you can find a diagram of the deployed decision requirements definition. Use the mouse to navigate through the diagram. By turning the mouse wheel you can zoom in and out. Hold the left mouse button to pan the diagram in the desired direction.</description>
     </item>
     
     <item>
@@ -1284,7 +1285,7 @@ ProcessEngineConfiguration Bean （流程引擎配置Bean） Camunda引擎使用
 当流程引擎被用于Spring环境时使用。更多信息请参见Spring集成部分。 org.camunda.bpm.engine.impl.cfg.JtaProcessEngineConfiguration
 当引擎以独立模式运行时，使用JTA事务。  使用Java API启动流程引擎 你可以通过创建正确的ProcessEngineConfiguration对象或使用一些预定义的对象，以编程方式配置流程引擎。
 ProcessEngineConfiguration.createStandaloneProcessEngineConfiguration(); ProcessEngineConfiguration.createStandaloneInMemProcessEngineConfiguration();  现在你可以调用buildProcessEngine()操作来创建一个流程引擎。
-ProcessEngine processEngine = ProcessEngineConfiguration.createStandaloneInMemProcessEngineConfiguration() .setDatabaseSchemaUpdate(ProcessEngineConfiguration.DB_SCHEMA_UPDATE_FALSE) .setJdbcUrl(&amp;quot;jdbc:h2:mem:my-own-db;DB_CLOSE_DELAY=1000&amp;quot;) .setJobExecutorActivate(true) .buildProcessEngine();  使用camunda cfg XML配置流程引擎 配置你的过程引擎的最简单的方法是通过一个叫做camunda.cfg.xml的XML文件。使用这个文件，你可以简单这样做:
+ProcessEngine processEngine = ProcessEngineConfiguration.createStandaloneInMemProcessEngineConfiguration() .setDatabaseSchemaUpdate(ProcessEngineConfiguration.DB_SCHEMA_UPDATE_FALSE) .setJdbcUrl(&amp;quot;jdbc:h2:mem:my-own-db;DB_CLOSE_DELAY=1000&amp;quot;) .setJobExecutorActivate(true) .buildProcessEngine();  使用camunda cfg XML配置流程引擎 配置你的流程引擎的最简单的方法是通过一个叫做camunda.cfg.xml的XML文件。使用这个文件，你可以简单这样做:
 ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine()  camunda.cfg.xml必须包含一个id为processEngineConfiguration的bean，选择最适合你需求的ProcessEngineConfiguration类。
 &amp;lt;bean id=&amp;quot;processEngineConfiguration&amp;quot; class=&amp;quot;org.camunda.bpm.engine.impl.cfg.StandaloneProcessEngineConfiguration&amp;quot;&amp;gt;  这将在classpath上寻找一个camunda.cfg.xml文件，并根据该文件中的配置构建一个引擎。下面的片段显示了一个配置的例子：
 &amp;lt;beans xmlns=&amp;quot;http://www.springframework.org/schema/beans&amp;quot; xmlns:xsi=&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot; xsi:schemaLocation=&amp;quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd&amp;quot;&amp;gt; &amp;lt;bean id=&amp;quot;processEngineConfiguration&amp;quot; class=&amp;quot;org.</description>
@@ -1391,8 +1392,8 @@ Java Dependencies logback-classic@1.2.3(EPL 1.0)Copyright (C) 1999-2015, QOS.ch.
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/webapps/cockpit/cmmn/case-instance-view/</guid>
-      <description>Enterprise FeaturePlease note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
-Check the Camunda enterprise homepagefor more information or get yourfree trial version.Open the case instance view by selecting a case instance from the case definition view instance list. This view allows you to drill down into a single case instance and explore its activities as well as the variables, tasks, etc.</description>
+      <description>企业版特征Please note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
+查看 Camunda 企业版主页了解更多信息以及获得免费试用版。Open the case instance view by selecting a case instance from the case definition view instance list. This view allows you to drill down into a single case instance and explore its activities as well as the variables, tasks, etc.</description>
     </item>
     
     <item>
@@ -2163,8 +2164,8 @@ ProcessInstance processInstance = runtimeService.startProcessInstanceByKey(&#39;
       
       <guid>http://camunda-cn.shaochenfeng.com/update/patch-level/</guid>
       <description>This guide explains how to perform a patch level update. The patch level is the version number &amp;ldquo;after the second dot&amp;rdquo;. Example: update from 7.14.2 to 7.14.3.
-Enterprise FeaturePlease note that Patch Level Updates are only provided to enterprise customers, they are not available in the community edition.
-Check the Camunda enterprise homepagefor more information or get yourfree trial version.Reading this GuideIn this guide, a number of variables are used to denote common path names and constants:</description>
+企业版特征Please note that Patch Level Updates are only provided to enterprise customers, they are not available in the community edition.
+查看 Camunda 企业版主页了解更多信息以及获得免费试用版。Reading this GuideIn this guide, a number of variables are used to denote common path names and constants:</description>
     </item>
     
     <item>
@@ -3182,8 +3183,8 @@ Example The following example shows a job executor XML snippet:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/webapps/cockpit/dmn/live-editing/</guid>
-      <description>Enterprise FeaturePlease note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
-Check the Camunda enterprise homepagefor more information or get yourfree trial version.DMN tables can be changed directly in Cockpit. Clicking on the  Editbutton will open a dialog which contains an editable version of the DMN table. This button is only available for DMN resources.</description>
+      <description>企业版特征Please note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
+查看 Camunda 企业版主页了解更多信息以及获得免费试用版。DMN tables can be changed directly in Cockpit. Clicking on the  Editbutton will open a dialog which contains an editable version of the DMN table. This button is only available for DMN resources. The edit dialog can also be opened by clicking on the icon on the DMN definition page.</description>
     </item>
     
     <item>
@@ -3347,7 +3348,7 @@ Writing to a String: import static org.camunda.spin.Spin.XML; import org.camunda
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-concepts/</guid>
-      <description>本节介绍了一些核心过程引擎概念，用于流程引擎API和内部流程引擎实现。了解这些基础知识可以更容易的额使用流程引擎API。
+      <description>本节介绍了一些核心流程引擎概念，用于流程引擎API和内部流程引擎实现。了解这些基础知识可以更容易的额使用流程引擎API。
 流程定义 流程定义定义了一个流程的结构。你可以说，流程定义就是流程。Camunda平台使用 BPMN 2.0 作为其主要的流程建模语言，用于建模过程的定义。
 BPMN 2.0 参考Camunda平台配有两个BPMN 2.0参考资料：
  BPMN 2.0 建模参考 介绍了BPMN 2.0的基本原理，帮助你开始对流程进行建模。(请确保同时阅读教程。) BPMN 2.0 实现参考 涵盖了Camunda平台中各个BPMN 2.0构造的实现。如果你想实现和执行BPMN流程，你应该阅读这个参考资料。  在Camunda平台中，您可以将流程以BPMN 2.0 XML格式部署到流程引擎中。XML文件被解析并转化为一个流程定义图结构。该图结构由流程引擎执行。
@@ -3486,8 +3487,9 @@ Result Result is not reliable any moreThis endpoint will return at most a singl
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/webapps/cockpit/cleanup/</guid>
-      <description>Enterprise FeaturePlease note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
-Check the Camunda enterprise homepagefor more information or get yourfree trial version.The cleanup view in Cockpit provides information about the history cleanup state and statistics about the cleanable and deleted data. Moreover, the page allows to manually perform various operations related to the history cleanup.</description>
+      <description>企业版特征Please note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
+查看 Camunda 企业版主页了解更多信息以及获得免费试用版。The cleanup view in Cockpit provides information about the history cleanup state and statistics about the cleanable and deleted data. Moreover, the page allows to manually perform various operations related to the history cleanup.
+Cleanup State Information and operations related to the history cleanup vary on its state.</description>
     </item>
     
     <item>
@@ -3962,8 +3964,8 @@ Parameters Path Parameters  Name Description   id The id of the user to be retri
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/webapps/cockpit/bpmn/process-history-views/</guid>
-      <description>Enterprise FeaturePlease note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
-Check the Camunda enterprise homepagefor more information or get yourfree trial version.At the top of the process definition view and the process instance view, you can hit the History button to access the history view.
+      <description>企业版特征Please note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
+查看 Camunda 企业版主页了解更多信息以及获得免费试用版。At the top of the process definition view and the process instance view, you can hit the History button to access the history view.
 Process Definition History View In the history view of the process definition you see an overview of all of the running and completed process instances.</description>
     </item>
     
@@ -4172,8 +4174,8 @@ Parameters Request Body A JSON object with the following properties:
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/spring-boot-integration/webapps/</guid>
       <description>To enable the Web Applications you can use the following starter in your pom.xml:
 &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.camunda.bpm.springboot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;camunda-bpm-spring-boot-starter-webapp&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;{project-version}&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt;  By default the application path is /camunda, so without any further configuration you can access the Webapps under http://localhost:8080/camunda/app/.
-Enterprise webapps Enterprise FeaturePlease note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
-Check the Camunda enterprise homepagefor more information or get yourfree trial version.</description>
+Enterprise webapps 企业版特征Please note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
+查看 Camunda 企业版主页了解更多信息以及获得免费试用版。To use the enterprise Web applications, include another starter:</description>
     </item>
     
     <item>
@@ -4221,8 +4223,8 @@ Enterprise webapps Enterprise FeaturePlease note that this feature is only incl
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/webapps/cockpit/auditing/</guid>
-      <description>Enterprise FeaturePlease note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
-Check the Camunda enterprise homepagefor more information or get yourfree trial version.Since Cockpit is a very powerful tool, it is often desired to inspect which user performed which operation for auditing purposes. Cockpit operations that change state are logged in the Camunda Platform&amp;rsquo;s user operation log that is part of the process engine history.</description>
+      <description>企业版特征Please note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
+查看 Camunda 企业版主页了解更多信息以及获得免费试用版。Since Cockpit is a very powerful tool, it is often desired to inspect which user performed which operation for auditing purposes. Cockpit operations that change state are logged in the Camunda Platform&amp;rsquo;s user operation log that is part of the process engine history.</description>
     </item>
     
     <item>
@@ -4252,8 +4254,9 @@ Design The process engine has a dedicated thread called the Telemetry Reporter t
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/webapps/admin/auditing/</guid>
-      <description>Enterprise FeaturePlease note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
-Check the Camunda enterprise homepagefor more information or get yourfree trial version.It is often desired to inspect which user performed which operation for auditing purposes. Admin operations are logged in the user operation log that is part of the process engine&amp;rsquo;s history.</description>
+      <description>企业版特征Please note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
+查看 Camunda 企业版主页了解更多信息以及获得免费试用版。It is often desired to inspect which user performed which operation for auditing purposes. Admin operations are logged in the user operation log that is part of the process engine&amp;rsquo;s history. The log allows to understand
+ which operation was performed which user performed an operation when the operation was performed which entities (process instances, tasks, etc.</description>
     </item>
     
     <item>
@@ -4613,9 +4616,10 @@ Parameters Request Body A JSON object with the following properties:
       
       <guid>http://camunda-cn.shaochenfeng.com/installation/camunda-bpm-rpa-bridge/</guid>
       <description>This page describes the steps to orchestrate and execute RPA bots from Camunda Platform using the Camunda Platform RPA Bridge.
-Enterprise FeaturePlease note that the RPA bridge is only available as enterprise edition.
-Check the Camunda enterprise homepagefor more information or get yourfree trial version.Requirements Java Please make sure that you have the Java Runtime Environment 8+ installed.
-You can verify this by using your terminal, shell, or command line:</description>
+企业版特征Please note that the RPA bridge is only available as enterprise edition.
+查看 Camunda 企业版主页了解更多信息以及获得免费试用版。Requirements Java Please make sure that you have the Java Runtime Environment 8+ installed.
+You can verify this by using your terminal, shell, or command line:
+java -version  If you need to install a Java Runtime Environment, you can find the download from Oracle here.</description>
     </item>
     
     <item>
@@ -4690,8 +4694,9 @@ History LevelHistory level FULL is required. Otherwise, no history for decision
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/webapps/cockpit/bpmn/process-instance-restart/</guid>
-      <description>Enterprise FeaturePlease note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
-Check the Camunda enterprise homepagefor more information or get yourfree trial version.In the history view, you can restart process instances individually or by a batch operation. A restart can consist of one or multiple of the following operations:</description>
+      <description>企业版特征Please note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
+查看 Camunda 企业版主页了解更多信息以及获得免费试用版。In the history view, you can restart process instances individually or by a batch operation. A restart can consist of one or multiple of the following operations:
+ Restart before an activity Restart after an activity, on its single outgoing sequence flow  Perform Restart A restart of a terminated process instance includes instructions which are displayed in the bottom of the screen, after you have selected the restart tab in the history view (1).</description>
     </item>
     
     <item>
@@ -4742,8 +4747,8 @@ Example The following example shows an XML snippet which can be placed in both p
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/webapps/cockpit/bpmn/process-instance-modification/</guid>
-      <description>Enterprise FeaturePlease note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
-Check the Camunda enterprise homepagefor more information or get yourfree trial version.In the detail view, you can modify the process instance&amp;rsquo;s execution state. A modification can be one or multiple of the following operations:
+      <description>企业版特征Please note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
+查看 Camunda 企业版主页了解更多信息以及获得免费试用版。In the detail view, you can modify the process instance&amp;rsquo;s execution state. A modification can be one or multiple of the following operations:
  Starting execution before an activity Starting execution after an activity on its single outgoing sequence flow Canceling an activity instance or all instances of an activity  Perform a Modification A modification consists of multiple instructions, which are displayed in the modification tab at the bottom half of the screen (1).</description>
     </item>
     
@@ -4801,7 +4806,7 @@ public void testRepositoryService() { String decisionDefinitionId = repositorySe
 关于流程引擎中脚本的一般信息，请参见用户指南中的脚本部分。
 支持的脚本语言Camunda平台应该可以与大多数JSR-223兼容的脚本引擎实现协同工作。我们测试了Groovy、JavaScript、JRuby和Jython的集成。请参阅用户指南 的 第三方依赖性部分了解更多细节。
 脚本中的变量 所有通过执行到达脚本任务中的流程变量都可以在脚本中使用。在下面的例子中，脚本变量inputArray实际上是一个流程变量（一个整数的列表）。
-&amp;lt;script&amp;gt; sum = 0 for ( i in inputArray ) { sum += i } &amp;lt;/script&amp;gt;  也可以在脚本中设置过程变量。变量可以通过使用VariableScope接口提供的setVariable(..)方法来设置。
+&amp;lt;script&amp;gt; sum = 0 for ( i in inputArray ) { sum += i } &amp;lt;/script&amp;gt;  也可以在脚本中设置流程变量。变量可以通过使用VariableScope接口提供的setVariable(..)方法来设置。
 &amp;lt;script&amp;gt; sum = 0 for ( i in inputArray ) { sum += i } execution.</description>
     </item>
     
@@ -4951,8 +4956,8 @@ Serialized and Deserialized Object Values Object Values are instances of (non pr
       <description>虽然流程定义模型必须包含以何种顺序执行活动的顺序流，但有时也需要灵活地再次启动一个活动或取消一个正在运行的活动。例如，当流程模型存在错误（例如顺序流条件写错了）并且运行中的流程实例需要被纠正时，则以下API可以提供帮助：
  修复流程实例，其中一些步骤必须重复执行或跳过 将流程实例从流程定义的一个版本迁移到另一个版本 测试阶段：可以跳过或重复做一些活动，以便对个别流程段进行独立测试。  为了执行这样的操作，流程引擎提供 流程实例修改API ，包括 RuntimeService.createProcessInstanceModification(..)或 RuntimeService.createModification(...)。这些API允许通过使用流式的构造器在一次调用中指定多个 修改指令 。而且它还能做到：
  在一个活动之前就开始执行 在离开活动的序列流上开始执行 取消一个正在运行的活动实例 取消一个给定活动的所有运行实例 设置变量  流程实例自己修改自己不建议流程实例自己修改自己 ，试图修改它自己的流程实例的行为会导致不确定的结果，这应该被避免。
-Enterprise FeatureCamunda企业版提供了一个用户界面，可以在Camunda Cockpit的BPMN图上直观地对流程实例的进行修改。
-Check the Camunda enterprise homepagefor more information or get yourfree trial version.修改流程实例——案例 作为一个例子，请考虑以下流程模型。
+企业版特征Camunda企业版提供了一个用户界面，可以在Camunda Cockpit的BPMN图上直观地对流程实例的进行修改。
+查看 Camunda 企业版主页了解更多信息以及获得免费试用版。修改流程实例——案例 作为一个例子，请考虑以下流程模型。
  该模型显示了一个处理贷款申请的简单流程。让我们假设一份贷款申请已经到达，贷款申请已经被评估，并被确定为需要拒绝。这意味着，该流程实例有以下活动实例状态。
 ProcessInstance Decline Loan Application  现在，执行 Decline Loan Application 任务的工作人员认识到了评估结果是错误的，并得出结论，该申请还是应该被接受。虽然这种灵活性并不是流程的一部分，但对流程实例的修改允许纠正运行中的流程实例。使用下面的API调用就可以做到这一点：
 ProcessInstance processInstance = runtimeService.createProcessInstanceQuery().singleResult(); runtimeService.createProcessInstanceModification(processInstance.getId()) .startBeforeActivity(&amp;quot;acceptLoanApplication&amp;quot;) .cancelAllForActivity(&amp;quot;declineLoanApplication&amp;quot;) .execute();  这个命令首先在活动 Accept Loan Application 之前开始执行，直到达到一个等待状态&amp;ndash;在这种情况下是用户任务的创建。之后，它取消了活动 Decline Loan Application 的所有运行实例。在工作者的任务列表中， Decline 任务已被删除，而 Accept 任务已出现。最后活动实例的状态是：</description>
@@ -5019,8 +5024,8 @@ ProcessDefinition processDefinition = ...; List&amp;lt;String&amp;gt; processIns
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/webapps/cockpit/bpmn/process-instance-migration/</guid>
-      <description>Enterprise FeaturePlease note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
-Check the Camunda enterprise homepagefor more information or get yourfree trial version.You can migrate running process instances from their current process definition version to another version of that definition or another process definition altogether. You can access the migration page by navigating to the process definition or instance view of a process with multiple versions.</description>
+      <description>企业版特征Please note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
+查看 Camunda 企业版主页了解更多信息以及获得免费试用版。You can migrate running process instances from their current process definition version to another version of that definition or another process definition altogether. You can access the migration page by navigating to the process definition or instance view of a process with multiple versions.</description>
     </item>
     
     <item>
@@ -5449,7 +5454,8 @@ ProcessInstance pi = runtimeService.startProcessInstanceByKey(&amp;quot;receiveT
       
       <guid>http://camunda-cn.shaochenfeng.com/webapps/cockpit/reporting/</guid>
       <description>You can use the reports section of cockpit to display custom statistics and reports. Please note that this section is not visible if no report is available. Refer to the Cockpit Plugins section for adding a custom reporting plugin.
-Process Instance Duration Report Enterprise FeaturePlease note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.</description>
+Process Instance Duration Report 企业版特征Please note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
+查看 Camunda 企业版主页了解更多信息以及获得免费试用版。This report shows the average, minimum and maximum duration for a selected process definition and version for a given timeframe.</description>
     </item>
     
     <item>
@@ -6810,7 +6816,7 @@ Parameters Path Parameters  Name Description   id The id of the execution to set
     </item>
     
     <item>
-      <title>流程版本控制</title>
+      <title>流程定义版本控制</title>
       <link>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-versioning/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -6828,14 +6834,24 @@ ProcessDefinition pd = processEngine.getRepositoryService().createProcessDefinit
     </item>
     
     <item>
-      <title>过程实例迁移</title>
+      <title>流程实例迁移</title>
       <link>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-instance-migration/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-instance-migration/</guid>
-      <description>Whenever a new version of a process definition is deployed, existing process instances that run on previous versions are not affected. That means, the new process definition does not apply to them automatically. If process instances are supposed to continue execution on a different process definition, the process instance migration API can be employed.
-Migration consists of two parts:
- Creating a migration plan that describes how process instances are to be migrated from one process definition to another Applying the migration plan to a set of process instances  A migration plan consists of a set of migration instructions that in essence are mappings between activities of the two process definitions.</description>
+      <description>当部署流程定义的新版本时，在以前版本上运行的现有流程实例不受影响。这意味着，新的流程定义不会影响它们。如果流程实例应该在新的流程定义上继续执行，可以使用 流程实例迁移 API。
+迁移分为两部分：
+ 创建一个 迁移计划 ，描述如何将流程实例从一个流程定义迁移到另一个流程定义。 将迁移计划应用于流程实例  迁移计划由一组 迁移指令 组成的，这些指令实质上是两个流程定义活动之间的映射。具体地说，就是把 源流程定义 的活动（即流程实例被迁移出来的流程）映射到 目标流程定义 的活动（即流程实例被迁移到的流程）。迁移指令确保源活动的一个实例被迁移到目标活动的一个实例中。当所有的迁移来源都有对应的迁移指令时，迁移计划定义就完成了。
+迁移指令的目的是为了映射语义上相等的活动。因此，迁移需要尽可能少地干扰活动实例的状态，以确保无缝过渡。 例如，被迁移的用户任务实例不会被重新分配。从受让人的角度来看，迁移基本上是透明的，所以迁移前开始的任务在迁移后可以顺利完成。 同样的原则也适用于其他BPMN元素类型。
+对于活动在语义上不等同的情况。 我们建议将迁移与 流程实例修改 API 结合起来。例如：在迁移前取消一个活动实例，在迁移后启动一个新的实例。
+在本节的其余部分，除非另有说明，否则将使用以下流程模型来说明API和迁移的影响：
+exampleProcess:1:
+ exampleProcess:2:
+ 企业版特征Camunda企业版的Camunda Cockpit提供了一个用于迁移流程实例的用户界面。
+查看 Camunda 企业版主页了解更多信息以及获得免费试用版。流程实例迁移案例 我们可以使用API接口 RuntimeService#createMigrationPlan 来定义一个迁移计划。 它返回一个流式构建器来创建一个迁移计划。对于上面的例子来说，代码如下：
+MigrationPlan migrationPlan = processEngine.getRuntimeService() .createMigrationPlan(&amp;quot;exampleProcess:1&amp;quot;, &amp;quot;exampleProcess:2&amp;quot;) .mapActivities(&amp;quot;assessCreditWorthiness&amp;quot;, &amp;quot;assessCreditWorthiness&amp;quot;) .mapActivities(&amp;quot;validateAddress&amp;quot;, &amp;quot;validatePostalAddress&amp;quot;) .mapActivities(&amp;quot;archiveApplication&amp;quot;, &amp;quot;archiveApplication&amp;quot;) .build();  mapActivities 调用各自指定了一个迁移指令，并表示第一个活动的实例应该成为第二个活动的实例。
+让我们假设我们有一个流程实例处于以下活动实例状态：
+ProcessInstance ├── Archive Application └── Assess Credit Worthiness └── Validate Address  为了根据定义的迁移计划迁移这个流程实例，可以使用API方法RuntimeService#newMigration。</description>
     </item>
     
     <item>

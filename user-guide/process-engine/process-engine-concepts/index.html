@@ -376,7 +376,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/process-engine/process-versioning/" >流程版本控制</a>
+      <a href="/user-guide/process-engine/process-versioning/" >流程定义版本控制</a>
     
   </li>
 
@@ -384,7 +384,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/process-engine/process-instance-migration/" >过程实例迁移</a>
+      <a href="/user-guide/process-engine/process-instance-migration/" >流程实例迁移</a>
     
   </li>
 
@@ -1355,7 +1355,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/reference/rest/" >Rest Api</a>
+      <a href="/reference/rest/" >REST API</a>
       <ul>
         
           
@@ -8182,7 +8182,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="col-xs-12 content-text">
       
 
-<p>本节介绍了一些核心过程引擎概念，用于流程引擎API和内部流程引擎实现。了解这些基础知识可以更容易的额使用流程引擎API。</p>
+<p>本节介绍了一些核心流程引擎概念，用于流程引擎API和内部流程引擎实现。了解这些基础知识可以更容易的额使用流程引擎API。</p>
 
 <h1 id="流程定义">流程定义</h1>
 
@@ -8272,7 +8272,7 @@ ProcessInstance instance = runtimeService.startProcessInstanceByKey(&quot;invoic
 &lt;/process&gt;
 </code></pre>
 
-<h2 id="在任何一组活动中启动一个过程实例">在任何一组活动中启动一个过程实例</h2>
+<h2 id="在任何一组活动中启动一个流程实例">在任何一组活动中启动一个流程实例</h2>
 
 <p><code>startProcessInstanceByKey</code>和<code>startProcessInstanceById</code>方法在其默认的初始活动处启动流程实例，这通常是流程定义的单一空白启动事件。通过使用流程实例的<strong>fluent builder</strong>，也可以在流程实例的任何地方启动。可以通过RuntimeService的方法<code>createProcessInstanceByKey</code>和<code>createProcessInstanceById</code>来访问fluent builder。</p>
 
@@ -8319,7 +8319,7 @@ ProcessInstance instance = runtimeService.startProcessInstanceByKey(&quot;invoic
 
 <h2 id="流程变量的交互">流程变量的交互</h2>
 
-<p>一旦你对一个特定的过程实例（或过程实例的列表）进行了查询，你可能想与它进行交互。有多种可能性与一个流程实例进行交互，最典型的是：</p>
+<p>一旦你对一个特定的流程实例（或流程实例的列表）进行了查询，你可能想与它进行交互。有多种可能性与一个流程实例进行交互，最典型的是：</p>
 
 <ul>
 <li>触发它（使其继续执行）：
@@ -8537,7 +8537,7 @@ for (JobDefinition jobDefinition : jobDefinitions) {
 <ul>
 <li><a href="#通过-tasklist-创建流程实例">通过 Tasklist 创建流程实例</a></li>
 </ul></li>
-<li><a href="#在任何一组活动中启动一个过程实例">在任何一组活动中启动一个过程实例</a>
+<li><a href="#在任何一组活动中启动一个流程实例">在任何一组活动中启动一个流程实例</a>
 <ul>
 <li><a href="#启动时返回的变量">启动时返回的变量</a></li>
 </ul></li>

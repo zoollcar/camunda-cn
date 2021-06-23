@@ -376,7 +376,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/process-engine/process-versioning/" >流程版本控制</a>
+      <a href="/user-guide/process-engine/process-versioning/" >流程定义版本控制</a>
     
   </li>
 
@@ -384,7 +384,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/process-engine/process-instance-migration/" >过程实例迁移</a>
+      <a href="/user-guide/process-engine/process-instance-migration/" >流程实例迁移</a>
     
   </li>
 
@@ -1355,7 +1355,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/reference/rest/" >Rest Api</a>
+      <a href="/reference/rest/" >REST API</a>
       <ul>
         
           
@@ -8252,7 +8252,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <h1 id="外部任务">外部任务</h1>
 
-<p>与调用Java代码相比，流程引擎同步调用Java逻辑，可以以外部任务的形式实现流程引擎边界之外的服务任务。当服务任务声明为外部时，流程引擎为工人提供工作项，该工人独立地研究了发动机以进行工作。这使得从过程引擎执行任务的实施，并允许跨系统和技术边界。查阅 <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/external-tasks/">外部任务的用户指南</a> 了解相关概念和相关API的详细信息。</p>
+<p>与调用Java代码相比，流程引擎同步调用Java逻辑，可以以外部任务的形式实现流程引擎边界之外的服务任务。当服务任务声明为外部时，流程引擎为工人提供工作项，该工人独立地研究了发动机以进行工作。这使得从流程引擎执行任务的实施，并允许跨系统和技术边界。查阅 <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/external-tasks/">外部任务的用户指南</a> 了解相关概念和相关API的详细信息。</p>
 
 <p>要声明要在外部处理的服务任务，属性 <code>camunda:type</code> 可以设置为 <code>external</code> 和属性 <code>camunda:topic</code> 指定外部任务的主题。例如，以下XML片段定义了具有主题的外部服务任务<code>ShipmentProcessing</code>:</p>
 

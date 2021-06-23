@@ -483,6 +483,10 @@
   </url>
   
   <url>
+    <loc>http://camunda-cn.shaochenfeng.com/reference/rest/</loc>
+  </url>
+  
+  <url>
     <loc>http://camunda-cn.shaochenfeng.com/user-guide/model-api/bpmn-model-api/read-a-model/</loc>
   </url>
   
@@ -504,10 +508,6 @@
   
   <url>
     <loc>http://camunda-cn.shaochenfeng.com/reference/rest/incident/resolve-incident/</loc>
-  </url>
-  
-  <url>
-    <loc>http://camunda-cn.shaochenfeng.com/reference/rest/</loc>
   </url>
   
   <url>

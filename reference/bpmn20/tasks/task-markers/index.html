@@ -376,7 +376,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/process-engine/process-versioning/" >流程版本控制</a>
+      <a href="/user-guide/process-engine/process-versioning/" >流程定义版本控制</a>
     
   </li>
 
@@ -384,7 +384,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/process-engine/process-instance-migration/" >过程实例迁移</a>
+      <a href="/user-guide/process-engine/process-instance-migration/" >流程实例迁移</a>
     
   </li>
 
@@ -1355,7 +1355,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/reference/rest/" >Rest Api</a>
+      <a href="/reference/rest/" >REST API</a>
       <ul>
         
           
@@ -8248,7 +8248,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 &lt;/multiInstanceLoopCharacteristics&gt;
 </code></pre>
 
-<p>另一种定义实例数量的方法是指定一个过程变量的名称，该变量是一个使用<code>loopDataInputRef</code>子元素的集合。对于集合中的每个项目，将创建一个实例。可以选择使用inputDataItem子元素为实例设置集合中的那个特定项目。这在下面的XML例子中显示。</p>
+<p>另一种定义实例数量的方法是指定一个流程变量的名称，该变量是一个使用<code>loopDataInputRef</code>子元素的集合。对于集合中的每个项目，将创建一个实例。可以选择使用inputDataItem子元素为实例设置集合中的那个特定项目。这在下面的XML例子中显示。</p>
 
 <pre><code class="language-xml">&lt;userTask id=&quot;miTasks&quot; name=&quot;My Task ${loopCounter}&quot; camunda:assignee=&quot;${assignee}&quot;&gt;
   &lt;multiInstanceLoopCharacteristics isSequential=&quot;false&quot;&gt;
