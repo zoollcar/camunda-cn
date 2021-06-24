@@ -398,7 +398,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/process-engine/database/database-schema/" >数据库结构</a>
+      <a href="/user-guide/process-engine/database/database-schema/" >数据库表结构</a>
     
   </li>
 
@@ -8182,18 +8182,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="col-xs-12 content-text">
       
 
-<p>This section documents the supported Galera Cluster configuration for MariaDB. Both server and client need to be configured correctly. Please note that there are some <a href="#galera-cluster-known-limitations">known limitations</a> which apply when using Galera cluster, see below.</p>
+<p>本节记录了MariaDB所支持的Galera Cluster配置。服务器和客户端都需要进行正确的配置。请注意，在使用Galera集群时，有一些<a href="#galera-cluster-的已知的限制">已知的限制</a>，详情见下文：</p>
 
 
 <div class="note bg-warning docs-warning">
-  <h3>Warning</h3>
-  <p>Please note that server and client configuration settings defined below are the only configuration that is supported for Galera Cluster. Other configurations are not supported.</p>
+  <h3>警告</h3>
+  <p>请注意，下面定义的服务器和客户端配置设置是唯一支持Galera Cluster的配置。其他配置都不支持。</p>
 </div>
 
 
-<h3 id="server-configuration">Server Configuration</h3>
+<h3 id="服务器配置">服务器配置</h3>
 
-<p>The following configuration needs to go into the <code>[galera]</code> configuration section in the <code>my.cnf.d/server.cnf</code> on each server:</p>
+<p>以下配置需要放入到每个服务器的 <code>my.cnf.d/server.cnf</code> 配置文件的 <code>[galera]</code> 部分。</p>
 
 <pre><code>[galera]
 binlog_format=row
@@ -8206,40 +8206,40 @@ wsrep_sync_wait = 7
 ...
 </code></pre>
 
-<p>Note that other setting may be present in this section but the settings <code>transaction-isolation</code>, <code>wsrep_on</code>, <code>wsrep_causal_reads</code> and <code>wsrep_sync_wait</code> need to present and need to have <strong>exactly</strong> the values shown above.</p>
+<p>请注意，一些其他设置也可能会出现在这一部分，但是 &ldquo;transaction-isolation&rdquo;、&rdquo;wsrep_on&rdquo;、&rdquo;wsrep_causal_reads&rdquo; 和 &ldquo;wsrep_sync_wait&rdquo; 的设置必须设置，且具有 <strong>完全相同</strong> 的值。</p>
 
-<h3 id="client-configuration">Client Configuration</h3>
+<h3 id="客户端配置">客户端配置</h3>
 
-<p>Only <code>failover</code> and <code>sequential</code> configurations are supported. <strong>Other client configuration modes like <code>replication:</code>, <code>loadbalance:</code>, <code>aurora:</code> are not supported.</strong></p>
+<p>只有 <code>failover</code> 和 <code>sequential</code> 配置是支持的。 <strong>其他客户端模式，如 <code>replication:</code>, <code>loadbalance:</code>, <code>aurora:</code> 均不支持</strong></p>
 
-<p>The following is the required format of the jdbcUrl property in datasource configurations:</p>
+<p>以下是数据源配置中jdbcUrl属性的必要格式。</p>
 
 <pre><code>jdbc:mariadb:[failover|sequential]://[host1:port],[host2:port],.../[data-base-name]
 </code></pre>
 
-<p>Examples:</p>
+<p>示例:</p>
 
 <pre><code>jdbc:mariadb:failover://192.168.1.1:32980,192.168.1.2:32980,192.168.1.3:32980/process-engine
 jdbc:mariadb:sequential://192.168.1.1:32980,192.168.1.2:32980,192.168.1.3:32980/process-engine
 </code></pre>
 
-<p>Important: when running Camunda in a cluster, the client configuration needs to be the same on each node.</p>
+<p>重要提示：在群集中运行Camunda时，客户端配置需要在每个节点上相同。</p>
 
-<h3 id="galera-cluster-known-limitations">Galera Cluster Known Limitations</h3>
+<h3 id="galera-cluster-的已知的限制">Galera Cluster 的已知的限制</h3>
 
-<p>The following known limitations apply when using Galera Cluster:</p>
+<p>使用Galera Cluster时，有以下已知限制：</p>
 
 <ol>
-<li>APIs requiring Pessimistic read locks in the database do not work correctly. Affected APIs: Exclusive Message correlation (<code>.correlateExclusively()</code>). See (<a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/engine/runtime/MessageCorrelationBuilder.html#correlateExclusively%28%29">Javadocs</a>
-).
-Another possible negative effects:
+<li>在数据库中需要悲观的读锁的API不能正确工作。受影响的API。独家消息相关（<code>.correlateExclusively()</code>）。参见(<a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/engine/runtime/MessageCorrelationBuilder.html#correlateExclusively%28%29">Javadocs</a>
+)。
+另一个可能的负面效应。
 
 <ul>
-<li>duplication of deployed definitions when deploying the same resources from two threads simultaneously</li>
-<li>duplication of history cleanup job when calling <code>HistoryService#cleanUpHistoryAsync</code> from two threads simultaneously</li>
+<li>当从两个线程同时部署相同的资源时，会重复部署定义。</li>
+<li>当从两个线程同时调用 &ldquo;HistoryService#cleanUpHistoryAsync&rdquo; 时，会重复执行历史清理工作。</li>
 </ul></li>
-<li>Duplicate checking during deployment does not work if resources are deployed in a cluster concurrently. Concrete impact: suppose there is a Camunda process engine cluster which connects to the same Galera cluster. On deployment of a new process application the process engine nodes will check if the BPMN processes provided by the process application are already deployed, to avoid duplicate deployments. If the deployment is done simultaneously on multiple process engine nodes an exclusive read lock is acquired on the the database (technically, this means that each node performs an SQL <code>select for update</code> query.), to do the duplicate checking reliably under concurrency. This does not work on Galera Cluster and may lead to multiple versions of the same process being deployed.</li>
-<li>The <code>jdbcStatementTimeout</code> configuration setting does not work and cannot be used.</li>
+<li>如果资源同时部署在一个集群中，部署期间的重复检查不起作用。具体影响是：假设有一个Camunda流程引擎集群，它连接到同一个Galera集群。在部署一个新的流程应用时，流程引擎节点将检查流程应用所提供的BPMN流程是否已经部署，以避免重复部署。如果在多个进程引擎节点上同时进行部署，就会在数据库上获得一个独占的读锁（技术上来说，这意味着每个节点执行一个SQL &ldquo;选择更新 &ldquo;的查询。这在Galera Cluster上不起作用，可能导致同一进程的多个版本被部署。</li>
+<li><code>jdbcStatementTimeout</code> 配置项不起作用，不能使用。</li>
 </ol>
 
     </div>
@@ -8254,9 +8254,9 @@ Another possible negative effects:
 <ul>
 <li>
 <ul>
-<li><a href="#server-configuration">Server Configuration</a></li>
-<li><a href="#client-configuration">Client Configuration</a></li>
-<li><a href="#galera-cluster-known-limitations">Galera Cluster Known Limitations</a></li>
+<li><a href="#服务器配置">服务器配置</a></li>
+<li><a href="#客户端配置">客户端配置</a></li>
+<li><a href="#galera-cluster-的已知的限制">Galera Cluster 的已知的限制</a></li>
 </ul></li>
 </ul></li>
 </ul>

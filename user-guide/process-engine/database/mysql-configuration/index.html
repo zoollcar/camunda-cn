@@ -398,7 +398,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/process-engine/database/database-schema/" >数据库结构</a>
+      <a href="/user-guide/process-engine/database/database-schema/" >数据库表结构</a>
     
   </li>
 
@@ -8182,52 +8182,45 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="col-xs-12 content-text">
       
 
-<p>This section documents the supported MySQL configuration.</p>
+<p>本节描述了如何进行 MySQL 配置。</p>
 
-<h2 id="database-schema">Database Schema</h2>
+<h2 id="数据库表结构">数据库表结构</h2>
 
-<p>The engine&rsquo;s MySQL database schema does not support milliseconds precision for the column types <code>TIMESTAMP</code> and <code>DATETIME</code>:
-I.e., a to be stored value is rounded to the next or previous second, e.g., <code>2021-01-01 15:00:46.731</code> is rounded to <code>2021-01-01 15:00:47</code>.</p>
-
-
-<div class="note bg-info docs-info">
-  <h3>Heads Up!</h3>
-  <p>The missing millisecond’s precision for date/time values impacts the process engine&rsquo;s behavior.
-Please read <a href="#jdbc-driver-configuration">how to configure the MySQL JDBC Driver</a>
-to ensure that date/time values are handled correctly.</p>
-</div>
-
-
-<h2 id="jdbc-driver-configuration">JDBC Driver Configuration</h2>
-
-<p>Here you can find the MySQL JDBC Driver’s configuration prerequisites to ensure a frictionless behavior
-of the process engine.</p>
-
-<h3 id="disable-sending-milliseconds-for-date-time-values">Disable sending milliseconds for date/time values</h3>
+<p>引擎的MySQL数据库模式不支持列类型 <code>TIMESTAMP</code> 和 <code>DATETIME</code> 的毫秒精度。
+也就是会四舍五入到下一秒或上一秒，例如，<code>2021-01-01 15:00:46.731</code>被四舍五入到<code>2021-01-01 15:00:47</code>。</p>
 
 
 <div class="note bg-info docs-info">
-  <h3>Heads Up!</h3>
-  <p>This configuration flag is mandatory to avoid unexpected behavior when operating the process engine with MySQL.</p>
+  <h3>小心!</h3>
+  <p>日期/时间值缺失的毫秒精度会影响流程引擎的行为。
+请阅读<a href="#jdbc驱动配置">如何配置MySQL JDBC驱动程序</a>以确保正确处理日期/时间值。</p>
 </div>
 
 
-<p>When sending a date/time value as part of any SQL statement to the database, the MySQL JDBC Driver &gt;= 5.1.23 sends milliseconds.
-This behavior is problematic since the engine&rsquo;s MySQL database <a href="#database-schema">schema does not support milliseconds precision for date/time values</a>.</p>
+<h2 id="jdbc驱动配置">JDBC驱动配置</h2>
 
-<p>To ensure correct behavior of the process engine when sending date/time values, make sure to update your MySQL JDBC Driver to a version &gt;= 5.1.37.
-You can avoid sending milliseconds to the MySQL Server in these versions by setting <a href="https://dev.mysql.com/doc/connector-j/8.0/en/connector-j-connp-props-datetime-types-processing.html#cj-conn-prop_sendFractionalSeconds"><code>sendFractionalSeconds=false</code></a>
-in your JDBC connection URL.</p>
+<p>在这里你可以找到MySQL JDBC驱动程序的配置条件，以确保与流程引擎兼容。</p>
 
-<p>Please find below examples of unwanted behavior that occurs, in case the flag <code>sendFractionalSeconds=false</code> is not provided:</p>
+<h3 id="为-date-time-类型禁用发送毫秒精度">为 date/time 类型禁用发送毫秒精度</h3>
 
-<ul>
-<li>When a user performs a task query with <code>due date == 2021-01-01 15:00:46.731</code>, the query returns
-results equal to <code>2021-01-01 15:00:46.731</code>. However, since the engine&rsquo;s <a href="#database-schema">database schema does not store
-milliseconds</a>, no result is returned.</li>
-<li>When a user sets a due date to a task, the value is rounded to the next or previous second,
-e.g., <code>2021-01-01 15:00:46.731</code> is rounded to <code>2021-01-01 15:00:47</code>. Please also see the official <a href="https://dev.mysql.com/doc/refman/5.6/en/fractional-seconds.html">MySQL documentation</a>.</li>
-</ul>
+
+<div class="note bg-info docs-info">
+  <h3>小心!</h3>
+  <p>这个配置是必要的，以避免在用MySQL操作流程引擎时出现意外行为。</p>
+</div>
+
+
+<p>将date/time值发送到数据库的任何SQL语句的一部分时, 当 MySQL JDBC驱动 &gt;= 5.1.23 时会发送毫秒。
+在使用MySQL数据库时，这个行为会导致问题。 <a href="#database-schema">表结构不支持带有毫秒的 date/time 类型值</a>。</p>
+
+<p>在发送date/time值时确保流程引擎的正确行为， 确保将MySQL JDBC驱动程序更新为版本&gt; = 5.1.37。
+在这些版本中，你可以通过设置<a href="https://dev.mysql.com/doc/connector-j/8.0/en/connector-j-connp-props-datetime-types-processing.html#cj-conn-prop_sendFractionalSeconds"><code>sendFractionalSeconds=false</code></a>来避免向MySQL服务器发送毫秒。
+在你的JDBC连接URL中设置<a href="https://dev.mysql.com/doc/connector-j/8.0/en/connector-j-connp-props-datetime-types-processing.html#cj-conn-prop_sendFractionalSeconds">sendFractionalSeconds=false</a>。</p>
+
+<p>下面是在没有配置 &ldquo;sendFractionalSeconds=false&rdquo; 标志的情况下发生的问题行为的例子：</p>
+
+<p>*当用户以<code>due date == 2021-01-01 15:00:46.731</code>执行任务查询时，该查询返回的结果等于<code>2021-01-01 15:00:46.731</code>。然而，由于引擎的<a href="#database-schema">数据库模式不存储毫秒</a>，没有返回结果。
+* 当用户为任务设置due date时，该值被四舍五入到下一秒或前一秒，例如，<code>2021-01-01 15:00:46.731</code>被四舍五入为<code>2021-01-01 15:00:47</code>。也请参见官方<a href="https://dev.mysql.com/doc/refman/5.6/en/fractional-seconds.html">MySQL文档</a>。</p>
 
     </div>
   </div>
@@ -8239,10 +8232,10 @@ e.g., <code>2021-01-01 15:00:46.731</code> is rounded to <code>2021-01-01 15:00:
 <ul>
 <li>
 <ul>
-<li><a href="#database-schema">Database Schema</a></li>
-<li><a href="#jdbc-driver-configuration">JDBC Driver Configuration</a>
+<li><a href="#数据库表结构">数据库表结构</a></li>
+<li><a href="#jdbc驱动配置">JDBC驱动配置</a>
 <ul>
-<li><a href="#disable-sending-milliseconds-for-date-time-values">Disable sending milliseconds for date/time values</a></li>
+<li><a href="#为-date-time-类型禁用发送毫秒精度">为 date/time 类型禁用发送毫秒精度</a></li>
 </ul></li>
 </ul></li>
 </ul>

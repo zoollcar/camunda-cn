@@ -59,7 +59,7 @@ var _mtac = {};
     
   
 
-  <title>数据库结构 | docs.camunda.org</title>
+  <title>数据库表结构 | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
   <link rel="shortcut icon" href="http://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
@@ -398,7 +398,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/process-engine/database/database-schema/" >数据库结构</a>
+      <a href="/user-guide/process-engine/database/database-schema/" >数据库表结构</a>
     
   </li>
 
@@ -8176,27 +8176,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <i>编辑此页</i> <span class="cam-docs-github"></span></a>
 </div>
 
-      <h1 class="page-title">数据库结构</h1>
+      <h1 class="page-title">数据库表结构</h1>
     </div>
 
     <div class="col-xs-12 content-text">
       
 
-<p>The database schema of the process engine consists of multiple tables.
-The table names all start with ACT. The second part is a two-character
-identification of the use case of the table. This use case will also roughly
-match the service API.</p>
+<p>流程引擎的数据库由多个表组成。
+表的名称都以ACT开头的。后面是说明表的用途的两个字符标识。这个用途标志也将与服务API大致匹配。</p>
 
 <ul>
-<li><code>ACT_RE_*</code>: <code>RE</code> stands for repository. Tables with this prefix contain &lsquo;static&rsquo; information such as process definitions and process resources (images, rules, etc.).</li>
-<li><code>ACT_RU_*</code>: <code>RU</code> stands for runtime. These are the runtime tables that contain the runtime data of process instances, user tasks, variables, jobs, etc. The engine only stores the runtime data during process instance execution and removes the records when a process instance ends. This keeps the runtime tables small and fast.</li>
-<li><code>ACT_ID_*</code>: <code>ID</code> stands for identity. These tables contain identity information such as users, groups, etc.</li>
-<li><code>ACT_HI_*</code>: <code>HI</code> stands for history. These are the tables that contain historical data such as past process instances, variables, tasks, etc.</li>
-<li><code>ACT_GE_*</code>: General data, which is used in various use cases.</li>
+<li><code>ACT_RE_*</code>: <code>RE</code>代表资源库。带有这个前缀的表包含 &ldquo;静态 &ldquo;信息，如流程定义和流程资源（图像、规则等）。</li>
+<li><code>ACT_RU_*</code>: <code>RU</code>代表运行时。包含流程实例、用户任务、变量、作业等的运行时数据。引擎只在流程实例执行期间存储运行时数据，并在流程实例结束时删除记录。这使运行时表保持小而快。</li>
+<li><code>ACT_ID_*</code>: <code>ID</code>代表身份信息。这些表包含身份信息有用户、组等。</li>
+<li><code>ACT_HI_*</code>: <code>HI</code>代表历史。这些是包含历史数据的表，如过去的流程实例、变量、任务等。</li>
+<li><code>ACT_GE_*</code>: 一般数据，在各种使用情况下使用。</li>
 </ul>
 
-<p>The main tables of the process engines are the entities of process definitions, executions, tasks, variables and
-event subscriptions. Their relationship is shown in the following UML model.</p>
+<p>流程引擎的主要表是流程定义、执行、任务、变量和事件订阅的实体。它们的关系显示在下面的UML模型中：</p>
 
 <figure class="image">
   <span><img
@@ -8207,57 +8204,38 @@ event subscriptions. Their relationship is shown in the following UML model.</p>
 </figure>
 
 
-<h2 id="process-definitions-act-re-procdef">Process Definitions (<code>ACT_RE_PROCDEF</code>)</h2>
+<h2 id="流程定义-act-re-procdef">流程定义 (<code>ACT_RE_PROCDEF</code>)</h2>
 
-<p>The <code>ACT_RE_PROCDEF</code> table contains all deployed process definitions. It
-includes information like the version details, the resource name or the
-suspension state.</p>
+<p><code>ACT RE Procdef</code> 表包含所有已部署的流程定义。它包括有版本详细信息，资源名称或暂停状态等信息。</p>
 
-<h2 id="executions-act-ru-execution">Executions (<code>ACT_RU_EXECUTION</code>)</h2>
+<h2 id="执行-act-ru-execution">执行 (<code>ACT_RU_EXECUTION</code>)</h2>
 
-<p>The <code>ACT_RU_EXECUTION</code> table contains all current executions. It includes
-information like the process definition, parent execution, business key, the
-current activity and different metadata about the state of the execution.</p>
+<p><code>ACT_RU_EXECUTION</code> 表包含所有当前的执行。它包括有流程定义，父执行，业务密钥，当前活动和关于执行状态的不同元数据的信息。</p>
 
-<h2 id="tasks-act-ru-task">Tasks (<code>ACT_RU_TASK</code>)</h2>
+<h2 id="任务-act-ru-task">任务 (<code>ACT_RU_TASK</code>)</h2>
 
-<p>The <code>ACT_RU_TASK</code> table contains all open tasks of all running process
-instances. It includes information like the corresponding process instance,
-execution and also metadata such as creation time, assignee or due date.</p>
+<p><code>ACT_RU_TASK</code> 表包含所有正在运行的流程实例的所有执行中的任务。它包括有相应的流程实例，执行以及元数据等信息，例如创建时间，受让人或截止日期。</p>
 
-<h2 id="variables-act-ru-variable">Variables (<code>ACT_RU_VARIABLE</code>)</h2>
+<h2 id="变量-act-ru-variable">变量 (<code>ACT_RU_VARIABLE</code>)</h2>
 
-<p>The <code>ACT_RU_VARIABLE</code> table contains all currently set process or task
-variables. It includes the names, types and values of the variables and
-information about the corresponding process instance or task.</p>
+<p><code>ACT_RU_VARIABLE</code> 表包含所有当前设置的流程或任务变量。它包括变量的名称、类型和值以及相应流程实例或任务的信息。</p>
 
-<h2 id="event-subscriptions-act-ru-event-subscr">Event Subscriptions (<code>ACT_RU_EVENT_SUBSCR</code>)</h2>
+<h2 id="事件订阅-act-ru-event-subscr">事件订阅 (<code>ACT_RU_EVENT_SUBSCR</code>)</h2>
 
-<p>The <code>ACT_RU_EVENT_SUBSCR</code> table contains all currently existing event
-subscriptions. It includes the type, name and configuration of the expected
-event along with information about the corresponding process instance and
-execution.</p>
+<p><code>ACT_RU_EVENT_SUBSCR</code> 表包含所有当前现有的事件订阅。它包括预期事件的类型、名称和配置以及相应的流程实例和执行的信息。</p>
 
-<h2 id="schema-log-act-ge-schema-log">Schema Log (<code>ACT_GE_SCHEMA_LOG</code>)</h2>
+<h2 id="表结构日志-act-ge-schema-log">表结构日志 (<code>ACT_GE_SCHEMA_LOG</code>)</h2>
 
-<p>The <code>ACT_GE_SCHEMA_LOG</code> table contains a history of the database
-schema version. New entries to the table are written when changes to
-the database schema are made. On database creation the initial entry
-is added. Every update script adds a new entry containing an <code>id</code>,
-the <code>version</code> the database was updated to and the date and time
-(<code>timestamp</code>) of the update.</p>
+<p><code>ACT_GE_SCHEMA_LOG</code> 表记录数据库表结构版本的历史记录。在进行表结构修改时都会写入记录。在数据库创建时会写入一条初试信息，以后每次修改都会记录<code>id</code> 、版本、数据库更新日期以及时间戳。</p>
 
-<p>To retrieve entries from the schema log, the SchemaLogQuery-API can be
-used:</p>
+<p>要从表结构日志中查询条目，可以使用查询API：</p>
 
 <pre><code class="language-java">List&lt;SchemaLogEntry&gt; entries = managementService.createSchemaLogQuery().list();
 </code></pre>
 
-<h2 id="metrics-log-act-ru-meter-log">Metrics Log (ACT_RU_METER_LOG)</h2>
+<h2 id="metrics日志-act-ru-meter-log">Metrics日志 (ACT_RU_METER_LOG)</h2>
 
-<p>The <code>ACT_RU_METER_LOG</code> table contains a collection of runtime metrics that can help draw conclusions about usage, load
-and performance of the Camunda Platform. Metrics are reported as numbers in the Java <code>long</code> range and count the occurrence of
-specific events. Please find detailed information about how metrics are collected in the <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/metrics/">Metrics User Guide</a>.</p>
+<p>The <code>ACT_RU_METER_LOG</code> table contains a collection of runtime metrics that can help draw conclusions about usage, load and performance of the Camunda Platform. Metrics are reported as numbers in the Java <code>long</code> range and count the occurrence of specific events. Please find detailed information about how metrics are collected in the <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/metrics/">Metrics User Guide</a>.</p>
 
 <p>The default configuration of the <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/metrics/#metrics-reporter">MetricsReporter</a> will create one row per <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/metrics/#built-in-metrics">metric</a> in <code>ACT_RU_METER_LOG</code> every 15 minutes.</p>
 
@@ -8268,10 +8246,9 @@ specific events. Please find detailed information about how metrics are collecte
 </div>
 
 
-<h2 id="task-metrics-log-act-ru-task-meter-log">Task Metrics Log (ACT_RU_TASK_METER_LOG)</h2>
+<h2 id="task-metrics-日志-act-ru-task-meter-log">Task Metrics 日志 (ACT_RU_TASK_METER_LOG)</h2>
 
-<p>The <code>ACT_RU_TASK_METER_LOG</code> table contains a collection of task related metrics that can help draw conclusions about usage, load
-and performance of the BPM platform. Task metrics contain a pseudonymized and fixed-length value of task assignees and their time of appearance. Please find detailed information about how task metrics are collected in the <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/metrics/">Metrics User Guide</a>.</p>
+<p>The <code>ACT_RU_TASK_METER_LOG</code> table contains a collection of task related metrics that can help draw conclusions about usage, load and performance of the BPM platform. Task metrics contain a pseudonymized and fixed-length value of task assignees and their time of appearance. Please find detailed information about how task metrics are collected in the <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/metrics/">Metrics User Guide</a>.</p>
 
 <p>Every assignment of a task to an assignee will create one row in <code>ACT_RU_TASK_METER_LOG</code>.</p>
 
@@ -8282,22 +8259,22 @@ and performance of the BPM platform. Task metrics contain a pseudonymized and fi
 </div>
 
 
-<h1 id="entity-relationship-diagrams">Entity Relationship Diagrams</h1>
+<h1 id="实体关系图">实体关系图</h1>
 
 
 <div class="note bg-info docs-info">
   <h3></h3>
-  <p><p>The database is not part of the <strong>public API</strong>. The database schema may change for MINOR and MAJOR version updates.</p>
+  <p><p>该数据库不是 <strong>公共API</strong> 的一部分。数据库的机构可能会在 次要 或 主要 版本更新时发生变化。</p>
 
-<p><strong>Please note:</strong>
-  The following diagrams are based on the MySQL database schema. For other databases the diagram may be slightly different.</p>
+<p><strong>请注意：</strong>
+  以下图表基于MySQL数据库的。对于其他数据库，图可能略有不同。</p>
 </p>
 </div>
 
 
-<p>The following Entity Relationship Diagrams visualize the database tables and their explicit foreign key constraints, grouped by Engine with focus on BPMN, Engine with focus on DMN, Engine with focus on CMMN, the Engine History and the Identity. Please note that the diagrams do not visualize implicit connections between the tables.</p>
+<p>下面的实体关系图将数据库表和它们的显式外键约束可视化，按照BPMN引擎、DMN引擎、CMMN引擎、历史引擎和身份引擎进行分组。请注意，这些图并没有将表之间的隐性联系可视化。</p>
 
-<h2 id="engine-bpmn">Engine BPMN</h2>
+<h2 id="bpmn引擎">BPMN引擎</h2>
 
 <figure class="image">
   <span><img
@@ -8308,7 +8285,7 @@ and performance of the BPM platform. Task metrics contain a pseudonymized and fi
 </figure>
 
 
-<h2 id="engine-dmn">Engine DMN</h2>
+<h2 id="dmn引擎">DMN引擎</h2>
 
 <figure class="image">
   <span><img
@@ -8319,7 +8296,7 @@ and performance of the BPM platform. Task metrics contain a pseudonymized and fi
 </figure>
 
 
-<h2 id="engine-cmmn">Engine CMMN</h2>
+<h2 id="cmmn引擎">CMMN引擎</h2>
 
 <figure class="image">
   <span><img
@@ -8330,9 +8307,9 @@ and performance of the BPM platform. Task metrics contain a pseudonymized and fi
 </figure>
 
 
-<h2 id="history">History</h2>
+<h2 id="历史">历史</h2>
 
-<p>To allow different configurations and to keep the tables more flexible, the history tables contain no foreign key constraints.</p>
+<p>为了允许不同的配置并保持表的灵活性，历史表不包含外键约束。</p>
 
 <figure class="image">
   <span><img
@@ -8343,7 +8320,7 @@ and performance of the BPM platform. Task metrics contain a pseudonymized and fi
 </figure>
 
 
-<h2 id="identity">Identity</h2>
+<h2 id="身份">身份</h2>
 
 <figure class="image">
   <span><img
@@ -8364,22 +8341,22 @@ and performance of the BPM platform. Task metrics contain a pseudonymized and fi
 <ul>
 <li>
 <ul>
-<li><a href="#process-definitions-act-re-procdef">Process Definitions (<code>ACT_RE_PROCDEF</code>)</a></li>
-<li><a href="#executions-act-ru-execution">Executions (<code>ACT_RU_EXECUTION</code>)</a></li>
-<li><a href="#tasks-act-ru-task">Tasks (<code>ACT_RU_TASK</code>)</a></li>
-<li><a href="#variables-act-ru-variable">Variables (<code>ACT_RU_VARIABLE</code>)</a></li>
-<li><a href="#event-subscriptions-act-ru-event-subscr">Event Subscriptions (<code>ACT_RU_EVENT_SUBSCR</code>)</a></li>
-<li><a href="#schema-log-act-ge-schema-log">Schema Log (<code>ACT_GE_SCHEMA_LOG</code>)</a></li>
-<li><a href="#metrics-log-act-ru-meter-log">Metrics Log (ACT_RU_METER_LOG)</a></li>
-<li><a href="#task-metrics-log-act-ru-task-meter-log">Task Metrics Log (ACT_RU_TASK_METER_LOG)</a></li>
+<li><a href="#流程定义-act-re-procdef">流程定义 (<code>ACT_RE_PROCDEF</code>)</a></li>
+<li><a href="#执行-act-ru-execution">执行 (<code>ACT_RU_EXECUTION</code>)</a></li>
+<li><a href="#任务-act-ru-task">任务 (<code>ACT_RU_TASK</code>)</a></li>
+<li><a href="#变量-act-ru-variable">变量 (<code>ACT_RU_VARIABLE</code>)</a></li>
+<li><a href="#事件订阅-act-ru-event-subscr">事件订阅 (<code>ACT_RU_EVENT_SUBSCR</code>)</a></li>
+<li><a href="#表结构日志-act-ge-schema-log">表结构日志 (<code>ACT_GE_SCHEMA_LOG</code>)</a></li>
+<li><a href="#metrics日志-act-ru-meter-log">Metrics日志 (ACT_RU_METER_LOG)</a></li>
+<li><a href="#task-metrics-日志-act-ru-task-meter-log">Task Metrics 日志 (ACT_RU_TASK_METER_LOG)</a></li>
 </ul></li>
-<li><a href="#entity-relationship-diagrams">Entity Relationship Diagrams</a>
+<li><a href="#实体关系图">实体关系图</a>
 <ul>
-<li><a href="#engine-bpmn">Engine BPMN</a></li>
-<li><a href="#engine-dmn">Engine DMN</a></li>
-<li><a href="#engine-cmmn">Engine CMMN</a></li>
-<li><a href="#history">History</a></li>
-<li><a href="#identity">Identity</a></li>
+<li><a href="#bpmn引擎">BPMN引擎</a></li>
+<li><a href="#dmn引擎">DMN引擎</a></li>
+<li><a href="#cmmn引擎">CMMN引擎</a></li>
+<li><a href="#历史">历史</a></li>
+<li><a href="#身份">身份</a></li>
 </ul></li>
 </ul>
 </nav>

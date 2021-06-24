@@ -1260,13 +1260,21 @@ JDK 下载地址
     </item>
     
     <item>
-      <title>数据库结构</title>
+      <title>数据库表结构</title>
       <link>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/database/database-schema/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/database/database-schema/</guid>
-      <description>The database schema of the process engine consists of multiple tables. The table names all start with ACT. The second part is a two-character identification of the use case of the table. This use case will also roughly match the service API.
- ACT_RE_*: RE stands for repository. Tables with this prefix contain &amp;lsquo;static&amp;rsquo; information such as process definitions and process resources (images, rules, etc.). ACT_RU_*: RU stands for runtime.</description>
+      <description>流程引擎的数据库由多个表组成。 表的名称都以ACT开头的。后面是说明表的用途的两个字符标识。这个用途标志也将与服务API大致匹配。
+ ACT_RE_*: RE代表资源库。带有这个前缀的表包含 &amp;ldquo;静态 &amp;ldquo;信息，如流程定义和流程资源（图像、规则等）。 ACT_RU_*: RU代表运行时。包含流程实例、用户任务、变量、作业等的运行时数据。引擎只在流程实例执行期间存储运行时数据，并在流程实例结束时删除记录。这使运行时表保持小而快。 ACT_ID_*: ID代表身份信息。这些表包含身份信息有用户、组等。 ACT_HI_*: HI代表历史。这些是包含历史数据的表，如过去的流程实例、变量、任务等。 ACT_GE_*: 一般数据，在各种使用情况下使用。  流程引擎的主要表是流程定义、执行、任务、变量和事件订阅的实体。它们的关系显示在下面的UML模型中：
+流程定义 (ACT_RE_PROCDEF) ACT RE Procdef 表包含所有已部署的流程定义。它包括有版本详细信息，资源名称或暂停状态等信息。
+执行 (ACT_RU_EXECUTION) ACT_RU_EXECUTION 表包含所有当前的执行。它包括有流程定义，父执行，业务密钥，当前活动和关于执行状态的不同元数据的信息。
+任务 (ACT_RU_TASK) ACT_RU_TASK 表包含所有正在运行的流程实例的所有执行中的任务。它包括有相应的流程实例，执行以及元数据等信息，例如创建时间，受让人或截止日期。
+变量 (ACT_RU_VARIABLE) ACT_RU_VARIABLE 表包含所有当前设置的流程或任务变量。它包括变量的名称、类型和值以及相应流程实例或任务的信息。
+事件订阅 (ACT_RU_EVENT_SUBSCR) ACT_RU_EVENT_SUBSCR 表包含所有当前现有的事件订阅。它包括预期事件的类型、名称和配置以及相应的流程实例和执行的信息。
+表结构日志 (ACT_GE_SCHEMA_LOG) ACT_GE_SCHEMA_LOG 表记录数据库表结构版本的历史记录。在进行表结构修改时都会写入记录。在数据库创建时会写入一条初试信息，以后每次修改都会记录id 、版本、数据库更新日期以及时间戳。
+要从表结构日志中查询条目，可以使用查询API：
+List&amp;lt;SchemaLogEntry&amp;gt; entries = managementService.createSchemaLogQuery().list();  Metrics日志 (ACT_RU_METER_LOG) The ACT_RU_METER_LOG table contains a collection of runtime metrics that can help draw conclusions about usage, load and performance of the Camunda Platform.</description>
     </item>
     
     <item>
@@ -2371,9 +2379,13 @@ Xml Schema Namespace The namespace for the processes.xml file is http://www.camu
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/database/database-configuration/</guid>
-      <description>There are two ways to configure the database that the Camunda engine will use. The first option is to define the JDBC properties of the database:
- jdbcUrl: JDBC URL of the database. jdbcDriver: implementation of the driver for the specific database type. jdbcUsername: username to connect to the database. jdbcPassword: password to connect to the database.  Note that the engine uses Apache MyBatis internally for persistence.
-The data source that is constructed based on the provided JDBC properties will have the default MyBatis connection pool settings.</description>
+      <description>有两种方法可以配置Camunda引擎使用的数据库。第一个方法是定义数据库的JDBC属性：
+ jdbcUrl: 数据库的JDBC URL。 jdbcDriver: 用于特定数据库的驱动程序实现。 jdbcUsername: 连接到数据库的用户名。 jdbcPassword: 连接到数据库的密码。  注意，引擎内部使用Apache MyBatis进行持久化。
+基于提供的JDBC属性构建的数据源将具有默认的MyBatis连接池设置。以下属性可以选择性地设置，以调整该连接池（取自MyBatis文档）。
+ jdbcMaxActiveConnections: 连接池在任何时间最多可以包含的活动连接数。缺省值是10。 jdbcMaxIdleConnections: 连接池在任何时间最多可以包含的空闲连接数。 jdbcMaxCheckoutTime: 连接被取出使用的最长时间，超过时间会被强制回收。默认值是20000（20秒）。 jdbcMaxWaitTime: 这是一个底层配置，让连接池可以在长时间无法获得连接时，打印一条日志，并重新尝试获取一个连接。Default是20000（20秒）。 jdbcStatementTimeout: JDBC驱动程序将等待从数据库的响应的时间内的时间量。默认值为null，这意味着没有超时。  Jdbc 批处理 另一个配置&amp;ndash; jdbcBatchProcessing &amp;ndash;设置向数据库发送SQL语句时是否必须使用批处理模式。当关闭时，语句会被一个一个地执行。 可用值: true (默认), false.
+批处理模式在流程引擎中的已知问题有：
+ 批处理模式对早于12版本的Oracle不起作用。 当在MariaDB和DB2上使用批处理时，jdbcStatementTimeout配置会被忽略。  示例数据库配置 &amp;lt;property name=&amp;quot;jdbcUrl&amp;quot; value=&amp;quot;jdbc:h2:mem:camunda;DB_CLOSE_DELAY=1000&amp;quot; /&amp;gt; &amp;lt;property name=&amp;quot;jdbcDriver&amp;quot; value=&amp;quot;org.h2.Driver&amp;quot; /&amp;gt; &amp;lt;property name=&amp;quot;jdbcUsername&amp;quot; value=&amp;quot;sa&amp;quot; /&amp;gt; &amp;lt;property name=&amp;quot;jdbcPassword&amp;quot; value=&amp;quot;&amp;quot; /&amp;gt;  或者, 也可以使用 javax.sql.DataSource (示例，来自Apache Commons的DBCP)：
+&amp;lt;bean id=&amp;quot;dataSource&amp;quot; class=&amp;quot;org.apache.commons.dbcp.BasicDataSource&amp;quot; &amp;gt; &amp;lt;property name=&amp;quot;driverClassName&amp;quot; value=&amp;quot;com.</description>
     </item>
     
     <item>
@@ -3203,9 +3215,9 @@ Defining a Message A message event definition is declared by using the messageEv
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/database/mssql-configuration/</guid>
-      <description>Microsoft SQL Server implements the isolation level READ_COMMITTED different than most databases and does not interact well with the process engine&amp;rsquo;s optimistic locking scheme. As a result you may suffer deadlocks when putting the process engine under high load.
-If you experience deadlocks in your MSSQL installation, you must execute the following statements in order to enable SNAPSHOT isolation:
-ALTER DATABASE [process-engine] SET ALLOW_SNAPSHOT_ISOLATION ON ALTER DATABASE [process-engine] SET READ_COMMITTED_SNAPSHOT ON  where [process-engine] contains the name of your database.</description>
+      <description>Microsoft SQL Server实现的隔离级别 READ_COMMITTED 与大多数数据库不同，与流程引擎的[乐观锁](http://camunda-cn.shaochenfeng.com/user-guide/process-engine/transactions-in-processes/#optimistic-lock方案不能很好地兼容。 因此，当把流程引擎放在高负荷下时，可能会遇到死锁。
+如果你在MSSQL安装中遇到死锁，则必须执行以下语句以启用 SNAPSHOT 隔离：
+ALTER DATABASE [process-engine] SET ALLOW_SNAPSHOT_ISOLATION ON ALTER DATABASE [process-engine] SET READ_COMMITTED_SNAPSHOT ON  其中 [process-engine] 是数据库的名称。</description>
     </item>
     
     <item>
@@ -4026,9 +4038,16 @@ public class Customer { private String name; public String getName() { return na
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/database/mariadb-galera-configuration/</guid>
-      <description>This section documents the supported Galera Cluster configuration for MariaDB. Both server and client need to be configured correctly. Please note that there are some known limitations which apply when using Galera cluster, see below.
-WarningPlease note that server and client configuration settings defined below are the only configuration that is supported for Galera Cluster. Other configurations are not supported.
-Server Configuration The following configuration needs to go into the [galera] configuration section in the my.</description>
+      <description> 本节记录了MariaDB所支持的Galera Cluster配置。服务器和客户端都需要进行正确的配置。请注意，在使用Galera集群时，有一些已知的限制，详情见下文：
+警告请注意，下面定义的服务器和客户端配置设置是唯一支持Galera Cluster的配置。其他配置都不支持。
+服务器配置 以下配置需要放入到每个服务器的 my.cnf.d/server.cnf 配置文件的 [galera] 部分。
+[galera] binlog_format=row default_storage_engine=InnoDB innodb_autoinc_lock_mode=2 transaction-isolation=READ-COMMITTED wsrep_on=ON wsrep_causal_reads = 1 wsrep_sync_wait = 7 ...  请注意，一些其他设置也可能会出现在这一部分，但是 &amp;ldquo;transaction-isolation&amp;rdquo;、&amp;rdquo;wsrep_on&amp;rdquo;、&amp;rdquo;wsrep_causal_reads&amp;rdquo; 和 &amp;ldquo;wsrep_sync_wait&amp;rdquo; 的设置必须设置，且具有 完全相同 的值。
+客户端配置 只有 failover 和 sequential 配置是支持的。 其他客户端模式，如 replication:, loadbalance:, aurora: 均不支持
+以下是数据源配置中jdbcUrl属性的必要格式。
+jdbc:mariadb:[failover|sequential]://[host1:port],[host2:port],.../[data-base-name]  示例:
+jdbc:mariadb:failover://192.168.1.1:32980,192.168.1.2:32980,192.168.1.3:32980/process-engine jdbc:mariadb:sequential://192.168.1.1:32980,192.168.1.2:32980,192.168.1.3:32980/process-engine  重要提示：在群集中运行Camunda时，客户端配置需要在每个节点上相同。
+Galera Cluster 的已知的限制 使用Galera Cluster时，有以下已知限制：
+ 在数据库中需要悲观的读锁的API不能正确工作。受影响的API。独家消息相关（.correlateExclusively()）。参见(Javadocs)。 另一个可能的负面效应。  当从两个线程同时部署相同的资源时，会重复部署定义。 当从两个线程同时调用 &amp;ldquo;HistoryService#cleanUpHistoryAsync&amp;rdquo; 时，会重复执行历史清理工作。  如果资源同时部署在一个集群中，部署期间的重复检查不起作用。具体影响是：假设有一个Camunda流程引擎集群，它连接到同一个Galera集群。在部署一个新的流程应用时，流程引擎节点将检查流程应用所提供的BPMN流程是否已经部署，以避免重复部署。如果在多个进程引擎节点上同时进行部署，就会在数据库上获得一个独占的读锁（技术上来说，这意味着每个节点执行一个SQL &amp;ldquo;选择更新 &amp;ldquo;的查询。这在Galera Cluster上不起作用，可能导致同一进程的多个版本被部署。 jdbcStatementTimeout 配置项不起作用，不能使用。  </description>
     </item>
     
     <item>
@@ -4293,8 +4312,10 @@ Overview On the left side of the page, two lists of running and finished batches
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/database/cockroachdb-configuration/</guid>
-      <description>This section of the documentation describes how to use the Camunda process engine with the CockroachDB database.
-CockroachDB is a highly scalable SQL database that operates as a distributed system. As such, it has different requirements and behavior compared to the other Camunda-supported databases. For this reason, we have adjusted the process engine behavior and added some additional mechanisms in order to make sure that the process engine is able to operate correctly on CockroachDB.</description>
+      <description>本节文档描述了如何在CockroachDB数据库中使用Camunda流程引擎。
+CockroachDB是一个高度可扩展的SQL数据库，作为一个分布式系统运行。因此，与其他Camunda支持的数据库相比，它有不同的要求和行为。出于这个原因，我们调整了进程引擎的行为，并增加了一些额外的机制，以确保进程引擎能够在CockroachDB上正确运行。
+连接到 CockroachDB CockroachDB implements the PostgreSQL wire protocol for communication between a Java application, like the process engine, and the database. It is recommended to use a PostgreSQL JDBC driver version compatible with PostgreSQL 9.5+, i.e. versions 42.X.X of the JDBC driver (see the CockroachDB docs for more details).
+CockroachDB 的并发冲突 Whenever the process engine detects a concurrency conflict between transactions, it reports an OptimisticLockingException (for more details please see this docs section), which is then handled internally, or reported to the user.</description>
     </item>
     
     <item>
@@ -4725,9 +4746,15 @@ Mapping between Representations: Assume we have a class Customer defined as foll
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/database/mysql-configuration/</guid>
-      <description>This section documents the supported MySQL configuration.
-Database Schema The engine&amp;rsquo;s MySQL database schema does not support milliseconds precision for the column types TIMESTAMP and DATETIME: I.e., a to be stored value is rounded to the next or previous second, e.g., 2021-01-01 15:00:46.731 is rounded to 2021-01-01 15:00:47.
-Heads Up!The missing millisecond’s precision for date/time values impacts the process engine&amp;rsquo;s behavior. Please read how to configure the MySQL JDBC Driver to ensure that date/time values are handled correctly.</description>
+      <description>本节描述了如何进行 MySQL 配置。
+数据库表结构 引擎的MySQL数据库模式不支持列类型 TIMESTAMP 和 DATETIME 的毫秒精度。 也就是会四舍五入到下一秒或上一秒，例如，2021-01-01 15:00:46.731被四舍五入到2021-01-01 15:00:47。
+小心!日期/时间值缺失的毫秒精度会影响流程引擎的行为。 请阅读如何配置MySQL JDBC驱动程序以确保正确处理日期/时间值。
+JDBC驱动配置 在这里你可以找到MySQL JDBC驱动程序的配置条件，以确保与流程引擎兼容。
+为 date/time 类型禁用发送毫秒精度 小心!这个配置是必要的，以避免在用MySQL操作流程引擎时出现意外行为。
+将date/time值发送到数据库的任何SQL语句的一部分时, 当 MySQL JDBC驱动 &amp;gt;= 5.1.23 时会发送毫秒。 在使用MySQL数据库时，这个行为会导致问题。 表结构不支持带有毫秒的 date/time 类型值。
+在发送date/time值时确保流程引擎的正确行为， 确保将MySQL JDBC驱动程序更新为版本&amp;gt; = 5.1.37。 在这些版本中，你可以通过设置sendFractionalSeconds=false来避免向MySQL服务器发送毫秒。 在你的JDBC连接URL中设置sendFractionalSeconds=false。
+下面是在没有配置 &amp;ldquo;sendFractionalSeconds=false&amp;rdquo; 标志的情况下发生的问题行为的例子：
+*当用户以due date == 2021-01-01 15:00:46.731执行任务查询时，该查询返回的结果等于2021-01-01 15:00:46.731。然而，由于引擎的数据库模式不存储毫秒，没有返回结果。 * 当用户为任务设置due date时，该值被四舍五入到下一秒或前一秒，例如，2021-01-01 15:00:46.731被四舍五入为2021-01-01 15:00:47。也请参见官方MySQL文档。</description>
     </item>
     
     <item>

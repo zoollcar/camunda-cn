@@ -398,7 +398,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/process-engine/database/database-schema/" >数据库结构</a>
+      <a href="/user-guide/process-engine/database/database-schema/" >数据库表结构</a>
     
   </li>
 
@@ -8180,13 +8180,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <div class="col-xs-12 content-text">
-      <p>Microsoft SQL Server implements the isolation level <code>READ_COMMITTED</code> different
-than most databases and does not interact well with the process engine&rsquo;s
-<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/transactions-in-processes/#optimistic-locking">optimistic locking</a> scheme.
-As a result you may suffer deadlocks when putting the process engine under high load.</p>
+      <p>Microsoft SQL Server实现的隔离级别 <code>READ_COMMITTED</code> 与大多数数据库不同，与流程引擎的[乐观锁](http://camunda-cn.shaochenfeng.com/user-guide/process-engine/transactions-in-processes/#optimistic-lock方案不能很好地兼容。
+因此，当把流程引擎放在高负荷下时，可能会遇到死锁。</p>
 
-<p>If you experience deadlocks in your MSSQL installation, you must execute the
-following statements in order to enable SNAPSHOT isolation:</p>
+<p>如果你在MSSQL安装中遇到死锁，则必须执行以下语句以启用 SNAPSHOT 隔离：</p>
 
 <pre><code class="language-sql">ALTER DATABASE [process-engine]
 SET ALLOW_SNAPSHOT_ISOLATION ON
@@ -8195,7 +8192,7 @@ ALTER DATABASE [process-engine]
 SET READ_COMMITTED_SNAPSHOT ON
 </code></pre>
 
-<p>where <code>[process-engine]</code> contains the name of your database.</p>
+<p>其中 <code>[process-engine]</code> 是数据库的名称。</p>
 
     </div>
   </div>
