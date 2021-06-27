@@ -50,8 +50,8 @@ var _mtac = {};
 
   <meta name="viewport" content="width=device-width" />
 
-  <meta name="description" content="documentation of the Camunda Platform" />
-  <meta name="keywords" content="camunda, open source, free, Apache License, Apache 2.0, workflow, BPMN, BPMN 2.0, camunda.org, bpm, BPMS, engine, platform, process, automation, community, documentation" />
+  <meta name="description" content="Camunda流程平台中文站、中文文档" />
+  <meta name="keywords" content="camunda中文站, camunda中文文档, 中文文档 ,camunda, open source, free, Apache License, Apache 2.0, workflow, BPMN, BPMN 2.0, camunda.org, bpm, BPMS, engine, platform, process, automation, community, documentation" />
   <meta name="author" content="Camunda Platform community" />
   
     
@@ -491,7 +491,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/process-engine/transactions-in-processes/" >流程中的过渡</a>
+      <a href="/user-guide/process-engine/transactions-in-processes/" >流程中的事务</a>
     
   </li>
 
@@ -8182,17 +8182,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="col-xs-12 content-text">
       
 
-<p>This chapter is about how cryptographic password hashing is done in the Camunda platform. In particular, the hashing algorithm that is being used and the salt generation. If you are not familiar with these topics, we recommend reading the articles about <a href="https://en.wikipedia.org/wiki/Cryptographic_hash_function">cryptographic hash function</a>, <a href="https://en.wikipedia.org/wiki/Salt_(cryptography)">salt</a> and <a href="https://crackstation.net/hashing-security.htm">secure password hashing</a>.</p>
+<p>本章是关于Camunda平台中如何进行密码哈希的。特别是，正在使用的哈希算法和盐的生成。如果你不熟悉这些主题，我们建议阅读有关<a href="https://en.wikipedia.org/wiki/Cryptographic_hash_function">加密哈希函数百科</a>、 <a href="https://en.wikipedia.org/wiki/Salt_(cryptography)">盐</a> 和<a href="https://crackstation.net/hashing-security.htm">安全密码哈希</a> 的相关文章。</p>
 
-<p>The Camunda version 7.6 and earlier use the cryptographic hash function <a href="https://en.wikipedia.org/wiki/SHA-1">SHA-1</a>. Since Camunda version 7.7 the hash function <a href="https://en.wikipedia.org/wiki/SHA-2">SHA-512</a> is used. If there is a need for another custom hash function, it is possible to plugin a <a href="#customize-the-hashing-algorithm">custom password hashing algorithm</a> in Camunda.</p>
+<p>Camunda 7.6版和更早的版本使用加密哈希函数 <a href="https://en.wikipedia.org/wiki/SHA-1">SHA-1</a>。 从Camunda 7.7版本开始，开始使用哈希函数 <a href="https://en.wikipedia.org/wiki/SHA-2">SHA-512</a>。 如果需要另一个自定义哈希函数，可以在Camunda中插入一个<a href="#自定义哈希算法">自定义密码哈希算法</a> 。</p>
 
-<p>At salt generation, a random 16-byte per-user value is created, which is generated with <a href="http://docs.oracle.com/javase/6/docs/api/java/security/SecureRandom.html">SecureRandom</a>. It is also possible to <a href="#customize-the-salt-generation">customize the salt generation</a> if desired.</p>
+<p>在盐的生成过程中，每个用户都会生成16字节的随机值，它是用<a href="http://docs.oracle.com/javase/6/docs/api/java/security/SecureRandom.html">SecureRandom</a>生成的。 如果需要，也可以<a href="#自定义盐的生成">自定义盐的生成</a>。</p>
 
-<h1 id="customize-the-hashing-algorithm">Customize the Hashing Algorithm</h1>
+<h1 id="自定义哈希算法">自定义哈希算法</h1>
 
-<p>If it is necessary to use a more secure hash algorithm, you can provide your own implementation.</p>
+<p>如果有必要使用更安全的哈希算法，你可以提供你自己的实现。</p>
 
-<p>You can do this by implementing the <code>PasswordEncryptor</code> interface from the <code>org.camunda.bpm.engine.impl.digest</code> package. The interface ensures that all necessary functions for password hashing are implemented. You can have a look at the classes <code>Base64EncodedHashDigest</code> and <code>ShaHashDigest</code> from the <code>org.camunda.bpm.engine.impl.digest</code> package to see how this is done in Camunda. A template for your own implementation could look as follows:</p>
+<p>你可以通过实现<code>org.camunda.bpm.engine.impl.digest</code>包中的<code>PasswordEncryptor</code>接口来做到这一点。该接口确保所有密码哈希的必要功能都能实现。你可以看看<code>org.camunda.bpm.engine.impl.digest</code>包中的<code>Base64EncodedHashDigest</code>和<code>ShaHashDigest</code>类，看看Camunda中是如何实现的。你自己实现的模板可以是这样的：</p>
 
 <pre><code class="language-java">public class MyPasswordEncryptor implements PasswordEncryptor {
 
@@ -8214,20 +8214,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 }
 </code></pre>
 
-<p>Once this is done, you can use the process engine configuration to plug in the custom implementation by the setting the <code>passwordEncryptor</code> property to your custom implementation, e.g., <code>MyPasswordEncryptor</code>. See <a href="../process-engine-bootstrapping">Process Engine Bootstrapping</a> on where you have to set the property for your Camunda environment.</p>
+<p>一旦完成，你可以使用流程引擎配置，通过设置<code>passwordEncryptor</code>属性到你的自定义实现，例如<code>MyPasswordEncryptor</code>，来插入自定义实现。请参阅<a href=".../process-engine-bootstrapping">Process Engine Bootstrapping</a>，了解你必须为你的Camunda环境设置该属性的地方。</p>
 
-<p>Note that, even if you have already users created with passwords hashed by other algorithms, e.g., old custom algorithms or the Camunda default hash algorithm <code>SHA-512</code>, they can still automatically be resolved by the engine although you have added your custom algorithm afterwards. The property <code>customPasswordChecker</code> is a list of hashing algorithms to be used to check (older) passwords. The Camunda default hashing algorithms are automatically added, so please only add your previous custom <code>passwordEncryptor</code> implementation to that list.</p>
+<p>请注意，即使你已经创建了用其他算法加密的用户，例如，旧的自定义算法或Camunda默认的哈希算法<code>SHA-512</code>，他们仍然可以被引擎自动解决，尽管你后来添加了你的自定义算法。属性<code>customPasswordChecker</code>是一个用于检查（旧）密码的哈希算法的列表。Camunda默认的哈希算法是自动添加的，所以请只在该列表中添加你之前自定义的<code>passwordEncryptor</code>实现。</p>
 
 
 <div class="note bg-info docs-info">
-  <h3>Heads Up!</h3>
-  <p>Please do not use your own implementation of a hash function, but rather a standard that has been peer reviewed!</p>
+  <h3>注意!</h3>
+  <p>请不要使用你自己的哈希函数的实现，而应使用经过同行评审的标准!</p>
 </div>
 
 
-<h1 id="customize-the-salt-generation">Customize the Salt generation</h1>
+<h1 id="自定义盐的生成">自定义盐的生成</h1>
 
-<p>Similar to the hashing algorithm, the salt generation can be adjusted. First, implement the <code>SaltGenerator</code> interface from the <code>org.camunda.bpm.engine.impl.digest</code>. This ensures that all necessary functions are implemented. You can have a look at the classes <code>Base64EncodedSaltGenerator</code> and <code>Default16ByteSaltGenerator</code> from the <code>org.camunda.bpm.engine.impl.digest</code> package to see how this is done in Camunda. A template for your own implementation could look as follows:</p>
+<p>与哈希算法类似，盐的生成也可以进行调整。首先，实现<code>org.camunda.bpm.engine.impl.digest</code>中的<code>SaltGenerator</code>接口。这可以确保所有必要的功能都被实现。你可以看看<code>org.camunda.bpm.engine.impl.digest</code>包中的<code>Base64EncodedSaltGenerator</code>和<code>Default16ByteSaltGenerator</code>类，看看Camunda中是如何实现的。你自己实现的模板可以是这样的：</p>
 
 <pre><code class="language-java">public class MyCustomSaltGenerator implements SaltGenerator {
 
@@ -8238,7 +8238,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 }
 </code></pre>
 
-<p>Once this is done, you can use the process engine configuration to plug in the custom implementation by the setting the <code>saltGenerator</code> property to your custom implementation, e.g., <code>MyCustomSaltGenerator</code>. See <a href="../process-engine-bootstrapping">Process Engine Bootstrapping</a> on where you have to set the property for your Camunda environment.</p>
+<p>一旦完成，你可以使用流程引擎配置，通过设置 &ldquo;saltGenerator &ldquo;属性来插入自定义的实现，例如 &ldquo;MyCustomSaltGenerator&rdquo;。请参阅<a href=".../process-engine-bootstrapping">Process Engine Bootstrapping</a>，了解你必须为你的Camunda环境设置该属性的地方。</p>
 
     </div>
   </div>
@@ -8248,8 +8248,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <h3>目录:</h3>
   <nav id="TableOfContents">
 <ul>
-<li><a href="#customize-the-hashing-algorithm">Customize the Hashing Algorithm</a></li>
-<li><a href="#customize-the-salt-generation">Customize the Salt generation</a></li>
+<li><a href="#自定义哈希算法">自定义哈希算法</a></li>
+<li><a href="#自定义盐的生成">自定义盐的生成</a></li>
 </ul>
 </nav>
   

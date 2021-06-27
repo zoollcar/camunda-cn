@@ -50,8 +50,8 @@ var _mtac = {};
 
   <meta name="viewport" content="width=device-width" />
 
-  <meta name="description" content="documentation of the Camunda Platform" />
-  <meta name="keywords" content="camunda, open source, free, Apache License, Apache 2.0, workflow, BPMN, BPMN 2.0, camunda.org, bpm, BPMS, engine, platform, process, automation, community, documentation" />
+  <meta name="description" content="Camunda流程平台中文站、中文文档" />
+  <meta name="keywords" content="camunda中文站, camunda中文文档, 中文文档 ,camunda, open source, free, Apache License, Apache 2.0, workflow, BPMN, BPMN 2.0, camunda.org, bpm, BPMS, engine, platform, process, automation, community, documentation" />
   <meta name="author" content="Camunda Platform community" />
   
     
@@ -491,7 +491,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/process-engine/transactions-in-processes/" >流程中的过渡</a>
+      <a href="/user-guide/process-engine/transactions-in-processes/" >流程中的事务</a>
     
   </li>
 
@@ -8430,7 +8430,7 @@ ActivityInstance activityInstance = runtimeService.getActivityInstance(processIn
 ActivityInstance assessCreditWorthinessInstances = activityInstance.getActivityInstances(&quot;assessCreditWorthiness&quot;)[0];
 </code></pre>
 
-<p>与活动实例相比，<em>过渡实例</em> 不代表正在执行的活动，而是代表即将进入或即将离开的活动。当异步继续的job存在但尚未被执行时就是这种情况。对于一个活动实例，可以用<code>getChildTransitionInstances</code> 方法查询子过渡实例，过渡实例的API与活动实例的API类似。</p>
+<p>与活动实例相比，<em>过渡实例</em> 不代表正在执行的活动，而是代表即将进入或即将离开的活动。当异步延续的job存在但尚未被执行时就是这种情况。对于一个活动实例，可以用<code>getChildTransitionInstances</code> 方法查询子过渡实例，过渡实例的API与活动实例的API类似。</p>
 
 <h2 id="嵌套实例化">嵌套实例化</h2>
 

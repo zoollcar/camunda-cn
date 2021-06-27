@@ -50,8 +50,8 @@ var _mtac = {};
 
   <meta name="viewport" content="width=device-width" />
 
-  <meta name="description" content="documentation of the Camunda Platform" />
-  <meta name="keywords" content="camunda, open source, free, Apache License, Apache 2.0, workflow, BPMN, BPMN 2.0, camunda.org, bpm, BPMS, engine, platform, process, automation, community, documentation" />
+  <meta name="description" content="Camunda流程平台中文站、中文文档" />
+  <meta name="keywords" content="camunda中文站, camunda中文文档, 中文文档 ,camunda, open source, free, Apache License, Apache 2.0, workflow, BPMN, BPMN 2.0, camunda.org, bpm, BPMS, engine, platform, process, automation, community, documentation" />
   <meta name="author" content="Camunda Platform community" />
   
     
@@ -491,7 +491,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/process-engine/transactions-in-processes/" >流程中的过渡</a>
+      <a href="/user-guide/process-engine/transactions-in-processes/" >流程中的事务</a>
     
   </li>
 
@@ -8245,7 +8245,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <ul>
 <li><code>databaseType</code>: 通常没有必要指定这个属性，因为它可以从url中自动分析出来的。只有在自动分析失败的情况下才应该指定。可能的值有{h2, mysql, oracle, postgres, mssql, db2, mariadb}。这个设置将决定哪些创建/删除脚本和查询将被使用。参见 &ldquo;支持的数据库&rdquo; 一节，以了解支持哪些类型的数据库。</li></li>
-<li><code>databaseSchemaUpdate</code>: 允许设置策略来处理进程引擎启动和关闭时的数据库模式。
+<li><code>databaseSchemaUpdate</code>: 允许设置策略来处理流程引擎启动和关闭时的数据库模式。
 
 <ul>
 <li><code>true</code> (默认): 在建立流程引擎时，要检查数据库中是否存在Camunda表。如果它们不存在，就会被创建。除非正在执行<a href="http://camunda-cn.shaochenfeng.com/update/rolling-update/">滚动更新</a>，否则必须确保数据库模式的版本与流程引擎库的版本一致。数据库模式的更新必须按照<a href="http://camunda-cn.shaochenfeng.com/update/">更新和迁移指南</a>中的描述手动完成。</li>

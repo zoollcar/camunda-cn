@@ -4047,7 +4047,7 @@ public class Customer { private String name; public String getName() { return na
 jdbc:mariadb:[failover|sequential]://[host1:port],[host2:port],.../[data-base-name]  示例:
 jdbc:mariadb:failover://192.168.1.1:32980,192.168.1.2:32980,192.168.1.3:32980/process-engine jdbc:mariadb:sequential://192.168.1.1:32980,192.168.1.2:32980,192.168.1.3:32980/process-engine  重要提示：在群集中运行Camunda时，客户端配置需要在每个节点上相同。
 Galera Cluster 的已知的限制 使用Galera Cluster时，有以下已知限制：
- 在数据库中需要悲观的读锁的API不能正确工作。受影响的API。独家消息相关（.correlateExclusively()）。参见(Javadocs)。 另一个可能的负面效应。  当从两个线程同时部署相同的资源时，会重复部署定义。 当从两个线程同时调用 &amp;ldquo;HistoryService#cleanUpHistoryAsync&amp;rdquo; 时，会重复执行历史清理工作。  如果资源同时部署在一个集群中，部署期间的重复检查不起作用。具体影响是：假设有一个Camunda流程引擎集群，它连接到同一个Galera集群。在部署一个新的流程应用时，流程引擎节点将检查流程应用所提供的BPMN流程是否已经部署，以避免重复部署。如果在多个进程引擎节点上同时进行部署，就会在数据库上获得一个独占的读锁（技术上来说，这意味着每个节点执行一个SQL &amp;ldquo;选择更新 &amp;ldquo;的查询。这在Galera Cluster上不起作用，可能导致同一进程的多个版本被部署。 jdbcStatementTimeout 配置项不起作用，不能使用。  </description>
+ 在数据库中需要悲观的读锁的API不能正确工作。受影响的API。独家消息相关（.correlateExclusively()）。参见(Javadocs)。 另一个可能的负面效应。  当从两个线程同时部署相同的资源时，会重复部署定义。 当从两个线程同时调用 &amp;ldquo;HistoryService#cleanUpHistoryAsync&amp;rdquo; 时，会重复执行历史清理工作。  如果资源同时部署在一个集群中，部署期间的重复检查不起作用。具体影响是：假设有一个Camunda流程引擎集群，它连接到同一个Galera集群。在部署一个新的流程应用时，流程引擎节点将检查流程应用所提供的BPMN流程是否已经部署，以避免重复部署。如果在多个流程引擎节点上同时进行部署，就会在数据库上获得一个独占的读锁（技术上来说，这意味着每个节点执行一个SQL &amp;ldquo;选择更新 &amp;ldquo;的查询。这在Galera Cluster上不起作用，可能导致同一进程的多个版本被部署。 jdbcStatementTimeout 配置项不起作用，不能使用。  </description>
     </item>
     
     <item>
@@ -4313,7 +4313,7 @@ Overview On the left side of the page, two lists of running and finished batches
       
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/database/cockroachdb-configuration/</guid>
       <description>本节文档描述了如何在CockroachDB数据库中使用Camunda流程引擎。
-CockroachDB是一个高度可扩展的SQL数据库，作为一个分布式系统运行。因此，与其他Camunda支持的数据库相比，它有不同的要求和行为。出于这个原因，我们调整了进程引擎的行为，并增加了一些额外的机制，以确保进程引擎能够在CockroachDB上正确运行。
+CockroachDB是一个高度可扩展的SQL数据库，作为一个分布式系统运行。因此，与其他Camunda支持的数据库相比，它有不同的要求和行为。出于这个原因，我们调整了流程引擎的行为，并增加了一些额外的机制，以确保流程引擎能够在CockroachDB上正确运行。
 连接到 CockroachDB CockroachDB implements the PostgreSQL wire protocol for communication between a Java application, like the process engine, and the database. It is recommended to use a PostgreSQL JDBC driver version compatible with PostgreSQL 9.5+, i.e. versions 42.X.X of the JDBC driver (see the CockroachDB docs for more details).
 CockroachDB 的并发冲突 Whenever the process engine detects a concurrency conflict between transactions, it reports an OptimisticLockingException (for more details please see this docs section), which is then handled internally, or reported to the user.</description>
     </item>
@@ -7371,8 +7371,12 @@ Parameters Path Parameters  Name Description   id The id of the execution to sig
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/password-hashing/</guid>
-      <description>This chapter is about how cryptographic password hashing is done in the Camunda platform. In particular, the hashing algorithm that is being used and the salt generation. If you are not familiar with these topics, we recommend reading the articles about cryptographic hash function, salt and secure password hashing.
-The Camunda version 7.6 and earlier use the cryptographic hash function SHA-1. Since Camunda version 7.7 the hash function SHA-512 is used.</description>
+      <description>本章是关于Camunda平台中如何进行密码哈希的。特别是，正在使用的哈希算法和盐的生成。如果你不熟悉这些主题，我们建议阅读有关加密哈希函数百科、 盐 和安全密码哈希 的相关文章。
+Camunda 7.6版和更早的版本使用加密哈希函数 SHA-1。 从Camunda 7.7版本开始，开始使用哈希函数 SHA-512。 如果需要另一个自定义哈希函数，可以在Camunda中插入一个自定义密码哈希算法 。
+在盐的生成过程中，每个用户都会生成16字节的随机值，它是用SecureRandom生成的。 如果需要，也可以自定义盐的生成。
+自定义哈希算法 如果有必要使用更安全的哈希算法，你可以提供你自己的实现。
+你可以通过实现org.camunda.bpm.engine.impl.digest包中的PasswordEncryptor接口来做到这一点。该接口确保所有密码哈希的必要功能都能实现。你可以看看org.camunda.bpm.engine.impl.digest包中的Base64EncodedHashDigest和ShaHashDigest类，看看Camunda中是如何实现的。你自己实现的模板可以是这样的：
+public class MyPasswordEncryptor implements PasswordEncryptor { @Override public String encrypt(String password) { // do something } @Override public boolean check(String password, String encrypted) { // do something } @Override public String hashAlgorithmName() { // This name is used to resolve the algorithm used for the encryption of a password. return &amp;quot;NAME_OF_THE_ALGORITHM&amp;quot;; } }  一旦完成，你可以使用流程引擎配置，通过设置passwordEncryptor属性到你的自定义实现，例如MyPasswordEncryptor，来插入自定义实现。请参阅Process Engine Bootstrapping，了解你必须为你的Camunda环境设置该属性的地方。</description>
     </item>
     
     <item>
@@ -7381,8 +7385,15 @@ The Camunda version 7.6 and earlier use the cryptographic hash function SHA-1. S
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/deployment-cache/</guid>
-      <description>All process definitions are cached (after they have been parsed) to avoid polling the database every time a process definition is needed and because process definition data doesn&amp;rsquo;t change. This reduces the latency of referencing the process definitions and thus improves the performance of the system.
-Customize the maximum Capacity of the Cache If one has many process definitions, the cache might occupy a large amount of memory and the capacity of the working memory may reach its limits.</description>
+      <description>所有的流程定义都是缓存的（在它们被解析后），以避免每次需要流程定义时都查询数据库，因为流程定义数据不会改变。这减少了引用流程定义的延迟，从而提高了系统的性能。
+自定义缓存的最大容量 如果有很多流程定义，缓存可能会占用大量的内存，缓存容量可能达到极限。因此，在达到最大容量后，最近使用最少的流程定义条目会从高速缓存中被驱逐，以满足容量条件。然而，如果仍然遇到内存不足的问题，可能需要降低缓存的最大容量。
+改变最大容量，会影响到以下所有的缓冲区组件：
+ 流程定义 案例定义 决策定义 决策需求定义   在流程引擎的配置中，可以指定缓存的最大容量。默认值是 1000 。当流程引擎被创建时，这个属性将被设置，所有的资源将被相应地扫描和部署。作为一个例子，最大容量可以被设置为*120*，如下所示：
+&amp;lt;bean id=&amp;quot;processEngineConfiguration&amp;quot; class=&amp;quot;org.camunda.bpm.engine.impl.cfg.StandaloneInMemProcessEngineConfiguration&amp;quot;&amp;gt; &amp;lt;!-- Your property definitions! --&amp;gt; .... &amp;lt;property name=&amp;quot;cacheCapacity&amp;quot; value=&amp;quot;120&amp;quot; /&amp;gt; &amp;lt;/bean&amp;gt;  注意: 上述的所有组件都将使用相同的容量，不能为每个组件单独设置容量大小。此外，在默认的缓存实现中，将容量大小与缓存中使用的最大元素数相对应。这意味着，你所使用的物理存储的绝对数量（如百万字节）取决于各自流程定义所需的大小。
+提供自定义缓存实现 缓存的默认实现是在超过最大容量后立即释放最久未使用的条目。如果有必要通过不同的标准来选择被释放的缓存条目，可以提供自己的缓存实现。
+我们可以通过实现 org.camunda.util.commons 包中的Cache接口来做到这一点。例如，我们假设已经实现了下面这个类：
+public class MyCacheImplementation&amp;lt;K, V&amp;gt; implements Cache&amp;lt;K, V&amp;gt; { // implement interface methods and your own cache logic here }  接下来，我们需要将 MyCacheImplementation 插入到一个自定义的 CacheFactory 中：
+public class MyCacheFactory extends CacheFactory { @Override public &amp;lt;T&amp;gt; Cache&amp;lt;String, T&amp;gt; createCache(int maxNumberOfElementsInCache) { return new MyCacheImplementation&amp;lt;String, T&amp;gt;(maxNumberOfElementsInCache); } }  这个工厂类被用来为不同的缓存组件提供缓存实现，如流程定义或案例定义。一旦完成这些，就可以使用流程引擎配置，在这里可以指定一组资源。当流程引擎被创建时，所有这些资源将被扫描和部署。在给定的例子中，自定义缓存工厂现在可以按以下方式部署：</description>
     </item>
     
     <item>
@@ -7391,8 +7402,14 @@ Customize the maximum Capacity of the Cache If one has many process definitions,
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/password-policy/</guid>
-      <description>This chapter is about configuring and using a password policy for engine-managed user accounts. A password policy makes sure that only passwords that meet certain criteria are allowed. A policy can consist of any number of rules. Violation of one of the policy&amp;rsquo;s rules results in an error and the user not being saved.
-Since version 7.11.0, the engine comes with a standard password policy that is disabled by default and must be configured to use.</description>
+      <description>本章是关于为引擎管理的用户账户配置和使用密码策略。一个密码策略可以确保只允许符合某些标准的密码。一个策略可以由任何数量的规则组成。违反策略中的一条规则会导致错误，用户不会被保存。
+从7.11.0版本开始，引擎自带一个标准的密码策略，默认情况下是禁用的，必须配置才能使用。
+注意: 这只适用于在Camunda引擎内管理的用户。如果你使用LDAP进行用户管理，那么密码策略对这些用户没有影响。
+内置密码策略 内置的密码策略要求所有的密码必须符合以下条件：
+ 不能包含用户资料（即用户ID、名字、姓氏、电子邮件） 最小长度为10个字符 至少1个大写字符 至少1个小写字母 至少1个数字 至少1个特殊字符  自定义密码策略 你可以使用流程引擎配置来启用/禁用密码策略或插入一个自定义策略。请参阅Process Engine Bootstrapping，了解如何为你的Camunda环境设置属性。
+要启用或禁用密码策略检查，你需要设置 enablePasswordPolicy 属性。
+如果你想使用自定义的密码策略，需要实现org.camunda.bpm.engine.identity包中的PasswordPolicy和PasswordPolicyRule接口，并设置passwordPolicy属性向流程引擎配置提供你的实现类。
+public class MyPasswordPolicy implements PasswordPolicy { @Override public List&amp;lt;PasswordPolicyRule&amp;gt; getRules() { // create rules } }  public class MyPasswordPolicyRule implements PasswordPolicyRule { @Override public String getPlaceholder() { // 此占位符可用于显示国际化的错误消息。 return &amp;quot;PASSWORD_POLICY_RULE_PLACEHOLDER&amp;quot;; } @Override public Map&amp;lt;String, String&amp;gt; getParameters() { // 这些参数可以注入错误消息。 } @Override public boolean execute(String candidatePassword, User user) { // 验证候选密码 // 如果有效则返回true，否则返回false } }  通过getPlaceholder和getParameters提供规则占位符和参数，自定义前端可以根据规则和它们的配置显示错误信息。例如，&amp;rdquo;密码必须至少有X个字符的长度&amp;rdquo;，X是可配置的，并在参数图中传递）。</description>
     </item>
     
     <item>
@@ -7456,12 +7473,26 @@ Parameters Path Parameters  Name Description   id The id of the case execution t
     </item>
     
     <item>
-      <title>流程中的过渡</title>
+      <title>流程中的事务</title>
       <link>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/transactions-in-processes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/transactions-in-processes/</guid>
-      <description>The process engine is a piece of passive Java code which works in the Thread of the client. For instance, if you have a web application allowing users to start a new process instance and a user clicks on the corresponding button, some thread from the application server&amp;rsquo;s http-thread-pool will invoke the API method runtimeService.startProcessInstanceByKey(...), thus entering the process engine and starting a new process instance. We call this &amp;ldquo;borrowing the client thread&amp;rdquo;.</description>
+      <description>流程引擎是一段被动的Java代码，在客户端的线程中工作。例如，如果你有一个允许用户启动一个新的流程实例的Web应用，并且用户点击了相应的按钮，应用服务器的http线程池的一些线程将调用API方法runtimeService.startProcessInstanceByKey(...)，从而 进入 流程引擎并启动一个新的流程实例。我们把这称为 &amp;ldquo;借用客户线程&amp;rdquo;。
+在任何这样的 外部 触发器上（即启动一个流程、完成一个任务、发出一个执行信号），引擎运行时将在流程中前进，直到它在某个活动的执行路径上到达等待状态。等待状态是指 稍后 执行的任务，这意味着引擎会将当前的执行持久化到数据库中，并等待再次被触发。例如，在用户任务的情况下，任务完成时的外部触发会导致运行时执行流程的下一个位，直到再次到达等待状态（或实例结束）。与用户任务不同的是，定时器事件不是由外部触发的。相反，它是由一个 内部 的触发器继续的。这就是为什么引擎还需要一个活跃的组件，job执行器，它能够获取注册的Job并异步处理它们。
+等待状态 我们谈到了作为事务边界的等待状态，在这里，流程状态被存储到数据库，线程返回到客户端，事务被提交。以下的BPMN元素始终是等待状态。
+Receive Task User Task  Message Message Event Timer Timer Event Signal Signal Event   基于事件的网关:
+ 一种特殊类型的服务任务: 外部任务
+
+请记住，异步延续也可以为其他任务添加事务边界。
+交易边界 从一个稳定状态到另一个稳定状态的转换总是单一事务的一部分，这意味着它作为一个整体成功，或者在执行过程中发生任何类型的异常时被回滚。这在下面的例子中得到了说明：
+我们看到一个BPMN流程的片段，有一个用户任务、一个服务任务和一个定时器事件。计时器事件标志着下一个等待状态。因此，完成用户任务和验证地址是同一个工作单元的一部分，所以它应该原子式地成功或失败。这意味着，如果服务任务抛出一个异常，我们要回滚当前的事务，这样执行就会追踪到用户任务，并且用户任务仍然存在于数据库中。这也是流程引擎的默认行为。
+在 1 ，一个应用程序或客户端线程完成了任务。在同一个线程中，引擎运行时现在正在执行服务任务，并一直推进到定时器事件的等待状态（ 2 ）。然后，它将控制权返回给调用者（ 3 ），可能会提交该事务（如果它是由引擎启动的）。
+异步延续 为什么要异步延续? 在某些情况下，同步行为是不需要的。有时对流程中的事务边界进行自定义控制是很有用的。 最常见的动机是对 逻辑工作单元 的范围的要求。考虑一下下面的流程片段：
+我们正在完成用户任务，生成发票，然后将发票发送给客户。可以说，发票的生成不属于同一个工作单元：如果生成发票失败，我们不希望回滚用户任务的完成。 理想情况下，流程引擎将完成用户任务（1），提交事务并将控制权返回给调用的应用程序（2）。在一个后台线程（3）中，它将生成发票。 这正是异步延续提供的行为：它们允许我们在流程中确定事务边界的范围。
+配置异步延续 异步延续可以在活动 之前 和 之后 被配置。此外，流程实例本身也可以被配置为异步启动。
+使用 camunda:asyncBefore 扩展属性可以启用活动前的异步延续：
+&amp;lt;serviceTask id=&amp;quot;service1&amp;quot; name=&amp;quot;Generate Invoice&amp;quot; camunda:asyncBefore=&amp;quot;true&amp;quot; camunda:class=&amp;quot;my.</description>
     </item>
     
     <item>

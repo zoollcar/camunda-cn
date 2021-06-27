@@ -50,8 +50,8 @@ var _mtac = {};
 
   <meta name="viewport" content="width=device-width" />
 
-  <meta name="description" content="documentation of the Camunda Platform" />
-  <meta name="keywords" content="camunda, open source, free, Apache License, Apache 2.0, workflow, BPMN, BPMN 2.0, camunda.org, bpm, BPMS, engine, platform, process, automation, community, documentation" />
+  <meta name="description" content="Camunda流程平台中文站、中文文档" />
+  <meta name="keywords" content="camunda中文站, camunda中文文档, 中文文档 ,camunda, open source, free, Apache License, Apache 2.0, workflow, BPMN, BPMN 2.0, camunda.org, bpm, BPMS, engine, platform, process, automation, community, documentation" />
   <meta name="author" content="Camunda Platform community" />
   
     
@@ -491,7 +491,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/process-engine/transactions-in-processes/" >流程中的过渡</a>
+      <a href="/user-guide/process-engine/transactions-in-processes/" >流程中的事务</a>
     
   </li>
 
@@ -8519,7 +8519,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <p><code>startedBefore</code> 和 <code>startedAfter</code> 使用 <code>java.util.Date</code> (弃用) 或 <code>java.util.Calendar</code> 对象作为输入。</p>
 
-<p>例如，人们可以查询从现在之前启动的所有历史进程实例并获得他们的持续时间：</p>
+<p>例如，人们可以查询从现在之前启动的所有历史流程实例并获得他们的持续时间：</p>
 
 <pre><code class="language-java">Calendar calendar = Calendar.getInstance();
 historyService.createHistoricProcessInstanceReport()
@@ -8593,56 +8593,53 @@ historyService
 
 <h1 id="用户操作日志">用户操作日志</h1>
 
-<p>用户操作日志包含许多API操作的条目，可用于审计目的。它提供了关于执行的操作的数据以及关于操作中所涉及的更改的详细信息。在登录用户会话中执行操作时记录操作。要使用操作日志，必须将过程引擎历史级别设置为 “FULL”。</p>
+<p>用户操作日志包含许多API操作的条目，可用于审计目的。它提供了关于执行的操作的数据以及关于操作中所涉及的更改的详细信息。在登录用户会话中执行操作时记录操作。要使用操作日志，必须将流程引擎历史级别设置为 “FULL”。</p>
 
-<h2 id="write-log-entries-regardless-of-user-authentication-context">Write Log Entries Regardless of User Authentication Context</h2>
+<h2 id="不考虑用户登录状态-记录用户操作日志">不考虑用户登录状态，记录用户操作日志</h2>
 
-<p>If it is desired that operations are logged regardless whether they are performed in the context of a logged in user or not, then the process engine configuration flag named <code>restrictUserOperationLogToAuthenticatedUsers</code> can be set to <code>false</code>.</p>
+<p>如果希望无论是否在用户登录的情况下都记录日志，那么可以将流程引擎的 &ldquo;restrictUserOperationLogToAuthenticatedUsers&rdquo; 配置项设为 &ldquo;false&rdquo;。</p>
 
-<h2 id="access-the-user-operation-log">Access the User Operation Log</h2>
+<h2 id="访问用户操作日志">访问用户操作日志</h2>
 
-<p>The user operation log can be accessed via the Java API. The history service can be used to execute a <code>UserOperationLogQuery</code> by calling <code>historyService.createUserOperationLogQuery().execute()</code>. The query can be restricted with various filtering options. The query is also <a href="http://camunda-cn.shaochenfeng.com/reference/rest/history/user-operation-log/get-user-operation-log-query/">exposed in the REST API</a>.</p>
+<p>用户操作日志可以通过Java API访问。调用<code>historyService.createUserOperationLogQuery().execute()</code>，历史服务可以用 <code>UserOperationLogQuery</code> 来执行。该查询可以通过各种过滤器进行限制。该查询也<a href="http://camunda-cn.shaochenfeng.com/reference/rest/history/user-operation-log/get-user-operation-log-query/">在REST API中访问</a>.</p>
 
-<h2 id="user-operation-log-entries">User Operation Log Entries</h2>
+<h2 id="用户操作日志条目">用户操作日志条目</h2>
 
-<p>The log consists of <em>operations</em> and <em>entries</em>. An operation corresponds to one performed action and consists of multiple entries, at least one. Entries contain the detailed changes being part of the operation. When making a user operation log query, the returned entities are of type <code>UserOperationLogEntry</code>, corresponding to entries. All entries of one operation are linked by an operation id.</p>
+<p>日志由 <em>操作</em> 和 <em>条目</em> 组成。一个操作对应于一个执行的动作，由一个或多个条目组成。条目作为操作详细执行情况。当进行用户操作日志查询时，返回的实体是 &ldquo;UserOperationLogEntry&rdquo; 类型，对应于 <em>条目</em> 。一个操作的所有条目都由一个相同的操作ID标出。</p>
 
-<p>A user operation log entry has the following properties:</p>
-
-<ul>
-<li><strong>Operation ID</strong>: A generated id that uniquely identifies a performed operation. Multiple log entries that are part of one operation reference the same operation ID.</li>
-<li><strong>Operation Type</strong>: The name of the performed operation. Available operation types are listed in the interface <a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/engine/history/UserOperationLogEntry.html">org.camunda.bpm.engine.history.UserOperationLogEntry</a>
-. Note that one operation can consist of multiple types, for example a cascading API operation is one user operation, but is split into multiple types of operations.</li>
-<li><strong>Entity Type</strong>: An identifier of the type of the entity that was addressed by the operation. Available entity types are listed in the class <a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/engine/EntityTypes.html">org.camunda.bpm.engine.EntityTypes</a>
-. Like the operation type, one operation may address more than one type of entity.</li>
-<li><strong>Category</strong>: The name of the category the operation is associated with. Available categories are listed in the interface <a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/engine/history/UserOperationLogEntry.html">org.camunda.bpm.engine.history.UserOperationLogEntry</a>
-. For example, all task related runtime operations like claiming and completing tasks fall into the category <a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/engine/history/UserOperationLogEntry.html#CATEGORY_TASK_WORKER">TaskWorker</a>
-.</li>
-<li><strong>Annotation</strong>: An arbitrary text annotation set by a user for auditing reasons. Multiple log entries that belong to an operation have the same annotation.</li>
-<li><strong>Entity IDs</strong>: A job log entry contains the entity IDs that serve to identify the entities addressed by the operation. For example, an operation log entry on a task contains the id of the task as well as the id of the process instance the task belongs to. As a second example, a log entry for suspending all process instances of a process definition does not contain individual process instance IDs but only the process definition ID.</li>
-<li><strong>User ID</strong>: The ID of the user who performed the operation.</li>
-<li><strong>Timestamp</strong>: The time at which the operation was performed.</li>
-<li><strong>Changed Property</strong>: A user operation may change multiple properties. For example, suspension of a process instance changes the suspension state property. A log entry is created for each changed property involved in an operation.</li>
-<li><strong>Old Property Value</strong>: The previous value of the changed property. A  <code>null</code> value either indicates that the property was previously <code>null</code> or is not known.</li>
-<li><strong>New Property Value</strong>: The new value of the changed property.</li>
-</ul>
-
-<h2 id="annotation-of-user-operation-logs">Annotation of User Operation Logs</h2>
-
-<p>User Operation Logs are helpful to audit manual operations. To make it obvious why a certain
-operation was performed, sometimes it is not enough to only log technical information (e. g.
-timestamp, operation type, etc.) but also add an annotation that puts the operation in the right
-business context.</p>
-
-<p>You can directly pass an annotation for the following operations:</p>
+<p>用户操作日志条目具有以下属性：</p>
 
 <ul>
-<li><a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-instance-modification/#annotation">Process Instance Modification</a></li>
+<li><strong>Operation ID</strong>: 操作ID，唯一地识别执行操作的生成的ID。一个操作的多个条目都会引用相同的操作ID。</li>
+<li><strong>Operation Type</strong>: 执行操作的类型。可用的操作类型在<a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/engine/history/UserOperationLogEntry.html">org.camunda.bpm.engine.history.UserOperationLogEntry</a>
+中列出。请注意，一个操作可以由多种类型组成，例如，cascading API 操作是一个用户操作，但被分割成多种类型的操作。</li>
+<li><strong>Entity Type</strong>: 操作所涉及的实体类型的标识符。可用的实体类型在<a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/engine/EntityTypes.html">org.camunda.bpm.engine.EntityTypes</a>
+类中列出。与操作类型一样，一个操作可以处理一个以上的实体类型。</li>
+<li><strong>Category</strong>: 该操作所关联的类别的名称。可用的类别在<a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/engine/history/UserOperationLogEntry.html">org.camunda.bpm.engine.history.UserOperationLogEntry</a>
+中列出。例如，所有与任务相关的运行时操作，如申请和完成任务，都属于<a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/engine/history/UserOperationLogEntry.html#CATEGORY_TASK_WORKER">TaskWorker</a>
+类别 。</li>
+<li><strong>Annotation</strong>: 用户因为审核等原因而设置的文本注释。属于一个操作的多个日志条目具有相同的注释。</li>
+<li><strong>Entity IDs</strong>: 一个作业日志条目包含实体ID，用于识别作业所涉及的实体。例如，一个任务的操作日志条目包含该任务的ID以及该任务所属的流程实例的ID。作为第二个例子，暂停一个流程定义的所有流程实例的日志条目不包含单个流程实例的ID，而只包含流程定义的ID。</li>
+<li><strong>User ID</strong>: 执行该操作的用户的ID。</li>
+<li><strong>Timestamp</strong>: 执行操作的时间。</li>
+<li><strong>Changed Property</strong>: 用户操作改变的属性。用户操作可以改变多个属性，例如，流程实例的暂停更改了暂停状态属性。为操作中涉及的每个已更改的属性创建日志条目。</li>
+<li><strong>Old Property Value</strong>: 更改属性的先前值。如果是<code>null</code>，则表示属性以前是<code>NULL</code>或未设置。</li>
+<li><strong>New Property Value</strong>: 更改属性的新值。</li>
 </ul>
 
-<p>You can also set an annotation to an operation log which is already present:</p>
+<h2 id="用户操作日志的注释">用户操作日志的注释</h2>
 
-<p>An annotation can be set and cleared via Java API:</p>
+<p>用户操作日志对审计人工操作很有帮助。为了让人明白为什么要执行某个操作，有时只记录技术信息（如时间戳、操作类型等）是不够的，还要添加注释，把操作放在正确的业务背景中。</p>
+
+<p>你可以直接为以下操作传递一个注释：</p>
+
+<ul>
+<li><a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-instance-modification/#annotation">流程实例修改</a></li>
+</ul>
+
+<p>你还可以对一个已存在的操作日志设置注释：</p>
+
+<p>可以通过Java API设置和清除注释：</p>
 
 <pre><code class="language-java">String operationId = historyService.createUserOperationLogQuery()
     .singleResult()
@@ -8654,14 +8651,13 @@ historyService.setAnnotationForOperationLogById(operationId, annotation);
 historyService.clearAnnotationForOperationLogById(operationId);
 </code></pre>
 
-<p><strong>Please note:</strong> Annotations are present on all entries that belong to an operation log.</p>
+<p><strong>请注意:</strong> 注释存在于属于操作日志的所有条目上。</p>
 
-<p>Please also see the REST API reference for <a href="http://camunda-cn.shaochenfeng.com/reference/rest/history/user-operation-log/set-annotation/">setting</a> and
-<a href="http://camunda-cn.shaochenfeng.com/reference/rest/history/user-operation-log/clear-annotation/">clearing</a> annotations.</p>
+<p>也请参见REST API参考中的<a href="http://camunda-cn.shaochenfeng.com/reference/rest/history/user-operation-log/set-annotation/">设置</a>和<a href="http://camunda-cn.shaochenfeng.com/reference/rest/history/user-operation-log/clear-annotation/">清除</a>注释。</p>
 
-<h2 id="glossary-of-operations-logged-in-the-user-operation-log">Glossary of Operations Logged in the User Operation Log</h2>
+<h2 id="记录在用户操作日志中的操作词汇表">记录在用户操作日志中的操作词汇表</h2>
 
-<p>The following describes the operations logged in the user operation log and the entries that are created as part of it:</p>
+<p>下面描述了在用户操作日志中记录的操作，以及作为其一部分创建的条目。</p>
 
 <table class="table table-striped">
   <tr>
@@ -8676,7 +8672,7 @@ historyService.clearAnnotationForOperationLogById(operationId);
     <td>TaskWorker</td>
     <td>
       <ul>
-        <li><strong>assignee</strong>: The id of the user who was assigned to the task</li>
+        <li><strong>assignee</strong>: 被分配给任务的用户的ID</li>
       </ul>
     </td>
   </tr>
@@ -8686,7 +8682,7 @@ historyService.clearAnnotationForOperationLogById(operationId);
     <td>TaskWorker</td>
     <td>
       <ul>
-        <li><strong>assignee</strong>: The id of the user who claimed the task</li>
+        <li><strong>assignee</strong>: 承接任务的用户的ID</li>
       </ul>
     </td>
   </tr>
@@ -8696,7 +8692,7 @@ historyService.clearAnnotationForOperationLogById(operationId);
     <td>TaskWorker</td>
     <td>
       <ul>
-        <li><strong>delete</strong>: The new delete state, <code>true</code></li>
+        <li><strong>delete</strong>: 新的删除状态, <code>true</code></li>
       </ul>
     </td>
   </tr>
@@ -8704,18 +8700,18 @@ historyService.clearAnnotationForOperationLogById(operationId);
     <td></td>
     <td>Create</td>
     <td>TaskWorker</td>
-    <td><i>No additional property is logged</i></td>
+    <td><i>没有记录额外的属性</i></td>
   </tr>
   <tr>
     <td></td>
     <td>Delegate</td>
     <td>TaskWorker</td>
     <td>
-      When delegating a task, three log entries are created, containing one of the following properties:
+      委派任务时，创建了三个日志条目，其中包含以下属性之一：
       <ul>
-        <li><strong>delegation</strong>: The resulting delegation state, <code>PENDING</code></li>
-        <li><strong>owner</strong>: The original owner of the task</li>
-        <li><strong>assignee</strong>: The user this task has been assigned to</li>
+        <li><strong>delegation</strong>: 由此产生的委托，<code>待办的</code></li>
+        <li><strong>owner</strong>: 任务的原始所有者</li>
+        <li><strong>assignee</strong>: 已分配给此任务的用户</li>
       </ul>
     </td>
   </tr>
@@ -8725,7 +8721,7 @@ historyService.clearAnnotationForOperationLogById(operationId);
     <td>TaskWorker</td>
     <td>
       <ul>
-      <li><strong>delete</strong>: The new delete state, <code>true</code></li>
+      <li><strong>delete</strong>: 新的删除状态, <code>true</code></li>
       </ul>
     </td>
   </tr>
@@ -8735,7 +8731,7 @@ historyService.clearAnnotationForOperationLogById(operationId);
     <td>TaskWorker</td>
     <td>
       <ul>
-        <li><strong>delegation</strong>: The resulting delegation state, <code>RESOLVED</code></li>
+        <li><strong>delegation</strong>: 由此产生的委托 <code>已完成的</code></li>
       </ul>
     </td>
   </tr>
@@ -8745,7 +8741,7 @@ historyService.clearAnnotationForOperationLogById(operationId);
     <td>TaskWorker</td>
     <td>
       <ul>
-        <li><strong>owner</strong>: The new owner of the task</li>
+        <li><strong>owner</strong>: 任务的新拥有者</li>
       </ul>
     </td>
   </tr>
@@ -8755,7 +8751,7 @@ historyService.clearAnnotationForOperationLogById(operationId);
     <td>TaskWorker</td>
     <td>
       <ul>
-        <li><strong>priority</strong>: The new priority of the task</li>
+        <li><strong>priority</strong>: 任务的新优先事项</li>
       </ul>
     </td>
   </tr>
@@ -9671,9 +9667,9 @@ historyService.clearAnnotationForOperationLogById(operationId);
   </tr>
 </table>
 
-<h1 id="provide-a-custom-history-backend">Provide a Custom History Backend</h1>
+<h1 id="使用自定义历史记录后端">使用自定义历史记录后端</h1>
 
-<p>In order to understand how to provide a custom history backend, it is useful to first look at a more detailed view of the history architecture:</p>
+<p>为了理解如何提供一个自定义的历史记录后台，首先看一下历史架构的更详细的介绍是很有用的：</p>
 
 <figure class="image">
   <span><img
@@ -9684,18 +9680,18 @@ historyService.clearAnnotationForOperationLogById(operationId);
 </figure>
 
 
-<p>Whenever the state of a runtime entity is changed, the core execution component of the process engine fires History Events. In order to make this flexible, the actual creation of the History Events as well as populating the history events with data from the runtime structures is delegated to the History Event Producer. The producer is handed in the runtime data structures (such as an ExecutionEntity or a TaskEntity), creates a new History Event and populates it with data extracted from the runtime structures.</p>
+<p>每当运行时实体的状态被改变时，流程引擎的核心执行组件就会触发历史事件。为了使其灵活，历史事件的实际创建以及用运行时结构的数据填充历史事件的工作被委托给历史事件生产者。生产者被交给运行时数据结构（如ExecutionEntity或TaskEntity），创建一个新的历史事件，并用从运行时结构中提取的数据填充它。</p>
 
-<p>The event is next delivered to the History Event Handler which constitutes the <em>History Backend</em>. The drawing above contains a logical component named <em>event transport</em>. This is supposed to represent the channel between the process engine core component producing the events and the History Event Handler. In the default implementation, events are delivered to the History Event Handler synchronously and inside the same JVM. It is however conceptually possible to send the event stream to a different JVM (maybe running on a different machine) and making delivery asynchronous. A good fit might be a transactional message Queue (JMS).</p>
+<p>该事件接下来被传递到构成*历史后端*的历史事件处理程序。上面的图包含了一个名为*事件传输*的逻辑组件。这应该是代表产生事件的过程引擎核心组件和历史事件处理程序之间的通道。在默认的实现中，事件被同步地传递给历史事件处理程序，并且在同一个JVM中。然而，从概念上讲，有可能将事件流发送到不同的JVM（可能运行在不同的机器上），并使交付成为异步的。一个很好的选择是事务性的消息队列（JMS）。</p>
 
-<p>Once the event has reached the History Event Handler, it can be processed and stored in some kind of datastore. The default implementation writes events to the History Database so that they can be queried using the History Service.</p>
+<p>一旦事件到达历史事件处理程序，它可以被处理并存储在某种数据存储中。默认的实现是将事件写入历史数据库，这样就可以用历史服务来查询它们。</p>
 
-<p>Exchanging the History Event Handler with a custom implementation allows users to plug in a custom History Backend. To do so, two main steps are required:</p>
+<p>将历史事件处理程序换成一个自定义的实现，允许用户插入一个自定义的历史后端。要做到这一点，需要两个主要步骤。</p>
 
 <ul>
-<li>Provide a custom implementation of the <a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/engine/impl/history/handler/HistoryEventHandler.html">HistoryEventHandler</a>
- interface.</li>
-<li>Wire the custom implementation in the process engine configuration.</li>
+<li>提供自定义的 <a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/engine/impl/history/handler/HistoryEventHandler.html">HistoryEventHandler</a>
+ 接口实现。</li>
+<li>在流程引擎配置中配置自定义的实现。</li>
 </ul>
 
 <p>
@@ -9711,7 +9707,7 @@ historyService.clearAnnotationForOperationLogById(operationId);
 </div>
 </p>
 
-<h1 id="implement-a-custom-history-level">Implement a Custom History Level</h1>
+<h1 id="实现自定义历史级别">实现自定义历史级别</h1>
 
 <p>To provide a custom history level the interface <code>org.camunda.bpm.engine.impl.history.HistoryLevel</code> has to be implemented. The custom history level implementation
 then has to be added to the process engine configuration, either by configuration or a process engine plugin.</p>
@@ -9787,7 +9783,7 @@ the removal time is not available.</p>
 }
 </code></pre>
 
-<h1 id="history-cleanup">History Cleanup</h1>
+<h1 id="历史清理">历史清理</h1>
 
 <p>When used intensively, the process engine can produce a huge amount of historic data. <em>History Cleanup</em> is a feature that removes this data based on configurable time-to-live settings.</p>
 
@@ -10162,19 +10158,19 @@ time to live, removal time strategy) still need to be defined among all nodes.</
 </ul></li>
 <li><a href="#用户操作日志">用户操作日志</a>
 <ul>
-<li><a href="#write-log-entries-regardless-of-user-authentication-context">Write Log Entries Regardless of User Authentication Context</a></li>
-<li><a href="#access-the-user-operation-log">Access the User Operation Log</a></li>
-<li><a href="#user-operation-log-entries">User Operation Log Entries</a></li>
-<li><a href="#annotation-of-user-operation-logs">Annotation of User Operation Logs</a></li>
-<li><a href="#glossary-of-operations-logged-in-the-user-operation-log">Glossary of Operations Logged in the User Operation Log</a></li>
+<li><a href="#不考虑用户登录状态-记录用户操作日志">不考虑用户登录状态，记录用户操作日志</a></li>
+<li><a href="#访问用户操作日志">访问用户操作日志</a></li>
+<li><a href="#用户操作日志条目">用户操作日志条目</a></li>
+<li><a href="#用户操作日志的注释">用户操作日志的注释</a></li>
+<li><a href="#记录在用户操作日志中的操作词汇表">记录在用户操作日志中的操作词汇表</a></li>
 </ul></li>
-<li><a href="#provide-a-custom-history-backend">Provide a Custom History Backend</a></li>
-<li><a href="#implement-a-custom-history-level">Implement a Custom History Level</a>
+<li><a href="#使用自定义历史记录后端">使用自定义历史记录后端</a></li>
+<li><a href="#实现自定义历史级别">实现自定义历史级别</a>
 <ul>
 <li><a href="#removal-time-inheritance">Removal Time Inheritance</a></li>
 <li><a href="#user-operation-logs-and-custom-history-level">User Operation Logs and Custom History Level</a></li>
 </ul></li>
-<li><a href="#history-cleanup">History Cleanup</a>
+<li><a href="#历史清理">历史清理</a>
 <ul>
 <li><a href="#history-cleanup-by-example">History Cleanup by Example</a></li>
 <li><a href="#basic-concepts">Basic Concepts</a>

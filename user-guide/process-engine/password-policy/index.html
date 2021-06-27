@@ -50,8 +50,8 @@ var _mtac = {};
 
   <meta name="viewport" content="width=device-width" />
 
-  <meta name="description" content="documentation of the Camunda Platform" />
-  <meta name="keywords" content="camunda, open source, free, Apache License, Apache 2.0, workflow, BPMN, BPMN 2.0, camunda.org, bpm, BPMS, engine, platform, process, automation, community, documentation" />
+  <meta name="description" content="Camunda流程平台中文站、中文文档" />
+  <meta name="keywords" content="camunda中文站, camunda中文文档, 中文文档 ,camunda, open source, free, Apache License, Apache 2.0, workflow, BPMN, BPMN 2.0, camunda.org, bpm, BPMS, engine, platform, process, automation, community, documentation" />
   <meta name="author" content="Camunda Platform community" />
   
     
@@ -491,7 +491,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/process-engine/transactions-in-processes/" >流程中的过渡</a>
+      <a href="/user-guide/process-engine/transactions-in-processes/" >流程中的事务</a>
     
   </li>
 
@@ -8182,32 +8182,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="col-xs-12 content-text">
       
 
-<p>This chapter is about configuring and using a password policy for engine-managed user accounts. A password policy makes sure that only passwords that meet certain criteria are allowed. A policy can consist of any number of rules. Violation of one of the policy&rsquo;s rules results in an error and the user not being saved.</p>
+<p>本章是关于为引擎管理的用户账户配置和使用密码策略。一个密码策略可以确保只允许符合某些标准的密码。一个策略可以由任何数量的规则组成。违反策略中的一条规则会导致错误，用户不会被保存。</p>
 
-<p>Since version 7.11.0, the engine comes with a standard password policy that is disabled by default and must be configured to use.</p>
+<p>从7.11.0版本开始，引擎自带一个标准的密码策略，默认情况下是禁用的，必须配置才能使用。</p>
 
-<p><strong>Note:</strong> This only applies to users that are managed within the Camunda engine. If you use LDAP for your user management a password policy has no effect on these users.</p>
+<p><strong>注意:</strong> 这只适用于在Camunda引擎内管理的用户。如果你使用LDAP进行用户管理，那么密码策略对这些用户没有影响。</p>
 
-<h1 id="built-in-password-policy">Built-In Password Policy</h1>
+<h1 id="内置密码策略">内置密码策略</h1>
 
-<p>The built-in password policy requires all passwords to meet the following criteria:</p>
+<p>内置的密码策略要求所有的密码必须符合以下条件：</p>
 
 <ul>
-<li>user data (i.e., user id, first name, last name, email) must not be contained</li>
-<li>minimum length of 10 characters</li>
-<li>at least 1 upper case character</li>
-<li>at least 1 lower case character</li>
-<li>at least 1 digit</li>
-<li>at least 1 special character</li>
+<li>不能包含用户资料（即用户ID、名字、姓氏、电子邮件）</li>
+<li>最小长度为10个字符</li>
+<li>至少1个大写字符</li>
+<li>至少1个小写字母</li>
+<li>至少1个数字</li>
+<li>至少1个特殊字符</li>
 </ul>
 
-<h1 id="customize-the-password-policy">Customize the Password Policy</h1>
+<h1 id="自定义密码策略">自定义密码策略</h1>
 
-<p>You can use the process engine configuration to enable / disable the password policy or plug in a custom policy. See <a href="../process-engine-bootstrapping">Process Engine Bootstrapping</a> on how to set properties for your Camunda environment.</p>
+<p>你可以使用流程引擎配置来启用/禁用密码策略或插入一个自定义策略。请参阅<a href="../process-engine-bootstrapping">Process Engine Bootstrapping</a>，了解如何为你的Camunda环境设置属性。</p>
 
-<p>To enable or disable the password policy checks you need to set the <code>enablePasswordPolicy</code> property.</p>
+<p>要启用或禁用密码策略检查，你需要设置 <code>enablePasswordPolicy</code> 属性。</p>
 
-<p>If you want to use a custom password policy you can do this by implementing the <code>PasswordPolicy</code> and <code>PasswordPolicyRule</code> interfaces from the <code>org.camunda.bpm.engine.identity</code> package and provide your implementation to the process engine configuration by setting the <code>passwordPolicy</code> property.</p>
+<p>如果你想使用自定义的密码策略，需要实现<code>org.camunda.bpm.engine.identity</code>包中的<code>PasswordPolicy</code>和<code>PasswordPolicyRule</code>接口，并设置<code>passwordPolicy</code>属性向流程引擎配置提供你的实现类。</p>
 
 <pre><code class="language-java">public class MyPasswordPolicy implements PasswordPolicy {
 
@@ -8222,26 +8222,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   @Override
   public String getPlaceholder() {
-    // This placeholder can be used to display internationalized error messages.
+    // 此占位符可用于显示国际化的错误消息。
     return &quot;PASSWORD_POLICY_RULE_PLACEHOLDER&quot;;
   }
 
   @Override
   public Map&lt;String, String&gt; getParameters() {
-    // These parameters can be injected into error messages.
+    // 这些参数可以注入错误消息。
   }
 
   @Override
   public boolean execute(String candidatePassword, User user) {
-    // validate the candidate password
-    // return true if valid or false if invalid
+    // 验证候选密码
+    // 如果有效则返回true，否则返回false
   }
 }
 </code></pre>
 
-<p>By providing a rule placeholder and parameters via <code>getPlaceholder</code> and <code>getParameters</code> a custom front end can display error messages based on the rules and their configuration. (e.g. &ldquo;The password must at least have a length of X characters&rdquo; with X being configurable and passed within the parameter map)</p>
+<p>通过<code>getPlaceholder</code>和<code>getParameters</code>提供规则占位符和参数，自定义前端可以根据规则和它们的配置显示错误信息。例如，&rdquo;密码必须至少有X个字符的长度&rdquo;，X是可配置的，并在参数图中传递）。</p>
 
-<p>A rules <code>execute</code> method checks if the entered password meets this rule or not. It is executed when trying to save a user.</p>
+<p>一个规则的`执行&rsquo;方法检查输入的密码是否符合这个规则。当试图保存一个用户时，它被执行。</p>
 
     </div>
   </div>
@@ -8251,8 +8251,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <h3>目录:</h3>
   <nav id="TableOfContents">
 <ul>
-<li><a href="#built-in-password-policy">Built-In Password Policy</a></li>
-<li><a href="#customize-the-password-policy">Customize the Password Policy</a></li>
+<li><a href="#内置密码策略">内置密码策略</a></li>
+<li><a href="#自定义密码策略">自定义密码策略</a></li>
 </ul>
 </nav>
   
