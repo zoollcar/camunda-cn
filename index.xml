@@ -3384,7 +3384,7 @@ ProcessInstance instance = runtimeService.</description>
       <guid>http://camunda-cn.shaochenfeng.com/introduction/architecture/</guid>
       <description>Camunda平台是一个基于Java的框架。主要组件是用Java编写的，我们总体上专注于为Java开发者提供他们在JVM上设计、实施和运行业务流程和工作流所需的工具。然而，我们也想让非Java开发者也能使用流程引擎技术。这就是为什么Camunda平台还提供了REST API，允许你与远程流程引擎应用建立连接。
 Camunda平台既可以作为一个独立的流程引擎服务器使用，也可以嵌入到定制的Java应用程序中。可嵌入性要求是Camunda平台许多架构决定的核心。例如，我们努力使流程引擎组件成为一个轻量级的组件，尽量减少对第三方库的依赖性。此外，可嵌入性促使流程引擎支持使用Spring Managed或JTA事务和线程模型的能力。
-流程引擎架构  流程引擎公共API： 面向服务的API允许Java应用程序与流程引擎交互。流程引擎的不同部分（即流程存储库、运行时的流程交互、任务管理等）被分离到各个服务中。公共API具有命令式访问模式的特点：进入流程引擎的流程要经过一个命令拦截器，该拦截器用于设置流程上下文。 BPMN 2.0 核心引擎: 这是流程引擎的核心。它有一个轻量级的图结构执行引擎（PVM - Process Virtual Machine），一个将BPMN 2.0 XML文件转化为Java对象的BPMN 2.0解析器，以及一套BPMN行为实现（为BPMN 2.0结构提供实现，如网关或服务任务）。 Job 执行器: Job执行者负责处理异步的后台工作，如流程中的定时器或异步连续。 持久层: 流程引擎有一个持久层，负责将流程实例状态持久化到关系数据库中。我们使用MyBatis映射引擎来实现对象的关系映射。  依赖的第三方库 见第三方库一节。
+流程引擎架构  流程引擎公共API： 面向服务的API允许Java应用程序与流程引擎交互。流程引擎的不同部分（即流程存储库、运行时的流程交互、任务管理等）被分离到各个服务中。公共API具有命令式访问模式的特点：进入流程引擎的流程要经过一个命令拦截器，该拦截器用于设置流程上下文。 BPMN 2.0 核心引擎: 这是流程引擎的核心。它有一个轻量级的图结构执行引擎（PVM - Process Virtual Machine），一个将BPMN 2.0 XML文件转化为Java对象的BPMN 2.0解析器，以及一套BPMN行为实现（为BPMN 2.0结构提供实现，如网关或服务任务）。 Job 执行器: Job执行者负责处理异步的后台工作，如流程中的定时器或异步延续。 持久层: 流程引擎有一个持久层，负责将流程实例状态持久化到关系数据库中。我们使用MyBatis映射引擎来实现对象的关系映射。  依赖的第三方库 见第三方库一节。
 Camunda平台 架构 Camunda平台是一个灵活的框架，可以部署在不同的场景中。本节对最常见的部署场景进行了概述。
 嵌入式流程引擎 在这种情况下，流程引擎被作为一个库添加到一个自定义的应用程序中。这样，流程引擎可以很容易地随着应用程序的生命周期启动和停止。也可以在一个共享数据库之上运行多个嵌入式流程引擎。
 分布式的、由容器管理的流程引擎 在这种情况下，流程引擎在运行时容器（Servlet容器、应用服务器&amp;hellip;）内启动。流程引擎作为容器服务提供的，可以被部署在容器内的所有应用程序共享。这个概念就像JMS消息队列，它由运行时提供，可以被所有应用程序使用。流程部署和应用程序之间有一对一的映射：流程引擎跟踪应用程序部署的流程定义，并将执行委托给相对应的应用程序。
@@ -4047,7 +4047,7 @@ public class Customer { private String name; public String getName() { return na
 jdbc:mariadb:[failover|sequential]://[host1:port],[host2:port],.../[data-base-name]  示例:
 jdbc:mariadb:failover://192.168.1.1:32980,192.168.1.2:32980,192.168.1.3:32980/process-engine jdbc:mariadb:sequential://192.168.1.1:32980,192.168.1.2:32980,192.168.1.3:32980/process-engine  重要提示：在群集中运行Camunda时，客户端配置需要在每个节点上相同。
 Galera Cluster 的已知的限制 使用Galera Cluster时，有以下已知限制：
- 在数据库中需要悲观的读锁的API不能正确工作。受影响的API。独家消息相关（.correlateExclusively()）。参见(Javadocs)。 另一个可能的负面效应。  当从两个线程同时部署相同的资源时，会重复部署定义。 当从两个线程同时调用 &amp;ldquo;HistoryService#cleanUpHistoryAsync&amp;rdquo; 时，会重复执行历史清理工作。  如果资源同时部署在一个集群中，部署期间的重复检查不起作用。具体影响是：假设有一个Camunda流程引擎集群，它连接到同一个Galera集群。在部署一个新的流程应用时，流程引擎节点将检查流程应用所提供的BPMN流程是否已经部署，以避免重复部署。如果在多个流程引擎节点上同时进行部署，就会在数据库上获得一个独占的读锁（技术上来说，这意味着每个节点执行一个SQL &amp;ldquo;选择更新 &amp;ldquo;的查询。这在Galera Cluster上不起作用，可能导致同一进程的多个版本被部署。 jdbcStatementTimeout 配置项不起作用，不能使用。  </description>
+ 在数据库中需要悲观的读锁的API不能正确工作。受影响的API。独家消息相关（.correlateExclusively()）。参见(Javadocs)。 另一个可能的负面效应。  当从两个线程同时部署相同的资源时，会重复部署定义。 当从两个线程同时调用 &amp;ldquo;HistoryService#cleanUpHistoryAsync&amp;rdquo; 时，会重复执行历史清理工作。  如果资源同时部署在一个集群中，部署期间的重复检查不起作用。具体影响是：假设有一个Camunda流程引擎集群，它连接到同一个Galera集群。在部署一个新的流程应用时，流程引擎节点将检查流程应用所提供的BPMN流程是否已经部署，以避免重复部署。如果在多个流程引擎节点上同时进行部署，就会在数据库上获得一个独占的读锁（技术上来说，这意味着每个节点执行一个SQL &amp;ldquo;选择更新 &amp;ldquo;的查询。这在Galera Cluster上不起作用，可能导致同一流程的多个版本被部署。 jdbcStatementTimeout 配置项不起作用，不能使用。  </description>
     </item>
     
     <item>
@@ -7537,8 +7537,19 @@ Parameters Path Parameters  Name Description   id The id of the task.   commentI
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/</guid>
-      <description>A job is an explicit representation of a task to trigger process execution. A job is created when a timer event or a task marked for asynchronous execution (see transaction boundaries) is approached. Job processing can therefore be separated into three phases:
- Job Creation Job Acquisition Job Execution  While jobs are created during process execution, job acquisition and execution are the job executor&amp;rsquo;s responsibility. The following diagram illustrates these two steps:</description>
+      <description>Job是触发流程执行的任务的明确表示。当一个定时器事件或一个标记为异步执行的任务(见事务边界接近时，就会创建一个Job。因此，Job处理可以被分成三个阶段。
+ Job 创建 Job 获取 Job 执行  虽然Job是在流程执行过程中创建的，但Job的获取和执行是Job执行器的责任。下图说明了这两个步骤。
+Job执行器激活 当使用 嵌入式流程引擎 时，默认情况下，当流程引擎启动时，Job执行器不会被激活。
+如果你希望在流程引擎时激活Job执行程序。需要在流程引擎中配置如下配置项：
+&amp;lt;property name=&amp;quot;jobExecutorActivate&amp;quot; value=&amp;quot;true&amp;quot; /&amp;gt;  当使用 shared process engine 时，默认情况则相反：如果你没有在流程引擎配置上指定jobExecutorActivate 属性，Job执行器会自动启动。为了将其关闭，你必须明确地将该属性设置为false：
+&amp;lt;property name=&amp;quot;jobExecutorActivate&amp;quot; value=&amp;quot;false&amp;quot; /&amp;gt;  在单元测试中使用Job执行器 在单元测试中，使用这个后台组件是很麻烦的。因此，Java API提供了查询（ManagementService.createJobQuery）和 手动 执行Job（ManagementService.executeJob）的功能，这允许从单元测试中控制Job的执行。
+Job 创建 Job是由流程引擎为很多不同的目的而创建的。存在以下Job类型：
+ 在流程中使用异步延续设置事务边界 用于BPMN计时器事件的定时器Job BPMN事件的异步处理  在创建过程中，Job可以得到一个获取和执行的优先权。
+Job 优先级 在实践中，Job的处理量很少均匀地分布在一天中。相反，会有高负荷的高峰期，例如，当夜间运行批处理。在这种情况下，Job执行器可能会暂时过载的情况：数据库中的Job比Job执行器一次能处理的要多得多。 Job优先级 可以帮助应对这些情况，在一个明确的事项中，定义一个重要性的顺序，并按该顺序启用执行。
+一般来说，有两种类型的用例可以用Job优先级来解决：
+在设计时预测优先级 。在许多情况下，在设计一个流程模型时，可以预见到高负载的情况。在这些情况下，根据某些业务目标来确定Job执行的优先次序往往是很重要的。例如： * 一家零售店有休闲和VIP客户。在高负载的情况下，希望以更高的优先级处理VIP客户的订单，因为他们的满意度对公司的业务目标更重要。 * 一家家具店使用以人为本的理念，他们为客户购买家具提供咨询，也有非时间优先的交付流程。优先排序可以用来确保咨询流程的快速响应时间，提高用户和客户的满意度。 优先化作为对运行时条件的响应 。 一些Job执行器高负荷的情况是由运行时的不可预见的条件造成的，这些条件在流程设计时无法处理。暂时覆盖优先级可以帮助优雅地处理这类情况。例如： * 一个服务任务访问一个网络服务来处理付款。支付服务遇到了过载，响应非常慢。为了避免因等待服务响应而占用Job执行器的所有资源，可以暂时降低各自Job的优先级。这样一来，不相关的流程实例和Job就不会被拖慢。在服务恢复后，可以再次清除优先级。
+Job优先权 优先级是Java long 值范围内的一个自然数。一个较高的数字代表一个较高的优先级。一旦被分配，优先级是静态的，这意味着流程引擎不会在未来的任何时候再次为该Job分配优先级。
+Job优先级在流程执行过程中影响两个阶段：Job创建和Job获取。在Job创建期间，一个Job被分配了一个优先级。在Job获取过程中，流程引擎可以根据给定的Job优先级，相应地安排其执行。这意味着，Job是严格按照优先级的顺序来获取的。</description>
     </item>
     
     <item>
