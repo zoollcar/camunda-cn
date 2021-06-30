@@ -2,11 +2,7 @@
 <html class="no-js">
 <head>
   
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-PP9MHKW');</script>
+  
   
 
   
@@ -71,8 +67,7 @@ var _mtac = {};
 <body class="">
 
 
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PP9MHKW"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
 
 
 <nav class="navbar navbar-fixed-top">
@@ -523,7 +518,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/process-engine/metrics/" >Metrics</a>
+      <a href="/user-guide/process-engine/metrics/" >指标</a>
     
   </li>
 
@@ -837,7 +832,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/version-compatibility/" >Version Compatibility</a>
+      <a href="/user-guide/spring-boot-integration/version-compatibility/" >版本兼容性</a>
     
   </li>
 
@@ -845,7 +840,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/configuration/" >Configuration</a>
+      <a href="/user-guide/spring-boot-integration/configuration/" >配置</a>
     
   </li>
 
@@ -869,7 +864,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/process-applications/" >Process Applications</a>
+      <a href="/user-guide/spring-boot-integration/process-applications/" >流程应用程序</a>
     
   </li>
 
@@ -877,7 +872,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/the-spring-event-bridge/" >Spring Eventing Bridge</a>
+      <a href="/user-guide/spring-boot-integration/the-spring-event-bridge/" >Spring 事件总线</a>
     
   </li>
 
@@ -885,7 +880,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/develop-and-test/" >Developing and Testing</a>
+      <a href="/user-guide/spring-boot-integration/develop-and-test/" >部署和测试</a>
     
   </li>
 
@@ -8199,7 +8194,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <p>在流程运行中调用的Java代理类，需要实现 <code>org.camunda.bpm.engine.delegate.JavaDelegate</code> 接口，并实现 <code>execute</code> 方法。当流程执行到达这个特定的步骤时，它将执行该方法中定义的这个方法，并以默认的BPMN 2.0方式完成活动。</p>
 
-<p>举个例子，让我们先创建一个Java类，它可以用来将一个流程变量String改为大写字母。这个类需要实现<code>org.camunda.bpm.engine.delegate.JavaDelegate</code>接口，这要求我们实现<code>execute(DelegateExecution)</code>方法。这个操作将被引擎调用，并且包含所需要的业务逻辑。（可以通过 <a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/engine/delegate/DelegateExecution.html">DelegateExecution</a>
+<p>举个例子，让我们先创建一个Java类，它可以用来将一个流程变量String改为大写字母。这个类需要实现<code>org.camunda.bpm.engine.delegate.JavaDelegate</code>接口，这要求我们实现<code>execute(DelegateExecution)</code>方法。这个操作将被引擎调用，并且包含所需要的业务逻辑。（可以通过 <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/delegate/DelegateExecution.html">DelegateExecution</a>
  接口访问和操作流程实例信息，如流程变量和其他信息）</p>
 
 <pre><code class="language-java">  public class ToUppercase implements JavaDelegate {
@@ -8766,7 +8761,7 @@ setter/private field on the injection target should always be <code>org.camunda.
     })();
   </script>
   
-  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/4513465.js"></script>
+  
   
 </body>
 </html>

@@ -2,11 +2,7 @@
 <html class="no-js">
 <head>
   
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-PP9MHKW');</script>
+  
   
 
   
@@ -59,7 +55,7 @@ var _mtac = {};
     
   
 
-  <title>Spring Boot Version Compatibility | docs.camunda.org</title>
+  <title>Spring Boot 版本兼容性 | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
   <link rel="shortcut icon" href="http://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
@@ -71,8 +67,7 @@ var _mtac = {};
 <body class="">
 
 
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PP9MHKW"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
 
 
 <nav class="navbar navbar-fixed-top">
@@ -523,7 +518,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/process-engine/metrics/" >Metrics</a>
+      <a href="/user-guide/process-engine/metrics/" >指标</a>
     
   </li>
 
@@ -837,7 +832,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/version-compatibility/" >Version Compatibility</a>
+      <a href="/user-guide/spring-boot-integration/version-compatibility/" >版本兼容性</a>
     
   </li>
 
@@ -845,7 +840,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/configuration/" >Configuration</a>
+      <a href="/user-guide/spring-boot-integration/configuration/" >配置</a>
     
   </li>
 
@@ -869,7 +864,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/process-applications/" >Process Applications</a>
+      <a href="/user-guide/spring-boot-integration/process-applications/" >流程应用程序</a>
     
   </li>
 
@@ -877,7 +872,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/the-spring-event-bridge/" >Spring Eventing Bridge</a>
+      <a href="/user-guide/spring-boot-integration/the-spring-event-bridge/" >Spring 事件总线</a>
     
   </li>
 
@@ -885,7 +880,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/develop-and-test/" >Developing and Testing</a>
+      <a href="/user-guide/spring-boot-integration/develop-and-test/" >部署和测试</a>
     
   </li>
 
@@ -8176,28 +8171,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <i>编辑此页</i> <span class="cam-docs-github"></span></a>
 </div>
 
-      <h1 class="page-title">Spring Boot Version Compatibility</h1>
+      <h1 class="page-title">Spring Boot 版本兼容性</h1>
     </div>
 
     <div class="col-xs-12 content-text">
-      <p>Each version of the Camunda Spring Boot Starter is bound to a specific version of Camunda Platform and Spring Boot.
-Only these default combinations are recommended (and supported) by Camunda.
-Other combinations must be thoroughly tested before being used in production.</p>
+      <p>每个版本的Camunda Spring Boot Starter都与Camunda Platform和Spring Boot的特定版本绑定。
+Camunda只推荐（并支持）这些默认组合。
+其他组合在生产中使用前必须经过全面测试。</p>
 
 
 <div class="note bg-info docs-info">
-  <h3>Heads Up</h3>
-  <p>Starting with version 7.13.0, Camunda Platform and its compatible Spring Boot Starter always share the same version.
-  Also, the Camunda Platform version used in the Spring Boot Starter doesn&rsquo;t have to be overridden anymore. Simply pick
-  the version of the Starter that resembles the version of Camunda Platform you want to use.</p>
+  <h3>小心</h3>
+  <p>从7.13.0版本开始，Camunda Platform和其兼容的Spring Boot Starter总是共享相同的版本。
+  而且，Spring Boot Starter中使用的Camunda Platform版本也不必再被重写了。只需选择与你想使用的Camunda Platform版本相近的Starter版本即可。</p>
 </div>
 
 
 <table class="table table-striped">
   <tr>
-    <th>Spring Boot Starter version</th>
-    <th>Camunda Platform version</th>
-    <th>Spring Boot version</th>
+    <th>Spring Boot Starter 版本</th>
+    <th>Camunda Platform 版本</th>
+    <th>Spring Boot 版本</th>
   </tr>
   <tr>
     <td>1.0.0&#42;</td>
@@ -8291,7 +8285,7 @@ Other combinations must be thoroughly tested before being used in production.</p
   </tr>
 </table>
 
-<p>* For these versions, use the following Maven coordinates:</p>
+<p>* 对于这些版本，请使用以下Maven 坐标：</p>
 
 <pre><code>&lt;dependency&gt;
   &lt;groupId&gt;org.camunda.bpm.extension&lt;/groupId&gt;
@@ -8300,7 +8294,7 @@ Other combinations must be thoroughly tested before being used in production.</p
 &lt;/dependency&gt;
 </code></pre>
 
-<p>** For these versions, use the following Maven coordinates:</p>
+<p>** 对于这些版本，请使用以下Maven 坐标：</p>
 
 <pre><code>&lt;dependency&gt;
   &lt;groupId&gt;org.camunda.bpm.extension.springboot&lt;/groupId&gt;
@@ -8309,9 +8303,7 @@ Other combinations must be thoroughly tested before being used in production.</p
 &lt;/dependency&gt;
 </code></pre>
 
-<p>*** For these versions, all listed Spring Boot versions are supported
-while the oldest one is used by default. If you want to use a newer supported version,
-configure <code>dependencyManagement</code> in your application, e.g. add the following when using Maven:</p>
+<p>*** 对于这些版本，所有列出的Spring Boot版本都被支持，而默认使用最古老的版本。如果你想使用较新的支持版本，请在你的应用程序中配置<code>dependencyManagement</code>，例如，在使用Maven时添加以下内容。</p>
 
 <pre><code>&lt;dependencyManagement&gt;
   &lt;dependencies&gt;
@@ -8380,7 +8372,7 @@ configure <code>dependencyManagement</code> in your application, e.g. add the fo
     })();
   </script>
   
-  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/4513465.js"></script>
+  
   
 </body>
 </html>

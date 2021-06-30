@@ -2,11 +2,7 @@
 <html class="no-js">
 <head>
   
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-PP9MHKW');</script>
+  
   
 
   
@@ -71,8 +67,7 @@ var _mtac = {};
 <body class="">
 
 
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PP9MHKW"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
 
 
 <nav class="navbar navbar-fixed-top">
@@ -523,7 +518,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/process-engine/metrics/" >Metrics</a>
+      <a href="/user-guide/process-engine/metrics/" >指标</a>
     
   </li>
 
@@ -837,7 +832,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/version-compatibility/" >Version Compatibility</a>
+      <a href="/user-guide/spring-boot-integration/version-compatibility/" >版本兼容性</a>
     
   </li>
 
@@ -845,7 +840,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/configuration/" >Configuration</a>
+      <a href="/user-guide/spring-boot-integration/configuration/" >配置</a>
     
   </li>
 
@@ -869,7 +864,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/process-applications/" >Process Applications</a>
+      <a href="/user-guide/spring-boot-integration/process-applications/" >流程应用程序</a>
     
   </li>
 
@@ -877,7 +872,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/the-spring-event-bridge/" >Spring Eventing Bridge</a>
+      <a href="/user-guide/spring-boot-integration/the-spring-event-bridge/" >Spring 事件总线</a>
     
   </li>
 
@@ -885,7 +880,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/develop-and-test/" >Developing and Testing</a>
+      <a href="/user-guide/spring-boot-integration/develop-and-test/" >部署和测试</a>
     
   </li>
 
@@ -8327,7 +8322,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <p>外部任务可以定义 <a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/extension-elements/#erroreventdefinition">camunda:errorEventDefinition</a>元素，可以用JUEL表达式提供。该表达式在<code>ExternalTaskService#complete</code>和<code>ExternalTaskService#handleFailure</code>时被计算。如果表达式结果为 &ldquo;true&rdquo;，就会抛出一个BPMN错误，这个错误可以被<a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/events/error-events/#error-boundary-event">错误边界事件</a>捕获。</p>
 
-<p>在外部任务的范围内，表达式可以通过key <code>externalTask</code>对象访问<a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/engine/externaltask/ExternalTask.html">ExternalTaskEntity</a>
+<p>在外部任务的范围内，表达式可以通过key <code>externalTask</code>对象访问<a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/externaltask/ExternalTask.html">ExternalTaskEntity</a>
 ，它为 &ldquo;errorMessage&rdquo;、&rdquo;errorDetails&rdquo;、&rdquo;workerId&rdquo;、&rdquo;retries&rdquo; 等提供getter方法。</p>
 
 <p><strong>案例:</strong></p>
@@ -8384,7 +8379,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <tbody>
     <tr>
       <td><code>execution</code></td>
-      <td><code><a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/engine/delegate/DelegateExecution.html">DelegateExecution</a>
+      <td><code><a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/delegate/DelegateExecution.html">DelegateExecution</a>
 </code></td>
       <td>
         Available in a BPMN execution context like a service task, execution listener or sequence
@@ -8393,19 +8388,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </tr>
     <tr>
       <td><code>task</code></td>
-      <td><code><a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/engine/delegate/DelegateTask.html">DelegateTask</a>
+      <td><code><a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/delegate/DelegateTask.html">DelegateTask</a>
 </code></td>
       <td>Available in a task context like a task listener.</td>
     </tr>
     <tr>
       <td><code>externalTask</code></td>
-      <td><code><a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/engine/externaltask/ExternalTask.html">ExternalTask</a>
+      <td><code><a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/externaltask/ExternalTask.html">ExternalTask</a>
 </code></td>
       <td>Available during an external task context activity (e.g. in <a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/extension-elements/#erroreventdefinition">camunda:errorEventDefinition</a> expressions).</td>
     </tr>
     <tr>
       <td><code>caseExecution</code></td>
-      <td><code><a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/engine/delegate/DelegateCaseExecution.html">DelegateCaseExecution</a>
+      <td><code><a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/delegate/DelegateCaseExecution.html">DelegateCaseExecution</a>
 </code></td>
       <td>Available in a CMMN execution context.</td>
     </tr>
@@ -8566,7 +8561,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     })();
   </script>
   
-  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/4513465.js"></script>
+  
   
 </body>
 </html>

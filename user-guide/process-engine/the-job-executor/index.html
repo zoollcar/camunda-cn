@@ -2,11 +2,7 @@
 <html class="no-js">
 <head>
   
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-PP9MHKW');</script>
+  
   
 
   
@@ -71,8 +67,7 @@ var _mtac = {};
 <body class="">
 
 
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PP9MHKW"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
 
 
 <nav class="navbar navbar-fixed-top">
@@ -523,7 +518,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/process-engine/metrics/" >Metrics</a>
+      <a href="/user-guide/process-engine/metrics/" >指标</a>
     
   </li>
 
@@ -837,7 +832,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/version-compatibility/" >Version Compatibility</a>
+      <a href="/user-guide/spring-boot-integration/version-compatibility/" >版本兼容性</a>
     
   </li>
 
@@ -845,7 +840,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/configuration/" >Configuration</a>
+      <a href="/user-guide/spring-boot-integration/configuration/" >配置</a>
     
   </li>
 
@@ -869,7 +864,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/process-applications/" >Process Applications</a>
+      <a href="/user-guide/spring-boot-integration/process-applications/" >流程应用程序</a>
     
   </li>
 
@@ -877,7 +872,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/the-spring-event-bridge/" >Spring Eventing Bridge</a>
+      <a href="/user-guide/spring-boot-integration/the-spring-event-bridge/" >Spring 事件总线</a>
     
   </li>
 
@@ -885,7 +880,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/develop-and-test/" >Developing and Testing</a>
+      <a href="/user-guide/spring-boot-integration/develop-and-test/" >部署和测试</a>
     
   </li>
 
@@ -8205,7 +8200,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <p>当使用 <strong>嵌入式流程引擎</strong> 时，默认情况下，当流程引擎启动时，Job执行器不会被激活。</p>
 
-<p>如果你希望在流程引擎时激活Job执行程序。需要在流程引擎中配置如下配置项：</p>
+<p>如果你希望在流程引擎时激活Job执行器。需要在流程引擎中配置如下配置项：</p>
 
 <pre><code class="language-xml">&lt;property name=&quot;jobExecutorActivate&quot; value=&quot;true&quot; /&gt;
 </code></pre>
@@ -8427,7 +8422,7 @@ managementService.setOverridingJobPriorityForJobDefinition(jobDefinition.getId()
 
 <p>如果每个Job都必须设置 &ldquo;DUEDATE_&ldquo;，可以禁用优化。这可以通过设置<a href="http://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#ensureJobDueDateNotNull">流程引擎配置标志</a> &ldquo;ensureJobDueDateNotNull&rdquo; 为 <code>true</code> 来实现。</p>
 
-<p>然而，在禁用优化之前，任何 &ldquo;DUEDATE_&rdquo; 为 &ldquo;null&rdquo; 的Job将不会被Job获取阶段所获取，除非这些Job被明确地以<a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/engine/ManagementService.html#setJobDuedate-java.lang.String-java.util.Date-">Java</a>
+<p>然而，在禁用优化之前，任何 &ldquo;DUEDATE_&rdquo; 为 &ldquo;null&rdquo; 的Job将不会被Job获取阶段所获取，除非这些Job被明确地以<a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/ManagementService.html#setJobDuedate-java.lang.String-java.util.Date-">Java</a>
 /<a href="http://camunda-cn.shaochenfeng.com/reference/rest/job/put-set-job-duedate/">Rest</a>的方式更新到期时间。</p>
 
 <h2 id="job-获取的两个步骤">Job 获取的两个步骤</h2>
@@ -8519,24 +8514,24 @@ managementService.setOverridingJobPriorityForJobDefinition(jobDefinition.getId()
 
 <h2 id="线程池">线程池</h2>
 
-<p>获取的Job由线程池执行。线程池从获取的Job队列中消耗Job。获得的Job队列是一个具有固定容量的内存队列。当执行者开始执行一个Job时，它首先被从队列中移除。</p>
+<p>获取的Job由线程池执行。线程池从获取的Job队列中消耗Job。获得的Job队列是一个具有固定容量的内存队列。当执行器开始执行一个Job时，它首先被从队列中移除。</p>
 
 <p>在嵌入式流程引擎的情况下，该线程池的默认实现是 <code>java.util.concurrent.ThreadPoolExecutor</code> 。然而，这在Java EE环境中是不允许的。在那里，我们要与应用服务器的线程管理能力挂钩。关于如何实现，请参见<a href="http://camunda-cn.shaochenfeng.com/user-guide/runtime-container-integration/">运行时容器集成</a>部分中的特定平台信息。</p>
 
 <h2 id="失败的job">失败的Job</h2>
 
 <p>当Job执行失败时，例如，服务任务调用抛出一个异常，一个Job将被重试若干次（默认为2，因此，该Job总共被试了三次）。
-它不会被立即重试并加回获取队列，但RETRIES&#95;列的值会减少，执行者会解锁该Job。
+它不会被立即重试并加回获取队列，但RETRIES&#95;列的值会减少，执行器会解锁该Job。
 流程引擎因此对失败的Job进行了记录。解锁还包括删除时间LOCK&#95;EXP&#95;TIME&#95;和锁的所有者LOCK&#95;OWNER&#95;，将这两个条目设置为<code>null</code>。随后，一旦Job被获取执行，失败的Job将自动被重试。一旦重试次数用尽（RETRIES&#95;列的值等于0），该Job就不再执行，引擎在该Job处停止，表示无法继续。</p>
 
 
 <div class="note bg-info docs-info">
   <h3></h3>
-  <p>虽然所有失败的Job都会被重试，但有一种情况下，Job的重试次数不会被递减。这就是，如果一个Job由于乐观的锁定异常而失败。乐观锁定是进程引擎解决资源更新冲突的机制，例如，当一个进程实例的两个Job并行执行时（见下面关于<a href="#concurrent-job-execution">并发Job执行</a>的章节）。由于从操作者的角度来看，乐观锁定异常并不是什么特殊情况，而且最终会解决，所以不会导致重试递减。</p>
+  <p>虽然所有失败的Job都会被重试，但有一种情况下，Job的重试次数不会被递减。这就是，如果一个Job由于乐观的锁定异常而失败。乐观锁定是流程引擎解决资源更新冲突的机制，例如，当一个流程实例的两个Job并行执行时（见下面关于<a href="#concurrent-job-execution">并发Job执行</a>的章节）。由于从操作者的角度来看，乐观锁定异常并不是什么特殊情况，而且最终会解决，所以不会导致重试递减。</p>
 </div>
 
 
-<p>如果启用了Job的事件创建，那么一旦Job重试耗尽，就会创建一个事件。 （查看 <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/incidents/#de-activate-incidents">事件的激活与冻结</a>）.
+<p>如果启用了Job的事件创建，那么一旦Job重试耗尽，就会创建一个事件。 （查看 <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/incidents/#事件的激活与冻结">事件的激活与冻结</a>）.
 与Job相关的事件和历史事件可以通过类似如下的Java API请求访问：</p>
 
 <pre><code class="language-java">List&lt;Incident&gt; incidents = engineRule.getRuntimeService()
@@ -8699,33 +8694,33 @@ List&lt;HistoricIncident&gt; historicIncidents = engineRule.getHistoryService()
 </figure>
 
 
-<p>我们有一个并行的网关，后面是三个服务任务，它们都执行<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/transactions-in-processes/#asynchronous-continuations">异步延续</a>。 这样做的结果是，三个Job被添加到数据库中。一旦这样的Job出现在数据库中，它就可以被Job执行者处理。它获取Job并将其委托给实际处理Job的Job线程池。这意味着，使用异步延续，你可以将Job分配给这个线程池（在集群的情况下，甚至跨越集群中的多个线程池）。</p>
+<p>我们有一个并行的网关，后面是三个服务任务，它们都执行<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/transactions-in-processes/#asynchronous-continuations">异步延续</a>。 这样做的结果是，三个Job被添加到数据库中。一旦这样的Job出现在数据库中，它就可以被Job执行器处理。它获取Job并将其委托给实际处理Job的Job线程池。这意味着，使用异步延续，你可以将Job分配给这个线程池（在集群的情况下，甚至跨越集群中的多个线程池）。</p>
 
 <p>这通常是一件好事。然而，它也存在着一个固有的问题：一致性。考虑一下服务任务之后的并行连接。当一个服务任务的执行完成后，我们到达并行连接处，需要决定是否等待其他执行，或者是否可以继续前进。这意味着，对于到达并行连接的每个分支，我们需要决定是否可以继续，或者是否需要等待其他分支的一个或多个执行。</p>
 
-<p>这就要求各执行分支之间进行同步。流程引擎用乐观锁来解决这个问题。每当我们根据可能不是最新的数据做出决定时（因为另一个事务可能在我们提交之前修改它），我们要确保在两个事务中增加同一数据库行的修订版。这样一来，哪个事务先提交就赢了，其他事务就会因乐观锁定异常而失败。这就解决了上面讨论的流程的问题：如果多个执行同时到达并行连接，它们都会认为自己必须等待，增加其父执行（流程实例）的修订版，然后尝试提交。无论哪个执行是第一个，都可以提交，而其他的则会因为乐观锁异常而失败。由于这些执行是由Job触发的，Job执行者在等待一定时间后会重新尝试执行相同的Job，希望这次能通过同步网关。</p>
+<p>这就要求各执行分支之间进行同步。流程引擎用乐观锁来解决这个问题。每当我们根据可能不是最新的数据做出决定时（因为另一个事务可能在我们提交之前修改它），我们要确保在两个事务中增加同一数据库行的修订版。这样一来，哪个事务先提交就赢了，其他事务就会因乐观锁定异常而失败。这就解决了上面讨论的流程的问题：如果多个执行同时到达并行连接，它们都会认为自己必须等待，增加其父执行（流程实例）的修订版，然后尝试提交。无论哪个执行是第一个，都可以提交，而其他的则会因为乐观锁异常而失败。由于这些执行是由Job触发的，Job执行器在等待一定时间后会重新尝试执行相同的Job，希望这次能通过同步网关。</p>
 
-<p>然而，虽然从持久性和一致性的角度来看，这是一个完美的解决方案，但在更高层次上，这可能并不总是理想的行为，特别是如果执行有非交易的副作用，这不会被失败的事务回滚。例如，如果 <em>预订音乐会门票</em> 服务不与流程引擎共享同一事务，如果我们重试Job，我们可能会预订多张门票。这就是为什么同一流程实例的Job在默认情况下被 <em>独家</em> 处理。</p>
+<p>然而，虽然从持久性和一致性的角度来看，这是一个完美的解决方案，但在更高层次上，这可能并不总是理想的行为，特别是如果执行有非交易的副作用，这不会被失败的事务回滚。例如，如果 <em>预订音乐会门票</em> 服务不与流程引擎共享同一事务，如果我们重试Job，我们可能会预订多张门票。这就是为什么同一流程实例的Job在默认情况下被 <em>排他</em> 处理。</p>
 
-<h2 id="独家处理的job">独家处理的Job</h2>
+<h2 id="排他处理的job">排他处理的Job</h2>
 
-<p>An exclusive job cannot be performed at the same time as another exclusive job from the same process instance. Consider the process shown in the section above: if the jobs corresponding to the service tasks are treated as exclusive, the job executor will try to avoid that they are executed in parallel. Instead, it will ensure that whenever it acquires an exclusive job from a certain process instance, it also acquires all other exclusive jobs from the same process instance and delegates them to the same worker thread. This enforces sequential execution of these jobs and in most cases avoids optimistic locking exceptions. However, this behavior is a heuristic, meaning that the job executor can only enforce sequential execution of the jobs that are available during <strong>lookup time</strong>. If a potentially conflicting job is created after that, is currently running or is already scheduled for execution, the job may be processed by another job execution thread in parallel.</p>
+<p>具有排他性Job不能与同一流程实例的其他排他性Job同时执行。考虑上节所示的流程：如果对应于服务任务的Job被视为排他性的，Job执行器将尽量避免它们被并行执行。相反，它将确保每当它从某个流程实例中获取一个独占Job时，它也会从同一流程实例中获取所有其他独占Job，并将它们委托给同一个Job线程。这就强制了这些Job的顺序执行，并且在大多数情况下避免了乐观的锁定异常。然而，这种行为是启发式的，也就是说，Job执行器只能强制执行在 <strong>查询时间内</strong> 可用的Job的顺序执行。如果在这之后创建了一个潜在的冲突Job，目前正在运行或已经被安排执行，该Job可能被另一个Job执行线程并行处理。</p>
 
-<p><strong>Exclusive Jobs are the default configuration</strong>. All asynchronous continuations and timer events are thus exclusive by default. In addition, if you want a job to be non-exclusive, you can configure it as such using <code>camunda:exclusive=&quot;false&quot;</code>. For example, the following service task would be asynchronous but non-exclusive.</p>
+<p><strong>排他Job是默认配置</strong> 。因此，所有的异步延续和定时器事件在默认情况下都是独占的。此外，如果你想让一个Job成为非排他性的，你可以使用 <code>camunda:exclusive=&quot;false&quot;</code> 来配置它。例如，下面的服务任务将是异步的，但不是排他的。</p>
 
 <pre><code class="language-xml">&lt;serviceTask id=&quot;service&quot; camunda:expression=&quot;${myService.performBooking(hotel, dates)}&quot; camunda:asyncBefore=&quot;true&quot; camunda:exclusive=&quot;false&quot; /&gt;
 </code></pre>
 
-<p>Is this a good solution? We had some people asking whether it was. Their concern was that it would prevent you from <em>doing things in parallel</em> and would thus be a performance problem. Again, two things have to be taken into consideration:</p>
+<p>这是一个好的解决方案吗？我们有一些人怀疑。因为他们的担心，排他将使你无法 <em>并行</em> 地做事情，因此会成为一个性能问题。同样，有两件事必须考虑到：</p>
 
 <ul>
-<li>It can be turned off if you are an expert and know what you are doing (and have understood this section). Other than that, it is more intuitive for most users if things like asynchronous continuations and timers just work. Note: one strategy to deal with OptimisticLockingExceptions at a parallel gateway is to configure the gateway to use asynchronous continuations. This way the job executor can be used to retry the gateway until the exception resolves.</li>
-<li>It is actually not a performance issue. Performance is an issue under heavy load. Heavy load means that all worker threads of the job executor are busy all the time. With exclusive jobs the engine will simply distribute the load differently. Exclusive jobs means that jobs from a single process instance are performed by the same thread sequentially. But consider: you have more than one single process instance. Jobs from other process instances are delegated to other threads and executed concurrently. This means that with exclusive jobs the engine will not execute jobs from the same process instance concurrently but it will still execute multiple instances concurrently. From an overall throughput perspective this is desirable in most scenarios as it usually leads to individual instances being done more quickly.</li>
+<li>如果你是专家，知道自己在做什么（并且已经理解了本节内容），就可以关闭它。除此以外，如果像异步连续和定时器这样的东西只是Job的话，对大多数用户来说是更直观的。注意：在并行网关处理 OptimisticLockingExceptions 的策略是将网关配置为使用异步连续。这样，Job执行器可以用来重试网关，直到异常解决。</li>
+<li>这实际上不是一个性能问题。性能是重载下的一个问题。重载意味着Job执行器的所有Job线程都一直在忙碌。有了排他性Job，引擎会简单地以不同方式分配负载。独占Job意味着来自单个流程实例的Job由同一个线程按顺序执行。但是考虑到：你有不止一个单一的流程实例。来自其他流程实例的Job被委托给其他线程，并同时执行。这意味着，对于排他性Job，引擎不会并发地执行来自同一流程实例的Job，但它仍然会并发地执行多个实例。从整体吞吐量的角度来看，这在大多数情况下是可取的，因为它通常会让单个实例更快完成。</li>
 </ul>
 
-<h1 id="the-job-executor-and-multiple-process-engines">The Job Executor and Multiple Process Engines</h1>
+<h1 id="job执行器和多个流程引擎">Job执行器和多个流程引擎</h1>
 
-<p>In the case of a single, application-embedded process engine, the job executor setup is the following:</p>
+<p>在使用单一的、嵌入式应用程序的流程引擎的情况下，Job执行器的设置如下。</p>
 
 <figure class="image">
   <span><img
@@ -8736,9 +8731,9 @@ List&lt;HistoricIncident&gt; historicIncidents = engineRule.getHistoryService()
 </figure>
 
 
-<p>There is a single job table that the engine adds jobs to and the acquisition consumes from. Creating a second embedded engine would therefore create another acquisition thread and execution thread-pool.</p>
+<p>有一个单一的Job表，引擎向其中添加Job，而Job获取操作则从中消耗Job。因此，创建第二个嵌入式引擎将创建另一个获取线程和执行线程池。</p>
 
-<p>In larger deployments however, this quickly leads to a poorly manageable situation. When running Camunda Platform on Tomcat or an application server, the platform allows to declare multiple process engines shared by multiple process applications. With respect to job execution, one job acquisition may serve multiple job tables (and thus process engines) and a single thread-pool for execution may be used.</p>
+<p>然而，在更大的部署中，这很快就会导致一个难以管理的局面。当在Tomcat或应用服务器上运行Camunda平台时，该平台允许声明多个流程引擎由多个流程应用程序共享。在Job执行方面，一个Job获取可以服务于多个Job表（以及它们的流程引擎），并且可以使用一个用于执行的线程池。</p>
 
 <figure class="image">
   <span><img
@@ -8749,12 +8744,12 @@ List&lt;HistoricIncident&gt; historicIncidents = engineRule.getHistoryService()
 </figure>
 
 
-<p><strong>This setup enables centralized monitoring of job acquisition and execution</strong>.
-See the platform-specific information in the <a href="http://camunda-cn.shaochenfeng.com/user-guide/runtime-container-integration/">Runtime Container Integration</a> section on how the thread pooling is implemented on the different platforms.</p>
+<p><strong>这种设置可以集中监控Job的获取与执行</strong>
+关于线程池在不同平台上的实现方式，请参见[运行时容器集成](http://camunda-cn.shaochenfeng.com/user-guide/runtime-container-integration/）章节的特定平台信息。</p>
 
-<p>Different job acquisitions can also be configured differently, e.g. to meet business requirements like SLAs. For example, the acquisition&rsquo;s timeout when no more executable jobs are present can be configured differently per acquisition.</p>
+<p>不同的Job获取也可以进行不同的配置，例如，为了满足像SLA这样的业务需求。当没有更多的可执行Job出现时，每个Job获取的超时可以被配置成不同的。</p>
 
-<p>To which job acquisition a process engine is assigned can be specified in the declaration of the engine, so either in the <code>processes.xml</code> deployment descriptor of a process application or in the Camunda Platform descriptor. The following is an example configuration that declares a new engine and assigns it to the job acquisition named <code>default</code>, which is created when the platform is bootstrapped.</p>
+<p>流程引擎被分配到哪个Job获取中，可以在引擎的声明中指定，因此可以在流程应用程序的 <code>processes.xml</code> 部署描述符或Camunda平台描述符中指定。下面是一个配置的例子，它声明了一个新的引擎，并将其分配给平台启动时创建的名为 &ldquo;default&rdquo; 的Job获取。</p>
 
 <pre><code class="language-xml">&lt;process-engine name=&quot;newEngine&quot;&gt;
   &lt;job-acquisition&gt;default&lt;/job-acquisition&gt;
@@ -8762,11 +8757,11 @@ See the platform-specific information in the <a href="http://camunda-cn.shaochen
 &lt;/process-engine&gt;
 </code></pre>
 
-<p>Job acquisitions have to be declared in the Camunda Platform&rsquo;s deployment descriptor, see <a href="http://camunda-cn.shaochenfeng.com/user-guide/runtime-container-integration/">the container-specific configuration options</a>.</p>
+<p>Job的获取必须在Camunda平台的部署描述符中声明，详情见<a href="http://camunda-cn.shaochenfeng.com/user-guide/runtime-container-integration/">容器特定的配置选项</a>。</p>
 
-<h1 id="cluster-setups">Cluster Setups</h1>
+<h1 id="集群设置">集群设置</h1>
 
-<p>When running the Camunda platform in a cluster, there is a distinction between <em>homogeneous</em> and <em>heterogeneous</em> setups. We define a cluster as a set of network nodes that all run the Camunda Platform against the same database (at least for one engine on each node). In the <em>homogeneous</em> case, the same process applications (and thus custom classes like JavaDelegates) are deployed to all of the nodes, as depicted below.</p>
+<p>在集群中运行Camunda平台时，有 <em>同构</em> 和 <em>异构</em> 的设置区分。我们将集群定义为一组网络节点，它们都针对同一个数据库运行Camunda平台（至少每个节点上有一个引擎）。在 <em>同构</em> 的情况下，相同的程序应用（以及像JavaDelegates这样的自定义类）被部署到所有的节点上，如下图所示：</p>
 
 <figure class="image">
   <span><img
@@ -8777,7 +8772,7 @@ See the platform-specific information in the <a href="http://camunda-cn.shaochen
 </figure>
 
 
-<p>In the <em>heterogeneous</em> case, this is not given, meaning that some process applications are only  deployed to a part of the nodes.</p>
+<p>在 <em>异构</em> 的情况下，有些是没有部署的，这意味着一些流程应用只被部署到一部分节点上：</p>
 
 <figure class="image">
   <span><img
@@ -8788,11 +8783,11 @@ See the platform-specific information in the <a href="http://camunda-cn.shaochen
 </figure>
 
 
-<h2 id="job-execution-in-heterogeneous-clusters">Job Execution in Heterogeneous Clusters</h2>
+<h2 id="在异构集群中执行job">在异构集群中执行Job</h2>
 
-<p>A heterogeneous cluster setup as described above poses additional challenges to the job executor. Both platforms declare the same engine, i.e. they run against the same database. This means that jobs will be inserted into the same table. However, in the default configuration the job acquisition thread of node 1 will lock any executable jobs of that table and submit them to the local job execution pool. This means that jobs created in the context of process application B (so on node 2) may be executed on node 1 and vice versa. As the job execution may involve classes that are part of B&rsquo;s deployment, you are likely going to see a <code>ClassNotFoundExeception</code> or any of the likes.</p>
+<p>如上所述的异构集群设置给Job执行器带来了额外的挑战。两个平台都声明使用相同的引擎，也就是说，它们针对相同的数据库运行。这意味着Job将被插入到同一个表中。然而，在默认配置中，节点1的Job获取线程将锁定该表的任何可执行Job，并将其提交给本地Job执行池。这意味着在流程应用B的上下文中创建的Job（所以在节点2上）可能会在节点1上执行，反之亦然。由于Job的执行可能涉及到属于B的部署的类，你可能会看到 &ldquo;ClassNotFoundExeception&rdquo; 或任何类似的异常。</p>
 
-<p>To prevent the job acquisition on node 1 from picking jobs that <em>belong</em> to node 2, the process engine can be configured as <em>deployment aware</em>, by the setting following property in the process engine configuration:</p>
+<p>为了防止节点1上的Job获取选择 <em>属于</em> 节点2的Job，可以通过在流程引擎配置中设置以下属性，将流程引擎配置为 <em>部署感知（deployment aware）</em> 。</p>
 
 <pre><code class="language-xml">&lt;process-engine name=&quot;default&quot;&gt;
   ...
@@ -8803,9 +8798,9 @@ See the platform-specific information in the <a href="http://camunda-cn.shaochen
 &lt;/process-engine&gt;
 </code></pre>
 
-<p>Now, the job acquisition thread on node 1 will only pick up jobs that belong to deployments made on that node, which solves the problem. Digging a little deeper, the acquisition will only pick up those jobs that belong to deployments that were <em>registered</em> with the engines it serves. Every deployment gets automatically registered. Additionally, one can explicitly register and unregister single deployments with an engine by using the <code>ManagementService</code> methods <code>registerDeploymentForJobExecutor(deploymentId)</code> and <code>unregisterDeploymentForJobExecutor(deploymentId)</code>. It also offers a method <code>getRegisteredDeployments()</code> to inspect the currently registered deployments.</p>
+<p>现在，节点1上的Job获取线程将只拾取属于该节点上的部署的Job，这就解决了问题。再深入一点，采集器将只采集那些属于在它所服务的引擎上 <em>注册过</em> 的部署的Job。每个部署都会被自动注册。此外，人们可以通过使用 <code>ManagementService</code> 方法 <code>registerDeploymentForJobExecutor(deploymentId)</code> 和<code>unregisterDeploymentForJobExecutor(deploymentId)</code> 明确地在引擎上注册和取消注册单个部署。它还提供了 <code>getRegisteredDeployments()</code> 方法来检查当前注册的部署。</p>
 
-<p>As this is configurable on engine level, you can also work in a <em>mixed</em> setup, when some deployments are shared between all nodes and some are not. You can assign the globally shared process applications to an engine that is not deployment aware and the others to a deployment aware engine, probably both running against the same database. This way, jobs created in the context of the shared process applications will get executed on any cluster node, while the others only get executed on their respective nodes.</p>
+<p>由于这在引擎层面上是可配置的，你也可以在一个 <em>混合</em> 的设置中工作，当一些部署在所有节点之间共享，而一些不共享。你可以把全局共享的程序应用分配给一个不具备部署感知的引擎，而把其他程序分配给一个具备部署感知的引擎，可能两者都是针对同一个数据库运行。这样，在共享流程应用程序的上下文中创建的Job将在任何集群节点上执行，而其他Job只在其各自的节点上执行。</p>
 
     </div>
   </div>
@@ -8868,12 +8863,12 @@ See the platform-specific information in the <a href="http://camunda-cn.shaochen
 </ul></li>
 <li><a href="#job执行器的并发">Job执行器的并发</a>
 <ul>
-<li><a href="#独家处理的job">独家处理的Job</a></li>
+<li><a href="#排他处理的job">排他处理的Job</a></li>
 </ul></li>
-<li><a href="#the-job-executor-and-multiple-process-engines">The Job Executor and Multiple Process Engines</a></li>
-<li><a href="#cluster-setups">Cluster Setups</a>
+<li><a href="#job执行器和多个流程引擎">Job执行器和多个流程引擎</a></li>
+<li><a href="#集群设置">集群设置</a>
 <ul>
-<li><a href="#job-execution-in-heterogeneous-clusters">Job Execution in Heterogeneous Clusters</a></li>
+<li><a href="#在异构集群中执行job">在异构集群中执行Job</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -8922,7 +8917,7 @@ See the platform-specific information in the <a href="http://camunda-cn.shaochen
     })();
   </script>
   
-  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/4513465.js"></script>
+  
   
 </body>
 </html>

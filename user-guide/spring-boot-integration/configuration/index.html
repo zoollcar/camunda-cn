@@ -2,11 +2,7 @@
 <html class="no-js">
 <head>
   
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-PP9MHKW');</script>
+  
   
 
   
@@ -59,7 +55,7 @@ var _mtac = {};
     
   
 
-  <title>Process Engine Configuration | docs.camunda.org</title>
+  <title>流程引擎配置 | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
   <link rel="shortcut icon" href="http://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
@@ -71,8 +67,7 @@ var _mtac = {};
 <body class="">
 
 
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PP9MHKW"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
 
 
 <nav class="navbar navbar-fixed-top">
@@ -523,7 +518,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/process-engine/metrics/" >Metrics</a>
+      <a href="/user-guide/process-engine/metrics/" >指标</a>
     
   </li>
 
@@ -837,7 +832,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/version-compatibility/" >Version Compatibility</a>
+      <a href="/user-guide/spring-boot-integration/version-compatibility/" >版本兼容性</a>
     
   </li>
 
@@ -845,7 +840,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/configuration/" >Configuration</a>
+      <a href="/user-guide/spring-boot-integration/configuration/" >配置</a>
     
   </li>
 
@@ -869,7 +864,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/process-applications/" >Process Applications</a>
+      <a href="/user-guide/spring-boot-integration/process-applications/" >流程应用程序</a>
     
   </li>
 
@@ -877,7 +872,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/the-spring-event-bridge/" >Spring Eventing Bridge</a>
+      <a href="/user-guide/spring-boot-integration/the-spring-event-bridge/" >Spring 事件总线</a>
     
   </li>
 
@@ -885,7 +880,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/develop-and-test/" >Developing and Testing</a>
+      <a href="/user-guide/spring-boot-integration/develop-and-test/" >部署和测试</a>
     
   </li>
 
@@ -8176,15 +8171,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <i>编辑此页</i> <span class="cam-docs-github"></span></a>
 </div>
 
-      <h1 class="page-title">Process Engine Configuration</h1>
+      <h1 class="page-title">流程引擎配置</h1>
     </div>
 
     <div class="col-xs-12 content-text">
       
 
-<p>The auto starter uses the  <code>org.camunda.bpm.engine.impl.cfg.ProcessEnginePlugin</code> mechanism to configure the engine.</p>
+<p>starter 使用<code>org.camunda.bpm.engine.impl.cfg.ProcessEnginePlugin</code> 机制来配置引擎。</p>
 
-<p>The configuration is divided into <em>sections</em>. These <em>sections</em> are represented by the marker interfaces:</p>
+<p>配置分为 <em>sections</em> 。 这些 <em>sections</em> 被如下接口定义：</p>
 
 <ul>
 <li><code>org.camunda.bpm.spring.boot.starter.configuration.CamundaProcessEngineConfiguration</code></li>
@@ -8199,21 +8194,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <li><code>org.camunda.bpm.spring.boot.starter.configuration.CamundaMetricsConfiguration</code></li>
 </ul>
 
-<h2 id="default-configurations">Default Configurations</h2>
+<h2 id="默认配置">默认配置</h2>
 
-<p>The following default and best practice configurations are provided by the starter and can be customized or overridden.</p>
+<p>以下是启动器提供的默认配置和最佳实践配置，可以自定义或重写。</p>
 
 <h3 id="defaultprocessengineconfiguration"><code>DefaultProcessEngineConfiguration</code></h3>
 
-<p>Sets the process engine name and automatically adds all <code>ProcessEnginePlugin</code> beans to the configuration.</p>
+<p>设置流程引擎的名称，并自动添加所有 <code>ProcessEnginePlugin</code> beans 到配置中。</p>
 
 <h3 id="defaultdatasourceconfiguration"><code>DefaultDatasourceConfiguration</code></h3>
 
-<p>Configures the Camunda data source and enables <a href="http://camunda-cn.shaochenfeng.com/user-guide/spring-framework-integration/transactions/">transaction integration</a>. By default, the primary <code>DataSource</code> and <code>PlatformTransactionManager</code> beans are wired with the process engine configuration.</p>
+<p>配置Camunda数据源并启用<a href="http://camunda-cn.shaochenfeng.com/user-guide/spring-framework-integration/transactions/">事务集成</a>。 默认情况下，主 <code>DataSource</code> 和 <code>PlatformTransactionManager</code> beans 通过流程引擎配置连接。</p>
 
-<p>If you want to <a href="http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#howto-two-datasources">configure more than one datasource</a>
-and don&rsquo;t want to use the <code>@Primary</code> one for the process engine, then you can create a separate
-data source with name <code>camundaBpmDataSource</code> that will be automatically wired with Camunda instead.</p>
+<p>如果要<a href="http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#howto-two-datasources">配置多个数据源</a>
+而且不想将 <code>@Primary</code> 用于使用流程引擎，那么你可以使用名称创建单独的数据源 <code>camundaBpmDataSource</code> 这将由Camunda自动连接。</p>
 
 <pre><code class="language-java">@Bean
 @Primary
@@ -8229,9 +8223,7 @@ public DataSource secondaryDataSource() {
 }
 </code></pre>
 
-<p>If you don&rsquo;t want to use the <code>@Primary</code> transaction manager, it is possible to create a separate
-transaction manager with the name <code>camundaBpmTransactionManager</code> that will be wired with the data
-source used for Camunda (either <code>@Primary</code> or <code>camundaBpmDataSource</code>):</p>
+<p>如果你不想使用<code>@Primary</code>事务管理器，可以创建一个单独的事务管理器，名称为<code>camundaBpmTransactionManager</code>，它将与用于Camunda的数据源（<code>@Primary</code>或<code>camundaBpmDataSource</code>）连接。</p>
 
 <pre><code class="language-java">@Bean
 @Primary
@@ -8248,14 +8240,14 @@ public PlatformTransactionManager camundaTransactionManager(@Qualifier(&quot;cam
 
 <div class="note bg-warning docs-warning">
   <h3></h3>
-  <p>The wired data source and transaction manager beans must match, i.e. make sure that the transaction manager actually manages the Camunda data source. If that is not the case, the process engine will use auto-commit mode for the data source connection, potentially leading to inconsistencies in the database.</p>
+  <p>数据源和事务管理器的beans必须匹配，即确保事务管理器实际管理着Camunda数据源。如果不是这样，流程引擎将对数据源连接使用自动提交模式，可能会导致数据库中的不一致。</p>
 </div>
 
 
 <h3 id="defaulthistoryconfiguration"><code>DefaultHistoryConfiguration</code></h3>
 
-<p>Applies the history configuration to the process engine. If not configured, the history level <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/history/#choose-a-history-level">FULL</a> is used.
-If you want to use a custom <code>HistoryEventHandler</code>, you just have to provide a bean implementing the interface.</p>
+<p>配置应用于流程引擎的历史配置。如果没有配置，则使用历史级别<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/history/#choose-a-history-level">FULL</a>。
+如果你想使用一个自定义的<code>HistoryEventHandler</code>，你只需要提供一个实现接口的bean。</p>
 
 <pre><code class="language-java">@Bean
 public HistoryEventHandler customHistoryEventHandler() {
@@ -8265,48 +8257,46 @@ public HistoryEventHandler customHistoryEventHandler() {
 
 <h3 id="defaulthistorylevelautohandlingconfiguration"><code>DefaultHistoryLevelAutoHandlingConfiguration</code></h3>
 
-<p>As camunda version &gt;= 7.4 supports <code>history-level auto</code>, this configuration adds support for versions &lt;= 7.3.</p>
+<p>由于camunda版本&gt;=7.4支持<code>自动历史级别</code>，这个配置增加了对&lt;=7.3版本的支持。</p>
 
-<p>To have more control over the handling, you can provide your own</p>
+<p>为了对处理有更多的控制，你可以提供你自己的</p>
 
 <ul>
-<li><code>org.camunda.bpm.spring.boot.starter.jdbc.HistoryLevelDeterminator</code> with name <code>historyLevelDeterminator</code></li>
+<li><code>org.camunda.bpm.spring.boot.starter.jdbc.HistoryLevelDeterminator</code> 名为<code>historyLevelDeterminator</code>。</li>
 </ul>
 
-<p>IMPORTANT: The default configuration is applied after all other default configurations using the ordering mechanism.</p>
+<p>重要提示：默认配置会在所有其他默认配置之后使用排序机制进行应用。</p>
 
 <h3 id="defaultjobconfiguration"><code>DefaultJobConfiguration</code></h3>
 
-<p>Applies the job execution properties to the process engine.</p>
+<p>将Job执行属性应用于流程引擎。</p>
 
-<p>To have more control over the execution itself, you can provide your own</p>
+<p>为了对执行本身有更多的控制，你可以提供你自己的</p>
 
 <ul>
 <li><code>org.camunda.bpm.engine.impl.jobexecutor.JobExecutor</code></li>
-<li><code>org.springframework.core.task.TaskExecutor</code> named <code>camundaTaskExecutor</code></li>
+<li><code>org.springframework.core.task.TaskExecutor</code> 名为 <code>camundaTaskExecutor</code></li>
 </ul>
 
-<p>beans.</p>
-
-<p>IMPORTANT: The job executor is not enabled in the configuration.
-This is done after the spring context successfully loaded (see <code>org.camunda.bpm.spring.boot.starter.runlistener</code>).</p>
+<p>重要提示：Job执行器在配置中没有被启用。
+这是在spring context成功加载后启动的 (see <code>org.camunda.bpm.spring.boot.starter.runlistener</code>).</p>
 
 <h3 id="defaultdeploymentconfiguration"><code>DefaultDeploymentConfiguration</code></h3>
 
-<p>If auto deployment is enabled (this is the case by default), all processes found in the classpath are deployed.
-The resource pattern can be changed using properties (see <a href="#camunda-engine-properties">properties</a>).</p>
+<p>如果启用了自动部署（默认情况下是这样的），在classpath中发现的所有进程都会被部署。
+资源模式可以通过属性来改变（见 <a href="#camunda-engine-properties">properties</a>).</p>
 
 <h3 id="defaultjpaconfiguration"><code>DefaultJpaConfiguration</code></h3>
 
-<p>If JPA is enabled and a <code>entityManagerFactory</code> bean is configured, the process engine is enabled to use JPA (see <a href="#camunda-engine-properties">properties</a>).</p>
+<p>如果JPA被启用并且配置了一个<code>entityManagerFactory</code>bean，那么流程引擎就会被启用以使用JPA（见<a href="#camunda-engine-properties">properties</a>）。</p>
 
 <h3 id="defaultauthorizationconfiguration"><code>DefaultAuthorizationConfiguration</code></h3>
 
-<p>Applies the authorization configuration to the process engine. If not configured, the <code>camunda</code> default values are used (see <a href="#camunda-engine-properties">properties</a>).</p>
+<p>将授权配置应用于流程引擎。如果没有配置，则使用 &ldquo;camunda&rdquo; 的默认值（见<a href="#camunda-engine-properties">properties</a>）。</p>
 
-<h2 id="overriding-the-default-configuration">Overriding the Default Configuration</h2>
+<h2 id="覆盖默认的配置">覆盖默认的配置</h2>
 
-<p>Provide a bean implementing one of the marker interfaces. For example to customize the datasource configuration:</p>
+<p>提供一个实现标记接口之一的Bean。例如，自定义数据源的配置。</p>
 
 <pre><code class="language-java">@Configuration
 public class MyCamundaConfiguration {
@@ -8319,13 +8309,12 @@ public class MyCamundaConfiguration {
 }
 </code></pre>
 
-<h2 id="adding-additional-configurations">Adding Additional Configurations</h2>
+<h2 id="添加额外的配置">添加额外的配置</h2>
 
-<p>You just have to provide one or more beans implementing the <code>org.camunda.bpm.engine.impl.cfg.ProcessEnginePlugin</code> interface
-(or extend from <code>org.camunda.bpm.spring.boot.starter.configuration.impl.AbstractCamundaConfiguration</code>).
-The configurations are applied ordered using the spring ordering mechanism (<code>@Order</code> annotation and <code>Ordered</code> interface).
-So if you want your configuration to be applied before the default configurations, add a <code>@Order(Ordering.DEFAULT_ORDER - 1)</code> annotation to your class.
-If you want your configuration to be applied after the default configurations, add a <code>@Order(Ordering.DEFAULT_ORDER + 1)</code> annotation to your class.</p>
+<p>你只需要提供一个或多个实现<code>org.camunda.bpm.engine.impl.cfg.ProcessEnginePlugin</code>接口的bean（或者<code>org.camunda.bpm.spring.boot.starter.configuration.impl.AbstractCamundaConfiguration</code>扩展）。
+配置的应用是通过spring的排序机制（<code>@Order</code>注解和<code>Ordered</code>接口）进行排序。
+因此，如果你希望你的配置在默认配置之前被应用，请在你的类中添加<code>@Order(Ordering.DEFAULT_ORDER - 1)</code>注解。
+如果你想让你的配置在默认配置之后应用，请在你的类中添加一个<code>@Order(Order.DEFAULT_ORDER + 1)</code>注解。</p>
 
 <pre><code class="language-java">@Configuration
 public class MyCamundaConfiguration {
@@ -8372,13 +8361,11 @@ public class MyCustomConfiguration extends AbstractCamundaConfiguration {
 }
 </code></pre>
 
-<h2 id="camunda-engine-properties">Camunda Engine Properties</h2>
+<h2 id="camunda-引擎特性">Camunda 引擎特性</h2>
 
-<p>In addition to the bean-based way of overriding process engine configuration properties, it is also possible
-to set those properties via an <code>application.yaml</code> configuration file. Instructions on how to use it
-can be found in the <a href="https://docs.camunda.org/get-started/spring-boot/configuration/">Spring Boot Starter Guide</a>.</p>
+<p>除了基于Bean的覆盖流程引擎配置属性的方式之外，也可以通过<code>application.yaml</code>配置文件来设置这些属性。关于如何使用它的说明可以在 <a href="https://docs.camunda.org/get-started/spring-boot/configuration/">Spring Boot Starter 向导</a>中找到。</p>
 
-<p>The available properties are as follows:</p>
+<p>可用的特性如下：</p>
 
 <table class="table desc-table">
 <tr>
@@ -8946,10 +8933,9 @@ When setting to <code>/</code>, the legacy behavior of Camunda Spring Boot Start
 
 </table>
 
-<h3 id="generic-properties">Generic Properties</h3>
+<h3 id="通用属性">通用属性</h3>
 
-<p>The method of configuration described above does not cover all process engine properties available. To override any process engine configuration
-property that is not exposed (i.e. listed above) you can use generic-properties.</p>
+<p>上面描述的配置方法并没有涵盖所有可用的流程引擎属性。要覆盖任何未公开的流程引擎配置属性（即上面列出的），你可以使用generic-perties。</p>
 
 <pre><code class="language-yaml">camunda:
   bpm:
@@ -8960,16 +8946,14 @@ property that is not exposed (i.e. listed above) you can use generic-properties.
 
 
 <div class="note bg-info docs-info">
-  <h3>Note:</h3>
-  <p>Overriding an already exposed property using the <code>generic-properties</code>
-  keyword does not effect the process engine configuration. All exposed properties
-  can only be overridden with their exposed identifier.</p>
+  <h3>笔记:</h3>
+  <p>使用<code>generic-properties</code>关键字重写一个已经公开的属性不会影响流程引擎的配置。所有公开的属性只能用其公开的标识符来重写。</p>
 </div>
 
 
-<h3 id="examples">Examples</h3>
+<h3 id="案例">案例</h3>
 
-<p>Override configuration using exposed properties:</p>
+<p>使用公开的属性重写配置：</p>
 
 <pre><code class="language-yaml">camunda.bpm:
   admin-user:
@@ -8980,7 +8964,7 @@ property that is not exposed (i.e. listed above) you can use generic-properties.
     create: All tasks
 </code></pre>
 
-<p>Override configuration using generic properties:</p>
+<p>使用通用属性覆盖配置。</p>
 
 <pre><code class="language-yaml">camunda:
   bpm:
@@ -8991,9 +8975,9 @@ property that is not exposed (i.e. listed above) you can use generic-properties.
 
 <h2 id="session-cookie">Session Cookie</h2>
 
-<p>You can configure the <strong>Session Cookie</strong> for the Spring Boot application via the <code>application.yaml</code> configuration file.</p>
+<p>你可以通过<code>application.yaml</code>配置文件为Spring Boot应用程序配置 *Session Cookie*。</p>
 
-<p>Camunda Spring Boot Starter versions:</p>
+<p>Camunda Spring Boot Starter版本：</p>
 
 <p>&lt;= 2.3 (Spring Boot version 1.x)</p>
 
@@ -9001,7 +8985,7 @@ property that is not exposed (i.e. listed above) you can use generic-properties.
   session:
     cookie:
       secure: true
-      http-only: true # Not possible for versions before 1.5.14
+      http-only: true # 在 1.5.14 版本之前不可用
 </code></pre>
 
 <p>&gt;= 3.0 (Spring Boot version 2.x)</p>
@@ -9011,18 +8995,16 @@ property that is not exposed (i.e. listed above) you can use generic-properties.
     session:
       cookie:
         secure: true
-        http-only: true # Not possible for versions before 2.0.3
+        http-only: true # 在 2.0.3 版本之前不可用
 </code></pre>
 
-<h1 id="configuring-spin-dataformats">Configuring Spin DataFormats</h1>
+<h2 id="配置-spin-数据格式">配置 Spin 数据格式</h2>
 
-<p>The Camunda Spring Boot Starter auto-configures the Spin Jackson Json DataFormat when the
-<code>camunda-spin-dataformat-json-jackson</code> dependency is detected on the classpath. To include a
-<code>DataFormatConfigurator</code> for the desired Jackson Java 8 module, the appropriate dependency needs
-to be included on the classpath as well. Note that <code>camunda-engine-plugin-spin</code>
-needs to be included as a dependency as well for the auto-configurators to work.</p>
+<p>当在classpath上检测到<code>camunda-spin-dataformat-jon-jackson</code>依赖时，Camunda Spring Boot Starter会自动配置Spin Jackson Json DataFormat。
+<code>camunda-spin-dataformat-jon-jackson</code>的依赖关系时，就会自动配置Spin Jackson Json数据格式。要包含一个
+<code>DataFormatConfigurator</code>的所需Jackson Java 8模块，适当的依赖也需要包含在classpath中。请注意，<code>camunda-engine-plugin-spin</code>也需要作为一个依赖项被包含，以便自动配置器能够工作。</p>
 
-<p>Auto-configuration is currently supported for the following <a href="https://github.com/FasterXML/jackson-modules-java8">Jackson Java 8 modules</a>:</p>
+<p>自动配置目前支持以下<a href="https://github.com/FasterXML/jackson-modules-java8">Jackson Java 8模块</a>:</p>
 
 <ol>
 <li>Parameter names (<code>jackson-module-parameter-names</code>)</li>
@@ -9032,18 +9014,12 @@ needs to be included as a dependency as well for the auto-configurators to work.
 
 
 <div class="note bg-warning docs-warning">
-  <h3>Heads Up!</h3>
-  <p>The Spin Jackson Json DataFormat auto-configuration is disabled when using
-<code>camunda-spin-dataformat-all</code> as a dependency. The <code>camunda-spin-dataformat-all</code> artifact shades the
-Jackson libraries, which breaks compatibility with the regular Jackson modules. If usage of
-<code>camunda-spin-dataformat-all</code> is necessary, please use the standard method for
-<a href="http://camunda-cn.shaochenfeng.com/reference/spin/extending-spin/#custom-dataformats">Spin Custom DataFormat configuration</a>.</p>
+  <h3>小心!</h3>
+  <p>当使用<code>camunda-spin-dataformat-all</code>作为依赖时，Spin Jackson Json DataFormat的自动配置被禁用。<code>camunda-spin-dataformat-all</code>工件会覆盖Jackson库，这破坏了与普通Jackson模块的兼容性。如果有必要使用<code>camunda-spin-dataformat-all</code>，请使用<a href="http://camunda-cn.shaochenfeng.com/reference/spin/extending-spin/#custom-dataformats">Spin Custom DataFormat configuration</a>的标准方法。</p>
 </div>
 
 
-<p>For example, to provide support for Java 8 Date/time types in Spin, the following dependencies, with their
-appropriate version tags, will need to be added in the Spring Boot Application&rsquo;s
-<code>pom.xml</code> file:</p>
+<p>例如，为了在Spin中提供对Java 8日期/时间类型的支持，需要在Spring Boot应用程序的<code>pom.xml</code>文件中添加以下依赖，以及相应的版本标记。</p>
 
 <pre><code class="language-xml">&lt;dependencies&gt;
     &lt;dependency&gt;
@@ -9061,16 +9037,14 @@ appropriate version tags, will need to be added in the Spring Boot Application&r
 &lt;/dependencies&gt;
 </code></pre>
 
-<p>Spring Boot also provides some nice configuration properties, to further
-configure the Jackson <code>ObjectMapper</code>. They can be found <a href="https://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/#howto-customize-the-jackson-objectmapper">here</a>.</p>
+<p>Spring Boot还提供了一些不错的配置属性，以进一步配置Jackson <code>ObjectMapper</code>。它们可以在<a href="https://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/#howto-customize-the-jackson-objectmapper">这里</a>找到。</p>
 
-<p>To provide additional configurations, the following actions need to be performed:</p>
+<p>为了提供额外的配置，需要进行以下操作。</p>
 
 <ol>
-<li>Provide a custom implementation of <code>org.camunda.spin.spi.DataFormatConfigurator</code>;</li>
-<li>Add the appropriate key-value pair of the fully qualified classnames of the interface and the
-implementation to the <code>META-INF/spring.factories</code> file;</li>
-<li>Ensure that the artifact containing the configurator is reachable from Spin’s classloader.</li>
+<li>提供一个`org.camunda.spin.spi.DataFormatConfigurator&rsquo;的自定义实现。</li>
+<li>在<code>META-INF/spring.plants</code>文件中添加接口和实现的全限定类名的适当键值对。</li>
+<li>确保包含配置器的组件可以从Spin的classloader中到达。</li>
 </ol>
 
     </div>
@@ -9083,7 +9057,7 @@ implementation to the <code>META-INF/spring.factories</code> file;</li>
 <ul>
 <li>
 <ul>
-<li><a href="#default-configurations">Default Configurations</a>
+<li><a href="#默认配置">默认配置</a>
 <ul>
 <li><a href="#defaultprocessengineconfiguration"><code>DefaultProcessEngineConfiguration</code></a></li>
 <li><a href="#defaultdatasourceconfiguration"><code>DefaultDatasourceConfiguration</code></a></li>
@@ -9094,16 +9068,16 @@ implementation to the <code>META-INF/spring.factories</code> file;</li>
 <li><a href="#defaultjpaconfiguration"><code>DefaultJpaConfiguration</code></a></li>
 <li><a href="#defaultauthorizationconfiguration"><code>DefaultAuthorizationConfiguration</code></a></li>
 </ul></li>
-<li><a href="#overriding-the-default-configuration">Overriding the Default Configuration</a></li>
-<li><a href="#adding-additional-configurations">Adding Additional Configurations</a></li>
-<li><a href="#camunda-engine-properties">Camunda Engine Properties</a>
+<li><a href="#覆盖默认的配置">覆盖默认的配置</a></li>
+<li><a href="#添加额外的配置">添加额外的配置</a></li>
+<li><a href="#camunda-引擎特性">Camunda 引擎特性</a>
 <ul>
-<li><a href="#generic-properties">Generic Properties</a></li>
-<li><a href="#examples">Examples</a></li>
+<li><a href="#通用属性">通用属性</a></li>
+<li><a href="#案例">案例</a></li>
 </ul></li>
 <li><a href="#session-cookie">Session Cookie</a></li>
+<li><a href="#配置-spin-数据格式">配置 Spin 数据格式</a></li>
 </ul></li>
-<li><a href="#configuring-spin-dataformats">Configuring Spin DataFormats</a></li>
 </ul>
 </nav>
   
@@ -9151,7 +9125,7 @@ implementation to the <code>META-INF/spring.factories</code> file;</li>
     })();
   </script>
   
-  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/4513465.js"></script>
+  
   
 </body>
 </html>

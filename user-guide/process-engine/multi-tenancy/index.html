@@ -2,11 +2,7 @@
 <html class="no-js">
 <head>
   
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-PP9MHKW');</script>
+  
   
 
   
@@ -71,8 +67,7 @@ var _mtac = {};
 <body class="">
 
 
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PP9MHKW"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
 
 
 <nav class="navbar navbar-fixed-top">
@@ -523,7 +518,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/process-engine/metrics/" >Metrics</a>
+      <a href="/user-guide/process-engine/metrics/" >指标</a>
     
   </li>
 
@@ -837,7 +832,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/version-compatibility/" >Version Compatibility</a>
+      <a href="/user-guide/spring-boot-integration/version-compatibility/" >版本兼容性</a>
     
   </li>
 
@@ -845,7 +840,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/configuration/" >Configuration</a>
+      <a href="/user-guide/spring-boot-integration/configuration/" >配置</a>
     
   </li>
 
@@ -869,7 +864,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/process-applications/" >Process Applications</a>
+      <a href="/user-guide/spring-boot-integration/process-applications/" >流程应用程序</a>
     
   </li>
 
@@ -877,7 +872,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/the-spring-event-bridge/" >Spring Eventing Bridge</a>
+      <a href="/user-guide/spring-boot-integration/the-spring-event-bridge/" >Spring 事件总线</a>
     
   </li>
 
@@ -885,7 +880,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/develop-and-test/" >Developing and Testing</a>
+      <a href="/user-guide/spring-boot-integration/develop-and-test/" >部署和测试</a>
     
   </li>
 
@@ -8182,13 +8177,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="col-xs-12 content-text">
       
 
-<p><em>Multi-Tenancy</em> regards the case in which a single Camunda installation should serve more than one tenant. For each tenant, certain guarantees of isolation should be made. For example, one tenant&rsquo;s process instances should not interfere with those of another tenant.</p>
+<p><em>多租户</em> 是指一个单一的Camunda应用需要为多个的租户服务的情况。对于每个租户来说，应该有某些隔离的保证。例如，一个租户的流程实例不应干扰另一个租户的流程实例。</p>
 
-<p>Multi-Tenancy can be achieved in two different ways. One way is to use <a href="#one-process-engine-per-tenant">one process engine per tenant</a>. The other way is to use just one process engine and associate the data with <a href="#single-process-engine-with-tenant-identifiers">tenant identifiers</a>. The two ways differ from each other in the level of data isolation, the effort of maintenance and the scalability. A combination of both ways is also possible.</p>
+<p>多租户可以通过两种不同的方式实现。一种是使用<a href="#每个租户使用一个流程引擎">每个租户一个流程引擎</a>。另一种方式是只使用一个流程引擎，并将数据与<a href="#使用租户标识符的单一流程引擎">租户标识符</a>相关联。这两种方式在数据隔离程度、维护工作和可扩展性方面各有不同。两种方式的组合也是可能的。</p>
 
-<h1 id="single-process-engine-with-tenant-identifiers">Single Process Engine With Tenant-Identifiers</h1>
+<h1 id="使用租户标识符的单一流程引擎">使用租户标识符的单一流程引擎</h1>
 
-<p>Multi-Tenancy can be achieved with one process engine which uses tenant identifiers (i.e., tenant-ids). The data of all tenants is stored in one table (same database and schema). Isolation is provided by the means of a tenant identifier that is stored in a column.</p>
+<p>多租户可以使用租户标识符（即tenant-ids）的流程引擎来实现。所有租户的数据都存储在一个表中（同一数据库和表结构）。通过存储在列中的租户标识符来提供隔离。</p>
 
 <figure class="image">
   <span><img
@@ -8199,16 +8194,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </figure>
 
 
-<p>The tenant identifier is specified on the deployment and is propagated to all data that is created from the deployment (e.g., process definitions, process instances, tasks, etc.). To access the data for a specific tenant, the process engine allows to filter queries by a tenant identifier or specify a tenant identifier for a command (e.g., create a process instance). Additionally, the process engine provides transparent access restrictions in combination with the Identity Service that allows to omit the tenant identifier.</p>
+<p>租户标识符是在部署中指定的，并传播到从部署中创建的所有数据（例如，流程定义、流程实例、任务等）。为了访问特定租户的数据，流程引擎允许通过租户标识符过滤查询，或为命令（例如，创建流程实例）指定租户标识符。此外，流程引擎与身份服务相结合，提供透明的访问限制，允许省略租户标识符。</p>
 
-<p>Note that transparent tenant separation is not implemented for all APIs. For example, with the deployment API, a tenant can deploy a process for another tenant. Therefore it is not a supported usecase to expose such API endpoints directly to tenants. Instead, custom access checking logic should be built on top of the Camunda API.</p>
+<p>请注意，并非所有的API都实现了透明的租户分离。例如，通过部署API，一个租户可以为另一个租户部署一个流程。因此，直接向租户暴露这样的API端点并不是一个支持的用例。相反，应该在Camunda API的基础上建立自定义的访问检查逻辑。</p>
 
-<p>It is also possible for all tenants to share the same process and decision definitions without deploying them for each tenant. Shared definitions can simplify management of the deployments in case of a larger amount of tenants.</p>
+<p>所有租户也可以共享相同的流程和决策定义，而不需要为每个租户部署这些定义。在租户数量较多的情况下，共享定义可以简化对部署的管理。</p>
 
 
 <div class="note bg-info docs-info">
-  <h3>Examples</h3>
-  <p>Find <a href="https://github.com/camunda/camunda-bpm-examples">examples on GitHub</a> that show how to use tenant-identifiers with</p>
+  <h3>案例</h3>
+  <p>查看<a href="https://github.com/camunda/camunda-bpm-examples">GitHub上的案例</a>查看如何使用租户标识符</p>
 
 <ul>
 <li><a href="https://github.com/camunda/camunda-bpm-examples/tree/master/multi-tenancy/tenant-identifier-embedded">Embedded Process Engine</a></li>
@@ -8218,16 +8213,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 
-<h2 id="deploy-definitions-for-a-tenant">Deploy Definitions for a Tenant</h2>
+<h2 id="为租户部署定义">为租户部署定义</h2>
 
-<p>To deploy definitions for a single tenant, the tenant identifier has to be set on the deployment. The given identifier is propagated to all definitions of the deployment so that they belong to the tenant.</p>
+<p>要为为租户部署定义，必须在部署中设置租户标识符。给定的标识符被传播到部署的所有定义，以便确认它们属于租户。</p>
 
-<p>If no tenant identifier is set then the deployment and its definitions belong to all tenants. In this case, all tenants can access the deployment and the definitions. See <a href="#shared-definitions-for-all-tenants">this section</a> to read more about how to use shared definitions.</p>
+<p>如果没有设置租户标识符，那么部署和它的定义属于所有租户。在这种情况下，所有租户都可以访问该部署和定义。参见<a href="#所有租户共享的定义">这一节</a>以阅读更多关于如何使用共享定义的信息。</p>
 
-<h3 id="specify-the-tenant-identifier-via-java-api">Specify the Tenant Identifier via Java API</h3>
+<h3 id="通过java-api指定租户标识符">通过Java API指定租户标识符</h3>
 
-<p>When a deployment is created using the Repository Service, the tenant identifier can be set on the <a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/engine/repository/DeploymentBuilder.html">DeploymentBuilder</a>
-.</p>
+<p>当使用存储库服务创建一个部署时，租户标识符可以在<a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/repository/DeploymentBuilder.html">DeploymentBuilder</a>
+中设置。</p>
 
 <pre><code class="language-java">repositoryService
   .createDeployment()
@@ -8236,9 +8231,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   .deploy()
 </code></pre>
 
-<h3 id="specify-the-tenant-identifier-via-deployment-descriptor">Specify the Tenant Identifier via Deployment Descriptor</h3>
+<h3 id="通过部署描述符指定租户标识符">通过部署描述符指定租户标识符</h3>
 
-<p>In case of a process application, the deployment is specified by a <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-applications/the-processes-xml-deployment-descriptor/">processes.xml</a> Deployment Descriptor. Since the descriptor can contain multiple process-archives (i.e., deployments), the tenant identifier can be set on each process-archive as <code>tenantId</code> attribute.</p>
+<p>如果一个流程应用程序，部署是由文件 <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-applications/the-processes-xml-deployment-descriptor/">processes.xml</a> 定义的。由于描述符可以包含多个流程-档案（即部署），可以在每个流程-档案上设置<code>tenantId</code>租户标识符属性。</p>
 
 <pre><code class="language-xml">&lt;process-application
   xmlns=&quot;http://www.camunda.org/schema/1.0/ProcessApplication&quot;
@@ -8255,9 +8250,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 &lt;/process-application&gt;
 </code></pre>
 
-<h3 id="specify-the-tenant-identifier-via-spring-configuration">Specify the Tenant Identifier via Spring Configuration</h3>
+<h3 id="通过-spring配置-指定租户标识符">通过 Spring配置 指定租户标识符</h3>
 
-<p>When the <a href="http://camunda-cn.shaochenfeng.com/user-guide/spring-framework-integration/deployment/">Automatic Resource Deployment</a> of the Spring Framework Integration is used, the tenant identifier can be specified in the Process Engine Configuration as <code>deploymentTenantId</code> property.</p>
+<p>如果使用Spring框架集成并使用<a href="http://camunda-cn.shaochenfeng.com/user-guide/spring-framework-integration/deployment/">自动资源部署</a>时，租户标识符可以在流程引擎配置中指定为<code>deploymentTenantId</code>属性。</p>
 
 <pre><code class="language-xml">&lt;bean id=&quot;processEngineConfiguration&quot; class=&quot;org.camunda.bpm.engine.spring.SpringProcessEngineConfiguration&quot;&gt;
   &lt;property name=&quot;deploymentResources&quot;&gt;
@@ -8270,19 +8265,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 &lt;/bean&gt;
 </code></pre>
 
-<h3 id="versioning-of-tenant-specific-definitions">Versioning of Tenant-Specific Definitions</h3>
+<h3 id="租户特定定义的版本管理">租户特定定义的版本管理</h3>
 
-<p>When a definition is deployed for a tenant then it is assigned a version which is independent from definitions of other tenants. For example, if a new process definition is deployed for two tenants then both definitions are assigned the version <code>1</code>. The versioning within one tenant works like the <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-versioning/">versioning of definitions</a> that belong to no tenant.</p>
+<p>当一个定义被部署到一个租户时，它被分配了一个版本，与其他租户的定义无关。例如，如果一个新的流程定义是为两个租户部署的，那么这两个定义都被分配为<code>1</code>版本。一个租户内的版本管理与不属于任何租户的<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-versioning/">定义的版本管理</a>一样。</p>
 
-<h2 id="query-data-of-a-tenant">Query Data of a Tenant</h2>
+<h2 id="查询租户数据">查询租户数据</h2>
 
-<p>The process engine queries of tenant-specific data (e.g., Deployment Query, Process Definition Query) allows to filter by one or more tenant identifiers. If no identifier is set then the result contains the data of all tenants.</p>
+<p>流程引擎对租户特定数据的查询（例如，部署查询、流程定义查询）允许通过一个或多个租户标识符进行过滤。如果没有设置标识符，则结果包含所有租户的数据。</p>
 
-<p>Note that the <a href="#transparent-access-restrictions-for-tenants">transparent access restrictions</a> of tenants can influence the result of a query if a user is not allowed to see the data of a tenant.</p>
+<p>请注意，租户的<a href="{&lt; relref &quot;#transparent-access-restrictions-for-tenants&quot; &gt;}}">透明访问限制</a>可以影响查询的结果，如果用户不允许看到某个租户的数据。</p>
 
-<h3 id="query-deployments-of-a-tenant">Query Deployments of a Tenant</h3>
+<h3 id="查询租户的部署">查询租户的部署</h3>
 
-<p>To find the deployments of specific tenants, the tenant identifiers have to be passed to <code>tenantIdIn</code> on the <code>DeploymentQuery</code>.</p>
+<p>要找到特定租户的部署，必须将租户标识符传递给<code>DeploymentQuery</code>的<code>tenantIdIn</code>。</p>
 
 <pre><code class="language-java">List&lt;Deployment&gt; deployments = repositoryService
   .createDeploymentQuery()
@@ -8292,7 +8287,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   .list();
 </code></pre>
 
-<p>In case of <a href="#shared-definitions-for-all-tenants">shared definitions</a>, it can be useful to filter by deployments which belong to no tenant by calling <code>withoutTenantId()</code>.</p>
+<p>在<a href="#shared-definitions-for-all-tenants">共享定义</a>的情况下，通过调用<code>withoutTenantId()</code>来查询不属于任何租户的部署。</p>
 
 <pre><code class="language-java">List&lt;Deployment&gt; deployments = repositoryService
   .createDeploymentQuery()
@@ -8300,7 +8295,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   .list();
 </code></pre>
 
-<p>It is also possible to filter by deployments which belong to a specific tenant or no tenant by calling <code>includeDeploymentsWithoutTenantId()</code>.</p>
+<p>也可以通过调用<code>includeDeploymentsWithoutTenantId()</code>来查询属于特定租户或不属于租户的部署。</p>
 
 <pre><code class="language-java">List&lt;Deployment&gt; deployments = repositoryService
   .createDeploymentQuery()
@@ -8309,9 +8304,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   .list();
 </code></pre>
 
-<h3 id="query-definitions-of-a-tenant">Query Definitions of a Tenant</h3>
+<h3 id="查询租户的定义">查询租户的定义</h3>
 
-<p>Similar to the <code>DeploymentQuery</code>, the definition queries allow to filter by one or more tenants and by definitions which belong to no tenant.</p>
+<p>与 &ldquo;部署查询&rdquo; 类似，定义查询允许通过一个或多个租户和不属于任何租户的定义进行过滤。</p>
 
 <pre><code class="language-java">List&lt;ProcessDefinition&gt; processDefinitions = repositoryService
   .createProcessDefinitionQuery()
@@ -8320,16 +8315,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   .list();
 </code></pre>
 
-<h2 id="run-commands-for-a-tenant">Run Commands for a Tenant</h2>
+<h2 id="使用租户身份执行命令">使用租户身份执行命令</h2>
 
-<p>When a definition is deployed for multiple tenants, a command can be ambiguous (e.g., start a process instance by key). If such a command is executed, a <code>ProcessEngineException</code> is thrown. To run the command successfully, the tenant identifier has to be passed to the command.</p>
+<p>当一个定义被部署到多个租户时，一个命令可能是模棱两可的（例如，通过key启动一个流程实例）。如果这样的命令被执行，就会抛出一个 &ldquo;ProcessEngineException&rdquo;。为了成功运行该命令，必须将租户标识符传递给该命令。</p>
 
-<p>Note that the <a href="#transparent-access-restrictions-for-tenants">transparent access restrictions</a> of tenants can omit the tenant identifier if a user is only allowed to see one of the definitions.</p>
+<p>注意，如果用户只被允许看到其中一个定义，租户的<a href="#租户的透明访问限制">透明访问限制</a>可以省略租户标识符。</p>
 
-<h3 id="create-a-process-instance">Create a Process Instance</h3>
+<h3 id="创建一个流程实例">创建一个流程实例</h3>
 
-<p>To create an instance by key of a process definition which is deployed for multiple tenants, the tenant identifier has to be passed to the <a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/engine/runtime/ProcessInstantiationBuilder.html">ProcessInstantiationBuilder</a>
-.</p>
+<p>通过key创建一个为多租户部署的流程定义的实例，必须在<a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/runtime/ProcessInstantiationBuilder.html">ProcessInstantiationBuilder</a>
+中传递租户标识符 。</p>
 
 <pre><code class="language-java">runtimeService
   .createProcessInstanceByKey(&quot;key&quot;)
@@ -8337,10 +8332,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   .execute();
 </code></pre>
 
-<h3 id="correlate-a-message">Correlate a Message</h3>
+<h3 id="关联消息">关联消息</h3>
 
-<p>The <a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/events/message-events/#message-api">Message API</a> can be used to correlate a message to one or all tenants. In case a message can correlate to definitions or executions of multiple tenants, the tenant identifier has to be passed to the <a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/engine/runtime/MessageCorrelationBuilder.html">MessageCorrelationBuilder</a>
-. Otherwise, a <code>MismatchingMessageCorrelationException</code> is thrown.</p>
+<p><a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/events/message-events/#message-api">message API</a>可用于将消息与一个或所有租户相关联。如果消息可以与多个租户的定义或执行相关，则必须将租户标识传递给 <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/runtime/MessageCorrelationBuilder.html">MessageCorrelationBuilder</a>
+。否则会抛出 <code>MismatchingMessageCorrelationException</code>。</p>
 
 <pre><code class="language-java">runtimeService
   .createMessageCorrelation(&quot;messageName&quot;)
@@ -8348,17 +8343,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   .correlate();
 </code></pre>
 
-<p>To correlate a message to all tenants, pass no tenant identifier to the builder and call <code>correlateAll()</code>.</p>
+<p>要将一条消息与所有租户相关联，不需要向构建器传递租户标识符，直接调用<code>correlateAll()</code>。</p>
 
 <pre><code class="language-java">runtimeService
   .createMessageCorrelation(&quot;messageName&quot;)
   .correlateAll();
 </code></pre>
 
-<h3 id="send-a-signal">Send a Signal</h3>
+<h3 id="发送信号">发送信号</h3>
 
-<p>The <a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/events/signal-events/#signal-api">Signal API</a> can be used to deliver a signal to one or all tenants. Pass the tenant identifier to the <a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/engine/runtime/SignalEventReceivedBuilder.html">SignalEventReceivedBuilder</a>
- to deliver the signal to a specific tenant. If no identifier is passed then the signal is delivered to all tenants.</p>
+<p><a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/events/signal-events/#signal-api">Signal API</a> 可用于向一个或所有租户发送信号。可以将租户标识传递给 <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/runtime/SignalEventReceivedBuilder.html">SignalEventReceivedBuilder</a>
+ 用该来将信号传递给特定的租户。如果没有传递标识符，则信号将传递给所有租户。</p>
 
 <pre><code class="language-java">runtimeService
   .createSignalEvent(&quot;signalName&quot;)
@@ -8366,12 +8361,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   .send();
 </code></pre>
 
-<p>When a signal is thrown within a process (i.e., intermediate signal event or signal end event) then the signal is delivered to definitions and executions which belong to the same tenant as the calling execution or no tenant.</p>
+<p>当一个信号在流程中被抛出时（即中间信号事件或信号结束事件），那么该信号将被传递给与调用执行属于同一租户或无租户的定义和执行中。</p>
 
-<h3 id="create-a-case-instance">Create a Case Instance</h3>
+<h3 id="创建一个案例实例">创建一个案例实例</h3>
 
-<p>To create an instance by key of a case definition which is deployed for multiple tenants, the tenant identifier has to be passed to the <a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/engine/runtime/CaseInstanceBuilder.html">CaseInstanceBuilder</a>
-.</p>
+<p>要通过部署为多个租户的案例定义的密钥来创建实例，必须将租户标识符传递给 <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/runtime/CaseInstanceBuilder.html">CaseInstanceBuilder</a>
+。</p>
 
 <pre><code class="language-java">caseService
   .withCaseDefinitionByKey(&quot;key&quot;)
@@ -8379,10 +8374,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   .execute();
 </code></pre>
 
-<h3 id="evaluate-a-decision-table">Evaluate a Decision Table</h3>
+<h3 id="评估决策表">评估决策表</h3>
 
-<p>To evaluate a decision table by key which is deployed for multiple tenants, the tenant identifier has to be passed to the <a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/engine/dmn/DecisionEvaluationBuilder.html">DecisionEvaluationBuilder</a>
-.</p>
+<p>要通过部署为多个租户的密钥来评估决策表，必须将租户标识符传递给 <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/dmn/DecisionEvaluationBuilder.html">DecisionEvaluationBuilder</a>
+。</p>
 
 <pre><code class="language-java">decisionService
   .evaluateDecisionTableByKey(&quot;key&quot;)
@@ -8390,14 +8385,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   .evaluate();
 </code></pre>
 
-<h2 id="transparent-access-restrictions-for-tenants">Transparent Access Restrictions for Tenants</h2>
+<h2 id="租户的透明访问限制">租户的透明访问限制</h2>
 
-<p>When integrating Camunda into an application, it can be cumbersome to pass the tenant Id to each camunda API call. Since such an application usually also has a concept of an &ldquo;authenticated user&rdquo;, it is possible to set the list of tenant ids when setting the authentication:</p>
+<p>当把Camunda集成到一个应用程序中时，在每个camunda API调用中传递租户ID可能是很麻烦的。由于这样的应用程序通常也有一个 &ldquo;认证用户&rdquo; 的概念，因此可以在设置认证时设置租户ID的列表。</p>
 
 <pre><code class="language-java">try {
   identityService.setAuthentication(&quot;mary&quot;, asList(&quot;accounting&quot;), asList(&quot;tenant1&quot;));
 
-  // All API calls executed here have &quot;tenant1&quot; transparently set as tenantId
+  // 此处执行的所有API调用的租户ID都会是`tenant1`
 
 }
 finally {
@@ -8405,12 +8400,11 @@ finally {
 }
 </code></pre>
 
-<p>In the above example, all API calls executed between <code>setAuthentication(...)</code> and <code>clearAuthentication()</code> are transparently executed with the list
-of provided tenant Ids.</p>
+<p>在上面的例子中，在 &ldquo;setAuthentication(&hellip;) &rdquo; 和 &ldquo;clearAuthentication()&rdquo; 之间执行的所有API调用都是根据租户ID列表以透明方式执行的.</p>
 
-<h3 id="query-example">Query Example</h3>
+<h3 id="查询案例">查询案例</h3>
 
-<p>The following query</p>
+<p>下面的查询：</p>
 
 <pre><code class="language-java">try {
   identityService.setAuthentication(&quot;mary&quot;, asList(&quot;accounting&quot;), asList(&quot;tenant1&quot;));
@@ -8422,7 +8416,7 @@ finally {
 }
 </code></pre>
 
-<p>Is equivalent to</p>
+<p>相当于：</p>
 
 <pre><code class="language-java">repositoryService.createProcessDefinitionQuery()
   .tenantIdIn(&quot;tenant1&quot;)
@@ -8430,15 +8424,14 @@ finally {
   .list();
 </code></pre>
 
-<h3 id="task-access-example">Task Access Example</h3>
+<h3 id="任务-task-访问示例">任务（Task）访问示例</h3>
 
-<p>For other commands like <code>complete()</code>, the transparent access check ensures that the authenticated user does not access
-resources by other tenants:</p>
+<p>对于像 <code>complete()</code> 这样的其他命令，透明的访问检查确保被认证的用户不会访问其他租户的资源：</p>
 
 <pre><code class="language-java">try {
   identityService.setAuthentication(&quot;mary&quot;, asList(&quot;accounting&quot;), asList(&quot;tenant1&quot;));
 
-  // throws an exception if task has tenant id other than &quot;tenant1&quot;
+  // 如果租户ID不是 &quot;tenant1&quot; ，会抛出异常
   taskService.complete(&quot;someTaskId&quot;);
 }
 finally {
@@ -8446,10 +8439,10 @@ finally {
 }
 </code></pre>
 
-<h3 id="getting-a-user-s-tenant-ids-from-the-identity-service">Getting a user&rsquo;s Tenant Ids from the Identity Service</h3>
+<h3 id="从身份服务-identity-service-获取用户的租户id">从身份服务（Identity Service）获取用户的租户ID</h3>
 
-<p>The process engine&rsquo;s Identity Service can be used to manage users, groups and tenants as well as their relationships.
-The following example shows how to retrieve the lists of groups and tenants for a given user and then use these lists when setting the authentication:</p>
+<p>流程引擎的身份服务可以用来管理用户、组和租户以及他们的关系。
+下面的例子显示了如何为一个给定的用户查询组和租户的列表，然后在设置认证时使用这些列表。</p>
 
 <pre><code class="language-java">List&lt;Tenant&gt; groups = identityService.createGroupQuery()
   .userMember(userId)
@@ -8463,7 +8456,7 @@ List&lt;Tenant&gt; tenants = identityService.createTenantQuery()
 try {
   identityService.setAuthentication(userId, groups, tenants);
 
-  // get all tasks visible to user.
+  // 获取用户可见的所有任务。
   taskService.createTaskQuery().list();
   
 }
@@ -8474,53 +8467,53 @@ finally {
 
 
 <div class="note bg-info docs-info">
-  <h3>LDAP Identity Service</h3>
-  <p>The above example only works with the <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/identity-service/#the-database-identity-service">Database Identity Service</a> (i.e., the default implementation). The <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/identity-service/#the-ldap-identity-service">LDAP Identity Service</a> doesn&rsquo;t support tenants.</p>
+  <h3>LDAP身份服务</h3>
+  <p>上面的示例仅适用于<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/identity-service/#the-database-identity-service">数据库身份服务</a> (即, 默认实现). <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/identity-service/#the-ldap-identity-service">LDAP身份服务</a>不支持租户。</p>
 </div>
 
 
-<h3 id="camunda-rest-api-and-web-applications">Camunda Rest API and Web Applications</h3>
+<h3 id="camunda-rest-api和web应用程序">Camunda REST API和Web应用程序</h3>
 
-<p>The Camunda <a href="http://camunda-cn.shaochenfeng.com/reference/rest/">Rest API</a> and the web applications Cockpit and Tasklist support the transparent access restrictions. When a user logs in then he only sees and can only access the data (e.g., process definitions) that belongs to one of his tenants.</p>
+<p>Camunda <a href="http://camunda-cn.shaochenfeng.com/reference/rest/">Rest API</a>和Web应用程序Cockpit和Tasklist支持透明访问限制。当一个用户登录时，他只能看到也只能访问属于他的一个租户的数据（例如，流程定义）。</p>
 
-<p>Tenants and their memberships can be managed in the <a href="http://camunda-cn.shaochenfeng.com/webapps/admin/tenant-management/">Admin</a> web application.</p>
+<p>租户及其成员资格可以在<a href="http://camunda-cn.shaochenfeng.com/webapps/admin/tenant-management/">Admin</a>网络应用中管理。</p>
 
-<h3 id="disable-the-transparent-access-restrictions">Disable the Transparent Access Restrictions</h3>
+<h3 id="禁用透明访问限制">禁用透明访问限制</h3>
 
-<p>The transparent access restrictions are enabled by default. To disable the restrictions, set the <code>tenantCheckEnabled</code> property in the <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-bootstrapping/#processengineconfiguration-bean">ProcessEngineConfiguration</a> to <code>false</code>.</p>
+<p>默认情况下，透明访问限制是启用的。要禁用这些限制，请在<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-bootstrapping/#processengineconfiguration-bean">ProcessEngineConfiguration</a>中设置<code>tenantCheckEnabled</code>属性为<code>false</code>。</p>
 
-<p>Additionally, it is also possible to disable the restrictions for a single command (e.g., for a maintenance task). Use the <code>CommandContext</code> to disable and enable the restrictions for the current command.</p>
+<p>此外，也可以禁用单个命令的限制（例如，为维护任务）。使用<code>CommandContext</code>来禁用和启用对当前命令的限制。</p>
 
 <pre><code class="language-java">commandContext.disableTenantCheck();
 
-// e.g., do maintenance tasks over all tenants
+// 例如，为所有租户做维护工作
 
 commandContext.enableTenantCheck();
 </code></pre>
 
-<p>Note that the restrictions can&rsquo;t be enabled for a command if they are disabled in the <code>ProcessEngineConfiguration</code>.</p>
+<p>注意，如果在 &ldquo;ProcessEngineConfiguration&rdquo; 中禁用了这些限制，就不能为一个命令启用限制了。</p>
 
-<h3 id="access-all-tenants-as-administrator">Access all Tenants as Administrator</h3>
+<h3 id="作为管理员访问所有租户">作为管理员访问所有租户</h3>
 
-<p>Users who are a member of the group <code>camunda-admin</code> can access the data of all tenants, even if they don&rsquo;t belong to the tenants. This is useful for an administrator of a multi-tenancy application since he has to manage the data over all tenants.</p>
+<p>作为 &ldquo;camunda-admin&rdquo; 组成员的用户可以访问所有租户的数据，即使他们不属于这些租户。这对一个多租户应用程序的管理员很有用，因为他必须管理所有租户的数据。</p>
 
-<h2 id="shared-definitions-for-all-tenants">Shared Definitions for all Tenants</h2>
+<h2 id="所有租户共享的定义">所有租户共享的定义</h2>
 
-<p>In section <a href="#deploy-definitions-for-a-tenant">Deploy Definitions for a Tenant</a> it is explained how to deploy a Process Definition or a Decision Definition for a particular tenant. The result is that the definition is only visible to the tenant for whom it was deployed but not to other tenants. This is useful if tenants have different processes and decisions. However, there are also many situations where all tenants should share the same definitions. In such situations it is desirable to deploy a definition only once, in a way that it is visible to all tenants.
-Then, when a new instance is created by a particular tenant, it should  be only visible to that tenant (and administrators of course).
-This can be achieved by a usage pattern we call &ldquo;Shared Definitions&rdquo;.
-By the term <em>usage pattern</em> we mean that it is not a feature of Camunda per se but rather a specific way to use it to achieve the desired behavior.</p>
+<p>在<a href="#为租户部署定义">为租户部署定义</a>一节中，解释了如何为某一租户部署流程定义或决策定义。其结果是，该定义只对其被部署的租户可见，而对其他租户不可见。如果租户有不同的流程和决策，这很有用。然而，也有许多情况下，所有租户应该共享相同的定义。在这种情况下，最好是只部署一次定义，使其对所有租户可见。
+然后，当某一租户创建一个新的实例时，它应该只对该租户（当然还有管理员）可见。
+这可以通过一种我们称之为 &ldquo;共享定义&rdquo; 的使用模式来实现。
+我们所说的 <em>使用模式</em> 是指它不是Camunda本身的一个功能，而是使用它来实现所需行为的特定方式。</p>
 
 
 <div class="note bg-info docs-info">
-  <h3>Example</h3>
-  <p>You can find an <a href="https://github.com/camunda/camunda-bpm-examples/tree/master/multi-tenancy/tenant-identifier-shared-definitions">example</a> on <a href="https://github.com/camunda/camunda-bpm-examples">GitHub</a> that shows how to use shared definitions.</p>
+  <h3>案例</h3>
+  <p>你可以查看在<a href="https://github.com/camunda/camunda-bpm-examples">GitHub</a>上的<a href="https://github.com/camunda/camunda-bpm-examples/tree/master/multi-tenancy/tenant-identifier-shared-definitions">案例</a> 学习如何使用共享定义。</p>
 </div>
 
 
-<h3 id="deploy-a-shared-definition">Deploy a Shared Definition</h3>
+<h3 id="部署共享定义">部署共享定义</h3>
 
-<p>Deploying a shared definition is just a &ldquo;regular&rdquo; deployment not assigning a Tenant Id to the deployment:</p>
+<p>部署一个共享定义只是一个 &ldquo;常规&rdquo; 的部署，而不用给部署分配一个租户身份。</p>
 
 <pre><code class="language-java">repositoryService
   .createDeployment()
@@ -8529,19 +8522,19 @@ By the term <em>usage pattern</em> we mean that it is not a feature of Camunda p
   .deploy();
 </code></pre>
 
-<h3 id="include-shared-definitions-in-a-query">Include Shared Definitions in a Query</h3>
+<h3 id="在查询中包含共享的定义">在查询中包含共享的定义</h3>
 
-<p>Often in an application, we want to present a list of &ldquo;available&rdquo; process definitions to the user.
-In a multi tenancy context with shared resources we want the list to include definitions with the following properties:</p>
+<p>在一个应用程序中，我们经常希望向用户提供一个 &ldquo;可用&rdquo; 的流程定义的列表。
+在一个共享资源的多租户环境中，我们希望这个列表包括具有以下属性的定义。</p>
 
 <ul>
-<li>tenant id is the current user&rsquo;s tenant id,</li>
-<li>tenant id is <code>null</code> =&gt; process is a shared resource.</li>
+<li>租户ID是当前用户的租户ID。</li>
+<li>租户id为<code>null</code> = 流程是一个共享资源。</li>
 </ul>
 
-<p>To achieve this with a query, the query needs to restrict on the list of the user&rsquo;s tenant ids (by calling <code>tenantIdIn(...)</code>) and include definitions without a tenant id (<code>includeProcessDefinitionsWithoutTenantId()</code>). Or, looking at it the other way around: exclude all definitions which have a tenant id which is different from the current user&rsquo;s tenant id(s).</p>
+<p>为了通过查询实现这一点，查询需要对用户的租户ID列表进行限制（通过调用<code>tenantIdIn(..)</code>），并包括没有租户ID的定义（<code>includeProcessDefinitionsWithoutTenantId()</code>）。或者，反过来看：排除所有租户ID与当前用户的租户ID不同的定义。</p>
 
-<p>Example:</p>
+<p>实例:</p>
 
 <pre><code class="language-java">repositoryService.createProcessDefinitionQuery()
   .tenantIdIn(&quot;someTenantId&quot;)
@@ -8549,15 +8542,15 @@ In a multi tenancy context with shared resources we want the list to include def
   .list();
 </code></pre>
 
-<h3 id="instantiate-a-shared-definition">Instantiate a Shared Definition</h3>
+<h3 id="实例化共享定义">实例化共享定义</h3>
 
-<p>When creating (starting) a new process instance, the tenant id of the process definition is propagated to the process instance.
-Shared resources  do not have a tenant id which means that no tenant id is propagated automatically. To have the tenant id of the user who starts the process instances assigned  to the process instance, an implementation of the <a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/engine/impl/cfg/multitenancy/TenantIdProvider.html">TenantIdProvider</a>
- SPI needs to be provided.</p>
+<p>当创建（启动）一个新的流程实例时，流程定义的租户ID被传播到流程实例中。
+共享资源没有租户ID，这意味着没有租户ID被自动传播。为了将启动流程实例的用户的租户ID分配给流程实例，需要提供<a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/impl/cfg/multitenancy/TenantIdProvider.html">TenantIdProvider</a>
+SPI的实现。</p>
 
-<p>The <code>TenantIdProvider</code> receives a callback when an instance of a process definition, case definition or decision definition is created. It can then assign a tenant id to the newly created instance (or not).</p>
+<p>当一个流程定义、案例定义或决策定义的实例被创建时，<code>TenantIdProvider</code> 会收到一个回调。然后它可以为新创建的实例分配一个租户ID（或者不分配）。</p>
 
-<p>The following example shows how to assign a tenant id to an instance based on the current authentication:</p>
+<p>下面的例子显示了如何根据当前的认证给一个实例分配租户ID：</p>
 
 <pre><code class="language-java">public class CustomTenantIdProvider implements TenantIdProvider {
 
@@ -8602,7 +8595,7 @@ Shared resources  do not have a tenant id which means that no tenant id is propa
 }
 </code></pre>
 
-<p>To use the <code>TenantIdProvider</code>, it must be set in the Process Engine Configuration, for example using the <code>camunda.cfg.xml</code>:</p>
+<p>使用 <code>TenantIdProvider</code>，必须在流程引擎配置中设置，例如使用 <code>camunda.cfg.xml</code>:</p>
 
 <pre><code class="language-xml">&lt;beans&gt;
   &lt;bean id=&quot;processEngineConfiguration&quot; class=&quot;org.camunda.bpm.engine.impl.cfg.StandaloneProcessEngineConfiguration&quot;&gt;
@@ -8615,28 +8608,28 @@ Shared resources  do not have a tenant id which means that no tenant id is propa
 &lt;/beans&gt;
 </code></pre>
 
-<p>In case of a shared process engine, the provider can be set via <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-plugins/">Process Engine Plugin</a>.</p>
+<p>如果是共享的流程引擎，提供者可以通过<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-plugins/">流程引擎插件</a>来设置。</p>
 
-<h3 id="tenant-specific-behavior-with-call-activities">Tenant-specific behavior with Call Activities</h3>
+<h3 id="租户的特定行为与call-activities">租户的特定行为与Call Activities</h3>
 
-<p>So far, we have seen that shared resources are a useful pattern if tenants have the same process definition. The advantage is that we do not have to deploy the same process definitions once per tenant. Yet, in many real world applications, the situation is somewhat in between: tenants share <em>mostly</em> the same process definitions, but there are some tenant specific variations.</p>
+<p>到目前为止，我们已经看到，如果租户有相同的流程定义，共享资源是一种有用的模式。这样做的好处是，我们不必为每个租户部署一次相同的流程定义。然而，在许多现实世界的应用中，情况有些介于两者之间：租户共享 <em>大程度</em> 上相同的流程定义，但有一些租户有具体变化。</p>
 
-<p>A common pattern of how to deal with this is to extract the tenant-specific behavior in a separate process which is then invoked using a call activity. Tenant specific decision logic (i.e., decision tables) using a business rules task are also common.</p>
+<p>处理这种情况的常见方法是，在一个单独的流程中提取租户特定的行为，然后使用Call Activities来调用。使用业务规则任务的特定租户决策逻辑（即决策表）也很常见。</p>
 
-<p>To realize this, the call activity or business rule task needs to select the correct definition to invoke based on the tenant id of the current process instance. The <a href="https://github.com/camunda/camunda-bpm-examples/tree/master/multi-tenancy/tenant-identifier-shared-definitions">Shared Resources Example</a> shows how to achieve this.</p>
+<p>为了实现这一点，Call Activities或业务规则任务需要根据当前流程实例的租户ID 选择要调用的正确定义。<a href="https://github.com/camunda/camunda-bpm-examples/tree/master/multi-tenancy/tenant-identifier-shared-definitions">共享资源示例</a>展示了如何实现这一点。</p>
 
-<p>See also:</p>
+<p>也可以看看：</p>
 
 <ul>
-<li><a href="https://github.com/camunda/camunda-bpm-examples/tree/master/multi-tenancy/tenant-identifier-shared-definitions">Shared Resources Example</a></li>
+<li><a href="https://github.com/camunda/camunda-bpm-examples/tree/master/multi-tenancy/tenant-identifier-shared-definitions">共享资源示例</a></li>
 <li><a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/subprocesses/call-activity/#calledelement-tenant-id">Called Element Tenant Id</a></li>
-<li><a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/subprocesses/call-activity/#case-tenant-id">Case Tenant Id</a> for call activities.</li>
+<li><a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/subprocesses/call-activity/#case-tenant-id">案例租户ID</a> for call activities.</li>
 <li><a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/tasks/business-rule-task/#decisionref-tenant-id">Decision Ref Tenant Id</a> for business rule tasks.</li>
 </ul>
 
-<h1 id="one-process-engine-per-tenant">One Process Engine Per Tenant</h1>
+<h1 id="每个租户使用一个流程引擎">每个租户使用一个流程引擎</h1>
 
-<p>Multi-Tenancy can be achieved by providing one process engine per tenant. Each process engine is configured to use a different data source which connects the data of the tenant. The data of the tenants can be stored in different databases, in one database with different schemas or in one schema with different tables.</p>
+<p>多租户可以通过为每个租户提供一个流程引擎来实现。每个流程引擎被配置为使用不同的数据源，连接租户的数据。租户的数据可以存储在不同的数据库中，也可以存储在具有不同schema的一个数据库中，或者存储在具有不同表的一个schema中。</p>
 
 <figure class="image">
   <span><img
@@ -8647,43 +8640,43 @@ Shared resources  do not have a tenant id which means that no tenant id is propa
 </figure>
 
 
-<p>The process engines can run on the same server so that all share the same computational resources such as a data source (when isolating via schemas or tables) or a thread pool for asynchronous job execution.</p>
+<p>流程引擎可以在同一台服务器上运行，这样所有的流程引擎都可以共享相同的计算资源，如数据源（通过schema或表进行隔离时）或用于异步Job执行的线程池。</p>
 
 
 <div class="note bg-info docs-info">
-  <h3>Tutorial</h3>
-  <p>You can see the <a href="https://github.com/camunda/camunda-bpm-examples/tree/master/multi-tenancy/schema-isolation">example</a> how to implement multi-tenancy with data isolation by schemas.</p>
+  <h3>教程</h3>
+  <p>你可以查看 <a href="https://github.com/camunda/camunda-bpm-examples/tree/master/multi-tenancy/schema-isolation">案例</a> 了解如何通过schema实现多租户。</p>
 </div>
 
 
-<h2 id="configure-the-process-engines">Configure the Process Engines</h2>
+<h2 id="配置流程引擎">配置流程引擎</h2>
 
-<p>The process engines can be configured in a configuration file or via Java API. Each engine should have a name that is related to a tenant such that it can be identified based on the tenant. For example, each engine can be named after the tenant it serves. See the <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-bootstrapping/">Process Engine Bootstrapping</a> section for details.</p>
+<p>流程引擎可以在配置文件中或通过 Java API 进行配置。每个引擎都应该有一个与租户有关的名字，这样就可以根据租户来识别它。例如，每个引擎可以用它所服务的租户来命名。详情见<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-bootstrapping/">过程引擎自启动</a>章节。</p>
 
-<h3 id="database-isolation">Database Isolation</h3>
+<h3 id="数据库隔离">数据库隔离</h3>
 
-<p>If different tenants should work on entirely different databases, they have to use different JDBC settings or different data sources.</p>
+<p>如果不同的租户应该在完全不同的数据库上工作，他们必须使用不同的JDBC设置或不同的数据源。</p>
 
 <h3 id="schema-or-table-isolation">Schema or Table Isolation</h3>
 
-<p>For schema- or table-based isolation, a single data source can be used which means that resources like a connection pool can be shared among multiple engines.
-To achieve this,</p>
+<p>对于基于schema或表的隔离，可以使用单一的数据源，这意味着连接池等资源可以在多个引擎之间共享。</p>
+
+<p>为了实现这一点，你需要：</p>
 
 <ul>
-<li>the configuration option <a href="http://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#configuration-protperties">databaseTablePrefix</a> can be used to configure database access.</li>
-<li>consider switching on the setting <code>useSharedSqlSessionFactory</code>. The setting controls whether each process engine instance should parse and maintain a local copy of the mybatis mapping files or whether a single, shared copy can be used. Since the mappings require a lot of heap (&gt;30MB), it is recommended to switch this on. This way only one copy needs to be allocated.</li>
+<li>配置选项<a href="http://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#configuration-protperties">databaseTablePrefix</a>可用于配置数据库访问。</li>
+<li>考虑打开 <code>useSharedSqlSessionFactory</code> 配置项。该设置控制每个流程引擎实例是否应该解析和维护mybatis映射文件的本地副本，或者是否可以使用单一的共享副本。由于映射需要大量的堆（&gt;30MB），建议将其打开。这样就只需要分配一个副本。</li>
 </ul>
 
 
 <div class="note bg-warning docs-warning">
-  <h3>Considerations for useSharedSqlSessionFactory setting</h3>
-  <p><p>The <code>useSharedSqlSessionFactory</code> setting causes caching of the mybatis sql session factory in a static field, once built.
-When using this configuration setting, you need to be aware that</p>
+  <h3>考虑使用 useSharedSqlSessionFactory 设置</h3>
+  <p><p><code>useSharedSqlSessionFactory</code> 设置会导致mybatis sql事务工厂在一个静态字段中的缓存，一旦建立。
+当使用这个配置设置时，你需要注意的是：</p>
 
 <ul>
-<li>it can only be used if all process engines which use the setting share the same datasource and transaction factory</li>
-<li>the reference in the field, once set, is never cleared. This is usually not a problem but if it is, users must clear the field
-manually by setting it to null explicitly via</li>
+<li>只有当所有使用该设置的流程引擎共享相同的数据源和事务工厂时，才能使用它。</li>
+<li>字段中的引用，一旦被设置，就不会被清除。这通常不是一个问题，但如果是的话，用户必须通过以下方式手动清除该字段，明确地将其设置为空。</li>
 </ul>
 
 <pre><code class="language-java">ProcessEngineConfigurationImpl.cachedSqlSessionFactory = null
@@ -8692,13 +8685,13 @@ manually by setting it to null explicitly via</li>
 </div>
 
 
-<h3 id="job-executor-for-multiple-process-engines">Job Executor for Multiple Process Engines</h3>
+<h3 id="多个流程引擎的job执行器">多个流程引擎的Job执行器</h3>
 
-<p>For background execution of processes and tasks, the process engine has a component called <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/">job executor</a>. The job executor periodically acquires jobs from the database and submits them to a thread pool for execution. For all process applications on one server, one thread pool is used for job execution. Furthermore, it is possible to share the acquisition thread between multiple engines. This way, resources are still manageable even when a large amount of process engines are used. See the section <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/#the-job-executor-and-multiple-process-engines">The Job Executor and Multiple Process Engines</a> for details.</p>
+<p>对于流程和任务的后台执行，流程引擎有一个叫做<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/">Job执行器</a>的组件。Job执行器定期从数据库中获取Job，并将其提交到线程池中执行。对于一台服务器上的所有流程应用，一个线程池用于Job执行。此外，有可能在多个引擎之间共享获取线程。这样，即使使用了大量的流程引擎，资源仍然是可管理的。详情请参见<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/#the-job-executor-and-multiple-process-engines">Job执行器与多个流程引擎</a>一节。</p>
 
-<h3 id="example-configuration-for-schema-isolation">Example Configuration for Schema Isolation</h3>
+<h3 id="schem隔离的示例配置">Schem隔离的示例配置</h3>
 
-<p>Multi-Tenancy settings can be applied in the various ways of configuring a process engine. The following is an example of a <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-bootstrapping/#configure-process-engine-in-bpm-platformxml">bpm-platform.xml</a> file that specifies engines for two tenants that share the same database but work on different schemas:</p>
+<p>多租户设置可以应用于配置流程引擎的各种方式。下面是一个<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-bootstrapping/#configure-process-engine-in-bpm-platformxml">bpm-platform.xml</a>文件的例子，它为两个共享同一数据库但工作在不同模式下的租户指定引擎：</p>
 
 <pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;bpm-platform xmlns=&quot;http://www.camunda.org/schema/1.0/BpmPlatform&quot;
@@ -8741,11 +8734,11 @@ manually by setting it to null explicitly via</li>
 &lt;/bpm-platform&gt;
 </code></pre>
 
-<h2 id="deploy-definitions-for-a-tenant-1">Deploy Definitions for a Tenant</h2>
+<h2 id="部署租户的定义">部署租户的定义</h2>
 
-<p>When developing process applications, i.e., process definitions and supplementary code, some processes may be deployed to every tenant&rsquo;s engine while others are tenant-specific. The processes.xml deployment descriptor that is part of every process application offers this kind of flexibility by the concept of <em>process archives</em>. One application can contain any number of process archive deployments, each of which can be deployed to a different process engine with different resources. See the section on the <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-applications/the-processes-xml-deployment-descriptor/">processes.xml deployment descriptor</a> for details.</p>
+<p>在开发流程应用，即流程定义和补充代码时，一些流程可能会被部署到每个租户的引擎上，而另一些则是针对租户的。processes.xml部署描述符是每个流程应用程序的一部分，它通过 <em>流程归档</em> 的概念提供这种灵活性。一个应用程序可以包含任何数量的流程归档部署，每一个都可以部署到具有不同资源的不同流程引擎。详情见<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-applications/the-processes-xml-deployment-descriptor/">process.xml部署描述符</a>一节。</p>
 
-<p>The following is an example that deploys different process definitions for two tenants. It uses the configuration property <code>resourceRootPath</code> that specifies a path in the deployment that contains process definitions to deploy. Accordingly, all the processes under <code>processes/tenant1</code> on the application&rsquo;s classpath are deployed to engine <code>tenant1</code>, while all the processes under <code>processes/tenant2</code> are deployed to engine <code>tenant2</code>.</p>
+<p>下面是一个为两个租户部署不同流程定义的例子。它使用配置属性<code>resourceRootPath</code>，指定部署中包含要部署的流程定义的路径。因此，应用程序classpath上<code>processes/tenant1</code>下的所有流程被部署到引擎<code>tenant1</code>，而<code>processes/tenant2</code>下的所有流程被部署到引擎<code>tenant2</code>。</p>
 
 <pre><code class="language-xml">&lt;process-application
   xmlns=&quot;http://www.camunda.org/schema/1.0/ProcessApplication&quot;
@@ -8774,17 +8767,17 @@ manually by setting it to null explicitly via</li>
 &lt;/process-application&gt;
 </code></pre>
 
-<h2 id="access-the-process-engine-of-a-tenant">Access the Process Engine of a Tenant</h2>
+<h2 id="访问租户的流程引擎">访问租户的流程引擎</h2>
 
-<p>To access a specific tenant&rsquo;s process engine at runtime, it has to be identified by its name. The Camunda engine offers access to named engines in various programming models:</p>
+<p>要在运行时访问一个特定租户的流程引擎，必须通过其名称来识别。Camunda引擎提供对各种编程模型中的命名引擎的访问。</p>
 
 <ul>
-<li><strong>Plain Java API</strong>: Via the <a href="http://camunda-cn.shaochenfeng.com/user-guide/runtime-container-integration/bpm-platform-services/#processengineservice">ProcessEngineService</a> any named engine can be accessed.</li>
-<li><strong>CDI Integration</strong>: Named engine beans can be injected out of the box. The <a href="http://camunda-cn.shaochenfeng.com/user-guide/cdi-java-ee-integration/built-in-beans/">built-in CDI bean producer</a> can be specialized to access the engine of the current tenant dynamically.</li>
-<li><strong>Via JNDI on JBoss/Wildfly</strong>: On JBoss and Wildfly, every container-managed process engine can be <a href="http://camunda-cn.shaochenfeng.com/user-guide/runtime-container-integration/jboss/#look-up-a-process-engine-in-jndi">looked up via JNDI</a>.</li>
+<li><strong>清晰的 Java API</strong>: 通过 <a href="http://camunda-cn.shaochenfeng.com/user-guide/runtime-container-integration/bpm-platform-services/#processengineservice">ProcessEngineService</a> 可以访问任何命名引擎。</li>
+<li><strong>CDI 注入</strong>: 命名的引擎Bean可以开箱即注入。内置的<a href="http://camunda-cn.shaochenfeng.com/user-guide/cdi-java-ee-integration/built-in-beans/">CDI Bean生产者</a>专门用来动态地访问当前租户的引擎。</li>
+<li><strong>通过JBoss/Wildfly 的 JNDI</strong>: 在JBoss和Wildfly上，每一个容器管理的进程引擎都可以<a href="http://camunda-cn.shaochenfeng.com/user-guide/runtime-container-integration/jboss/#look-up-a-process-engine-in-jndi">通过JNDI查询</a>。</li>
 </ul>
 
-<p>The Camunda web applications Cockpit, Tasklist and Admin offer tenant-specific views out of the box by <a href="http://camunda-cn.shaochenfeng.com/webapps/cockpit/dashboard/#multi-engine">switching between different process engines</a>.</p>
+<p>Camunda网络应用程序Cockpit、Tasklist和Admin通过<a href="http://camunda-cn.shaochenfeng.com/webapps/cockpit/dashboard/#multi-engine">在不同的流程引擎之间切换</a>提供租户特定的视图，开箱即用。</p>
 
     </div>
   </div>
@@ -8794,56 +8787,56 @@ manually by setting it to null explicitly via</li>
   <h3>目录:</h3>
   <nav id="TableOfContents">
 <ul>
-<li><a href="#single-process-engine-with-tenant-identifiers">Single Process Engine With Tenant-Identifiers</a>
+<li><a href="#使用租户标识符的单一流程引擎">使用租户标识符的单一流程引擎</a>
 <ul>
-<li><a href="#deploy-definitions-for-a-tenant">Deploy Definitions for a Tenant</a>
+<li><a href="#为租户部署定义">为租户部署定义</a>
 <ul>
-<li><a href="#specify-the-tenant-identifier-via-java-api">Specify the Tenant Identifier via Java API</a></li>
-<li><a href="#specify-the-tenant-identifier-via-deployment-descriptor">Specify the Tenant Identifier via Deployment Descriptor</a></li>
-<li><a href="#specify-the-tenant-identifier-via-spring-configuration">Specify the Tenant Identifier via Spring Configuration</a></li>
-<li><a href="#versioning-of-tenant-specific-definitions">Versioning of Tenant-Specific Definitions</a></li>
+<li><a href="#通过java-api指定租户标识符">通过Java API指定租户标识符</a></li>
+<li><a href="#通过部署描述符指定租户标识符">通过部署描述符指定租户标识符</a></li>
+<li><a href="#通过-spring配置-指定租户标识符">通过 Spring配置 指定租户标识符</a></li>
+<li><a href="#租户特定定义的版本管理">租户特定定义的版本管理</a></li>
 </ul></li>
-<li><a href="#query-data-of-a-tenant">Query Data of a Tenant</a>
+<li><a href="#查询租户数据">查询租户数据</a>
 <ul>
-<li><a href="#query-deployments-of-a-tenant">Query Deployments of a Tenant</a></li>
-<li><a href="#query-definitions-of-a-tenant">Query Definitions of a Tenant</a></li>
+<li><a href="#查询租户的部署">查询租户的部署</a></li>
+<li><a href="#查询租户的定义">查询租户的定义</a></li>
 </ul></li>
-<li><a href="#run-commands-for-a-tenant">Run Commands for a Tenant</a>
+<li><a href="#使用租户身份执行命令">使用租户身份执行命令</a>
 <ul>
-<li><a href="#create-a-process-instance">Create a Process Instance</a></li>
-<li><a href="#correlate-a-message">Correlate a Message</a></li>
-<li><a href="#send-a-signal">Send a Signal</a></li>
-<li><a href="#create-a-case-instance">Create a Case Instance</a></li>
-<li><a href="#evaluate-a-decision-table">Evaluate a Decision Table</a></li>
+<li><a href="#创建一个流程实例">创建一个流程实例</a></li>
+<li><a href="#关联消息">关联消息</a></li>
+<li><a href="#发送信号">发送信号</a></li>
+<li><a href="#创建一个案例实例">创建一个案例实例</a></li>
+<li><a href="#评估决策表">评估决策表</a></li>
 </ul></li>
-<li><a href="#transparent-access-restrictions-for-tenants">Transparent Access Restrictions for Tenants</a>
+<li><a href="#租户的透明访问限制">租户的透明访问限制</a>
 <ul>
-<li><a href="#query-example">Query Example</a></li>
-<li><a href="#task-access-example">Task Access Example</a></li>
-<li><a href="#getting-a-user-s-tenant-ids-from-the-identity-service">Getting a user&rsquo;s Tenant Ids from the Identity Service</a></li>
-<li><a href="#camunda-rest-api-and-web-applications">Camunda Rest API and Web Applications</a></li>
-<li><a href="#disable-the-transparent-access-restrictions">Disable the Transparent Access Restrictions</a></li>
-<li><a href="#access-all-tenants-as-administrator">Access all Tenants as Administrator</a></li>
+<li><a href="#查询案例">查询案例</a></li>
+<li><a href="#任务-task-访问示例">任务（Task）访问示例</a></li>
+<li><a href="#从身份服务-identity-service-获取用户的租户id">从身份服务（Identity Service）获取用户的租户ID</a></li>
+<li><a href="#camunda-rest-api和web应用程序">Camunda REST API和Web应用程序</a></li>
+<li><a href="#禁用透明访问限制">禁用透明访问限制</a></li>
+<li><a href="#作为管理员访问所有租户">作为管理员访问所有租户</a></li>
 </ul></li>
-<li><a href="#shared-definitions-for-all-tenants">Shared Definitions for all Tenants</a>
+<li><a href="#所有租户共享的定义">所有租户共享的定义</a>
 <ul>
-<li><a href="#deploy-a-shared-definition">Deploy a Shared Definition</a></li>
-<li><a href="#include-shared-definitions-in-a-query">Include Shared Definitions in a Query</a></li>
-<li><a href="#instantiate-a-shared-definition">Instantiate a Shared Definition</a></li>
-<li><a href="#tenant-specific-behavior-with-call-activities">Tenant-specific behavior with Call Activities</a></li>
+<li><a href="#部署共享定义">部署共享定义</a></li>
+<li><a href="#在查询中包含共享的定义">在查询中包含共享的定义</a></li>
+<li><a href="#实例化共享定义">实例化共享定义</a></li>
+<li><a href="#租户的特定行为与call-activities">租户的特定行为与Call Activities</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#one-process-engine-per-tenant">One Process Engine Per Tenant</a>
+<li><a href="#每个租户使用一个流程引擎">每个租户使用一个流程引擎</a>
 <ul>
-<li><a href="#configure-the-process-engines">Configure the Process Engines</a>
+<li><a href="#配置流程引擎">配置流程引擎</a>
 <ul>
-<li><a href="#database-isolation">Database Isolation</a></li>
+<li><a href="#数据库隔离">数据库隔离</a></li>
 <li><a href="#schema-or-table-isolation">Schema or Table Isolation</a></li>
-<li><a href="#job-executor-for-multiple-process-engines">Job Executor for Multiple Process Engines</a></li>
-<li><a href="#example-configuration-for-schema-isolation">Example Configuration for Schema Isolation</a></li>
+<li><a href="#多个流程引擎的job执行器">多个流程引擎的Job执行器</a></li>
+<li><a href="#schem隔离的示例配置">Schem隔离的示例配置</a></li>
 </ul></li>
-<li><a href="#deploy-definitions-for-a-tenant-1">Deploy Definitions for a Tenant</a></li>
-<li><a href="#access-the-process-engine-of-a-tenant">Access the Process Engine of a Tenant</a></li>
+<li><a href="#部署租户的定义">部署租户的定义</a></li>
+<li><a href="#访问租户的流程引擎">访问租户的流程引擎</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -8892,7 +8885,7 @@ manually by setting it to null explicitly via</li>
     })();
   </script>
   
-  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/4513465.js"></script>
+  
   
 </body>
 </html>

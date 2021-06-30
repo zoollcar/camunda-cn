@@ -2,11 +2,7 @@
 <html class="no-js">
 <head>
   
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-PP9MHKW');</script>
+  
   
 
   
@@ -71,8 +67,7 @@ var _mtac = {};
 <body class="">
 
 
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PP9MHKW"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
 
 
 <nav class="navbar navbar-fixed-top">
@@ -523,7 +518,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/process-engine/metrics/" >Metrics</a>
+      <a href="/user-guide/process-engine/metrics/" >指标</a>
     
   </li>
 
@@ -837,7 +832,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/version-compatibility/" >Version Compatibility</a>
+      <a href="/user-guide/spring-boot-integration/version-compatibility/" >版本兼容性</a>
     
   </li>
 
@@ -845,7 +840,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/configuration/" >Configuration</a>
+      <a href="/user-guide/spring-boot-integration/configuration/" >配置</a>
     
   </li>
 
@@ -869,7 +864,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/process-applications/" >Process Applications</a>
+      <a href="/user-guide/spring-boot-integration/process-applications/" >流程应用程序</a>
     
   </li>
 
@@ -877,7 +872,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/the-spring-event-bridge/" >Spring Eventing Bridge</a>
+      <a href="/user-guide/spring-boot-integration/the-spring-event-bridge/" >Spring 事件总线</a>
     
   </li>
 
@@ -885,7 +880,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/develop-and-test/" >Developing and Testing</a>
+      <a href="/user-guide/spring-boot-integration/develop-and-test/" >部署和测试</a>
     
   </li>
 
@@ -8182,62 +8177,60 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="col-xs-12 content-text">
       
 
-<p>Incidents are notable events that happen in the process engine. Such incidents usually indicate some kind of problem related to process execution. Examples of such incidents may be a failed job with depleted retries (retries = 0), indicating that an execution is stuck and manual administrative action is necessary to repair the process instance. If such incidents arise, the process engine fires an internal event which can be handled by a configurable incident handler.</p>
+<p>事件是发生在流程引擎中的值得注意的事件。这种事件通常表明与流程执行有关的某种问题。这类事件的例子可能是一个失败Job，其重试次数已耗尽（retries=0），表明执行被卡住了，必须采取人工管理行动来修复流程实例。如果出现这样的事件，流程引擎会触发一个内部事件，该事件可以被可配置的事件处理程序处理。</p>
 
-<p>In the default configuration, the process engine writes incidents to the process engine database. You may then query the database for different types and kinds of incidents using the <code>IncidentQuery</code> exposed by the <code>RuntimeService</code>:</p>
+<p>在默认配置中，流程引擎将事件写到流程引擎数据库中。然后你可以使用<code>RuntimeService</code>的<code>IncidentQuery</code>查询数据库中不同类型和种类的事件。</p>
 
 <pre><code class="language-java">runtimeService.createIncidentQuery()
   .processDefinitionId(&quot;someDefinition&quot;)
   .list();
 </code></pre>
 
-<p>Incidents are stored in the ACT_RU_INCIDENT database table.</p>
+<p>事件被储存在 ACT_RU_INCIDENT 数据表中。</p>
 
-<p>If you want to customize the incident handling behavior, it is possible to replace the default incident handlers in the process engine configuration and provide custom implementations (see below).</p>
+<p>如果你想自定义事件处理行为，则可以替换流程引擎配置中的默认事件处理程序，并提供自定义的实现（见下文）。</p>
 
-<h1 id="incident-types">Incident Types</h1>
+<h1 id="事件类型">事件类型</h1>
 
-<p>There are different types of incidents. Currently the process engine supports the following incidents:</p>
+<p>目前，流程引擎支持以下事件不同类型的事件：</p>
 
-<ul>
-<li><strong>failedJob</strong>: is raised when automatic retries for a job (timer or asynchronous continuation) have been depleted. The incident indicates that the corresponding execution is stuck and will not continue automatically. Administrative action is necessary. The incident is resolved when the job is manually executed or when the retries for the corresponding job are set to a value &gt; 0.</li>
-<li><strong>failedExternalTask</strong>: is raised when a worker of an <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/external-tasks/">External Task</a> reports a failure and the given retries are set to a value &lt;= 0. The incident indicates that the corresponding external task is stuck and will not be fetched by a worker. Administrative action is necessary to reset the retries.</li>
-</ul>
+<p><strong>failedJob</strong>：当一项工作的自动重试（定时器或异步延续）被耗尽时，会被引发。该事件表明，相应的执行被卡住了，不会自动继续。管理行动是必要的。当Job被手动执行或相应job的重试次数被设置为&gt;0时，该事件将被解决。
+<strong>failedExternalTask</strong>：当<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/external-tasks/">外部任务</a>的工作者报告失败，并且给定的重试次数被设置为&lt;=0时，会引发该事件，表明相应的外部任务被卡住，不会被工作者获取。需要采取管理措施来重置重试。</p>
 
-<p>It is possible to create custom incidents of any type with the Java API.</p>
+<p>可以用Java API创建任何类型的自定义事件。</p>
 
-<h1 id="creating-and-resolving-custom-incidents">Creating and Resolving Custom Incidents</h1>
+<h1 id="创建和解决自定义事件">创建和解决自定义事件</h1>
 
-<p>An incident of any type can be created by calling <code>RuntimeService#createIncident</code> &hellip;</p>
+<p>通过调用 <code>RuntimeService#createIncident</code> 可以创建任何类型的事件 &hellip;</p>
 
 <pre><code class="language-java">runtimeService.createIncident(&quot;someType&quot;, &quot;someExecution&quot;, &quot;someConfiguration&quot;, &quot;someMessage&quot;);
 </code></pre>
 
-<p>&hellip; or directly <code>DelegateExecution#createIncident</code>.</p>
+<p>&hellip; 或直接使用 <code>DelegateExecution#createIncident</code>：</p>
 
 <pre><code class="language-java">delegateExecution.createIncident(&quot;someType&quot;, &quot;someConfiguration&quot;, &quot;someMessage&quot;);
 </code></pre>
 
-<p>Custom incidents must always be related to an existing Execution.</p>
+<p>自定义事件必须总是与现有的执行有关。</p>
 
-<p>An incident of any type, except for <strong>failedJob</strong> and <strong>failedExternalTask</strong>, can be resolved by calling <code>RuntimeService#resolveIncident</code>.</p>
+<p>除了<strong>failedJob</strong>和<strong>failedExternalTask</strong>外，任何类型的事件都可以通过调用<code>RuntimeService#resolveIncident</code>来解决。</p>
 
-<p>Incidents can be <a href="http://camunda-cn.shaochenfeng.com/reference/rest/execution/post-create-incident/">created</a> and <a href="http://camunda-cn.shaochenfeng.com/reference/rest/incident/resolve-incident/">resolved</a> through the REST API as well.</p>
+<p>事件也可以通过REST API<a href="http://camunda-cn.shaochenfeng.com/reference/rest/execution/post-create-incident/">创建</a>和<a href="http://camunda-cn.shaochenfeng.com/reference/rest/incident/resolve-incident/">解决</a>报告失败，并且给定的重试值被设置为&lt;=0，该事件表明相应的外部任务被卡住，不会被外部工作者取走。</p>
 
-<h1 id="de-activate-incidents">(De-)Activate Incidents</h1>
+<h1 id="事件的激活与冻结">事件的激活与冻结</h1>
 
-<p>The process engine allows you to configure  whether certain incidents should be raised or not, based on the incident type.
-The following properties are available in the <code>org.camunda.bpm.engine.ProcessEngineConfiguration</code> class:</p>
+<p>流程引擎允许你根据事件类型来配置是否应该提出某些事件。
+以下属性在<code>org.camunda.bpm.engine.ProcessEngineConfiguration</code>类中可用。</p>
 
 <ul>
-<li><code>createIncidentOnFailedJobEnabled</code>: indicates whether Failed Job incidents should be raised or not.</li>
+<li><code>createIncidentOnFailedJobEnabled</code>：表示是否应该提出失败的Job事件。</li>
 </ul>
 
-<h1 id="implement-custom-incident-handlers">Implement Custom Incident Handlers</h1>
+<h1 id="实现自定义事件处理程序">实现自定义事件处理程序</h1>
 
-<p>Incident Handlers are responsible for handling incidents of a certain type (see <a href="#incident-types">Incident Types</a> ).</p>
+<p>事件处理者负责处理某一类型的事件（见<a href="#incident-types">事件类型</a>）。</p>
 
-<p>An Incident Handler implements the following interface:</p>
+<p>一个事件处理程序需要实现以下接口：</p>
 
 <pre><code class="language-java">public interface IncidentHandler {
 
@@ -8252,17 +8245,17 @@ The following properties are available in the <code>org.camunda.bpm.engine.Proce
 }
 </code></pre>
 
-<p>The <code>handleIncident</code> method is called when a new incident is created. The <code>resolveIncident</code> method is called when an incident is resolved. If you want to provide a custom incident handler implementation you can replace one or multiple incident handlers using the following method:</p>
+<p>当创建一个新的事件时，会调用 &ldquo;handleIncident&rdquo; 方法。当一个事件被解决时，<code>resolveIncident</code>方法被调用。如果你想提供一个自定义的事件处理程序实现，你可以使用以下方法替换一个或多个事件处理程序。</p>
 
 <pre><code class="language-java">org.camunda.bpm.engine.impl.cfg.ProcessEngineConfigurationImpl.setCustomIncidentHandlers(List&lt;IncidentHandler&gt;)
 </code></pre>
 
-<p>An example of a custom incident handler could be a handler which extends the default behavior by sending an email to an administrator whenever an incident of type <code>failedJob</code> occurs. However, just adding the custom incident handler overwrites the default behavior with the custom incident handlers behavior. As a consequence, the default incident handler is not executed anymore. If the default behavior should be executed as well, then the custom incident handler also needs to invoke the default incident handler, which includes using internal API.</p>
+<p>自定义事件处理程序的一个例子是，只要发生 &ldquo;failedJob&rdquo; 类型的事件，就向管理员发送电子邮件，从而扩展默认行为。然而，仅仅添加自定义事件处理程序就会用自定义事件处理程序的行为覆盖默认行为。因此，默认事件处理程序不再被执行。如果默认行为也应该被执行，那么自定义事件处理程序也需要调用默认事件处理程序，这包括使用内部 API。</p>
 
 
 <div class="note bg-warning docs-warning">
-  <h3>Use of Internal API</h3>
-  <p>Please be aware that this API is <strong>not</strong> part of the <a href="http://camunda-cn.shaochenfeng.com/introduction/public-api/">public API</a> and may change in later releases.</p>
+  <h3>使用内部API</h3>
+  <p>请注意，该API <strong>不是</strong> <a href="http://camunda-cn.shaochenfeng.com/introduction/public-api/">公共API</a>的一部分，在以后的版本中可能会发生变化。</p>
 </div>
 
 
@@ -8274,10 +8267,10 @@ The following properties are available in the <code>org.camunda.bpm.engine.Proce
   <h3>目录:</h3>
   <nav id="TableOfContents">
 <ul>
-<li><a href="#incident-types">Incident Types</a></li>
-<li><a href="#creating-and-resolving-custom-incidents">Creating and Resolving Custom Incidents</a></li>
-<li><a href="#de-activate-incidents">(De-)Activate Incidents</a></li>
-<li><a href="#implement-custom-incident-handlers">Implement Custom Incident Handlers</a></li>
+<li><a href="#事件类型">事件类型</a></li>
+<li><a href="#创建和解决自定义事件">创建和解决自定义事件</a></li>
+<li><a href="#事件的激活与冻结">事件的激活与冻结</a></li>
+<li><a href="#实现自定义事件处理程序">实现自定义事件处理程序</a></li>
 </ul>
 </nav>
   
@@ -8325,7 +8318,7 @@ The following properties are available in the <code>org.camunda.bpm.engine.Proce
     })();
   </script>
   
-  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/4513465.js"></script>
+  
   
 </body>
 </html>

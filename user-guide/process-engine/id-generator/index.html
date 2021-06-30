@@ -2,11 +2,7 @@
 <html class="no-js">
 <head>
   
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-PP9MHKW');</script>
+  
   
 
   
@@ -71,8 +67,7 @@ var _mtac = {};
 <body class="">
 
 
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PP9MHKW"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
 
 
 <nav class="navbar navbar-fixed-top">
@@ -523,7 +518,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/process-engine/metrics/" >Metrics</a>
+      <a href="/user-guide/process-engine/metrics/" >指标</a>
     
   </li>
 
@@ -837,7 +832,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/version-compatibility/" >Version Compatibility</a>
+      <a href="/user-guide/spring-boot-integration/version-compatibility/" >版本兼容性</a>
     
   </li>
 
@@ -845,7 +840,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/configuration/" >Configuration</a>
+      <a href="/user-guide/spring-boot-integration/configuration/" >配置</a>
     
   </li>
 
@@ -869,7 +864,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/process-applications/" >Process Applications</a>
+      <a href="/user-guide/spring-boot-integration/process-applications/" >流程应用程序</a>
     
   </li>
 
@@ -877,7 +872,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/the-spring-event-bridge/" >Spring Eventing Bridge</a>
+      <a href="/user-guide/spring-boot-integration/the-spring-event-bridge/" >Spring 事件总线</a>
     
   </li>
 
@@ -885,7 +880,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/develop-and-test/" >Developing and Testing</a>
+      <a href="/user-guide/spring-boot-integration/develop-and-test/" >部署和测试</a>
     
   </li>
 
@@ -8182,44 +8177,37 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="col-xs-12 content-text">
       
 
-<p>All persistent entities managed by the process engine (Process Instances, Tasks, &hellip;) have unique
-Ids. These Ids uniquely identify an individual task, process instance, etc. When these entities are
-persisted to the database, the ids are used as primary keys in the corresponding database tables.</p>
+<p>由流程引擎管理的所有持久性实体（流程实例、任务&hellip;&hellip;）都有唯一的Ids。这些Ids唯一地标识一个单独的任务、流程实例等。当这些实体被持久化到数据库时，这些ID被用作相应数据库表中的主键。</p>
 
-<p>Out of the box, the process engine provides two Id generator implementations.</p>
+<p>开箱即用，流程引擎提供了两种Id生成器的实现：</p>
 
-<h1 id="the-database-id-generator">The Database Id Generator</h1>
+<h1 id="数据库id生成器">数据库ID生成器</h1>
 
-<p>The Database Id Generator is implemented using a sequence Generator on top of the <code>ACT_GE_PROPERTY</code>
-table.</p>
+<p>数据库标识生成器是在<code>ACT_GE_PROPERTY</code>表的基础上使用序列生成器实现的。</p>
 
-<p>This id generator is good for debugging and testing since it generates human readable ids.</p>
+<p>这个ID生成器有利于调试和测试，因为它生成了人类可读的ID。</p>
 
 
 <div class="note bg-warning docs-warning">
   <h3></h3>
-  <p>The Database Id Generator should <strong>never</strong> be used in production since it cannot handle high levels of concurrency.</p>
+  <p>数据库标识生成器 <strong>不应该</strong> 在生产环境中使用，因为它不具有高并发性。</p>
 </div>
 
 
-<h1 id="the-uuid-generator">The UUID Generator</h1>
+<h1 id="uuid生成器">UUID生成器</h1>
 
-<p>The StrongUuidGenerator uses a UUID generator which uses the <a href="https://mvnrepository.com/artifact/com.fasterxml.uuid/java-uuid-generator">Java UUID Generator (JUG)</a> library
-internally.</p>
+<p>StrongUuidGenerator使用一个UUID生成器，它在内部使用<a href="https://mvnrepository.com/artifact/com.fasterxml.uuid/java-uuid-generator">Java UUID Generator(JUG)</a>库。</p>
 
 
 <div class="note bg-warning docs-warning">
   <h3></h3>
-  <p>Always use the StrongUuidGenerator for production setups.</p>
+  <p>在生产环境始终使用UUID生成器。</p>
 </div>
 
 
-<p>In the <a href="http://camunda-cn.shaochenfeng.com/introduction/downloading-camunda/#full-distribution">Camunda Platform Full Distributions</a>, the
-StrongUuidGenerator is preconfigured and the default Id Generator used by the process engine.</p>
+<p>在<a href="http://camunda-cn.shaochenfeng.com/introduction/downloading-camunda/#full-distribution">Camunda Platform Full Distributions</a>中，StrongUuidGenerator被预设为流程引擎所使用的默认Id 生成器。</p>
 
-<p>If you use an embedded process engine configuration and configure the process engine using Spring,
-you need to add the following lines to the Spring configuration to enable the
-<code>StrongUuidGenerator</code>:</p>
+<p>如果你使用嵌入式流程引擎配置并使用Spring配置流程引擎，你需要在Spring配置中添加以下几行，以启用 &ldquo;StrongUuidGenerator&rdquo;。</p>
 
 <pre><code class="language-xml">&lt;bean id=&quot;processEngineConfiguration&quot; class=&quot;org.camunda.bpm.engine.impl.cfg.StandaloneInMemProcessEngineConfiguration&quot;&gt;
 
@@ -8232,7 +8220,7 @@ you need to add the following lines to the Spring configuration to enable the
 &lt;/bean&gt;
 </code></pre>
 
-<p>Additionally, you need the following maven dependency:</p>
+<p>另外，您需要以下Maven依赖项：</p>
 
 <pre><code class="language-xml">&lt;dependency&gt;
   &lt;groupId&gt;com.fasterxml.uuid&lt;/groupId&gt;
@@ -8250,8 +8238,8 @@ you need to add the following lines to the Spring configuration to enable the
   <h3>目录:</h3>
   <nav id="TableOfContents">
 <ul>
-<li><a href="#the-database-id-generator">The Database Id Generator</a></li>
-<li><a href="#the-uuid-generator">The UUID Generator</a></li>
+<li><a href="#数据库id生成器">数据库ID生成器</a></li>
+<li><a href="#uuid生成器">UUID生成器</a></li>
 </ul>
 </nav>
   
@@ -8299,7 +8287,7 @@ you need to add the following lines to the Spring configuration to enable the
     })();
   </script>
   
-  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/4513465.js"></script>
+  
   
 </body>
 </html>

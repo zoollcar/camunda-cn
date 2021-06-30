@@ -2,11 +2,7 @@
 <html class="no-js">
 <head>
   
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-PP9MHKW');</script>
+  
   
 
   
@@ -71,8 +67,7 @@ var _mtac = {};
 <body class="">
 
 
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PP9MHKW"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
 
 
 <nav class="navbar navbar-fixed-top">
@@ -523,7 +518,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/process-engine/metrics/" >Metrics</a>
+      <a href="/user-guide/process-engine/metrics/" >指标</a>
     
   </li>
 
@@ -837,7 +832,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/version-compatibility/" >Version Compatibility</a>
+      <a href="/user-guide/spring-boot-integration/version-compatibility/" >版本兼容性</a>
     
   </li>
 
@@ -845,7 +840,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/configuration/" >Configuration</a>
+      <a href="/user-guide/spring-boot-integration/configuration/" >配置</a>
     
   </li>
 
@@ -869,7 +864,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/process-applications/" >Process Applications</a>
+      <a href="/user-guide/spring-boot-integration/process-applications/" >流程应用程序</a>
     
   </li>
 
@@ -877,7 +872,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/the-spring-event-bridge/" >Spring Eventing Bridge</a>
+      <a href="/user-guide/spring-boot-integration/the-spring-event-bridge/" >Spring 事件总线</a>
     
   </li>
 
@@ -885,7 +880,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/develop-and-test/" >Developing and Testing</a>
+      <a href="/user-guide/spring-boot-integration/develop-and-test/" >部署和测试</a>
     
   </li>
 
@@ -8234,7 +8229,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <li><code>AUTO</code>: 如果你打算在同一个数据库中运行多个引擎，那么 <code>AUTO</code> 级别是很有用的。在这种情况下，所有的引擎都必须使用相同的历史级别。与其手动保持配置同步，不如使用 <code>auto</code> 级别，引擎会自动确定数据库中已经配置的级别。如果没有找到，则使用默认值 <code>audit</code> 。请记住。如果你打算使用自定义历史级别，你必须为每个配置注册自定义级别，否则会出现异常。</li>
 </ul>
 
-<p>如果你需要自定义历史事件的记录量，你可以提供一个自定义的 <a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/engine/impl/history/producer/HistoryEventProducer.html">HistoryEventProducer</a>
+<p>如果你需要自定义历史事件的记录量，你可以提供一个自定义的 <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/impl/history/producer/HistoryEventProducer.html">HistoryEventProducer</a>
  实现并将其应用到流程引擎配置中。</p>
 
 <h1 id="设置历史记录级别">设置历史记录级别</h1>
@@ -8611,12 +8606,12 @@ historyService
 
 <ul>
 <li><strong>Operation ID</strong>: 操作ID，唯一地识别执行操作的生成的ID。一个操作的多个条目都会引用相同的操作ID。</li>
-<li><strong>Operation Type</strong>: 执行操作的类型。可用的操作类型在<a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/engine/history/UserOperationLogEntry.html">org.camunda.bpm.engine.history.UserOperationLogEntry</a>
+<li><strong>Operation Type</strong>: 执行操作的类型。可用的操作类型在<a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/history/UserOperationLogEntry.html">org.camunda.bpm.engine.history.UserOperationLogEntry</a>
 中列出。请注意，一个操作可以由多种类型组成，例如，cascading API 操作是一个用户操作，但被分割成多种类型的操作。</li>
-<li><strong>Entity Type</strong>: 操作所涉及的实体类型的标识符。可用的实体类型在<a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/engine/EntityTypes.html">org.camunda.bpm.engine.EntityTypes</a>
+<li><strong>Entity Type</strong>: 操作所涉及的实体类型的标识符。可用的实体类型在<a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/EntityTypes.html">org.camunda.bpm.engine.EntityTypes</a>
 类中列出。与操作类型一样，一个操作可以处理一个以上的实体类型。</li>
-<li><strong>Category</strong>: 该操作所关联的类别的名称。可用的类别在<a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/engine/history/UserOperationLogEntry.html">org.camunda.bpm.engine.history.UserOperationLogEntry</a>
-中列出。例如，所有与任务相关的运行时操作，如申请和完成任务，都属于<a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/engine/history/UserOperationLogEntry.html#CATEGORY_TASK_WORKER">TaskWorker</a>
+<li><strong>Category</strong>: 该操作所关联的类别的名称。可用的类别在<a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/history/UserOperationLogEntry.html">org.camunda.bpm.engine.history.UserOperationLogEntry</a>
+中列出。例如，所有与任务相关的运行时操作，如申请和完成任务，都属于<a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/history/UserOperationLogEntry.html#CATEGORY_TASK_WORKER">TaskWorker</a>
 类别 。</li>
 <li><strong>Annotation</strong>: 用户因为审核等原因而设置的文本注释。属于一个操作的多个日志条目具有相同的注释。</li>
 <li><strong>Entity IDs</strong>: 一个作业日志条目包含实体ID，用于识别作业所涉及的实体。例如，一个任务的操作日志条目包含该任务的ID以及该任务所属的流程实例的ID。作为第二个例子，暂停一个流程定义的所有流程实例的日志条目不包含单个流程实例的ID，而只包含流程定义的ID。</li>
@@ -9689,7 +9684,7 @@ historyService.clearAnnotationForOperationLogById(operationId);
 <p>将历史事件处理程序换成一个自定义的实现，允许用户插入一个自定义的历史后端。要做到这一点，需要两个主要步骤。</p>
 
 <ul>
-<li>提供自定义的 <a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/engine/impl/history/handler/HistoryEventHandler.html">HistoryEventHandler</a>
+<li>提供自定义的 <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/impl/history/handler/HistoryEventHandler.html">HistoryEventHandler</a>
  接口实现。</li>
 <li>在流程引擎配置中配置自定义的实现。</li>
 </ul>
@@ -10253,7 +10248,7 @@ time to live, removal time strategy) still need to be defined among all nodes.</
     })();
   </script>
   
-  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/4513465.js"></script>
+  
   
 </body>
 </html>

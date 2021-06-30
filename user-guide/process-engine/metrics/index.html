@@ -2,11 +2,7 @@
 <html class="no-js">
 <head>
   
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-PP9MHKW');</script>
+  
   
 
   
@@ -59,7 +55,7 @@ var _mtac = {};
     
   
 
-  <title>Metrics | docs.camunda.org</title>
+  <title>指标 | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
   <link rel="shortcut icon" href="http://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
@@ -71,8 +67,7 @@ var _mtac = {};
 <body class="">
 
 
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PP9MHKW"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
 
 
 <nav class="navbar navbar-fixed-top">
@@ -523,7 +518,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/process-engine/metrics/" >Metrics</a>
+      <a href="/user-guide/process-engine/metrics/" >指标</a>
     
   </li>
 
@@ -837,7 +832,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/version-compatibility/" >Version Compatibility</a>
+      <a href="/user-guide/spring-boot-integration/version-compatibility/" >版本兼容性</a>
     
   </li>
 
@@ -845,7 +840,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/configuration/" >Configuration</a>
+      <a href="/user-guide/spring-boot-integration/configuration/" >配置</a>
     
   </li>
 
@@ -869,7 +864,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/process-applications/" >Process Applications</a>
+      <a href="/user-guide/spring-boot-integration/process-applications/" >流程应用程序</a>
     
   </li>
 
@@ -877,7 +872,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/the-spring-event-bridge/" >Spring Eventing Bridge</a>
+      <a href="/user-guide/spring-boot-integration/the-spring-event-bridge/" >Spring 事件总线</a>
     
   </li>
 
@@ -885,7 +880,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/develop-and-test/" >Developing and Testing</a>
+      <a href="/user-guide/spring-boot-integration/develop-and-test/" >部署和测试</a>
     
   </li>
 
@@ -8176,131 +8171,133 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <i>编辑此页</i> <span class="cam-docs-github"></span></a>
 </div>
 
-      <h1 class="page-title">Metrics</h1>
+      <h1 class="page-title">指标</h1>
     </div>
 
     <div class="col-xs-12 content-text">
       
 
-<p>The process engine reports runtime metrics to the database that can help draw conclusions about usage, load, and performance of the Camunda Platform. Metrics are reported in the database tables <code>ACT_RU_METER_LOG</code> and <code>ACT_RU_TASK_METER_LOG</code>. Single metric entries in <code>ACT_RU_METER_LOG</code> consist of a metric identifier, a value as natural number in the Java <code>long</code> range that the metric took in a certain timespan and a name identifying the metric reporter. Task metric entries in <code>ACT_RU_TASK_METER_LOG</code> comprise a fixed-length, pseudonymized assignee value and the point in time it was assigned at. There is a set of built-in metrics that are reported by default.</p>
+<p>流程引擎会在数据库中记录运行时指标，这有助于得出关于Camunda平台的使用、负载和性能的结论。指标会被记录到表 <code>ACT_RU_METER_LOG</code> 和 <code>ACT_RU_TASK_METER_LOG</code>中。<code>ACT_RU_METER_LOG</code>中的单一指标由以下内容组成，某个时间段记录的在JAVA <code>long</code> 范围内的自然数，和标识这个记录的名字。在表<code>ACT_RU_TASK_METER_LOG</code> 中的任务指标记录包含固定长度，受让人的化名和受让的时间点，有一套默认报告的内置指标。</p>
 
-<h1 id="built-in-metrics">Built-in Metrics</h1>
+<h1 id="内置指标">内置指标</h1>
 
-<p>The following table describes the built-in metrics. The identifiers of all built-in metrics are available as constants of the class <a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/engine/management/Metrics.html">org.camunda.bpm.engine.management.Metrics</a>
-.
+<p>下表包含内置指标和描述。所有内置度量的标识符都可以作为类 <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/management/Metrics.html">org.camunda.bpm.engine.management.Metrics</a>
+的常量来使用。
 
 <div class="note bg-warning docs-warning">
-  <h3>Heads Up!</h3>
-  <p>If you are an enterprise customer, your license agreement might require you to report some metrics annually. Please store <code>root-process-instance-start</code>, <code>activity-instance-start</code>, <code>executed-decision-instances</code> and <code>executed-decision-elements</code> metrics from <code>ACT_RU_METER_LOG</code> as well as task metrics from <code>ACT_RU_TASK_METER_LOG</code> for at least 18 months until they were reported.</p>
+  <h3>小心!</h3>
+  <p>如果你是一个企业客户，你的许可协议可能要求你每年报告一些指标。请从 <code>ACT_RU_METER_LOG</code> 以及任务指标 <code>ACT_RU_TASK_METER_LOG</code>表中保留 <code>root-process-instance-start</code>, <code>activity-instance-start</code>, <code>executed-decision-instances</code> 和 <code>executed-decision-elements</code> 至少有18个月。</p>
 </div>
 </p>
 
 <table class="table table-striped">
   <tr>
-    <th>Category</th>
-    <th>Identifier</th>
-    <th>Description</th>
+    <th>类别</th>
+    <th>识别符</th>
+    <th>描述</th>
   </tr>
   <tr>
     <td><b>BPMN Execution</b></td>
     <td>root-process-instance-start*</td>
-    <td>The number of root process instance executions started. This is also known as <b>Root Process Instances (RPI)</b>.
-    A root process instance has no parent process instance, i.e. it is a top-level execution.
+    <td>开始执行的根流程实例的数量。这也被称为<b>根流程实例（RPI）</b>。
+    根流程实例没有父流程实例，即它是一个顶层执行。
     </td>
   </tr>
   <tr>
     <td></td>
     <td>activity-instance-start*</td>
-    <td>The number of activity instances started. This is also known as <b>flow node instances (FNI)</b>.</td>
+    <td>活动实例的数量已启动。这也称为<b>流节点实例（FNI）</b>。</td>
   </tr>
   <tr>
     <td></td>
     <td>activity-instance-end</td>
-    <td>The number of activity instances ended.</td>
+    <td>结束的活动实例的数量。</td>
   </tr>
   <tr>
     <td><b>DMN Execution</b></td>
     <td>executed-decision-instances*</td>
-    <td>The number of evaluated decision instances (EDI). A decision instance is a DMN decision table or a DMN Literal Expression.</td>
+    <td>评估决策实例的数量（EDI）。决策实例是DMN决策表或DMN文字表达式。</td>
   </tr>
   <tr>
     <td></td>
     <td>executed-decision-elements*</td>
-    <td>The number of decision elements executed during evaluation of DMN decision tables. For one table, this is calculated as the number of clauses multiplied by the number of rules.</td>
+    <td>在评估DMN决策表时执行的决策元素的数量。对于一个表，结果为子句数量和规则数量的乘积。</td>
   </tr>
   <tr>
     <td><b>Job Executor</b></td>
     <td>job-successful</td>
-    <td>The number of jobs successfully executed.</td>
+    <td>成功执行的Job数量。</td>
   </tr>
   <tr>
     <td></td>
     <td>job-failed</td>
-    <td>The number of jobs that failed to execute and that were submitted for retry. Every failed attempt to execute a job is counted.</td>
+    <td>未能执行的Job数量和提交重试的Job数量。计算每次尝试执行Job的尝试。</td>
   </tr>
   <tr>
     <td></td>
     <td>job-acquisition-attempt</td>
-    <td>The number of job acquisition cycles performed.</td>
+    <td>Job采集周期的数。</td>
   </tr>
   <tr>
     <td></td>
     <td>job-acquired-success</td>
-    <td>The number of jobs that were acquired and successfully locked for execution.</td>
+    <td>获取和成功锁定执行的Job数量。</td>
   </tr>
   <tr>
     <td></td>
     <td>job-acquired-failure</td>
-    <td>The number of jobs that were acquired but could not be locked for execution due to another job executor locking/executing the jobs in parallel.</td>
+    <td>由于另一种Job执行程序锁定/执行Job而无法锁定，但无法锁定所获取但无法锁定的Job数量。</td>
   </tr>
   <tr>
     <td></td>
     <td>job-execution-rejected</td>
-    <td>The number of successfully acquired jobs submitted for execution that were rejected due to saturated execution resources. This is an indicator that the execution thread pool's job queue is full.</td>
+    <td>由于饱和执行资源而被拒绝的执行成功获取的Job的数量。这是执行线程池的Job队列已满的指标。</td>
   </tr>
   <tr>
     <td></td>
     <td>job-locked-exclusive</td>
-    <td>The number of exclusive jobs that are immediately locked and executed.</td>
+    <td>立即锁定和执行的独占Job的数量。</td>
   </tr>
   <tr>
     <td><b>Task Metrics</b></td>
     <td>unique-task-workers*</td>
-    <td>The number of unique task workers that have served as assignees.</td>
+    <td>曾担任受让人的独特任务工作人员的数量。</td>
   </tr>
   <tr>
     <td><b>History Clean up</b></td>
     <td>history-cleanup-removed-process-instances</td>
-    <td>The number of process instances removed by history clean up.</td>
+    <td>历史清除后删除的流程实例数。</td>
   </tr>
   <tr>
     <td></td>
     <td>history-cleanup-removed-case-instances</td>
-    <td>The number of case instances removed by history clean up.</td>
+    <td>历史清除后删除的案例实例数。</td>
   </tr>
   <tr>
     <td></td>
     <td>history-cleanup-removed-decision-instances</td>
-    <td>The number of decision instances removed by history clean up.</td>
+    <td>历史清除删除的决策实例数。</td>
   </tr>
   <tr>
     <td></td>
     <td>history-cleanup-removed-batch-operations</td>
-    <td>The number of batch operations removed by history clean up.</td>
+    <td>历史清除删除的批处理操作数。</td>
   </tr>
   <tr>
     <td></td>
     <td>history-cleanup-removed-task-metrics</td>
-    <td>The number of task metrics removed by history clean up.</td>
+    <td>历史清除后删除的任务指标数量。</td>
   </tr>
 </table>
 
-<p>*Some enterprise agreements require annual reports of some metrics. Please store those metrics for at least 18 months.</p>
+<ul>
+<li>一些企业协议需要年度报告一些指标。请存储至少18个月的指标。</li>
+</ul>
 
-<h1 id="querying">Querying</h1>
+<h1 id="查询">查询</h1>
 
-<p>Metrics can be queried by making a <a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/engine/management/MetricsQuery.html">MetricsQuery</a>
- offered by the <code>ManagementService</code>. For example, the following query retrieves the number of all executed activity instances throughout the entire history of reporting:</p>
+<p>可以构造一个<code>ManagementService</code>提供的 <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/management/MetricsQuery.html">MetricsQuery</a>
+ 来查询指标。下面的例子查询了整个报告历史中所有执行的活动实例的数量。</p>
 
 <pre><code class="language-java">long numCompletedActivityInstances = managementService
   .createMetricsQuery()
@@ -8308,18 +8305,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   .sum();
 </code></pre>
 
-<p>The metrics query offers filters <code>#startDate(Date date)</code> and <code>#endDate(Date date)</code> to restrict the collected metrics to a certain timespan. In addition, by using the filter <code>#reporter(String reporterId)</code> the results can be restricted to metrics collected by a specific reporter. This option can be useful when configuring more than one engine against the same database, for example in a cluster setup.</p>
+<p>指标查询提供了过滤器<code>#startDate(Date date)</code>和<code>#endDate(Date date)</code>来限制收集的指标到某个时间段。此外，通过使用过滤器<code>#reporter(String reporterId)</code>，可以将结果限制在由特定报告人收集的指标。当针对同一数据库配置多个引擎时，例如在集群设置中，这个选项可能很有用。</p>
 
-<p>Task metrics can be queried by using the <code>getUniqueTaskWorkerCount</code> method offered by the <code>ManagementService</code>. This method accepts optional <code>Date</code> values for <code>startTime</code> and <code>endTime</code> to restrict the metric to a certain timespan. For example, the following statement retrieves the number of all unique task workers until now:</p>
+<p>任务指标可以通过使用<code>ManagementService</code>提供的<code>getUniqueTaskWorkerCount</code>方法进行查询。这个方法接受可选 &ldquo;Date&rdquo; 值 &ldquo;startTime&rdquo; 和 &ldquo;endTime&rdquo; ，以便将指标限制在某个时间范围内。例如，下面的语句检索了到目前为止所有独特的任务工作者的数量。</p>
 
 <pre><code class="language-java">long numUniqueTaskWorkers = managementService.getUniqueTaskWorkerCount(null, null);
 </code></pre>
 
-<h1 id="configuration">Configuration</h1>
+<h1 id="配置">配置</h1>
 
-<h2 id="metrics-reporter">Metrics Reporter</h2>
+<h2 id="指标记录器">指标记录器</h2>
 
-<p>The process engine flushes the collected metrics to the runtime database tables in an interval of 15 minutes. The behavior of metrics reporting can be changed by replacing the <code>dbMetricsReporter</code> instance of the process engine configuration. For example, to change the reporting interval, a process engine plugin replacing the reporter can be employed:</p>
+<p>流程引擎以15分钟的间隔将收集到的指标记录在运行时的数据库表。指标报告的行为可以通过替换流程引擎配置中的<code>dbMetricsReporter</code>实例来改变。例如，为了改变报告间隔，可以选择一个替换记录器的流程引擎插件。</p>
 
 <pre><code class="language-java">public class MetricsConfigurationPlugin implements ProcessEnginePlugin {
 
@@ -8342,41 +8339,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 <div class="note bg-info docs-info">
-  <h3>Note</h3>
-  <p>Task metric entries are created on every assignment of a user task. This behavior cannot be modified and is not in the responsibility of the metrics reporter.</p>
+  <h3>笔记</h3>
+  <p>任务度量条目在用户任务的每一次分配中都会被创建。这种行为不能被修改，也不在指标记录器的责任范围内。</p>
 </div>
 
 
-<h2 id="reporter-identifier">Reporter Identifier</h2>
+<h2 id="记录器识别符">记录器识别符</h2>
 
-<p>Metrics are reported with an identifier of the reporting party. This identifier allows to attribute
-reports to individual engine instances when making a metrics query. For example in a cluster, load
-metrics can be related to individual cluster nodes. By default the process engine generates a
-reporter id as <code>&lt;local IP&gt;$&lt;engine name&gt;</code>. The generation can be customized by implementing the
-interface <a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/engine/impl/history/event/HostnameProvider.html">org.camunda.bpm.engine.impl.history.event.HostnameProvider</a>
-
-and setting the engine property <code>hostnameProvider</code> to an instance of that class.</p>
+<p>指标的记录有一个记录方的标识符。这个标识符允许在进行指标查询时将报告归属于单个引擎实例。例如，在一个集群中，负载指标与单个集群节点相关。默认情况下，流程引擎生成的报告者ID为 <code>&lt;local IP&gt;$&lt;engine name&gt;</code> 。可以通过实现接口 <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/impl/history/event/HostnameProvider.html">org.camunda.bpm.engine.impl.history.event.HostnameProvider</a>
+ 并将引擎属性 <code>hostnameProvider</code> 设置为该类的一个实例来定制生成。</p>
 
 
 <div class="note bg-info docs-info">
-  <h3>Heads Up!</h3>
-  <p><p>The
-<a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/engine/impl/metrics/MetricsReporterIdProvider.html">org.camunda.bpm.engine.impl.metrics.MetricsReporterIdProvider</a></p>
+  <h3>小心!</h3>
+  <p><p>推荐使用 <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/impl/metrics/MetricsReporterIdProvider.html">org.camunda.bpm.engine.impl.metrics.MetricsReporterIdProvider</a></p>
 
-<p>interface and the corresponding <code>metricsReporterIdProvider</code> engine property have been deprecated.</p>
+<p>接口和相应的 <code>metricsReporterIdProvider</code> 引擎属性。</p>
 </p>
 </div>
 
 
-<h2 id="disable-reporting">Disable Reporting</h2>
+<h2 id="禁用记录器">禁用记录器</h2>
 
-<p>By default, all built-in metrics are reported. For the configuration via XML file (e.g. standalone.xml or bpm-platform.xml) you can disable reporting by adding the properties:</p>
+<p>默认情况下，所有内置指标都被报告。通过XML文件（如standalone.xml或bpm-platform.xml）进行的配置，你可以通过添加属性来禁用报告。</p>
 
 <pre><code class="language-xml">&lt;property name=&quot;metricsEnabled&quot;&gt;false&lt;/property&gt;
 &lt;property name=&quot;taskMetricsEnabled&quot;&gt;false&lt;/property&gt;
 </code></pre>
 
-<p>If you are directly accessing the Java API, you can disable the metrics reporting by using the engine configuration flags <code>isMetricsEnabled</code> and <code>isTaskMetricsEnabled</code> and set them to <code>false</code>.</p>
+<p>如果你直接访问Java API，你可以通过使用引擎配置标志<code>isMetricsEnabled</code>和<code>isTaskMetricsEnabled</code>并将其设置为<code>false</code>来禁用指标报告。</p>
 
     </div>
   </div>
@@ -8386,13 +8377,13 @@ and setting the engine property <code>hostnameProvider</code> to an instance of 
   <h3>目录:</h3>
   <nav id="TableOfContents">
 <ul>
-<li><a href="#built-in-metrics">Built-in Metrics</a></li>
-<li><a href="#querying">Querying</a></li>
-<li><a href="#configuration">Configuration</a>
+<li><a href="#内置指标">内置指标</a></li>
+<li><a href="#查询">查询</a></li>
+<li><a href="#配置">配置</a>
 <ul>
-<li><a href="#metrics-reporter">Metrics Reporter</a></li>
-<li><a href="#reporter-identifier">Reporter Identifier</a></li>
-<li><a href="#disable-reporting">Disable Reporting</a></li>
+<li><a href="#指标记录器">指标记录器</a></li>
+<li><a href="#记录器识别符">记录器识别符</a></li>
+<li><a href="#禁用记录器">禁用记录器</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -8441,7 +8432,7 @@ and setting the engine property <code>hostnameProvider</code> to an instance of 
     })();
   </script>
   
-  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/4513465.js"></script>
+  
   
 </body>
 </html>

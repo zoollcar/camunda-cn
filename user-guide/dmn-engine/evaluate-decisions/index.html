@@ -2,11 +2,7 @@
 <html class="no-js">
 <head>
   
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-PP9MHKW');</script>
+  
   
 
   
@@ -71,8 +67,7 @@ var _mtac = {};
 <body class="">
 
 
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PP9MHKW"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
 
 
 <nav class="navbar navbar-fixed-top">
@@ -523,7 +518,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/process-engine/metrics/" >Metrics</a>
+      <a href="/user-guide/process-engine/metrics/" >指标</a>
     
   </li>
 
@@ -837,7 +832,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/version-compatibility/" >Version Compatibility</a>
+      <a href="/user-guide/spring-boot-integration/version-compatibility/" >版本兼容性</a>
     
   </li>
 
@@ -845,7 +840,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/configuration/" >Configuration</a>
+      <a href="/user-guide/spring-boot-integration/configuration/" >配置</a>
     
   </li>
 
@@ -869,7 +864,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/process-applications/" >Process Applications</a>
+      <a href="/user-guide/spring-boot-integration/process-applications/" >流程应用程序</a>
     
   </li>
 
@@ -877,7 +872,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/the-spring-event-bridge/" >Spring Eventing Bridge</a>
+      <a href="/user-guide/spring-boot-integration/the-spring-event-bridge/" >Spring 事件总线</a>
     
   </li>
 
@@ -885,7 +880,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/develop-and-test/" >Developing and Testing</a>
+      <a href="/user-guide/spring-boot-integration/develop-and-test/" >部署和测试</a>
     
   </li>
 
@@ -8182,13 +8177,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="col-xs-12 content-text">
       
 
-<p>The DMN engine <a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/dmn/engine/DmnEngine.html">interface</a>
+<p>The DMN engine <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/dmn/engine/DmnEngine.html">interface</a>
  exposes methods
 for parsing and evaluating DMN Decisions.</p>
 
 <h1 id="parse-decisions">Parse Decisions</h1>
 
-<p>Decisions can be parsed from an <code>InputStream</code> or transformed from a <a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/model/dmn/DmnModelInstance.html">DmnModelInstance</a>
+<p>Decisions can be parsed from an <code>InputStream</code> or transformed from a <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/model/dmn/DmnModelInstance.html">DmnModelInstance</a>
 .</p>
 
 <p>This example shows how to parse a decision from an input stream:</p>
@@ -8276,7 +8271,7 @@ Collection&lt;DmnDecision&gt; decisions = drg.getDecisions();
 
 <h2 id="decision-tables-only">Decision Tables only</h2>
 
-<p>It is possible to check if a parsed decision is implemented as <a href="http://camunda-cn.shaochenfeng.com/reference/dmn/decision-table/">decision table</a> by using the method <a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/dmn/engine/DmnDecision.html#isDecisionTable%28%29">isDecisionTable()</a>
+<p>It is possible to check if a parsed decision is implemented as <a href="http://camunda-cn.shaochenfeng.com/reference/dmn/decision-table/">decision table</a> by using the method <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/dmn/engine/DmnDecision.html#isDecisionTable%28%29">isDecisionTable()</a>
 .</p>
 
 <pre><code class="language-java">// create a default DMN engine
@@ -8301,7 +8296,7 @@ if (decision.isDecisionTable()) {
 
 <h1 id="evaluate-decisions">Evaluate Decisions</h1>
 
-<p>To evaluate (or &ldquo;execute&rdquo;) a decision, either pass an already transformed <a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/dmn/engine/DmnDecision.html">DmnDecision</a>
+<p>To evaluate (or &ldquo;execute&rdquo;) a decision, either pass an already transformed <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/dmn/engine/DmnDecision.html">DmnDecision</a>
  or use a DMN model instance or input stream in combination with a decision key.</p>
 
 <p>As input to the evaluation, a set of input variables must be provided.</p>
@@ -8348,7 +8343,7 @@ Use the <code>VariableContext</code> to support lazy-loading of variables.</p>
 
 <h2 id="interpret-the-decision-result">Interpret the Decision Result</h2>
 
-<p>The evaluation of a DMN decision returns a <a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/dmn/engine/DmnDecisionResult.html">DmnDecisionResult</a>
+<p>The evaluation of a DMN decision returns a <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/dmn/engine/DmnDecisionResult.html">DmnDecisionResult</a>
 . If the decision is implemented as <a href="http://camunda-cn.shaochenfeng.com/reference/dmn/decision-table/">decision table</a> then the result is a list of the
 matching decision rule results. These results represent a mapping from an output name to an output value.</p>
 
@@ -8419,8 +8414,8 @@ decisionResult.getSingleEntry();
 </code></pre>
 
 <p>Note that the decision can also be evaluated using the
-<a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/dmn/engine/DmnEngine.html##evaluateDecisionTable%28org.camunda.bpm.dmn.engine.DmnDecision,%20java.util.Map%29">evaluateDecisionTable()</a>
- method if it is implemented as <a href="http://camunda-cn.shaochenfeng.com/reference/dmn/decision-table/">decision table</a>. In this case, evaluation returns a <a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/dmn/engine/DmnDecisionTableResult.html">DmnDecisionTableResult</a>
+<a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/dmn/engine/DmnEngine.html##evaluateDecisionTable%28org.camunda.bpm.dmn.engine.DmnDecision,%20java.util.Map%29">evaluateDecisionTable()</a>
+ method if it is implemented as <a href="http://camunda-cn.shaochenfeng.com/reference/dmn/decision-table/">decision table</a>. In this case, evaluation returns a <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/dmn/engine/DmnDecisionTableResult.html">DmnDecisionTableResult</a>
  which is semantically equal and provides the same methods as a
 <code>DmnDecisionResult</code>.</p>
 
@@ -8547,7 +8542,7 @@ List&lt;String&gt; beverages = decisionResult.collectEntries(&quot;beverages&quo
     })();
   </script>
   
-  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/4513465.js"></script>
+  
   
 </body>
 </html>

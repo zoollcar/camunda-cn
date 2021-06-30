@@ -987,10 +987,6 @@
   </url>
   
   <url>
-    <loc>http://camunda-cn.shaochenfeng.com/user-guide/spring-boot-integration/configuration/</loc>
-  </url>
-  
-  <url>
     <loc>http://camunda-cn.shaochenfeng.com/reference/cmmn11/tasks/process-task/</loc>
   </url>
   
@@ -1064,6 +1060,10 @@
   
   <url>
     <loc>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-api/</loc>
+  </url>
+  
+  <url>
+    <loc>http://camunda-cn.shaochenfeng.com/user-guide/spring-boot-integration/configuration/</loc>
   </url>
   
   <url>
@@ -2035,10 +2035,6 @@
   </url>
   
   <url>
-    <loc>http://camunda-cn.shaochenfeng.com/user-guide/spring-boot-integration/process-applications/</loc>
-  </url>
-  
-  <url>
     <loc>http://camunda-cn.shaochenfeng.com/user-guide/model-api/bpmn-model-api/respository-service/</loc>
   </url>
   
@@ -2120,6 +2116,10 @@
   
   <url>
     <loc>http://camunda-cn.shaochenfeng.com/introduction/extensions/</loc>
+  </url>
+  
+  <url>
+    <loc>http://camunda-cn.shaochenfeng.com/user-guide/spring-boot-integration/process-applications/</loc>
   </url>
   
   <url>
@@ -2435,10 +2435,6 @@
   </url>
   
   <url>
-    <loc>http://camunda-cn.shaochenfeng.com/user-guide/spring-boot-integration/develop-and-test/</loc>
-  </url>
-  
-  <url>
     <loc>http://camunda-cn.shaochenfeng.com/reference/rest/engine/</loc>
   </url>
   
@@ -2552,6 +2548,10 @@
   
   <url>
     <loc>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/expression-language/</loc>
+  </url>
+  
+  <url>
+    <loc>http://camunda-cn.shaochenfeng.com/user-guide/spring-boot-integration/develop-and-test/</loc>
   </url>
   
   <url>
@@ -3303,11 +3303,11 @@
   </url>
   
   <url>
-    <loc>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/metrics/</loc>
+    <loc>http://camunda-cn.shaochenfeng.com/reference/rest/tenant/</loc>
   </url>
   
   <url>
-    <loc>http://camunda-cn.shaochenfeng.com/reference/rest/tenant/</loc>
+    <loc>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/metrics/</loc>
   </url>
   
   <url>

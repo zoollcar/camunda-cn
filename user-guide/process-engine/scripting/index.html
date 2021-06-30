@@ -2,11 +2,7 @@
 <html class="no-js">
 <head>
   
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-PP9MHKW');</script>
+  
   
 
   
@@ -71,8 +67,7 @@ var _mtac = {};
 <body class="">
 
 
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PP9MHKW"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
 
 
 <nav class="navbar navbar-fixed-top">
@@ -523,7 +518,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/process-engine/metrics/" >Metrics</a>
+      <a href="/user-guide/process-engine/metrics/" >指标</a>
     
   </li>
 
@@ -837,7 +832,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/version-compatibility/" >Version Compatibility</a>
+      <a href="/user-guide/spring-boot-integration/version-compatibility/" >版本兼容性</a>
     
   </li>
 
@@ -845,7 +840,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/configuration/" >Configuration</a>
+      <a href="/user-guide/spring-boot-integration/configuration/" >配置</a>
     
   </li>
 
@@ -869,7 +864,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/process-applications/" >Process Applications</a>
+      <a href="/user-guide/spring-boot-integration/process-applications/" >流程应用程序</a>
     
   </li>
 
@@ -877,7 +872,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/the-spring-event-bridge/" >Spring Eventing Bridge</a>
+      <a href="/user-guide/spring-boot-integration/the-spring-event-bridge/" >Spring 事件总线</a>
     
   </li>
 
@@ -885,7 +880,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/develop-and-test/" >Developing and Testing</a>
+      <a href="/user-guide/spring-boot-integration/develop-and-test/" >部署和测试</a>
     
   </li>
 
@@ -8473,11 +8468,11 @@ execution.setVariable('sum', sum)
 <p>还有一些特殊的变量：</p>
 
 <ol>
-<li><code>execution</code>, 如果脚本是在一个执行范围内执行的（例如，脚本任务），<code>execution</code>是可用的(<a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/engine/delegate/DelegateExecution.html">DelegateExecution</a>
+<li><code>execution</code>, 如果脚本是在一个执行范围内执行的（例如，脚本任务），<code>execution</code>是可用的(<a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/delegate/DelegateExecution.html">DelegateExecution</a>
 )。</li>
-<li><code>task</code>, 如果脚本是在一个任务范围内执行的（例如，任务监听器），<code>task</code>是可用的(<a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/engine/delegate/DelegateTask.html">DelegateTask</a>
+<li><code>task</code>, 如果脚本是在一个任务范围内执行的（例如，任务监听器），<code>task</code>是可用的(<a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/delegate/DelegateTask.html">DelegateTask</a>
 )。</li>
-<li><code>connector</code>，如果脚本在连接器的变量范围内执行（例如，camunda:connector的outputParameter），<code>connector</code>是可用的。 (<a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/connect/plugin/impl/ConnectorVariableScope.html">ConnectorVariableScope</a>
+<li><code>connector</code>，如果脚本在连接器的变量范围内执行（例如，camunda:connector的outputParameter），<code>connector</code>是可用的。 (<a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/connect/plugin/impl/ConnectorVariableScope.html">ConnectorVariableScope</a>
 )。</li>
 </ol>
 
@@ -8500,10 +8495,10 @@ task = execution.getProcessEngineServices().getTaskService()
 
 <p>Camunda 的 Java API 提供的访问流程引擎服务可以用脚本来访问：</p>
 
-<p><a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/engine/ProcessEngineServices.html">Process Engine Services</a>
+<p><a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/ProcessEngineServices.html">Process Engine Services</a>
  </p>
 
-<a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/engine/package-summary.html">Public Java API of Camunda Platform Engine</a>
+<a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/package-summary.html">Public Java API of Camunda Platform Engine</a>
 
 
 <p>下面的案例，创建了一个 message key 为 &ldquo;work&rdquo; 的BPMN消息：</p>
@@ -8663,7 +8658,7 @@ system.out.println('This prints to the console');
     })();
   </script>
   
-  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/4513465.js"></script>
+  
   
 </body>
 </html>

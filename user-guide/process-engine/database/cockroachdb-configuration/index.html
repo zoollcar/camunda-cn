@@ -2,11 +2,7 @@
 <html class="no-js">
 <head>
   
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-PP9MHKW');</script>
+  
   
 
   
@@ -71,8 +67,7 @@ var _mtac = {};
 <body class="">
 
 
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PP9MHKW"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
 
 
 <nav class="navbar navbar-fixed-top">
@@ -523,7 +518,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/process-engine/metrics/" >Metrics</a>
+      <a href="/user-guide/process-engine/metrics/" >指标</a>
     
   </li>
 
@@ -837,7 +832,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/version-compatibility/" >Version Compatibility</a>
+      <a href="/user-guide/spring-boot-integration/version-compatibility/" >版本兼容性</a>
     
   </li>
 
@@ -845,7 +840,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/configuration/" >Configuration</a>
+      <a href="/user-guide/spring-boot-integration/configuration/" >配置</a>
     
   </li>
 
@@ -869,7 +864,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/process-applications/" >Process Applications</a>
+      <a href="/user-guide/spring-boot-integration/process-applications/" >流程应用程序</a>
     
   </li>
 
@@ -877,7 +872,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/the-spring-event-bridge/" >Spring Eventing Bridge</a>
+      <a href="/user-guide/spring-boot-integration/the-spring-event-bridge/" >Spring 事件总线</a>
     
   </li>
 
@@ -885,7 +880,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/develop-and-test/" >Developing and Testing</a>
+      <a href="/user-guide/spring-boot-integration/develop-and-test/" >部署和测试</a>
     
   </li>
 
@@ -8229,12 +8224,12 @@ retried using a CRDB-specific mechanism:</p>
 <li>When performing a deployment of BPMN/CMMN/DMN models and associated resources with the following calls:
 
 <ul>
-<li><a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/engine/repository/DeploymentBuilder.html#deploy--">DeploymentBuilder#deploy()</a>
+<li><a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/repository/DeploymentBuilder.html#deploy--">DeploymentBuilder#deploy()</a>
 </li>
-<li><a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/engine/repository/DeploymentBuilder.html#deployWithResult--">DeploymentBuilder#deployWithResult()</a>
+<li><a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/repository/DeploymentBuilder.html#deployWithResult--">DeploymentBuilder#deployWithResult()</a>
 </li>
 </ul></li>
-<li>By building a process engine with <a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/engine/ProcessEngineConfiguration.html#buildProcessEngine%28%29">ProcessEngineConfiguration#buildProcessEngine--</a>
+<li>By building a process engine with <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/ProcessEngineConfiguration.html#buildProcessEngine%28%29">ProcessEngineConfiguration#buildProcessEngine--</a>
 :
 
 <ul>
@@ -8243,13 +8238,13 @@ retried using a CRDB-specific mechanism:</p>
 <li>When the installation id is set.</li>
 <li>When the telemetry is configured.</li>
 </ul></li>
-<li>When manually triggering history cleanup with <a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/engine/HistoryService.html#cleanUpHistoryAsync-boolean-">HistoryService#cleanUpHistoryAsync(boolean immediatelyDue)</a>
+<li>When manually triggering history cleanup with <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/HistoryService.html#cleanUpHistoryAsync-boolean-">HistoryService#cleanUpHistoryAsync(boolean immediatelyDue)</a>
 .</li>
 <li>When fetching external tasks:
 
 <ul>
 <li>With the External Tasks Rest API <a href="http://camunda-cn.shaochenfeng.com/reference/rest/external-task/fetch/">endpoint</a>.</li>
-<li>With the execution of the <a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/??org/camunda/bpm/engine/ExternalTaskService.html">ExternalTaskService#fetchAndLock</a>
+<li>With the execution of the <a href="https://docs.camunda.org/manual/latest/reference/javadoc/??org/camunda/bpm/engine/ExternalTaskService.html">ExternalTaskService#fetchAndLock</a>
  API calls.</li>
 </ul></li>
 <li>When <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/#job-acquisition">acquiring jobs</a> for execution by the job executor.</li>
@@ -8302,12 +8297,12 @@ mechanism in the process engine replaces the usage of pessimistic locks in the f
 <li>When performing a deployment of BPMN/CMMN/DMN models and associated resources with the following calls:
 
 <ul>
-<li><a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/engine/repository/DeploymentBuilder.html#deploy%28%29">DeploymentBuilder#deploy()</a>
+<li><a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/repository/DeploymentBuilder.html#deploy%28%29">DeploymentBuilder#deploy()</a>
 </li>
-<li><a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/engine/repository/DeploymentBuilder.html#deployWithResult%28%29">DeploymentBuilder#deployWithResult()</a>
+<li><a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/repository/DeploymentBuilder.html#deployWithResult%28%29">DeploymentBuilder#deployWithResult()</a>
 </li>
 </ul></li>
-<li>By building a process engine with <a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/engine/ProcessEngineConfiguration.html#buildProcessEngine%28%29">ProcessEngineConfiguration#buildProcessEngine()</a>
+<li>By building a process engine with <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/ProcessEngineConfiguration.html#buildProcessEngine%28%29">ProcessEngineConfiguration#buildProcessEngine()</a>
 :
 
 <ul>
@@ -8316,7 +8311,7 @@ mechanism in the process engine replaces the usage of pessimistic locks in the f
 <li>When the installation id is set.</li>
 <li>When the telemetry is configured.</li>
 </ul></li>
-<li>When manually triggering history cleanup with <a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/engine/HistoryService.html#cleanUpHistoryAsync-boolean-">HistoryService#cleanUpHistoryAsync(boolean immediatelyDue)</a>
+<li>When manually triggering history cleanup with <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/HistoryService.html#cleanUpHistoryAsync-boolean-">HistoryService#cleanUpHistoryAsync(boolean immediatelyDue)</a>
 .</li>
 </ul>
 
@@ -8379,7 +8374,7 @@ implement.</p>
 
 <h3 id="unsupported-exclusive-message-correlation">Unsupported Exclusive Message correlation</h3>
 
-<p>Exclusive Message correlation (see <a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/engine/runtime/MessageCorrelationBuilder.html#correlateExclusively%28%29">Javadocs</a>
+<p>Exclusive Message correlation (see <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/runtime/MessageCorrelationBuilder.html#correlateExclusively%28%29">Javadocs</a>
 )
 prevents multiple concurrent message correlations to be performed on a single Process execution.
 When using the process engine with CockroachDB, it is not possible to use Exclusive Message correlation.</p>
@@ -8498,7 +8493,7 @@ transaction performs a modification on another, unrelated Process Instance. This
     })();
   </script>
   
-  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/4513465.js"></script>
+  
   
 </body>
 </html>

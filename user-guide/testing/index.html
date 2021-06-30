@@ -2,11 +2,7 @@
 <html class="no-js">
 <head>
   
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-PP9MHKW');</script>
+  
   
 
   
@@ -71,8 +67,7 @@ var _mtac = {};
 <body class="">
 
 
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PP9MHKW"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
 
 
 <nav class="navbar navbar-fixed-top">
@@ -523,7 +518,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/process-engine/metrics/" >Metrics</a>
+      <a href="/user-guide/process-engine/metrics/" >指标</a>
     
   </li>
 
@@ -837,7 +832,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/version-compatibility/" >Version Compatibility</a>
+      <a href="/user-guide/spring-boot-integration/version-compatibility/" >版本兼容性</a>
     
   </li>
 
@@ -845,7 +840,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/configuration/" >Configuration</a>
+      <a href="/user-guide/spring-boot-integration/configuration/" >配置</a>
     
   </li>
 
@@ -869,7 +864,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/process-applications/" >Process Applications</a>
+      <a href="/user-guide/spring-boot-integration/process-applications/" >流程应用程序</a>
     
   </li>
 
@@ -877,7 +872,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/the-spring-event-bridge/" >Spring Eventing Bridge</a>
+      <a href="/user-guide/spring-boot-integration/the-spring-event-bridge/" >Spring 事件总线</a>
     
   </li>
 
@@ -885,7 +880,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/develop-and-test/" >Developing and Testing</a>
+      <a href="/user-guide/spring-boot-integration/develop-and-test/" >部署和测试</a>
     
   </li>
 
@@ -8191,7 +8186,7 @@ This section explains how to write unit tests and integration tests with Camunda
 
 <h2 id="junit-4">JUnit 4</h2>
 
-<p>Using the JUnit 4 style of writing unit tests, the <a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/engine/test/ProcessEngineRule.html">ProcessEngineRule</a>
+<p>Using the JUnit 4 style of writing unit tests, the <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/test/ProcessEngineRule.html">ProcessEngineRule</a>
  must be used. Through this rule, the process engine and services are available through getters. As with the ProcessEngineTestCase (see above), including this rule will look for the default configuration file on the classpath. Process engines are statically cached over multiple unit tests when using the same configuration resource.</p>
 
 <p>The following code snippet shows an example of using the JUnit 4 style of testing and the usage of the ProcessEngineRule.</p>
@@ -8226,7 +8221,7 @@ This section explains how to write unit tests and integration tests with Camunda
 
 <h2 id="junit-3">JUnit 3</h2>
 
-<p>In the JUnit 3 style, the <a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/engine/test/ProcessEngineTestCase.html">ProcessEngineTestCase</a>
+<p>In the JUnit 3 style, the <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/test/ProcessEngineTestCase.html">ProcessEngineTestCase</a>
  must be extended. This will make the ProcessEngine and the services available through protected member fields. In the <code>setup()</code> of the test, the processEngine will be initialized by default with the <code>camunda.cfg.xml</code> resource on the classpath. To specify a different configuration file, override the getConfigurationResource() method. Process engines are cached statically over multiple unit tests when the configuration resource is the same.</p>
 
 <p>A JUnit 3 style test can look as follows:</p>
@@ -8248,7 +8243,7 @@ This section explains how to write unit tests and integration tests with Camunda
 
 <h2 id="deploy-test-resources">Deploy Test Resources</h2>
 
-<p>You can annotate test classes and methods with <a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/engine/test/Deployment.html">@Deployment</a>
+<p>You can annotate test classes and methods with <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/test/Deployment.html">@Deployment</a>
 . Before the test is run, a resource file named <code>TestClassName.bpmn20.xml</code> (for a class-level annotation) or <code>TestClassName.testMethod.bpmn20.xml</code> (for a method-level annotation), in the same package as the test class, will be deployed. At the end of the test the deployment will be deleted, including all related process instances, tasks, etc. The <code>@Deployment</code> annotation also supports setting the resource location explicitly.</p>
 
 <pre><code>@Deployment(resources = {&quot;myProcess.bpmn&quot;, &quot;mySubprocess.bpmn&quot;})
@@ -8256,14 +8251,14 @@ This section explains how to write unit tests and integration tests with Camunda
 
 <p>will pick the files <code>myProcess.bpmn</code> and <code>mySubProcess.bpmn</code> directly from the top of the classpath.</p>
 
-<p>Method-level annotations override class-level annotations. See the Javadocs for <a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/engine/test/Deployment.html">@Deployment</a>
+<p>Method-level annotations override class-level annotations. See the Javadocs for <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/test/Deployment.html">@Deployment</a>
 more details.</p>
 
 <p>The annotation is supported for <a href="#junit-3">JUnit 3</a> and <a href="#junit-4">JUnit 4</a> style of testing.</p>
 
 <h2 id="specify-the-required-history-level">Specify the required History Level</h2>
 
-<p>If a test requires a specific history level (e.g., because it uses the HistoryService) then you can annotate the test class or method with <a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/engine/test/RequiredHistoryLevel.html">@RequiredHistoryLevel</a>
+<p>If a test requires a specific history level (e.g., because it uses the HistoryService) then you can annotate the test class or method with <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/test/RequiredHistoryLevel.html">@RequiredHistoryLevel</a>
  and specify the required history level (e.g., &ldquo;activity&rdquo;, &ldquo;full&rdquo;). Before the test is run, it checks the current history level of the process engine and skip the test if the history level is lower than the specified one.</p>
 
 <p>A JUnit 4 style test can look as follows:</p>
@@ -8701,7 +8696,7 @@ and chained before <code>ProcessEngineRule</code>.</p>
     })();
   </script>
   
-  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/4513465.js"></script>
+  
   
 </body>
 </html>

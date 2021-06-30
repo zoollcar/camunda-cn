@@ -2,11 +2,7 @@
 <html class="no-js">
 <head>
   
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-PP9MHKW');</script>
+  
   
 
   
@@ -71,8 +67,7 @@ var _mtac = {};
 <body class="">
 
 
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PP9MHKW"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
 
 
 <nav class="navbar navbar-fixed-top">
@@ -523,7 +518,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/process-engine/metrics/" >Metrics</a>
+      <a href="/user-guide/process-engine/metrics/" >指标</a>
     
   </li>
 
@@ -837,7 +832,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/version-compatibility/" >Version Compatibility</a>
+      <a href="/user-guide/spring-boot-integration/version-compatibility/" >版本兼容性</a>
     
   </li>
 
@@ -845,7 +840,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/configuration/" >Configuration</a>
+      <a href="/user-guide/spring-boot-integration/configuration/" >配置</a>
     
   </li>
 
@@ -869,7 +864,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/process-applications/" >Process Applications</a>
+      <a href="/user-guide/spring-boot-integration/process-applications/" >流程应用程序</a>
     
   </li>
 
@@ -877,7 +872,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/the-spring-event-bridge/" >Spring Eventing Bridge</a>
+      <a href="/user-guide/spring-boot-integration/the-spring-event-bridge/" >Spring 事件总线</a>
     
   </li>
 
@@ -885,7 +880,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/develop-and-test/" >Developing and Testing</a>
+      <a href="/user-guide/spring-boot-integration/develop-and-test/" >部署和测试</a>
     
   </li>
 
@@ -8220,7 +8215,7 @@ DmnEngine dmnEngine = configuration.buildEngine();
 
 <h2 id="decision-table-evaluation-listeners">Decision Table Evaluation Listeners</h2>
 
-<p>The DMN engine configuration allows you add a custom decision table <a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/dmn/engine/delegate/DmnDecisionTableEvaluationListener.html">evaluation listener</a>
+<p>The DMN engine configuration allows you add a custom decision table <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/dmn/engine/delegate/DmnDecisionTableEvaluationListener.html">evaluation listener</a>
 . A decision table evaluation listener is
 notified after a decision table has been evaluated. It receives an evaluation event
 which contains the result of the evaluation. You can decide if the
@@ -8242,7 +8237,7 @@ configuration.getCustomPostDecisionTableEvaluationListeners()
   .add(myListener);
 </code></pre>
 
-<p>A specialized evaluation listener is the <a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/dmn/engine/spi/DmnEngineMetricCollector.html">metric collector</a>
+<p>A specialized evaluation listener is the <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/dmn/engine/spi/DmnEngineMetricCollector.html">metric collector</a>
 , which records the number of executed decision
 elements. This metric can be used to monitor the workload of a decision engine.</p>
 
@@ -8259,7 +8254,7 @@ configuration.setEngineMetricCollector(metricCollector);
 
 <h2 id="decision-evaluation-listeners">Decision Evaluation Listeners</h2>
 
-<p>The DMN engine configuration allows you add a custom <a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/dmn/engine/delegate/DmnDecisionEvaluationListener.html">decision evaluation listener</a>
+<p>The DMN engine configuration allows you add a custom <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/dmn/engine/delegate/DmnDecisionEvaluationListener.html">decision evaluation listener</a>
 . A decision evaluation listener is
 notified after a decision with all the required decisions has been evaluated. It receives an evaluation event
 which contains the result of the evaluation. You can decide if the
@@ -8290,19 +8285,19 @@ configuration.getCustomPostDecisionEvaluationListeners()
 </div>
 
 
-<p>The <a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/dmn/engine/impl/DefaultDmnEngineConfiguration.html">default DMN engine configuration</a>
+<p>The <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/dmn/engine/impl/DefaultDmnEngineConfiguration.html">default DMN engine configuration</a>
  has further customization and
 extension points.</p>
 
 <h2 id="customize-dmn-transformation">Customize DMN Transformation</h2>
 
-<p>It is possible to customize the transformation of DMN by providing a <a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/dmn/engine/impl/spi/transform/DmnTransformer.html">DMN transformer</a>
- or configuring the <a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/dmn/engine/impl/transform/DefaultDmnTransformer.html">default one</a>
+<p>It is possible to customize the transformation of DMN by providing a <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/dmn/engine/impl/spi/transform/DmnTransformer.html">DMN transformer</a>
+ or configuring the <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/dmn/engine/impl/transform/DefaultDmnTransformer.html">default one</a>
 .</p>
 
 <h3 id="register-dmn-transform-listeners">Register DMN Transform Listeners</h3>
 
-<p>The simplest customization is to provide a <a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/dmn/engine/impl/spi/transform/DmnTransformListener.html">transform listener</a>
+<p>The simplest customization is to provide a <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/dmn/engine/impl/spi/transform/DmnTransformListener.html">transform listener</a>
 . The Listener is notified after a DMN element is
 transformed. The listener can modify the transformed object.</p>
 
@@ -8322,12 +8317,12 @@ configuration.getTransformer()
 <h3 id="register-dmn-element-transform-handler">Register DMN Element Transform Handler</h3>
 
 <p>While the transform listener allows modifying of the transformed objects, it does not support instantiating custom subclasses.
-This can be achieved using a custom <a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/dmn/engine/impl/spi/transform/DmnElementTransformHandler.html">transform handler</a>
+This can be achieved using a custom <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/dmn/engine/impl/spi/transform/DmnElementTransformHandler.html">transform handler</a>
 .</p>
 
 <p>A transform handler is registered for a given <a href="https://github.com/camunda/camunda-dmn-model">DMN model API</a> type like a <code>DecisionTable</code>.</p>
 
-<p>First, implement a transform handler which can transform a <a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/model/dmn/instance/DecisionTable.html">decision table</a>
+<p>First, implement a transform handler which can transform a <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/model/dmn/instance/DecisionTable.html">decision table</a>
 .</p>
 
 <pre><code class="language-java">public  class MyDecisionTableHandler extends DmnElementTransformHandler&lt;DecisionTable, MyDecisionTableImpl&gt; {
@@ -8464,7 +8459,7 @@ Just make sure that the corresponding libraries are available on the classpath a
 <p>The default DMN engine resolves the supported expression and script languages
 using different providers.</p>
 
-<p>To evaluate <code>JUEL</code> expressions, the DMN engine uses the <a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/dmn/engine/impl/spi/el/ElProvider.html">ElProvider</a>
+<p>To evaluate <code>JUEL</code> expressions, the DMN engine uses the <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/dmn/engine/impl/spi/el/ElProvider.html">ElProvider</a>
  configured in the
 DMN engine configuration. To use another implementation of the Unified Expression Language, replace this implementation.</p>
 
@@ -8476,7 +8471,7 @@ DefaultDmnEngineConfiguration configuration = (DefaultDmnEngineConfiguration) Dm
 configuration.setElProvider(new MyElProvider());
 </code></pre>
 
-<p>To configure the <code>FEEL</code> engine used you can provide a custom <a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/dmn/feel/impl/FeelEngineFactory.html">FeelEngineFactory</a>
+<p>To configure the <code>FEEL</code> engine used you can provide a custom <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/dmn/feel/impl/FeelEngineFactory.html">FeelEngineFactory</a>
 .</p>
 
 <pre><code class="language-java">// with a default DMN engine configuration
@@ -8487,7 +8482,7 @@ DefaultDmnEngineConfiguration configuration = (DefaultDmnEngineConfiguration) Dm
 configuration.setFeelEngineFactory(new MyFeelEngineFactory());
 </code></pre>
 
-<p>Script languages are resolved by the <a href="http://camunda-cn.shaochenfeng.com/reference/javadoc/?org/camunda/bpm/dmn/engine/impl/spi/el/DmnScriptEngineResolver.html">DmnScriptEngineResolver</a>
+<p>Script languages are resolved by the <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/dmn/engine/impl/spi/el/DmnScriptEngineResolver.html">DmnScriptEngineResolver</a>
 . To customize the script engine resolving, provide an own implementation.</p>
 
 <pre><code class="language-java">// with a default DMN engine configuration
@@ -8582,7 +8577,7 @@ For more information on how to configure and use SLF4J, please refer to the
     })();
   </script>
   
-  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/4513465.js"></script>
+  
   
 </body>
 </html>
