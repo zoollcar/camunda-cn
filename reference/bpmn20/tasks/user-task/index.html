@@ -864,7 +864,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/process-applications/" >流程应用程序</a>
+      <a href="/user-guide/spring-boot-integration/process-applications/" >Process Applications</a>
     
   </li>
 
@@ -8208,7 +8208,7 @@ var _mtac = {};
 
 <p>每个任务都有一个字段，指示该任务的截止日期。查询API可用于查询到某个日期之前或之后截止的任务。</p>
 
-<p>有一个活动扩展名，允许您在任务定义中指定表达式，以在创建时设置任务的初始截止日期。表达式应该始终解析为 java.util.Date, java.util.String (<a href="http://en.wikipedia.org/wiki/ISO_8601">ISO8601</a> 格式化) 或 null。 使用ISO8601格式化字符串时，您可以指定相对于创建任务的时间的时间或时间段。例如，您可以使用在此过程中以先前表单输入的日期，或者在以前的服务任务中计算。</p>
+<p>有一个活动扩展名，允许你在任务定义中指定表达式，以在创建时设置任务的初始截止日期。表达式应该始终解析为 java.util.Date, java.util.String (<a href="http://en.wikipedia.org/wiki/ISO_8601">ISO8601</a> 格式化) 或 null。 使用ISO8601格式化字符串时，你可以指定相对于创建任务的时间的时间或时间段。例如，你可以使用在此过程中以先前表单输入的日期，或者在以前的服务任务中计算。</p>
 
 <pre><code class="language-xml">&lt;userTask id=&quot;theTask&quot; name=&quot;Important task&quot; camunda:dueDate=&quot;${dateVariable}&quot;/&gt;
 </code></pre>
@@ -8219,7 +8219,7 @@ var _mtac = {};
 
 <p>每个任务都有一个字段，指示该任务的跟进日期。查询API可用于查询需要在特定日期之前或之后进行操作的任务。</p>
 
-<p>有一个活动扩展名，允许您在任务定义中指定表达式，以在创建时设置任务的初始后续后续日期。表达式应该始终解析为 java.util.Date, java.util.String (<a href="http://en.wikipedia.org/wiki/ISO_8601">ISO8601</a> 格式化) 或 null。 使用ISO8601格式化字符串时，您可以指定相对于创建任务的时间的时间或时间段。例如，您可以使用在此过程中以先前表单输入的日期，或者在以前的服务任务中计算。</p>
+<p>有一个活动扩展名，允许你在任务定义中指定表达式，以在创建时设置任务的初始后续后续日期。表达式应该始终解析为 java.util.Date, java.util.String (<a href="http://en.wikipedia.org/wiki/ISO_8601">ISO8601</a> 格式化) 或 null。 使用ISO8601格式化字符串时，你可以指定相对于创建任务的时间的时间或时间段。例如，你可以使用在此过程中以先前表单输入的日期，或者在以前的服务任务中计算。</p>
 
 <pre><code class="language-xml">&lt;userTask id=&quot;theTask&quot; name=&quot;Important task&quot; camunda:followUpDate=&quot;${dateVariable}&quot;/&gt;
 </code></pre>
@@ -8384,7 +8384,7 @@ var _mtac = {};
 &lt;/userTask&gt;
 </code></pre>
 
-<p>传递给任务侦听器实现的委托任务允许您设置受让人和候选用户/组：</p>
+<p>传递给任务侦听器实现的委托任务允许你设置受让人和候选用户/组：</p>
 
 <pre><code class="language-java">public class MyAssignmentHandler implements TaskListener {
   public void notify(DelegateTask delegateTask) {
@@ -8658,7 +8658,7 @@ formService.submitTaskForm(taskId, properties);
 
   
 
-  <script type="text/javascript" src="http://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="http://camunda-cn.shaochenfeng.com/js/docs.4a4040f262f9fc61026cba7d32a9ffb5852d2f3f616961a6d4e5bfccea81e1ff.js" todo-integrity="sha256-SkBA8mL5/GECbLp9Mqn/tYUtLz9haWGm1OW/zOqB4f8=" crossorigin="anonymous"></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

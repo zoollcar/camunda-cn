@@ -864,7 +864,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/process-applications/" >流程应用程序</a>
+      <a href="/user-guide/spring-boot-integration/process-applications/" >Process Applications</a>
     
   </li>
 
@@ -8301,10 +8301,10 @@ public HistoryEventHandler customHistoryEventHandler() {
 <pre><code class="language-java">@Configuration
 public class MyCamundaConfiguration {
 
-    @Bean
-    public static CamundaDatasourceConfiguration camundaDatasourceConfiguration() {
-        return new MyCamundaDatasourceConfiguration();
-    }
+	@Bean
+	public static CamundaDatasourceConfiguration camundaDatasourceConfiguration() {
+		return new MyCamundaDatasourceConfiguration();
+	}
 
 }
 </code></pre>
@@ -8319,11 +8319,11 @@ public class MyCamundaConfiguration {
 <pre><code class="language-java">@Configuration
 public class MyCamundaConfiguration {
 
-    @Bean
-    @Order(Ordering.DEFAULT_ORDER + 1)
-    public static ProcessEnginePlugin myCustomConfiguration() {
-        return new MyCustomConfiguration();
-    }
+	@Bean
+	@Order(Ordering.DEFAULT_ORDER + 1)
+	public static ProcessEnginePlugin myCustomConfiguration() {
+		return new MyCustomConfiguration();
+	}
 
 }
 </code></pre>
@@ -8334,12 +8334,12 @@ public class MyCamundaConfiguration {
 @Order(Ordering.DEFAULT_ORDER + 1)
 public class MyCustomConfiguration implements ProcessEnginePlugin {
 
-    @Override
-    public void preInit(ProcessEngineConfigurationImpl processEngineConfiguration) {
-        //...
-    }
+	@Override
+	public void preInit(ProcessEngineConfigurationImpl processEngineConfiguration) {
+		//...
+	}
 
-    ...
+	...
 
 }
 </code></pre>
@@ -8351,12 +8351,12 @@ public class MyCustomConfiguration implements ProcessEnginePlugin {
 @Order(Ordering.DEFAULT_ORDER + 1)
 public class MyCustomConfiguration extends AbstractCamundaConfiguration {
 
-    @Override
-    public void preInit(SpringProcessEngineConfiguration springProcessEngineConfiguration) {
-        //...
-    }
+	@Override
+	public void preInit(SpringProcessEngineConfiguration springProcessEngineConfiguration) {
+		//...
+	}
 
-    ...
+	...
 
 }
 </code></pre>
@@ -9109,7 +9109,7 @@ When setting to <code>/</code>, the legacy behavior of Camunda Spring Boot Start
 
   
 
-  <script type="text/javascript" src="http://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="http://camunda-cn.shaochenfeng.com/js/docs.4a4040f262f9fc61026cba7d32a9ffb5852d2f3f616961a6d4e5bfccea81e1ff.js" todo-integrity="sha256-SkBA8mL5/GECbLp9Mqn/tYUtLz9haWGm1OW/zOqB4f8=" crossorigin="anonymous"></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

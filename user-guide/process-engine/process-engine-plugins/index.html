@@ -864,7 +864,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/process-applications/" >流程应用程序</a>
+      <a href="/user-guide/spring-boot-integration/process-applications/" >Process Applications</a>
     
   </li>
 
@@ -8177,23 +8177,23 @@ var _mtac = {};
     <div class="col-xs-12 content-text">
       
 
-<p>The process engine configuration can be extended through process engine plugins. A process engine plugin is an extension to the <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-bootstrapping/">process engine configuration</a>.</p>
+<p>流程引擎配置可以通过流程引擎插件扩展。流程引擎插件是<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-bootstrapping/">流程引擎配置</a>的扩展。</p>
 
-<p>A plugin must provide an implementation of the <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/impl/cfg/ProcessEnginePlugin.html">ProcessEnginePlugin</a>
- interface.</p>
+<p>插件必须提供实现<a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/impl/cfg/ProcessEnginePlugin.html">ProcessEnginePlugin</a>
+接口。</p>
 
-<h1 id="configure-process-engine-plugins">Configure Process Engine Plugins</h1>
+<h1 id="配置流程引擎插件">配置流程引擎插件</h1>
 
-<p>Process engine plugins can be configured</p>
+<p>可以在下列位置配置流程引擎插件：</p>
 
 <ul>
-<li>in the <a href="http://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/">Camunda Platform Deployment Descriptors</a> (bpm-platform.xml/processes.xml),</li>
-<li>in the <a href="http://camunda-cn.shaochenfeng.com/user-guide/runtime-container-integration/jboss/">JBoss Application Server 7/Wildfly configuration file</a> (standalone.xml/domain.xml),</li>
-<li>using <a href="http://camunda-cn.shaochenfeng.com/user-guide/spring-framework-integration/#configure-a-process-engine-plugin-in-spring">Spring Beans XML</a>,</li>
-<li>programatically.</li>
+<li>在 <a href="http://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/">Camunda平台 部署描述符</a> (bpm-platform.xml/processes.xml),</li>
+<li>在 <a href="http://camunda-cn.shaochenfeng.com/user-guide/runtime-container-integration/jboss/">JBoss Application Server 7/Wildfly 配置文件</a> (standalone.xml/domain.xml),</li>
+<li>在 <a href="http://camunda-cn.shaochenfeng.com/user-guide/spring-framework-integration/#configure-a-process-engine-plugin-in-spring">Spring Beans XML</a>,</li>
+<li>编程配置。</li>
 </ul>
 
-<p>The following is an example of how to configure a process engine plugin in a bpm-platform.xml file:</p>
+<p>下面是如何在bpm-platform.xml文件中配置一个流程引擎插件的例子。</p>
 
 <pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;bpm-platform xmlns=&quot;http://www.camunda.org/schema/1.0/BpmPlatform&quot;
@@ -8224,16 +8224,16 @@ var _mtac = {};
 &lt;/bpm-platform&gt;
 </code></pre>
 
-<p>A process engine plugin class must be visible to the classloader which loads the process engine classes.</p>
+<p>流程引擎插件类必须对加载流程引擎类的类加载器可见。</p>
 
-<h1 id="list-of-built-in-process-engine-plugins">List of Built-In Process Engine Plugins</h1>
+<h1 id="内置流程引擎插件列表">内置流程引擎插件列表</h1>
 
-<p>The following is a list of built-in process engine plugins:</p>
+<p>下面是内置的流程引擎插件的列表：</p>
 
 <ul>
-<li><a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/identity-service/#the-ldap-identity-service">LDAP Identity Service Plugin</a></li>
-<li><a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/authorization-service/#the-administrator-authorization-plugin">Administrator Authorization Plugin</a></li>
-<li><a href="http://camunda-cn.shaochenfeng.com/user-guide/process-applications/process-application-event-listeners/">Process Application Event Listener Plugin</a></li>
+<li><a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/identity-service/#the-ldap-identity-service">LDAP Identity Service插件</a></li>
+<li><a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/authorization-service/#the-administrator-authorization-plugin">Administrator Authorization 插件</a></li>
+<li><a href="http://camunda-cn.shaochenfeng.com/user-guide/process-applications/process-application-event-listeners/">Process Application 事件监听器插件</a></li>
 </ul>
 
     </div>
@@ -8244,8 +8244,8 @@ var _mtac = {};
   <h3>目录:</h3>
   <nav id="TableOfContents">
 <ul>
-<li><a href="#configure-process-engine-plugins">Configure Process Engine Plugins</a></li>
-<li><a href="#list-of-built-in-process-engine-plugins">List of Built-In Process Engine Plugins</a></li>
+<li><a href="#配置流程引擎插件">配置流程引擎插件</a></li>
+<li><a href="#内置流程引擎插件列表">内置流程引擎插件列表</a></li>
 </ul>
 </nav>
   
@@ -8277,7 +8277,7 @@ var _mtac = {};
 
   
 
-  <script type="text/javascript" src="http://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="http://camunda-cn.shaochenfeng.com/js/docs.4a4040f262f9fc61026cba7d32a9ffb5852d2f3f616961a6d4e5bfccea81e1ff.js" todo-integrity="sha256-SkBA8mL5/GECbLp9Mqn/tYUtLz9haWGm1OW/zOqB4f8=" crossorigin="anonymous"></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

@@ -2035,6 +2035,10 @@
   </url>
   
   <url>
+    <loc>http://camunda-cn.shaochenfeng.com/user-guide/spring-boot-integration/process-applications/</loc>
+  </url>
+  
+  <url>
     <loc>http://camunda-cn.shaochenfeng.com/user-guide/model-api/bpmn-model-api/respository-service/</loc>
   </url>
   
@@ -2116,10 +2120,6 @@
   
   <url>
     <loc>http://camunda-cn.shaochenfeng.com/introduction/extensions/</loc>
-  </url>
-  
-  <url>
-    <loc>http://camunda-cn.shaochenfeng.com/user-guide/spring-boot-integration/process-applications/</loc>
   </url>
   
   <url>

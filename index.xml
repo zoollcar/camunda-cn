@@ -28,9 +28,9 @@ Requirements Operation Systems Officially supported on the following operating s
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/webapps/cockpit/cmmn/dashboard/</guid>
-      <description>企业版特征Please note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
-查看 Camunda 企业版主页了解更多信息以及获得免费试用版。The CMMN Cases dashboard of Cockpit is the entry point for case monitoring. It comes with a pre-installed plugin, which lets you see deployed case definitions. Additional plugins can be added to the cases dashboard.
-Search At the top of the dashboard, you can search for case instances which fulfill certain search criteria.</description>
+      <description>企业版特征 Please note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
+ 查看 Camunda 企业版主页 了解更多信息以及获得 免费试用版。  The CMMN Cases dashboard of Cockpit is the entry point for case monitoring. It comes with a pre-installed plugin, which lets you see deployed case definitions. Additional plugins can be added to the cases dashboard.
+Search   At the top of the dashboard, you can search for case instances which fulfill certain search criteria.</description>
     </item>
     
     <item>
@@ -40,7 +40,7 @@ Search At the top of the dashboard, you can search for case instances which fu
       
       <guid>http://camunda-cn.shaochenfeng.com/webapps/cockpit/dmn/dashboard/</guid>
       <description>The decisions dashboard of Cockpit is the entry point for decision monitoring. It comes with a pre-installed plugin, which lets you see deployed decision definitions. Additional plugins can be added to the decisions dashboard.
-Deployed Decisions This plugin provides you with a list of deployed decision definitions. You can click on the name of a decision to go to the decision definition view and access more details, like the DMN table or executed decision instances view.</description>
+Deployed Decisions   This plugin provides you with a list of deployed decision definitions. You can click on the name of a decision to go to the decision definition view and access more details, like the DMN table or executed decision instances view.</description>
     </item>
     
     <item>
@@ -49,8 +49,8 @@ Deployed Decisions This plugin provides you with a list of deployed decision d
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/installation/camunda-bpm-run/</guid>
-      <description>What is a Remote Engine Distribution?If you need a Remote or Shared Engine Distribution depends on your use-case. Check out the architecture overview for more information.
-This page describes the steps to execute Camunda Platform Run.
+      <description>What is a Remote Engine Distribution? If you need a Remote or Shared Engine Distribution depends on your use-case. Check out the architecture overview for more information.
+ This page describes the steps to execute Camunda Platform Run.
 Requirements Please make sure that you have the Java Runtime Environment 8+ installed.
 You can verify this by using your terminal, shell, or command line:
 java -version  If you need to install Java Runtime Environment, you can find the download from Oracle here.</description>
@@ -73,8 +73,8 @@ java -version  If you need to install Java Runtime Environment, you can find the
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/webapps/cockpit/batch/batch-operation/</guid>
-      <description>企业版特征Please note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
-查看 Camunda 企业版主页了解更多信息以及获得免费试用版。Definition Of Operation It is possible to execute the following batch operations:
+      <description>企业版特征 Please note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
+ 查看 Camunda 企业版主页 了解更多信息以及获得 免费试用版。    Definition Of Operation It is possible to execute the following batch operations:
  Delete running process instances. Delete finished process instances. Set retries of Jobs belonging to process instances. Set retries of external tasks belonging to process instances.</description>
     </item>
     
@@ -95,7 +95,7 @@ connector  Description The configuration of a camunda connector.    Attributes &
       
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/runtime-container-integration/bpm-platform-services/</guid>
       <description>To inspect the current state of configured process engines and deployed process applications, the class org.camunda.bpm.BpmPlatform offers access to the ProcessEngineService and the ProcessApplicationService.
-ProcessEngineService The ProcessEngineServicecan be accessed by calling BpmPlatform.getProcessEngineService(). It offers access to the default process engine, as well as any process engine by its name as specified in the process engine configuration. It returns ProcessEngine objects from which any services for a specific engine can be accessed.</description>
+ProcessEngineService The ProcessEngineService can be accessed by calling BpmPlatform.getProcessEngineService(). It offers access to the default process engine, as well as any process engine by its name as specified in the process engine configuration. It returns ProcessEngine objects from which any services for a specific engine can be accessed.</description>
     </item>
     
     <item>
@@ -104,8 +104,8 @@ ProcessEngineService The ProcessEngineServicecan be accessed by calling BpmPlat
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/webapps/cockpit/cmmn/case-definition-view/</guid>
-      <description>企业版特征Please note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
-查看 Camunda 企业版主页了解更多信息以及获得免费试用版。On the case definition view, you can find a diagram of the deployed case definition. Use the mouse to navigate through the diagram. By turning the mouse wheel you can zoom in and out. Hold the left mouse button to pan the diagram in the desired direction.</description>
+      <description>企业版特征 Please note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
+ 查看 Camunda 企业版主页 了解更多信息以及获得 免费试用版。    On the case definition view, you can find a diagram of the deployed case definition. Use the mouse to navigate through the diagram. By turning the mouse wheel you can zoom in and out. Hold the left mouse button to pan the diagram in the desired direction.</description>
     </item>
     
     <item>
@@ -251,7 +251,7 @@ An input clause is represented by an input element inside a decisionTable XML el
       
       <guid>http://camunda-cn.shaochenfeng.com/webapps/cockpit/bpmn/dashboard/</guid>
       <description>The processes dashboard of Cockpit is the entry point for process monitoring. It comes with a pre-installed plugin, which lets you see deployed process definitions. Additional plugins can be added to the processes dashboard.
-Deployed Processes With this plugin you can easily observe the state of a process definition. Green and red dots signalize running and failed jobs. At this observing level a red dot signifies that there is at least one process instance or a sub process instance which has an unresolved incident.</description>
+Deployed Processes   With this plugin you can easily observe the state of a process definition. Green and red dots signalize running and failed jobs. At this observing level a red dot signifies that there is at least one process instance or a sub process instance which has an unresolved incident.</description>
     </item>
     
     <item>
@@ -288,8 +288,8 @@ At the top of the dashboard you can see a plugin with pie charts that display th
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/webapps/cockpit/dmn/decision-requirements-instance-view/</guid>
-      <description>企业版特征Please note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
-查看 Camunda 企业版主页了解更多信息以及获得免费试用版。On the decision requirements definition instance view, you can find a diagram of the deployed decision requirements definition. Use the mouse to navigate through the diagram. By turning the mouse wheel you can zoom in and out.</description>
+      <description>企业版特征 Please note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
+ 查看 Camunda 企业版主页 了解更多信息以及获得 免费试用版。    On the decision requirements definition instance view, you can find a diagram of the deployed decision requirements definition. Use the mouse to navigate through the diagram. By turning the mouse wheel you can zoom in and out.</description>
     </item>
     
     <item>
@@ -298,8 +298,8 @@ At the top of the dashboard you can see a plugin with pie charts that display th
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/webapps/cockpit/dmn/decision-requirements-definition-view/</guid>
-      <description>企业版特征Please note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
-查看 Camunda 企业版主页了解更多信息以及获得免费试用版。On the decision requirements definition view, you can find a diagram of the deployed decision requirements definition. Use the mouse to navigate through the diagram. By turning the mouse wheel you can zoom in and out. Hold the left mouse button to pan the diagram in the desired direction.</description>
+      <description>企业版特征 Please note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
+ 查看 Camunda 企业版主页 了解更多信息以及获得 免费试用版。    On the decision requirements definition view, you can find a diagram of the deployed decision requirements definition. Use the mouse to navigate through the diagram. By turning the mouse wheel you can zoom in and out. Hold the left mouse button to pan the diagram in the desired direction.</description>
     </item>
     
     <item>
@@ -375,10 +375,10 @@ caseExecutionListener  Description Add an execution listener to an event in the 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/reference/dmn/feel/legacy/data-types/</guid>
-      <description>Heads Up!This page provides information on the legacy FEEL Engine, that was used before the current Scala-based FEEL Engine was integrated into the Camunda Platform.
-The Camunda DMN engine supports the following FEEL data types.
-String FEEL supports Strings. They must be encapsulated in double quotes. They support only the equal comparison operator.
-Numeric Types FEEL supports numeric types like integer. In the Camunda DMN engine the following numeric types are available:</description>
+      <description>Heads Up! This page provides information on the legacy FEEL Engine, that was used before the current Scala-based FEEL Engine was integrated into the Camunda Platform.
+ The Camunda DMN engine supports the following FEEL data types.
+String   FEEL supports Strings. They must be encapsulated in double quotes. They support only the equal comparison operator.
+Numeric Types   FEEL supports numeric types like integer. In the Camunda DMN engine the following numeric types are available:</description>
     </item>
     
     <item>
@@ -935,7 +935,7 @@ Default Configuration By default, the HTTP client uses Apache&amp;rsquo;s defaul
       
       <guid>http://camunda-cn.shaochenfeng.com/reference/cmmn11/tasks/human-task/</guid>
       <description>A human task is used to model work that needs to be done by a human actor.
-A human task is defined in XML as follows:
+ A human task is defined in XML as follows:
 &amp;lt;humanTask id=&amp;quot;theHumanTask&amp;quot; name=&amp;quot;A Human Task&amp;quot; /&amp;gt;  A human task in state ENABLED can be started manually using the CaseService as follows:
 caseService.manuallyStartCaseExecution(&amp;quot;aCaseExecutionId&amp;quot;);  When the human task becomes ACTIVE, a new task is created in the task list of the user(s) or group(s) assigned to that task.</description>
     </item>
@@ -966,7 +966,7 @@ caseService.manuallyStartCaseExecution(&amp;quot;aCaseExecutionId&amp;quot;);  W
       
       <guid>http://camunda-cn.shaochenfeng.com/reference/cmmn11/markers/manual-activation-rule/</guid>
       <description>Can be used with: Task, Stage
-Whether the actual work of a task or stage can be performed depends on its entry criteria. Given that an entry criterion is fulfilled, there are two ways to activate a task:
+ Whether the actual work of a task or stage can be performed depends on its entry criteria. Given that an entry criterion is fulfilled, there are two ways to activate a task:
  By manual activation By automatic activation  Automatic activation is the default behavior in which it is not required that a user manually activates a task. In camunda, manual activation can be done by using the CaseService API with caseService.</description>
     </item>
     
@@ -1026,8 +1026,8 @@ Spin DataFormat Configuration From this minor release, the Camunda Spring Boot S
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/modeler/bpmn/</guid>
-      <description>Quickstart Create new BPMN 2.0 Diagram To start modeling, create a new BPMN 2.0 diagram for the Camunda Platform by selecting Create diagram &amp;gt; Create new BPMN diagram (Camunda Platform) in the top-level menu.
-Start Modeling Now you can start to create a BPMN 2.0 model. Add the desired elements from the palette on the left hand side by dragging and dropping them onto the diagram canvas.</description>
+      <description>Quickstart Create new BPMN 2.0 Diagram   To start modeling, create a new BPMN 2.0 diagram for the Camunda Platform by selecting Create diagram &amp;gt; Create new BPMN diagram (Camunda Platform) in the top-level menu.
+Start Modeling   Now you can start to create a BPMN 2.0 model. Add the desired elements from the palette on the left hand side by dragging and dropping them onto the diagram canvas.</description>
     </item>
     
     <item>
@@ -1134,14 +1134,14 @@ Response Codes  Code Media type Description   204 application/json Request succe
       
       <guid>http://camunda-cn.shaochenfeng.com/reference/bpmn20/tasks/service-task/</guid>
       <description>服务任务用于调用服务。在Camunda中，这是通过调用Java代码来完成的，或者为外部工作者提供的工作项来完成以异步或直接调用Web服务的形式实现逻辑。
-调用Java Code. 有四种方式配置如何调用Java逻辑：
+ 调用Java Code. 有四种方式配置如何调用Java逻辑：
  指定实现Java委托或活动行为的类 计算解析为委派对象的表达式 调用方法表达式 计算表达式  要指定在流程执行期间调用的类，所需的完全限定类名需要由camunda:class属性提供。
 &amp;lt;serviceTask id=&amp;quot;javaService&amp;quot; name=&amp;quot;My Java Service Task&amp;quot; camunda:class=&amp;quot;org.camunda.bpm.MyJavaDelegate&amp;quot; /&amp;gt;  请参阅User Guide 中的 Java 委托类 章节，了解有关如何实现Java委托的详细信息。
 还可以使用解析为对象的表达式。这个对象必须遵循使用与Camunda：Class属性时创建的对象相同的规则。
 &amp;lt;serviceTask id=&amp;quot;beanService&amp;quot; name=&amp;quot;My Bean Service Task&amp;quot; camunda:delegateExpression=&amp;quot;${myDelegateBean}&amp;quot; /&amp;gt;  或调用方法或解析值的表达式。
 &amp;lt;serviceTask id=&amp;quot;expressionService&amp;quot; name=&amp;quot;My Expression Service Task&amp;quot; camunda:expression=&amp;quot;${myBean.doWork()}&amp;quot; /&amp;gt;  有关表达式语言作为委派代码的详细信息，请参阅相应的 User Guide 的 section 章节。
 也可以调用以Web服务形式实现的逻辑。 camunda:connector 是一个扩展，允许直接从工作流程调用REST/SOAP API。 有关使用连接器的更多信息，请参阅相应的信息 User Guide 中的 section 章节。
-通过 Java 委托类 &amp;amp; 参数注入 您可以轻松地编写通用Java委托类，该类可以通过BPMN 2稍后配置.</description>
+通过 Java 委托类 &amp;amp; 参数注入 你可以轻松地编写通用Java委托类，该类可以通过BPMN 2稍后配置.</description>
     </item>
     
     <item>
@@ -1151,8 +1151,8 @@ Response Codes  Code Media type Description   204 application/json Request succe
       
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/spring-boot-integration/version-compatibility/</guid>
       <description>每个版本的Camunda Spring Boot Starter都与Camunda Platform和Spring Boot的特定版本绑定。 Camunda只推荐（并支持）这些默认组合。 其他组合在生产中使用前必须经过全面测试。
-小心从7.13.0版本开始，Camunda Platform和其兼容的Spring Boot Starter总是共享相同的版本。 而且，Spring Boot Starter中使用的Camunda Platform版本也不必再被重写了。只需选择与你想使用的Camunda Platform版本相近的Starter版本即可。
- Spring Boot Starter 版本 Camunda Platform 版本 Spring Boot 版本   1.0.0&amp;#42; 7.3.0 1.2.5.RELEASE   1.1.0&amp;#42; 7.4.0 1.3.1.RELEASE   1.2.0&amp;#42; 7.5.0 1.3.5.RELEASE   1.2.1&amp;#42; 7.5.0 1.3.6.RELEASE   1.3.0&amp;#42; 7.5.0 1.3.7.RELEASE   2.0.0&amp;#42;&amp;#42; 7.6.0 1.4.2.RELEASE   2.1.x&amp;#42;&amp;#42; 7.6.0 1.5.3.RELEASE   2.2.x&amp;#42;&amp;#42; 7.7.0 1.5.6.RELEASE   2.</description>
+小心 从7.13.0版本开始，Camunda Platform和其兼容的Spring Boot Starter总是共享相同的版本。 而且，Spring Boot Starter中使用的Camunda Platform版本也不必再被重写了。只需选择与你想使用的Camunda Platform版本相近的Starter版本即可。
+  Spring Boot Starter 版本 Camunda Platform 版本 Spring Boot 版本   1.0.0&amp;#42; 7.3.0 1.2.5.RELEASE   1.1.0&amp;#42; 7.4.0 1.3.1.RELEASE   1.2.0&amp;#42; 7.5.0 1.3.5.RELEASE   1.2.1&amp;#42; 7.5.0 1.3.6.RELEASE   1.3.0&amp;#42; 7.5.0 1.3.7.RELEASE   2.0.0&amp;#42;&amp;#42; 7.6.0 1.4.2.RELEASE   2.1.x&amp;#42;&amp;#42; 7.6.0 1.5.3.RELEASE   2.2.x&amp;#42;&amp;#42; 7.7.0 1.5.6.RELEASE   2.</description>
     </item>
     
     <item>
@@ -1163,7 +1163,7 @@ Response Codes  Code Media type Description   204 application/json Request succe
       <guid>http://camunda-cn.shaochenfeng.com/reference/cmmn11/grouping-tasks/stage/</guid>
       <description>A stage can contain other plan items like a human task, a process task, a case task or another stage. Stages may be considered &amp;lsquo;episodes&amp;rsquo; of a case. However, stages are not necessarily planned sequentially but can also be active in parallel.
 If a stage is collapsed, only its name and a plus sign are displayed:
-If a stage is expanded, its plan items are displayed within its boundaries:</description>
+ If a stage is expanded, its plan items are displayed within its boundaries:</description>
     </item>
     
     <item>
@@ -1218,7 +1218,7 @@ Parameters Request Body A JSON object with the following properties:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/webapps/admin/user-management/</guid>
-      <description>Users Menu The Users menu allows you to add, edit and delete user profiles. Furthermore, you can manage group membership and change passwords.
+      <description>Users Menu   The Users menu allows you to add, edit and delete user profiles. Furthermore, you can manage group membership and change passwords.
 My Profile By clicking on your user name in the Users menu, you can access the My Profile menu. In the My Profile menu you can edit your personal account settings, such as:
  Profile: Change your name or email address. You cannot change the user account ID!</description>
     </item>
@@ -1240,7 +1240,7 @@ Start a Process To start a process instance via Tasklist, click on Start process
       
       <guid>http://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/descriptors/bpm-platform-xml/</guid>
       <description>The bpm-platform.xml file is part of the Camunda Platform distribution and can be used for configuration of process engines and the job executor. It is used to configure the Camunda Platform in the following distributions:
- Apache Tomcat IBM WebSphere Application Server Oracle WebLogic Application Server  JBoss Application Server 7/WildflyThe bpm-platform.xml file is not used in the Camunda Platform distribution for JBoss Application Server 7 / Wildfly. There, the configuration is added to the central application server configuration file (standalone.</description>
+ Apache Tomcat IBM WebSphere Application Server Oracle WebLogic Application Server  JBoss Application Server 7/Wildfly The bpm-platform.xml file is not used in the Camunda Platform distribution for JBoss Application Server 7 / Wildfly. There, the configuration is added to the central application server configuration file (standalone.</description>
     </item>
     
     <item>
@@ -1256,8 +1256,8 @@ JDK 下载地址
  社区版下载地址 企业版下载地址  也可以通过Spring Boot 和 Docker的方式运行Camunda平台。
 整合包 如果你想使用 分布式流程引擎 或者想快速了解Camunda，不想做任何额外的设置或安装步骤，可以下载整合包。
 整合包捆绑包括了：
- 配置好的 分布式流程引擎, 网络应用程序 (Tasklist, Cockpit, Admin), Rest Api 接口, 容器/应用服务器本身.  服务器/容器如果你下载了开源应用服务器/容器的整合包，那么容器本身也会包括在内。例如，如果你下载tomcat发行版，tomcat本身就包括在内，Camunda二进制文件（流程引擎和网络应用程序）也会预先安装在容器中。而Oracle WebLogic和IBM WebSphere的下载则不会这样的。这些包是不包括应用服务器本身。
-Wildfly应用程序服务器Wildfly应用服务器是作为档案的一部分提供的，作为一种方便。 关于源代码的副本、版权声明以及其他相关信息，请参见https://github.com/wildfly/wildfly。如果你[联系我们的开源合规团队](https://docs.camunda.org/manual/latest/introduction/licenses/#contact)，我们也会向你提供一份源代码的副本。 在您下载存档后三年内的任何时候（我们可能会对此收取象征性的费用）。Wildfly应用服务器的版权属于 copyright © JBoss, Home of Professional Open Source, 2010, Red Hat Middleware LLC [.</description>
+ 配置好的 分布式流程引擎, 网络应用程序 (Tasklist, Cockpit, Admin), Rest Api 接口, 容器/应用服务器本身.  服务器/容器 如果你下载了开源应用服务器/容器的整合包，那么容器本身也会包括在内。例如，如果你下载tomcat发行版，tomcat本身就包括在内，Camunda二进制文件（流程引擎和网络应用程序）也会预先安装在容器中。而Oracle WebLogic和IBM WebSphere的下载则不会这样的。这些包是不包括应用服务器本身。
+ Wildfly应用程序服务器 Wildfly应用服务器是作为档案的一部分提供的，作为一种方便。 关于源代码的副本、版权声明以及其他相关信息，请参见https://github.com/wildfly/wildfly。如果你[联系我们的开源合规团队](https://docs.camunda.org/manual/latest/introduction/licenses/#contact)，我们也会向你提供一份源代码的副本。 在你下载存档后三年内的任何时候（我们可能会对此收取象征性的费用）。Wildfly应用服务器的版权属于 copyright © JBoss, Home of Professional Open Source, 2010, Red Hat Middleware LLC [.</description>
     </item>
     
     <item>
@@ -1268,7 +1268,7 @@ JDK 下载地址
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/database/database-schema/</guid>
       <description>流程引擎的数据库由多个表组成。 表的名称都以ACT开头的。后面是说明表的用途的两个字符标识。这个用途标志也将与服务API大致匹配。
  ACT_RE_*: RE代表资源库。带有这个前缀的表包含 &amp;ldquo;静态 &amp;ldquo;信息，如流程定义和流程资源（图像、规则等）。 ACT_RU_*: RU代表运行时。包含流程实例、用户任务、变量、作业等的运行时数据。引擎只在流程实例执行期间存储运行时数据，并在流程实例结束时删除记录。这使运行时表保持小而快。 ACT_ID_*: ID代表身份信息。这些表包含身份信息有用户、组等。 ACT_HI_*: HI代表历史。这些是包含历史数据的表，如过去的流程实例、变量、任务等。 ACT_GE_*: 一般数据，在各种使用情况下使用。  流程引擎的主要表是流程定义、执行、任务、变量和事件订阅的实体。它们的关系显示在下面的UML模型中：
-流程定义 (ACT_RE_PROCDEF) ACT RE Procdef 表包含所有已部署的流程定义。它包括有版本详细信息，资源名称或暂停状态等信息。
+  流程定义 (ACT_RE_PROCDEF) ACT RE Procdef 表包含所有已部署的流程定义。它包括有版本详细信息，资源名称或暂停状态等信息。
 执行 (ACT_RU_EXECUTION) ACT_RU_EXECUTION 表包含所有当前的执行。它包括有流程定义，父执行，业务密钥，当前活动和关于执行状态的不同元数据的信息。
 任务 (ACT_RU_TASK) ACT_RU_TASK 表包含所有正在运行的流程实例的所有执行中的任务。它包括有相应的流程实例，执行以及元数据等信息，例如创建时间，受让人或截止日期。
 变量 (ACT_RU_VARIABLE) ACT_RU_VARIABLE 表包含所有当前设置的流程或任务变量。它包括变量的名称、类型和值以及相应流程实例或任务的信息。
@@ -1287,7 +1287,7 @@ List&amp;lt;SchemaLogEntry&amp;gt; entries = managementService.createSchemaLogQu
       <description>你有许多选项来配置并创建一个流程引擎，这取决于你打算使用一个应用管理流程引擎的还是一个共享的、容器管理流程引擎。
 应用程序管理流程引擎 你将流程引擎为应用程序的一部分。可以配置以下方式来配置它：
  通过Java API以编程方式管理 通过XML配置 通过 Spring  共享的，容器化管理流程引擎 你选择的容器（例如Tomcat、JBoss或IBM WebSphere）为你管理流程引擎。配置是以一种特定的容器方式进行的，详情见运行时容器集成.
-ProcessEngineConfiguration Bean （流程引擎配置Bean） Camunda引擎使用 ProcessEngineConfiguration bean来配置和构建一个独立的流程引擎。它有多个可用的子类，可以用来定义流程引擎的配置。这些类代表不同的环境，并相应地设置默认值。最好的做法是选择与你的环境相匹配（大部分）的类，以尽量减少配置引擎所需的属性数量。目前有以下几个类。
+ProcessEngineConfiguration Bean （流程引擎配置Bean） Camunda引擎使用 ProcessEngineConfiguration bean 来配置和构建一个独立的流程引擎。它有多个可用的子类，可以用来定义流程引擎的配置。这些类代表不同的环境，并相应地设置默认值。最好的做法是选择与你的环境相匹配（大部分）的类，以尽量减少配置引擎所需的属性数量。目前有以下几个类。
  org.camunda.bpm.engine.impl.cfg.StandaloneProcessEngineConfiguration
 流程引擎是以独立的方式使用的。引擎本身将负责处理事务。默认情况下，只有在引擎启动时才会检查数据库（如果没有数据库模式或模式版本不正确，会抛出一个异常）。 org.camunda.bpm.engine.impl.cfg.StandaloneInMemProcessEngineConfiguration
 这是一个用于单元测试的工具类。引擎本身将负责处理事务。默认使用H2内存数据库。该数据库将在引擎启动和关闭时被创建和删除。当使用这个时，可能不需要额外的配置（除了，当使用作业执行器（job executor）或邮件功能时）。 org.camunda.bpm.engine.spring.SpringProcessEngineConfiguration
@@ -1326,10 +1326,10 @@ ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine()  camunda.
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/webapps/admin/extend/plugins/</guid>
-      <description>Plugin CompatibilityPlease note that the code of Admin plugins might need to be migrated when updating Camunda Platform to a higher version (e.g. CSS styles).
-Admin uses the concept of plugins to add own functionality without having to extend or hack the Admin web application.
+      <description>Plugin Compatibility Please note that the code of Admin plugins might need to be migrated when updating Camunda Platform to a higher version (e.g. CSS styles).
+ Admin uses the concept of plugins to add own functionality without having to extend or hack the Admin web application.
 For further details about the concepts behind plugins, please read the Cockpit plugins section.
-Difference between Cockpit and Admin plugins: To publish the plugin with Admin, its class name must be put into a file called org.</description>
+Difference between Cockpit and Admin plugins:  To publish the plugin with Admin, its class name must be put into a file called org.</description>
     </item>
     
     <item>
@@ -1401,8 +1401,8 @@ Java Dependencies logback-classic@1.2.3(EPL 1.0)Copyright (C) 1999-2015, QOS.ch.
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/webapps/cockpit/cmmn/case-instance-view/</guid>
-      <description>企业版特征Please note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
-查看 Camunda 企业版主页了解更多信息以及获得免费试用版。Open the case instance view by selecting a case instance from the case definition view instance list. This view allows you to drill down into a single case instance and explore its activities as well as the variables, tasks, etc.</description>
+      <description>企业版特征 Please note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
+ 查看 Camunda 企业版主页 了解更多信息以及获得 免费试用版。    Open the case instance view by selecting a case instance from the case definition view instance list. This view allows you to drill down into a single case instance and explore its activities as well as the variables, tasks, etc.</description>
     </item>
     
     <item>
@@ -1411,8 +1411,8 @@ Java Dependencies logback-classic@1.2.3(EPL 1.0)Copyright (C) 1999-2015, QOS.ch.
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/webapps/cockpit/extend/plugins/</guid>
-      <description>Plugin CompatibilityPlease note that we updated the frontend plugin interface with Camunda Platform Runtime 7.14. Plugins written for Camunda Platform Runtime 7.13 and earlier might no longer work with Camunda Platform Runtime 7.14. Checkout the update guide for more details.
-Cockpit defines a plugin concept to add own functionality without being forced to extend or hack the Cockpit web application. You can add plugins at various plugin points, e.</description>
+      <description>Plugin Compatibility Please note that we updated the frontend plugin interface with Camunda Platform Runtime 7.14. Plugins written for Camunda Platform Runtime 7.13 and earlier might no longer work with Camunda Platform Runtime 7.14. Checkout the update guide for more details.
+ Cockpit defines a plugin concept to add own functionality without being forced to extend or hack the Cockpit web application. You can add plugins at various plugin points, e.</description>
     </item>
     
     <item>
@@ -1505,7 +1505,7 @@ An output clause is represented by an output element inside a decisionTable XML 
       
       <guid>http://camunda-cn.shaochenfeng.com/webapps/cockpit/dmn/decision-instance-view/</guid>
       <description>On the decision instance page you find the table or literal expression of the decision that was executed as well as the values for the input variables and the decision result.
-The input and output values for this decision instance are shown directly on the table in the corresponding cells as well as in the Inputs and Outputs tabs below the table. Complex variables like Objects, Files and Bytes are not displayed on the table.</description>
+  The input and output values for this decision instance are shown directly on the table in the corresponding cells as well as in the Inputs and Outputs tabs below the table. Complex variables like Objects, Files and Bytes are not displayed on the table.</description>
     </item>
     
     <item>
@@ -1591,8 +1591,8 @@ Response Codes  Code Media type Description   204 application/json Request succe
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/modeler/dmn/</guid>
-      <description>Quickstart Create new DMN Decision Requirement Diagram To start modeling, create a new DMN 1.3 diagram for the Camunda Platform by selecting Create diagram &amp;gt; Create new DMN diagram (Camunda Platform) in the top-level menu.
-Start Modeling Now you can start to create a DMN 1.3 model. Add the desired elements from the palette on the left hand side by dragging and dropping them onto the diagram canvas.</description>
+      <description>Quickstart Create new DMN Decision Requirement Diagram   To start modeling, create a new DMN 1.3 diagram for the Camunda Platform by selecting Create diagram &amp;gt; Create new DMN diagram (Camunda Platform) in the top-level menu.
+Start Modeling   Now you can start to create a DMN 1.3 model. Add the desired elements from the palette on the left hand side by dragging and dropping them onto the diagram canvas.</description>
     </item>
     
     <item>
@@ -1601,8 +1601,8 @@ Start Modeling Now you can start to create a DMN 1.3 model. Add the desired el
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/dmn-engine/evaluate-decisions/</guid>
-      <description>The DMN engine interfaceexposes methods for parsing and evaluating DMN Decisions.
-Parse Decisions Decisions can be parsed from an InputStream or transformed from a DmnModelInstance.
+      <description>The DMN engine interface exposes methods for parsing and evaluating DMN Decisions.
+Parse Decisions Decisions can be parsed from an InputStream or transformed from a DmnModelInstance .
 This example shows how to parse a decision from an input stream:
 // create a default DMN engine DmnEngine dmnEngine = DmnEngineConfiguration .createDefaultDmnEngineConfiguration() .buildEngine(); InputStream inputStream = ... // parse all decision from the input stream List&amp;lt;DmnDecision&amp;gt; decisions = dmnEngine.parseDecisions(inputStream);  The next example uses the DMN Model API to first create a DmnModelInstance and then transform the decisions:</description>
     </item>
@@ -1634,8 +1634,8 @@ historyTimeToLive  Description  The attribute specifies the history time to live
       
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/dmn-engine/feel/custom-functions/</guid>
       <description>Camunda Platform provides a wrapper for the FEEL Scala Engine to implement Custom Functions, which can be called in expressions and unary tests.
-Custom Function BehaviorPlease note that the Custom Function Mechanism of the Standalone FEEL Scala Engine might behave differently.
-You can add Custom Functions to the Process Engine (or the Standalone DMN Engine) only programmatically through a Process Engine Plugin. Read more about it in the section about how to Register Custom Function Providers.</description>
+Custom Function Behavior Please note that the Custom Function Mechanism of the Standalone FEEL Scala Engine might behave differently.
+ You can add Custom Functions to the Process Engine (or the Standalone DMN Engine) only programmatically through a Process Engine Plugin. Read more about it in the section about how to Register Custom Function Providers.</description>
     </item>
     
     <item>
@@ -1644,8 +1644,8 @@ Custom Function BehaviorPlease note that the Custom Function Mechanism of the S
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/reference/dmn/feel/legacy/language-elements/</guid>
-      <description>Heads Up!This page provides information on the legacy FEEL Engine, that was used before the current Scala-based FEEL Engine was integrated into the Camunda Platform.
-The Camunda DMN engine supports FEEL for input entries. The FEEL term for expression in input entries are simple unary tests. These simple unary tests test an input value against an expression and return either true if the test is satisfied or false otherwise.</description>
+      <description>Heads Up! This page provides information on the legacy FEEL Engine, that was used before the current Scala-based FEEL Engine was integrated into the Camunda Platform.
+ The Camunda DMN engine supports FEEL for input entries. The FEEL term for expression in input entries are simple unary tests. These simple unary tests test an input value against an expression and return either true if the test is satisfied or false otherwise.</description>
     </item>
     
     <item>
@@ -1993,8 +1993,8 @@ Parameters Query Parameters  Name Description   taskId Filter by task id.   task
       
       <guid>http://camunda-cn.shaochenfeng.com/reference/rest/task/get-query/</guid>
       <description>Queries for tasks that fulfill a given filter. The size of the result set can be retrieved by using the Get Task Count method.
-Security ConsiderationThere are several query parameters (such as assigneeExpression) for specifying an EL expression. These are disabled by default to prevent remote code execution. See the section on security considerations for custom code in the user guide for details.
-Method GET /task
+Security Consideration There are several query parameters (such as assigneeExpression) for specifying an EL expression. These are disabled by default to prevent remote code execution. See the section on security considerations for custom code in the user guide for details.
+ Method GET /task
 Parameters Query Parameters  Name Description   processInstanceId Restrict to tasks that belong to process instances with the given id.</description>
     </item>
     
@@ -2059,7 +2059,7 @@ Parameters Query Parameters  Name Description   variableName Filter by variable 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/webapps/admin/group-management/</guid>
-      <description>Groups Menu The Groups menu allows you to add, edit and delete user groups. Besides that you can view the members of groups</description>
+      <description>Groups Menu   The Groups menu allows you to add, edit and delete user groups. Besides that you can view the members of groups</description>
     </item>
     
     <item>
@@ -2081,7 +2081,7 @@ XSS Protection If the XSS Protection header is enabled some cross-site scripting
       
       <guid>http://camunda-cn.shaochenfeng.com/installation/full/wls/manual/</guid>
       <description>This section will describe how you can install the Camunda Platform and its components on Oracle WebLogic.
-Reading this GuideThis guide uses a number of variables to denote common path names and constants.
+Reading this Guide This guide uses a number of variables to denote common path names and constants.
  $WLS_DOMAIN_HOME points to the Oracle WebLogic application server domain directory (typically something like /opt/oracle/WebLogic/domains/mydomain). $PLATFORM_VERSION denotes the version of the Camunda Platform you want to or have installed, e.g. 7.X.Y. $WLS_DISTRIBUTION represents the downloaded Camunda Platform distribution for the Oracle WebLogic Application Server, e.</description>
     </item>
     
@@ -2092,7 +2092,7 @@ Reading this GuideThis guide uses a number of variables to denote common path n
       
       <guid>http://camunda-cn.shaochenfeng.com/installation/full/jboss/manual/</guid>
       <description>This document describes the installation of Camunda Platform and its components on a vanilla JBoss EAP 6 or vanilla Wildfly Application Server / JBoss EAP 7.
-Reading this GuideThis guide uses a number of variables to denote common path names and constants: $JBOSS_HOME/$WILDFLY_HOME points to the JBoss/Wildfly application server main directory. $PLATFORM_VERSION denotes the version of the Camunda Platform you want to install or already have installed, e.g. 7.</description>
+Reading this Guide This guide uses a number of variables to denote common path names and constants: $JBOSS_HOME/$WILDFLY_HOME points to the JBoss/Wildfly application server main directory. $PLATFORM_VERSION denotes the version of the Camunda Platform you want to install or already have installed, e.g. 7.</description>
     </item>
     
     <item>
@@ -2102,7 +2102,7 @@ Reading this GuideThis guide uses a number of variables to denote common path n
       
       <guid>http://camunda-cn.shaochenfeng.com/installation/full/tomcat/manual/</guid>
       <description>This section describes how you can install the Camunda Platform and its components on a vanilla Apache Tomcat, if you are not able to use the pre-packaged Tomcat distribution. In addition, download a Tomcat distribution or Enterprise Edition Tomcat distribution to fetch the required Camunda modules.
-Reading the GuideThroughout this guide we will use a number of variables to denote common path names and constants:
+Reading the Guide Throughout this guide we will use a number of variables to denote common path names and constants:
  $TOMCAT_HOME points to the main directory of the tomcat server.</description>
     </item>
     
@@ -2113,7 +2113,7 @@ Reading the GuideThroughout this guide we will use a number of variables to den
       
       <guid>http://camunda-cn.shaochenfeng.com/installation/full/was/manual/</guid>
       <description>This section will describe how you can install the Camunda Platform and its components on an IBM WebSphere.
-Reading this GuideThroughout this guide we will use a number of variables to denote common path names and constants.
+Reading this Guide Throughout this guide we will use a number of variables to denote common path names and constants.
  $WAS_HOME: points to the IBM WebSphere application server main directory (typically something like /opt/IBM/WebSphere/AppServer). $PLATFORM_VERSION denotes the version of the Camunda Platform you want to install or already have installed, e.</description>
     </item>
     
@@ -2173,8 +2173,8 @@ ProcessInstance processInstance = runtimeService.startProcessInstanceByKey(&#39;
       
       <guid>http://camunda-cn.shaochenfeng.com/update/patch-level/</guid>
       <description>This guide explains how to perform a patch level update. The patch level is the version number &amp;ldquo;after the second dot&amp;rdquo;. Example: update from 7.14.2 to 7.14.3.
-企业版特征Please note that Patch Level Updates are only provided to enterprise customers, they are not available in the community edition.
-查看 Camunda 企业版主页了解更多信息以及获得免费试用版。Reading this GuideIn this guide, a number of variables are used to denote common path names and constants:</description>
+企业版特征 Please note that Patch Level Updates are only provided to enterprise customers, they are not available in the community edition.
+ 查看 Camunda 企业版主页 了解更多信息以及获得 免费试用版。  Reading this Guide In this guide, a number of variables are used to denote common path names and constants:</description>
     </item>
     
     <item>
@@ -2203,7 +2203,7 @@ The following descriptions cover the CMMN lifecycles as supported by the Camunda
       
       <guid>http://camunda-cn.shaochenfeng.com/reference/cmmn11/tasks/process-task/</guid>
       <description>A process task can be used to invoke a BPMN 2.0 process from a case.
-A process task is a regular task that requires an attribute processRef which references a process definition by its key. Such a process task can be defined as follows:
+ A process task is a regular task that requires an attribute processRef which references a process definition by its key. Such a process task can be defined as follows:
 &amp;lt;processTask id=&amp;quot;checkCreditProcess&amp;quot; name=&amp;quot;Check credit&amp;quot; processRef=&amp;quot;checkCreditProcess&amp;quot; /&amp;gt;  The referenced process definition is resolved at runtime. This means that the process can be deployed independently from the calling case, if needed.</description>
     </item>
     
@@ -2214,7 +2214,7 @@ The following descriptions cover the CMMN lifecycles as supported by the Camunda
       
       <guid>http://camunda-cn.shaochenfeng.com/reference/cmmn11/markers/required-rule/</guid>
       <description>Can be used with: Task, Stage and Milestone
-A plan item may be required, meaning that it has to reach an end-like state before the containing stage can complete. Whether a plan item is required can be specified by a required rule.
+ A plan item may be required, meaning that it has to reach an end-like state before the containing stage can complete. Whether a plan item is required can be specified by a required rule.
 This rule is evaluated when the milestone, stage or task is instantiated and transitions to the state AVAILABLE, and its result value of type boolean is maintained throughout the remainder of the case instance.</description>
     </item>
     
@@ -2224,7 +2224,7 @@ This rule is evaluated when the milestone, stage or task is instantiated and tra
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/update/rolling-update/</guid>
-      <description>Limits for Rolling UpdatesRolling updates are not possible prior to Version 7.5. Or in other words: the first update that can be done in the way described on this page is the update from version 7.5.x to 7.6.y.
+      <description>Limits for Rolling Updates Rolling updates are not possible prior to Version 7.5. Or in other words: the first update that can be done in the way described on this page is the update from version 7.5.x to 7.6.y.
 Also note that it is only possible to update from one minor version to the next. For example, it is possible to update from 7.5.3 to 7.6.2 in a rolling fashion but it is not possible to update from 7.</description>
     </item>
     
@@ -2258,7 +2258,7 @@ SoapHttpConnector soap = Connectors.getConnector(SoapHttpConnector.ID);  The SOA
       <guid>http://camunda-cn.shaochenfeng.com/reference/bpmn20/tasks/send-task/</guid>
       <description>发送任务用于发送消息。在Camunda，这是通过调用Java代码来完成的。
 发送任务具有与服务任务相同的行为。
-&amp;lt;sendTask id=&amp;quot;sendTask&amp;quot; camunda:class=&amp;quot;org.camunda.bpm.MySendTaskDelegate&amp;quot; /&amp;gt;  Camunda Extensions  属性  camunda:asyncBefore, camunda:asyncAfter, camunda:class, camunda:delegateExpression, camunda:exclusive, camunda:expression, camunda:jobPriority, camunda:resultVariable, camunda:topic, camunda:type, camunda:taskPriority    扩展元素  camunda:failedJobRetryTimeCycle, camunda:field, camunda:connector, camunda:inputOutput    约束  One of the attributes camunda:class, camunda:delegateExpression, camunda:type or camunda:expression is mandatory      The attribute camunda:resultVariable can only be used in combination with the camunda:expression attribute      The camunda:exclusive attribute is only evaluated if the attribute camunda:asyncBefore or camunda:asyncAfter is set to true      The attribute camunda:topic can only be used when the camunda:type attribute is set to external.</description>
+ &amp;lt;sendTask id=&amp;quot;sendTask&amp;quot; camunda:class=&amp;quot;org.camunda.bpm.MySendTaskDelegate&amp;quot; /&amp;gt;  Camunda Extensions  属性  camunda:asyncBefore, camunda:asyncAfter, camunda:class, camunda:delegateExpression, camunda:exclusive, camunda:expression, camunda:jobPriority, camunda:resultVariable, camunda:topic, camunda:type, camunda:taskPriority    扩展元素  camunda:failedJobRetryTimeCycle, camunda:field, camunda:connector, camunda:inputOutput    约束  One of the attributes camunda:class, camunda:delegateExpression, camunda:type or camunda:expression is mandatory      The attribute camunda:resultVariable can only be used in combination with the camunda:expression attribute      The camunda:exclusive attribute is only evaluated if the attribute camunda:asyncBefore or camunda:asyncAfter is set to true      The attribute camunda:topic can only be used when the camunda:type attribute is set to external.</description>
     </item>
     
     <item>
@@ -2277,7 +2277,7 @@ When passing the DataSource to the SpringProcessEngineConfiguration (using prope
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/webapps/admin/tenant-management/</guid>
-      <description>Tenants Menu The Tenants menu allows you to add, edit and delete tenants. Besides that you can view which user or group is a member of a tenant.
+      <description>Tenants Menu   The Tenants menu allows you to add, edit and delete tenants. Besides that you can view which user or group is a member of a tenant.
 Create a new tenant All you have to do to create a new tenant is:
  Click the Create new tenant button Type the Tenant Id and Tenant Name in the corresponding input fields Click the Create new Tenant button   This creates a new tenant.</description>
     </item>
@@ -2384,7 +2384,7 @@ Xml Schema Namespace The namespace for the processes.xml file is http://www.camu
       
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-api/</guid>
       <description>服务API Java API是与引擎互动的最常见方式。中心起点是ProcessEngine，它可以通过几种方式创建，如配置部分所述。从ProcessEngine中，你可以获得包含工作流/BPM方法的各种服务。ProcessEngine和服务对象是线程安全的。所以你可以为整个服务器保留对其中一个对象的引用。
-ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine(); RepositoryService repositoryService = processEngine.getRepositoryService(); RuntimeService runtimeService = processEngine.getRuntimeService(); TaskService taskService = processEngine.getTaskService(); IdentityService identityService = processEngine.getIdentityService(); FormService formService = processEngine.getFormService(); HistoryService historyService = processEngine.getHistoryService(); ManagementService managementService = processEngine.getManagementService(); FilterService filterService = processEngine.getFilterService(); ExternalTaskService externalTaskService = processEngine.getExternalTaskService(); CaseService caseService = processEngine.getCaseService(); DecisionService decisionService = processEngine.getDecisionService();  ProcessEngines.getDefaultProcessEngine() 将在第一次调用时初始化并建立一个流程引擎，此后总是返回相同的流程引擎。所有流程引擎的正确创建和关闭可以通过ProcessEngines.init()和ProcessEngines.destroy()完成。
+  ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine(); RepositoryService repositoryService = processEngine.getRepositoryService(); RuntimeService runtimeService = processEngine.getRuntimeService(); TaskService taskService = processEngine.getTaskService(); IdentityService identityService = processEngine.getIdentityService(); FormService formService = processEngine.getFormService(); HistoryService historyService = processEngine.getHistoryService(); ManagementService managementService = processEngine.getManagementService(); FilterService filterService = processEngine.getFilterService(); ExternalTaskService externalTaskService = processEngine.getExternalTaskService(); CaseService caseService = processEngine.getCaseService(); DecisionService decisionService = processEngine.getDecisionService();  ProcessEngines.getDefaultProcessEngine() 将在第一次调用时初始化并建立一个流程引擎，此后总是返回相同的流程引擎。所有流程引擎的正确创建和关闭可以通过ProcessEngines.init()和ProcessEngines.destroy()完成。
 ProcessEngines类将扫描所有camunda.cfg.xml和activiti.cfg.xml文件。
 对于所有camunda.cfg.xml文件，流程引擎将以典型的方式建立。
 ProcessEngineConfiguration .createProcessEngineConfigurationFromInputStream(inputStream) .buildProcessEngine()  对于所有的activiti.cfg.xml文件，流程引擎将以Spring的方式构建：首先创建Spring应用上下文，然后从该应用上下文中获得流程引擎。
@@ -2405,7 +2405,7 @@ DefaultProcessEngineConfiguration 设置流程引擎的名称，并自动添加�
 DefaultDatasourceConfiguration 配置Camunda数据源并启用事务集成。 默认情况下，主 DataSource 和 PlatformTransactionManager beans 通过流程引擎配置连接。
 如果要配置多个数据源 而且不想将 @Primary 用于使用流程引擎，那么你可以使用名称创建单独的数据源 camundaBpmDataSource 这将由Camunda自动连接。
 @Bean @Primary @ConfigurationProperties(prefix=&amp;quot;datasource.primary&amp;quot;) public DataSource primaryDataSource() { return DataSourceBuilder.create().build(); } @Bean(name=&amp;quot;camundaBpmDataSource&amp;quot;) @ConfigurationProperties(prefix=&amp;quot;datasource.secondary&amp;quot;) public DataSource secondaryDataSource() { return DataSourceBuilder.create().build(); }  如果你不想使用@Primary事务管理器，可以创建一个单独的事务管理器，名称为camundaBpmTransactionManager，它将与用于Camunda的数据源（@Primary或camundaBpmDataSource）连接。
-@Bean @Primary public PlatformTransactionManager primaryTransactionManager() { return new JpaTransactionManager(); } @Bean(name=&amp;quot;camundaBpmTransactionManager&amp;quot;) public PlatformTransactionManager camundaTransactionManager(@Qualifier(&amp;quot;camundaBpmDataSource&amp;quot;) DataSource dataSource) { return new DataSourceTransactionManager(dataSource); }  数据源和事务管理器的beans必须匹配，即确保事务管理器实际管理着Camunda数据源。如果不是这样，流程引擎将对数据源连接使用自动提交模式，可能会导致数据库中的不一致。</description>
+@Bean @Primary public PlatformTransactionManager primaryTransactionManager() { return new JpaTransactionManager(); } @Bean(name=&amp;quot;camundaBpmTransactionManager&amp;quot;) public PlatformTransactionManager camundaTransactionManager(@Qualifier(&amp;quot;camundaBpmDataSource&amp;quot;) DataSource dataSource) { return new DataSourceTransactionManager(dataSource); }   数据源和事务管理器的beans必须匹配，即确保事务管理器实际管理着Camunda数据源。如果不是这样，流程引擎将对数据源连接使用自动提交模式，可能会导致数据库中的不一致。</description>
     </item>
     
     <item>
@@ -2438,9 +2438,9 @@ Camunda 支持 CMMN 的 1.1 版本。
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/modeler/forms/</guid>
-      <description>Support for Camunda FormsThe Camunda Forms feature was added with the 4.7.0 release of the Camunda Modeler. They can be used within BPMN diagrams running on Camunda Platform version 7.15.0 or later.
+      <description>Support for Camunda Forms The Camunda Forms feature was added with the 4.7.0 release of the Camunda Modeler. They can be used within BPMN diagrams running on Camunda Platform version 7.15.0 or later.
 Please note that the initial release of Camunda Forms only includes a first minimal feature set, which will be expanded with upcoming versions.
-Overview The Camunda Forms feature allows you to easily design and configure forms.</description>
+ Overview The Camunda Forms feature allows you to easily design and configure forms.</description>
     </item>
     
     <item>
@@ -2449,9 +2449,9 @@ Please note that the initial release of Camunda Forms only includes a first mini
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/modeler/element-templates/</guid>
-      <description>Using Element TemplatesElement Templates can be used with Camunda Modeler version 1.0 and higher. They are currently available in BPMN diagrams only.
-Overview Element templates are a way to extend the Camunda Modeler with domain specific diagram elements such as service and user tasks.
-If applicable, element templates can be assigned to a diagram element via the properties panel. Once applied, they configure the diagram element with pre-defined values for BPMN properties, input/output mappings as well as extension properties.</description>
+      <description>Using Element Templates Element Templates can be used with Camunda Modeler version 1.0 and higher. They are currently available in BPMN diagrams only.
+ Overview Element templates are a way to extend the Camunda Modeler with domain specific diagram elements such as service and user tasks.
+  If applicable, element templates can be assigned to a diagram element via the properties panel. Once applied, they configure the diagram element with pre-defined values for BPMN properties, input/output mappings as well as extension properties.</description>
     </item>
     
     <item>
@@ -2461,7 +2461,7 @@ Please note that the initial release of Camunda Forms only includes a first mini
       
       <guid>http://camunda-cn.shaochenfeng.com/update/activiti/</guid>
       <description>Migrating an existing application from Activiti &amp;lt;= 5.11 (or Camunda fox 6.x - see below) to Camunda Platform 7.0 is straightforward. This page describes the necessary steps. Once done with the migration, the minor version update guides show how to update from 7.0 to the latest Camunda version.
-Getting HelpIf you are on a more recent Activiti version or if you have any trouble migrating, ask for assistance in the Forum or turn to our Consulting services.</description>
+Getting Help If you are on a more recent Activiti version or if you have any trouble migrating, ask for assistance in the Forum or turn to our Consulting services.</description>
     </item>
     
     <item>
@@ -2494,8 +2494,8 @@ Furthermore, declare the dependency on the JNDI binding inside the WEB-INF/web.<
       <guid>http://camunda-cn.shaochenfeng.com/webapps/admin/authorization-management/</guid>
       <description>Manage authorizations for a variety of resources (e.g., Applications, Groups, Filters). In the following sections you will learn how to use an administrator account with the help of some simple use cases.
 See Authorization Service for more information about Authorizations.
-Accessing the Authorization Management menuThe Authorization Management menu is only usable by users which are granted with Read permission for authorizations.
-Grant Basic Permissions In this use case we&amp;rsquo;ll grant some basic permissions.</description>
+Accessing the Authorization Management menu The Authorization Management menu is only usable by users which are granted with Read permission for authorizations.
+ Grant Basic Permissions In this use case we&amp;rsquo;ll grant some basic permissions.</description>
     </item>
     
     <item>
@@ -2505,7 +2505,7 @@ Accessing the Authorization Management menuThe Authorization Management menu is
       
       <guid>http://camunda-cn.shaochenfeng.com/reference/cmmn11/markers/auto-complete/</guid>
       <description>Can be used with: Stage, CasePlanModel
-The attribute autoComplete controls the completion of a stage instance. The following table describes the completion criteria of a stage instance based on the autoComplete property.
+ The attribute autoComplete controls the completion of a stage instance. The following table describes the completion criteria of a stage instance based on the autoComplete property.
  autoComplete = true: There are no children in the ACTIVE state, and all required (see Required Rule) children are COMPLETED, DISABLED or TERMINATED. autoComplete = false: There are no children in the ACTIVE state, and  all children are COMPLETED, DISABLED or TERMINATED, or on manual completion using CaseService#completeCaseExecution, all required (see Required Rule) children are COMPLETED, DISABLED or TERMINATED.</description>
     </item>
     
@@ -2525,7 +2525,7 @@ Accessing the Authorization Management menuThe Authorization Management menu is
       
       <guid>http://camunda-cn.shaochenfeng.com/reference/cmmn11/tasks/case-task/</guid>
       <description>A case task can be used to call another CMMN case.
-A case task is a regular task that requires a caseRef attribute that references a case definition by its key. Such a case task can be defined as follows:
+ A case task is a regular task that requires a caseRef attribute that references a case definition by its key. Such a case task can be defined as follows:
 &amp;lt;caseTask id=&amp;quot;checkCreditCase&amp;quot; name=&amp;quot;Check credit&amp;quot; caseRef=&amp;quot;checkCreditCase&amp;quot; /&amp;gt;  The referenced case definition is resolved at runtime. This means that the referenced case can be deployed independently from the calling case, if needed.</description>
     </item>
     
@@ -2574,8 +2574,8 @@ Adjust the Process Engine Configuration Edit the file bpm-platform.xml located i
       <description>This page explains how to configure the full distribution for Tomcat Application Server.
 LDAP In order to setup LDAP for the Tomcat distribution, you have to perform the following steps:
 Add the LDAP Library Make sure the camunda-identity-ldap-$PLATFORM_VERSION.jar is present in the $TOMCAT_DISTRIBUTION/lib/ folder.
-Pre packaged distributionNote: If you use the pre-packaged distribution, the ldap plugin is already present and you can skip this step.
-Adjust the Process Engine Configuration Edit the file bpm-platform.</description>
+Pre packaged distribution Note: If you use the pre-packaged distribution, the ldap plugin is already present and you can skip this step.
+ Adjust the Process Engine Configuration Edit the file bpm-platform.</description>
     </item>
     
     <item>
@@ -2787,7 +2787,7 @@ Parameters Path Parameters  Name Description   id The id of the authorization to
       <description>Retrieves a batch by id, according to the Batch interface in the engine.
 Method GET /batch/{id}
 Parameters Path Parameters  Name Description   id The id of the batch to be retrieved.   Result A JSON object corresponding to the Batch interface in the engine. Its properties are as follows:
-NameValueDescriptionidStringThe id of the batch.typeStringThe type of the batch.</description>
+ Name Value Description   id String The id of the batch.   type String The type of the batch.</description>
     </item>
     
     <item>
@@ -3001,7 +3001,7 @@ Parameters Path Parameters  Name Description   id The id of the historic decisio
       <guid>http://camunda-cn.shaochenfeng.com/reference/rest/history/detail/get-detail/</guid>
       <description>Retrieves a historic detail by id.
 Method GET /history/detail/{id}
-Parameters Path Parameters  Name Description   id The id of the detail.   Query Parameters  Name Description   deserializeValue  Determines whether serializable variable values (typically variables that store custom Java objects) should be deserialized on server side (default true).If set to true, a serializable variable will be deserialized on server side and transformed to JSON using Jackson&#39;s POJO/bean property introspection feature.</description>
+Parameters Path Parameters  Name Description   id The id of the detail.   Query Parameters  Name Description   deserializeValue  Determines whether serializable variable values (typically variables that store custom Java objects) should be deserialized on server side (default true). If set to true, a serializable variable will be deserialized on server side and transformed to JSON using Jackson&#39;s POJO/bean property introspection feature.</description>
     </item>
     
     <item>
@@ -3092,8 +3092,8 @@ GET /process-definition/key/{key}/form-variables (returns the form variables for
       
       <guid>http://camunda-cn.shaochenfeng.com/reference/rest/task/get-query-count/</guid>
       <description>Retrieves the number of tasks that fulfill a provided filter. Corresponds to the size of the result set when using the Get Tasks method.
-Security ConsiderationThere are several query parameters (such as assigneeExpression) for specifying an EL expression. These are disabled by default to prevent remote code execution. See the section on security considerations for custom code in the user guide for details.
-Method GET /task/count
+Security Consideration There are several query parameters (such as assigneeExpression) for specifying an EL expression. These are disabled by default to prevent remote code execution. See the section on security considerations for custom code in the user guide for details.
+ Method GET /task/count
 Parameters Query Parameters  Name Description   taskId Restrict to task with the given id.</description>
     </item>
     
@@ -3115,7 +3115,7 @@ Parameters Query Parameters  Name Description   firstResult Pagination of result
       
       <guid>http://camunda-cn.shaochenfeng.com/reference/rest/task/post-query/</guid>
       <description>Queries for tasks that fulfill a given filter. This method is slightly more powerful than the Get Tasks method because it allows filtering by multiple process or task variables of types String, Number or Boolean. The size of the result set can be retrieved by using the Get Task Count (POST) method.
-Security ConsiderationThere are several parameters (such as assigneeExpression) for specifying an EL expression. These are disabled by default to prevent remote code execution.</description>
+Security Consideration There are several parameters (such as assigneeExpression) for specifying an EL expression. These are disabled by default to prevent remote code execution.</description>
     </item>
     
     <item>
@@ -3149,7 +3149,7 @@ Parameters Query Parameters  Name Description   id Filter by the id of the user.
       <guid>http://camunda-cn.shaochenfeng.com/reference/rest/history/variable-instance/get-variable-instance/</guid>
       <description>Retrieves a historic variable by id.
 Method GET /history/variable-instance/{id}
-Parameters Path Parameters  Name Description   id The id of the variable instance.   Query Parameters  Name Description   deserializeValue  Determines whether serializable variable values (typically variables that store custom Java objects) should be deserialized on server side (default true).If set to true, a serializable variable will be deserialized on server side and transformed to JSON using Jackson&#39;s POJO/bean property introspection feature.</description>
+Parameters Path Parameters  Name Description   id The id of the variable instance.   Query Parameters  Name Description   deserializeValue  Determines whether serializable variable values (typically variables that store custom Java objects) should be deserialized on server side (default true). If set to true, a serializable variable will be deserialized on server side and transformed to JSON using Jackson&#39;s POJO/bean property introspection feature.</description>
     </item>
     
     <item>
@@ -3200,8 +3200,8 @@ Example The following example shows a job executor XML snippet:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/webapps/cockpit/dmn/live-editing/</guid>
-      <description>企业版特征Please note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
-查看 Camunda 企业版主页了解更多信息以及获得免费试用版。DMN tables can be changed directly in Cockpit. Clicking on the  Editbutton will open a dialog which contains an editable version of the DMN table. This button is only available for DMN resources. The edit dialog can also be opened by clicking on the icon on the DMN definition page.</description>
+      <description>企业版特征 Please note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
+ 查看 Camunda 企业版主页 了解更多信息以及获得 免费试用版。  DMN tables can be changed directly in Cockpit. Clicking on the  Edit  button will open a dialog which contains an editable version of the DMN table. This button is only available for DMN resources. The edit dialog can also be opened by clicking on the   icon on the DMN definition page.</description>
     </item>
     
     <item>
@@ -3330,14 +3330,14 @@ Parameters Path Parameters  Name Description   id The id of the tenant   Result 
       
       <guid>http://camunda-cn.shaochenfeng.com/reference/bpmn20/tasks/user-task/</guid>
       <description>用户任务用于模拟人类演员需要完成的工作。当流程执行到达这样的用户任务时，在分配给该任务的用户或组的任务列表中创建一个新任务。
-用户任务在XML中定义如下。 id属性是必需的，而name属性是可选的。
+ 用户任务在XML中定义如下。 id属性是必需的，而name属性是可选的。
 &amp;lt;userTask id=&amp;quot;theTask&amp;quot; name=&amp;quot;Important task&amp;quot; /&amp;gt;  描述 用户任务还可以具有描述。事实上，任何BPMN 2.0元素可以有描述。通过添加 documentation 元素来定义描述。
 &amp;lt;userTask id=&amp;quot;theTask&amp;quot; name=&amp;quot;Schedule meeting&amp;quot; &amp;gt; &amp;lt;documentation&amp;gt; Schedule an engineering meeting for next week with the new hire. &amp;lt;/documentation&amp;gt;  可以从标准Ja​​va方式中的任务中检索 documentation 文本：
 task.getDescription();  特性 截止日期 每个任务都有一个字段，指示该任务的截止日期。查询API可用于查询到某个日期之前或之后截止的任务。
-有一个活动扩展名，允许您在任务定义中指定表达式，以在创建时设置任务的初始截止日期。表达式应该始终解析为 java.util.Date, java.util.String (ISO8601 格式化) 或 null。 使用ISO8601格式化字符串时，您可以指定相对于创建任务的时间的时间或时间段。例如，您可以使用在此过程中以先前表单输入的日期，或者在以前的服务任务中计算。
+有一个活动扩展名，允许你在任务定义中指定表达式，以在创建时设置任务的初始截止日期。表达式应该始终解析为 java.util.Date, java.util.String (ISO8601 格式化) 或 null。 使用ISO8601格式化字符串时，你可以指定相对于创建任务的时间的时间或时间段。例如，你可以使用在此过程中以先前表单输入的日期，或者在以前的服务任务中计算。
 &amp;lt;userTask id=&amp;quot;theTask&amp;quot; name=&amp;quot;Important task&amp;quot; camunda:dueDate=&amp;quot;${dateVariable}&amp;quot;/&amp;gt;  任务的截止日期也可以使用任务服务或任务侦听器中使用传递的委托任务更改。
 跟进日期 每个任务都有一个字段，指示该任务的跟进日期。查询API可用于查询需要在特定日期之前或之后进行操作的任务。
-有一个活动扩展名，允许您在任务定义中指定表达式，以在创建时设置任务的初始后续后续日期。表达式应该始终解析为 java.util.Date, java.util.String (ISO8601 格式化) 或 null。 使用ISO8601格式化字符串时，您可以指定相对于创建任务的时间的时间或时间段。例如，您可以使用在此过程中以先前表单输入的日期，或者在以前的服务任务中计算。
+有一个活动扩展名，允许你在任务定义中指定表达式，以在创建时设置任务的初始后续后续日期。表达式应该始终解析为 java.util.Date, java.util.String (ISO8601 格式化) 或 null。 使用ISO8601格式化字符串时，你可以指定相对于创建任务的时间的时间或时间段。例如，你可以使用在此过程中以先前表单输入的日期，或者在以前的服务任务中计算。
 &amp;lt;userTask id=&amp;quot;theTask&amp;quot; name=&amp;quot;Important task&amp;quot; camunda:followUpDate=&amp;quot;${dateVariable}&amp;quot;/&amp;gt;  用户分配 用户任务可以直接分配给单个用户，用户列表或组列表。</description>
     </item>
     
@@ -3368,8 +3368,8 @@ Writing to a String: import static org.camunda.spin.Spin.XML; import org.camunda
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-concepts/</guid>
       <description>本节介绍了一些核心流程引擎概念，用于流程引擎API和内部流程引擎实现。了解这些基础知识可以更容易的额使用流程引擎API。
 流程定义 流程定义定义了一个流程的结构。你可以说，流程定义就是流程。Camunda平台使用 BPMN 2.0 作为其主要的流程建模语言，用于建模过程的定义。
-BPMN 2.0 参考Camunda平台配有两个BPMN 2.0参考资料：
- BPMN 2.0 建模参考 介绍了BPMN 2.0的基本原理，帮助你开始对流程进行建模。(请确保同时阅读教程。) BPMN 2.0 实现参考 涵盖了Camunda平台中各个BPMN 2.0构造的实现。如果你想实现和执行BPMN流程，你应该阅读这个参考资料。  在Camunda平台中，您可以将流程以BPMN 2.0 XML格式部署到流程引擎中。XML文件被解析并转化为一个流程定义图结构。该图结构由流程引擎执行。
+BPMN 2.0 参考 Camunda平台配有两个BPMN 2.0参考资料：
+ BPMN 2.0 建模参考 介绍了BPMN 2.0的基本原理，帮助你开始对流程进行建模。(请确保同时阅读教程。) BPMN 2.0 实现参考 涵盖了Camunda平台中各个BPMN 2.0构造的实现。如果你想实现和执行BPMN流程，你应该阅读这个参考资料。   在Camunda平台中，你可以将流程以BPMN 2.0 XML格式部署到流程引擎中。XML文件被解析并转化为一个流程定义图结构。该图结构由流程引擎执行。
 流程定义的查询 你可以使用Java API和通过RepositoryService提供的ProcessDefinitionQuery来查询所有部署的流程定义。例如：
 List&amp;lt;ProcessDefinition&amp;gt; processDefinitions = repositoryService.createProcessDefinitionQuery() .processDefinitionKey(&amp;quot;invoice&amp;quot;) .orderByProcessDefinitionVersion() .asc() .list();  上面的查询返回所有已部署的流程定义，关键是invoice，按其version属性排序。
 你也可以使用REST API查询流程定义.
@@ -3390,18 +3390,18 @@ ProcessInstance instance = runtimeService.</description>
       <guid>http://camunda-cn.shaochenfeng.com/introduction/architecture/</guid>
       <description>Camunda平台是一个基于Java的框架。主要组件是用Java编写的，我们总体上专注于为Java开发者提供他们在JVM上设计、实施和运行业务流程和工作流所需的工具。然而，我们也想让非Java开发者也能使用流程引擎技术。这就是为什么Camunda平台还提供了REST API，允许你与远程流程引擎应用建立连接。
 Camunda平台既可以作为一个独立的流程引擎服务器使用，也可以嵌入到定制的Java应用程序中。可嵌入性要求是Camunda平台许多架构决定的核心。例如，我们努力使流程引擎组件成为一个轻量级的组件，尽量减少对第三方库的依赖性。此外，可嵌入性促使流程引擎支持使用Spring Managed或JTA事务和线程模型的能力。
-流程引擎架构  流程引擎公共API： 面向服务的API允许Java应用程序与流程引擎交互。流程引擎的不同部分（即流程存储库、运行时的流程交互、任务管理等）被分离到各个服务中。公共API具有命令式访问模式的特点：进入流程引擎的流程要经过一个命令拦截器，该拦截器用于设置流程上下文。 BPMN 2.0 核心引擎: 这是流程引擎的核心。它有一个轻量级的图结构执行引擎（PVM - Process Virtual Machine），一个将BPMN 2.0 XML文件转化为Java对象的BPMN 2.0解析器，以及一套BPMN行为实现（为BPMN 2.0结构提供实现，如网关或服务任务）。 Job 执行器: Job执行者负责处理异步的后台工作，如流程中的定时器或异步延续。 持久层: 流程引擎有一个持久层，负责将流程实例状态持久化到关系数据库中。我们使用MyBatis映射引擎来实现对象的关系映射。  依赖的第三方库 见第三方库一节。
+流程引擎架构    流程引擎公共API： 面向服务的API允许Java应用程序与流程引擎交互。流程引擎的不同部分（即流程存储库、运行时的流程交互、任务管理等）被分离到各个服务中。公共API具有命令式访问模式的特点：进入流程引擎的流程要经过一个命令拦截器，该拦截器用于设置流程上下文。 BPMN 2.0 核心引擎: 这是流程引擎的核心。它有一个轻量级的图结构执行引擎（PVM - Process Virtual Machine），一个将BPMN 2.0 XML文件转化为Java对象的BPMN 2.0解析器，以及一套BPMN行为实现（为BPMN 2.0结构提供实现，如网关或服务任务）。 Job 执行器: Job执行者负责处理异步的后台工作，如流程中的定时器或异步延续。 持久层: 流程引擎有一个持久层，负责将流程实例状态持久化到关系数据库中。我们使用MyBatis映射引擎来实现对象的关系映射。  依赖的第三方库 见第三方库一节。
 Camunda平台 架构 Camunda平台是一个灵活的框架，可以部署在不同的场景中。本节对最常见的部署场景进行了概述。
-嵌入式流程引擎 在这种情况下，流程引擎被作为一个库添加到一个自定义的应用程序中。这样，流程引擎可以很容易地随着应用程序的生命周期启动和停止。也可以在一个共享数据库之上运行多个嵌入式流程引擎。
-分布式的、由容器管理的流程引擎 在这种情况下，流程引擎在运行时容器（Servlet容器、应用服务器&amp;hellip;）内启动。流程引擎作为容器服务提供的，可以被部署在容器内的所有应用程序共享。这个概念就像JMS消息队列，它由运行时提供，可以被所有应用程序使用。流程部署和应用程序之间有一对一的映射：流程引擎跟踪应用程序部署的流程定义，并将执行委托给相对应的应用程序。
-独立运行的（远程）流程引擎服务 在这种情况下，流程引擎被作为一个网络服务提供。在网络上运行的不同应用程序可以通过一个远程通信与流程引擎进行交互。使流程引擎可以远程访问的最简单方法是使用内置的REST API。不同的通信渠道，如SOAP Webservices或JMS也是可以的，但需要由用户自行实现。
+嵌入式流程引擎   在这种情况下，流程引擎被作为一个库添加到一个自定义的应用程序中。这样，流程引擎可以很容易地随着应用程序的生命周期启动和停止。也可以在一个共享数据库之上运行多个嵌入式流程引擎。
+分布式的、由容器管理的流程引擎   在这种情况下，流程引擎在运行时容器（Servlet容器、应用服务器&amp;hellip;）内启动。流程引擎作为容器服务提供的，可以被部署在容器内的所有应用程序共享。这个概念就像JMS消息队列，它由运行时提供，可以被所有应用程序使用。流程部署和应用程序之间有一对一的映射：流程引擎跟踪应用程序部署的流程定义，并将执行委托给相对应的应用程序。
+独立运行的（远程）流程引擎服务   在这种情况下，流程引擎被作为一个网络服务提供。在网络上运行的不同应用程序可以通过一个远程通信与流程引擎进行交互。使流程引擎可以远程访问的最简单方法是使用内置的REST API。不同的通信渠道，如SOAP Webservices或JMS也是可以的，但需要由用户自行实现。
 集群 为了提供扩展或故障转移能力，流程引擎可以发布到集群中的不同节点。然后每个流程引擎实例必须连接到同一个共享数据库。
-各个流程引擎实例不会在事务中维护会话状态。每当流程引擎运行一个事务时，完整的状态被储存到共享数据库。这使得将在同一力促恒实例中进行工作的后续请求路由到不同的集群节点成为可能。这个处理方式非常简单，容易理解，在部署集群安装时，它的限制也很有限。就流程引擎而言，用于扩展的设置和用于故障转移的设置之间没有区别（因为流程引擎在事务之中不保留会话状态）。
+  各个流程引擎实例不会在事务中维护会话状态。每当流程引擎运行一个事务时，完整的状态被储存到共享数据库。这使得将在同一力促恒实例中进行工作的后续请求路由到不同的集群节点成为可能。这个处理方式非常简单，容易理解，在部署集群安装时，它的限制也很有限。就流程引擎而言，用于扩展的设置和用于故障转移的设置之间没有区别（因为流程引擎在事务之中不保留会话状态）。
 集群环境中的会话状态 Camunda平台不提供开箱即用的负载均衡功能和会话复制功能。负载均衡功能需要由第三方系统提供，而会话复制则需要由主机应用服务器提供。
 在集群设置中，如果用户要登录到网络应用程序，需要采取额外的步骤来确保用户不会被要求多次登录。有两个方法：
  可以在你的负载平衡解决方案中配置和启用 &amp;ldquo;粘性会话&amp;rdquo;。这将确保在一个可配置的时间段内，所有来自特定用户的请求都被引导到同一个实例。 会话共享可以在你的应用服务器中启用，这样应用服务器实例就可以共享会话状态。这将允许一个用户连接到集群中的多个实例，而不会被要求多次登录。  如果以上两种方法都没有在集群设置中实现，那么连接到多个节点，无论是故意的或通过负载平衡解决方案的，都将导致多次登录请求。
 集群环境中的 Job 执行器 流程引擎 job 执行器 也是集群的，在每个节点上都存在。这样，就流程引擎而言，就没有单点故障。job执行器可以同时在同质和异质集群中运行。
-时区camunda对集群中的时区选择有一些限制。</description>
+时区 camunda对集群中的时区选择有一些限制。</description>
     </item>
     
     <item>
@@ -3476,14 +3476,14 @@ Supported Variable Types for Checkboxes The checkbox input field only supports b
       
       <guid>http://camunda-cn.shaochenfeng.com/reference/bpmn20/tasks/business-rule-task/</guid>
       <description>一个业务规则任务可以同步执行一个或多个规则，可以调用Java代码或外部工作者（external worker）来实现，或者以异步方式调用以Web服务形式实现的逻辑。
-使用 Camunda DMN 引擎 你可以使用Camunda DMN引擎集成来进行一个DMN决策。你必须使用camunda:decisionRef属性 指定要评估的决策键。此外。 camunda:decisionRefBinding指定哪一个版本的决策应该被评估。 camunda:decisionRefBinding的有效值是：
+ 使用 Camunda DMN 引擎 你可以使用Camunda DMN引擎集成来进行一个DMN决策。你必须使用camunda:decisionRef属性 指定要评估的决策键。此外。 camunda:decisionRefBinding指定哪一个版本的决策应该被评估。 camunda:decisionRefBinding的有效值是：
  deployment, 这会评估deployment部署的决策版本， latest 这将始终评估最新的决策版本， version 这允许你通过使用camunda:decisionRefVersion属性指定执行的特定版本， versionTag 这允许你用camunda:decisionRefVersionTag属性指定一个特定的版本标签来执行。  &amp;lt;businessRuleTask id=&amp;quot;businessRuleTask&amp;quot; camunda:decisionRef=&amp;quot;myDecision&amp;quot; camunda:decisionRefBinding=&amp;quot;version&amp;quot; camunda:decisionRefVersion=&amp;quot;12&amp;quot; /&amp;gt;  camunda:decisionRefBinding属性默认为latest。
 &amp;lt;businessRuleTask id=&amp;quot;businessRuleTask&amp;quot; camunda:decisionRef=&amp;quot;myDecision&amp;quot; /&amp;gt;  属性camunda:decisionRef、camunda:decisionRefVersion和camunda:decisionRefVersionTag可以被指定为 一个表达式，它将在任务的执行中被计算。
 &amp;lt;businessRuleTask id=&amp;quot;businessRuleTask&amp;quot; camunda:decisionRef=&amp;quot;${decisionKey}&amp;quot; camunda:decisionRefBinding=&amp;quot;version&amp;quot; camunda:decisionRefVersion=&amp;quot;${decisionVersion}&amp;quot; /&amp;gt;  决策的输出，也称为决策结果，不会自动保存为流程变量。它必须通过使用预定义或者定制的方式传递到一个流程变量中。
 如果是预定义的映射，camunda:mapDecisionResult属性会引用要使用的映射器。映射的结果被保存在由camunda:resultVariable属性指定的变量中。如果没有设置预定义的映射器，那么默认使用 resultList 映射器。
 &amp;lt;businessRuleTask id=&amp;quot;businessRuleTask&amp;quot; camunda:decisionRef=&amp;quot;myDecision&amp;quot; camunda:mapDecisionResult=&amp;quot;singleEntry&amp;quot; camunda:resultVariable=&amp;quot;result&amp;quot; /&amp;gt;  参见 用户指南 有关映射的详细信息。
-结果变量的名称结果变量不应该使用 decisionResult这个名字，因为决策结果本身是保存在一个这个变量中。否则，在保存结果变量时就会出现异常。
-决策参考中的租户Id （Tenant Id） 当业务规则任务（Business Rule Task）解析要进行评估的决策定义时，必须考虑多租户的情况。
+结果变量的名称 结果变量不应该使用 decisionResult这个名字，因为决策结果本身是保存在一个这个变量中。否则，在保存结果变量时就会出现异常。
+ 决策参考中的租户Id （Tenant Id） 当业务规则任务（Business Rule Task）解析要进行评估的决策定义时，必须考虑多租户的情况。
 默认租户（Tenant）决定 默认情况下，调用流程定义的租户id 被用来评估决策定义。 也就是说，如果调用的流程定义没有租户 ID，那么业务规则任务将使用所提供的key和没有 租户ID 的决策定义绑定进行评估（租户 ID = null）。 如果调用的流程定义有租户ID，那么将评估具有所提供的key和相同租户ID 的决策定义。</description>
     </item>
     
@@ -3496,7 +3496,7 @@ Supported Variable Types for Checkboxes The checkbox input field only supports b
       <description>Schedules asynchronous history cleanup (See History cleanup).
 Method POST /history/cleanup
 Parameters Query Parameters  Name Description   immediatelyDue When true the job will be scheduled for nearest future. When false, the job will be scheduled for next batch window start time. Default is true.   Request Body Not used
-Result Result is not reliable any moreThis endpoint will return at most a single history cleanup job. Since version 7.</description>
+Result Result is not reliable any more This endpoint will return at most a single history cleanup job. Since version 7.</description>
     </item>
     
     <item>
@@ -3505,8 +3505,8 @@ Result Result is not reliable any moreThis endpoint will return at most a singl
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/webapps/cockpit/cleanup/</guid>
-      <description>企业版特征Please note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
-查看 Camunda 企业版主页了解更多信息以及获得免费试用版。The cleanup view in Cockpit provides information about the history cleanup state and statistics about the cleanable and deleted data. Moreover, the page allows to manually perform various operations related to the history cleanup.
+      <description>企业版特征 Please note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
+ 查看 Camunda 企业版主页 了解更多信息以及获得 免费试用版。    The cleanup view in Cockpit provides information about the history cleanup state and statistics about the cleanable and deleted data. Moreover, the page allows to manually perform various operations related to the history cleanup.
 Cleanup State Information and operations related to the history cleanup vary on its state.</description>
     </item>
     
@@ -3539,8 +3539,8 @@ Response Codes  Code Media type Description   204  Request successful.   400 app
       
       <guid>http://camunda-cn.shaochenfeng.com/reference/rest/filter/post-create/</guid>
       <description>Creates a new filter.
-Security ConsiderationThe query parameter of the request body takes a JSON-serialized query. Some query types (e.g., task queries) allow to specify EL expressions in their parameters and may therefore be abused for remote code execution. See the section on security considerations for custom code in the user guide for details.
-Method POST /filter/create
+Security Consideration The query parameter of the request body takes a JSON-serialized query. Some query types (e.g., task queries) allow to specify EL expressions in their parameters and may therefore be abused for remote code execution. See the section on security considerations for custom code in the user guide for details.
+ Method POST /filter/create
 Parameters Request Body A JSON object with the following properties:</description>
     </item>
     
@@ -3624,7 +3624,7 @@ Debugging Form Scripts in Google Chrome If you are using the Google Chrome debug
       
       <guid>http://camunda-cn.shaochenfeng.com/reference/cmmn11/tasks/decision-task/</guid>
       <description>A decision task can be used to invoke a DMN 1.3 decision from a case.
-A decision task is a regular task that requires a decisionRef attribute that references a decision definition by its key. Such a decision task can be defined as follows:
+ A decision task is a regular task that requires a decisionRef attribute that references a decision definition by its key. Such a decision task can be defined as follows:
 &amp;lt;decisionTask id=&amp;quot;checkCreditDecision&amp;quot; name=&amp;quot;Check credit&amp;quot; decisionRef=&amp;quot;checkCreditDecision&amp;quot; /&amp;gt;  Instead of the decisionRef attribute it is also possible to use an expression which must evaluate to a key of a decision definition at runtime.</description>
     </item>
     
@@ -3939,7 +3939,7 @@ Parameters Request Body A JSON object with the following properties:
       
       <guid>http://camunda-cn.shaochenfeng.com/reference/rest/task/post-query-count/</guid>
       <description>Retrieves the number of tasks that fulfill the given filter. Corresponds to the size of the result set of the Get Tasks (POST) method and takes the same parameters.
-Security ConsiderationThere are several query parameters (such as assigneeExpression) for specifying an EL expression. These are disabled by default to prevent remote code execution. See the section on security considerations for custom code in the user guide for details.</description>
+Security Consideration There are several query parameters (such as assigneeExpression) for specifying an EL expression. These are disabled by default to prevent remote code execution. See the section on security considerations for custom code in the user guide for details.</description>
     </item>
     
     <item>
@@ -3950,7 +3950,7 @@ Security ConsiderationThere are several query parameters (such as assigneeExpre
       <guid>http://camunda-cn.shaochenfeng.com/reference/rest/variable-instance/get/</guid>
       <description>Retrieves a variable by id.
 Method GET /variable-instance/{id}
-Parameters Path Parameters  Name Description   id The id of the variable instance.   Query Parameters  Name Description   deserializeValue  Determines whether serializable variable values (typically variables that store custom Java objects) should be deserialized on server side (default true).If set to true, a serializable variable will be deserialized on server side and transformed to JSON using Jackson&#39;s POJO/bean property introspection feature.</description>
+Parameters Path Parameters  Name Description   id The id of the variable instance.   Query Parameters  Name Description   deserializeValue  Determines whether serializable variable values (typically variables that store custom Java objects) should be deserialized on server side (default true). If set to true, a serializable variable will be deserialized on server side and transformed to JSON using Jackson&#39;s POJO/bean property introspection feature.</description>
     </item>
     
     <item>
@@ -3982,9 +3982,9 @@ Parameters Path Parameters  Name Description   id The id of the user to be retri
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/webapps/cockpit/bpmn/process-history-views/</guid>
-      <description>企业版特征Please note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
-查看 Camunda 企业版主页了解更多信息以及获得免费试用版。At the top of the process definition view and the process instance view, you can hit the History button to access the history view.
-Process Definition History View In the history view of the process definition you see an overview of all of the running and completed process instances.</description>
+      <description>企业版特征 Please note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
+ 查看 Camunda 企业版主页 了解更多信息以及获得 免费试用版。  At the top of the process definition view and the process instance view, you can hit the History button to access the history view.
+Process Definition History View   In the history view of the process definition you see an overview of all of the running and completed process instances.</description>
     </item>
     
     <item>
@@ -4045,15 +4045,15 @@ public class Customer { private String name; public String getName() { return na
       
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/database/mariadb-galera-configuration/</guid>
       <description> 本节记录了MariaDB所支持的Galera Cluster配置。服务器和客户端都需要进行正确的配置。请注意，在使用Galera集群时，有一些已知的限制，详情见下文：
-警告请注意，下面定义的服务器和客户端配置设置是唯一支持Galera Cluster的配置。其他配置都不支持。
-服务器配置 以下配置需要放入到每个服务器的 my.cnf.d/server.cnf 配置文件的 [galera] 部分。
+警告 请注意，下面定义的服务器和客户端配置设置是唯一支持Galera Cluster的配置。其他配置都不支持。
+ 服务器配置 以下配置需要放入到每个服务器的 my.cnf.d/server.cnf 配置文件的 [galera] 部分。
 [galera] binlog_format=row default_storage_engine=InnoDB innodb_autoinc_lock_mode=2 transaction-isolation=READ-COMMITTED wsrep_on=ON wsrep_causal_reads = 1 wsrep_sync_wait = 7 ...  请注意，一些其他设置也可能会出现在这一部分，但是 &amp;ldquo;transaction-isolation&amp;rdquo;、&amp;rdquo;wsrep_on&amp;rdquo;、&amp;rdquo;wsrep_causal_reads&amp;rdquo; 和 &amp;ldquo;wsrep_sync_wait&amp;rdquo; 的设置必须设置，且具有 完全相同 的值。
 客户端配置 只有 failover 和 sequential 配置是支持的。 其他客户端模式，如 replication:, loadbalance:, aurora: 均不支持
 以下是数据源配置中jdbcUrl属性的必要格式。
 jdbc:mariadb:[failover|sequential]://[host1:port],[host2:port],.../[data-base-name]  示例:
 jdbc:mariadb:failover://192.168.1.1:32980,192.168.1.2:32980,192.168.1.3:32980/process-engine jdbc:mariadb:sequential://192.168.1.1:32980,192.168.1.2:32980,192.168.1.3:32980/process-engine  重要提示：在群集中运行Camunda时，客户端配置需要在每个节点上相同。
 Galera Cluster 的已知的限制 使用Galera Cluster时，有以下已知限制：
- 在数据库中需要悲观的读锁的API不能正确工作。受影响的API。独家消息相关（.correlateExclusively()）。参见(Javadocs)。 另一个可能的负面效应。  当从两个线程同时部署相同的资源时，会重复部署定义。 当从两个线程同时调用 &amp;ldquo;HistoryService#cleanUpHistoryAsync&amp;rdquo; 时，会重复执行历史清理工作。  如果资源同时部署在一个集群中，部署期间的重复检查不起作用。具体影响是：假设有一个Camunda流程引擎集群，它连接到同一个Galera集群。在部署一个新的流程应用时，流程引擎节点将检查流程应用所提供的BPMN流程是否已经部署，以避免重复部署。如果在多个流程引擎节点上同时进行部署，就会在数据库上获得一个独占的读锁（技术上来说，这意味着每个节点执行一个SQL &amp;ldquo;选择更新 &amp;ldquo;的查询。这在Galera Cluster上不起作用，可能导致同一流程的多个版本被部署。 jdbcStatementTimeout 配置项不起作用，不能使用。  </description>
+ 在数据库中需要悲观的读锁的API不能正确工作。受影响的API。独家消息相关（.correlateExclusively()）。参见(Javadocs )。 另一个可能的负面效应。  当从两个线程同时部署相同的资源时，会重复部署定义。 当从两个线程同时调用 &amp;ldquo;HistoryService#cleanUpHistoryAsync&amp;rdquo; 时，会重复执行历史清理工作。  如果资源同时部署在一个集群中，部署期间的重复检查不起作用。具体影响是：假设有一个Camunda流程引擎集群，它连接到同一个Galera集群。在部署一个新的流程应用时，流程引擎节点将检查流程应用所提供的BPMN流程是否已经部署，以避免重复部署。如果在多个流程引擎节点上同时进行部署，就会在数据库上获得一个独占的读锁（技术上来说，这意味着每个节点执行一个SQL &amp;ldquo;选择更新 &amp;ldquo;的查询。这在Galera Cluster上不起作用，可能导致同一流程的多个版本被部署。 jdbcStatementTimeout 配置项不起作用，不能使用。  </description>
     </item>
     
     <item>
@@ -4084,8 +4084,8 @@ Parameters Query Parameters  Name Description Required?   permissionName String 
       
       <guid>http://camunda-cn.shaochenfeng.com/reference/rest/deployment/post-deployment/</guid>
       <description>Creates a deployment.
-Security ConsiderationDeployments can contain custom code in form of scripts or EL expressions to customize process behavior. This may be abused for remote execution of arbitrary code. See the section on security considerations for custom code in the user guide for details.
-Method POST /deployment/create
+Security Consideration Deployments can contain custom code in form of scripts or EL expressions to customize process behavior. This may be abused for remote execution of arbitrary code. See the section on security considerations for custom code in the user guide for details.
+ Method POST /deployment/create
 Parameters Request Body A multipart form submit with the following parts:
  Form Part Name Content Type Description   deployment-name text/plain The name for the deployment to be created.</description>
     </item>
@@ -4119,7 +4119,7 @@ Querying an Element import static org.camunda.spin.Spin.XML; String xml = &amp;q
       
       <guid>http://camunda-cn.shaochenfeng.com/reference/cmmn11/markers/repetition-rule/</guid>
       <description>Can be used with: Task, Stage, Milestone
-Under which conditions a plan item is repeatable can be specified by a repetition rule.
+ Under which conditions a plan item is repeatable can be specified by a repetition rule.
 In XML, a repetition rule can be specified for an individual plan item or for a plan item definition. For a plan item it looks as follows:
 &amp;lt;planItem id=&amp;quot;PlanItem_HumanTask&amp;quot; definitionRef=&amp;quot;HumanTask&amp;quot;&amp;gt; &amp;lt;itemControl&amp;gt; &amp;lt;repetitionRule&amp;gt; &amp;lt;condition&amp;gt;&amp;lt;![CDATA[${var &amp;lt; 100}]]&amp;gt;&amp;lt;/condition&amp;gt; &amp;lt;/repetitionRule&amp;gt; &amp;lt;/itemControl&amp;gt; &amp;lt;/planItem&amp;gt; &amp;lt;humanTask id=&amp;quot;HumanTask&amp;quot; /&amp;gt;  For a plan item definition, the following XML can be used:</description>
     </item>
@@ -4140,8 +4140,8 @@ In XML, a repetition rule can be specified for an individual plan item or for a 
       
       <guid>http://camunda-cn.shaochenfeng.com/webapps/admin/system-management/</guid>
       <description>The System Settings menu gives you some general information about the process engine and allows you to access the Execution Metrics and, provided that you are using the Enterprise Edition of the Camunda Platform, you can insert your License Key
-Accessing the System Settings menuThe System Settings menu is only usable by users which are granted with All permission for authorizations.
-Execution Metrics The Execution Metrics menu in Admin displays an approximate number of Flow Nodes Instances (FNI), Executed Decision Elements (EDE), Root Process Instances (RPI) and Executed Decision Instances (EDI) processed by the engine and Unique Task Workers (UTW) that were assigned to a user task in the selected time range.</description>
+Accessing the System Settings menu The System Settings menu is only usable by users which are granted with All permission for authorizations.
+ Execution Metrics   The Execution Metrics menu in Admin displays an approximate number of Flow Nodes Instances (FNI), Executed Decision Elements (EDE), Root Process Instances (RPI) and Executed Decision Instances (EDI) processed by the engine and Unique Task Workers (UTW) that were assigned to a user task in the selected time range.</description>
     </item>
     
     <item>
@@ -4199,8 +4199,8 @@ Parameters Request Body A JSON object with the following properties:
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/spring-boot-integration/webapps/</guid>
       <description>To enable the Web Applications you can use the following starter in your pom.xml:
 &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.camunda.bpm.springboot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;camunda-bpm-spring-boot-starter-webapp&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;{project-version}&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt;  By default the application path is /camunda, so without any further configuration you can access the Webapps under http://localhost:8080/camunda/app/.
-Enterprise webapps 企业版特征Please note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
-查看 Camunda 企业版主页了解更多信息以及获得免费试用版。To use the enterprise Web applications, include another starter:</description>
+Enterprise webapps 企业版特征 Please note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
+ 查看 Camunda 企业版主页 了解更多信息以及获得 免费试用版。  To use the enterprise Web applications, include another starter:</description>
     </item>
     
     <item>
@@ -4220,8 +4220,8 @@ Enterprise webapps 企业版特征Please note that this feature is only include
       
       <guid>http://camunda-cn.shaochenfeng.com/introduction/supported-environments/</guid>
       <description>你可以在任何可运行Java的环境中运行Camunda平台。但以下环境中运行可以得到了我们的质量保证。你可以在我们的企业支持页面中获得更多的信息。
-支持的运行环境请注意，本节中列出的环境与Camunda平台的版本有关。请选择本文档的相应版本，以查看适合您的Camunda平台版本的环境。例如，7.3版本的支持环境。
-容器/应用 服务器 嵌入应用程序的流程引擎  所有的 Java 应用服务器 Camunda Spring Boot Starter: 启用 Tomcat （参见 支持的版本 和 部署场景）  容器管理的流程引擎 和 Camunda Cockpit, Tasklist, Admin  Apache Tomcat 9.0 JBoss EAP 7.0 / 7.1 / 7.2 / 7.3 Wildfly Application Server 13.0 / 14.0 / 15.0 / 16.0 / 17.0 / 18.0 / 19.0 / 20.0 / 21.0 / 22.0 IBM WebSphere Application Server 8.5 / 9.</description>
+支持的运行环境 请注意，本节中列出的环境与Camunda平台的版本有关。请选择本文档的相应版本，以查看适合你的Camunda平台版本的环境。例如，7.3版本的支持环境。
+ 容器/应用 服务器 嵌入应用程序的流程引擎  所有的 Java 应用服务器 Camunda Spring Boot Starter: 启用 Tomcat （参见 支持的版本 和 部署场景）  容器管理的流程引擎 和 Camunda Cockpit, Tasklist, Admin  Apache Tomcat 9.0 JBoss EAP 7.0 / 7.1 / 7.2 / 7.3 Wildfly Application Server 13.0 / 14.0 / 15.0 / 16.0 / 17.0 / 18.0 / 19.0 / 20.0 / 21.0 / 22.0 IBM WebSphere Application Server 8.5 / 9.</description>
     </item>
     
     <item>
@@ -4232,12 +4232,12 @@ Enterprise webapps 企业版特征Please note that this feature is only include
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/variables/</guid>
       <description>本节描述流程变量的概念。流程变量可以用将数据添加到流程的运行时状态中，或者更具体地说，变量作用域中。改变实体的各种API可以用来更新这些附加的变量。一般来说，一个变量由一个名称和一个值组成。名称用于在整个流程中识别变量。例如，如果一个活动（activity）设置了一个名为 var 的变量，那么后续活动中可以通过使用这个名称来访问它。变量的值是一个 Java 对象。
 变量作用域和变量可访问性 所有可以拥有变量的实体被称为 变量作用域 。包括执行（包括流程实例在内）和任务。正如在概念章节所描述的，流程实例的运行状态由一棵执行树表示。参看下面的流程模型，其中红点标志着活动任务。
-这个流程的运行时结构如下：
-有一个流程实例有两个子执行，每个子执行都创建了一个任务。所有这五个实体都是变量作用域，箭头标志着父-子关系。在父作用域上定义的变量可以在每个子作用域中被访问，除非子作用域定义了同名的变量。反过来说，子变量不能从父作用域访问。直接附属于有关作用域的变量被称为 local 变量。思考一下，下面将变量作用域的分配情况。
-在这种情况下，当在 task 1 工作时，可以访问变量 worker 和 customer 。请注意，由于作用域的结构，变量 worker 可以被定义两次，所以 task 1 访问的 worker 变量与 task 2 访问的不同。然而，两者都共享变量 customer ，这意味着如果该变量被其中一个任务更新，这一变化对另一个任务也是可见的。
+  这个流程的运行时结构如下：
+  有一个流程实例有两个子执行，每个子执行都创建了一个任务。所有这五个实体都是变量作用域，箭头标志着父-子关系。在父作用域上定义的变量可以在每个子作用域中被访问，除非子作用域定义了同名的变量。反过来说，子变量不能从父作用域访问。直接附属于有关作用域的变量被称为 local 变量。思考一下，下面将变量作用域的分配情况。
+  在这种情况下，当在 task 1 工作时，可以访问变量 worker 和 customer 。请注意，由于作用域的结构，变量 worker 可以被定义两次，所以 task 1 访问的 worker 变量与 task 2 访问的不同。然而，两者都共享变量 customer ，这意味着如果该变量被其中一个任务更新，这一变化对另一个任务也是可见的。
 两个任务都可以访问到这两个变量，但这些变量都不是局部变量。所有三个执行任务都有只有一个局部变量。
 现在我们假设，我们在 task 1 上设置了一个局部变量 customer 。
-虽然两个名为 customer 和 worker 的变量仍然可以从 Task 1 访问，但 Execution 1 上的 customer 变量是隐藏的，所以可访问的 customer 变量是 Task 1 的局部变量。
+  虽然两个名为 customer 和 worker 的变量仍然可以从 Task 1 访问，但 Execution 1 上的 customer 变量是隐藏的，所以可访问的 customer 变量是 Task 1 的局部变量。
 一般来说，变量可以被访问 有以下几种情况。
  实例化流程 传递信息 任务生命周期的转换，如完成或解决 从外部设置/获取变量 设置/获取Delegate中的变量 流程模型中的表达式 流程模型中的脚本 （历史性的）变量查询  设置和查询变量 - 概述 为了设置和查询变量，流程引擎提供了一个Java API，允许从Java中设置变量，并以同样的形式查询它们。在流程引擎内部，引擎使用序列化将变量持久化到数据库中。对于大多数应用程序来说，这是一个无关紧要的细节。然而，有时，当使用自定义的Java类时，变量的序列化值是有意义的。想象一下一个管理许多流程应用程序的监控应用程序的情况。它与这些应用程序的类解耦，因此不能访问其Java表示中的自定义变量。对于这些情况，流程引擎提供了一种查询和操作序列化值的方法。可以归结为两个API。</description>
     </item>
@@ -4248,8 +4248,8 @@ Enterprise webapps 企业版特征Please note that this feature is only include
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/webapps/cockpit/auditing/</guid>
-      <description>企业版特征Please note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
-查看 Camunda 企业版主页了解更多信息以及获得免费试用版。Since Cockpit is a very powerful tool, it is often desired to inspect which user performed which operation for auditing purposes. Cockpit operations that change state are logged in the Camunda Platform&amp;rsquo;s user operation log that is part of the process engine history.</description>
+      <description>企业版特征 Please note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
+ 查看 Camunda 企业版主页 了解更多信息以及获得 免费试用版。  Since Cockpit is a very powerful tool, it is often desired to inspect which user performed which operation for auditing purposes. Cockpit operations that change state are logged in the Camunda Platform&amp;rsquo;s user operation log that is part of the process engine history.</description>
     </item>
     
     <item>
@@ -4260,7 +4260,7 @@ Enterprise webapps 企业版特征Please note that this feature is only include
       <guid>http://camunda-cn.shaochenfeng.com/reference/rest/deployment/post-redeploy-deployment/</guid>
       <description>Re-deploys an existing deployment.
 The deployment resources to re-deploy can be restricted by using the properties resourceIds or resourceNames. If no deployment resources to re-deploy are passed then all existing resources of the given deployment are re-deployed.
-Security ConsiderationDeployments can contain custom code in form of scripts or EL expressions to customize process behavior. This may be abused for remote execution of arbitrary code. See the section on security considerations for custom code in the user guide for details.</description>
+Security Consideration Deployments can contain custom code in form of scripts or EL expressions to customize process behavior. This may be abused for remote execution of arbitrary code. See the section on security considerations for custom code in the user guide for details.</description>
     </item>
     
     <item>
@@ -4279,8 +4279,8 @@ Design The process engine has a dedicated thread called the Telemetry Reporter t
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/webapps/admin/auditing/</guid>
-      <description>企业版特征Please note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
-查看 Camunda 企业版主页了解更多信息以及获得免费试用版。It is often desired to inspect which user performed which operation for auditing purposes. Admin operations are logged in the user operation log that is part of the process engine&amp;rsquo;s history. The log allows to understand
+      <description>企业版特征 Please note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
+ 查看 Camunda 企业版主页 了解更多信息以及获得 免费试用版。  It is often desired to inspect which user performed which operation for auditing purposes. Admin operations are logged in the user operation log that is part of the process engine&amp;rsquo;s history. The log allows to understand
  which operation was performed which user performed an operation when the operation was performed which entities (process instances, tasks, etc.</description>
     </item>
     
@@ -4443,7 +4443,7 @@ Parameters Request Body A JSON object with the following properties:
       
       <guid>http://camunda-cn.shaochenfeng.com/reference/rest/history/batch/get-cleanable-batch-report/</guid>
       <description>Retrieves a report about a historic batch operations relevant to history cleanup (see History cleanup) so that you can tune the history time to live. These reports include the count of the finished batches, cleanable batches and type of the batch. The size of the result set can be retrieved by using the Get Cleanable Batch Report Count method.
-Please note: The history time to live for batch operations does not support Multi-Tenancy.</description>
+ Please note: The history time to live for batch operations does not support Multi-Tenancy.</description>
     </item>
     
     <item>
@@ -4643,8 +4643,8 @@ Parameters Request Body A JSON object with the following properties:
       
       <guid>http://camunda-cn.shaochenfeng.com/installation/camunda-bpm-rpa-bridge/</guid>
       <description>This page describes the steps to orchestrate and execute RPA bots from Camunda Platform using the Camunda Platform RPA Bridge.
-企业版特征Please note that the RPA bridge is only available as enterprise edition.
-查看 Camunda 企业版主页了解更多信息以及获得免费试用版。Requirements Java Please make sure that you have the Java Runtime Environment 8+ installed.
+企业版特征 Please note that the RPA bridge is only available as enterprise edition.
+ 查看 Camunda 企业版主页 了解更多信息以及获得 免费试用版。  Requirements Java Please make sure that you have the Java Runtime Environment 8+ installed.
 You can verify this by using your terminal, shell, or command line:
 java -version  If you need to install a Java Runtime Environment, you can find the download from Oracle here.</description>
     </item>
@@ -4712,7 +4712,7 @@ Parameters Query Parameters  Name Description   firstResult Pagination of result
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/decisions/history/</guid>
       <description>After a decision definition has been evaluated either from a BPMN process, CMMN case or through the Decision Service, the inputs and outputs are saved in the History of the platform. The history entity is of type HistoricDecisionInstance and has the event type evaluate.
 For details about the history mechanism as such, refer to the History and Audit Event Log.
-History LevelHistory level FULL is required. Otherwise, no history for decisions is created.</description>
+History Level History level FULL is required. Otherwise, no history for decisions is created.</description>
     </item>
     
     <item>
@@ -4721,9 +4721,9 @@ History LevelHistory level FULL is required. Otherwise, no history for decision
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/webapps/cockpit/bpmn/process-instance-restart/</guid>
-      <description>企业版特征Please note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
-查看 Camunda 企业版主页了解更多信息以及获得免费试用版。In the history view, you can restart process instances individually or by a batch operation. A restart can consist of one or multiple of the following operations:
- Restart before an activity Restart after an activity, on its single outgoing sequence flow  Perform Restart A restart of a terminated process instance includes instructions which are displayed in the bottom of the screen, after you have selected the restart tab in the history view (1).</description>
+      <description>企业版特征 Please note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
+ 查看 Camunda 企业版主页 了解更多信息以及获得 免费试用版。  In the history view, you can restart process instances individually or by a batch operation. A restart can consist of one or multiple of the following operations:
+ Restart before an activity Restart after an activity, on its single outgoing sequence flow  Perform Restart   A restart of a terminated process instance includes instructions which are displayed in the bottom of the screen, after you have selected the restart tab in the history view (1).</description>
     </item>
     
     <item>
@@ -4754,10 +4754,10 @@ Mapping between Representations: Assume we have a class Customer defined as foll
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/database/mysql-configuration/</guid>
       <description>本节描述了如何进行 MySQL 配置。
 数据库表结构 引擎的MySQL数据库模式不支持列类型 TIMESTAMP 和 DATETIME 的毫秒精度。 也就是会四舍五入到下一秒或上一秒，例如，2021-01-01 15:00:46.731被四舍五入到2021-01-01 15:00:47。
-小心!日期/时间值缺失的毫秒精度会影响流程引擎的行为。 请阅读如何配置MySQL JDBC驱动程序以确保正确处理日期/时间值。
-JDBC驱动配置 在这里你可以找到MySQL JDBC驱动程序的配置条件，以确保与流程引擎兼容。
-为 date/time 类型禁用发送毫秒精度 小心!这个配置是必要的，以避免在用MySQL操作流程引擎时出现意外行为。
-将date/time值发送到数据库的任何SQL语句的一部分时, 当 MySQL JDBC驱动 &amp;gt;= 5.1.23 时会发送毫秒。 在使用MySQL数据库时，这个行为会导致问题。 表结构不支持带有毫秒的 date/time 类型值。
+小心! 日期/时间值缺失的毫秒精度会影响流程引擎的行为。 请阅读如何配置MySQL JDBC驱动程序以确保正确处理日期/时间值。
+ JDBC驱动配置 在这里你可以找到MySQL JDBC驱动程序的配置条件，以确保与流程引擎兼容。
+为 date/time 类型禁用发送毫秒精度 小心! 这个配置是必要的，以避免在用MySQL操作流程引擎时出现意外行为。
+ 将date/time值发送到数据库的任何SQL语句的一部分时, 当 MySQL JDBC驱动 &amp;gt;= 5.1.23 时会发送毫秒。 在使用MySQL数据库时，这个行为会导致问题。 表结构不支持带有毫秒的 date/time 类型值。
 在发送date/time值时确保流程引擎的正确行为， 确保将MySQL JDBC驱动程序更新为版本&amp;gt; = 5.1.37。 在这些版本中，你可以通过设置sendFractionalSeconds=false来避免向MySQL服务器发送毫秒。 在你的JDBC连接URL中设置sendFractionalSeconds=false。
 下面是在没有配置 &amp;ldquo;sendFractionalSeconds=false&amp;rdquo; 标志的情况下发生的问题行为的例子：
 *当用户以due date == 2021-01-01 15:00:46.731执行任务查询时，该查询返回的结果等于2021-01-01 15:00:46.731。然而，由于引擎的数据库模式不存储毫秒，没有返回结果。 * 当用户为任务设置due date时，该值被四舍五入到下一秒或前一秒，例如，2021-01-01 15:00:46.731被四舍五入为2021-01-01 15:00:47。也请参见官方MySQL文档。</description>
@@ -4780,9 +4780,22 @@ Example The following example shows an XML snippet which can be placed in both p
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/webapps/cockpit/bpmn/process-instance-modification/</guid>
-      <description>企业版特征Please note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
-查看 Camunda 企业版主页了解更多信息以及获得免费试用版。In the detail view, you can modify the process instance&amp;rsquo;s execution state. A modification can be one or multiple of the following operations:
+      <description>企业版特征 Please note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
+ 查看 Camunda 企业版主页 了解更多信息以及获得 免费试用版。    In the detail view, you can modify the process instance&amp;rsquo;s execution state. A modification can be one or multiple of the following operations:
  Starting execution before an activity Starting execution after an activity on its single outgoing sequence flow Canceling an activity instance or all instances of an activity  Perform a Modification A modification consists of multiple instructions, which are displayed in the modification tab at the bottom half of the screen (1).</description>
+    </item>
+    
+    <item>
+      <title>Process applications</title>
+      <link>http://camunda-cn.shaochenfeng.com/user-guide/spring-boot-integration/process-applications/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://camunda-cn.shaochenfeng.com/user-guide/spring-boot-integration/process-applications/</guid>
+      <description> 默认情况下，camunda-spring-boot-starter 使用SpringProcessEngineConfiguration 配置自动部署功能。 从1.2.0开始，你也可以通过 SpringBootProcessApplication 配置。这将禁用SpringProcessEngineConfiguration 的自动部署功能。 自动部署功能，使用所需的 META-INF/processes.xml 作为资源扫描的目录。 允许使用的所有 processes.xml 配置项在 这里 列出。
+你这只需要添加 @EnableProcessApplication 注解到Spring Boot application类：
+@SpringBootApplication @EnableProcessApplication(&amp;quot;myProcessApplicationName&amp;quot;) public class MyApplication { ... }  一些配置可以通过Spring Boot配置参数完成。详情见可用参数的列表.
+使用部署回调函数 由于使用@EnableProcessApplication时，我们没有扩展ProcessApplication类，所以我们不能使用@PostDeploy和@PreUndeploy方法注释。相反，这些回调是通过Spring事件发布机制提供的。所以你可以使用以下事件监听器。
+@EventListener public void onPostDeploy(PostDeployEvent event) { ... } @EventListener public void onPreUndeploy(PreUndeployEvent event) { ... }  </description>
     </item>
     
     <item>
@@ -4822,12 +4835,12 @@ public void testRepositoryService() { String decisionDefinitionId = repositorySe
       
       <guid>http://camunda-cn.shaochenfeng.com/reference/bpmn20/tasks/script-task/</guid>
       <description>脚本任务是自动活动。当流程执行到达脚本任务时，执行相应的脚本。
-通过指定脚本内容和脚本格式来定义脚本任务：
+ 通过指定脚本内容和脚本格式来定义脚本任务：
 &amp;lt;scriptTask id=&amp;quot;theScriptTask&amp;quot; name=&amp;quot;Execute script&amp;quot; scriptFormat=&amp;quot;groovy&amp;quot;&amp;gt; &amp;lt;script&amp;gt; sum = 0 for ( i in inputArray ) { sum += i } &amp;lt;/script&amp;gt; &amp;lt;/scriptTask&amp;gt;  scriptFormat属性的值必须是一个与JSR-223（Java平台的脚本）兼容的名称。如果你想使用一个（与JSR-223兼容的）脚本引擎，你需要在classpath中添加相应的jar，并使用适当的名称。
 脚本源代码必须作为script子元素的文本内容添加。 或者，源代码可以被指定为表达式或外部资源。更多 关于提供脚本源代码的可能方式的更多信息，请参见相应的 用户指南 的 脚本来源 章节。
 关于流程引擎中脚本的一般信息，请参见用户指南中的脚本部分。
-支持的脚本语言Camunda平台应该可以与大多数JSR-223兼容的脚本引擎实现协同工作。我们测试了Groovy、JavaScript、JRuby和Jython的集成。请参阅用户指南 的 第三方依赖性部分了解更多细节。
-脚本中的变量 所有通过执行到达脚本任务中的流程变量都可以在脚本中使用。在下面的例子中，脚本变量inputArray实际上是一个流程变量（一个整数的列表）。
+支持的脚本语言 Camunda平台应该可以与大多数JSR-223兼容的脚本引擎实现协同工作。我们测试了Groovy、JavaScript、JRuby和Jython的集成。请参阅用户指南 的 第三方依赖性部分了解更多细节。
+ 脚本中的变量 所有通过执行到达脚本任务中的流程变量都可以在脚本中使用。在下面的例子中，脚本变量inputArray实际上是一个流程变量（一个整数的列表）。
 &amp;lt;script&amp;gt; sum = 0 for ( i in inputArray ) { sum += i } &amp;lt;/script&amp;gt;  也可以在脚本中设置流程变量。变量可以通过使用VariableScope接口提供的setVariable(..)方法来设置。
 &amp;lt;script&amp;gt; sum = 0 for ( i in inputArray ) { sum += i } execution.</description>
     </item>
@@ -4873,8 +4886,8 @@ Response Codes  Code Media type Description   204  Request successful.</descript
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/webapps/tasklist/task-lifecycle/</guid>
-      <description>The diagram below shows the task lifecycle and supported transitions supported by Camunda Platform. To get to know how to programmatically work with the lifecycle in your application, refer to the Java-API Reference.
-</description>
+      <description>The diagram below shows the task lifecycle and supported transitions supported by Camunda Platform. To get to know how to programmatically work with the lifecycle in your application, refer to the Java-API Reference .
+  </description>
     </item>
     
     <item>
@@ -4883,7 +4896,7 @@ Response Codes  Code Media type Description   204  Request successful.</descript
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/dmn-engine/testing/</guid>
-      <description>To easily test DMN decisions in a JUnit test, the DMN engine provides a JUnit Rule. The DmnEngineRulecreates a new default DMN engine. The DMN engine can be used in test cases to parse and evaluate decisions.
+      <description>To easily test DMN decisions in a JUnit test, the DMN engine provides a JUnit Rule. The DmnEngineRule creates a new default DMN engine. The DMN engine can be used in test cases to parse and evaluate decisions.
 public class DecisionTest { @Rule public DmnEngineRule dmnEngineRule = new DmnEngineRule(); @Test public void test() { DmnEngine dmnEngine = dmnEngineRule.getDmnEngine(); // load DMN file InputStream inputStream = ...; //create and add variables VariableMap variables = Variables.</description>
     </item>
     
@@ -4893,9 +4906,9 @@ public class DecisionTest { @Rule public DmnEngineRule dmnEngineRule = new DmnEn
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/runtime-container-integration/jboss/</guid>
-      <description>Installation GuideIf you download a full distribution, the Camunda JBoss/Wildfly subsystem is readily installed into the application server.
+      <description>Installation Guide If you download a full distribution, the Camunda JBoss/Wildfly subsystem is readily installed into the application server.
 Read the installation guide to learn how to install the Camunda JBoss/Wildfly subsystem into your JBoss AS 7 or Wildfly Server.
-Camunda Platform provides advanced integration for JBoss AS 7 and Wildfly in the form of a custom JBoss/Wildfly Subsystem.
+ Camunda Platform provides advanced integration for JBoss AS 7 and Wildfly in the form of a custom JBoss/Wildfly Subsystem.
 The most prominent features are:
  Deploy the process engine as shared JBoss module.</description>
     </item>
@@ -4907,8 +4920,8 @@ The most prominent features are:
       
       <guid>http://camunda-cn.shaochenfeng.com/reference/rest/filter/put-update/</guid>
       <description>Updates an existing filter.
-Security ConsiderationThe query parameter of the request body takes a JSON-serialized query. Some query types (e.g., task queries) allow to specify EL expressions in their parameters and may therefore be abused for remote code execution. See the section on security considerations for custom code in the user guide for details.
-Method PUT /filter/{id}
+Security Consideration The query parameter of the request body takes a JSON-serialized query. Some query types (e.g., task queries) allow to specify EL expressions in their parameters and may therefore be abused for remote code execution. See the section on security considerations for custom code in the user guide for details.
+ Method PUT /filter/{id}
 Parameters Path Parameters  Name Description   id The id of the filter to be updated.</description>
     </item>
     
@@ -4965,8 +4978,8 @@ Serialized and Deserialized Object Values Object Values are instances of (non pr
       
       <guid>http://camunda-cn.shaochenfeng.com/reference/forms/embedded-forms/java-objects/</guid>
       <description>This section explains how to work with serialized Java Objects in embedded task forms.
-Out of the box, you can only work with Java Objects which are serialized in JSON format If Java Classes are serialized using JAX-B, you need to add custom XML parsing and writing logic to the embedded form. Java Objects serialized using Java Serialization cannot be used in forms.
-Fetching an existing Serialized Java Object Variable The Form SDK will only fetch those variables which are actually used in a form.</description>
+ Out of the box, you can only work with Java Objects which are serialized in JSON format If Java Classes are serialized using JAX-B, you need to add custom XML parsing and writing logic to the embedded form. Java Objects serialized using Java Serialization cannot be used in forms.
+ Fetching an existing Serialized Java Object Variable The Form SDK will only fetch those variables which are actually used in a form.</description>
     </item>
     
     <item>
@@ -4977,9 +4990,9 @@ Serialized and Deserialized Object Values Object Values are instances of (non pr
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-instance-modification/</guid>
       <description>虽然流程定义模型必须包含以何种顺序执行活动的顺序流，但有时也需要灵活地再次启动一个活动或取消一个正在运行的活动。例如，当流程模型存在错误（例如顺序流条件写错了）并且运行中的流程实例需要被纠正时，则以下API可以提供帮助：
  修复流程实例，其中一些步骤必须重复执行或跳过 将流程实例从流程定义的一个版本迁移到另一个版本 测试阶段：可以跳过或重复做一些活动，以便对个别流程段进行独立测试。  为了执行这样的操作，流程引擎提供 流程实例修改API ，包括 RuntimeService.createProcessInstanceModification(..)或 RuntimeService.createModification(...)。这些API允许通过使用流式的构造器在一次调用中指定多个 修改指令 。而且它还能做到：
- 在一个活动之前就开始执行 在离开活动的序列流上开始执行 取消一个正在运行的活动实例 取消一个给定活动的所有运行实例 设置变量  流程实例自己修改自己不建议流程实例自己修改自己 ，试图修改它自己的流程实例的行为会导致不确定的结果，这应该被避免。
-企业版特征Camunda企业版提供了一个用户界面，可以在Camunda Cockpit的BPMN图上直观地对流程实例的进行修改。
-查看 Camunda 企业版主页了解更多信息以及获得免费试用版。修改流程实例——案例 作为一个例子，请考虑以下流程模型。
+ 在一个活动之前就开始执行 在离开活动的序列流上开始执行 取消一个正在运行的活动实例 取消一个给定活动的所有运行实例 设置变量  流程实例自己修改自己 不建议流程实例自己修改自己 ，试图修改它自己的流程实例的行为会导致不确定的结果，这应该被避免。
+ 企业版特征 Camunda企业版提供了一个用户界面，可以在Camunda Cockpit的BPMN图上直观地对流程实例的进行修改。
+ 查看 Camunda 企业版主页 了解更多信息以及获得 免费试用版。  修改流程实例——案例 作为一个例子，请考虑以下流程模型。
  该模型显示了一个处理贷款申请的简单流程。让我们假设一份贷款申请已经到达，贷款申请已经被评估，并被确定为需要拒绝。这意味着，该流程实例有以下活动实例状态。
 ProcessInstance Decline Loan Application  现在，执行 Decline Loan Application 任务的工作人员认识到了评估结果是错误的，并得出结论，该申请还是应该被接受。虽然这种灵活性并不是流程的一部分，但对流程实例的修改允许纠正运行中的流程实例。使用下面的API调用就可以做到这一点：
 ProcessInstance processInstance = runtimeService.createProcessInstanceQuery().singleResult(); runtimeService.createProcessInstanceModification(processInstance.getId()) .startBeforeActivity(&amp;quot;acceptLoanApplication&amp;quot;) .cancelAllForActivity(&amp;quot;declineLoanApplication&amp;quot;) .execute();  这个命令首先在活动 Accept Loan Application 之前开始执行，直到达到一个等待状态&amp;ndash;在这种情况下是用户任务的创建。之后，它取消了活动 Decline Loan Application 的所有运行实例。在工作者的任务列表中， Decline 任务已被删除，而 Accept 任务已出现。最后活动实例的状态是：</description>
@@ -4993,19 +5006,8 @@ ProcessInstance processInstance = runtimeService.createProcessInstanceQuery().si
       <guid>http://camunda-cn.shaochenfeng.com/introduction/extensions/</guid>
       <description>Camunda平台是由Camunda与社区合作开发的一个开源项目。“核心项目”（即 &amp;ldquo;Camunda平台&amp;rdquo;）是Camunda平台产品的基础，该产品由Camunda以商业形式提供。商业化的Camunda平台产品包含额外的（非开源）功能，并通过提供企业支持和错误修复版本等服务提供给Camunda平台客户。
 社区扩展 Camunda支持社区在Camunda平台的框架下建立更多的社区扩展。这些社区扩展由社区维护，不属于Camunda平台的商业产品。
-Chamunda支持Camunda does not support community extensions as part of its commercial services to enterprise subscription customers
-The Camunda Community Hub is a GitHub Organization that serves as the home of Camunda open source community-contributed extensions. You can migrate an extension you&amp;rsquo;ve built to the Hub, search for existing extensions, or get started with open source by helping community extension maintainers with open issue or pull request triage.</description>
-    </item>
-    
-    <item>
-      <title>流程应用程序</title>
-      <link>http://camunda-cn.shaochenfeng.com/user-guide/spring-boot-integration/process-applications/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://camunda-cn.shaochenfeng.com/user-guide/spring-boot-integration/process-applications/</guid>
-      <description>By default, the camunda-spring-boot-starter is configured to use the SpringProcessEngineConfiguration auto deployment feature. Since 1.2.0 you also have the possibility to do so via SpringBootProcessApplication. This disables the SpringProcessEngineConfiguration auto-deploy feature and instead uses the required META-INF/processes.xml as an indicator for resource scanning. This also allows all processes.xml configuration features described here.
-To use it, just add the @EnableProcessApplication annotation to your Spring Boot application class:
-@SpringBootApplication @EnableProcessApplication(&amp;quot;myProcessApplicationName&amp;quot;) public class MyApplication { .</description>
+Chamunda支持 Camunda does not support community extensions as part of its commercial services to enterprise subscription customers
+ The Camunda Community Hub is a GitHub Organization that serves as the home of Camunda open source community-contributed extensions. You can migrate an extension you&amp;rsquo;ve built to the Hub, search for existing extensions, or get started with open source by helping community extension maintainers with open issue or pull request triage.</description>
     </item>
     
     <item>
@@ -5028,12 +5030,12 @@ Prerequisites and audience To use this guide, you should at least know what Camu
  恢复被错误地取消的流程实例的到最后状态 由于错误路由导致流程实例终止后，重启流程实例  为了执行这样的操作，流程引擎提供了 流程实例重启API RuntimeService.restartProcessInstances(..) 。该API允许通过使用流式构建器在一次调用中指定多个实例化指令。
 请注意，这些操作也可以通过REST方式进行。重启流程实例和重启流程实例（async）
 流程实例重启的例子 考虑以下流程模型，其中红点标志着活动任务：
-让我们假设流程实例已经被别人用以下代码从外部取消了：
+  让我们假设流程实例已经被别人用以下代码从外部取消了：
 ProcessInstance processInstance = runtimeService.createProcessInstanceQuery().singleResult(); runtimeService.deleteProcessInstance(processInstance.getId(), &amp;quot;any reason&amp;quot;);  之后，我们决定恢复该流程实例到最后状态：
 runtimeService.restartProcessInstance(processInstance.getProcessDefinitionId()) .startBeforeActivity(&amp;quot;receivePayment&amp;quot;) .startBeforeActivity(&amp;quot;shipOrder&amp;quot;) .processInstanceIds(processInstance.getId()) .execute();  流程实例已经用最后一组变量重启了。然而，在重启的流程实例中，只有全局变量被恢复了。 本地变量还需要调用 RuntimeService.setVariableLocal(..) 手动设置。
-从技术上讲，创建的是一个新的流程实例。
+ 从技术上讲，创建的是一个新的流程实例。
 请注意: 历史流程和重启的流程实例的id是不同的。
-操作语义 在下文中，将描述流程实例恢复功能的确切语义。建议阅读本节，以充分了解该功能的效果、能力和限制。
+ 操作语义 在下文中，将描述流程实例恢复功能的确切语义。建议阅读本节，以充分了解该功能的效果、能力和限制。
 实例化指令类型 流式流程实例重启构建器提供了以下的方法，可以调用。
  startBeforeActivity(String activityId) startAfterActivity(String activityId) startTransition(String transitionId)  关于指令类型的信息，请参考类似的 修改指令类型 section.
 选择要重启的流程实例 可以通过提供一组流程实例ID来选择流程实例进行重启 或者提供一个历史流程实例查询。也可以同时指定一个流程实例id列表和一个查询。 然后，要重启的流程实例将是所产生的集合的并集。
@@ -5057,8 +5059,8 @@ ProcessDefinition processDefinition = ...; List&amp;lt;String&amp;gt; processIns
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/webapps/cockpit/bpmn/process-instance-migration/</guid>
-      <description>企业版特征Please note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
-查看 Camunda 企业版主页了解更多信息以及获得免费试用版。You can migrate running process instances from their current process definition version to another version of that definition or another process definition altogether. You can access the migration page by navigating to the process definition or instance view of a process with multiple versions.</description>
+      <description>企业版特征 Please note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
+ 查看 Camunda 企业版主页 了解更多信息以及获得 免费试用版。    You can migrate running process instances from their current process definition version to another version of that definition or another process definition altogether. You can access the migration page by navigating to the process definition or instance view of a process with multiple versions.</description>
     </item>
     
     <item>
@@ -5370,7 +5372,7 @@ Parameters Query Parameters  firstResult Pagination of results. Specifies the in
       <guid>http://camunda-cn.shaochenfeng.com/reference/rest/execution/local-variables/get-local-variables/</guid>
       <description>Retrieves all variables of a given execution by id.
 Method GET /execution/{id}/localVariables
-Parameters Path Parameters  Name Description   id The id of the execution to retrieve the variables from.   Query Parameters  Name Description   deserializeValues  Determines whether serializable variable values (typically variables that store custom Java objects) should be deserialized on server side (default true).If set to true, a serializable variable will be deserialized on server side and transformed to JSON using Jackson&#39;s POJO/bean property introspection feature.</description>
+Parameters Path Parameters  Name Description   id The id of the execution to retrieve the variables from.   Query Parameters  Name Description   deserializeValues  Determines whether serializable variable values (typically variables that store custom Java objects) should be deserialized on server side (default true). If set to true, a serializable variable will be deserialized on server side and transformed to JSON using Jackson&#39;s POJO/bean property introspection feature.</description>
     </item>
     
     <item>
@@ -5446,10 +5448,10 @@ The descriptions on this page apply to the use case where there is no existing r
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/webapps/tasklist/tasklist-plugins/</guid>
-      <description>Plugin CompatibilityPlease note that the code of Tasklist plugins might need to be migrated when updating Camunda Platform to a higher version (e.g. CSS styles).
-Tasklist uses the concept of plugins to add own functionality without having to extend or hack the Tasklist web application.
+      <description>Plugin Compatibility Please note that the code of Tasklist plugins might need to be migrated when updating Camunda Platform to a higher version (e.g. CSS styles).
+ Tasklist uses the concept of plugins to add own functionality without having to extend or hack the Tasklist web application.
 For further details about the concepts behind plugins, please read the Cockpit plugins section.
-Difference between Cockpit and Tasklist plugins: To publish the plugin with Tasklist, its class name must be put into a file called org.</description>
+Difference between Cockpit and Tasklist plugins:  To publish the plugin with Tasklist, its class name must be put into a file called org.</description>
     </item>
     
     <item>
@@ -5460,8 +5462,8 @@ Difference between Cockpit and Tasklist plugins: To publish the plugin with Tas
       <guid>http://camunda-cn.shaochenfeng.com/webapps/welcome/welcome-plugins/</guid>
       <description> In addition to the configurable custom links, plugins can be used to add functionality to the Welcome application. For further details about the concepts behind plugins, please read the Cockpit plugins section. Please note that the Welcome application just offers frontend only plugins.
 Plugin point Name: welcome.dashboard.
-Name: welcome.profile.
-</description>
+  Name: welcome.profile.
+  </description>
     </item>
     
     <item>
@@ -5471,11 +5473,11 @@ Plugin point Name: welcome.dashboard.
       
       <guid>http://camunda-cn.shaochenfeng.com/reference/bpmn20/tasks/receive-task/</guid>
       <description>一个接收任务是一个简单的任务，它等待某个消息的到来。当流程的执行到达一个接收任务时，流程的状态被提交到持久性存储中。这意味着流程将一直处于这种等待状态，直到引擎收到一个特定的消息，从而触发流程在接收任务之外的继续执行。
-一个有消息参考的接收任务可以像普通事件一样被触发。
+ 一个有消息参考的接收任务可以像普通事件一样被触发。
 &amp;lt;definitions ...&amp;gt; &amp;lt;message id=&amp;quot;newInvoice&amp;quot; name=&amp;quot;newInvoiceMessage&amp;quot;/&amp;gt; &amp;lt;process ...&amp;gt; &amp;lt;receiveTask id=&amp;quot;waitState&amp;quot; name=&amp;quot;wait&amp;quot; messageRef=&amp;quot;newInvoice&amp;quot;&amp;gt; ...  然后你可以将它和消息关联起来。
 // 关联消息 runtimeService.createMessageCorrelation(subscription.getEventName()) .processInstanceBusinessKey(&amp;quot;AB-123&amp;quot;) .correlate();  或者明确地查询订阅并触发它：
-ProcessInstance pi = runtimeService.startProcessInstanceByKey(&amp;quot;processWaitingInReceiveTask&amp;quot;); EventSubscription subscription = runtimeService.createEventSubscriptionQuery() .processInstanceId(pi.getId()).eventType(&amp;quot;message&amp;quot;).singleResult(); runtimeService.messageEventReceived(subscription.getEventName(), subscription.getExecutionId());  并行多实例的相关性是不可能的，因为订阅不能被明确地识别。
-要继续一个当前在接收任务中等待的流程实例，而没有消息参考，可以调用runtimeService.signal(executionId)，使用接收任务中的执行的id。
+ProcessInstance pi = runtimeService.startProcessInstanceByKey(&amp;quot;processWaitingInReceiveTask&amp;quot;); EventSubscription subscription = runtimeService.createEventSubscriptionQuery() .processInstanceId(pi.getId()).eventType(&amp;quot;message&amp;quot;).singleResult(); runtimeService.messageEventReceived(subscription.getEventName(), subscription.getExecutionId());   并行多实例的相关性是不可能的，因为订阅不能被明确地识别。
+ 要继续一个当前在接收任务中等待的流程实例，而没有消息参考，可以调用runtimeService.signal(executionId)，使用接收任务中的执行的id。
 &amp;lt;receiveTask id=&amp;quot;waitState&amp;quot; name=&amp;quot;wait&amp;quot; /&amp;gt;  以下代码段显示在实践中如何运作：
 ProcessInstance pi = runtimeService.startProcessInstanceByKey(&amp;quot;receiveTask&amp;quot;); Execution execution = runtimeService.createExecutionQuery() .processInstanceId(pi.getId()).activityId(&amp;quot;waitState&amp;quot;).singleResult(); runtimeService.signal(execution.getId());  Camunda 扩展  属性  camunda:asyncBefore, camunda:asyncAfter, camunda:exclusive, camunda:jobPriority    扩展元素  camunda:failedJobRetryTimeCycle, camunda:inputOutput    约束  The camunda:exclusive attribute is only evaluated if the attribute camunda:asyncBefore or camunda:asyncAfter is set to true    额外资料  Tasks in the BPMN 2.</description>
     </item>
@@ -5487,8 +5489,8 @@ ProcessInstance pi = runtimeService.startProcessInstanceByKey(&amp;quot;receiveT
       
       <guid>http://camunda-cn.shaochenfeng.com/webapps/cockpit/reporting/</guid>
       <description>You can use the reports section of cockpit to display custom statistics and reports. Please note that this section is not visible if no report is available. Refer to the Cockpit Plugins section for adding a custom reporting plugin.
-Process Instance Duration Report 企业版特征Please note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
-查看 Camunda 企业版主页了解更多信息以及获得免费试用版。This report shows the average, minimum and maximum duration for a selected process definition and version for a given timeframe.</description>
+Process Instance Duration Report 企业版特征 Please note that this feature is only included in the enterprise edition of the Camunda Platform, it is not available in the community edition.
+ 查看 Camunda 企业版主页 了解更多信息以及获得 免费试用版。    This report shows the average, minimum and maximum duration for a selected process definition and version for a given timeframe.</description>
     </item>
     
     <item>
@@ -5498,7 +5500,7 @@ Process Instance Duration Report 企业版特征Please note that this feature i
       
       <guid>http://camunda-cn.shaochenfeng.com/reference/cmmn11/sentry/</guid>
       <description>A sentry captures the occurrence of a certain event occurring or a condition being fulfilled within a case. Sentries are used as entry and exit criteria. Note that the black and white diamonds represent the criteria. A sentry itself has no graphical representation.
-In XML, a sentry can be specified as follows:
+  In XML, a sentry can be specified as follows:
 &amp;lt;planItem id=&amp;quot;PlanItem_HumanTask_1&amp;quot; definitionRef=&amp;quot;HumanTask_1&amp;quot;/&amp;gt; &amp;lt;planItem id=&amp;quot;PlanItem_HumanTask_2&amp;quot; definitionRef=&amp;quot;HumanTask_1&amp;quot;&amp;gt; &amp;lt;entryCriterion sentryRef=&amp;quot;Sentry_1&amp;quot; /&amp;gt; &amp;lt;/planItem&amp;gt; &amp;lt;sentry id=&amp;quot;Sentry_1&amp;quot;&amp;gt; &amp;lt;planItemOnPart sourceRef=&amp;quot;PlanItem_HumanTask_1&amp;quot;&amp;gt; &amp;lt;standardEvent&amp;gt;complete&amp;lt;/standardEvent&amp;gt; &amp;lt;/planItemOnPart&amp;gt; &amp;lt;ifPart&amp;gt; &amp;lt;condition&amp;gt;${myVar &amp;gt; 100}&amp;lt;/condition&amp;gt; &amp;lt;/ifPart&amp;gt; &amp;lt;/sentry&amp;gt; &amp;lt;humanTask id=&amp;quot;HumanTask_1&amp;quot;/&amp;gt;  The above example defines a sentry that is fulfilled when the plan item PlanItem_HumanTask_1 performs the state transition complete (note the planItemOnPart element) and a variable named myVar has a value greater than 100 (note the ifPart element).</description>
     </item>
     
@@ -5568,8 +5570,11 @@ The following is an example of two separate processes communicating using signal
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/spring-boot-integration/the-spring-event-bridge/</guid>
-      <description>The process engine can be hooked-up to the Spring event bus. We call this the &amp;ldquo;Spring Eventing Bridge&amp;rdquo;. This allows us to be notified of process events using standard Spring eventing mechanisms. By default, the Spring eventing is enabled by a engine plugin. The eventing is controlled by three camunda.bpm.eventing properties. These are:
-camunda.bpm.eventing.execution=true camunda.bpm.eventing.history=true camunda.bpm.eventing.task=true  The properties control three event streams for execution, task and history events respectively.</description>
+      <description>流程引擎可以连接到Spring事件总线。我们称其为 &amp;ldquo;Spring事件桥(Eventing Bridge)&amp;ldquo;。这使得我们可以使用标准的Spring事件机制来通知流程事件。默认情况下，Spring事件由一个引擎插件启用。该事件由三个camunda.bpm.eventing属性控制。它们是：
+camunda.bpm.eventing.execution=true camunda.bpm.eventing.history=true camunda.bpm.eventing.task=true  这些属性分别控制执行、历史事件和任务的三个事件流。 监听器可以订阅可变或不可变的事件对象的流。 不可变监听器在使用异步监听器时特别有用&amp;ndash;例如使用TransactionalEventListener时。 可变事件流对象在创建和接收监听器异步订阅的事件之间可以被多次修改。不可变的事件对象反映了事件创建时的数据，不管它们最终被监听器接收的时间。
+在执行事件流中，可以接收 DelegateExecution（可变）和 ExecutionEvent（不可变）。 任务事件流提供DelegateTask（可变）和TaskEvent（不可变）。 在历史事件流只提供 HistoryEvent（可变）。
+下面的例子概述了如何在Spring Bean中接收流程事件。这样，你可以通过为Spring Bean提供注释方法来实现任务和委托监听器，而不是实现TaskListener和ExecutionListener接口。
+import org.camunda.bpm.engine.delegate.DelegateExecution; import org.camunda.bpm.engine.delegate.DelegateTask; import org.camunda.bpm.engine.impl.history.event.HistoryEvent; import org.springframework.context.event.EventListener; import org.springframework.stereotype.Component; @Component class MyListener { @EventListener public void onTaskEvent(DelegateTask taskDelegate) { // 处理可变的任务事件 } @EventListener public void onTaskEvent(TaskEvent taskEvent) { // 处理不可变的任务事件 } @EventListener public void onExecutionEvent(DelegateExecution executionDelegate) { // 处理可变的执行事件 } @EventListener public void onExecutionEvent(ExecutionEvent executionEvent) { // 处理不可改的执行事件 } @EventListener public void onHistoryEvent(HistoryEvent historyEvent) { // 处理历史事件 } }   如果用EventListener注释的方法返回一个非void的结果，Spring会将把它作为一个新的事件扔到Spring事件总线上。这允许建立事件处理程序链进行处理。关于事件处理的更多信息，请参考Spring手册。</description>
     </item>
     
     <item>
@@ -5603,9 +5608,9 @@ Parameters Path Parameters  Name Description   id The id of the case execution t
 有四种不同类型委托代码：
  Java 代理类（JAVA Delegates） 可以附加到 BPMN 服务任务。 变量映射（Delegate Variable Mapping） 可以附加到 发起活动。 执行监听器（Execution Listeners） 可以附加到令牌流动的任何实践，例如，启动一个流程实例或进入一个活动。 任务监听器（Task Listeners） 可以附加到用户任务生命周期内的任何事件，例如，用户任务的创建或完成。  你可以通过BPMN 2.0 XML创建通用的委托代码，并使用字段注入来配置。
 Java 代理类 在流程运行中调用的Java代理类，需要实现 org.camunda.bpm.engine.delegate.JavaDelegate 接口，并实现 execute 方法。当流程执行到达这个特定的步骤时，它将执行该方法中定义的这个方法，并以默认的BPMN 2.0方式完成活动。
-举个例子，让我们先创建一个Java类，它可以用来将一个流程变量String改为大写字母。这个类需要实现org.camunda.bpm.engine.delegate.JavaDelegate接口，这要求我们实现execute(DelegateExecution)方法。这个操作将被引擎调用，并且包含所需要的业务逻辑。（可以通过 DelegateExecution接口访问和操作流程实例信息，如流程变量和其他信息）
-public class ToUppercase implements JavaDelegate { public void execute(DelegateExecution execution) throws Exception { String var = (String) execution.getVariable(&amp;quot;input&amp;quot;); var = var.toUpperCase(); execution.setVariable(&amp;quot;input&amp;quot;, var); } }  新的实例!每次执行引用活动的委托类时，都会创建这个类的一个新的实例。这意味着，每次活动被执行时，将使用该类的另一个实例来调用 execute(DelegateExecution)。
-在流程定义中引用的类（即通过使用 camunda:class 引用的类）在部署期间 不会 被实例化。只有当流程执行到达流程中第一次使用类的地方时，才会创建该类的实例。如果找不到该类，将抛出一个 &amp;ldquo;ProcessEngineException&amp;rdquo;。因为，你在部署时的环境（更确切地说，是classpath）往往与实际运行时的环境不同。</description>
+举个例子，让我们先创建一个Java类，它可以用来将一个流程变量String改为大写字母。这个类需要实现org.camunda.bpm.engine.delegate.JavaDelegate接口，这要求我们实现execute(DelegateExecution)方法。这个操作将被引擎调用，并且包含所需要的业务逻辑。（可以通过 DelegateExecution 接口访问和操作流程实例信息，如流程变量和其他信息）
+public class ToUppercase implements JavaDelegate { public void execute(DelegateExecution execution) throws Exception { String var = (String) execution.getVariable(&amp;quot;input&amp;quot;); var = var.toUpperCase(); execution.setVariable(&amp;quot;input&amp;quot;, var); } }  新的实例! 每次执行引用活动的委托类时，都会创建这个类的一个新的实例。这意味着，每次活动被执行时，将使用该类的另一个实例来调用 execute(DelegateExecution)。
+ 在流程定义中引用的类（即通过使用 camunda:class 引用的类）在部署期间 不会 被实例化。只有当流程执行到达流程中第一次使用类的地方时，才会创建该类的实例。如果找不到该类，将抛出一个 &amp;ldquo;ProcessEngineException&amp;rdquo;。因为，你在部署时的环境（更确切地说，是classpath）往往与实际运行时的环境不同。</description>
     </item>
     
     <item>
@@ -5843,7 +5848,7 @@ Parameters Path Parameters  Name Description   id The id of the process definiti
       
       <guid>http://camunda-cn.shaochenfeng.com/reference/bpmn20/tasks/manual-task/</guid>
       <description> 手动任务定义了一个对BPM引擎来说是外部的任务。它被用来模拟由引擎不需要知道的人所做的工作，而且没有已知的系统或UI接口。对于引擎来说，手工任务被当作一个传递节点来处理，在流程执行到达的那一刻将自动继续流程。
-&amp;lt;manualTask id=&amp;quot;myManualTask&amp;quot; name=&amp;quot;Manual Task&amp;quot; /&amp;gt;  Camunda 扩展  属性  camunda:asyncBefore, camunda:asyncAfter, camunda:exclusive, camunda:jobPriority    扩展元素  camunda:failedJobRetryTimeCycle, camunda:inputOutput    约束  The camunda:exclusive attribute is only evaluated if the attribute camunda:asyncBefore or camunda:asyncAfter is set to true    </description>
+ &amp;lt;manualTask id=&amp;quot;myManualTask&amp;quot; name=&amp;quot;Manual Task&amp;quot; /&amp;gt;  Camunda 扩展  属性  camunda:asyncBefore, camunda:asyncAfter, camunda:exclusive, camunda:jobPriority    扩展元素  camunda:failedJobRetryTimeCycle, camunda:inputOutput    约束  The camunda:exclusive attribute is only evaluated if the attribute camunda:asyncBefore or camunda:asyncAfter is set to true    </description>
     </item>
     
     <item>
@@ -5853,7 +5858,7 @@ Parameters Path Parameters  Name Description   id The id of the process definiti
       
       <guid>http://camunda-cn.shaochenfeng.com/webapps/cockpit/tasks-dashboard/</guid>
       <description>You can use the open tasks dashboard to see how the open tasks are distributed by individual factors. Refer to the Cockpit Plugins section for information about adding a custom open task dashboard plugin.
-Open Tasks Assignments by type In this category you can see how many open tasks exist. There is also an overview which shows how the open tasks are distributed.
+  Open Tasks Assignments by type In this category you can see how many open tasks exist. There is also an overview which shows how the open tasks are distributed.
 Assignment by group This category provides you an overview which shows how all open tasks which are assigned to a group are distributed between the individual groups.</description>
     </item>
     
@@ -5887,8 +5892,8 @@ Parameters Path Parameters  Name Description   id The id of the job definition t
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/webapps/cockpit/bpmn/suspension/</guid>
-      <description>In the process definition view and in the process instance view you can suspend the selected process definition or process instance by using the button on the right side.
-Process Definition Suspension If you suspend the process definition, you prevent the process definition from being instantiated. No further operations can be done while the process definition is in the suspended state. You can simply re-activate the process definition by using the button on the right side.</description>
+      <description>In the process definition view and in the process instance view you can suspend the selected process definition or process instance by using the   button on the right side.
+Process Definition Suspension If you suspend the process definition, you prevent the process definition from being instantiated. No further operations can be done while the process definition is in the suspended state. You can simply re-activate the process definition by using the   button on the right side.</description>
     </item>
     
     <item>
@@ -5984,9 +5989,14 @@ Parameters Path Parameters  Name Description   id The id of the decision definit
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/spring-boot-integration/develop-and-test/</guid>
-      <description>Developing Spring Boot provides Developer Tools which feature options like automatic restart and live reload during the development of an application.
-Spring Developer Tools and Classloading An additional process engine plugin (ApplicationContextClassloaderSwitchPlugin) will be loaded in case your application is in a development mode:
- Spring Developer tools (spring-boot-devtools library) are on the class path and the tools are enabled, e.g., the application is started in IDE  The plugin ensures exchanging the application context classloader with the classloader used for the process engine to prevent issues during deserialization.</description>
+      <description>开发 Spring Boot提供Developer Tools 提供了在应用程序开发期间自动重启和实时重新加载等功能。
+Spring Developer Tools 和 Classloading 如果你的应用程序处于开发模式，一个额外的流程引擎插件（ApplicationContextClassloaderSwitchPlugin）将被加载。
+ Spring Developer工具（spring-boot-devtools库）在classpath上 * 并且被启用，例如，应用程序在IDE中启动。  该插件确保将应用程序上下文的classloader与用于流程引擎的classloader进行交换，以防止反序列化过程中出现问题。
+测试 Spring为自动测试提供强大的支持。 可以通过专用的mock包、测试工具和注解 进行测试 当测试Spring和Spring Boot应用程序时，需要大量的时间来加载ApplicationContext。这就是为什么Spring在测试结束后会缓存一个ApplicationContext。这使得它可以在以后的测试中以相同的配置重复使用。
+流程引擎的上下文缓存 要将流程引擎包含在 &amp;ldquo;ApplicationContext&amp;rdquo; 缓存中，需要一些额外的配置。 这是因为流程引擎需要一个静态定义的名称（如果没有定义名称，则使用 &amp;ldquo;default&amp;rdquo;），这导致Spring试图为相同名称的流程引擎创建多个ApplicationContext。这将导致测试的行为不正确，或者在最坏的情况下，完全无法加载ApplicationContext。
+使用不同的 流程引擎/应用 名称 为了使上下文缓存与流程引擎和流程应用正常工作，它们需要对每个不同的测试配置具有唯一的名称。
+当定义一个新的测试配置时，确保新的ApplicationContext使用新的流程引擎（和流程应用）的最简单方法是在你的@SpringBootTest注解中启用以下属性。
+@SpringBootTest( // ...其他参数... properties = { &amp;quot;camunda.bpm.generate-unique-process-engine-name=true&amp;quot;, // 这只在 SpringBootProcessApplication 中需要 // 用于测试 &amp;quot;camunda.bpm.generate-unique-process-application-name=true&amp;quot;, &amp;quot;spring.datasource.generate-unique-name=true&amp;quot;, // 额外的属性... } )   camunda.bpm.generate-unique-process-engine-name=true 参数将生成流程引擎的唯一名称 (例如 &amp;lsquo;processEngine2Sc4bg2s1g&amp;rsquo;). camunda.bpm.generate-unique-process-application-name=true 参数将生成流程应用的唯一名称 (例如 &amp;lsquo;processApplication2Sc4bg2s1g&amp;rsquo;)。如果你想用多种配置多次部署和测试一个流程应用程序，这会很有用。 spring.datasource.generate-unique-name=true 属性将为每个新的ApplicationContext生成一个新的数据源。重复使用（缓存）的ApplicationContext 将使用相同的数据源。   请注意，generate-unique-process-engine-name和process-engine-name属性是互斥的。同时设置这两个属性将导致异常。</description>
     </item>
     
     <item>
@@ -6032,7 +6042,7 @@ Parameters Path Parameters  Name Description   id The id of the job definition t
 Method POST /task/{id}/complete
 Parameters Path Parameters  Name Description   id The id of the task to complete.   Request Body A JSON object with the following properties:
  Name Description   variables A JSON object containing variable key-value pairs. Each key is a variable name and each value a JSON variable value object with the following properties:
-NameDescriptionvalueThe variable&#39;s value.</description>
+ Name Description   value The variable&#39;s value.</description>
     </item>
     
     <item>
@@ -6077,7 +6087,7 @@ Parameters Path Parameters  Name Description   id The id of the case execution t
       
       <guid>http://camunda-cn.shaochenfeng.com/reference/rest/filter/post-execute-single-result/</guid>
       <description>Executes the saved query of the filter by id and returns the single result. This method is slightly more powerful then the Get Execute Filter Single Result method because it allows to extend the saved query of the filter.
-Security ConsiderationThe request body of this method takes a JSON-serialized query. Some query types (e.g., task queries) allow to specify EL expressions in their parameters and may therefore be abused for remote code execution.</description>
+Security Consideration The request body of this method takes a JSON-serialized query. Some query types (e.g., task queries) allow to specify EL expressions in their parameters and may therefore be abused for remote code execution.</description>
     </item>
     
     <item>
@@ -6088,7 +6098,7 @@ Security ConsiderationThe request body of this method takes a JSON-serialized q
       <guid>http://camunda-cn.shaochenfeng.com/reference/rest/case-instance/variables/get-variables/</guid>
       <description>Retrieves all variables of a given case instance by id.
 Method GET /case-instance/{id}/variables
-Parameters Path Parameters  Name Description   id The id of the case instance to retrieve the variables from.   Query Parameters  Name Description   deserializeValues  Determines whether serializable variable values (typically variables that store custom Java objects) should be deserialized on server side (default true).If set to true, a serializable variable will be deserialized on server side and transformed to JSON using Jackson&#39;s POJO/bean property introspection feature.</description>
+Parameters Path Parameters  Name Description   id The id of the case instance to retrieve the variables from.   Query Parameters  Name Description   deserializeValues  Determines whether serializable variable values (typically variables that store custom Java objects) should be deserialized on server side (default true). If set to true, a serializable variable will be deserialized on server side and transformed to JSON using Jackson&#39;s POJO/bean property introspection feature.</description>
     </item>
     
     <item>
@@ -6144,7 +6154,7 @@ Parameters Query Parameters  Name Description   failedJobs Whether to include th
       <guid>http://camunda-cn.shaochenfeng.com/reference/rest/process-instance/variables/get-variables/</guid>
       <description>Retrieves all variables of a given process instance by id.
 Method GET /process-instance/{id}/variables
-Parameters Path Parameters  Name Description   id The id of the process instance to retrieve the variables from.   Query Parameters  Name Description   deserializeValues  Determines whether serializable variable values (typically variables that store custom Java objects) should be deserialized on server side (default true).If set to true, a serializable variable will be deserialized on server side and transformed to JSON using Jackson&#39;s POJO/bean property introspection feature.</description>
+Parameters Path Parameters  Name Description   id The id of the process instance to retrieve the variables from.   Query Parameters  Name Description   deserializeValues  Determines whether serializable variable values (typically variables that store custom Java objects) should be deserialized on server side (default true). If set to true, a serializable variable will be deserialized on server side and transformed to JSON using Jackson&#39;s POJO/bean property introspection feature.</description>
     </item>
     
     <item>
@@ -6244,9 +6254,9 @@ Java API:
       
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/scripting/</guid>
       <description>Camunda平台支持与JSR-223兼容的脚本语言。目前，我们对Groovy、JavaScript、JRuby和Jython进行了测试。为了使用一个脚本语言，有必要在classpath中添加相应的jar。
-JavaScript 是Java Runtime（JRE）的一部分，因此开箱即用。
+ JavaScript 是Java Runtime（JRE）的一部分，因此开箱即用。
 Groovy 也包含在预编译的Camunda发行版中。
-下表展示了支持执行脚本的BPMN元素：
+ 下表展示了支持执行脚本的BPMN元素：
  BPMN element Script support   Script Task 嵌入在脚本任务中的脚本    Processes, Activities, Sequence Flows, Gateways and Events   作为执行监听器的脚本    User Tasks   作为任务监听器的脚本    Sequence Flows   作为顺序流条件表达式的脚本    All Tasks, All Events, Transactions, Subprocesses and Connectors   输入输出参数映射中的脚本   使用脚本任务 通过BPMN 2.0脚本任务，你可以向你的BPM流程添加一个脚本（更多信息请参见BPMN 2.0参考）。
 下面的流程是一个简单的例子，有一个Groovy脚本任务，对一个数组的元素进行求和：</description>
     </item>
@@ -6341,7 +6351,7 @@ Parameters Path Parameters  Name Description   id The id of the external task.  
       <description>Sets a variable in the context of a given execution by id. Update does not propagate upwards in the execution hierarchy.
 Method PUT /execution/{id}/localVariables/{varName}
 Parameters Path Parameters  Name Description   id The id of the execution to set the variable for.   varName The name of the variable to set.   Request Body A JSON object with the following properties:
-NameDescriptionvalueThe variable&#39;s value.</description>
+ Name Description   value The variable&#39;s value.</description>
     </item>
     
     <item>
@@ -6414,10 +6424,10 @@ If you use it on the process instance level, the whole process is terminated. On
 此外，以下模板引擎可以在企业版中使用：
  XSLT  安装一个模板引擎 为嵌入式流程引擎安装模板引擎 模板引擎和脚本引擎是用相同方式安装的。这意味着模板引擎必须被添加到流程引擎的classpath中。
 使用嵌入式流程引擎时，模板引擎库必须添加到应用程序部署中。在mavenwar项目中使用流程引擎时，模板引擎依赖必须作为依赖项添加到mavenpom.xml文件中。
-请导入Camunda BOM，以确保Camunda项目的版本是正确的。
-&amp;lt;dependencies&amp;gt; &amp;lt;!-- freemarker --&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.camunda.template-engines&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;camunda-template-engines-freemarker&amp;lt;/artifactId&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;!-- apache velocity --&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.camunda.template-engines&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;camunda-template-engines-velocity&amp;lt;/artifactId&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;/dependencies&amp;gt;  为分布式流程引擎安装一个模板引擎 当使用一个分布式流程引擎时，模板需要添加到分布式流程引擎的classpath中。classpath的位置取决于应用服务器。在Apache Tomcat中，库必须被添加到共享的lib/文件夹中。
-FreeMarker 是封装在Camunda预编译发行版中的。
-使用模板引擎 如果模板引擎库在classpath中，你可以在BPMN流程中任何可以使用脚本的地方使用模板，例如作为一个脚本任务或输入输出映射。 FreeMarker模板引擎是Camunda平台发布的一部分。
+ 请导入Camunda BOM，以确保Camunda项目的版本是正确的。
+ &amp;lt;dependencies&amp;gt; &amp;lt;!-- freemarker --&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.camunda.template-engines&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;camunda-template-engines-freemarker&amp;lt;/artifactId&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;!-- apache velocity --&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.camunda.template-engines&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;camunda-template-engines-velocity&amp;lt;/artifactId&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;/dependencies&amp;gt;  为分布式流程引擎安装一个模板引擎 当使用一个分布式流程引擎时，模板需要添加到分布式流程引擎的classpath中。classpath的位置取决于应用服务器。在Apache Tomcat中，库必须被添加到共享的lib/文件夹中。
+ FreeMarker 是封装在Camunda预编译发行版中的。
+ 使用模板引擎 如果模板引擎库在classpath中，你可以在BPMN流程中任何可以使用脚本的地方使用模板，例如作为一个脚本任务或输入输出映射。 FreeMarker模板引擎是Camunda平台发布的一部分。
 在模板内部，BPMN元素范围的所有流程变量都是可用的。模板也可以从外部资源加载，如脚本源部分所述。
 下面的例子显示了一个FreeMarker模板，它的结果被保存在流程变量text中：
 &amp;lt;scriptTask id=&amp;quot;templateScript&amp;quot; scriptFormat=&amp;quot;freemarker&amp;quot; camunda:resultVariable=&amp;quot;text&amp;quot;&amp;gt; &amp;lt;script&amp;gt; Dear ${customer}, thank you for working with Camunda Platform ${version}. Greetings, Camunda Developers &amp;lt;/script&amp;gt; &amp;lt;/scriptTask&amp;gt;  在输入输出映射中，使用外部模板来生成 &amp;ldquo;camunda:connector&amp;rdquo; 的有效载荷是非常有用的。</description>
@@ -6449,9 +6459,9 @@ If you use it on the process instance level, the whole process is terminated. On
  内部服务任务：同步调用与流程应用程序一起部署的代码 外部任务：在一个可以被工作者轮询的列表中提供一个工作单元  当代码被实现为委托代码或 脚本时，会使用第一个内部服务任务。外部（服务）任务的工作方式是：流程引擎将一个工作单元发布给外部工作者去完成。我们把这称为 外部任务模式 。
 请注意，上面的区别并没有说实际的 &amp;ldquo;业务逻辑&amp;rdquo; 是在本地实现还是作为远程服务实现。内部服务任务调用的 Java代理类 也可以自己实现业务逻辑，也可以调用 Web/rest 服务，向另一个系统发送消息等等。对于外部工作者也是如此。外部工作者可以直接实现业务逻辑或再次委托给远程服务实现。
 外部任务模式 执行外部任务的流程可以分为三个步骤，如下图所示：
- 流程引擎（Process Engine）: 创建外部任务实例 外部工作者（External Worker）: 获取和锁定外部任务 外部工作者（External Worker）和 流程引擎（Process Engine）: 完整的外部任务实例  当流程引擎遇到一个被配置为外部处理的服务任务时，它会创建一个外部任务实例并将其添加到外部任务列表中（步骤1）。该任务实例接收一个主题（topic）*，该主题确定了要执行的工作的性质。在未来的某个时间，一个外部工作者可以为一组特定的主题获取并锁定任务（步骤2）。为了防止一个任务被多个工作者同时获取，一个任务有一个基于时间戳的锁，这个锁在任务被获取时被设置。只有当锁过期时，另一个工作者才能再次获取该任务。当外部工作者完成了所需的工作，它可以向流程引擎发出信号，然后流程引擎继续执行流程（步骤3）。
-类比 **用户任务**外部任务在概念上与用户任务非常相似。在第一次尝试理解外部任务模式时，将其与用户任务进行类比思考可能会有所帮助。 用户任务由流程引擎创建并添加到任务列表中。然后，流程引擎等待人类用户查询该列表，提出任务要求，然后完成它。外部任务是类似的。一个外部任务被创建，然后被添加到一个主题。然后，一个外部应用程序查询该主题并锁定该任务。在任务被锁定后，外部应用程序可以完成它。
-这种模式的本质是，执行实际工作的程序独立于流程引擎，并通过轮询流程引擎的API的方式接收工作项。这样做有以下好处：
+   流程引擎（Process Engine）: 创建外部任务实例 外部工作者（External Worker）: 获取和锁定外部任务 外部工作者（External Worker）和 流程引擎（Process Engine）: 完整的外部任务实例  当流程引擎遇到一个被配置为外部处理的服务任务时，它会创建一个外部任务实例并将其添加到外部任务列表中（步骤1）。该任务实例接收一个主题（topic）*，该主题确定了要执行的工作的性质。在未来的某个时间，一个外部工作者可以为一组特定的主题获取并锁定任务（步骤2）。为了防止一个任务被多个工作者同时获取，一个任务有一个基于时间戳的锁，这个锁在任务被获取时被设置。只有当锁过期时，另一个工作者才能再次获取该任务。当外部工作者完成了所需的工作，它可以向流程引擎发出信号，然后流程引擎继续执行流程（步骤3）。
+类比 **用户任务** 外部任务在概念上与用户任务非常相似。在第一次尝试理解外部任务模式时，将其与用户任务进行类比思考可能会有所帮助。 用户任务由流程引擎创建并添加到任务列表中。然后，流程引擎等待人类用户查询该列表，提出任务要求，然后完成它。外部任务是类似的。一个外部任务被创建，然后被添加到一个主题。然后，一个外部应用程序查询该主题并锁定该任务。在任务被锁定后，外部应用程序可以完成它。
+ 这种模式的本质是，执行实际工作的程序独立于流程引擎，并通过轮询流程引擎的API的方式接收工作项。这样做有以下好处：
  解耦系统: 外部工作者与流程引擎不需要在同一Java容器中、同一机器上、同一集群中或甚至在同一大陆上运行。只需要它能够访问流程引擎的API（通过REST或Java）。由于采用了轮询模式，外部工作者不需要暴露任何接口供流程引擎访问。 解耦技术选择: 外部工作者不需要用Java实现。相反，可以使用任何最适合执行工作项的技术，并且可以用来访问流程引擎的API（通过REST或Java）。 外部工作者可以专注某个主题: 外部工作者不需要是一个通用的应用程序。每个外部任务实例都会收到要执行的任务性质的主题名。外部工作者可以只轮询它们可以做到的任务主题。 细粒度扩展: 如果某主题服务任务具有较高的负载，相应主题的外部工作者的数量可以独立于流程引擎来扩展。 独立维护: 工作者可以独立于流程引擎进行维护，而不会破坏操作。例如，如果有某个特定主题的工作者停机一段时间（例如，由于更新停机），对流程引擎没有直接影响。这类工作者的外部任务的执行会优雅的存储在外部任务列表中，直到外部工作者恢复并运行。  使用外部任务 为了使用外部任务，它们必须在BPMN XML中声明。在运行时，可以通过Java和REST API访问外部任务实例。下面将解释API的概念，并重点介绍Java API。通常情况下，REST API在这种情况下更适合，特别是在不同地域，使用不同技术的外部工作者。
 BPMN 在流程定义的BPMN XML中，可以通过使用属性camunda:type和camunda:topic来声明服务任务由外部工作者执行。例如，服务任务 Validate Address 可以被配置为主题 AddressValidation ，如下所示：
 &amp;lt;serviceTask id=&amp;quot;validateAddressTask&amp;quot; name=&amp;quot;Validate Address&amp;quot; camunda:type=&amp;quot;external&amp;quot; camunda:topic=&amp;quot;AddressValidation&amp;quot; /&amp;gt;  也可以使用表达式而不是固定值定义主题的名字。</description>
@@ -6476,7 +6486,7 @@ Parameters Request Body A JSON object with the following properties:
       
       <guid>http://camunda-cn.shaochenfeng.com/reference/rest/filter/post-execute-list/</guid>
       <description>Executes the saved query of the filter by id and returns the result list. This method is slightly more powerful then the Get Execute Filter List method because it allows to extend the saved query of the filter.
-Security ConsiderationThe request body of this method takes a JSON-serialized query. Some query types (e.g., task queries) allow to specify EL expressions in their parameters and may therefore be abused for remote code execution.</description>
+Security Consideration The request body of this method takes a JSON-serialized query. Some query types (e.g., task queries) allow to specify EL expressions in their parameters and may therefore be abused for remote code execution.</description>
     </item>
     
     <item>
@@ -6605,8 +6615,8 @@ Response Codes  Code Media type Description   204 application/json Request succe
  Connector ID   REST HTTP http-connector   SOAP HTTP soap-http-connector   也可以在camunda中实现你自己的自定义连接器。关于扩展连接器的更多信息，请访问外部连接器章节。
 配置 Camunda连接器 由于Camunda连接器只有在使用流程引擎时才部分可用（查看下面的列表）。通过使用预建的发行版，Camunda连接器已经被预先配置好了。
 存在以下 &amp;ldquo;连接&amp;rdquo; 组件：
- camunda-connect-core: 一个只包含核心连接类的jar。该组价已经可以作为流程引擎的依赖项。除了 &amp;ldquo;camunda-connect-core&amp;rdquo; 之外，还有 &amp;ldquo;camunda-connect-http-client&amp;rdquo; 和 &amp;ldquo;camunda-connect-soap-http-client&amp;rdquo; 等单个连接器的实现。当需要重新配置默认连接器或使用自定义连接器实现时，应使用这些依赖关系。 camunda-connect-connectors-all: 没有依赖关系的单一jar，包含HTTP和SOAP连接器。 camunda-engine-plugin-connect: 是一个流程引擎插件，用于向Camunda平台添加连接器。  Maven方式导入 请导入Camunda BOM，以确保每个Camunda项目的版本正确。
-camunda-connect-core camunda-connect-core包含连接器的核心类。此外，HTTP和SOAP连接器可以通过camunda-connect-http-client和camunda-connect-soap-http-client的依赖来添加。这些组件将引入他们自身的依赖，如Apache HTTP客户端。为了与流程引擎集成，需要camunda-engine-plugin-connect这个工件。Maven的坐标如下：
+ camunda-connect-core: 一个只包含核心连接类的jar。该组价已经可以作为流程引擎的依赖项。除了 &amp;ldquo;camunda-connect-core&amp;rdquo; 之外，还有 &amp;ldquo;camunda-connect-http-client&amp;rdquo; 和 &amp;ldquo;camunda-connect-soap-http-client&amp;rdquo; 等单个连接器的实现。当需要重新配置默认连接器或使用自定义连接器实现时，应使用这些依赖关系。 camunda-connect-connectors-all: 没有依赖关系的单一jar，包含HTTP和SOAP连接器。 camunda-engine-plugin-connect: 是一个流程引擎插件，用于向Camunda平台添加连接器。  Maven方式导入  请导入Camunda BOM，以确保每个Camunda项目的版本正确。
+ camunda-connect-core camunda-connect-core包含连接器的核心类。此外，HTTP和SOAP连接器可以通过camunda-connect-http-client和camunda-connect-soap-http-client的依赖来添加。这些组件将引入他们自身的依赖，如Apache HTTP客户端。为了与流程引擎集成，需要camunda-engine-plugin-connect这个工件。Maven的坐标如下：
 &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.camunda.connect&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;camunda-connect-core&amp;lt;/artifactId&amp;gt; &amp;lt;/dependency&amp;gt;  &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.camunda.connect&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;camunda-connect-http-client&amp;lt;/artifactId&amp;gt; &amp;lt;/dependency&amp;gt;  &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.camunda.connect&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;camunda-connect-soap-http-client&amp;lt;/artifactId&amp;gt; &amp;lt;/dependency&amp;gt;  &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.camunda.bpm&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;camunda-engine-plugin-connect&amp;lt;/artifactId&amp;gt; &amp;lt;/dependency&amp;gt;  camunda-connect-connectors-all 这个组件包含HTTP和SOAP连接器以及它们的依赖关系。为了避免与这些依赖的其他版本冲突，这些依赖被重新定位到不同的包中。camunda-connect-connectors-all的Maven坐标如下。
 &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.camunda.connect&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;camunda-connect-connectors-all&amp;lt;/artifactId&amp;gt; &amp;lt;/dependency&amp;gt;  配置流程引擎插件 camunda-engine-plugin-connect包含一个名为org.</description>
     </item>
@@ -6749,7 +6759,7 @@ Parameters Path Parameters  Name Description   id The id of the case execution t
       <description>Adding JSF Forms to your Process Application If you add JSF forms as described below, you can easily use them as  external task forms.
 A working example can be found in the examples repository.
 The BPMN process used for this example is shown in the image below:
-In this process model we added so called form keys to
+  In this process model we added so called form keys to
  the Start Event &amp;ldquo;invoice received&amp;rdquo;. This is the form the user has to complete to start a new process instance.</description>
     </item>
     
@@ -6835,7 +6845,7 @@ Response Codes  Code Media type Description   204  Request successful.   404 app
       <description>Updates or deletes the variables of a case instance. Please note: deletion precedes update.
 Method POST /case-instance/{id}/variables
 Parameters Path Parameters  Name Description   id The id of the case instance to set variables for.   Request Body A JSON object with the following properties:
- Name Description   modifications A JSON object containing variable key-value pairs. Each key is a variable name and each value a JSON variable value object with the following properties: NameDescriptionvalueThe variable&#39;s value.</description>
+ Name Description   modifications A JSON object containing variable key-value pairs. Each key is a variable name and each value a JSON variable value object with the following properties:  Name Description   value The variable&#39;s value.</description>
     </item>
     
     <item>
@@ -6858,8 +6868,8 @@ Parameters Path Parameters  Name Description   id The id of the execution to set
       <description>流程定义的版本管理 业务流程本质上是需要长期运行的。流程实例可能会持续数周，或数月。在这期间，流程实例的状态被存储到数据库中。但总有那么一天，你需要在仍有运行中的实例的情况下改变流程定义。
 流程引擎支持这一点：
  如果你重新部署一个改变了的流程定义，你会在数据库中得到一个新的版本。 正在运行的流程实例将继续在它所在的旧版本执行。 新的流程实例将在新的版本中运行 - 除非明确指定执行版本。 在一定范围内支持将流程实例迁移到新版本。  你可以在流程定义表中看到不同的版本，以及流程实例与版本的关联。
-多租户如果你正在使用以tenantID区分的多租户，那么每个租户都有自己的流程定义，其版本与其他租户无关。参见多租户部分。
-流程实例会使用哪个版本 当你：
+  多租户 如果你正在使用以tenantID区分的多租户，那么每个租户都有自己的流程定义，其版本与其他租户无关。参见多租户部分。
+ 流程实例会使用哪个版本 当你：
  通过 key 启动一个流程实例时。它启动一个 最新部署版本 的流程定义的实例。 *通过 id 启动一个流程实例时。它以数据库ID启动已部署的流程定义的一个实例。通过使用它，你可以启动一个 特定版本 的流程。  默认和推荐的用法是使用 startProcessInstanceByKey ，它总是使用最新的版本。
 processEngine.getRuntimeService().startProcessInstanceByKey(&amp;quot;invoice&amp;quot;); // will use the latest version (2 in our example)  如果你想专门启动一个旧版本的流程实例，可以在流程定义中查询来找到正确的流程定义id，然后使用startProcessInstanceById。
 ProcessDefinition pd = processEngine.getRepositoryService().createProcessDefinitionQuery() .processDefinitionKey(&amp;quot;invoice&amp;quot;) .processDefinitionVersion(1).singleResult(); processEngine.getRuntimeService().startProcessInstanceById(pd.getId());  当你使用 BPMN CallActivities 时，你可以配置使用哪个版本:
@@ -6881,8 +6891,8 @@ ProcessDefinition pd = processEngine.getRepositoryService().createProcessDefinit
 在本节的其余部分，除非另有说明，否则将使用以下流程模型来说明API和迁移的影响：
 exampleProcess:1:
  exampleProcess:2:
- 企业版特征Camunda企业版的Camunda Cockpit提供了一个用于迁移流程实例的用户界面。
-查看 Camunda 企业版主页了解更多信息以及获得免费试用版。流程实例迁移案例 我们可以使用API接口 RuntimeService#createMigrationPlan 来定义一个迁移计划。 它返回一个流式构建器来创建一个迁移计划。对于上面的例子来说，代码如下：
+ 企业版特征 Camunda企业版的Camunda Cockpit提供了一个用于迁移流程实例的用户界面。
+ 查看 Camunda 企业版主页 了解更多信息以及获得 免费试用版。  流程实例迁移案例 我们可以使用API接口 RuntimeService#createMigrationPlan 来定义一个迁移计划。 它返回一个流式构建器来创建一个迁移计划。对于上面的例子来说，代码如下：
 MigrationPlan migrationPlan = processEngine.getRuntimeService() .createMigrationPlan(&amp;quot;exampleProcess:1&amp;quot;, &amp;quot;exampleProcess:2&amp;quot;) .mapActivities(&amp;quot;assessCreditWorthiness&amp;quot;, &amp;quot;assessCreditWorthiness&amp;quot;) .mapActivities(&amp;quot;validateAddress&amp;quot;, &amp;quot;validatePostalAddress&amp;quot;) .mapActivities(&amp;quot;archiveApplication&amp;quot;, &amp;quot;archiveApplication&amp;quot;) .build();  mapActivities 调用各自指定了一个迁移指令，并表示第一个活动的实例应该成为第二个活动的实例。
 让我们假设我们有一个流程实例处于以下活动实例状态：
 ProcessInstance ├── Archive Application └── Assess Credit Worthiness └── Validate Address  为了根据定义的迁移计划迁移这个流程实例，可以使用API方法RuntimeService#newMigration。</description>
@@ -6931,7 +6941,7 @@ Response Codes  Code Media type Description   204  Request successful.   404 app
       
       <guid>http://camunda-cn.shaochenfeng.com/reference/rest/filter/post-execute-count/</guid>
       <description>Executes the saved query of the filter by id and returns the count. This method is slightly more powerful then the Get Execute Filter Count method because it allows to extend the saved query of the filter.
-Security ConsiderationThe request body of this method takes a JSON-serialized query. Some query types (e.g., task queries) allow to specify EL expressions in their parameters and may therefore be abused for remote code execution.</description>
+Security Consideration The request body of this method takes a JSON-serialized query. Some query types (e.g., task queries) allow to specify EL expressions in their parameters and may therefore be abused for remote code execution.</description>
     </item>
     
     <item>
@@ -6987,7 +6997,7 @@ Parameters Path Parameters  Name Description   id The id of the case execution t
       <description>Sets a variable of a given case instance by id.
 Method PUT /case-instance/{id}/variables/{varName}
 Parameters Path Parameters  Name Description   id The id of the case instance to set the variable for.   varName The name of the variable to set.   Request Body A JSON object with the following properties:
-NameDescriptionvalueThe variable&#39;s value. For variables of type Object, the serialized value has to be submitted as a String value.</description>
+ Name Description   value The variable&#39;s value. For variables of type Object, the serialized value has to be submitted as a String value.</description>
     </item>
     
     <item>
@@ -7104,7 +7114,7 @@ Parameters Path Parameters  Name Description   id The id of the task to add a li
       <guid>http://camunda-cn.shaochenfeng.com/reference/rest/case-execution/variables/get-variables/</guid>
       <description>Retrieves all variables of a given case execution by id.
 Method GET /case-execution/{id}/variables
-Parameters Path Parameters  Name Description   id The id of the case execution to retrieve the variables from.   Query Parameters  Name Description   deserializeValues  Determines whether serializable variable values (typically variables that store custom Java objects) should be deserialized on server side (default true).If set to true, a serializable variable will be deserialized on server side and transformed to JSON using Jackson&#39;s POJO/bean property introspection feature.</description>
+Parameters Path Parameters  Name Description   id The id of the case execution to retrieve the variables from.   Query Parameters  Name Description   deserializeValues  Determines whether serializable variable values (typically variables that store custom Java objects) should be deserialized on server side (default true). If set to true, a serializable variable will be deserialized on server side and transformed to JSON using Jackson&#39;s POJO/bean property introspection feature.</description>
     </item>
     
     <item>
@@ -7115,7 +7125,7 @@ Parameters Path Parameters  Name Description   id The id of the case execution t
       <guid>http://camunda-cn.shaochenfeng.com/reference/rest/case-execution/local-variables/get-local-variables/</guid>
       <description>Retrieves all variables of a given case execution.
 Method GET /case-execution/{id}/localVariables
-Parameters Path Parameters  Name Description   id The id of the case execution to retrieve the variables from.   Query Parameters  Name Description   deserializeValues  Determines whether serializable variable values (typically variables that store custom Java objects) should be deserialized on server side (default true).If set to true, a serializable variable will be deserialized on server side and transformed to JSON using Jackson&#39;s POJO/bean property introspection feature.</description>
+Parameters Path Parameters  Name Description   id The id of the case execution to retrieve the variables from.   Query Parameters  Name Description   deserializeValues  Determines whether serializable variable values (typically variables that store custom Java objects) should be deserialized on server side (default true). If set to true, a serializable variable will be deserialized on server side and transformed to JSON using Jackson&#39;s POJO/bean property introspection feature.</description>
     </item>
     
     <item>
@@ -7244,7 +7254,7 @@ Parameters Path Parameters  Name Description   id The id of the process instance
       
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/history/</guid>
       <description>历史事件流提供关于已执行的流程实例的审批信息。
-流程引擎维护数据库内运行的流程实例的状态。这包括在流程实例达到等待状态时将其写(1)到数据库中，并在流程继续执行时读(2)该状态。我们称这个数据库为 运行时数据库（runtime database） 。除了维护运行时状态外，流程引擎还创建了一个审批日志，提供关于已执行流程实例的审批信息。我们称这个事件流为 历史事件流（history event stream） （3）。构成这个事件流的各个事件被称为 历史事件（History Events） ，包含关于已执行的流程实例、活动实例、改变的流程变量等的数据。 在默认配置中，流程引擎将简单地把这个事件流写入（4.）*历史数据库*。历史服务（HistoryService）的API允许查询（5）这个数据库。历史数据库和历史服务是可选的组件；如果历史事件流没有被记录到历史数据库中，或者如果用户选择将事件记录到不同的数据库，流程引擎仍然能工作，它仍然能够填充历史事件流。这是可能的，因为BPMN 2.0核心引擎组件不从历史数据库读取状态。也可以配置流程引擎的 &amp;ldquo;historyLevel&amp;rdquo; 配置项，来配置记录的数据量。
+  流程引擎维护数据库内运行的流程实例的状态。这包括在流程实例达到等待状态时将其写(1)到数据库中，并在流程继续执行时读(2)该状态。我们称这个数据库为 运行时数据库（runtime database） 。除了维护运行时状态外，流程引擎还创建了一个审批日志，提供关于已执行流程实例的审批信息。我们称这个事件流为 历史事件流（history event stream） （3）。构成这个事件流的各个事件被称为 历史事件（History Events） ，包含关于已执行的流程实例、活动实例、改变的流程变量等的数据。 在默认配置中，流程引擎将简单地把这个事件流写入（4.）*历史数据库*。历史服务（HistoryService）的API允许查询（5）这个数据库。历史数据库和历史服务是可选的组件；如果历史事件流没有被记录到历史数据库中，或者如果用户选择将事件记录到不同的数据库，流程引擎仍然能工作，它仍然能够填充历史事件流。这是可能的，因为BPMN 2.0核心引擎组件不从历史数据库读取状态。也可以配置流程引擎的 &amp;ldquo;historyLevel&amp;rdquo; 配置项，来配置记录的数据量。
 由于流程引擎不依赖历史数据库的存在来生成历史事件流，因此可以提供不同的后端实现来存储历史事件流。默认的后端实现是 &amp;ldquo;DbHistoryEventHandler&amp;rdquo; ，它将事件流记录到历史数据库。可以替换后端实现，为历史事件日志提供一个自定义的存储机制。
 选择历史记录级别 历史级别控制流程引擎通过历史事件流提供的数据量。以下设置是开箱即用的：
  NONE: 不会记录历史事件。 ACTIVITY: 以下事件将被记录：  流程实例 START, UPDATE, END, MIGRATE: 当流程实例被 started, updated, ended 和 migrated 时触发。 案例实例 CREATE, UPDATE, CLOSE: 当案例实例被 created, updated 和 closed 时触发。 活动实例 START, UPDATE, END, MIGRATE: 当活动实例被 started, updated, ended 和 migrated 时触发。 案例活动实例 CREATE, UPDATE, END: 当案例活动实例被 created, updated 和 ended 时触发。 任务实例 CREATE, UPDATE, COMPLETE, DELETE, MIGRATE: 当任务实例被 created, updated (i.</description>
@@ -7356,7 +7366,7 @@ Response Codes  Code Media type Description   200 application/xhtml+xml Request 
       <description>Sets a variable of a given case execution by id.
 Method PUT /case-execution/{id}/variables/{varName}
 Parameters Path Parameters  Name Description   id The id of the case execution to set the variable for.   varName The name of the variable to set.   Request Body A JSON object with the following properties:
-NameDescriptionvalueThe variable&#39;s value. For variables of type Object, the serialized value has to be submitted as a String value.</description>
+ Name Description   value The variable&#39;s value. For variables of type Object, the serialized value has to be submitted as a String value.</description>
     </item>
     
     <item>
@@ -7463,7 +7473,7 @@ Parameters Path Parameters  Name Description   id The id of the task to retrieve
       <description>Sets a variable in the context of a given case execution. Update does not propagate upwards in the case execution hierarchy.
 Method PUT /case-execution/{id}/localVariables/{varName}
 Parameters Path Parameters  Name Description   id The id of the case execution to set the variable for.   varName The name of the variable to set.   Request Body A JSON object with the following properties:
-NameDescriptionvalueThe variable&#39;s value.</description>
+ Name Description   value The variable&#39;s value.</description>
     </item>
     
     <item>
@@ -7475,7 +7485,7 @@ Parameters Path Parameters  Name Description   id The id of the case execution t
       <description>Updates or deletes the variables of a case execution by id. Please note: deletion precedes update.
 Method POST /case-execution/{id}/variables
 Parameters Path Parameters  Name Description   id The id of the case execution to set variables for.   Request Body A JSON object with the following properties:
- Name Description   modifications A JSON object containing variable key-value pairs. Each key is a variable name and each value a JSON variable value object with the following properties: NameDescriptionvalueThe variable&#39;s value.</description>
+ Name Description   modifications A JSON object containing variable key-value pairs. Each key is a variable name and each value a JSON variable value object with the following properties:  Name Description   value The variable&#39;s value.</description>
     </item>
     
     <item>
@@ -7489,13 +7499,13 @@ Parameters Path Parameters  Name Description   id The id of the case execution t
 等待状态 我们谈到了作为事务边界的等待状态，在这里，流程状态被存储到数据库，线程返回到客户端，事务被提交。以下的BPMN元素始终是等待状态。
 Receive Task User Task  Message Message Event Timer Timer Event Signal Signal Event   基于事件的网关:
  一种特殊类型的服务任务: 外部任务
-
+ 
 请记住，异步延续也可以为其他任务添加事务边界。
 交易边界 从一个稳定状态到另一个稳定状态的转换总是单一事务的一部分，这意味着它作为一个整体成功，或者在执行过程中发生任何类型的异常时被回滚。这在下面的例子中得到了说明：
-我们看到一个BPMN流程的片段，有一个用户任务、一个服务任务和一个定时器事件。计时器事件标志着下一个等待状态。因此，完成用户任务和验证地址是同一个工作单元的一部分，所以它应该原子式地成功或失败。这意味着，如果服务任务抛出一个异常，我们要回滚当前的事务，这样执行就会追踪到用户任务，并且用户任务仍然存在于数据库中。这也是流程引擎的默认行为。
+  我们看到一个BPMN流程的片段，有一个用户任务、一个服务任务和一个定时器事件。计时器事件标志着下一个等待状态。因此，完成用户任务和验证地址是同一个工作单元的一部分，所以它应该原子式地成功或失败。这意味着，如果服务任务抛出一个异常，我们要回滚当前的事务，这样执行就会追踪到用户任务，并且用户任务仍然存在于数据库中。这也是流程引擎的默认行为。
 在 1 ，一个应用程序或客户端线程完成了任务。在同一个线程中，引擎运行时现在正在执行服务任务，并一直推进到定时器事件的等待状态（ 2 ）。然后，它将控制权返回给调用者（ 3 ），可能会提交该事务（如果它是由引擎启动的）。
 异步延续 为什么要异步延续? 在某些情况下，同步行为是不需要的。有时对流程中的事务边界进行自定义控制是很有用的。 最常见的动机是对 逻辑工作单元 的范围的要求。考虑一下下面的流程片段：
-我们正在完成用户任务，生成发票，然后将发票发送给客户。可以说，发票的生成不属于同一个工作单元：如果生成发票失败，我们不希望回滚用户任务的完成。 理想情况下，流程引擎将完成用户任务（1），提交事务并将控制权返回给调用的应用程序（2）。在一个后台线程（3）中，它将生成发票。 这正是异步延续提供的行为：它们允许我们在流程中确定事务边界的范围。
+  我们正在完成用户任务，生成发票，然后将发票发送给客户。可以说，发票的生成不属于同一个工作单元：如果生成发票失败，我们不希望回滚用户任务的完成。 理想情况下，流程引擎将完成用户任务（1），提交事务并将控制权返回给调用的应用程序（2）。在一个后台线程（3）中，它将生成发票。 这正是异步延续提供的行为：它们允许我们在流程中确定事务边界的范围。
 配置异步延续 异步延续可以在活动 之前 和 之后 被配置。此外，流程实例本身也可以被配置为异步启动。
 使用 camunda:asyncBefore 扩展属性可以启用活动前的异步延续：
 &amp;lt;serviceTask id=&amp;quot;service1&amp;quot; name=&amp;quot;Generate Invoice&amp;quot; camunda:asyncBefore=&amp;quot;true&amp;quot; camunda:class=&amp;quot;my.</description>
@@ -7545,7 +7555,7 @@ Parameters Path Parameters  Name Description   id The id of the task.   commentI
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/</guid>
       <description>Job是触发流程执行的任务的明确表示。当一个定时器事件或一个标记为异步执行的任务(见事务边界接近时，就会创建一个Job。因此，Job处理可以被分成三个阶段。
  Job 创建 Job 获取 Job 执行  虽然Job是在流程执行过程中创建的，但Job的获取和执行是Job执行器的责任。下图说明了这两个步骤。
-Job执行器激活 当使用 嵌入式流程引擎 时，默认情况下，当流程引擎启动时，Job执行器不会被激活。
+  Job执行器激活 当使用 嵌入式流程引擎 时，默认情况下，当流程引擎启动时，Job执行器不会被激活。
 如果你希望在流程引擎时激活Job执行器。需要在流程引擎中配置如下配置项：
 &amp;lt;property name=&amp;quot;jobExecutorActivate&amp;quot; value=&amp;quot;true&amp;quot; /&amp;gt;  当使用 shared process engine 时，默认情况则相反：如果你没有在流程引擎配置上指定jobExecutorActivate 属性，Job执行器会自动启动。为了将其关闭，你必须明确地将该属性设置为false：
 &amp;lt;property name=&amp;quot;jobExecutorActivate&amp;quot; value=&amp;quot;false&amp;quot; /&amp;gt;  在单元测试中使用Job执行器 在单元测试中，使用这个后台组件是很麻烦的。因此，Java API提供了查询（ManagementService.createJobQuery）和 手动 执行Job（ManagementService.executeJob）的功能，这允许从单元测试中控制Job的执行。
@@ -7626,7 +7636,7 @@ Parameters Path Parameters  Name Description   id The id of the task to add the 
       <guid>http://camunda-cn.shaochenfeng.com/reference/rest/process-instance/variables/put-variable/</guid>
       <description>Sets a variable of a given process instance by id.
 Method PUT /process-instance/{id}/variables/{varName}
-Parameters Path Parameters  Name Description   id The id of the process instance to set the variable for.   varName The name of the variable to set.   Request Body NameDescriptionvalueThe variable&#39;s value. For variables of type Object, the serialized value has to be submitted as a String value.</description>
+Parameters Path Parameters  Name Description   id The id of the process instance to set the variable for.   varName The name of the variable to set.   Request Body  Name Description   value The variable&#39;s value. For variables of type Object, the serialized value has to be submitted as a String value.</description>
     </item>
     
     <item>
@@ -7650,13 +7660,13 @@ Parameters Path Parameters  Name Description   id The id of the case execution t
       <description>多租户 是指一个单一的Camunda应用需要为多个的租户服务的情况。对于每个租户来说，应该有某些隔离的保证。例如，一个租户的流程实例不应干扰另一个租户的流程实例。
 多租户可以通过两种不同的方式实现。一种是使用每个租户一个流程引擎。另一种方式是只使用一个流程引擎，并将数据与租户标识符相关联。这两种方式在数据隔离程度、维护工作和可扩展性方面各有不同。两种方式的组合也是可能的。
 使用租户标识符的单一流程引擎 多租户可以使用租户标识符（即tenant-ids）的流程引擎来实现。所有租户的数据都存储在一个表中（同一数据库和表结构）。通过存储在列中的租户标识符来提供隔离。
-租户标识符是在部署中指定的，并传播到从部署中创建的所有数据（例如，流程定义、流程实例、任务等）。为了访问特定租户的数据，流程引擎允许通过租户标识符过滤查询，或为命令（例如，创建流程实例）指定租户标识符。此外，流程引擎与身份服务相结合，提供透明的访问限制，允许省略租户标识符。
+  租户标识符是在部署中指定的，并传播到从部署中创建的所有数据（例如，流程定义、流程实例、任务等）。为了访问特定租户的数据，流程引擎允许通过租户标识符过滤查询，或为命令（例如，创建流程实例）指定租户标识符。此外，流程引擎与身份服务相结合，提供透明的访问限制，允许省略租户标识符。
 请注意，并非所有的API都实现了透明的租户分离。例如，通过部署API，一个租户可以为另一个租户部署一个流程。因此，直接向租户暴露这样的API端点并不是一个支持的用例。相反，应该在Camunda API的基础上建立自定义的访问检查逻辑。
 所有租户也可以共享相同的流程和决策定义，而不需要为每个租户部署这些定义。在租户数量较多的情况下，共享定义可以简化对部署的管理。
-案例查看GitHub上的案例查看如何使用租户标识符
- Embedded Process Engine Shared Process Engine  为租户部署定义 要为为租户部署定义，必须在部署中设置租户标识符。给定的标识符被传播到部署的所有定义，以便确认它们属于租户。
+案例 查看GitHub上的案例查看如何使用租户标识符
+ Embedded Process Engine Shared Process Engine   为租户部署定义 要为为租户部署定义，必须在部署中设置租户标识符。给定的标识符被传播到部署的所有定义，以便确认它们属于租户。
 如果没有设置租户标识符，那么部署和它的定义属于所有租户。在这种情况下，所有租户都可以访问该部署和定义。参见这一节以阅读更多关于如何使用共享定义的信息。
-通过Java API指定租户标识符 当使用存储库服务创建一个部署时，租户标识符可以在DeploymentBuilder中设置。
+通过Java API指定租户标识符 当使用存储库服务创建一个部署时，租户标识符可以在DeploymentBuilder 中设置。
 repositoryService .createDeployment() .tenantId(&amp;quot;tenant1&amp;quot;) .addZipInputStream(inputStream) .deploy()  通过部署描述符指定租户标识符 如果一个流程应用程序，部署是由文件 processes.xml 定义的。由于描述符可以包含多个流程-档案（即部署），可以在每个流程-档案上设置tenantId租户标识符属性。
 &amp;lt;process-application xmlns=&amp;quot;http://www.camunda.org/schema/1.0/ProcessApplication&amp;quot; xmlns:xsi=&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot;&amp;gt; &amp;lt;process-archive tenantId=&amp;quot;tenant1&amp;quot;&amp;gt; &amp;lt;process-engine&amp;gt;default&amp;lt;/process-engine&amp;gt; &amp;lt;properties&amp;gt; &amp;lt;property name=&amp;quot;isDeleteUponUndeploy&amp;quot;&amp;gt;false&amp;lt;/property&amp;gt; &amp;lt;property name=&amp;quot;isScanForProcessDefinitions&amp;quot;&amp;gt;true&amp;lt;/property&amp;gt; &amp;lt;/properties&amp;gt; &amp;lt;/process-archive&amp;gt; &amp;lt;/process-application&amp;gt;  通过 Spring配置 指定租户标识符 如果使用Spring框架集成并使用自动资源部署时，租户标识符可以在流程引擎配置中指定为deploymentTenantId属性。
 &amp;lt;bean id=&amp;quot;processEngineConfiguration&amp;quot; class=&amp;quot;org.camunda.bpm.engine.spring.SpringProcessEngineConfiguration&amp;quot;&amp;gt; &amp;lt;property name=&amp;quot;deploymentResources&amp;quot;&amp;gt; &amp;lt;array&amp;gt; &amp;lt;value&amp;gt;classpath*:/org/camunda/bpm/engine/spring/test/autodeployment/autodeploy.*.cmmn&amp;lt;/value&amp;gt; &amp;lt;value&amp;gt;classpath*:/org/camunda/bpm/engine/spring/test/autodeployment/autodeploy.*.bpmn20.xml&amp;lt;/value&amp;gt; &amp;lt;/array&amp;gt; &amp;lt;/property&amp;gt; &amp;lt;property name=&amp;quot;deploymentTenantId&amp;quot; value=&amp;quot;tenant1&amp;quot; /&amp;gt; &amp;lt;/bean&amp;gt;  租户特定定义的版本管理 当一个定义被部署到一个租户时，它被分配了一个版本，与其他租户的定义无关。例如，如果一个新的流程定义是为两个租户部署的，那么这两个定义都被分配为1版本。一个租户内的版本管理与不属于任何租户的定义的版本管理一样。</description>
@@ -7696,12 +7706,12 @@ Parameters Path Parameters  Name Description   id The id of the task to retrieve
 开箱即用，流程引擎提供了两种Id生成器的实现：
 数据库ID生成器 数据库标识生成器是在ACT_GE_PROPERTY表的基础上使用序列生成器实现的。
 这个ID生成器有利于调试和测试，因为它生成了人类可读的ID。
-数据库标识生成器 不应该 在生产环境中使用，因为它不具有高并发性。
-UUID生成器 StrongUuidGenerator使用一个UUID生成器，它在内部使用Java UUID Generator(JUG)库。
-在生产环境始终使用UUID生成器。
-在Camunda Platform Full Distributions中，StrongUuidGenerator被预设为流程引擎所使用的默认Id 生成器。
+ 数据库标识生成器 不应该 在生产环境中使用，因为它不具有高并发性。
+ UUID生成器 StrongUuidGenerator使用一个UUID生成器，它在内部使用Java UUID Generator(JUG)库。
+ 在生产环境始终使用UUID生成器。
+ 在Camunda Platform Full Distributions中，StrongUuidGenerator被预设为流程引擎所使用的默认Id 生成器。
 如果你使用嵌入式流程引擎配置并使用Spring配置流程引擎，你需要在Spring配置中添加以下几行，以启用 &amp;ldquo;StrongUuidGenerator&amp;rdquo;。
-&amp;lt;bean id=&amp;quot;processEngineConfiguration&amp;quot; class=&amp;quot;org.camunda.bpm.engine.impl.cfg.StandaloneInMemProcessEngineConfiguration&amp;quot;&amp;gt; [...] &amp;lt;property name=&amp;quot;idGenerator&amp;quot;&amp;gt; &amp;lt;bean class=&amp;quot;org.camunda.bpm.engine.impl.persistence.StrongUuidGenerator&amp;quot; /&amp;gt; &amp;lt;/property&amp;gt; &amp;lt;/bean&amp;gt;  另外，您需要以下Maven依赖项：
+&amp;lt;bean id=&amp;quot;processEngineConfiguration&amp;quot; class=&amp;quot;org.camunda.bpm.engine.impl.cfg.StandaloneInMemProcessEngineConfiguration&amp;quot;&amp;gt; [...] &amp;lt;property name=&amp;quot;idGenerator&amp;quot;&amp;gt; &amp;lt;bean class=&amp;quot;org.camunda.bpm.engine.impl.persistence.StrongUuidGenerator&amp;quot; /&amp;gt; &amp;lt;/property&amp;gt; &amp;lt;/bean&amp;gt;  另外，你需要以下Maven依赖项：
 &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;com.fasterxml.uuid&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;java-uuid-generator&amp;lt;/artifactId&amp;gt; &amp;lt;scope&amp;gt;provided&amp;lt;/scope&amp;gt; &amp;lt;version&amp;gt;3.1.2&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt;  </description>
     </item>
     
@@ -7747,8 +7757,8 @@ On all application servers except JBoss and Wildfly, logging is pre-configured u
       
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/metrics/</guid>
       <description>流程引擎会在数据库中记录运行时指标，这有助于得出关于Camunda平台的使用、负载和性能的结论。指标会被记录到表 ACT_RU_METER_LOG 和 ACT_RU_TASK_METER_LOG中。ACT_RU_METER_LOG中的单一指标由以下内容组成，某个时间段记录的在JAVA long 范围内的自然数，和标识这个记录的名字。在表ACT_RU_TASK_METER_LOG 中的任务指标记录包含固定长度，受让人的化名和受让的时间点，有一套默认报告的内置指标。
-内置指标 下表包含内置指标和描述。所有内置度量的标识符都可以作为类 org.camunda.bpm.engine.management.Metrics的常量来使用。 小心!如果你是一个企业客户，你的许可协议可能要求你每年报告一些指标。请从 ACT_RU_METER_LOG 以及任务指标 ACT_RU_TASK_METER_LOG表中保留 root-process-instance-start, activity-instance-start, executed-decision-instances 和 executed-decision-elements 至少有18个月。
- 类别 识别符 描述   BPMN Execution root-process-instance-start* 开始执行的根流程实例的数量。这也被称为根流程实例（RPI）。 根流程实例没有父流程实例，即它是一个顶层执行。     activity-instance-start* 活动实例的数量已启动。这也称为流节点实例（FNI）。    activity-instance-end 结束的活动实例的数量。   DMN Execution executed-decision-instances* 评估决策实例的数量（EDI）。决策实例是DMN决策表或DMN文字表达式。    executed-decision-elements* 在评估DMN决策表时执行的决策元素的数量。对于一个表，结果为子句数量和规则数量的乘积。   Job Executor job-successful 成功执行的Job数量。    job-failed 未能执行的Job数量和提交重试的Job数量。计算每次尝试执行Job的尝试。    job-acquisition-attempt Job采集周期的数。    job-acquired-success 获取和成功锁定执行的Job数量。    job-acquired-failure 由于另一种Job执行程序锁定/执行Job而无法锁定，但无法锁定所获取但无法锁定的Job数量。    job-execution-rejected 由于饱和执行资源而被拒绝的执行成功获取的Job的数量。这是执行线程池的Job队列已满的指标。    job-locked-exclusive 立即锁定和执行的独占Job的数量。   Task Metrics unique-task-workers* 曾担任受让人的独特任务工作人员的数量。   History Clean up history-cleanup-removed-process-instances 历史清除后删除的流程实例数。    history-cleanup-removed-case-instances 历史清除后删除的案例实例数。    history-cleanup-removed-decision-instances 历史清除删除的决策实例数。    history-cleanup-removed-batch-operations 历史清除删除的批处理操作数。    history-cleanup-removed-task-metrics 历史清除后删除的任务指标数量。    一些企业协议需要年度报告一些指标。请存储至少18个月的指标。  查询 可以构造一个ManagementService提供的 MetricsQuery来查询指标。下面的例子查询了整个报告历史中所有执行的活动实例的数量。</description>
+内置指标 下表包含内置指标和描述。所有内置度量的标识符都可以作为类 org.camunda.bpm.engine.management.Metrics 的常量来使用。 小心! 如果你是一个企业客户，你的许可协议可能要求你每年报告一些指标。请从 ACT_RU_METER_LOG 以及任务指标 ACT_RU_TASK_METER_LOG表中保留 root-process-instance-start, activity-instance-start, executed-decision-instances 和 executed-decision-elements 至少有18个月。
+  类别 识别符 描述   BPMN Execution root-process-instance-start* 开始执行的根流程实例的数量。这也被称为根流程实例（RPI）。 根流程实例没有父流程实例，即它是一个顶层执行。     activity-instance-start* 活动实例的数量已启动。这也称为流节点实例（FNI）。    activity-instance-end 结束的活动实例的数量。   DMN Execution executed-decision-instances* 评估决策实例的数量（EDI）。决策实例是DMN决策表或DMN文字表达式。    executed-decision-elements* 在评估DMN决策表时执行的决策元素的数量。对于一个表，结果为子句数量和规则数量的乘积。   Job Executor job-successful 成功执行的Job数量。    job-failed 未能执行的Job数量和提交重试的Job数量。计算每次尝试执行Job的尝试。    job-acquisition-attempt Job采集周期的数。    job-acquired-success 获取和成功锁定执行的Job数量。    job-acquired-failure 由于另一种Job执行程序锁定/执行Job而无法锁定，但无法锁定所获取但无法锁定的Job数量。    job-execution-rejected 由于饱和执行资源而被拒绝的执行成功获取的Job的数量。这是执行线程池的Job队列已满的指标。    job-locked-exclusive 立即锁定和执行的独占Job的数量。   Task Metrics unique-task-workers* 曾担任受让人的独特任务工作人员的数量。   History Clean up history-cleanup-removed-process-instances 历史清除后删除的流程实例数。    history-cleanup-removed-case-instances 历史清除后删除的案例实例数。    history-cleanup-removed-decision-instances 历史清除删除的决策实例数。    history-cleanup-removed-batch-operations 历史清除删除的批处理操作数。    history-cleanup-removed-task-metrics 历史清除后删除的任务指标数量。    一些企业协议需要年度报告一些指标。请存储至少18个月的指标。  查询 可以构造一个ManagementService提供的 MetricsQuery 来查询指标。下面的例子查询了整个报告历史中所有执行的活动实例的数量。</description>
     </item>
     
     <item>
@@ -7826,10 +7836,13 @@ Response Codes  Code Media type Description   200 application/octet-stream Reque
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-plugins/</guid>
-      <description>The process engine configuration can be extended through process engine plugins. A process engine plugin is an extension to the process engine configuration.
-A plugin must provide an implementation of the ProcessEnginePlugininterface.
-Configure Process Engine Plugins Process engine plugins can be configured
- in the Camunda Platform Deployment Descriptors (bpm-platform.xml/processes.xml), in the JBoss Application Server 7/Wildfly configuration file (standalone.xml/domain.xml), using Spring Beans XML, programatically.  The following is an example of how to configure a process engine plugin in a bpm-platform.</description>
+      <description> 流程引擎配置可以通过流程引擎插件扩展。流程引擎插件是流程引擎配置的扩展。
+插件必须提供实现ProcessEnginePlugin 接口。
+配置流程引擎插件 可以在下列位置配置流程引擎插件：
+ 在 Camunda平台 部署描述符 (bpm-platform.xml/processes.xml), 在 JBoss Application Server 7/Wildfly 配置文件 (standalone.xml/domain.xml), 在 Spring Beans XML, 编程配置。  下面是如何在bpm-platform.xml文件中配置一个流程引擎插件的例子。
+&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt; &amp;lt;bpm-platform xmlns=&amp;quot;http://www.camunda.org/schema/1.0/BpmPlatform&amp;quot; xmlns:xsi=&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot; xsi:schemaLocation=&amp;quot;http://www.camunda.org/schema/1.0/BpmPlatform http://www.camunda.org/schema/1.0/BpmPlatform &amp;quot;&amp;gt; &amp;lt;job-executor&amp;gt; &amp;lt;job-acquisition name=&amp;quot;default&amp;quot; /&amp;gt; &amp;lt;/job-executor&amp;gt; &amp;lt;process-engine name=&amp;quot;default&amp;quot;&amp;gt; &amp;lt;job-acquisition&amp;gt;default&amp;lt;/job-acquisition&amp;gt; &amp;lt;configuration&amp;gt;org.camunda.bpm.engine.impl.cfg.JtaProcessEngineConfiguration&amp;lt;/configuration&amp;gt; &amp;lt;datasource&amp;gt;jdbc/ProcessEngine&amp;lt;/datasource&amp;gt; &amp;lt;plugins&amp;gt; &amp;lt;plugin&amp;gt; &amp;lt;class&amp;gt;org.camunda.bpm.engine.MyCustomProcessEnginePlugin&amp;lt;/class&amp;gt; &amp;lt;properties&amp;gt; &amp;lt;property name=&amp;quot;boost&amp;quot;&amp;gt;10&amp;lt;/property&amp;gt; &amp;lt;property name=&amp;quot;maxPerformance&amp;quot;&amp;gt;true&amp;lt;/property&amp;gt; &amp;lt;property name=&amp;quot;actors&amp;quot;&amp;gt;akka&amp;lt;/property&amp;gt; &amp;lt;/properties&amp;gt; &amp;lt;/plugin&amp;gt; &amp;lt;/plugins&amp;gt; &amp;lt;/process-engine&amp;gt; &amp;lt;/bpm-platform&amp;gt;  流程引擎插件类必须对加载流程引擎类的类加载器可见。
+内置流程引擎插件列表 下面是内置的流程引擎插件的列表：
+ LDAP Identity Service插件 Administrator Authorization 插件 Process Application 事件监听器插件  </description>
     </item>
     
     <item>
@@ -7850,9 +7863,17 @@ Response Codes  Code Media type Description   204  Request successful.   403 app
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/identity-service/</guid>
-      <description>The identity service is an API abstraction over various user/group repositories. The basic entities are
- User: a user identified by a unique Id Group: a group identified by a unique Id Membership: the relationship between users and groups Tenant: a tenant identified by a unique Id Tenant Membership: the relationship between tenants and users/groups  Example:
-User demoUser = processEngine.getIdentityService() .createUserQuery() .userId(&amp;quot;demo&amp;quot;) .singleResult();  Camunda Platform distinguishes between read-only and writable user repositories.</description>
+      <description>身份服务是对各种用户/组库的API抽象。其基本实体是：
+ User: 使用不同ID区分的不同用户 Group: 使用不同ID区分的不同组 Membership: 组与用户之间的关系 Tenant: 使用不同ID区分的不同租户 Tenant Membership: 租户与 用户/组 之间的关系  实例：
+User demoUser = processEngine.getIdentityService() .createUserQuery() .userId(&amp;quot;demo&amp;quot;) .singleResult();  Camunda平台区分了只读和可写的用户资源库。只读的用户资源库提供对基础用户/组数据库的只读访问。可写用户资源库允许对用户数据库进行写访问，包括创建、更新和删除用户和组。
+也提供一个自定义的身份提供者实现，可以实现如下接口：
+ org.camunda.bpm.engine.impl.identity.ReadOnlyIdentityProvider  org.camunda.bpm.engine.impl.identity.WritableIdentityProvider   用户、组和租户ID的自定义白名单 用户、组和租户ID可以与白名单相匹配，以确定所提供的ID是否可以接受。默认的（全局）正则表达式匹配模式是 &amp;ldquo;[a-zA-Z0-9]+|camunda-admin &amp;ldquo; ，即任何字母数字值的组合或 &amp;lsquo;camunda-admin&amp;rsquo; 。
+如果你的组织允许使用额外的字符（例如：特殊字符），应该在流程引擎的配置文件ProcessEngineConfiguration属性generalResourceWhitelistPattern中设置适当的模式。可以使用标准的Java 正则表达式语法。例如，要接受所有字符，可以使用以下属性值。
+&amp;lt;property name=&amp;quot;generalResourceWhitelistPattern&amp;quot; value=&amp;quot;.+&amp;quot;/&amp;gt;  通过使用适当的配置方式，可以为用户、组和租户ID定义不同的匹配模式。
+&amp;lt;property name=&amp;quot;userResourceWhitelistPattern&amp;quot; value=&amp;quot;[a-zA-Z0-9-]+&amp;quot; /&amp;gt; &amp;lt;property name=&amp;quot;groupResourceWhitelistPattern&amp;quot; value=&amp;quot;[a-zA-Z]+&amp;quot; /&amp;gt; &amp;lt;property name=&amp;quot;tenantResourceWhitelistPattern&amp;quot; value=&amp;quot;.+&amp;quot; /&amp;gt;  请注意，如果没有定义某种模式（例如租户白名单模式），将使用一般模式，要么是默认模式（&amp;quot;[a-zA-Z0-9]+|camunda-admin&amp;quot;），要么是配置文件中定义的。
+基于数据库的身份服务 数据库身份服务使用流程引擎数据库来管理用户和组。如果没有提供其他身份服务实现，这是默认的身份服务实现。
+数据库身份服务同时实现了 &amp;ldquo;只读身份提供者&amp;rdquo; 和 &amp;ldquo;可写身份提供者&amp;rdquo;，在用户、组和会员中提供完整的CRUD功能。
+基于 LDAP 的身份服务 LDAP身份服务提供对基于LDAP的用户/组资源库的只读访问。该身份服务提供方式作为流程引擎插件实现，可以被添加到流程引擎配置中。添加后，它会取代默认的数据库身份服务。</description>
     </item>
     
     <item>
@@ -7861,9 +7882,18 @@ User demoUser = processEngine.getIdentityService() .createUserQuery() .userId(&a
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/authorization-service/</guid>
-      <description>Camunda allows users to authorize access to the data it manages. This makes it possible to configure which user can access which process instances, tasks, etc&amp;hellip;
-Authorization has a performance cost and introduces some complexity. It should only be used if required.
-When is Authorization required? Not every Camunda setup needs to enable authorization. In many scenarios, Camunda is embedded into an application and the application itself ensures that users can only access data they are authorized to access.</description>
+      <description>Camunda 允许用户授权访问其管理的数据。 这使得配置哪些用户可以访问哪些流程实例、任务等成为可能&amp;hellip;
+授权具有一定性能成本并引入了一些复杂性。 它应该只在需要时使用。
+什么时候需要授权？ 并非每个 Camunda 设置都需要启用授权。 在许多场景中，Camunda 被嵌入到应用程序中，应用程序本身确保用户只能访问他们有权访问的数据。 一般来说，只有不受信任方直接与流程引擎API交互时才需要授权。 如果将流程引擎嵌入到 Java 应用程序中，通常是不需要启用授权的。 应用程序可以自行控制 API 的访问方式。
+需要授权的情况：
+ Camunda Rest API 可供不应具有完全访问权限的用户访问，即使通过身份验证也是如此。 Camunda Webapplication 可供不应具有完全访问权限的用户访问，即使通过身份验证也是如此。 其他不受信任的用户可以直接构造在流程引擎上执行的查询和命令的情况。  不需要 授权的情况：
+ 应用程序完全控制在流程引擎上调用的 API 方法。 Camunda Web 应用程序可供在身份验证后具有完全访问权限的用户访问。  例子:
+假设你有以下授权要求：作为普通用户，我只能看到分配给我的任务。
+如果引擎嵌入到 Java 应用程序中，应用程序可以通过限制对“assignee”属性的任务查询来轻松做到这一点。应用程序可以保证限制，因为 Camunda API 不会直接暴露给用户。
+相比之下，如果 Camunda Rest API 通过网络直接暴露给 Javascript 应用程序，那么恶意用户一旦通过身份验证，就可以向服务器发送请求，查询所有任务，甚至是未分配给该用户的任务。在这种情况下，需要开启授权以确保不管查询参数如何，用户只看到他被授权看到的任务。
+基本原则 授权 授权给某身份一组权限，使其可以与限定的资源进行交互。
+例子
+ 用户 &amp;lsquo;jonny&amp;rsquo; 被授权创建新用户。 组&amp;rsquo;marketing&amp;rsquo;无权删除组&amp;rsquo;sales&amp;rsquo;。 组&amp;rsquo;marketing&amp;rsquo;不允许使用tasklist应用程序。  身份 Camunda 平台区分两种类型的身份：用户和组。授权范围可以是所有用户（userId = ANY）、单个用户或一组用户。</description>
     </item>
     
     <item>
@@ -7884,8 +7914,14 @@ Response Codes  Code Media type Description   204  Request successful.</descript
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/deployments/</guid>
-      <description>Before a process (or case, or decision) can be executed by the process engine, it has to be deployed. A deployment is a logical entity that groups multiple resources that are deployed together. Deployments can be made programmatically via Java API or REST API, or declaratively for resources of a Process Application. This section covers advanced deployment concepts.
-Deployments in a Clustered Scenario Before the process engine starts to perform a deployment, it tries to acquire an exclusive lock on a row in the table ACT_GE_PROPERTY.</description>
+      <description> 在流程引擎可以执行流程（或案例或决策）之前，必须对其进行部署。 部署是将部署在一起的多组资源的逻辑实体。 可以通过 Java API 或 REST API 以编程方式进行部署，或者针对 流程应用使用声明方式。本节介绍高级部署概念。
+集群场景中的部署 在流程引擎开始执行部署之前，它会尝试获取对“ACT_GE_PROPERTY”表中一行的排他锁。当流程引擎能够成功获取锁时，它开始部署并持有排它锁，只要部署执行发生。
+如果在集群场景中同时在多个节点上部署相同的资源，则获取的排他锁确保重复过滤按预期工作。否则，并行部署可能会导致同一流程定义的多个版本。
+此外，排他锁确保具有相同密钥的多个定义（例如，流程定义）在同时部署时不会获得相同的版本，这可能导致失败和意外行为。请注意，数据库中没有检查定义唯一性的唯一约束。
+因此，排他锁强制执行顺序部署。
+默认情况下，排他锁获取是开启的。如果不需要，可以通过将名为 deploymentLockUsed 的流程引擎配置标志设置为 false 来禁用它。
+H2 数据库 请注意，集群方案不支持 H2 数据库。流程引擎不会创建排他锁，因为 H2 默认使用表级锁，如果执行部署时部署命令需要使用 DbIdGenerator 获取新 Id，这可能会导致死锁。
+ </description>
     </item>
     
     <item>
@@ -7938,8 +7974,11 @@ Parameters Path Parameters  Name Description   id The id of the task to retrieve
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-diagram-api/</guid>
-      <description>A BPMN process diagram is a formidable place to visualize information around your process. We recommend to use JavaScript libraries to display process diagrams and enrich them with additional information.
-In our web applications Cockpit and Tasklist, we use bpmn.io, a toolkit for rendering BPMN 2.0 process models directly in the browser. It allows adding additional information to the diagram and includes ways for user interaction. Although bpmn.io is still under development, its API is rather stable.</description>
+      <description>BPMN 流程图一个强大的地方，是可以将你的流程周围的信息可视化。 我们建议使用 JavaScript 库来显示流程图并用附加信息丰富它们。
+在我们的网络应用程序 Cockpit 和 Tasklist 中， 我们使用 bpmn.io，这是一个直接在浏览器中呈现 BPMN 2.0 流程模型的工具包。 它允许向图表添加附加信息，并包括用户交互的方式。 虽然 bpmn.io 还在开发中，但它的 API 已经相当稳定了。
+之前的 JavaScript BPMN 渲染器仍然可以在 camunda-bpmn.js 找到，但它不再积极开发了。
+  bpmn.io 图表渲染器 要呈现流程图，你需要通过 Java- 或 REST API。 以下示例显示如何使用 bpmn.io 呈现 流程XML。 有关图表注释和用户交互的更多文档，请参阅 bpmn.io 页面。
+var BpmnViewer = require(&#39;bpmn-js&#39;); var xml = getBpmnXml(); // 通过 REST 获取 流程xml var viewer = new BpmnViewer({ container: &#39;body&#39; }); viewer.importXML(xml, function(err) { if (err) { console.</description>
     </item>
     
     <item>
@@ -7948,9 +7987,9 @@ In our web applications Cockpit and Tasklist, we use bpmn.io, a toolkit for rend
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/time-zones/</guid>
-      <description>Process engine The Camunda engine uses the default time zone of the JVM when operating with dates:
- When reading datetime values from BPMN XML In REST responses When reading/writing DateTime values from/to the database  Database Database time zone and database sessions time zone are out of scope of the Camunda engine and must be configured explicitly.
-However, Timestamp columns in the Camunda engine are using the TIMESTAMP [WITHOUT TIME ZONE] data type (the name differs in different database servers).</description>
+      <description>流程引擎 Camunda 引擎在处理日期时使用 JVM 的默认时区：
+ 从 BPMN XML 读取日期时间值时 在 REST responses 中 从/向数据库读取/写入 DateTime 值时  数据库 Database time zone and database sessions time zone are out of scope of the Camunda engine and must be configured explicitly.
+However, Timestamp columns in the Camunda engine are using the TIMESTAMP [WITHOUT TIME ZONE] data type (the name differs in different database servers). For this reason, it is not recommended to change the time zone on the database side once set, since it may lead to an incorrect operation of the Camunda engine.</description>
     </item>
     
     <item>
@@ -7961,7 +8000,7 @@ However, Timestamp columns in the Camunda engine are using the TIMESTAMP [WITHOU
       <guid>http://camunda-cn.shaochenfeng.com/reference/rest/task/local-variables/get-local-task-variables/</guid>
       <description>Retrieves all variables of a given task by id.
 Method GET /task/{id}/localVariables
-Parameters Path Parameters  Name Description   id The id of the task to retrieve the variables from.   Query Parameters  Name Description   deserializeValues  Determines whether serializable variable values (typically variables that store custom Java objects) should be deserialized on server side (default true).If set to true, a serializable variable will be deserialized on server side and transformed to JSON using Jackson&#39;s POJO/bean property introspection feature.</description>
+Parameters Path Parameters  Name Description   id The id of the task to retrieve the variables from.   Query Parameters  Name Description   deserializeValues  Determines whether serializable variable values (typically variables that store custom Java objects) should be deserialized on server side (default true). If set to true, a serializable variable will be deserialized on server side and transformed to JSON using Jackson&#39;s POJO/bean property introspection feature.</description>
     </item>
     
     <item>
@@ -8027,7 +8066,7 @@ For example the process instance migration command can be executed using a batch
       <description>Sets a variable in the context of a given task.
 Method PUT /task/{id}/localVariables/{varName}
 Parameters Path Parameters  Name Description   id The id of the task to set the variable for.   varName The name of the variable to set.   Request Body A JSON object with the following properties:
-NameDescriptionvalueThe variable&#39;s value. For variables of type Object, the serialized value has to be submitted as a String value.</description>
+ Name Description   value The variable&#39;s value. For variables of type Object, the serialized value has to be submitted as a String value.</description>
     </item>
     
     <item>
@@ -8115,8 +8154,8 @@ Parameters Path Parameters  Name Description   id The id of the task.   varName 
       
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/ext-client/compatibility-matrix/</guid>
       <description>Each version of the Camunda Platform is bound to a specific version of the External Task Clients.
-Heads UpStarting with version 7.15.0, Camunda Platform and its compatible Java External Task Client always share the same version.
- Camunda Platform version NodeJs Java   7.9.x 1.0.x 1.0.x   7.10.x 1.1.x 1.1.x   7.11.x 1.1.x, 1.2.x 1.2.x   7.12.x 1.3.x 1.3.x   7.13.x 2.0.x 1.3.x   7.</description>
+Heads Up Starting with version 7.15.0, Camunda Platform and its compatible Java External Task Client always share the same version.
+  Camunda Platform version NodeJs Java   7.9.x 1.0.x 1.0.x   7.10.x 1.1.x 1.1.x   7.11.x 1.1.x, 1.2.x 1.2.x   7.12.x 1.3.x 1.3.x   7.13.x 2.0.x 1.3.x   7.</description>
     </item>
     
     <item>
@@ -8264,8 +8303,8 @@ The update procedure takes the following steps:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/update/minor/74-to-75/glassfish/</guid>
-      <description>ENVIRONMENT OUT OF SUPPORTFrom Camunda Platform 7.5 onwards Glassfish Application Server is not supported anymore. Please have a look at the list of Supported Environments.
-The following steps describe how to update the Camunda artifacts on a Glassfish 3.1 application server in a shared process engine setting. For the entire procedure, refer to the update guide. If not already done, make sure to download the Camunda Platform 7.</description>
+      <description>ENVIRONMENT OUT OF SUPPORT From Camunda Platform 7.5 onwards Glassfish Application Server is not supported anymore. Please have a look at the list of Supported Environments.
+ The following steps describe how to update the Camunda artifacts on a Glassfish 3.1 application server in a shared process engine setting. For the entire procedure, refer to the update guide. If not already done, make sure to download the Camunda Platform 7.</description>
     </item>
     
     <item>

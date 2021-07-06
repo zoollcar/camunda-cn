@@ -864,7 +864,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/process-applications/" >流程应用程序</a>
+      <a href="/user-guide/spring-boot-integration/process-applications/" >Process Applications</a>
     
   </li>
 
@@ -8177,17 +8177,17 @@ var _mtac = {};
     <div class="col-xs-12 content-text">
       
 
-<p>The identity service is an API abstraction over various user/group repositories. The basic entities are</p>
+<p>身份服务是对各种用户/组库的API抽象。其基本实体是：</p>
 
 <ul>
-<li>User: a user identified by a unique Id</li>
-<li>Group: a group identified by a unique Id</li>
-<li>Membership: the relationship between users and groups</li>
-<li>Tenant: a tenant identified by a unique Id</li>
-<li>Tenant Membership: the relationship between tenants and users/groups</li>
+<li>User: 使用不同ID区分的不同用户</li>
+<li>Group: 使用不同ID区分的不同组</li>
+<li>Membership: 组与用户之间的关系</li>
+<li>Tenant: 使用不同ID区分的不同租户</li>
+<li>Tenant Membership: 租户与 用户/组 之间的关系</li>
 </ul>
 
-<p>Example:</p>
+<p>实例：</p>
 
 <pre><code class="language-java">User demoUser = processEngine.getIdentityService()
   .createUserQuery()
@@ -8195,9 +8195,9 @@ var _mtac = {};
   .singleResult();
 </code></pre>
 
-<p>Camunda Platform distinguishes between read-only and writable user repositories. A read-only user repository provides read-only access to the underlying user/group database. A writable user repository allows write access to the user database which includes creating, updating and deleting users and groups.</p>
+<p>Camunda平台区分了只读和可写的用户资源库。只读的用户资源库提供对基础用户/组数据库的只读访问。可写用户资源库允许对用户数据库进行写访问，包括创建、更新和删除用户和组。</p>
 
-<p>To provide a custom identity provider implementation, the following interfaces can be implemented:</p>
+<p>也提供一个自定义的身份提供者实现，可以实现如下接口：</p>
 
 <ul>
 <li><a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/impl/identity/ReadOnlyIdentityProvider.html">org.camunda.bpm.engine.impl.identity.ReadOnlyIdentityProvider</a>
@@ -8206,40 +8206,40 @@ var _mtac = {};
 </li>
 </ul>
 
-<h1 id="custom-whitelist-for-user-group-and-tenant-ids">Custom Whitelist for User, Group and Tenant IDs</h1>
+<h1 id="用户-组和租户id的自定义白名单">用户、组和租户ID的自定义白名单</h1>
 
-<p>User, Group and Tenant IDs can be matched against a Whitelist Pattern to determine if the provided ID is acceptable or not. The default (global) Regular Expression pattern to match against is <strong>&ldquo;[a-zA-Z0-9]+|camunda-admin&rdquo;</strong> i.e. any combination of alphanumeric values or <em>&lsquo;camunda-admin&rsquo;</em>.</p>
+<p>用户、组和租户ID可以与白名单相匹配，以确定所提供的ID是否可以接受。默认的（全局）正则表达式匹配模式是 <strong>&ldquo;[a-zA-Z0-9]+|camunda-admin &ldquo;</strong> ，即任何字母数字值的组合或 <em>&lsquo;camunda-admin&rsquo;</em> 。</p>
 
-<p>If your organisation allows the usage of additional characters (ex.: special characters), the ProcessEngineConfiguration propery <code>generalResourceWhitelistPattern</code> should be set with the appropriate pattern in the engine&rsquo;s configuration file. Standard <a href="https://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html">Java Regular Expression</a> syntax can be used. For example, to accept any character, the following property value can be used:</p>
+<p>如果你的组织允许使用额外的字符（例如：特殊字符），应该在流程引擎的配置文件ProcessEngineConfiguration属性<code>generalResourceWhitelistPattern</code>中设置适当的模式。可以使用标准的<a href="https://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html">Java 正则表达式</a>语法。例如，要接受所有字符，可以使用以下属性值。</p>
 
 <pre><code class="language-xml">&lt;property name=&quot;generalResourceWhitelistPattern&quot; value=&quot;.+&quot;/&gt;
 </code></pre>
 
-<p>The definition of different patterns for User, Group and Tenant IDs is possible by using the appropriate configuration propery:</p>
+<p>通过使用适当的配置方式，可以为用户、组和租户ID定义不同的匹配模式。</p>
 
 <pre><code class="language-xml">&lt;property name=&quot;userResourceWhitelistPattern&quot; value=&quot;[a-zA-Z0-9-]+&quot; /&gt;
 &lt;property name=&quot;groupResourceWhitelistPattern&quot; value=&quot;[a-zA-Z]+&quot; /&gt;
 &lt;property name=&quot;tenantResourceWhitelistPattern&quot; value=&quot;.+&quot; /&gt;
 </code></pre>
 
-<p>Note that if a certain pattern isn&rsquo;t defined (ex. the tenant whitelist pattern), the general pattern will be used, either the default one (<code>&quot;[a-zA-Z0-9]+|camunda-admin&quot;</code>) or one defined in the configuration file.</p>
+<p>请注意，如果没有定义某种模式（例如租户白名单模式），将使用一般模式，要么是默认模式（<code>&quot;[a-zA-Z0-9]+|camunda-admin&quot;</code>），要么是配置文件中定义的。</p>
 
-<h1 id="the-database-identity-service">The Database Identity Service</h1>
+<h1 id="基于数据库的身份服务">基于数据库的身份服务</h1>
 
-<p>The database identity service uses the process engine database for managing users and groups. This is the default identity service implementation used if no alternative identity service implementation is provided.</p>
+<p>数据库身份服务使用流程引擎数据库来管理用户和组。如果没有提供其他身份服务实现，这是默认的身份服务实现。</p>
 
-<p>The database identity service implements both <code>ReadOnlyIdentityProvider</code> and <code>WritableIdentityProvider</code> providing full CRUD functionality in Users, Groups and Memberships.</p>
+<p>数据库身份服务同时实现了 &ldquo;只读身份提供者&rdquo; 和 &ldquo;可写身份提供者&rdquo;，在用户、组和会员中提供完整的CRUD功能。</p>
 
-<h1 id="the-ldap-identity-service">The LDAP Identity Service</h1>
+<h1 id="基于-ldap-的身份服务">基于 LDAP 的身份服务</h1>
 
-<p>The LDAP identity service provides read-only access to an LDAP-based user/group repository. The identity service provider is implemented as a <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-plugins/">Process Engine Plugin</a> and can be added to the process engine configuration. In that case it replaces the default database identity service.</p>
+<p>LDAP身份服务提供对基于LDAP的用户/组资源库的只读访问。该身份服务提供方式作为<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-plugins/">流程引擎插件</a>实现，可以被添加到流程引擎配置中。添加后，它会取代默认的数据库身份服务。</p>
 
-<p>To use the LDAP identity service, the <code>camunda-identity-ldap.jar</code> library has to be added to the classloader of the process engine.</p>
+<p>使用LDAP身份服务，需要将<code>camunda-identity-ldap.jar</code>库添加到流程引擎的classloader中。</p>
 
 
 <div class="note bg-info docs-info">
   <h3></h3>
-  <p>Please import the <a href="/get-started/apache-maven/">Camunda BOM</a> to ensure correct versions for every Camunda project.</p>
+  <p>请导入<a href="/get-started/apache-maven/">Camunda BOM</a>，以确保每个Camunda项目的版本正确。</p>
 </div>
 
 
@@ -8249,9 +8249,9 @@ var _mtac = {};
 &lt;/dependency&gt;
 </code></pre>
 
-<h2 id="activate-the-ldap-plugin">Activate the LDAP Plugin</h2>
+<h2 id="激活ldap插件">激活LDAP插件</h2>
 
-<p>The following is an example of how to configure the LDAP Identity Provider Plugin using Spring XML:</p>
+<p>以下是如何使用 Spring XML 配置 LDAP Identity Provider Plugin 的示例：</p>
 
 <pre><code class="language-xml">&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
        xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
@@ -8289,7 +8289,7 @@ var _mtac = {};
 &lt;/beans&gt;
 </code></pre>
 
-<p>The following is an example of how to configure the LDAP Identity Provider Plugin in bpm-platform.xml/processes.xml:</p>
+<p>以下是如何在 bpm-platform.xml/processes.xml 中配置 LDAP Identity Provider Plugin 的示例：</p>
 
 <pre><code class="language-xml">&lt;process-engine name=&quot;default&quot;&gt;
   &lt;job-acquisition&gt;default&lt;/job-acquisition&gt;
@@ -8336,154 +8336,155 @@ var _mtac = {};
 
 
 <div class="note bg-info docs-info">
-  <h3>Administrator Authorization Plugin</h3>
-  <p>The LDAP Identity Provider Plugin is usually used in combination with the <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/authorization-service/#the-administrator-authorization-plugin">Administrator Authorization Plugin</a> which allows you to grant administrator authorizations for a particular LDAP User/Group.</p>
+  <h3>管理员授权插件</h3>
+  <p>LDAP Identity Provider Plugin 通常与<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/authorization-service/#the-administrator-authorization-plugin">Administrator Authorization Plugin</a> 结合使用 它允许你为特定的 LDAP用户/组 授予管理员权限。</p>
 </div>
 
 
 
 <div class="note bg-info docs-info">
-  <h3>Multi-Tenancy</h3>
-  <p>Currently, the LDPA Identity Service doesn&rsquo;t support <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/multi-tenancy/#single-process-engine-with-tenant-identifiers">multi-tenancy</a>. That means it is not possible to get tenants from LDAP and the transparent multi-tenancy access restrictions don&rsquo;t work by default.</p>
+  <h3>多租户</h3>
+  <p>目前，LDPA 身份服务不支持 <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/multi-tenancy/#single-process-engine-with-tenant-identifiers">多租户</a>。 这意味着无法从 LDAP 获取租户，并且默认情况下透明的多租户访问限制不起作用。</p>
 </div>
 
 
-<h2 id="configuration-properties-of-the-ldap-plugin">Configuration Properties of the LDAP Plugin</h2>
+<h2 id="ldap-插件的可配置属性">LDAP 插件的可配置属性</h2>
 
-<p>The LDAP Identity Provider provides the following configuration properties:</p>
+<p>LDAP身份提供程序提供以下可配置属性：</p>
 
 <table class="table table-striped">
   <tr>
-    <th>Property</th>
-    <th>Description</th>
+    <th>属性</th>
+    <th>描述</th>
   </tr>
   <tr>
     <td><code>serverUrl</code></td>
-    <td>The url of the LDAP server to connect to.</td>
+    <td>要连接的 LDAP 服务器的 URL。</td>
   </tr>
   <tr>
     <td><code>managerDn</code></td>
-    <td>The absolute DN of the manager user of the LDAP directory.</td>
+    <td>LDAP目录管理员用户的managerDn。</td>
   </tr>
   <tr>
     <td><code>managerPassword</code></td>
-    <td>The password of the manager user of the LDAP directory</td>
+    <td>LDAP目录管理员用户密码</td>
   </tr>
   <tr>
     <td><code>baseDn</code></td>
     <td>
-      <p>The base DN: Identifies the root of the LDAP directory. Is appended to all DN names composed for searching for users or groups.</p>
-      <p><em>Example:</em> <code>o=camunda,c=org</code></p>
+      <p>base DN：标识 LDAP 目录的根。 附加到为搜索用户或组而组成的所有 DN 名称。</p>
+      <p><em>例如：</em> <code>o=camunda,c=org</code></p>
     </td>
   </tr>
   <tr>
     <td><code>userSearchBase</code></td>
     <td>
-      <p>Identifies the node in the LDAP tree under which the plugin should search for users. Must be relative to <code>baseDn</code>.</p>
-      <p><em>Example:</em> <code>ou=employees</code></p>
+      <p>标识 LDAP树 中插件应在其下搜索用户的节点。必须对应
+      <code>baseDn</code>。</p>
+      <p><em>例如：</em> <code>ou=employees</code></p>
     </td>
   </tr>
   <tr>
     <td><code>userSearchFilter</code></td>
     <td>
-      <p>LDAP query string used when searching for users. <em>Example:</em> <code>(objectclass=person)</code></p>
+      <p>搜索用户时使用的 LDAP 查询字符串。 <em>例如:</em> <code>(objectclass=person)</code></p>
     </td>
   </tr>
   <tr>
     <td><code>userIdAttribute</code></td>
     <td>
-      <p>Name of the user Id property. <em>Example:</em> <code>uid</code></p>
+      <p>用户ID属性的名称。 <em>例如:</em> <code>uid</code></p>
     </td>
   </tr>
   <tr>
     <td><code>userFirstnameAttribute</code></td>
     <td>
-      <p>Name of the firstname property. <em>Example:</em> <code>cn</code></p>
+      <p>firstname 属性的名称。<em>例如:</em> <code>cn</code></p>
     </td>
   </tr>
   <tr>
     <td><code>userLastnameAttribute</code></td>
     <td>
-      <p>Name of the lastname property. <em>Example:</em> <code>sn</code></p>
+      <p>lastname 属性的名称。<em>例如:</em> <code>sn</code></p>
     </td>
   </tr>
   <tr>
     <td><code>userEmailAttribute</code></td>
     <td>
-      <p>Name of the email property. <em>Example:</em> <code>mail</code></p>
+      <p>email 属性的名称 <em>例如:</em> <code>mail</code></p>
     </td>
   </tr>
   <tr>
     <td><code>userPasswordAttribute</code></td>
     <td>
-      <p>Name of the password property. <em>Example:</em> <code>userpassword</code></p>
+      <p>password 属性的名称 <em>例如:</em> <code>userpassword</code></p>
     </td>
   </tr>
   <tr>
     <td><code>groupSearchBase</code></td>
     <td>
-      <p>Identifies the node in the LDAP tree under which the plugin should search for groups. Must be relative to <code>baseDn</code>.</p>
-      <p><em>Example:</em> <code>ou=roles</code></p>
+      <p>标识 LDAP 树中插件应在其下搜索组的节点。 必须对应
+      <code>baseDn</code>.</p>
+      <p><em>例如：</em> <code>ou=roles</code></p>
     </td>
   </tr>
   <tr>
     <td><code>groupSearchFilter</code></td>
     <td>
-      <p>LDAP query string used when searching for groups. <em>Example:</em> <code>(objectclass=groupOfNames)</code></p>
+      <p>搜索组时使用的 LDAP 查询字符串。 <em>例如：</em> <code>(objectclass=groupOfNames)</code></p>
     </td>
   </tr>
   <tr>
     <td><code>groupIdAttribute</code></td>
     <td>
-      <p>Name of the group Id property. <em>Example:</em> <code>ou</code></p>
+      <p>组 Id 属性的名称。 <em>例如：</em> <code>ou</code></p>
     </td>
   </tr>
   <tr>
     <td><code>groupNameAttribute</code></td>
     <td>
-      <p>Name of the group Name property. <em>Example:</em> <code>cn</code></p>
+      <p>组 Name 属性的名称。 <em>例如：</em> <code>cn</code></p>
     </td>
   </tr>
   <tr>
     <td><code>groupTypeAttribute</code></td>
-    <td><p>Name of the group Type property. <em>Example:</em> <code>cn</code></p></td>
+    <td><p>组 Type 属性的名称。 <em>例如：</em> <code>cn</code></p></td>
   </tr>
   <tr>
     <td><code>groupMemberAttribute</code></td>
     <td>
-      <p>Name of the member attribute. <em>Example:</em> <code>member</code></p>
+      <p>成员属性的名称。 <em>例如：</em> <code>member</code></p>
     </td>
   </tr>
   <tr>
     <td><code>acceptUntrustedCertificates</code></td>
     <td>
-      <p>Accept of untrusted certificates if LDAP server uses SSL. <strong>Warning:</strong> We strongly advise against using this property. Better install untrusted certificates to JDK key store.</p>
+      <p>如果 LDAP 服务器使用 SSL，则接受不被信任的证书。 <strong>警告：</strong> 我们强烈建议不要使用此属性。 最好将不被信任的证书安装到 JDK 密钥库。</p>
     </td>
   </tr>
   <tr>
     <td><code>useSsl</code></td>
     <td>
-      <p>Set to true if LDAP connection uses SSL. <em>Default:</em> <code>false</code></p>
+      <p>如果 LDAP 连接使用 SSL，则设置为 true。 <em>默认：</em> <code>false</code></p>
     </td>
   </tr>
   <tr>
     <td><code>initialContextFactory</code></td>
     <td>
-      <p>Value for the <code>java.naming.factory.initial</code> property. <em>Default:</em> <code>com.sun.jndi.ldap.LdapCtxFactory</code></p>
+      <p> <code>java.naming.factory.initial</code> 属性的值。 <em>默认:</em> <code>com.sun.jndi.ldap.LdapCtxFactory</code></p>
     </td>
   </tr>
   <tr>
     <td><code>securityAuthentication</code></td>
     <td>
-      <p>Value for the <code>java.naming.security.authentication</code> property. <em>Default:</em> <code>simple</code></p>
+      <p><code>java.naming.security.authentication</code> 属性的值. <em>默认:</em> <code>simple</code></p>
     </td>
   </tr>
   <tr>
     <td><code>usePosixGroups</code></td>
     <td>
-      <p>Indicates whether posix groups are used. If true, the connector will use a simple
-         (unqualified) user id when querying for groups by group member instead of the full DN.
-         <em>Default:</em> <code>false</code>
+      <p>表示是否使用 posix 组。 如果为 true，当按组成员而不是完整 DN 查询组时，连接器将使用一个简单的（非限定）用户 ID。
+         <em>默认:</em> <code>false</code>
       </p>
     </td>
   </tr>
@@ -8491,11 +8492,10 @@ var _mtac = {};
     <td><code>allowAnonymousLogin</code></td>
     <td>
       <p>
-        Allows to login anonymously without a password. <em>Default:</em> <code>false</code>
+        允许匿名登录，无需密码。 <em>默认:</em> <code>false</code>
       </p>
       <p>
-        <strong>Warning:</strong> We strongly advise against using this property. You should configure your LDAP
-        to use simple authentication without anonymous login.
+        <strong>警告:</strong> 我们强烈建议不要使用此属性。 你应该配置你的 LDAP 使用无需匿名登录的简单身份验证。
       </p>
     </td>
   </tr>
@@ -8503,11 +8503,10 @@ var _mtac = {};
     <td><code>authorizationCheckEnabled</code></td>
     <td>
       <p>
-        If this property is set to <code>true</code>, then authorization checks are performed when querying for users or groups. Otherwise authorization checks are not performed when querying for users or groups. <em>Default:</em> <code>true</code>
+        如果这个属性设置为 <code>true</code>，那么在查询用户或组时就执行授权检查。 否则在查询用户或组时不执行授权检查。 <em>默认:</em> <code>true</code>
       </p>
       <p>
-        <strong>Note:</strong> If you have a huge amount of LDAP users or groups we advise to set this property to <code>false</code> to improve
-        the performance of the user and group query.
+        <strong>注意:</strong> 如果你有大量 LDAP 用户或组，我们建议将此属性设置为 <code>false</code> 以提高用户和组查询的性能。
       </p>
     </td>
   </tr>
@@ -8515,24 +8514,24 @@ var _mtac = {};
    <td><code>sortControlSupported</code></td>
    <td>
       <p>
-        If this property is set to <code>true</code>, then ordering of the search results is enabled. Otherwise orderBy clauses in search queries are simply ignored.
-        <em>Default:</em> <code>false</code>
+        如果此属性设置为 <code>true</code>，则启用搜索结果排序。 否则，搜索查询中的 orderBy 子句将被简单地忽略。
+         <em>默认：</em> <code>false</code>
       </p>
       <p>
-        <strong>Note:</strong> The support of search result ordering is not be implemented by every LDAP server.
-        Make sure that your currently used LDAP Server implements the <a href="https://tools.ietf.org/html/rfc2891">RFC 2891</a>.
+       <strong>注意：</strong> 搜索结果排序的支持并不是每个 LDAP 服务器都实现的。
+         确保你当前使用的 LDAP 服务器实现了 <a href="https://tools.ietf.org/html/rfc2891">RFC 2891</a>。
       </p>
     </td>
   </tr>
 </table>
 
-<h1 id="throttle-login-attempts">Throttle login attempts</h1>
+<h1 id="限制登录尝试">限制登录尝试</h1>
 
-<p>A mechanism exists for preventing subsequent unsuccessful login attempts.The essence of it is that the user is not able to log in for a specific amount of time after unsuccessful login attempts.
-The amount of time is calculated after each attempt but it is limited by maximum delay time.
-After a predefined number of unsuccessful attempts, the user will be locked and only an administrator has permissions to <a href="http://camunda-cn.shaochenfeng.com/webapps/admin/user-management/">unlock</a> them.</p>
+<p>存在一种机制来防止后续不成功的登录尝试。其本质是用户在登录尝试不成功后的特定时间内无法登录。
+每次尝试后都会计算时间量，但受最大延迟时间限制。
+在预定义的失败尝试次数后，用户将被锁定，只有管理员有权<a href="http://camunda-cn.shaochenfeng.com/webapps/admin/user-management/">解锁</a> 他们。</p>
 
-<p>The mechanism is configurable with the following properties and respective default values.</p>
+<p>该机制可以使用以下属性和它们的默认值进行配置。</p>
 
 <ul>
 <li><code>loginMaxAttempts=10</code></li>
@@ -8541,15 +8540,15 @@ After a predefined number of unsuccessful attempts, the user will be locked and 
 <li><code>loginDelayBase=3</code></li>
 </ul>
 
-<p>For more information, please check the process engine&rsquo;s <a href="http://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#login-parameters">login properties</a> section.</p>
+<p>有关更多信息，请查看流程引擎的 <a href="http://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#login-parameters">登录属性</a> 部分。</p>
 
-<p>Calculation of the delay is done via the formula: <code>baseTime * factor^(attempt-1)</code>.
-The behaviour with the default configuration will be:
-3 seconds delay after the first unsuccessful attempt, 6 seconds after the 2nd attempt, 12 seconds, 24 seconds, 48 seconds, 60 seconds, 60 seconds, etc. After the 10th attempt, if the user fails to login again, the user will be locked.</p>
+<p>延迟的计算通过以下公式完成：<code>baseTime * factor^(attempt-1)</code>。
+默认配置的行为将是：
+第一次尝试失败后延迟 3 秒，第二次尝试后延迟 6 秒，12 秒、24 秒、48 秒、60 秒、60 秒等。 第 10 次尝试后，如果用户再次登录失败，用户将被锁定。</p>
 
-<h2 id="ldap-specifics">LDAP specifics</h2>
+<h2 id="ldap-细节">LDAP 细节</h2>
 
-<p>If you have a LDAP setup on your engine, you need to handle the throttling on the LDAP side. The login mechanism in your system will not be affected by the above properties.</p>
+<p>如果你的引擎上有 LDAP 设置，则需要处理 LDAP 端的限制。 你系统中的登录机制不会受到上述属性的影响。</p>
 
     </div>
   </div>
@@ -8559,16 +8558,16 @@ The behaviour with the default configuration will be:
   <h3>目录:</h3>
   <nav id="TableOfContents">
 <ul>
-<li><a href="#custom-whitelist-for-user-group-and-tenant-ids">Custom Whitelist for User, Group and Tenant IDs</a></li>
-<li><a href="#the-database-identity-service">The Database Identity Service</a></li>
-<li><a href="#the-ldap-identity-service">The LDAP Identity Service</a>
+<li><a href="#用户-组和租户id的自定义白名单">用户、组和租户ID的自定义白名单</a></li>
+<li><a href="#基于数据库的身份服务">基于数据库的身份服务</a></li>
+<li><a href="#基于-ldap-的身份服务">基于 LDAP 的身份服务</a>
 <ul>
-<li><a href="#activate-the-ldap-plugin">Activate the LDAP Plugin</a></li>
-<li><a href="#configuration-properties-of-the-ldap-plugin">Configuration Properties of the LDAP Plugin</a></li>
+<li><a href="#激活ldap插件">激活LDAP插件</a></li>
+<li><a href="#ldap-插件的可配置属性">LDAP 插件的可配置属性</a></li>
 </ul></li>
-<li><a href="#throttle-login-attempts">Throttle login attempts</a>
+<li><a href="#限制登录尝试">限制登录尝试</a>
 <ul>
-<li><a href="#ldap-specifics">LDAP specifics</a></li>
+<li><a href="#ldap-细节">LDAP 细节</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -8601,7 +8600,7 @@ The behaviour with the default configuration will be:
 
   
 
-  <script type="text/javascript" src="http://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="http://camunda-cn.shaochenfeng.com/js/docs.4a4040f262f9fc61026cba7d32a9ffb5852d2f3f616961a6d4e5bfccea81e1ff.js" todo-integrity="sha256-SkBA8mL5/GECbLp9Mqn/tYUtLz9haWGm1OW/zOqB4f8=" crossorigin="anonymous"></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

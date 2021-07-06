@@ -864,7 +864,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/process-applications/" >流程应用程序</a>
+      <a href="/user-guide/spring-boot-integration/process-applications/" >Process Applications</a>
     
   </li>
 
@@ -8198,10 +8198,10 @@ var _mtac = {};
 <p>在流程引擎的配置中，可以指定缓存的最大容量。默认值是 <em>1000</em> 。当流程引擎被创建时，这个属性将被设置，所有的资源将被相应地扫描和部署。作为一个例子，最大容量可以被设置为*120*，如下所示：</p>
 
 <pre><code class="language-xml">&lt;bean id=&quot;processEngineConfiguration&quot; class=&quot;org.camunda.bpm.engine.impl.cfg.StandaloneInMemProcessEngineConfiguration&quot;&gt;
-    &lt;!-- Your property definitions! --&gt;
-                    ....
-                    
-    &lt;property name=&quot;cacheCapacity&quot; value=&quot;120&quot; /&gt;  
+	&lt;!-- Your property definitions! --&gt;
+					....
+					
+	&lt;property name=&quot;cacheCapacity&quot; value=&quot;120&quot; /&gt;  
 &lt;/bean&gt;
 </code></pre>
 
@@ -8214,8 +8214,8 @@ var _mtac = {};
 <p>我们可以通过实现 <em>org.camunda.util.commons</em> 包中的Cache接口来做到这一点。例如，我们假设已经实现了下面这个类：</p>
 
 <pre><code class="language-java">public class MyCacheImplementation&lt;K, V&gt; implements Cache&lt;K, V&gt; {
-    
-    // implement interface methods and your own cache logic here
+	
+	// implement interface methods and your own cache logic here
 }
 </code></pre>
 
@@ -8233,12 +8233,12 @@ var _mtac = {};
 <p>这个工厂类被用来为不同的缓存组件提供缓存实现，如流程定义或案例定义。一旦完成这些，就可以使用流程引擎配置，在这里可以指定一组资源。当流程引擎被创建时，所有这些资源将被扫描和部署。在给定的例子中，自定义缓存工厂现在可以按以下方式部署：</p>
 
 <pre><code class="language-xml">&lt;bean id=&quot;processEngineConfiguration&quot; class=&quot;org.camunda.bpm.engine.impl.cfg.StandaloneInMemProcessEngineConfiguration&quot;&gt;
-    &lt;!-- Your property definitions! --&gt;
-                    ....
+	&lt;!-- Your property definitions! --&gt;
+					....
 
-    &lt;property name=&quot;cacheFactory&quot;&gt;
-            &lt;bean class=&quot;org.camunda.bpm.engine.test.api.cfg.MyCacheFactory&quot; /&gt;
-    &lt;/property&gt;
+	&lt;property name=&quot;cacheFactory&quot;&gt;
+			&lt;bean class=&quot;org.camunda.bpm.engine.test.api.cfg.MyCacheFactory&quot; /&gt;
+	&lt;/property&gt;
 &lt;/bean&gt;
 </code></pre>
 
@@ -8283,7 +8283,7 @@ var _mtac = {};
 
   
 
-  <script type="text/javascript" src="http://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="http://camunda-cn.shaochenfeng.com/js/docs.4a4040f262f9fc61026cba7d32a9ffb5852d2f3f616961a6d4e5bfccea81e1ff.js" todo-integrity="sha256-SkBA8mL5/GECbLp9Mqn/tYUtLz9haWGm1OW/zOqB4f8=" crossorigin="anonymous"></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
