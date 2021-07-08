@@ -153,17 +153,6 @@ Response Codes  Code Media type Description   204  Request successful.</descript
     </item>
     
     <item>
-      <title>Configure the DMN engine</title>
-      <link>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/decisions/configuration/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/decisions/configuration/</guid>
-      <description>The configuration of the DMN engine is a part of the process engine configuration. It depends on whether you use an application managed or a shared, container managed process engine. Please refer to the Process Engine Bootstrapping for details.
-This section shows how to configure the DMN engine:
- Programmatically via Java API Declarative via XML configuration  In the examples the default expression language of the input expressions is set to groovy.</description>
-    </item>
-    
-    <item>
       <title>Configuring Spin Integration</title>
       <link>http://camunda-cn.shaochenfeng.com/user-guide/data-formats/configuring-spin-integration/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1301,6 +1290,19 @@ ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine()  camunda.
     </item>
     
     <item>
+      <title>配置 DMN 引擎</title>
+      <link>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/decisions/configuration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/decisions/configuration/</guid>
+      <description>DMN引擎的配置是流程引擎配置的一部分。 这取决于你使用的是应用程序管理的还是共享的、容器管理的流程引擎。 有关详细信息，请参阅 Process Engine Bootstrapping。
+本节展示如何配置 DMN 引擎：
+ 通过 Java API 编程 通过 XML配置 声明  在示例中，输入表达式的默认表达式语言设置为 groovy。 在 DMN 引擎配置 部分可以找到所有可能配置的列表。
+使用 Java API 配置 DMN 引擎 首先，你需要创建一个 ProcessEngineConfiguration 用于流程引擎的对象和 DMN 引擎的“DmnEngineConfiguration”对象。 现在你可以使用“DmnEngineConfiguration”对象配置 DMN 引擎。 完成后，在“ProcessEngineConfiguration”上设置对象并调用“buildProcessEngine()”来创建流程引擎。
+// 创建流程引擎配置 ProcessEngineConfigurationImpl processEngineConfiguration = // ... // 创建 DMN 引擎配置 DefaultDmnEngineConfiguration dmnEngineConfiguration = (DefaultDmnEngineConfiguration) DmnEngineConfiguration.createDefaultDmnEngineConfiguration(); // 配置DMN引擎... // 例如 将输入表达式的默认表达式语言设置为 `groovy` dmnEngineConfiguration.setDefaultInputExpressionExpressionLanguage(&amp;quot;groovy&amp;quot;); // 在流程引擎配置上设置 DMN 引擎配置 processEngineConfiguration.setDmnEngineConfiguration(dmnEngineConfiguration); // 构建包含 DMN 引擎的流程引擎 processEngineConfiguration.</description>
+    </item>
+    
+    <item>
       <title>Javadoc</title>
       <link>http://camunda-cn.shaochenfeng.com/reference/javadoc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1506,16 +1508,6 @@ An output clause is represented by an output element inside a decisionTable XML 
       <guid>http://camunda-cn.shaochenfeng.com/webapps/cockpit/dmn/decision-instance-view/</guid>
       <description>On the decision instance page you find the table or literal expression of the decision that was executed as well as the values for the input variables and the decision result.
   The input and output values for this decision instance are shown directly on the table in the corresponding cells as well as in the Inputs and Outputs tabs below the table. Complex variables like Objects, Files and Bytes are not displayed on the table.</description>
-    </item>
-    
-    <item>
-      <title>Decisions in the Process Engine Repository</title>
-      <link>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/decisions/repository/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/decisions/repository/</guid>
-      <description>To evaluate a DMN decision in Camunda Platform, it has to be part of a Deployment. After a decision has been deployed, it can be referenced by its key and version. The platform supports DMN 1.3 XML files.
-Deploying a Decision To deploy a DMN decision you can either use the Repository Service or add it to a process application. The platform will recognize all files with a .dmn or .</description>
     </item>
     
     <item>
@@ -2393,6 +2385,20 @@ ProcessEngineConfiguration .createProcessEngineConfigurationFromInputStream(inpu
     </item>
     
     <item>
+      <title>流程引擎存储库中的决策</title>
+      <link>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/decisions/repository/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/decisions/repository/</guid>
+      <description>要进行 Camunda 中的 DMN 决策，它必须包含在 部署 中。部署决策后，可以通过其key和版本来引用它。 该平台支持 DMN 1.3 XML 文件。
+部署决策 要部署 DMN 决策，你可以使用存储库服务或将其添加到流程应用程序。 平台会将所有类似.dmn 或.dmn11.xml的文件识别为 DMN 资源。
+使用存储库服务（Repository Service）部署决策 可以使用存储库服务创建新部署并向其添加 DMN 资源。 例如，以下代码将在类路径中为 DMN 文件创建一个新部署。
+String resourceName = &amp;quot;MyDecision.dmn11.xml&amp;quot;; Deploymnet deployment = processEngine .getRepositoryService() .createDeployment() .addClasspathResource(resourceName) .deploy();  使用流程应用程序部署决策 如果你部署 流程应用程序，你可以将 DMN 文件作为额外资源添加到你的档案（例如，BPMN 流程）中。 DMN 文件必须具有“.dmn”或“.dmn11.xml”文件扩展名才能被识别为 DMN 资源。
+如果你的 流程档案 设置为自动扫描，它也会自动部署 DMN 定义。 这是默认设置。
+&amp;lt;process-archive name=&amp;quot;loan-approval&amp;quot;&amp;gt; &amp;lt;properties&amp;gt; &amp;lt;property name=&amp;quot;isScanForProcessDefinitions&amp;quot;&amp;gt;true&amp;lt;/property&amp;gt; &amp;lt;/properties&amp;gt; &amp;lt;/process-archive&amp;gt;  否则，你必须在 流程档案 中明确指定 DMN 资源</description>
+    </item>
+    
+    <item>
       <title>流程引擎配置</title>
       <link>http://camunda-cn.shaochenfeng.com/user-guide/spring-boot-integration/configuration/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2599,17 +2605,6 @@ Binding to a Process Variable To bind the input field to a Java Date variable, t
 Example:
 &amp;lt;input type=&amp;quot;text&amp;quot; cam-variable-name=&amp;quot;CONTRACT_START_DATE&amp;quot; cam-variable-type=&amp;quot;Date&amp;quot; /&amp;gt;  Date Format Currently only the ISO Date Format yyyy-MM-dd&#39;T&#39;HH:mm:ss is supported. Example value: 2013-01-23T13:42:42
 Using a Date Picker The Form SDK itself does not provide any custom components or widgets. As such it also does not provide a date picker.</description>
-    </item>
-    
-    <item>
-      <title>Decision Service in the Process Engine</title>
-      <link>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/decisions/decision-service/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/decisions/decision-service/</guid>
-      <description>The decision service is a part of the process engine&amp;rsquo;s Services API. It allows to evaluate a deployed decision definition independently from BPMN and CMMN.
-Evaluating a Decision To evaluate a deployed decision, reference it by id or a combination of key and version. If a key is used but no version is specified then the latest version of decision definition with the given key is evaluated.
-DecisionService decisionService = processEngine.</description>
     </item>
     
     <item>
@@ -3361,6 +3356,20 @@ Writing to a String: import static org.camunda.spin.Spin.XML; import org.camunda
     </item>
     
     <item>
+      <title>流程引擎中的决策服务类</title>
+      <link>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/decisions/decision-service/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/decisions/decision-service/</guid>
+      <description>决策服务是流程引擎的 Services API 的一部分。 它允许独立于 BPMN 和 CMMN 评估已部署的决策定义。
+评估决策 要评估已部署的决策，请通过 id 或键和版本的组合来引用它。 如果使用Key但未指定版本，则评估具有给定Key的决策定义的最新版本。
+DecisionService decisionService = processEngine.getDecisionService(); VariableMap variables = Variables.createVariables() .putValue(&amp;quot;status&amp;quot;, &amp;quot;bronze&amp;quot;) .putValue(&amp;quot;sum&amp;quot;, 1000); DmnDecisionResult decisionResult = decisionService .evaluateDecisionByKey(&amp;quot;decision-key&amp;quot;) .variables(variables) .evaluate(); // alternatively for decision tables only DmnDecisionTableResult decisionResult = decisionService .evaluateDecisionTableByKey(&amp;quot;decision-key&amp;quot;) .variables(variables) .evaluate();  决策定义Key 决策定义Key由 DMN XML 中“decision”元素的“id”属性指定。不同的命名与决策的版本化有关。由于Key可以引用决策定义的多个版本，因此 id 仅指定一个版本。
+传递数据 决策可能会引用一个或多个变量。 例如，可以在输入表达式或决策表的输入条目中引用变量。 变量作为键值对传递给决策服务。 每对指定变量的名称和值。
+有关不同表达式的更多信息，请参阅[DMN 1.3 参考][DMN 1.3 参考]。
+评估决策的授权 用户需要对资源DECISION_DEFINITION 的权限CREATE_INSTANCE 来评估决策。 授权的资源 id 是决策定义键。</description>
+    </item>
+    
+    <item>
       <title>流程引擎概念</title>
       <link>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-concepts/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -4008,17 +4017,6 @@ The functionality of the inclusive gateway is based on the incoming and outgoing
     </item>
     
     <item>
-      <title>Invoke Decisions from Processes and Cases</title>
-      <link>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/decisions/bpmn-cmmn/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/decisions/bpmn-cmmn/</guid>
-      <description>BPMN &amp;amp; CMMN Integration This section explains how to invoke DMN decision from BPMN and CMMN.
-BPMN Business Rule Task The BPMN business rule task can reference a deployed decision definition. The decision definition is evaluated when the task is executed.
-&amp;lt;definitions id=&amp;quot;taskAssigneeExample&amp;quot; xmlns=&amp;quot;http://www.omg.org/spec/BPMN/20100524/MODEL&amp;quot; xmlns:camunda=&amp;quot;http://camunda.org/schema/1.0/bpmn&amp;quot; targetNamespace=&amp;quot;Examples&amp;quot;&amp;gt; &amp;lt;process id=&amp;quot;process&amp;quot;&amp;gt; &amp;lt;!-- ... --&amp;gt; &amp;lt;businessRuleTask id=&amp;quot;businessRuleTask&amp;quot; camunda:decisionRef=&amp;quot;myDecision&amp;quot; camunda:mapDecisionResult=&amp;quot;singleEntry&amp;quot; camunda:resultVariable=&amp;quot;result&amp;quot; /&amp;gt; &amp;lt;!-- ... --&amp;gt; &amp;lt;/process&amp;gt; &amp;lt;/definitions&amp;gt;  For more information on how to reference a decision definition from a business rule task, please refer to the BPMN 2.</description>
-    </item>
-    
-    <item>
       <title>JSON</title>
       <link>http://camunda-cn.shaochenfeng.com/user-guide/data-formats/json/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -4211,6 +4209,19 @@ Enterprise webapps 企业版特征 Please note that this feature is only include
       <guid>http://camunda-cn.shaochenfeng.com/reference/forms/embedded-forms/json-data/</guid>
       <description>Fetching an existing JSON Variable The Form SDK will only fetch those variables which are actually used in a form. Since a JSON object is usually not bound to a single input field, we cannot use the cam-variable-name directive. We thus need to fetch the variable programatically:
 &amp;lt;script cam-script type=&amp;quot;text/form-script&amp;quot;&amp;gt; camForm.on(&#39;form-loaded&#39;, function() { // tell the form SDK to fetch the variable named &#39;customer&#39; camForm.variableManager.fetchVariable(&#39;customer&#39;); }); camForm.on(&#39;variables-fetched&#39;, function() { // work with the variable (bind it to the current AngularJS $scope) $scope.</description>
+    </item>
+    
+    <item>
+      <title>从流程和案例中调用决策</title>
+      <link>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/decisions/bpmn-cmmn/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/decisions/bpmn-cmmn/</guid>
+      <description>BPMN 和 CMMN 集成 本节说明如何从 BPMN 和 CMMN 调用 DMN 决策。
+BPMN 业务规则任务 BPMN 业务规则任务可以引用 部署的 决策定义。 在执行任务时评估决策定义。
+&amp;lt;definitions id=&amp;quot;taskAssigneeExample&amp;quot; xmlns=&amp;quot;http://www.omg.org/spec/BPMN/20100524/MODEL&amp;quot; xmlns:camunda=&amp;quot;http://camunda.org/schema/1.0/bpmn&amp;quot; targetNamespace=&amp;quot;Examples&amp;quot;&amp;gt; &amp;lt;process id=&amp;quot;process&amp;quot;&amp;gt; &amp;lt;!-- ... --&amp;gt; &amp;lt;businessRuleTask id=&amp;quot;businessRuleTask&amp;quot; camunda:decisionRef=&amp;quot;myDecision&amp;quot; camunda:mapDecisionResult=&amp;quot;singleEntry&amp;quot; camunda:resultVariable=&amp;quot;result&amp;quot; /&amp;gt; &amp;lt;!-- ... --&amp;gt; &amp;lt;/process&amp;gt; &amp;lt;/definitions&amp;gt;  有关如何从业务规则任务中引用决策定义的更多信息，请参阅BPMN 2.0 参考。
+DMN Decision Task CMMN 决策任务引用了一个部署的 决策定义。 激活任务时调用决策定义。
+&amp;lt;definitions id=&amp;quot;definitions&amp;quot; xmlns=&amp;quot;http://www.omg.org/spec/CMMN/20151109/MODEL&amp;quot; xmlns:camunda=&amp;quot;http://camunda.org/schema/1.0/cmmn&amp;quot; targetNamespace=&amp;quot;Examples&amp;quot;&amp;gt; &amp;lt;case id=&amp;quot;case&amp;quot;&amp;gt; &amp;lt;casePlanModel id=&amp;quot;CasePlanModel_1&amp;quot;&amp;gt; &amp;lt;planItem id=&amp;quot;PI_DecisionTask_1&amp;quot; definitionRef=&amp;quot;DecisionTask_1&amp;quot; /&amp;gt; &amp;lt;decisionTask id=&amp;quot;DecisionTask_1&amp;quot; decisionRef=&amp;quot;myDecision&amp;quot; camunda:mapDecisionResult=&amp;quot;singleEntry&amp;quot; camunda:resultVariable=&amp;quot;result&amp;quot;&amp;gt; &amp;lt;/decisionTask&amp;gt; &amp;lt;/casePlanModel&amp;gt; &amp;lt;/case&amp;gt; &amp;lt;/definitions&amp;gt;  有关如何从决策任务中引用决策定义的更多信息，请参阅 CMMN 1.</description>
     </item>
     
     <item>
@@ -7988,8 +7999,12 @@ var BpmnViewer = require(&#39;bpmn-js&#39;); var xml = getBpmnXml(); // 通过 R
       
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/time-zones/</guid>
       <description>流程引擎 Camunda 引擎在处理日期时使用 JVM 的默认时区：
- 从 BPMN XML 读取日期时间值时 在 REST responses 中 从/向数据库读取/写入 DateTime 值时  数据库 Database time zone and database sessions time zone are out of scope of the Camunda engine and must be configured explicitly.
-However, Timestamp columns in the Camunda engine are using the TIMESTAMP [WITHOUT TIME ZONE] data type (the name differs in different database servers). For this reason, it is not recommended to change the time zone on the database side once set, since it may lead to an incorrect operation of the Camunda engine.</description>
+ 从 BPMN XML 读取日期时间值时 在 REST responses 中 从/向数据库读取/写入 DateTime 值时  数据库 数据库时区和数据库会话时区超出了 Camunda 引擎的范围，必须明确配置。
+Camunda 引擎中的时间戳列使用的是“时间戳[不带时区]（TIMESTAMP [WITHOUT TIME ZONE]）”数据类型（名称在不同的数据库服务器中有所不同）。 因此，不建议在数据库端更改时区，因为一旦设置，可能会导致 Camunda 引擎的错误操作。
+夏令时 时区信息不保存在时间戳中。 为了避免不明确的时间戳，建议使用像UTC这样的时区作为JVM的默认时区 它未针对“夏令时 (DST)”进行调整，因此不会产生不明确的时间戳。
+如果这不是你的设置中的一个选项，请考虑在 DST 切换期间禁用 Job执行器 以避免意外的Job执行。
+ Camunda Web应用 可以在不同时区使用 Camunda Web应用。 使用 UI 时，所有日期相关操作都会使用本地时区。
+集群设置 如果流程引擎在集群中运行，则所有集群节点必须在同一个时区中运行。 如果集群节点存在于不同的时区，则无法保证使用 DateTime 值进行操作的正确性。</description>
     </item>
     
     <item>

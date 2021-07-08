@@ -55,7 +55,7 @@ var _mtac = {};
     
   
 
-  <title>Invoke Decisions from Processes and Cases | docs.camunda.org</title>
+  <title>从流程和案例中调用决策 | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
   <link rel="shortcut icon" href="http://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
@@ -588,7 +588,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/decisions/configuration/" >Configuration</a>
+      <a href="/user-guide/process-engine/decisions/configuration/" >配置</a>
     
   </li>
 
@@ -596,7 +596,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/decisions/repository/" >Repository</a>
+      <a href="/user-guide/process-engine/decisions/repository/" >储存库</a>
     
   </li>
 
@@ -604,7 +604,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/decisions/decision-service/" >Decision Service</a>
+      <a href="/user-guide/process-engine/decisions/decision-service/" >决策服务类</a>
     
   </li>
 
@@ -612,7 +612,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/decisions/bpmn-cmmn/" >Decisions in BPMN &amp; CMMN</a>
+      <a href="/user-guide/process-engine/decisions/bpmn-cmmn/" >BPMN 和 CMMN 中的决策</a>
     
   </li>
 
@@ -8171,20 +8171,19 @@ var _mtac = {};
     <i>编辑此页</i> <span class="cam-docs-github"></span></a>
 </div>
 
-      <h1 class="page-title">Invoke Decisions from Processes and Cases</h1>
+      <h1 class="page-title">从流程和案例中调用决策</h1>
     </div>
 
     <div class="col-xs-12 content-text">
       
 
-<h1 id="bpmn-cmmn-integration">BPMN &amp; CMMN Integration</h1>
+<h1 id="bpmn-和-cmmn-集成">BPMN 和 CMMN 集成</h1>
 
-<p>This section explains how to invoke DMN decision from BPMN and CMMN.</p>
+<p>本节说明如何从 BPMN 和 CMMN 调用 DMN 决策。</p>
 
-<h2 id="bpmn-business-rule-task">BPMN Business Rule Task</h2>
+<h2 id="bpmn-业务规则任务">BPMN 业务规则任务</h2>
 
-<p>The BPMN business rule task can reference a <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/decisions/repository/">deployed</a> decision
-definition. The decision definition is evaluated when the task is executed.</p>
+<p>BPMN 业务规则任务可以引用 <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/decisions/repository/">部署的</a> 决策定义。 在执行任务时评估决策定义。</p>
 
 <pre><code class="language-xml">&lt;definitions id=&quot;taskAssigneeExample&quot;
   xmlns=&quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;
@@ -8206,13 +8205,12 @@ definition. The decision definition is evaluated when the task is executed.</p>
 &lt;/definitions&gt;
 </code></pre>
 
-<p>For more information on how to reference a decision definition from a business
-rule task, please refer to the <a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/tasks/business-rule-task/">BPMN 2.0 reference</a>.</p>
+<p>有关如何从业务规则任务中引用决策定义的更多信息，请参阅<a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/tasks/business-rule-task/">BPMN 2.0 参考</a>。</p>
 
 <h2 id="dmn-decision-task">DMN Decision Task</h2>
 
-<p>The CMMN decision task references a <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/decisions/repository/">deployed</a> decision definition.
-The decision definition is invoked when the task is activated.</p>
+<p>CMMN 决策任务引用了一个<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/decisions/repository/">部署的</a> 决策定义。
+激活任务时调用决策定义。</p>
 
 <pre><code class="language-xml">&lt;definitions id=&quot;definitions&quot;
                   xmlns=&quot;http://www.omg.org/spec/CMMN/20151109/MODEL&quot;
@@ -8231,32 +8229,21 @@ The decision definition is invoked when the task is activated.</p>
 &lt;/definitions&gt;
 </code></pre>
 
-<p>For more information on how to reference a decision definition from a decision
-task, please refer to the <a href="http://camunda-cn.shaochenfeng.com/reference/cmmn11/tasks/decision-task/">CMMN 1.1 reference</a>.</p>
+<p>有关如何从决策任务中引用决策定义的更多信息，请参阅 <a href="http://camunda-cn.shaochenfeng.com/reference/cmmn11/tasks/decision-task/">CMMN 1.1 参考</a>.</p>
 
-<h1 id="the-decision-result">The Decision Result</h1>
+<h1 id="决策结果">决策结果</h1>
 
-<p>The output of the decision, also called decision result, is a complex object of
-type <code>DmnDecisionResult</code>. Generally, it is a list of key-value pairs.</p>
+<p>The output of the decision, also called decision result, is a complex object of type <code>DmnDecisionResult</code>. Generally, it is a list of key-value pairs.</p>
 
-<p>If the decision is implemented as <a href="http://camunda-cn.shaochenfeng.com/reference/dmn/decision-table/">decision table</a> then each entry in the list represents one matched rule. The output entries of this
-rule are represented by the key-value pairs. The key of a pair is specified by
-the name of the output.</p>
+<p>If the decision is implemented as <a href="http://camunda-cn.shaochenfeng.com/reference/dmn/decision-table/">decision table</a> then each entry in the list represents one matched rule. The output entries of this rule are represented by the key-value pairs. The key of a pair is specified by the name of the output.</p>
 
 <p>Instead, if the decision is implemented as <a href="http://camunda-cn.shaochenfeng.com/reference/dmn/decision-literal-expression/">decision literal expression</a> then the list contains only one entry. This entry represents the expression value and is mapped by the variable name.</p>
 
-<p>The type <code>DmnDecisionResult</code> provides methods from the <code>List</code> interface
-and some convenience methods like <code>getSingleResult()</code> or <code>getFirstResult()</code> to
-get the result of a matched rule. The rule results provide methods from the
-<code>Map</code> interface and also convenience methods like <code>getSingleEntry()</code> or
-<code>getFirstEntry()</code>.</p>
+<p>The type <code>DmnDecisionResult</code> provides methods from the <code>List</code> interface and some convenience methods like <code>getSingleResult()</code> or <code>getFirstResult()</code> to get the result of a matched rule. The rule results provide methods from the <code>Map</code> interface and also convenience methods like <code>getSingleEntry()</code> or <code>getFirstEntry()</code>.</p>
 
-<p>If the decision result contains only a single output value (e.g., evaluating a decision literal expression) then
-the value can be retrieved from the result using the <code>getSingleEntry()</code> method
-which combines <code>getSingleResult()</code> and <code>getSingleEntry()</code>.</p>
+<p>If the decision result contains only a single output value (e.g., evaluating a decision literal expression) then the value can be retrieved from the result using the <code>getSingleEntry()</code> method which combines <code>getSingleResult()</code> and <code>getSingleEntry()</code>.</p>
 
-<p>For example, the following code returns the output entry with name <code>result</code> of
-the only matched rule.</p>
+<p>For example, the following code returns the output entry with name <code>result</code> of the only matched rule.</p>
 
 <pre><code class="language-java">DmnDecisionResult decisionResult = ...;
 
@@ -8265,15 +8252,10 @@ Object value = decisionResult
   .getEntry(&quot;result&quot;);
 </code></pre>
 
-<p>It also provides methods to get typed output entries like
-<code>getSingleEntryTyped()</code>. Please refer to the <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/variables/#typed-value-api">User Guide</a> for
-details about typed values. A complete list of all methods can be found in the
-<a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/dmn/engine/DmnDecisionResult">Java Docs</a>
+<p>It also provides methods to get typed output entries like <code>getSingleEntryTyped()</code>. Please refer to the <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/variables/#typed-value-api">User Guide</a> for details about typed values. A complete list of all methods can be found in the <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/dmn/engine/DmnDecisionResult">Java Docs</a>
 .</p>
 
-<p>The decision result is available in the local scope of the executing task as a
-transient variable named <code>decisionResult</code>. It can be passed into a variable by
-using a predefined or a custom mapping of the decision result, if necessary.</p>
+<p>The decision result is available in the local scope of the executing task as a transient variable named <code>decisionResult</code>. It can be passed into a variable by using a predefined or a custom mapping of the decision result, if necessary.</p>
 
 <h2 id="predefined-mapping-of-the-decision-result">Predefined Mapping of the Decision Result</h2>
 
@@ -8576,12 +8558,12 @@ in the platform, not only in DMN decisions.</p>
   <h3>目录:</h3>
   <nav id="TableOfContents">
 <ul>
-<li><a href="#bpmn-cmmn-integration">BPMN &amp; CMMN Integration</a>
+<li><a href="#bpmn-和-cmmn-集成">BPMN 和 CMMN 集成</a>
 <ul>
-<li><a href="#bpmn-business-rule-task">BPMN Business Rule Task</a></li>
+<li><a href="#bpmn-业务规则任务">BPMN 业务规则任务</a></li>
 <li><a href="#dmn-decision-task">DMN Decision Task</a></li>
 </ul></li>
-<li><a href="#the-decision-result">The Decision Result</a>
+<li><a href="#决策结果">决策结果</a>
 <ul>
 <li><a href="#predefined-mapping-of-the-decision-result">Predefined Mapping of the Decision Result</a></li>
 <li><a href="#custom-mapping-of-the-decision-result">Custom Mapping of the Decision Result</a>

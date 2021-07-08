@@ -55,7 +55,7 @@ var _mtac = {};
     
   
 
-  <title>Configure the DMN engine | docs.camunda.org</title>
+  <title>配置 DMN 引擎 | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
   <link rel="shortcut icon" href="http://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
@@ -588,7 +588,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/decisions/configuration/" >Configuration</a>
+      <a href="/user-guide/process-engine/decisions/configuration/" >配置</a>
     
   </li>
 
@@ -596,7 +596,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/decisions/repository/" >Repository</a>
+      <a href="/user-guide/process-engine/decisions/repository/" >储存库</a>
     
   </li>
 
@@ -604,7 +604,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/decisions/decision-service/" >Decision Service</a>
+      <a href="/user-guide/process-engine/decisions/decision-service/" >决策服务类</a>
     
   </li>
 
@@ -612,7 +612,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/decisions/bpmn-cmmn/" >Decisions in BPMN &amp; CMMN</a>
+      <a href="/user-guide/process-engine/decisions/bpmn-cmmn/" >BPMN 和 CMMN 中的决策</a>
     
   </li>
 
@@ -8171,50 +8171,50 @@ var _mtac = {};
     <i>编辑此页</i> <span class="cam-docs-github"></span></a>
 </div>
 
-      <h1 class="page-title">Configure the DMN engine</h1>
+      <h1 class="page-title">配置 DMN 引擎</h1>
     </div>
 
     <div class="col-xs-12 content-text">
       
 
-<p>The configuration of the DMN engine is a part of the process engine configuration. It depends on whether you use an application managed or a shared, container managed process engine. Please refer to the <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-bootstrapping/">Process Engine Bootstrapping</a> for details.</p>
+<p>DMN引擎的配置是流程引擎配置的一部分。 这取决于你使用的是应用程序管理的还是共享的、容器管理的流程引擎。 有关详细信息，请参阅 <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-bootstrapping/">Process Engine Bootstrapping</a>。</p>
 
-<p>This section shows how to configure the DMN engine:</p>
+<p>本节展示如何配置 DMN 引擎：</p>
 
 <ul>
-<li><a href="#configure-the-dmn-engine-using-java-api">Programmatically via Java API</a></li>
-<li><a href="#configure-the-dmn-engine-using-spring-xml">Declarative via XML configuration</a></li>
+<li><a href="#configure-the-dmn-engine-using-java-api">通过 Java API 编程</a></li>
+<li><a href="#configure-the-dmn-engine-using-spring-xml">通过 XML配置 声明</a></li>
 </ul>
 
-<p>In the examples the default expression language of the input expressions is set to <code>groovy</code>. A list of all possible configurations can be found in the <a href="http://camunda-cn.shaochenfeng.com/user-guide/dmn-engine/embed/#configuration-of-the-dmn-engine">DMN Engine Configuration</a> section.</p>
+<p>在示例中，输入表达式的默认表达式语言设置为 <code>groovy</code>。 在 <a href="http://camunda-cn.shaochenfeng.com/user-guide/dmn-engine/embed/#configuration-of-the-dmn-engine">DMN 引擎配置</a> 部分可以找到所有可能配置的列表。</p>
 
-<h1 id="configure-the-dmn-engine-using-java-api">Configure the DMN Engine using Java API</h1>
+<h1 id="使用-java-api-配置-dmn-引擎">使用 Java API 配置 DMN 引擎</h1>
 
-<p>First, you need to create a <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-bootstrapping/#bootstrap-a-process-engine-using-the-java-api">ProcessEngineConfiguration</a> object for the process engine and a <code>DmnEngineConfiguration</code> object for the DMN engine. Now you can configure the DMN engine using the <code>DmnEngineConfiguration</code> object. When you are done, set the object on the <code>ProcessEngineConfiguration</code> and call <code>buildProcessEngine()</code> to create the process engine.</p>
+<p>首先，你需要创建一个 <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-bootstrapping/#使用java-api启动流程引擎">ProcessEngineConfiguration</a> 用于流程引擎的对象和 DMN 引擎的“DmnEngineConfiguration”对象。 现在你可以使用“DmnEngineConfiguration”对象配置 DMN 引擎。 完成后，在“ProcessEngineConfiguration”上设置对象并调用“buildProcessEngine()”来创建流程引擎。</p>
 
-<pre><code class="language-java">// create the process engine configuration
+<pre><code class="language-java">// 创建流程引擎配置
 ProcessEngineConfigurationImpl processEngineConfiguration = // ...
     
-// create the DMN engine configuration    
+// 创建 DMN 引擎配置 
 DefaultDmnEngineConfiguration dmnEngineConfiguration = (DefaultDmnEngineConfiguration) 
   DmnEngineConfiguration.createDefaultDmnEngineConfiguration();
 
-// configure the DMN engine ...
-// e.g. set the default expression language for input expressions to `groovy`
+// 配置DMN引擎...
+// 例如 将输入表达式的默认表达式语言设置为 `groovy`
 dmnEngineConfiguration.setDefaultInputExpressionExpressionLanguage(&quot;groovy&quot;);
 
-// set the DMN engine configuration on the process engine configuration
+// 在流程引擎配置上设置 DMN 引擎配置
 processEngineConfiguration.setDmnEngineConfiguration(dmnEngineConfiguration);
 
-// build the process engine which includes the DMN engine
+// 构建包含 DMN 引擎的流程引擎
 processEngineConfiguration.buildProcessEngine();
 </code></pre>
 
-<h1 id="configure-the-dmn-engine-using-spring-xml">Configure the DMN Engine using Spring XML</h1>
+<h1 id="使用-spring-xml-配置-dmn-引擎">使用 Spring XML 配置 DMN 引擎</h1>
 
-<p>Follow the <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-bootstrapping/#configure-process-engine-using-spring-xml">instructions</a> to create a base <code>camunda.cfg.xml</code> XML configuration for the process engine.</p>
+<p>按照 <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-bootstrapping/#使用camunda-cfg-xml配置流程引擎">教程</a> 创建基础 <code>camunda .cfg.xml</code> 流程引擎的 XML 配置。</p>
 
-<p>Add a new configuration bean of class <code>org.camunda.bpm.dmn.engine.impl.DefaultDmnEngineConfiguration</code>. Configure the DMN engine using the bean and set it as <code>dmnEngineConfiguration</code> property on the <code>processEngineConfiguration</code> bean.</p>
+<p>添加类 <code>org.camunda.bpm.dmn.engine.impl.DefaultDmnEngineConfiguration</code> 的新配置 bean。 使用 bean 配置 DMN 引擎并将其设置为 <code>processEngineConfiguration</code> bean 上的 <code>dmnEngineConfiguration</code> 属性。</p>
 
 <pre><code class="language-xml">&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot; 
        xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
@@ -8226,8 +8226,8 @@ processEngineConfiguration.buildProcessEngine();
     &lt;property name=&quot;dmnEngineConfiguration&quot;&gt;
       &lt;bean class=&quot;org.camunda.bpm.dmn.engine.impl.DefaultDmnEngineConfiguration&quot;&gt;
         
-        &lt;!-- configure the DMN engine ... --&gt; 
-        &lt;!-- e.g. set the default expression language for input expressions to `groovy` --&gt;
+        &lt;!-- 配置DMN引擎... --&gt; 
+        &lt;!-- 例如 将输入表达式的默认表达式语言设置为 `groovy` --&gt;
         &lt;property name=&quot;defaultInputExpressionExpressionLanguage&quot; value=&quot;groovy&quot; /&gt;
         
       &lt;/bean&gt;
@@ -8245,8 +8245,8 @@ processEngineConfiguration.buildProcessEngine();
   <h3>目录:</h3>
   <nav id="TableOfContents">
 <ul>
-<li><a href="#configure-the-dmn-engine-using-java-api">Configure the DMN Engine using Java API</a></li>
-<li><a href="#configure-the-dmn-engine-using-spring-xml">Configure the DMN Engine using Spring XML</a></li>
+<li><a href="#使用-java-api-配置-dmn-引擎">使用 Java API 配置 DMN 引擎</a></li>
+<li><a href="#使用-spring-xml-配置-dmn-引擎">使用 Spring XML 配置 DMN 引擎</a></li>
 </ul>
 </nav>
   
