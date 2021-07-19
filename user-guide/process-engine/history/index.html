@@ -588,7 +588,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/decisions/configuration/" >Configuration</a>
+      <a href="/user-guide/process-engine/decisions/configuration/" >配置</a>
     
   </li>
 
@@ -596,7 +596,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/decisions/repository/" >Repository</a>
+      <a href="/user-guide/process-engine/decisions/repository/" >储存库</a>
     
   </li>
 
@@ -604,7 +604,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/decisions/decision-service/" >Decision Service</a>
+      <a href="/user-guide/process-engine/decisions/decision-service/" >决策服务类</a>
     
   </li>
 
@@ -612,7 +612,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/decisions/bpmn-cmmn/" >Decisions in BPMN &amp; CMMN</a>
+      <a href="/user-guide/process-engine/decisions/bpmn-cmmn/" >BPMN 和 CMMN 中的决策</a>
     
   </li>
 
@@ -639,7 +639,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/batch-operations/" >Batch operations</a>
+      <a href="/user-guide/process-engine/batch-operations/" >批处理操作</a>
     
   </li>
 
@@ -864,7 +864,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/process-applications/" >流程应用程序</a>
+      <a href="/user-guide/spring-boot-integration/process-applications/" >Process Applications</a>
     
   </li>
 
@@ -8614,7 +8614,7 @@ historyService
 中列出。例如，所有与任务相关的运行时操作，如申请和完成任务，都属于<a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/history/UserOperationLogEntry.html#CATEGORY_TASK_WORKER">TaskWorker</a>
 类别 。</li>
 <li><strong>Annotation</strong>: 用户因为审核等原因而设置的文本注释。属于一个操作的多个日志条目具有相同的注释。</li>
-<li><strong>Entity IDs</strong>: 一个作业日志条目包含实体ID，用于识别作业所涉及的实体。例如，一个任务的操作日志条目包含该任务的ID以及该任务所属的流程实例的ID。作为第二个例子，暂停一个流程定义的所有流程实例的日志条目不包含单个流程实例的ID，而只包含流程定义的ID。</li>
+<li><strong>Entity IDs</strong>: 一个Job日志条目包含实体ID，用于识别Job所涉及的实体。例如，一个任务的操作日志条目包含该任务的ID以及该任务所属的流程实例的ID。作为第二个例子，暂停一个流程定义的所有流程实例的日志条目不包含单个流程实例的ID，而只包含流程定义的ID。</li>
 <li><strong>User ID</strong>: 执行该操作的用户的ID。</li>
 <li><strong>Timestamp</strong>: 执行操作的时间。</li>
 <li><strong>Changed Property</strong>: 用户操作改变的属性。用户操作可以改变多个属性，例如，流程实例的暂停更改了暂停状态属性。为操作中涉及的每个已更改的属性创建日志条目。</li>

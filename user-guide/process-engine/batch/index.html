@@ -588,7 +588,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/decisions/configuration/" >Configuration</a>
+      <a href="/user-guide/process-engine/decisions/configuration/" >配置</a>
     
   </li>
 
@@ -596,7 +596,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/decisions/repository/" >Repository</a>
+      <a href="/user-guide/process-engine/decisions/repository/" >储存库</a>
     
   </li>
 
@@ -604,7 +604,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/decisions/decision-service/" >Decision Service</a>
+      <a href="/user-guide/process-engine/decisions/decision-service/" >决策服务类</a>
     
   </li>
 
@@ -612,7 +612,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/decisions/bpmn-cmmn/" >Decisions in BPMN &amp; CMMN</a>
+      <a href="/user-guide/process-engine/decisions/bpmn-cmmn/" >BPMN 和 CMMN 中的决策</a>
     
   </li>
 
@@ -639,7 +639,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/batch-operations/" >Batch operations</a>
+      <a href="/user-guide/process-engine/batch-operations/" >批处理操作</a>
     
   </li>
 
@@ -864,7 +864,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/process-applications/" >流程应用程序</a>
+      <a href="/user-guide/spring-boot-integration/process-applications/" >Process Applications</a>
     
   </li>
 
@@ -8177,85 +8177,66 @@ var _mtac = {};
     <div class="col-xs-12 content-text">
       
 
-<p>Batch is a concept to offload workload from the current execution to be
-processed in the background. This allows to run a process engine command
-asynchronously on a large set of instances without blocking. It also decouples
-the separate command invocations from each other.</p>
+<p>批处理的概念是将当前执行的工作卸载到后台的过程。这允许执行大量的异步流程引擎命令而不会阻塞实例。它还对单独命令调用进行了分离。</p>
 
-<p>For example the <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-instance-migration/">process instance migration</a> command can be
-<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-instance-migration/#asynchronous-batch-migration-execution">executed using a batch</a>. This allows to migrate
-process instances asynchronously. In a synchronous process instance migration,
-all migrations are executed in a single transaction.  First of all, this
-requires all of them to succeed to commit the transaction. For a
-large set of process instances, the transaction can also become too large to even be
-committed to the database. With batch migration both of these traits change.
-A batch executes the migration in smaller chunks, each using a single
-transaction.</p>
+<p>例如，<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-instance-migration/">流程实例迁移</a> 命令可以<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-instance-migration/#asynchronous-batch-migration-execution">使用批处理执行</a>。 这样可以异步迁移流程实例。 在同步流程实例迁移中，所有迁移都在单个事务中执行。 首先，这需要成功提交事务。 对于大量流程实例，事务可能变得太大，甚至无法提交到数据库。 随着使用批处理迁移，这情况发生了变化。 批处理以较小的块执行迁移，每个块使用单个事务。</p>
 
-<p>Benefits:</p>
+<p>优点：</p>
 
 <ul>
-<li>asynchronous (non-blocking) execution</li>
-<li>execution can utilize multiple threads and job executors</li>
-<li>decoupling of execution, i.e., every batch execution job uses its own
-transaction</li>
+<li>异步（非阻塞）执行</li>
+<li>可以使用多线程和Job执行器处理执行</li>
+<li>执行解耦，即每个批处理执行Job使用自己的事务</li>
 </ul>
 
-<p>Disadvantages:</p>
+<p>缺点：</p>
 
 <ul>
-<li>manual polling for completion of the batch</li>
-<li>contention with other jobs executed by the process engine</li>
-<li>a batch can fail partially while a subset was already executed, e.g., some
-process instances were migrated where others failed</li>
+<li>手动轮询以完成批处理</li>
+<li>与流程引擎执行的其他Job的争用</li>
+<li>当部分子集已经执行时，批处理可能会出现部分失败的情况，例如，某些流程实例被迁移而其他流程实例迁移失败</li>
 </ul>
 
-<p>Technically, a batch represents a set of jobs which execute a command in the context of the
-process engine.</p>
+<p>从技术上讲，批处理表示在流程引擎的上下文中执行命令的一组Job。</p>
 
-<p>The batch utilizes the <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/">job executor</a> of the process engine to execute the
-batch jobs. A single batch consists of three job types:</p>
+<p>批处理利用流程引擎的<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/">Job执行器</a>来执行批处理Job。单个批处理包含三种Job类型：</p>
 
 <ul>
-<li>Seed job: creates all batch execution jobs required to complete the batch</li>
-<li>Execution jobs: the actual execution of the batch command, e.g., the process
-instance migration</li>
-<li>Monitor job: after the seed job finished, it monitors the progress of the
-batch execution and completion</li>
+<li>种子Job（Seed job）：创建所有批处理Job的Job</li>
+<li>执行Job（Execution jobs）：批处理命令的实际执行，例如流程实例迁移</li>
+<li>监控Job（Monitor job）：种子Job完成后，监控批处理执行和完成的进度</li>
 </ul>
 
 <h1 id="api">API</h1>
 
-<p>The following gives an overview of the Java API for batches.</p>
+<p>下面概述了用于批处理的 Java API。</p>
 
-<h2 id="creating-a-batch">Creating a Batch</h2>
+<h2 id="创建一个批处理">创建一个批处理</h2>
 
-<p>A batch is created by executing a process engine command asynchronously.</p>
+<p>批处理是通过异步执行流程引擎命令创建的。</p>
 
-<p>Currently supported batch types:</p>
+<p>当前支持的批处理类型：</p>
 
 <ul>
-<li><a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-instance-migration/#asynchronous-batch-migration-execution">Process Instance Migration</a></li>
-<li><a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/batch-operations/#cancellation-of-running-process-instances">Cancellation of running Process Instances</a></li>
-<li><a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/batch-operations/#deletion-of-historic-process-instances">Deletion of Historic Process Instances</a></li>
-<li><a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/batch-operations/#update-suspend-state-of-process-instances">Update Process Instance Suspend State</a></li>
-<li><a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/batch-operations/#setting-retries-of-jobs-associated-with-process-instances">Setting retries of jobs associated with Process Instances</a></li>
-<li><a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/batch-operations/#set-variables-to-process-instances">Set Variables to Process Instances</a></li>
-<li><a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-instance-modification/#modification-of-multiple-process-instances">Process Instance Modification</a></li>
-<li><a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-instance-restart/#asynchronous-batch-execution">Process Instance Restart</a></li>
-<li><a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/batch-operations/#setting-retries-of-external-tasks">Setting retries of external tasks</a></li>
-<li><a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/batch-operations/#set-a-removal-time">Set a Removal Time to Historic Process Instances</a></li>
-<li><a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/batch-operations/#set-a-removal-time">Set a Removal Time to Historic Decision Instances</a></li>
-<li><a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/batch-operations/#set-a-removal-time">Set a Removal Time to Historic Batches</a></li>
+<li><a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-instance-migration/#asynchronous-batch-migration-execution">流程实例迁移</a></li>
+<li><a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/batch-operations/#cancellation-of-running-process-instances">取消运行的流程实例</a></li>
+<li><a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/batch-operations/#deletion-of-historic-process-instances">删除历史流程实例</a></li>
+<li><a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/batch-operations/#update-suspend-state-of-process-instances">修改流程实例暂停状态</a></li>
+<li><a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/batch-operations/#setting-retries-of-jobs-associated-with-process-instances">设置与流程实例关联的Job的重试</a></li>
+<li><a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/batch-operations/#set-variables-to-process-instances">为流程实例设置变量</a></li>
+<li><a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-instance-modification/#modification-of-multiple-process-instances">流程实例修改</a></li>
+<li><a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-instance-restart/#asynchronous-batch-execution">流程实例重启</a></li>
+<li><a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/batch-operations/#setting-retries-of-external-tasks">设置外部任务的重试</a></li>
+<li><a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/batch-operations/#set-a-removal-time">为历史流程实例设置删除时间</a></li>
+<li><a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/batch-operations/#set-a-removal-time">为历史决策实例设置删除时间</a></li>
+<li><a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/batch-operations/#set-a-removal-time">为历史批处理设置删除时间</a></li>
 </ul>
 
-<p>Java API can be used to create Batch command, please refer to specific commands for
-exact usage example.</p>
+<p>Java API 可用于创建批处理命令，具体使用示例请参考具体命令。</p>
 
-<h2 id="query-a-batch">Query a Batch</h2>
+<h2 id="查询批处理">查询批处理</h2>
 
-<p>You can query a running batch by the id and the type, for example to query
-for all running process instance migration batches.</p>
+<p>你可以通过 id 和类型查询正在运行的批处理，例如查询所有正在运行的流程实例迁移批处理：</p>
 
 <pre><code class="language-java">List&lt;Batch&gt; migrationBatches = processEngine.getManagementService()
   .createBatchQuery()
@@ -8263,11 +8244,10 @@ for all running process instance migration batches.</p>
   .list();
 </code></pre>
 
-<h2 id="batch-statistics">Batch Statistics</h2>
+<h2 id="批处理统计数据">批处理统计数据</h2>
 
-<p>You can query for statistics of batches by using the management service.
-The batch statistics will contain information about the remaining,
-completed and failed batch execution jobs.</p>
+<p>你可以通过管理服务（ManagementService）查询批处理统计信息。
+批处理统计信息将包含有关剩余的、已完成的和失败的批处理执行Job的信息。</p>
 
 <pre><code class="language-java">List&lt;BatchStatistics&gt; migrationBatches = processEngine.getManagementService()
   .createBatchStatisticsQuery()
@@ -8275,10 +8255,9 @@ completed and failed batch execution jobs.</p>
   .list();
 </code></pre>
 
-<h2 id="history-of-a-batch">History of a Batch</h2>
+<h2 id="批处理的历史">批处理的历史</h2>
 
-<p>For the <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/history/#choose-a-history-level">history level</a> <code>FULL</code> a historic batch entry is created. You
-can query it using the history service.</p>
+<p>当<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/history/#choose-a-history-level">历史等级</a> 为 <code>FULL</code> 时，会创建一个历史批处理条目。你可以使用历史服务（HistoryService）查询它。</p>
 
 <pre><code class="language-java">HistoricBatch historicBatch = processEngine.getHistoryService()
   .createHistoricBatchQuery()
@@ -8286,9 +8265,7 @@ can query it using the history service.</p>
   .singleResult();
 </code></pre>
 
-<p>The history also contains job log entries for the seed, monitor and execution
-jobs. You can query the corresponding job log entries by the specific job
-definition id.</p>
+<p>历史记录还包含种子、监控和执行Job的Job日志条目。 你可以通过某个Job定义 id 查询相应的Job日志条目。</p>
 
 <pre><code class="language-java">HistoricBatch historicBatch = ...
 
@@ -8299,38 +8276,36 @@ List&lt;HistoricJobLog&gt; batchExecutionJobLogs = processEngine.getHistoryServi
   .list();
 </code></pre>
 
-<p>You can make a configuration for <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/history/#history-time-to-live-for-batch-operations">history cleanup</a> of the finished historic batch operations.</p>
+<p>你可以设置对已完成的历史批处理操作的<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/history/#history-time-to-live-for-batch-operations">历史清理</a>配置。</p>
 
-<h2 id="suspend-a-batch">Suspend a Batch</h2>
+<h2 id="暂停批处理">暂停批处理</h2>
 
-<p>To pause the execution of a batch and all corresponding jobs, a batch
-can be suspended using the management service.</p>
+<p>要暂停批处理和所有相应Job的执行，可以使用管理服务。</p>
 
 <pre><code class="language-java">processEngine.getManagementService()
   .suspendBatchById(&quot;myBatch&quot;);
 </code></pre>
 
-<p>A suspended batch can then be activated again, also using the management
-service.</p>
+<p>然后可以再次激活暂停的批处理，同样使用管理服务。</p>
 
 <pre><code class="language-java">processEngine.getManagementService()
   .activateBatchById(&quot;myBatch&quot;);
 </code></pre>
 
-<h2 id="delete-a-batch">Delete a Batch</h2>
+<h2 id="删除批处理">删除批处理</h2>
 
-<p>A running batch can be deleted using the management service.</p>
+<p>可以使用管理服务删除正在运行的批处理。</p>
 
-<pre><code class="language-java">// Delete a batch preserving the history of the batch
+<pre><code class="language-java">// 删除批处理，保留批处理的历史记录
 processEngine.getManagementService()
   .deleteBatch(&quot;myBatch&quot;, false);
 
-// Delete a batch include history of the batch
+// 删除批处理包括批处理的历史记录
 processEngine.getManagementService()
   .deleteBatch(&quot;myBatch&quot;, true);
 </code></pre>
 
-<p>A historic batch can be deleted using the history service.</p>
+<p>可以使用历史服务删除历史批处理。</p>
 
 <pre><code class="language-java">processEngine.getHistoryService()
   .deleteHistoricBatch(&quot;myBatch&quot;);
@@ -8339,22 +8314,16 @@ processEngine.getManagementService()
 
 <div class="note bg-info docs-info">
   <h3></h3>
-  <p>For a running batch which still executes jobs it is recommended
-to suspend the batch before deleting it.
-See the <a href="#suspend-a-batch">Suspend a Batch</a> section for details.</p>
+  <p>对于仍在执行Job的正在运行的批处理，建议在删除之前暂停该批处理。
+有关详细信息，请参阅 <a href="#suspend-a-batch">暂停批处理</a> 部分。</p>
 </div>
 
 
-<h2 id="priority-of-a-batch">Priority of a Batch</h2>
+<h2 id="批处理的优先级">批处理的优先级</h2>
 
-<p>As all batch jobs are executed using the job executor, it is possible to use the
-<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/#job-prioritization">job prioritization</a> feature to adjust the priority of batch jobs. The
-default batch job priority is set by the process engine configuration
-<code>batchJobPriority</code>.</p>
+<p>由于所有批处理Job都是使用Job执行器执行的，因此可以使用 <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/#job-prioritization">Job优先级</a> 功能来调整批处理Job的优先级。 默认批处理Job优先级由流程引擎配置项 <code>batchJobPriority</code> 设置。</p>
 
-<p>It is possible to adjust the priority of a specific batch <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/#override-priority-by-job-definition">job
-definition</a> or even a single batch <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/#set-job-priorities-via-managementservice-api">job</a>
-using the management service.</p>
+<p>可以使用管理服务调整特定批处理的 <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/#override-priority-by-job-definition">Job定义</a> 甚至单个批处理 <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/#set-job-priorities-via-managementservice-api">Job</a> 的优先级。</p>
 
 <pre><code class="language-java">Batch batch = ...;
 
@@ -8364,25 +8333,17 @@ processEngine.getManagementService()
   .setOverridingJobPriorityForJobDefinition(batchJobDefinitionId, 100, true);
 </code></pre>
 
-<h2 id="operation-log">Operation log</h2>
+<h2 id="操作日志">操作日志</h2>
 
-<p>Please note that a user operation log is written for Batch creation itself only, execution
-of the seed job as well as individual jobs that perform operations are performed by Job Executor
-and therefore are not considered to be user operations.</p>
+<p>请注意，用户操作日志仅针对 Batch 创建本身而写入，种子Job的执行以及执行操作的单个Job均由 Job执行器 执行，因此不被视为用户操作。</p>
 
-<h1 id="job-definitions">Job Definitions</h1>
+<h1 id="job-定义">Job 定义</h1>
 
-<h2 id="seed-job">Seed Job</h2>
+<h2 id="种子job">种子Job</h2>
 
-<p>A batch initially creates a seed job. This seed will be repeatedly executed to
-create all batch execution jobs. For example if a user starts a <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-instance-migration/#asynchronous-batch-migration-execution">process
-instance migration batch</a> for 1000 process instances. With the
-default process engine configuration the seed job will create 10 batch
-execution jobs on every invocation. Every execution job will migrate 1 process
-instance. In sum the seed job will be invoked 100 times, until it has created the
-1000 execution jobs required to complete the batch.</p>
+<p>批处理最初会创建一个种子Job。 该种子将被重复执行以创建所有批处理执行Job。 例如，如果用户为 1000 个流程实例启动 <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-instance-migration/#asynchronous-batch-migration-execution">流程实例迁移批处理</a>。 使用默认流程引擎配置时，种子Job将在每次调用时创建 10 个批处理执行Job。 每个执行Job将迁移 1 个流程实例。 总之，种子Job将被调用 100 次，直到它创建了完成批处理所需的 1000 个执行Job。</p>
 
-<p>The Java API can be used to get the job definition for the seed job of a batch:</p>
+<p>可以使用 Java API 获取批处理种子Job的Job定义：</p>
 
 <pre><code class="language-java">Batch batch = ...;
 
@@ -8392,26 +8353,17 @@ JobDefinition seedJobDefinition = processEngine.getManagementService()
   .singleResult();
 </code></pre>
 
-<p>To pause the creation of further batch execution jobs, the seed job definition
-can be suspended with the management service:</p>
+<p>要暂停创建更多批处理执行Job，可以使用管理服务暂停种子Job定义：</p>
 
 <pre><code class="language-java">processEngine.getManagementService()
   .suspendJobByJobDefinitionId(seedJobDefinition.getId());
 </code></pre>
 
-<h2 id="execution-jobs">Execution Jobs</h2>
+<h2 id="执行job">执行Job</h2>
 
-<p>The execution of a batch is split into several execution jobs. The specific
-number of jobs depends on the total jobs of the batch and the process engine
-configuration (see <a href="#seed-job">seed job</a>). Every execution job executes the actual batch
-command for a given number of invocations, e.g., migrate a number of process
-instances. The execution jobs will be executed by the <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/">job executor</a>.  They
-behave like other jobs which means they can fail and the job executor will
-<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/#failed-jobs">retry</a> failed batch execution jobs. Also, there will be <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/incidents/">incidents</a>
-for failed batch execution jobs with no retries left.</p>
+<p>一个批处理的执行被分成几个执行Job。 具体Job数取决于批处理的总Job数和流程引擎配置（参见<a href="#种子Job">种子Job</a>）。 每个执行Job针对给定数量的调用执行实际的批处理命令，例如，迁移多个流程实例。执行Job将由<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/">Job执行器</a>执行。 它们的行为与其他Job一样，这意味着它们可能会失败并且Job执行器将 <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/#failed-jobs">重试</a> 失败的批处理执行Job。 此外，对于没有重试的失败的批处理执行Job，将产生 <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/incidents/">事件</a>。</p>
 
-<p>The Java API can be used to get the job definition for the execution jobs of a
-batch, e.g., for a <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-instance-migration/#asynchronous-batch-migration-execution">process instance migration batch</a>:</p>
+<p>Java API 可用于获取批处理的执行Job的Job定义，例如，对于 <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-instance-migration/#asynchronous-batch-migration-execution">流程实例迁移批处理</a>：</p>
 
 <pre><code class="language-java">Batch batch = ...;
 
@@ -8421,22 +8373,17 @@ JobDefinition executionJobDefinition = processEngine.getManagementService()
   .singleResult();
 </code></pre>
 
-<p>To pause the execution of further batch execution jobs, the batch job definition
-can be suspended with the management service:</p>
+<p>要批量暂停批处理Job的执行，可以使用管理服务暂停批处理Job定义：</p>
 
 <pre><code class="language-java">processEngine.getManagementService()
   .suspendJobByJobDefinitionId(executionJobDefinition.getId());
 </code></pre>
 
-<h2 id="monitor-job">Monitor Job</h2>
+<h2 id="监控job">监控Job</h2>
 
-<p>After all batch execution jobs were created by the <a href="#seed-job">seed job</a> a monitor job
-is created for the batch. This job regularly polls if the batch has been completed,
-i.e., all batch execution jobs were completed. The polling interval
-can be configured by the <code>batchPollTime</code> (default: 30 seconds) property of the <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-bootstrapping/">process engine configuration</a>.</p>
+<p>在 <a href="#种子Job">种子job</a> 创建所有批处理执行Job后，将为批处理创建一个监控Job。 此Job定期轮询批处理是否已完成，即所有批处理执行Job是否已完成。 轮询间隔可以通过<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-bootstrapping/">流程引擎配置</a>的<code>batchPollTime</code>（默认：30秒）属性进行配置。</p>
 
-<p>The Java API can be used to get the job definition for the monitor job of a
-batch:</p>
+<p>Java API 可用于获取批处理的监控Job的Job定义：</p>
 
 <pre><code class="language-java">Batch batch = ...;
 
@@ -8446,32 +8393,25 @@ JobDefinition monitorJobDefinition = processEngine.getManagementService()
   .singleResult();
 </code></pre>
 
-<p>To prevent the completion of the batch, i.e., deletion of the runtime data, the
-monitor job definition can be suspended with the management service:</p>
+<p>为防止批处理完成，即删除运行时数据，可以使用管理服务暂停监视Job定义：</p>
 
 <pre><code class="language-java">processEngine.getManagementService()
   .suspendJobByJobDefinitionId(monitorJobDefinition.getId());
 </code></pre>
 
-<h2 id="configuration">Configuration</h2>
+<h2 id="配置">配置</h2>
 
-<p>You can configure the number of jobs created by every seed job invocation
-<code>batchJobsPerSeed</code> (default: 100) and the number of invocations per batch
-execution job <code>invocationsPerBatchJob</code> (default: 1) in the
-<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-bootstrapping/">process engine configuration</a>.</p>
+<p>You can configure the number of jobs created by every seed job invocation <code>batchJobsPerSeed</code> (default: 100) and the number of invocations per batch execution job <code>invocationsPerBatchJob</code> (default: 1) in the <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-bootstrapping/">process engine configuration</a>.
+你可以在<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-bootstrapping/">流程引擎配置</a>中配置每个种子Job的调用创建Job数量<code>batchJobsPerSeed</code>（默认：100）和每个批量执行Job的调用数量<code>invocationsPerBatchJob</code>（默认：1）</p>
 
-<p>The number of invocations per batch execution job can be changed for each batch
-operation type individually with the help of the process engine configuration property
-<a href="http://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#invocations-per-batch-job-by-batch-type"><code>invocationsPerBatchJobByBatchType</code></a>. In case you haven&rsquo;t
-specified the invocations per batch job by type, the configuration falls back to the global
-configuration specified via <code>invocationsPerBatchJob</code>.</p>
+<p>通过使用流程引擎配置项 <a href="http://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#invocations-per-batch-job-by-batch-type"><code>invocationsPerBatchJobByBatchType</code></a>，可以为每个批处理操作类型单独更改每个批处理执行Job的调用次数。 如果你没有按类型指定每个批处理Job的调用，配置将回退到通过 <code>invocationsPerBatchJob</code> 指定的全局配置。</p>
 
-<p>You can configure the property in three ways:</p>
+<p>你可以通过三种方式配置该属性：</p>
 
 <ol>
-<li>Programmatically with the help of a <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-plugins/">Process Engine Plugin</a></li>
+<li>通过 <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-plugins/">流程引擎插件</a> 编程</li>
 
-<li><p>In Spring-based environments via <a href="http://camunda-cn.shaochenfeng.com/user-guide/spring-framework-integration/configuration/">Spring XML Configuration</a></p>
+<li><p>在 Spring-based 环境中通过 <a href="http://camunda-cn.shaochenfeng.com/user-guide/spring-framework-integration/configuration/">Spring XML 配置文件</a></p>
 
 <pre><code class="language-xml">&lt;bean id=&quot;processEngineConfiguration&quot; 
       class=&quot;org.camunda.bpm.engine.impl.cfg.StandaloneInMemProcessEngineConfiguration&quot;&gt;
@@ -8483,20 +8423,20 @@ configuration specified via <code>invocationsPerBatchJob</code>.</p>
       &lt;entry key=&quot;process-set-removal-time&quot; value=&quot;10&quot; /&gt;
       &lt;entry key=&quot;historic-instance-deletion&quot; value=&quot;3&quot; /&gt;
         
-      &lt;!-- in case of custom batch operations --&gt;
+      &lt;!-- 在自定义批处理操作的情况下 --&gt;
       &lt;entry key=&quot;my-custom-operation&quot; value=&quot;7&quot; /&gt;
     &lt;/map&gt;
   &lt;/property&gt;
 &lt;/bean&gt;
 </code></pre></li>
 
-<li><p>In Spring Boot environment via the <a href="http://camunda-cn.shaochenfeng.com/user-guide/spring-boot-integration/configuration/#camunda-engine-properties"><code>application.yaml</code></a> file</p>
+<li><p>在 Spring Boot 环境中通过 <a href="http://camunda-cn.shaochenfeng.com/user-guide/spring-boot-integration/configuration/#camunda-engine-properties"><code>application.yaml</code></a> 文件</p>
 
 <pre><code class="language-yaml">camunda.bpm.generic-properties.properties:
   invocations-per-batch-job-by-batch-type:
     process-set-removal-time:     10
     historic-instance-deletion:   3
-    my-custom-operation:          7  # in case of custom batch operations
+    my-custom-operation:          7  # 在自定义批处理操作的情况下
 </code></pre></li>
 </ol>
 
@@ -8510,21 +8450,21 @@ configuration specified via <code>invocationsPerBatchJob</code>.</p>
 <ul>
 <li><a href="#api">API</a>
 <ul>
-<li><a href="#creating-a-batch">Creating a Batch</a></li>
-<li><a href="#query-a-batch">Query a Batch</a></li>
-<li><a href="#batch-statistics">Batch Statistics</a></li>
-<li><a href="#history-of-a-batch">History of a Batch</a></li>
-<li><a href="#suspend-a-batch">Suspend a Batch</a></li>
-<li><a href="#delete-a-batch">Delete a Batch</a></li>
-<li><a href="#priority-of-a-batch">Priority of a Batch</a></li>
-<li><a href="#operation-log">Operation log</a></li>
+<li><a href="#创建一个批处理">创建一个批处理</a></li>
+<li><a href="#查询批处理">查询批处理</a></li>
+<li><a href="#批处理统计数据">批处理统计数据</a></li>
+<li><a href="#批处理的历史">批处理的历史</a></li>
+<li><a href="#暂停批处理">暂停批处理</a></li>
+<li><a href="#删除批处理">删除批处理</a></li>
+<li><a href="#批处理的优先级">批处理的优先级</a></li>
+<li><a href="#操作日志">操作日志</a></li>
 </ul></li>
-<li><a href="#job-definitions">Job Definitions</a>
+<li><a href="#job-定义">Job 定义</a>
 <ul>
-<li><a href="#seed-job">Seed Job</a></li>
-<li><a href="#execution-jobs">Execution Jobs</a></li>
-<li><a href="#monitor-job">Monitor Job</a></li>
-<li><a href="#configuration">Configuration</a></li>
+<li><a href="#种子job">种子Job</a></li>
+<li><a href="#执行job">执行Job</a></li>
+<li><a href="#监控job">监控Job</a></li>
+<li><a href="#配置">配置</a></li>
 </ul></li>
 </ul>
 </nav>

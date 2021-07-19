@@ -588,7 +588,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/decisions/configuration/" >Configuration</a>
+      <a href="/user-guide/process-engine/decisions/configuration/" >配置</a>
     
   </li>
 
@@ -596,7 +596,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/decisions/repository/" >Repository</a>
+      <a href="/user-guide/process-engine/decisions/repository/" >储存库</a>
     
   </li>
 
@@ -604,7 +604,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/decisions/decision-service/" >Decision Service</a>
+      <a href="/user-guide/process-engine/decisions/decision-service/" >决策服务类</a>
     
   </li>
 
@@ -612,7 +612,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/decisions/bpmn-cmmn/" >Decisions in BPMN &amp; CMMN</a>
+      <a href="/user-guide/process-engine/decisions/bpmn-cmmn/" >BPMN 和 CMMN 中的决策</a>
     
   </li>
 
@@ -639,7 +639,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/batch-operations/" >Batch operations</a>
+      <a href="/user-guide/process-engine/batch-operations/" >批处理操作</a>
     
   </li>
 
@@ -864,7 +864,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/process-applications/" >流程应用程序</a>
+      <a href="/user-guide/spring-boot-integration/process-applications/" >Process Applications</a>
     
   </li>
 
@@ -8208,7 +8208,7 @@ var _mtac = {};
 
 <p>每个任务都有一个字段，指示该任务的截止日期。查询API可用于查询到某个日期之前或之后截止的任务。</p>
 
-<p>有一个活动扩展名，允许您在任务定义中指定表达式，以在创建时设置任务的初始截止日期。表达式应该始终解析为 java.util.Date, java.util.String (<a href="http://en.wikipedia.org/wiki/ISO_8601">ISO8601</a> 格式化) 或 null。 使用ISO8601格式化字符串时，您可以指定相对于创建任务的时间的时间或时间段。例如，您可以使用在此过程中以先前表单输入的日期，或者在以前的服务任务中计算。</p>
+<p>有一个活动扩展名，允许你在任务定义中指定表达式，以在创建时设置任务的初始截止日期。表达式应该始终解析为 java.util.Date, java.util.String (<a href="http://en.wikipedia.org/wiki/ISO_8601">ISO8601</a> 格式化) 或 null。 使用ISO8601格式化字符串时，你可以指定相对于创建任务的时间的时间或时间段。例如，你可以使用在此过程中以先前表单输入的日期，或者在以前的服务任务中计算。</p>
 
 <pre><code class="language-xml">&lt;userTask id=&quot;theTask&quot; name=&quot;Important task&quot; camunda:dueDate=&quot;${dateVariable}&quot;/&gt;
 </code></pre>
@@ -8219,7 +8219,7 @@ var _mtac = {};
 
 <p>每个任务都有一个字段，指示该任务的跟进日期。查询API可用于查询需要在特定日期之前或之后进行操作的任务。</p>
 
-<p>有一个活动扩展名，允许您在任务定义中指定表达式，以在创建时设置任务的初始后续后续日期。表达式应该始终解析为 java.util.Date, java.util.String (<a href="http://en.wikipedia.org/wiki/ISO_8601">ISO8601</a> 格式化) 或 null。 使用ISO8601格式化字符串时，您可以指定相对于创建任务的时间的时间或时间段。例如，您可以使用在此过程中以先前表单输入的日期，或者在以前的服务任务中计算。</p>
+<p>有一个活动扩展名，允许你在任务定义中指定表达式，以在创建时设置任务的初始后续后续日期。表达式应该始终解析为 java.util.Date, java.util.String (<a href="http://en.wikipedia.org/wiki/ISO_8601">ISO8601</a> 格式化) 或 null。 使用ISO8601格式化字符串时，你可以指定相对于创建任务的时间的时间或时间段。例如，你可以使用在此过程中以先前表单输入的日期，或者在以前的服务任务中计算。</p>
 
 <pre><code class="language-xml">&lt;userTask id=&quot;theTask&quot; name=&quot;Important task&quot; camunda:followUpDate=&quot;${dateVariable}&quot;/&gt;
 </code></pre>
@@ -8384,7 +8384,7 @@ var _mtac = {};
 &lt;/userTask&gt;
 </code></pre>
 
-<p>传递给任务侦听器实现的委托任务允许您设置受让人和候选用户/组：</p>
+<p>传递给任务侦听器实现的委托任务允许你设置受让人和候选用户/组：</p>
 
 <pre><code class="language-java">public class MyAssignmentHandler implements TaskListener {
   public void notify(DelegateTask delegateTask) {

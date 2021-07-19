@@ -588,7 +588,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/decisions/configuration/" >Configuration</a>
+      <a href="/user-guide/process-engine/decisions/configuration/" >配置</a>
     
   </li>
 
@@ -596,7 +596,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/decisions/repository/" >Repository</a>
+      <a href="/user-guide/process-engine/decisions/repository/" >储存库</a>
     
   </li>
 
@@ -604,7 +604,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/decisions/decision-service/" >Decision Service</a>
+      <a href="/user-guide/process-engine/decisions/decision-service/" >决策服务类</a>
     
   </li>
 
@@ -612,7 +612,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/decisions/bpmn-cmmn/" >Decisions in BPMN &amp; CMMN</a>
+      <a href="/user-guide/process-engine/decisions/bpmn-cmmn/" >BPMN 和 CMMN 中的决策</a>
     
   </li>
 
@@ -639,7 +639,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/batch-operations/" >Batch operations</a>
+      <a href="/user-guide/process-engine/batch-operations/" >批处理操作</a>
     
   </li>
 
@@ -864,7 +864,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/process-applications/" >流程应用程序</a>
+      <a href="/user-guide/spring-boot-integration/process-applications/" >Process Applications</a>
     
   </li>
 
@@ -8177,44 +8177,42 @@ var _mtac = {};
     <div class="col-xs-12 content-text">
       
 
-<h2 id="process-engine">Process engine</h2>
+<h2 id="流程引擎">流程引擎</h2>
 
-<p>The Camunda engine uses the default time zone of the JVM when operating with dates:</p>
+<p>Camunda 引擎在处理日期时使用 JVM 的默认时区：</p>
 
 <ul>
-<li>When reading datetime values from BPMN XML</li>
-<li>In REST responses</li>
-<li>When reading/writing DateTime values from/to the database</li>
+<li>从 BPMN XML 读取日期时间值时</li>
+<li>在 REST responses 中</li>
+<li>从/向数据库读取/写入 DateTime 值时</li>
 </ul>
 
-<h2 id="database">Database</h2>
+<h2 id="数据库">数据库</h2>
 
-<p>Database time zone and database sessions time zone are out of scope of the Camunda engine and must be configured explicitly.</p>
+<p>数据库时区和数据库会话时区超出了 Camunda 引擎的范围，必须明确配置。</p>
 
-<p>However, Timestamp columns in the Camunda engine are using the <code>TIMESTAMP [WITHOUT TIME ZONE]</code> data type (the name differs in different database servers).
-For this reason, it is not recommended to change the time zone on the database side once set, since it may lead to an incorrect operation of the Camunda engine.</p>
+<p>Camunda 引擎中的时间戳列使用的是“时间戳[不带时区]（TIMESTAMP [WITHOUT TIME ZONE]）”数据类型（名称在不同的数据库服务器中有所不同）。
+因此，不建议在数据库端更改时区，因为一旦设置，可能会导致 Camunda 引擎的错误操作。</p>
 
 
 <div class="note bg-warning docs-warning">
-  <h3>Daylight Saving Time</h3>
-  <p><p>Timezone information is not saved in the timestamp columns. In order to avoid ambiguous timestamps, it is recommended to use a timezone like <code>UTC</code> as the JVM&rsquo;s default timezone
-that is not adjusted for <code>Daylight Saving Time (DST)</code> and therefore cannot produce ambiguous timestamps.</p>
+  <h3>夏令时</h3>
+  <p><p>时区信息不保存在时间戳中。 为了避免不明确的时间戳，建议使用像<code>UTC</code>这样的时区作为JVM的默认时区
+它未针对“夏令时 (DST)”进行调整，因此不会产生不明确的时间戳。</p>
 
-<p>If this is not an option in your setting, please consider disabling the <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/">JobExecutor</a> during the DST switch in order
-to avoid unexpected job executions.</p>
+<p>如果这不是你的设置中的一个选项，请考虑在 DST 切换期间禁用 <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/">Job执行器</a>
+以避免意外的Job执行。</p>
 </p>
 </div>
 
 
-<h2 id="camunda-web-applications">Camunda Web Applications</h2>
+<h2 id="camunda-web应用">Camunda Web应用</h2>
 
-<p>It is possible to use the Camunda Web Applications in different timezones. All dates are translated to/from the local timezone when working with the UI.</p>
+<p>可以在不同时区使用 Camunda Web应用。 使用 UI 时，所有日期相关操作都会使用本地时区。</p>
 
-<h2 id="cluster-setup">Cluster Setup</h2>
+<h2 id="集群设置">集群设置</h2>
 
-<p>In case the process engine is running in a <a href="http://camunda-cn.shaochenfeng.com/introduction/architecture/#clustering-model">cluster</a>,
-all cluster nodes must run in one and the same time zone. In case cluster nodes exist in different time zones,
-correct behaviour when operating with DateTime values can not be guaranteed.</p>
+<p>如果流程引擎在<a href="http://camunda-cn.shaochenfeng.com/introduction/architecture/#clustering-model">集群</a>中运行，则所有集群节点必须在同一个时区中运行。 如果集群节点存在于不同的时区，则无法保证使用 DateTime 值进行操作的正确性。</p>
 
     </div>
   </div>
@@ -8226,10 +8224,10 @@ correct behaviour when operating with DateTime values can not be guaranteed.</p>
 <ul>
 <li>
 <ul>
-<li><a href="#process-engine">Process engine</a></li>
-<li><a href="#database">Database</a></li>
-<li><a href="#camunda-web-applications">Camunda Web Applications</a></li>
-<li><a href="#cluster-setup">Cluster Setup</a></li>
+<li><a href="#流程引擎">流程引擎</a></li>
+<li><a href="#数据库">数据库</a></li>
+<li><a href="#camunda-web应用">Camunda Web应用</a></li>
+<li><a href="#集群设置">集群设置</a></li>
 </ul></li>
 </ul>
 </nav>

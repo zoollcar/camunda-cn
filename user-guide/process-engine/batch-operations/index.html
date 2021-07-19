@@ -55,7 +55,7 @@ var _mtac = {};
     
   
 
-  <title>Batch operations | docs.camunda.org</title>
+  <title>批处理操作 | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
   <link rel="shortcut icon" href="http://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
@@ -588,7 +588,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/decisions/configuration/" >Configuration</a>
+      <a href="/user-guide/process-engine/decisions/configuration/" >配置</a>
     
   </li>
 
@@ -596,7 +596,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/decisions/repository/" >Repository</a>
+      <a href="/user-guide/process-engine/decisions/repository/" >储存库</a>
     
   </li>
 
@@ -604,7 +604,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/decisions/decision-service/" >Decision Service</a>
+      <a href="/user-guide/process-engine/decisions/decision-service/" >决策服务类</a>
     
   </li>
 
@@ -612,7 +612,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/decisions/bpmn-cmmn/" >Decisions in BPMN &amp; CMMN</a>
+      <a href="/user-guide/process-engine/decisions/bpmn-cmmn/" >BPMN 和 CMMN 中的决策</a>
     
   </li>
 
@@ -639,7 +639,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/batch-operations/" >Batch operations</a>
+      <a href="/user-guide/process-engine/batch-operations/" >批处理操作</a>
     
   </li>
 
@@ -864,7 +864,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/process-applications/" >流程应用程序</a>
+      <a href="/user-guide/spring-boot-integration/process-applications/" >Process Applications</a>
     
   </li>
 
@@ -8171,70 +8171,66 @@ var _mtac = {};
     <i>编辑此页</i> <span class="cam-docs-github"></span></a>
 </div>
 
-      <h1 class="page-title">Batch operations</h1>
+      <h1 class="page-title">批处理操作</h1>
     </div>
 
     <div class="col-xs-12 content-text">
       
 
-<p>The following operations can be executed asynchronously</p>
+<p>以下操作可以异步执行：</p>
 
 <ul>
-<li><a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-instance-migration/#asynchronous-batch-migration-execution">Process Instance Migration</a></li>
-<li><a href="#cancellation-of-running-process-instances">Cancellation of running Process Instances</a></li>
-<li><a href="#deletion-of-historic-process-instances">Deletion of Historic Process Instances</a></li>
-<li><a href="#update-suspend-state-of-process-instances">Update suspend state of process instances</a></li>
-<li><a href="#setting-retries-of-jobs-associated-with-process-instances">Setting retries of jobs associated with Process Instances</a></li>
-<li><a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-instance-modification/#modification-of-multiple-process-instances">Process Instance Modification</a></li>
-<li><a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-instance-restart/#asynchronous-batch-execution">Process Instance Restart</a></li>
-<li><a href="#setting-retries-of-external-tasks">Setting retries of external tasks</a></li>
-<li><a href="#set-variables-to-process-instances">Set Variables to Process Instances</a></li>
-<li><a href="#historic-process-instances">Set a Removal Time to Historic Process Instances</a></li>
-<li><a href="#historic-decision-instances">Set a Removal Time to Historic Decision Instances</a></li>
-<li><a href="#historic-batches">Set a Removal Time to Historic Batches</a></li>
+<li><a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-instance-migration/#asynchronous-batch-migration-execution">流程实例迁移</a></li>
+<li><a href="#取消运行流程实例">取消运行流程实例</a></li>
+<li><a href="#删除历史流程实例">删除历史流程实例</a></li>
+<li><a href="#更新流程实例的暂停状态">更新流程实例的暂停状态</a></li>
+<li><a href="#设置流程实例关联的Job的重试">设置流程实例关联的Job的重试</a></li>
+<li><a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-instance-modification/#modification-of-multiple-process-instances">修改流程实例</a></li>
+<li><a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-instance-restart/#asynchronous-batch-execution">重启流程实例</a></li>
+<li><a href="#设置外部任务的重试">设置外部任务的重试</a></li>
+<li><a href="#设置流程实例变量">设置流程实例变量</a></li>
+<li><a href="#历史流程实例">为历史流程实例设置移除时间</a></li>
+<li><a href="#历史决策实例">为历史决策实例设置移除时间</a></li>
+<li><a href="#历史批处理">为历史批处理设置移除时间</a></li>
 </ul>
 
-<p>All batch operations rely on corresponding methods that provide the possibility to
-operate on a list of entities synchronously. Please refer to the general <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/batch/">Batch</a> documentation to
-understand the creation process better.</p>
+<p>所有批处理操作都依赖于提供同步操作实体列表的对应方法。参考<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/batch/">批处理</a>文档以更好地了解创建过程。</p>
 
-<p>Asynchronous operations can be performed based on a list of specific instances as well as on the result of a query providing a
-resulting list of instances. If both a list of instances and a query are provided, the resulting set of affected instances
-will consist of the union of those two subsets.</p>
+<p>可以基于特定实例列表以及提供实例结果列表的查询结果来执行异步操作。 如果同时提供实例列表和查询，则受影响实例的结果集将由这两个子集的并集组成。</p>
 
-<p>All listed batch operations, except <a href="#historic-batches">Set a Removal Time to Historic Batches</a>, are deployment-aware.
-In particular, this means that the seed job and execution jobs will receive a <code>deploymentId</code> so <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/#job-execution-in-heterogeneous-clusters">deployment-aware job executors</a> can pick up those jobs of a batch that need to be executed on their nodes. The deployment id of the seed job is chosen from the list of involved deployments. This list is derived from the resulting set of affected instances. Execution jobs only contain elements of the same deployment and are bound to that deployment&rsquo;s id.</p>
+<p>所有列出的批处理操作，除了<a href="#historic-batches">为历史批处理设置删除时间</a>，都是部署可知的。
+特别是，这意味着种子Job和执行Job将收到一个 <code>deploymentId</code> 所以 <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/#job -execution-in-heterogeneous-clusters">部署可知的Job执行者</a> 可以选择需要在其节点上执行的批处理Job。 种子Job的 deploymentId 是从涉及的部署列表中选择的。 此列表源自受影响实例的结果集。 执行Job仅包含相同部署的元素并绑定到该 deploymentId。</p>
 
-<h2 id="cancellation-of-running-process-instances">Cancellation Of Running Process Instances</h2>
+<h2 id="取消运行流程实例">取消运行流程实例</h2>
 
-<p>Cancellation of running process instances can be performed asynchronously using the following Java API method invocation:</p>
+<p>可以使用以下 Java API 方法调用异步执行取消正在运行的流程实例：</p>
 
 <pre><code class="language-java">List&lt;String&gt; processInstanceIds = ...;
 runtimeService.deleteProcessInstancesAsync(
         processInstanceIds, null, REASON);
 </code></pre>
 
-<h2 id="deletion-of-historic-process-instances">Deletion Of Historic Process Instances</h2>
+<h2 id="删除历史流程实例">删除历史流程实例</h2>
 
-<p>Deletion of historic process instances can be performed asynchronously using the following Java API method invocation:</p>
+<p>可以使用以下 Java API 方法调用异步执行历史流程实例的删除：</p>
 
 <pre><code class="language-java">List&lt;String&gt; historicProcessInstanceIds = ...;
 historyService.deleteHistoricProcessInstancesAsync(
         historicProcessInstanceIds, TEST_REASON);
 </code></pre>
 
-<h2 id="update-suspend-state-of-process-instances">Update Suspend State Of Process Instances</h2>
+<h2 id="更新流程实例的暂停状态">更新流程实例的暂停状态</h2>
 
-<p>Update the suspension state of multiple process instances asynchronously using the following Java API method invocation:</p>
+<p>使用以下 Java API 方法调用异步更新多个流程实例的挂起状态：</p>
 
 <pre><code class="language-java">List&lt;String&gt; processInstanceIds = ...;
 runtimeService.updateProcessInstanceSuspensionState().byProcessInstanceIds(
   processInstanceIds).suspendAsync();
 </code></pre>
 
-<h2 id="setting-retries-of-jobs-associated-with-process-instances">Setting Retries Of Jobs Associated With Process Instances</h2>
+<h2 id="设置流程实例关联的job的重试">设置流程实例关联的Job的重试</h2>
 
-<p>Setting retries of jobs associated with process instances can be performed asynchronously using the following Java API method invocation:</p>
+<p>可以使用以下 Java API 方法调用异步执行与流程实例关联的Job的重试设置：</p>
 
 <pre><code class="language-java">List&lt;String&gt; processInstanceIds = ...;
 int retries = ...;
@@ -8242,117 +8238,110 @@ managementService.setJobRetriesAsync(
         processInstanceIds, null, retries);
 </code></pre>
 
-<h2 id="setting-retries-of-external-tasks">Setting Retries Of External Tasks</h2>
+<h2 id="设置外部任务的重试">设置外部任务的重试</h2>
 
-<p>Setting retries of external tasks can be performed asynchronously using the following Java API method invocation:</p>
+<p>可以使用以下 Java API 方法调用异步执行外部任务的设置重试：</p>
 
 <pre><code class="language-java">List&lt;String&gt; externalTaskIds = ...;
 externalTaskService.setRetriesAsync(
         externalTaskIds, TEST_REASON);
 </code></pre>
 
-<h2 id="set-variables-to-process-instances">Set Variables to Process Instances</h2>
+<h2 id="设置流程实例变量">设置流程实例变量</h2>
 
-<p>Sometimes it is necessary to add or update data of an already running process instance.
-For example, when a user entered incorrect data at the beginning of a process,
-the data needs to be corrected on-the-fly.</p>
+<p>有时需要添加或更新已经运行的流程实例的变量。
+例如，当用户在流程开始时输入不正确的数据时，需要即时更正数据时。</p>
 
-<p>This batch operation helps you to set variables to the root scope of process instances asynchronously.</p>
+<p>此批处理操作可帮助你将变量异步设置到流程实例的根范围。</p>
 
-<p>You can either (1) filter for process instances using a <code>HistoricProcessInstanceQuery</code> or a <code>ProcessInstanceQuery</code>
-or (2) pass a set of process instance ids directly.</p>
+<p>你可以 (1) 使用 <code>HistoricProcessInstanceQuery</code> 或 <code>ProcessInstanceQuery</code> 过滤流程实例，或者 (2) 直接传递一组流程实例 ID。</p>
 
-<p>Please see below how to call the Java API:</p>
+<p>请参阅下面如何调用 Java API：</p>
 
 <pre><code class="language-java">List&lt;String&gt; processInstanceIds = ...;
 Map&lt;String, Object&gt; variables = Variables.putValue(&quot;my-variable&quot;, &quot;my-value&quot;);
 runtimeService.setVariablesAsync(processInstanceIds, variables);
 </code></pre>
 
-<h3 id="known-limitation">Known Limitation</h3>
+<h3 id="已知的限制">已知的限制</h3>
 
-<p>Currently, it is not possible to set transient variables via batch operation. However,
-you can <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/variables/#transient-variables">set transient variables</a> synchronously.</p>
+<p>目前，无法通过批处理操作设置瞬时变量。 但是，你可以同步<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/variables/#transient-variables">设置瞬时变量</a>。</p>
 
-<h2 id="set-a-removal-time">Set a Removal Time</h2>
+<h2 id="设置移除时间">设置移除时间</h2>
 
-<p>Sometimes it is necessary to postpone or even prevent the deletion of certain historic instances.
-A removal time can be set asynchronously to historic processes, decisions and batches.</p>
+<p>有时需要推迟甚至阻止删除某些历史实例。
+移除时间可以与历史流程、决策和批处理异步设置。</p>
 
-<p>The following modes can be chosen:</p>
+<p>可以选择以下模式：</p>
 
 <ul>
-<li><strong>Absolute:</strong> Sets the removal time to an arbitrary date
+<li><strong>绝对（Absolute）:</strong> 将删除时间设置为任意日期
 
 <ul>
 <li><code>.absoluteRemovalTime(Date removalTime)</code></li>
 </ul></li>
-<li><strong>Cleared:</strong> Resets the removal time (represented as <code>null</code>-value); Instances without a removal time are not cleaned-up
+<li><strong>清除（Cleared）:</strong> 重置移除时间（表示为 <code>null</code> 值）； 没有删除时间的实例不会被清理
 
 <ul>
 <li><code>.clearedRemovalTime()</code></li>
 </ul></li>
-<li><strong>Calculated:</strong> Recalculates the removal time based on the Workflow Engine&rsquo;s settings (base time + TTL)
+<li><strong>计算（Calculated）:</strong> 根据工作流引擎的设置（基准时间 + TTL）重新计算移除时间
 
 <ul>
 <li><code>.calculatedRemovalTime()</code></li>
 </ul></li>
 </ul>
 
-<p>Historic process and decision instances can be part of a hierarchy. To set the same removal time for all instances within
-a hierarchy, the method <code>.hierarchical()</code> needs to be called.</p>
+<p>历史流程和决策实例可以是层次结构的一部分。 要为层次结构中的所有实例设置相同的删除时间，需要调用方法 <code>.hierarchical()</code>。</p>
 
-<h3 id="historic-process-instances">Historic Process Instances</h3>
+<h3 id="历史流程实例">历史流程实例</h3>
 
 <pre><code class="language-java">HistoricProcessInstanceQuery query = 
   historyService.createHistoricProcessInstanceQuery();
 
 Batch batch = historyService.setRemovalTimeToHistoricProcessInstances()
-  .absoluteRemovalTime(new Date()) // sets an absolute removal time
-   // .clearedRemovalTime()        // resets the removal time to null
-   // .calculatedRemovalTime()     // calculation based on the engine's configuration
+  .absoluteRemovalTime(new Date()) // 设置绝对清除时间
+   // .clearedRemovalTime()        // 将删除时间重置为null
+   // .calculatedRemovalTime()     // 基于引擎配置计算
   .byQuery(query)
   .byIds(&quot;693206dd-11e9-b7cb-be5e0f7575b7&quot;, &quot;...&quot;)
-   // .hierarchical()              // sets a removal time across the hierarchy
+   // .hierarchical()              // 在层次结构上设置删除时间
   .executeAsync();
 </code></pre>
 
-<h3 id="historic-decision-instances">Historic Decision Instances</h3>
+<h3 id="历史决策实例">历史决策实例</h3>
 
 <pre><code class="language-java">HistoricDecisionInstanceQuery query = 
   historyService.createHistoricDecisionInstanceQuery();
 
 Batch batch = historyService.setRemovalTimeToHistoricDecisionInstances()
-  .absoluteRemovalTime(new Date()) // sets an absolute removal time
-   // .clearedRemovalTime()        // resets the removal time to null
-   // .calculatedRemovalTime()     // calculation based on the engine's configuration 
+  .absoluteRemovalTime(new Date()) // 设置绝对清除时间
+   // .clearedRemovalTime()        // 将删除时间重置为null
+   // .calculatedRemovalTime()     // 基于引擎配置计算
   .byQuery(query)
   .byIds(&quot;693206dd-11e9-b7cb-be5e0f7575b7&quot;, &quot;...&quot;)
-   // .hierarchical()              // sets a removal time across the hierarchy
+   // .hierarchical()              // 在层次结构上设置删除时间
   .executeAsync();
 </code></pre>
 
 
 <div class="note bg-info docs-info">
-  <h3>Known limitation</h3>
-  <p><p>The <code>.hierarchical()</code> flag for the decision instances batch operation only sets the removal time within the decision
-hierarchy. If a decision was called by a Business Rule Task, the calling process instances (including other process
-instances that are present in the hierarchy) are not updated.</p>
+  <h3>已知的限制</h3>
+  <p><p>决策实例批处理操作的 <code>.hierarchical()</code> 标志仅设置决策层次结构内的移除时间。 如果业务规则任务调用了决策，则不会更新调用流程实例（包括层次结构中存在的其他流程实例）。</p>
 
-<p>To update all child instances along the hierarchy of a root process instance (all process as well as decision instances),
-please use the batch operation for process instances with the <code>.hierarchical()</code> flag enabled.</p>
+<p>要沿根流程实例（所有流程以及决策实例）的层次结构更新所有子实例，请对启用了 <code>.hierarchical()</code> 标志的流程实例使用批处理操作。</p>
 </p>
 </div>
 
 
-<h3 id="historic-batches">Historic Batches</h3>
+<h3 id="历史批处理">历史批处理</h3>
 
 <pre><code class="language-java">HistoricBatchQuery query = historyService.createHistoricBatchQuery();
 
 Batch batch = historyService.setRemovalTimeToHistoricBatches()
-  .absoluteRemovalTime(new Date()) // sets an absolute removal time
-   // .clearedRemovalTime()        // resets the removal time to null
-   // .calculatedRemovalTime()     // calculation based on the engine's configuration
+  .absoluteRemovalTime(new Date()) // 设置绝对清除时间
+   // .clearedRemovalTime()        // 将删除时间重置为null
+   // .calculatedRemovalTime()     // 基于引擎配置计算
   .byQuery(query)
   .byIds(&quot;693206dd-11e9-b7cb-be5e0f7575b7&quot;, &quot;...&quot;)
   .executeAsync();
@@ -8368,20 +8357,20 @@ Batch batch = historyService.setRemovalTimeToHistoricBatches()
 <ul>
 <li>
 <ul>
-<li><a href="#cancellation-of-running-process-instances">Cancellation Of Running Process Instances</a></li>
-<li><a href="#deletion-of-historic-process-instances">Deletion Of Historic Process Instances</a></li>
-<li><a href="#update-suspend-state-of-process-instances">Update Suspend State Of Process Instances</a></li>
-<li><a href="#setting-retries-of-jobs-associated-with-process-instances">Setting Retries Of Jobs Associated With Process Instances</a></li>
-<li><a href="#setting-retries-of-external-tasks">Setting Retries Of External Tasks</a></li>
-<li><a href="#set-variables-to-process-instances">Set Variables to Process Instances</a>
+<li><a href="#取消运行流程实例">取消运行流程实例</a></li>
+<li><a href="#删除历史流程实例">删除历史流程实例</a></li>
+<li><a href="#更新流程实例的暂停状态">更新流程实例的暂停状态</a></li>
+<li><a href="#设置流程实例关联的job的重试">设置流程实例关联的Job的重试</a></li>
+<li><a href="#设置外部任务的重试">设置外部任务的重试</a></li>
+<li><a href="#设置流程实例变量">设置流程实例变量</a>
 <ul>
-<li><a href="#known-limitation">Known Limitation</a></li>
+<li><a href="#已知的限制">已知的限制</a></li>
 </ul></li>
-<li><a href="#set-a-removal-time">Set a Removal Time</a>
+<li><a href="#设置移除时间">设置移除时间</a>
 <ul>
-<li><a href="#historic-process-instances">Historic Process Instances</a></li>
-<li><a href="#historic-decision-instances">Historic Decision Instances</a></li>
-<li><a href="#historic-batches">Historic Batches</a></li>
+<li><a href="#历史流程实例">历史流程实例</a></li>
+<li><a href="#历史决策实例">历史决策实例</a></li>
+<li><a href="#历史批处理">历史批处理</a></li>
 </ul></li>
 </ul></li>
 </ul>

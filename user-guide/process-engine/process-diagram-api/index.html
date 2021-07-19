@@ -588,7 +588,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/decisions/configuration/" >Configuration</a>
+      <a href="/user-guide/process-engine/decisions/configuration/" >配置</a>
     
   </li>
 
@@ -596,7 +596,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/decisions/repository/" >Repository</a>
+      <a href="/user-guide/process-engine/decisions/repository/" >储存库</a>
     
   </li>
 
@@ -604,7 +604,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/decisions/decision-service/" >Decision Service</a>
+      <a href="/user-guide/process-engine/decisions/decision-service/" >决策服务类</a>
     
   </li>
 
@@ -612,7 +612,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/decisions/bpmn-cmmn/" >Decisions in BPMN &amp; CMMN</a>
+      <a href="/user-guide/process-engine/decisions/bpmn-cmmn/" >BPMN 和 CMMN 中的决策</a>
     
   </li>
 
@@ -639,7 +639,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/batch-operations/" >Batch operations</a>
+      <a href="/user-guide/process-engine/batch-operations/" >批处理操作</a>
     
   </li>
 
@@ -864,7 +864,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/process-applications/" >流程应用程序</a>
+      <a href="/user-guide/spring-boot-integration/process-applications/" >Process Applications</a>
     
   </li>
 
@@ -8177,11 +8177,11 @@ var _mtac = {};
     <div class="col-xs-12 content-text">
       
 
-<p>A BPMN process diagram is a formidable place to visualize information around your process. We recommend to use JavaScript libraries to display process diagrams and enrich them with additional information.</p>
+<p>BPMN 流程图一个强大的地方，是可以将你的流程周围的信息可视化。 我们建议使用 JavaScript 库来显示流程图并用附加信息丰富它们。</p>
 
-<p>In our web applications <a href="http://camunda-cn.shaochenfeng.com/webapps/cockpit/">Cockpit</a> and <a href="http://camunda-cn.shaochenfeng.com/webapps/tasklist/">Tasklist</a>, we use <a href="http://bpmn.io/">bpmn.io</a>, a toolkit for rendering BPMN 2.0 process models directly in the browser. It allows adding additional information to the diagram and includes ways for user interaction. Although bpmn.io is still under development, its API is rather stable.</p>
+<p>在我们的网络应用程序 <a href="http://camunda-cn.shaochenfeng.com/webapps/cockpit/">Cockpit</a> 和 <a href="http://camunda-cn.shaochenfeng.com/webapps/tasklist/">Tasklist</a> 中， 我们使用 <a href="http://bpmn.io/">bpmn.io</a>，这是一个直接在浏览器中呈现 BPMN 2.0 流程模型的工具包。 它允许向图表添加附加信息，并包括用户交互的方式。 虽然 bpmn.io 还在开发中，但它的 API 已经相当稳定了。</p>
 
-<p>The previous JavaScript BPMN renderer can still be found at <a href="https://github.com/camunda/camunda-bpmn.js">camunda-bpmn.js</a>, but it is not actively developed anymore.</p>
+<p>之前的 JavaScript BPMN 渲染器仍然可以在 <a href="https://github.com/camunda/camunda-bpmn.js">camunda-bpmn.js</a> 找到，但它不再积极开发了。</p>
 
 <figure class="image">
   <span><img
@@ -8192,14 +8192,14 @@ var _mtac = {};
 </figure>
 
 
-<h1 id="bpmn-io-diagram-renderer">bpmn.io Diagram Renderer</h1>
+<h1 id="bpmn-io-图表渲染器">bpmn.io 图表渲染器</h1>
 
-<p>To render a process diagram, you need to retrieve the diagram XML via the <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/RepositoryService.html">Java-</a>
- or <a href="http://camunda-cn.shaochenfeng.com/reference/rest/process-definition/get-xml/">REST</a> API. The following example shows how to render the process XML using bpmn.io. For more documentation regarding the annotation of the diagram and user interaction, please refer to the <a href="https://github.com/bpmn-io/bpmn-js">bpmn.io</a> page.</p>
+<p>要呈现流程图，你需要通过 <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/RepositoryService.html">Java-</a>
+ 或 <a href="{ {&lt; ref &quot;/reference/rest/process-definition/get-xml.md&quot; &gt;}}">REST</a> API。 以下示例显示如何使用 bpmn.io 呈现 流程XML。 有关图表注释和用户交互的更多文档，请参阅 <a href="https://github.com/bpmn-io/bpmn-js">bpmn.io</a> 页面。</p>
 
 <pre><code class="language-javascript">var BpmnViewer = require('bpmn-js');
 
-var xml = getBpmnXml(); // get the process xml via REST
+var xml = getBpmnXml(); // 通过 REST 获取 流程xml
 var viewer = new BpmnViewer({ container: 'body' });
 
 viewer.importXML(xml, function(err) {
@@ -8212,7 +8212,7 @@ viewer.importXML(xml, function(err) {
 });
 </code></pre>
 
-<p>Alternatively, you can use the  <a href="https://github.com/camunda/camunda-bpm-platform/blob/master/webapps/camunda-commons-ui/lib/widgets/bpmn-viewer/cam-widget-bpmn-viewer.html">bpmn-viewer widget</a> from the Camunda commons UI.</p>
+<p>除此之外，你可以使用 Camunda commons UI 中的 <a href="https://github.com/camunda/camunda-bpm-platform/blob/master/webapps/camunda-commons-ui/lib/widgets/bpmn-viewer/cam-widget-bpmn-viewer.html">bpmn-viewer 小部件</a>。</p>
 
     </div>
   </div>
@@ -8222,7 +8222,7 @@ viewer.importXML(xml, function(err) {
   <h3>目录:</h3>
   <nav id="TableOfContents">
 <ul>
-<li><a href="#bpmn-io-diagram-renderer">bpmn.io Diagram Renderer</a></li>
+<li><a href="#bpmn-io-图表渲染器">bpmn.io 图表渲染器</a></li>
 </ul>
 </nav>
   

@@ -588,7 +588,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/decisions/configuration/" >Configuration</a>
+      <a href="/user-guide/process-engine/decisions/configuration/" >配置</a>
     
   </li>
 
@@ -596,7 +596,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/decisions/repository/" >Repository</a>
+      <a href="/user-guide/process-engine/decisions/repository/" >储存库</a>
     
   </li>
 
@@ -604,7 +604,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/decisions/decision-service/" >Decision Service</a>
+      <a href="/user-guide/process-engine/decisions/decision-service/" >决策服务类</a>
     
   </li>
 
@@ -612,7 +612,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/decisions/bpmn-cmmn/" >Decisions in BPMN &amp; CMMN</a>
+      <a href="/user-guide/process-engine/decisions/bpmn-cmmn/" >BPMN 和 CMMN 中的决策</a>
     
   </li>
 
@@ -639,7 +639,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/batch-operations/" >Batch operations</a>
+      <a href="/user-guide/process-engine/batch-operations/" >批处理操作</a>
     
   </li>
 
@@ -864,7 +864,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/process-applications/" >流程应用程序</a>
+      <a href="/user-guide/spring-boot-integration/process-applications/" >Process Applications</a>
     
   </li>
 
@@ -8177,28 +8177,20 @@ var _mtac = {};
     <div class="col-xs-12 content-text">
       
 
-<p>After a decision definition has been evaluated either from a BPMN process, CMMN
-case or through the Decision Service, the inputs and outputs are saved in the
-History of the platform. The history entity is of type
-<code>HistoricDecisionInstance</code> and has the event type <code>evaluate</code>.</p>
+<p>从 BPMN 流程、CMMN 案例或通过决策服务评估决策定义后，输入和输出将保存在平台历史记录中。 历史实体的类型为“HistoricDecisionInstance”，事件类型为“evaluate”。</p>
 
-<p>For details about the history mechanism as such, refer to the <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/history/">History and Audit
-Event Log</a>.</p>
+<p>有关历史机制的详细信息，请参阅<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/history/">历史和审计事件日志</a>。</p>
 
 
 <div class="note bg-info docs-info">
   <h3>History Level</h3>
-  <p>History level <strong>FULL</strong> is required. Otherwise, no history
-for decisions is created.</p>
+  <p>历史级别必需是 <strong>FULL</strong>。 否则，不会创建决策历史记录。</p>
 </div>
 
 
-<h1 id="query-for-evaluated-decisions">Query for evaluated Decisions</h1>
+<h1 id="查询评估决策">查询评估决策</h1>
 
-<p>The History Service can be used to query for <code>HistoricDecisionInstances</code>. For
-example, use the following query to get all history entries for a decision
-definition with key <code>checkOrder</code> ordered by the time when the decision was
-evaluated.</p>
+<p>历史服务可用于查询“HistoricDecisionInstances”。 例如，使用以下查询获取决策定义的所有历史条目，键为“checkOrder”，按决策评估时间排序。</p>
 
 <pre><code class="language-java">List&lt;HistoricDecisionInstance&gt; historicDecisions = processEngine
   .getHistoryService()
@@ -8209,8 +8201,7 @@ evaluated.</p>
   .list();
 </code></pre>
 
-<p>Decisions which were evaluated from a <a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/tasks/business-rule-task/#using-camunda-dmn-engine">BPMN business rule task</a> can be
-filtered by the process definition id or key and process instance id.</p>
+<p>从 <a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/tasks/business-rule-task/#using-camunda-dmn-engine">BPMN 业务规则任务</a> 评估的决策可以通过流程定义 ID 或键和流程实例 ID 进行过滤。</p>
 
 <pre><code class="language-java">HistoryService historyService = processEngine.getHistoryService();
 
@@ -8230,8 +8221,7 @@ historicDecisionInstances = historyService
   .list();
 </code></pre>
 
-<p>Decisions which were evaluated from a <a href="http://camunda-cn.shaochenfeng.com/reference/cmmn11/tasks/decision-task/">CMMN decision task</a> can be filtered
-by the case definition id or key and case instance id.</p>
+<p>从 <a href="http://camunda-cn.shaochenfeng.com/reference/cmmn11/tasks/decision-task/">CMMN 决策任务</a> 评估的决策可以通过案例定义 ID 或Key和案例实例 ID 进行过滤。</p>
 
 <pre><code class="language-java">HistoryService historyService = processEngine.getHistoryService();
 
@@ -8251,9 +8241,7 @@ historicDecisionInstances = historyService
   .list();
 </code></pre>
 
-<p>Note that the inputs and outputs of a decision are not included in the query
-result by default. Call the methods <code>includeInputs()</code> and <code>includeOutputs()</code> on
-the query to retrieve the inputs and outputs from the result.</p>
+<p>请注意，默认情况下，查询结果中不包含决策的输入和输出。 可以调用方法 <code>includeInputs()</code> 和 <code>includeOutputs()</code> 以从结果中查询输入和输出。</p>
 
 <pre><code class="language-java">List&lt;HistoricDecisionInstance&gt; historicDecisions = processEngine
   .getHistoryService()
@@ -8264,110 +8252,94 @@ the query to retrieve the inputs and outputs from the result.</p>
   .list();
 </code></pre>
 
-<h1 id="the-historic-decision-instance">The Historic Decision Instance</h1>
+<h1 id="历史决策实例">历史决策实例</h1>
 
-<p>The <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/history/HistoricDecisionInstance">HistoricDecisionInstance</a>
- contains information about a single
-evaluation of a decision.</p>
+<p><a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/history/HistoricDecisionInstance">HistoricDecisionInstance</a>
+ 包含有关决策的单个评估的信息。</p>
 
 <pre><code class="language-java">HistoricDecisionInstance historicDecision = ...;
 
-// id of the decision definition
+// 决策定义的 id
 String decisionDefinitionId = historicDecision.getDecisionDefinitionId();
 
-// key of the decision definition
+// 决策定义的 Key
 String decisionDefinitionKey = historicDecision.getDecisionDefinitionKey();
 
-// name of the decision
+// 决策的 name
 String decisionDefinitionName = historicDecision.getDecisionDefinitionName();
 
-// time when the decision was evaluated
+// 评估决定的时间
 Date evaluationTime = historicDecision.getEvaluationTime();
 
-// inputs of the decision (if includeInputs was specified in the query)
+// 决策的输入（如果在查询中指定了 includeInputs）
 List&lt;HistoricDecisionInputInstance&gt; inputs = historicDecision.getInputs();
 
-// outputs of the decision (if includeOutputs was specified in the query)
+// 决策的输出（如果在查询中指定了 includeOutputs）
 List&lt;HistoricDecisionOutputInstance&gt; outputs = historicDecision.getOutputs();
 </code></pre>
 
-<p>In case the decision was evaluated from a process, information of the process
-definition, the process instance and the activity is set in the
-<code>HistoricDecisionInstance</code>. The same applies for decisions evaluated from
-a case, where the history instance will reference the corresponding case
-instances.</p>
+<p>如果决策是从流程中评估的，流程定义、流程实例和活动的信息在“HistoricDecisionInstance”中设置。 这同样适用于从案例评估的决策，其中历史实例将引用相应的案例实例。</p>
 
-<p>Additionally, if the decision is a decision table with hit policy <code>collect</code> and
-an aggregator function, then the result of the aggregation can be retrieved by
-the <code>getCollectResultValue()</code> method.</p>
+<p>此外，如果决策是带有命中策略 <code>collect</code> 和聚合函数的决策表，那么聚合的结果可以通过 <code>getCollectResultValue()</code> 方法查询。</p>
 
-<p>For more information on supported hit policies please see the <a href="http://camunda-cn.shaochenfeng.com/reference/dmn/decision-table/hit-policy/">DMN 1.3
-reference</a>.</p>
+<p>有关支持的命中策略的更多信息，请参阅 <a href="http://camunda-cn.shaochenfeng.com/reference/dmn/decision-table/hit-policy/">DMN 1.3 参考</a>。</p>
 
-<h2 id="historic-decision-input-instance">Historic Decision Input Instance</h2>
+<h2 id="历史决策的输入实例">历史决策的输入实例</h2>
 
-<p>The <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/history/HistoricDecisionInputInstance">HistoricDecisionInputInstance</a>
- represents one input of an
-evaluated decision (e.g., an input clause of a decision table).</p>
+<p><a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/history/HistoricDecisionInputInstance">HistoricDecisionInputInstance</a>
+ 表示评估决策的一个输入（例如，决策表的输入子句）。</p>
 
 <pre><code class="language-java">HistoricDecisionInputInstance input = ...;
 
-// id of the input clause
+// 输入子句的 id
 String clauseId = input.getClauseId();
 
-// label of the input clause
+// 输入子句的 label
 String clauseName = input.getClauseName();
 
-// evaluated value of the input expression
+// 输入表达式的计算值
 Object value = input.getValue();
 
-// evaluated value of the input expression as typed value
-// which contains type information
+// 输入表达式的计算值作为包含类型信息的类型化值
 TypedValue typedValue = input.getTypedValue();
 </code></pre>
 
-<p>Note that the value may be the result of a type transformation in case the
-input specifies a type.</p>
+<p>请注意，如果输入指定了类型，则该值可能是类型转换的结果。</p>
 
-<h2 id="historic-decision-output-instance">Historic Decision Output Instance</h2>
+<h2 id="历史决策的输出实例">历史决策的输出实例</h2>
 
-<p>The <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/history/HistoricDecisionOutputInstance">HistoricDecisionOutputInstance</a>
- represents one output entry of an
-evaluated decision. If the decision is implemented as decision table, the
-<code>HistoricDecisionInstance</code> contains one <code>HistoricDecisionOutputInstance</code>
-for each output clause and matched rule.</p>
+<p><a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/history/HistoricDecisionOutputInstance">HistoricDecisionOutputInstance</a>
+ 表示评估决策的一个输出条目。 如果决策被实现为决策表，那么对于每个输出子句和匹配的规则，<code>HistoricDecisionInstance</code> 包含一个 <code>HistoricDecisionOutputInstance</code>。</p>
 
 <pre><code class="language-java">HistoricDecisionOutputInstance output = ...;
 
-// id of the output clause
+// 输出子句的 id
 String clauseId = output.getClauseId();
 
-// label of the output clause
+// 输出子句的 label
 String clauseName = output.getClauseName();
 
-// evaluated value of the output entry
+// 输出条目的评估值
 Object value = output.getValue();
 
-// evaluated value of the output entry as typed value
-// which contains type information
+// 输出条目的评估值作为包含类型信息的类型化值
 TypedValue typedValue = output.getTypedValue();
 
-// id of matched rule the output belongs to
+// 输出所属的匹配规则的 id
 String ruleId = output.getRuleId();
 
-// the position of the rule in the list of matched rules
+// 规则在匹配规则列表中的位置
 Integer ruleOrder = output.getRuleOrder();
 
-// name of the output clause used as output variable identifier
+// 用作输出变量标识符的输出子句的名称
 String variableName = output.getVariableName();
 </code></pre>
 
-<p>Note that the value may be the result of a type transformation in case the
-output specifies a type.</p>
+<p>请注意，如果输出指定类型，则该值可能是类型转换的结果。</p>
 
 <h1 id="cockpit">Cockpit</h1>
 
-<p>You can audit the evaluated decision definitions in the <a href="http://camunda-cn.shaochenfeng.com/webapps/cockpit/dmn/">Cockpit</a> webapp.</p>
+<p>你可以在 <a href="http://camunda-cn.shaochenfeng.com/webapps/cockpit/dmn/">Cockpit</a> webapp 中审核评估的决策定义。</p>
 
     </div>
   </div>
@@ -8377,11 +8349,11 @@ output specifies a type.</p>
   <h3>目录:</h3>
   <nav id="TableOfContents">
 <ul>
-<li><a href="#query-for-evaluated-decisions">Query for evaluated Decisions</a></li>
-<li><a href="#the-historic-decision-instance">The Historic Decision Instance</a>
+<li><a href="#查询评估决策">查询评估决策</a></li>
+<li><a href="#历史决策实例">历史决策实例</a>
 <ul>
-<li><a href="#historic-decision-input-instance">Historic Decision Input Instance</a></li>
-<li><a href="#historic-decision-output-instance">Historic Decision Output Instance</a></li>
+<li><a href="#历史决策的输入实例">历史决策的输入实例</a></li>
+<li><a href="#历史决策的输出实例">历史决策的输出实例</a></li>
 </ul></li>
 <li><a href="#cockpit">Cockpit</a></li>
 </ul>

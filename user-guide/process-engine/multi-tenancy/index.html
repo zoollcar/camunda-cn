@@ -588,7 +588,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/decisions/configuration/" >Configuration</a>
+      <a href="/user-guide/process-engine/decisions/configuration/" >配置</a>
     
   </li>
 
@@ -596,7 +596,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/decisions/repository/" >Repository</a>
+      <a href="/user-guide/process-engine/decisions/repository/" >储存库</a>
     
   </li>
 
@@ -604,7 +604,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/decisions/decision-service/" >Decision Service</a>
+      <a href="/user-guide/process-engine/decisions/decision-service/" >决策服务类</a>
     
   </li>
 
@@ -612,7 +612,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/decisions/bpmn-cmmn/" >Decisions in BPMN &amp; CMMN</a>
+      <a href="/user-guide/process-engine/decisions/bpmn-cmmn/" >BPMN 和 CMMN 中的决策</a>
     
   </li>
 
@@ -639,7 +639,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/batch-operations/" >Batch operations</a>
+      <a href="/user-guide/process-engine/batch-operations/" >批处理操作</a>
     
   </li>
 
@@ -864,7 +864,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/process-applications/" >流程应用程序</a>
+      <a href="/user-guide/spring-boot-integration/process-applications/" >Process Applications</a>
     
   </li>
 
@@ -8651,7 +8651,7 @@ SPI的实现。</p>
 
 <h2 id="配置流程引擎">配置流程引擎</h2>
 
-<p>流程引擎可以在配置文件中或通过 Java API 进行配置。每个引擎都应该有一个与租户有关的名字，这样就可以根据租户来识别它。例如，每个引擎可以用它所服务的租户来命名。详情见<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-bootstrapping/">过程引擎自启动</a>章节。</p>
+<p>流程引擎可以在配置文件中或通过 Java API 进行配置。每个引擎都应该有一个与租户有关的名字，这样就可以根据租户来识别它。例如，每个引擎可以用它所服务的租户来命名。详情见<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-bootstrapping/">流程引擎自启动</a>章节。</p>
 
 <h3 id="数据库隔离">数据库隔离</h3>
 
@@ -8774,7 +8774,7 @@ SPI的实现。</p>
 <ul>
 <li><strong>清晰的 Java API</strong>: 通过 <a href="http://camunda-cn.shaochenfeng.com/user-guide/runtime-container-integration/bpm-platform-services/#processengineservice">ProcessEngineService</a> 可以访问任何命名引擎。</li>
 <li><strong>CDI 注入</strong>: 命名的引擎Bean可以开箱即注入。内置的<a href="http://camunda-cn.shaochenfeng.com/user-guide/cdi-java-ee-integration/built-in-beans/">CDI Bean生产者</a>专门用来动态地访问当前租户的引擎。</li>
-<li><strong>通过JBoss/Wildfly 的 JNDI</strong>: 在JBoss和Wildfly上，每一个容器管理的进程引擎都可以<a href="http://camunda-cn.shaochenfeng.com/user-guide/runtime-container-integration/jboss/#look-up-a-process-engine-in-jndi">通过JNDI查询</a>。</li>
+<li><strong>通过JBoss/Wildfly 的 JNDI</strong>: 在JBoss和Wildfly上，每一个容器管理的流程引擎都可以<a href="http://camunda-cn.shaochenfeng.com/user-guide/runtime-container-integration/jboss/#look-up-a-process-engine-in-jndi">通过JNDI查询</a>。</li>
 </ul>
 
 <p>Camunda网络应用程序Cockpit、Tasklist和Admin通过<a href="http://camunda-cn.shaochenfeng.com/webapps/cockpit/dashboard/#multi-engine">在不同的流程引擎之间切换</a>提供租户特定的视图，开箱即用。</p>

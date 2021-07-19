@@ -55,7 +55,7 @@ var _mtac = {};
     
   
 
-  <title>流程应用程序 | docs.camunda.org</title>
+  <title>Process applications | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
   <link rel="shortcut icon" href="http://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
@@ -588,7 +588,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/decisions/configuration/" >Configuration</a>
+      <a href="/user-guide/process-engine/decisions/configuration/" >配置</a>
     
   </li>
 
@@ -596,7 +596,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/decisions/repository/" >Repository</a>
+      <a href="/user-guide/process-engine/decisions/repository/" >储存库</a>
     
   </li>
 
@@ -604,7 +604,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/decisions/decision-service/" >Decision Service</a>
+      <a href="/user-guide/process-engine/decisions/decision-service/" >决策服务类</a>
     
   </li>
 
@@ -612,7 +612,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/decisions/bpmn-cmmn/" >Decisions in BPMN &amp; CMMN</a>
+      <a href="/user-guide/process-engine/decisions/bpmn-cmmn/" >BPMN 和 CMMN 中的决策</a>
     
   </li>
 
@@ -639,7 +639,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/batch-operations/" >Batch operations</a>
+      <a href="/user-guide/process-engine/batch-operations/" >批处理操作</a>
     
   </li>
 
@@ -864,7 +864,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/spring-boot-integration/process-applications/" >流程应用程序</a>
+      <a href="/user-guide/spring-boot-integration/process-applications/" >Process Applications</a>
     
   </li>
 
@@ -8171,18 +8171,18 @@ var _mtac = {};
     <i>编辑此页</i> <span class="cam-docs-github"></span></a>
 </div>
 
-      <h1 class="page-title">流程应用程序</h1>
+      <h1 class="page-title">Process applications</h1>
     </div>
 
     <div class="col-xs-12 content-text">
       
 
-<p>By default, the camunda-spring-boot-starter is configured to use the <code>SpringProcessEngineConfiguration</code> auto deployment feature.
-Since 1.2.0 you also have the possibility to do so via <code>SpringBootProcessApplication</code>. This disables the <code>SpringProcessEngineConfiguration</code>
-auto-deploy feature and instead uses the required <code>META-INF/processes.xml</code> as an indicator for resource scanning.
-This also allows all <code>processes.xml</code> configuration features described <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-applications/the-processes-xml-deployment-descriptor/">here</a>.</p>
+<p>默认情况下，camunda-spring-boot-starter 使用<code>SpringProcessEngineConfiguration</code> 配置自动部署功能。
+从1.2.0开始，你也可以通过 <code>SpringBootProcessApplication</code> 配置。这将禁用<code>SpringProcessEngineConfiguration</code> 的自动部署功能。
+自动部署功能，使用所需的 <code>META-INF/processes.xml</code> 作为资源扫描的目录。
+允许使用的所有 <code>processes.xml</code> 配置项在 <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-applications/the-processes-xml-deployment-descriptor/">这里</a> 列出。</p>
 
-<p>To use it, just add the <code>@EnableProcessApplication</code> annotation to your Spring Boot application class:</p>
+<p>你这只需要添加 <code>@EnableProcessApplication</code> 注解到Spring Boot application类：</p>
 
 <pre><code class="language-java">@SpringBootApplication
 @EnableProcessApplication(&quot;myProcessApplicationName&quot;)
@@ -8193,13 +8193,11 @@ public class MyApplication {
 }
 </code></pre>
 
-<p>Some configuration can be done via Spring Boot configuration parameters. Check <a href="http://camunda-cn.shaochenfeng.com/user-guide/spring-boot-integration/configuration/#camunda-bpm-application">the list of currently available parameters</a>.</p>
+<p>一些配置可以通过Spring Boot配置参数完成。详情见<a href="http://camunda-cn.shaochenfeng.com/user-guide/spring-boot-integration/configuration/#camunda-bpm-application">可用参数的列表</a>.</p>
 
-<h2 id="using-deployment-callbacks">Using Deployment Callbacks</h2>
+<h2 id="使用部署回调函数">使用部署回调函数</h2>
 
-<p>As when using <code>@EnableProcessApplication</code> we don&rsquo;t extend the <code>ProcessApplication</code> class,
-we can&rsquo;t use <code>@PostDeploy</code> and <code>@PreUndeploy</code> method annotations. Instead these callbacks
-are provided via Spring event publishing mechanism. So you can use the following event listeners:</p>
+<p>由于使用<code>@EnableProcessApplication</code>时，我们没有扩展<code>ProcessApplication</code>类，所以我们不能使用<code>@PostDeploy</code>和<code>@PreUndeploy</code>方法注释。相反，这些回调是通过Spring事件发布机制提供的。所以你可以使用以下事件监听器。</p>
 
 <pre><code class="language-java">@EventListener
 public void onPostDeploy(PostDeployEvent event) {
@@ -8222,7 +8220,7 @@ public void onPreUndeploy(PreUndeployEvent event) {
 <ul>
 <li>
 <ul>
-<li><a href="#using-deployment-callbacks">Using Deployment Callbacks</a></li>
+<li><a href="#使用部署回调函数">使用部署回调函数</a></li>
 </ul></li>
 </ul>
 </nav>
