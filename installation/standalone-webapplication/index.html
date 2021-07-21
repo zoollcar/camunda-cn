@@ -1318,7 +1318,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/ext-client/compatibility-matrix/" >Version Compatibility</a>
+      <a href="/user-guide/ext-client/compatibility-matrix/" >版本兼容性</a>
     
   </li>
 
@@ -1331,7 +1331,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/camunda-bpm-rpa-bridge/" >Camunda Platform RPA Bridge</a>
+      <a href="/user-guide/camunda-bpm-rpa-bridge/" >Camunda平台 RPA Bridge</a>
     
   </li>
 
@@ -8248,7 +8248,7 @@ web application by using the following url:</p>
 <h1 id="database-configuration">Database Configuration</h1>
 
 <p>The Camunda standalone webapp is initially configured using a file-based <code>H2</code> database
-and an Apache Commons DBCP datasource. The <code>h2</code> database is only useful for demo purposes.
+and a HikariCP datasource. The <code>h2</code> database is only useful for demo purposes.
 If you want to use the standalone webapp in production we recommend using a different database.</p>
 
 <p>In order to configure another database, edit the file named <code>WEB-INF/applicationContext.xml</code> inside the
@@ -8256,9 +8256,9 @@ If you want to use the standalone webapp in production we recommend using a diff
 
 <pre><code class="language-xml">&lt;bean id=&quot;dataSource&quot; class=&quot;org.springframework.jdbc.datasource.TransactionAwareDataSourceProxy&quot;&gt;
   &lt;property name=&quot;targetDataSource&quot;&gt;
-    &lt;bean class=&quot;org.apache.commons.dbcp.BasicDataSource&quot;&gt;
+    &lt;bean class=&quot;com.zaxxer.hikari.HikariDataSource&quot;&gt;
       &lt;property name=&quot;driverClassName&quot; value=&quot;org.h2.Driver&quot; /&gt;
-      &lt;property name=&quot;url&quot; value=&quot;jdbc:h2:./camunda-h2-dbs/process-engine;MVCC=TRUE;TRACE_LEVEL_FILE=0;DB_CLOSE_ON_EXIT=FALSE&quot; /&gt;
+      &lt;property name=&quot;jdbcUrl&quot; value=&quot;jdbc:h2:./camunda-h2-dbs/process-engine;MVCC=TRUE;TRACE_LEVEL_FILE=0;DB_CLOSE_ON_EXIT=FALSE&quot; /&gt;
       &lt;property name=&quot;username&quot; value=&quot;sa&quot; /&gt;
       &lt;property name=&quot;password&quot; value=&quot;&quot; /&gt;
     &lt;/bean&gt;

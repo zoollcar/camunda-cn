@@ -1318,7 +1318,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/ext-client/compatibility-matrix/" >Version Compatibility</a>
+      <a href="/user-guide/ext-client/compatibility-matrix/" >版本兼容性</a>
     
   </li>
 
@@ -1331,7 +1331,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/camunda-bpm-rpa-bridge/" >Camunda Platform RPA Bridge</a>
+      <a href="/user-guide/camunda-bpm-rpa-bridge/" >Camunda平台 RPA Bridge</a>
     
   </li>
 
@@ -8856,6 +8856,38 @@ to UTC for storage, and back from UTC to the current time zone for retrieval. Re
 <li><a href="https://dev.mysql.com/doc/connectors/en/connector-j-upgrading-to-8.0.html">MySQL Connector/J 8.0 Migration Guide</a></li>
 </ul>
 
+<h2 id="7-15-3-to-7-15-4-7-14-9-to-7-14-10-7-13-15-to-7-13-16">7.15.3 to 7.15.4 / 7.14.9 to 7.14.10 / 7.13.15 to 7.13.16</h2>
+
+<h3 id="spin-updated-dependencies">Spin: updated dependencies</h3>
+
+<p>With this release, the following dependencies of Spin have been updated:</p>
+
+<ul>
+<li>json-path from 2.4.0 to 2.6.0</li>
+<li>accessors-smart from 1.2 to 2.4.7</li>
+<li>json-smart from 2.3 to 2.4.7</li>
+</ul>
+
+<h3 id="standalone-webapplication-hikaricp-replaces-commons-dbcp">Standalone Webapplication: HikariCP replaces Commons DBCP</h3>
+
+<p>The standalone web applications now use HikariCP for data source configuration instead of Apache Commons DBCP. Replace
+the <code>org.apache.commons.dbcp.BasicDataSource</code> class in your <code>applicationContext.xml</code> with a
+<code>com.zaxxer.hikari.HikariDataSource</code>. The HikariCP data source expects the JDBC URL on a property called <code>jdbcUrl</code>
+instead of <code>url</code>. Thus, you need to rename the <code>url</code> property. Your data source description should look similar to
+this, with <code>DB-DRIVER-CLASS</code>, <code>JDBC-URL</code>, <code>DB-USER</code>, and <code>DB-PASSWORD</code> replaced by values related to your database:</p>
+
+<pre><code class="language-xml">&lt;bean id=&quot;dataSource&quot; class=&quot;org.springframework.jdbc.datasource.TransactionAwareDataSourceProxy&quot;&gt;
+  &lt;property name=&quot;targetDataSource&quot;&gt;
+    &lt;bean class=&quot;com.zaxxer.hikari.HikariDataSource&quot;&gt;
+      &lt;property name=&quot;driverClassName&quot; value=&quot;DB-DRIVER-CLASS&quot; /&gt;
+      &lt;property name=&quot;jdbcUrl&quot; value=&quot;JDBC-URL&quot; /&gt;
+      &lt;property name=&quot;username&quot; value=&quot;DB-USER&quot; /&gt;
+      &lt;property name=&quot;password&quot; value=&quot;DB-PASSWORD&quot; /&gt;
+    &lt;/bean&gt;
+  &lt;/property&gt;
+&lt;/bean&gt;
+</code></pre>
+
 <h1 id="full-distribution">Full Distribution</h1>
 
 <p>This section is applicable if you installed the <a href="http://camunda-cn.shaochenfeng.com/introduction/downloading-camunda/#full-distribution">Full Distribution</a> with a <strong>shared process engine</strong>. In this case you need to update the libraries and applications installed inside the application server.</p>
@@ -8945,6 +8977,11 @@ to UTC for storage, and back from UTC to the current time zone for retrieval. Re
 </ul></li>
 <li><a href="#further-reading">Further Reading</a></li>
 </ul></li>
+</ul></li>
+<li><a href="#7-15-3-to-7-15-4-7-14-9-to-7-14-10-7-13-15-to-7-13-16">7.15.3 to 7.15.4 / 7.14.9 to 7.14.10 / 7.13.15 to 7.13.16</a>
+<ul>
+<li><a href="#spin-updated-dependencies">Spin: updated dependencies</a></li>
+<li><a href="#standalone-webapplication-hikaricp-replaces-commons-dbcp">Standalone Webapplication: HikariCP replaces Commons DBCP</a></li>
 </ul></li>
 </ul></li>
 <li><a href="#full-distribution">Full Distribution</a></li>

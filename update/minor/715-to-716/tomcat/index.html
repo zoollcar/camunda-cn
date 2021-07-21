@@ -1318,7 +1318,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/ext-client/compatibility-matrix/" >Version Compatibility</a>
+      <a href="/user-guide/ext-client/compatibility-matrix/" >版本兼容性</a>
     
   </li>
 
@@ -1331,7 +1331,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/camunda-bpm-rpa-bridge/" >Camunda Platform RPA Bridge</a>
+      <a href="/user-guide/camunda-bpm-rpa-bridge/" >Camunda平台 RPA Bridge</a>
     
   </li>
 
@@ -8218,7 +8218,7 @@ For the entire procedure, refer to the <a href="http://camunda-cn.shaochenfeng.c
 
 <h1 id="2-update-optional-camunda-platform-libraries">2. Update Optional Camunda Platform Libraries</h1>
 
-<p>In addition to the core libraries, there may be optional artifacts in <code>$TOMCAT_HOME/lib/</code> for LDAP integration, Camunda Connect, Camunda Spin, and Groovy scripting. If you use any of these extensions, the following update steps apply:</p>
+<p>In addition to the core libraries, there may be optional artifacts in <code>$TOMCAT_HOME/lib/</code> for LDAP integration, Camunda Connect, Camunda Spin, and scripting. If you use any of these extensions, the following update steps apply:</p>
 
 <h2 id="ldap-integration">LDAP Integration</h2>
 
@@ -8244,6 +8244,19 @@ For the entire procedure, refer to the <a href="http://camunda-cn.shaochenfeng.c
 <li><code>camunda-spin-dataformat-all-$SPIN_VERSION.jar</code></li>
 <li><code>camunda-spin-core-$SPIN_VERSION.jar</code></li>
 <li><code>camunda-engine-plugin-spin-$PLATFORM_VERSION.jar</code></li>
+</ul>
+
+<h2 id="graalvm-javascript">GraalVM JavaScript</h2>
+
+<p>Copy the following libraries from <code>$TOMCAT_DISTRIBUTION/lib</code> to the folder <code>$TOMCAT_HOME/lib/</code>, if present:</p>
+
+<ul>
+<li><code>graal-sdk-21.1.0.jar</code></li>
+<li><code>icu4j-68.2.jar</code></li>
+<li><code>js-21.1.0.jar</code></li>
+<li><code>js-scriptengine-21.1.0.jar</code></li>
+<li><code>regex-21.1.0.jar</code></li>
+<li><code>truffle-api-21.1.0.jar</code></li>
 </ul>
 
 <h1 id="3-update-web-applications">3. Update Web Applications</h1>
@@ -8282,6 +8295,7 @@ For the entire procedure, refer to the <a href="http://camunda-cn.shaochenfeng.c
 <li><a href="#ldap-integration">LDAP Integration</a></li>
 <li><a href="#camunda-connect-plugin">Camunda Connect Plugin</a></li>
 <li><a href="#camunda-spin">Camunda Spin</a></li>
+<li><a href="#graalvm-javascript">GraalVM JavaScript</a></li>
 </ul></li>
 <li><a href="#3-update-web-applications">3. Update Web Applications</a>
 <ul>

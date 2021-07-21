@@ -1016,7 +1016,7 @@ Spin DataFormat Configuration From this minor release, the Camunda Spring Boot S
       
       <guid>http://camunda-cn.shaochenfeng.com/modeler/bpmn/</guid>
       <description>Quickstart Create new BPMN 2.0 Diagram To start modeling, create a new BPMN 2.0 diagram for the Camunda Platform by selecting Create diagram &amp;gt; Create new BPMN diagram (Camunda Platform) in the top-level menu.
-Start Modeling Now you can start to create a BPMN 2.0 model. Add the desired elements from the palette on the left hand side by dragging and dropping them onto the diagram canvas.</description>
+Deployment SupportBPMN diagrams must be created for the process engine they intend to be deployed on. You cannot run a BPMN diagram modeled for Camunda Platform in Camunda Cloud, or vice versa, at this time.</description>
     </item>
     
     <item>
@@ -1129,7 +1129,7 @@ Response Codes  Code Media type Description   204 application/json Request succe
 还可以使用解析为对象的表达式。这个对象必须遵循使用与Camunda：Class属性时创建的对象相同的规则。
 &amp;lt;serviceTask id=&amp;quot;beanService&amp;quot; name=&amp;quot;My Bean Service Task&amp;quot; camunda:delegateExpression=&amp;quot;${myDelegateBean}&amp;quot; /&amp;gt;  或调用方法或解析值的表达式。
 &amp;lt;serviceTask id=&amp;quot;expressionService&amp;quot; name=&amp;quot;My Expression Service Task&amp;quot; camunda:expression=&amp;quot;${myBean.doWork()}&amp;quot; /&amp;gt;  有关表达式语言作为委派代码的详细信息，请参阅相应的 User Guide 的 section 章节。
-也可以调用以Web服务形式实现的逻辑。 camunda:connector 是一个扩展，允许直接从工作流程调用REST/SOAP API。 有关使用连接器的更多信息，请参阅相应的信息 User Guide 中的 section 章节。
+也可以调用以Web服务形式实现的逻辑。 camunda:connector 是一个扩展，允许直接从工作流调用REST/SOAP API。 有关使用连接器的更多信息，请参阅相应的信息 User Guide 中的 section 章节。
 通过 Java 委托类 &amp;amp; 参数注入 你可以轻松地编写通用Java委托类，该类可以通过BPMN 2稍后配置.</description>
     </item>
     
@@ -1414,7 +1414,8 @@ Java Dependencies logback-classic@1.2.3(EPL 1.0)Copyright (C) 1999-2015, QOS.ch.
       
       <guid>http://camunda-cn.shaochenfeng.com/webapps/cockpit/extend/plugins/</guid>
       <description>Plugin CompatibilityPlease note that we updated the frontend plugin interface with Camunda Platform Runtime 7.14. Plugins written for Camunda Platform Runtime 7.13 and earlier might no longer work with Camunda Platform Runtime 7.14. Checkout the update guide for more details.
-Cockpit defines a plugin concept to add own functionality without being forced to extend or hack the Cockpit web application. You can add plugins at various plugin points, e.</description>
+It is also important to remember that Camunda Platform Run does not offer support for Cockpit plugins at the moment.
+Cockpit defines a plugin concept to add own functionality without being forced to extend or hack the Cockpit web application.</description>
     </item>
     
     <item>
@@ -4232,7 +4233,7 @@ DMN Decision Task CMMN 决策任务引用了一个部署的 决策定义。 激�
       <guid>http://camunda-cn.shaochenfeng.com/introduction/supported-environments/</guid>
       <description>你可以在任何可运行Java的环境中运行Camunda平台。但以下环境中运行可以得到了我们的质量保证。你可以在我们的企业支持页面中获得更多的信息。
 支持的运行环境请注意，本节中列出的环境与Camunda平台的版本有关。请选择本文档的相应版本，以查看适合你的Camunda平台版本的环境。例如，7.3版本的支持环境。
-容器/应用 服务器 嵌入应用程序的流程引擎  所有的 Java 应用服务器 Camunda Spring Boot Starter: 启用 Tomcat （参见 支持的版本 和 部署场景）  容器管理的流程引擎 和 Camunda Cockpit, Tasklist, Admin  Apache Tomcat 9.0 JBoss EAP 7.0 / 7.1 / 7.2 / 7.3 Wildfly Application Server 13.0 / 14.0 / 15.0 / 16.0 / 17.0 / 18.0 / 19.0 / 20.0 / 21.0 / 22.0 IBM WebSphere Application Server 8.5 / 9.</description>
+容器/应用 服务器 嵌入应用程序的流程引擎  所有的 Java 应用服务器 Camunda Spring Boot Starter: 启用 Tomcat （参见 支持的版本 和 部署场景）  容器管理的流程引擎 和 Camunda Cockpit, Tasklist, Admin  Apache Tomcat 9.0 JBoss EAP 7.0 / 7.1 / 7.2 / 7.3 Wildfly Application Server 13.0 / 14.0 / 15.0 / 16.0 / 17.0 / 18.0 / 19.0 / 20.0 / 21.0 / 22.0 / 23.0 IBM WebSphere Application Server 8.</description>
     </item>
     
     <item>
@@ -6269,11 +6270,10 @@ Java API:
       
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/scripting/</guid>
       <description>Camunda平台支持与JSR-223兼容的脚本语言。目前，我们对Groovy、JavaScript、JRuby和Jython进行了测试。为了使用一个脚本语言，有必要在classpath中添加相应的jar。
-JavaScript 是Java Runtime（JRE）的一部分，因此开箱即用。
+我们在预编译的 Camunda发行版 中包含了 GraalVM JavaScript。 有关更多信息，请参阅 JavaScript 考虑事项。
 Groovy 也包含在预编译的Camunda发行版中。
 下表展示了支持执行脚本的BPMN元素：
- BPMN element Script support   Script Task 嵌入在脚本任务中的脚本    Processes, Activities, Sequence Flows, Gateways and Events   作为执行监听器的脚本    User Tasks   作为任务监听器的脚本    Sequence Flows   作为顺序流条件表达式的脚本    All Tasks, All Events, Transactions, Subprocesses and Connectors   输入输出参数映射中的脚本   使用脚本任务 通过BPMN 2.0脚本任务，你可以向你的BPM流程添加一个脚本（更多信息请参见BPMN 2.0参考）。
-下面的流程是一个简单的例子，有一个Groovy脚本任务，对一个数组的元素进行求和：</description>
+ BPMN element Script support   Script Task 嵌入在脚本任务中的脚本    Processes, Activities, Sequence Flows, Gateways and Events   作为执行监听器的脚本    User Tasks   作为任务监听器的脚本    Sequence Flows   作为顺序流条件表达式的脚本    All Tasks, All Events, Transactions, Subprocesses and Connectors   输入输出参数映射中的脚本   使用脚本任务 通过BPMN 2.</description>
     </item>
     
     <item>
@@ -7731,17 +7731,6 @@ Parameters Path Parameters  Name Description   id The id of the task to retrieve
     </item>
     
     <item>
-      <title>External Task Client Spring Boot Starter</title>
-      <link>http://camunda-cn.shaochenfeng.com/user-guide/ext-client/spring-boot-starter/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://camunda-cn.shaochenfeng.com/user-guide/ext-client/spring-boot-starter/</guid>
-      <description>Camunda provides a Spring Boot Starter for the External Task Client. This allows you to easily add the External Task Client to your Spring Boot application by adding the following Maven dependency to your pom.xml file:
-&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.camunda.bpm.springboot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;camunda-bpm-spring-boot-starter-external-task-client&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;7.15.0&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt;  Please check out our External Task Client Spring Boot Starter Examples.
-The Client can subscribe to one or more topic names that are defined in your BPMN process model.</description>
-    </item>
-    
-    <item>
       <title>Get Task Attachment</title>
       <link>http://camunda-cn.shaochenfeng.com/reference/rest/task/attachment/get-task-attachment/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -7751,6 +7740,22 @@ The Client can subscribe to one or more topic names that are defined in your BPM
 Method GET /task/{id}/attachment/{attachmentId}
 Parameters Path Parameters  Name Description   id The id of the task.   attachmentId The id of the attachment to be retrieved.   Result A JSON object corresponding to the Attachment interface in the engine. Its properties are as follows:
  Name Value Description   id String The id of the task attachment.</description>
+    </item>
+    
+    <item>
+      <title>外部任务客户端 Spring Boot Starter</title>
+      <link>http://camunda-cn.shaochenfeng.com/user-guide/ext-client/spring-boot-starter/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://camunda-cn.shaochenfeng.com/user-guide/ext-client/spring-boot-starter/</guid>
+      <description>Camunda 为外部任务客户端提供了一个 Spring Boot Starter。 这允许你可以通过将以下 Maven 依赖项添加到你的 pom.xml 文件，轻松地将外部任务客户端添加到你的 Spring Boot 应用程序：
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.camunda.bpm.springboot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;camunda-bpm-spring-boot-starter-external-task-client&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;7.15.0&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt;  请查看我们的 外部任务客户端 Spring Boot Starter 示例.
+客户端可以订阅在你的 BPMN 流程模型中定义的一个或多个主题名。 当执行在外部任务中等待时，客户端会执行你的自定义业务逻辑。 例如，检查客户的信用评分，如果成功，则外部任务可以标记为已完成并继续执行。
+主题订阅 允许实现自定义业务逻辑并与引擎交互的接口称为“ExternalTaskHandler”。 订阅由主题名称标识，并使用对“ExternalTaskHandler” bean 的引用进行配置。
+你可以通过定义一个返回类型为 ExternalTaskHandler 的 bean 并使用以下注释对该 bean 进行注释，从而为客户端订阅主题名称 creditScoreChecker：
+@ExternalTaskSubscription(&amp;quot;creditScoreChecker&amp;quot;)  注释至少需要一个主题名称。 但是，你可以通过引用“application.yml”文件中的主题名称来使用更多配置选项：
+camunda.bpm.client: base-url: http://localhost:8080/engine-rest subscriptions: creditScoreChecker: process-definition-key: loan_process include-extension-properties: true variable-names: defaultScore  或者，通过在注释中定义配置属性：
+@ExternalTaskSubscription( topicName = &amp;quot;creditScoreChecker&amp;quot;, processDefinitionKey = &amp;quot;loan_process&amp;quot;, includeExtensionProperties = true, variableNames = &amp;quot;defaultScore&amp;quot; )  请在 Javadocs中找到完整的属性列表。</description>
     </item>
     
     <item>
@@ -8161,7 +8166,7 @@ Parameters Path Parameters  Name Description   id The id of the task to set the 
     </item>
     
     <item>
-      <title>Camunda Platform RPA Bridge</title>
+      <title>Camunda平台 RPA Bridge</title>
       <link>http://camunda-cn.shaochenfeng.com/user-guide/camunda-bpm-rpa-bridge/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -8194,14 +8199,14 @@ Parameters Path Parameters  Name Description   id The id of the task.   varName 
     </item>
     
     <item>
-      <title>Version Compatibility</title>
+      <title>版本兼容性</title>
       <link>http://camunda-cn.shaochenfeng.com/user-guide/ext-client/compatibility-matrix/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/ext-client/compatibility-matrix/</guid>
-      <description>Each version of the Camunda Platform is bound to a specific version of the External Task Clients.
-Heads UpStarting with version 7.15.0, Camunda Platform and its compatible Java External Task Client always share the same version.
- Camunda Platform version NodeJs Java   7.9.x 1.0.x 1.0.x   7.10.x 1.1.x 1.1.x   7.11.x 1.1.x, 1.2.x 1.2.x   7.12.x 1.3.x 1.3.x   7.13.x 2.0.x 1.3.x   7.</description>
+      <description>Camunda 平台的每个版本都绑定到 外部任务客户端 的特定版本。
+注意从 7.15.0 版本开始，Camunda 平台及其兼容的 Java 外部任务客户端始终使用相同的版本号。
+ Camunda平台版本 NodeJs Java   7.9.x 1.0.x 1.0.x   7.10.x 1.1.x 1.1.x   7.11.x 1.1.x, 1.2.x 1.2.x   7.12.x 1.3.x 1.3.x   7.13.x 2.0.x 1.3.x   7.14.x 2.0.x 1.4.x   7.15.x 2.1.x 7.15.x   Camunda 仅推荐（并支持）这些默认组合。 尽管如此，外部任务客户端的每个版本都可以与 Camunda 平台工作流引擎的更新补丁版本结合使用。</description>
     </item>
     
     <item>
@@ -8267,10 +8272,10 @@ Parameters Path Parameters  Name Description   id The id of the task in which co
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/reference/rest/task/delete/</guid>
-      <description>Removes a task by id.
+      <description>Removes a task by id. Only tasks that are not part of a running process or case can be deleted; only standalone tasks can be deleted.
 Method DELETE /task/{id}
 Parameters Path Parameters  Name Description   id The id of the task to be removed.   Result This method returns no content.
-Response Codes  Code Media type Description   204  Request successful.   400 application/json  Bad Request. The Task with the given id does not exist. See the Introduction for the error response format.</description>
+Response Codes  Code Media type Description   204  Request successful.   400 application/json  Bad Request.</description>
     </item>
     
     <item>

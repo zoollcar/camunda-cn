@@ -1318,7 +1318,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/ext-client/compatibility-matrix/" >Version Compatibility</a>
+      <a href="/user-guide/ext-client/compatibility-matrix/" >版本兼容性</a>
     
   </li>
 
@@ -1331,7 +1331,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/camunda-bpm-rpa-bridge/" >Camunda Platform RPA Bridge</a>
+      <a href="/user-guide/camunda-bpm-rpa-bridge/" >Camunda平台 RPA Bridge</a>
     
   </li>
 
@@ -8225,7 +8225,7 @@ var _mtac = {};
 
 <h1 id="3-replace-optional-camunda-dependencies">3. Replace Optional Camunda Dependencies</h1>
 
-<p>In addition to the core libraries, there may be optional artifacts in <code>$WLS_DOMAIN_HOME/lib</code> for LDAP integration, Camunda Spin, and Groovy scripting. If you use any of these extensions, the following update steps apply:</p>
+<p>In addition to the core libraries, there may be optional artifacts in <code>$WLS_DOMAIN_HOME/lib</code> for LDAP integration, Camunda Spin, and scripting. If you use any of these extensions, the following update steps apply:</p>
 
 <h2 id="ldap-integration">LDAP integration</h2>
 
@@ -8250,6 +8250,19 @@ var _mtac = {};
 <hr />
 
 <p><code>camunda-spin-dataformat-all</code> and <code>camunda-engine-plugin-spin</code> are part of the .ear</p>
+
+<h2 id="graalvm-javascript">GraalVM JavaScript</h2>
+
+<p>Copy the following libraries from <code>$WLS_DISTRIBUTION/modules/lib</code> to the folder <code>$WLS_DOMAIN_HOME/lib</code>, if present:</p>
+
+<ul>
+<li><code>graal-sdk-$GRAALJS_VERSION.jar</code></li>
+<li><code>icu4j-$ICU4J_VERSION.jar</code></li>
+<li><code>js-$GRAALJS_VERSION.jar</code></li>
+<li><code>js-scriptengine-$GRAALJS_VERSION.jar</code></li>
+<li><code>regex-$GRAALJS_VERSION.jar</code></li>
+<li><code>truffle-api-$GRAALJS_VERSION.jar</code></li>
+</ul>
 
 <h1 id="4-maintain-the-camunda-platform-configuration">4. Maintain the Camunda Platform Configuration</h1>
 
@@ -8284,6 +8297,7 @@ var _mtac = {};
 <li><a href="#ldap-integration">LDAP integration</a></li>
 <li><a href="#camunda-connect-plugin">Camunda Connect Plugin</a></li>
 <li><a href="#camunda-spin">Camunda Spin</a></li>
+<li><a href="#graalvm-javascript">GraalVM JavaScript</a></li>
 </ul></li>
 <li><a href="#4-maintain-the-camunda-platform-configuration">4. Maintain the Camunda Platform Configuration</a></li>
 <li><a href="#5-install-the-camunda-archive">5. Install the Camunda Archive</a></li>

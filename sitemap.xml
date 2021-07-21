@@ -3283,15 +3283,15 @@
   </url>
   
   <url>
-    <loc>http://camunda-cn.shaochenfeng.com/user-guide/ext-client/spring-boot-starter/</loc>
-  </url>
-  
-  <url>
     <loc>http://camunda-cn.shaochenfeng.com/reference/rest/task/attachment/get-task-attachment/</loc>
   </url>
   
   <url>
     <loc>http://camunda-cn.shaochenfeng.com/reference/rest/task/</loc>
+  </url>
+  
+  <url>
+    <loc>http://camunda-cn.shaochenfeng.com/user-guide/ext-client/spring-boot-starter/</loc>
   </url>
   
   <url>
