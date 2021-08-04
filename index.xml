@@ -89,13 +89,16 @@ connector  Description The configuration of a camunda connector.    Attributes &
     </item>
     
     <item>
-      <title>Camunda Platform Services</title>
+      <title>Camunda Platform 服务</title>
       <link>http://camunda-cn.shaochenfeng.com/user-guide/runtime-container-integration/bpm-platform-services/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/runtime-container-integration/bpm-platform-services/</guid>
-      <description>To inspect the current state of configured process engines and deployed process applications, the class org.camunda.bpm.BpmPlatform offers access to the ProcessEngineService and the ProcessApplicationService.
-ProcessEngineService The ProcessEngineServicecan be accessed by calling BpmPlatform.getProcessEngineService(). It offers access to the default process engine, as well as any process engine by its name as specified in the process engine configuration. It returns ProcessEngine objects from which any services for a specific engine can be accessed.</description>
+      <description>org.camunda.bpm.BpmPlatform 类提供对 ProcessEngineService 和 ProcessApplicationService 的访问，可以用来检查配置的流程引擎和部署的流程应用程序的当前状态。
+ProcessEngineService ProcessEngineService可以通过调用 BpmPlatform.getProcessEngineService() 来访问。它提供对默认流程引擎以及流程引擎配置中指定的名称的任何流程引擎的访问。它返回“ProcessEngine”对象，可以从中访问特定引擎的任何服务。
+ProcessApplicationService ProcessApplicationService可以通过 BpmPlatform.getProcessApplicationService() 访问。它提供了在其运行的应用程序服务器上进行的流程应用程序部署的详细信息。这意味着它不提供跨集群中所有节点的全局视图。
+通过流程应用程序名称，可以检索包含有关此流程应用程序进行的部署的详细信息的“ProcessApplicationInfo”对象。这些对应于 processes.xml 中声明的流程档案。
+此外，可以检索特定于应用程序的属性，例如 servlet 流程应用程序中的 servlet 上下文路径。</description>
     </item>
     
     <item>
@@ -1401,6 +1404,16 @@ Java Dependencies logback-classic@1.2.3(EPL 1.0)Copyright (C) 1999-2015, QOS.ch.
     </item>
     
     <item>
+      <title>Camunda Platform 服务 的 JNDI 绑定</title>
+      <link>http://camunda-cn.shaochenfeng.com/user-guide/runtime-container-integration/jndi-bindings-for-bpmn-platform-services/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://camunda-cn.shaochenfeng.com/user-guide/runtime-container-integration/jndi-bindings-for-bpmn-platform-services/</guid>
+      <description>Camunda 平台服务（即流程引擎服务和流程应用程序服务）通过具有以下 JNDI 名称的 JNDI 绑定提供：
+ Process Engine Service: java:global/camunda-bpm-platform/process-engine/ProcessEngineService!org.camunda.bpm.ProcessEngineService Process Application Service: java:global/camunda-bpm-platform/process-engine/ProcessApplicationService!org.camunda.bpm.ProcessApplicationService  在 JBoss EAP 和 WildFly 上，你可以通过 JNDI 查找获得任何这些 Camunda 平台服务。 但是，在 Apache Tomcat 上，你必须做更多的事情才能进行查找以获取这些 Camunda 平台服务之一。</description>
+    </item>
+    
+    <item>
       <title>Case Instance View</title>
       <link>http://camunda-cn.shaochenfeng.com/webapps/cockpit/cmmn/case-instance-view/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2123,16 +2136,6 @@ Reading this GuideThroughout this guide we will use a number of variables to de
     </item>
     
     <item>
-      <title>JNDI Bindings for Camunda Platform Services</title>
-      <link>http://camunda-cn.shaochenfeng.com/user-guide/runtime-container-integration/jndi-bindings-for-bpmn-platform-services/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://camunda-cn.shaochenfeng.com/user-guide/runtime-container-integration/jndi-bindings-for-bpmn-platform-services/</guid>
-      <description>The Camunda Platform Services (i.e., Process Engine Service and Process Application Service) are provided via JNDI Bindings with the following JNDI names:
- Process Engine Service: java:global/camunda-bpm-platform/process-engine/ProcessEngineService!org.camunda.bpm.ProcessEngineService Process Application Service: java:global/camunda-bpm-platform/process-engine/ProcessApplicationService!org.camunda.bpm.ProcessApplicationService  On JBoss EAP and WildFly, you are able to get any of these Camunda Platform Services through a JNDI lookup. However, on Apache Tomcat you have to do quite a bit more to be able to do a lookup to get one of these Camunda Platform Services.</description>
-    </item>
-    
-    <item>
       <title>JTA Transaction Integration</title>
       <link>http://camunda-cn.shaochenfeng.com/user-guide/cdi-java-ee-integration/jta-transaction-integration/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2489,14 +2492,17 @@ angular.bootstrap(window.document, [&#39;cam.embedded.forms&#39;, ...]);  Angula
     </item>
     
     <item>
-      <title>Apache Tomcat Integration</title>
+      <title>Apache Tomcat 整合</title>
       <link>http://camunda-cn.shaochenfeng.com/user-guide/runtime-container-integration/tomcat/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/runtime-container-integration/tomcat/</guid>
-      <description>JNDI Bindings To use the JNDI Bindings for Camunda Platform Services on Apache Tomcat you have to add the file META-INF/context.xml to your process application and add the following ResourceLinks:
-&amp;lt;Context&amp;gt; &amp;lt;ResourceLink name=&amp;quot;ProcessEngineService&amp;quot; global=&amp;quot;global/camunda-bpm-platform/process-engine/ProcessEngineService!org.camunda.bpm.ProcessEngineService&amp;quot; type=&amp;quot;org.camunda.bpm.ProcessEngineService&amp;quot; /&amp;gt; &amp;lt;ResourceLink name=&amp;quot;ProcessApplicationService&amp;quot; global=&amp;quot;global/camunda-bpm-platform/process-engine/ProcessApplicationService!org.camunda.bpm.ProcessApplicationService&amp;quot; type=&amp;quot;org.camunda.bpm.ProcessApplicationService&amp;quot; /&amp;gt; &amp;lt;/Context&amp;gt;  These elements are used to create a link to the global JNDI Resources defined in $TOMCAT_HOME/conf/server.xml.
-Furthermore, declare the dependency on the JNDI binding inside the WEB-INF/web.</description>
+      <description>JNDI 绑定 要在 Apache Tomcat 上使用 Camunda 平台服务的 JNDI 绑定，您必须将文件“META-INF/context.xml”添加到流程应用程序并添加以下 ResourceLinks:
+&amp;lt;Context&amp;gt; &amp;lt;ResourceLink name=&amp;quot;ProcessEngineService&amp;quot; global=&amp;quot;global/camunda-bpm-platform/process-engine/ProcessEngineService!org.camunda.bpm.ProcessEngineService&amp;quot; type=&amp;quot;org.camunda.bpm.ProcessEngineService&amp;quot; /&amp;gt; &amp;lt;ResourceLink name=&amp;quot;ProcessApplicationService&amp;quot; global=&amp;quot;global/camunda-bpm-platform/process-engine/ProcessApplicationService!org.camunda.bpm.ProcessApplicationService&amp;quot; type=&amp;quot;org.camunda.bpm.ProcessApplicationService&amp;quot; /&amp;gt; &amp;lt;/Context&amp;gt;  这些元素用于创建到在$TOMCAT_HOME/conf/server.xml 中定义的全局 JNDI 资源的链接。
+此外，在WEB-INF/web.xml 部署描述符中声明对JNDI 绑定的依赖。
+&amp;lt;web-app&amp;gt; &amp;lt;resource-ref&amp;gt; &amp;lt;description&amp;gt;Process Engine Service&amp;lt;/description&amp;gt; &amp;lt;res-ref-name&amp;gt;ProcessEngineService&amp;lt;/res-ref-name&amp;gt; &amp;lt;res-type&amp;gt;org.camunda.bpm.ProcessEngineService&amp;lt;/res-type&amp;gt; &amp;lt;res-auth&amp;gt;Container&amp;lt;/res-auth&amp;gt; &amp;lt;/resource-ref&amp;gt; &amp;lt;resource-ref&amp;gt; &amp;lt;description&amp;gt;Process Application Service&amp;lt;/description&amp;gt; &amp;lt;res-ref-name&amp;gt;ProcessApplicationService&amp;lt;/res-ref-name&amp;gt; &amp;lt;res-type&amp;gt;org.camunda.bpm.ProcessApplicationService&amp;lt;/res-type&amp;gt; &amp;lt;res-auth&amp;gt;Container&amp;lt;/res-auth&amp;gt; &amp;lt;/resource-ref&amp;gt; ... &amp;lt;/web-app&amp;gt;  注意: 您可以为流程引擎服务和流程应用服务选择不同的资源链接名。资源链接名必须与“WEB-INF/web.xml”中相应“”元素内的“”元素的值相匹配。我们建议流程引擎服务的名为“ProcessEngineService”，流程应用程序服务的名为“ProcessApplicationService”。
+要查找 Camunda 平台服务，您必须使用资源链接名称来获取链接的全局资源。 例如：
+ Process Engine Service: java:comp/env/ProcessEngineService Process Application Service: java:comp/env/ProcessApplicationService  如果您声明了我们建议的其他资源链接名称，则必须使用java:comp/env/$YOUR_RESOURCE_LINK_NAME 进行查找以获取相应的 Camunda 平台服务。</description>
     </item>
     
     <item>
@@ -4075,10 +4081,10 @@ Galera Cluster 的已知的限制 使用Galera Cluster时，有以下已知限�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/process-applications/maven-archetypes/</guid>
-      <description>我们为 Maven 提供了几个项目模板，也称为原型。 它们支持使用 Camunda 平台开发可用于生产的流程应用程序的快速搭建。 我们将不同应用程序类型的最佳实践纳入模板，以帮助您从坚实的基础开始。
+      <description>我们为 Maven 提供了几个项目模板，也称为原型。 它们支持使用 Camunda 平台开发可用于生产的流程应用程序的快速搭建。 我们将不同应用程序类型的最佳实践纳入模板，以帮助你从坚实的基础开始。
 原型可用于生成不同使用部分中详述的项目。 如果你不能自己从 Archetype 生成项目，我们还为每个 Archetype 提供了一个模板 GitHub 存储库。
 可用的 Maven 原型概述 当前提供了以下原型。 它们通过我们的 Maven 存储库分发: https://app.camunda.com/nexus/service/rest/repository/browse/camunda-bpm/
- 原型描述    Camunda Cockpit Plugin Camunda Cockpit 插件，包含 REST-Backend、MyBatis 数据库查询、HTML 和 JavaScript 前端、用于一键部署的 Ant 构建脚本   Process Application (EJB, WAR) 在 Java EE 容器中使用共享 Camunda 平台引擎的流程应用程序，例如 JBoss Wildfly。 包含：Camunda EJB 客户端、Camunda CDI 集成、BPMN 流程、Java 委托作为 CDI bean、基于 HTML5 和 JSF 的启动和任务表单， JPA (Hibernate) 配置、内存引擎和可视化过程测试覆盖的 JUnit 测试、JBoss AS7 和 Wildfly 的 Arquillian 测试、Maven 插件或 Ant 构建脚本，用于在 Eclipse 中一键部署   Process Application (Servlet, WAR) 在 Servlet 容器中使用共享 Camunda Platform 引擎的流程应用程序，例如 Apache Tomcat。 包含：Servlet 流程应用程序、BPMN 流程、Java Delegate、基于 HTML5 的启动和任务表单、 使用内存引擎、Maven 插件或 Ant 构建脚本在 Eclipse 中进行一键部署的 JUnit 测试   Camunda Spring Boot Application 使用 Camunda Spring Boot Starter 的应用程序。 包含：Spring Boot Process Application、Camunda Webapps、BPMN Process、Java Delegate、基于 HTML5 的启动和任务表单、 使用内存引擎进行 JUnit 测试，用于打包为可执行应用程序的 Maven 插件。   Camunda Spring Boot Application with Demo Users 与 Spring Boot Application 原型相同，另外还创建了演示用户和组，以便轻松启动 Camunda Webapps（使用 demo/demo 登录）。   Process Engine Plugin 流程引擎插件的示例。 包含：流程引擎插件、通过插件注册的 BPMN 解析监听器、添加到每个用户任务的任务监听器、使用内存引擎的 JUnit 测试。    模板代码仓库 我们为每个 Camunda Archetype 提供了一个模板存储库。 每个存储库都包含一个从一个特定模板生成的项目。 您可以在 GitHub 上找到整个列表。</description>
+ 原型描述    Camunda Cockpit Plugin Camunda Cockpit 插件，包含 REST-Backend、MyBatis 数据库查询、HTML 和 JavaScript 前端、用于一键部署的 Ant 构建脚本   Process Application (EJB, WAR) 在 Java EE 容器中使用共享 Camunda 平台引擎的流程应用程序，例如 JBoss Wildfly。 包含：Camunda EJB 客户端、Camunda CDI 集成、BPMN 流程、Java 委托作为 CDI bean、基于 HTML5 和 JSF 的启动和任务表单， JPA (Hibernate) 配置、内存引擎和可视化过程测试覆盖的 JUnit 测试、JBoss AS7 和 Wildfly 的 Arquillian 测试、Maven 插件或 Ant 构建脚本，用于在 Eclipse 中一键部署   Process Application (Servlet, WAR) 在 Servlet 容器中使用共享 Camunda Platform 引擎的流程应用程序，例如 Apache Tomcat。 包含：Servlet 流程应用程序、BPMN 流程、Java Delegate、基于 HTML5 的启动和任务表单、 使用内存引擎、Maven 插件或 Ant 构建脚本在 Eclipse 中进行一键部署的 JUnit 测试   Camunda Spring Boot Application 使用 Camunda Spring Boot Starter 的应用程序。 包含：Spring Boot Process Application、Camunda Webapps、BPMN Process、Java Delegate、基于 HTML5 的启动和任务表单、 使用内存引擎进行 JUnit 测试，用于打包为可执行应用程序的 Maven 插件。   Camunda Spring Boot Application with Demo Users 与 Spring Boot Application 原型相同，另外还创建了演示用户和组，以便轻松启动 Camunda Webapps（使用 demo/demo 登录）。   Process Engine Plugin 流程引擎插件的示例。 包含：流程引擎插件、通过插件注册的 BPMN 解析监听器、添加到每个用户任务的任务监听器、使用内存引擎的 JUnit 测试。    模板代码仓库 我们为每个 Camunda Archetype 提供了一个模板存储库。 每个存储库都包含一个从一个特定模板生成的项目。 你可以在 GitHub 上找到整个列表。</description>
     </item>
     
     <item>
@@ -4338,6 +4344,19 @@ Overview On the left side of the page, two lists of running and finished batches
       
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/cdi-java-ee-integration/built-in-beans/</guid>
       <description>The ProcessEngine as well as the services are available for injection: @Inject ProcessEngine, RepositoryService, TaskService, &amp;hellip; A specific named ProcessEngine and its services can be injected by adding the qualifier @ProcessEngineName(&#39;someEngine&#39;) The current process instance and task can be injected: @Inject ProcessInstance, Task, The current business key can be injected: @Inject @BusinessKey String businessKey, The current process instance id be injected: @Inject @ProcessInstanceId String pid.  Process variables are available for injection.</description>
+    </item>
+    
+    <item>
+      <title>Camunda JBoss/WildFly 子系统</title>
+      <link>http://camunda-cn.shaochenfeng.com/user-guide/runtime-container-integration/jboss/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://camunda-cn.shaochenfeng.com/user-guide/runtime-container-integration/jboss/</guid>
+      <description>安装指南如果你下载完整发行版, Camunda JBoss/Wildfly 子系统已经内置于应用程序服务器中了。
+阅读安装指南 了解如何将 Camunda JBoss/Wildfly 子系统安装到您的 JBoss AS 7 或 Wildfly 服务器中。
+Camunda 平台以自定义 JBoss/Wildfly 子系统. 的形式为 JBoss AS 7 和 Wildfly 提供高级集成
+最突出的特点是：
+ 将流程引擎部署为共享 JBoss 模块。 在 standalone.xml / domain.xml 中配置流程引擎并通过 JBoss 管理系统对其进行管理。 流程引擎是具有服务生命周期和依赖关系的原生 JBoss 服务。 自动部署 BPMN 2.0 流程（通过流程应用 API）。 （仅限 JBoss AS 7）- 将 JBoss Threads 提供的托管线程池与 Job Executor 结合使用。 （仅限 Wildfly）- 为通过 Camunda 平台子系统配置的作业执行器使用托管线程池。  配置 Job 执行器 standalone.xml/domain.xml This section only applies to Wildfly!</description>
     </item>
     
     <item>
@@ -4933,19 +4952,6 @@ public class DecisionTest { @Rule public DmnEngineRule dmnEngineRule = new DmnEn
     </item>
     
     <item>
-      <title>The Camunda JBoss/WildFly Subsystem</title>
-      <link>http://camunda-cn.shaochenfeng.com/user-guide/runtime-container-integration/jboss/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://camunda-cn.shaochenfeng.com/user-guide/runtime-container-integration/jboss/</guid>
-      <description>Installation GuideIf you download a full distribution, the Camunda JBoss/Wildfly subsystem is readily installed into the application server.
-Read the installation guide to learn how to install the Camunda JBoss/Wildfly subsystem into your JBoss AS 7 or Wildfly Server.
-Camunda Platform provides advanced integration for JBoss AS 7 and Wildfly in the form of a custom JBoss/Wildfly Subsystem.
-The most prominent features are:
- Deploy the process engine as shared JBoss module.</description>
-    </item>
-    
-    <item>
       <title>Update Filter</title>
       <link>http://camunda-cn.shaochenfeng.com/reference/rest/filter/put-update/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -5465,7 +5471,7 @@ Binding a Hidden Element to a Process Variable A hidden input can be bound to a 
     </item>
     
     <item>
-      <title>Job Execution with Managed Resources</title>
+      <title>Job Execution 与 托管服务</title>
       <link>http://camunda-cn.shaochenfeng.com/user-guide/runtime-container-integration/job-execution-with-managed-resources/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       

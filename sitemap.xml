@@ -655,6 +655,10 @@
   </url>
   
   <url>
+    <loc>http://camunda-cn.shaochenfeng.com/user-guide/runtime-container-integration/jndi-bindings-for-bpmn-platform-services/</loc>
+  </url>
+  
+  <url>
     <loc>http://camunda-cn.shaochenfeng.com/reference/rest/history/case-instance/</loc>
   </url>
   
@@ -944,10 +948,6 @@
   
   <url>
     <loc>http://camunda-cn.shaochenfeng.com/installation/standalone-webapplication/</loc>
-  </url>
-  
-  <url>
-    <loc>http://camunda-cn.shaochenfeng.com/user-guide/runtime-container-integration/jndi-bindings-for-bpmn-platform-services/</loc>
   </url>
   
   <url>
@@ -1839,6 +1839,10 @@
   </url>
   
   <url>
+    <loc>http://camunda-cn.shaochenfeng.com/user-guide/runtime-container-integration/jboss/</loc>
+  </url>
+  
+  <url>
     <loc>http://camunda-cn.shaochenfeng.com/reference/rest/case-instance/</loc>
   </url>
   
@@ -2076,10 +2080,6 @@
   
   <url>
     <loc>http://camunda-cn.shaochenfeng.com/user-guide/dmn-engine/testing/</loc>
-  </url>
-  
-  <url>
-    <loc>http://camunda-cn.shaochenfeng.com/user-guide/runtime-container-integration/jboss/</loc>
   </url>
   
   <url>

@@ -55,7 +55,7 @@ var _mtac = {};
     
   
 
-  <title>The Camunda JBoss/WildFly Subsystem | docs.camunda.org</title>
+  <title>Camunda JBoss/WildFly 子系统 | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
   <link rel="shortcut icon" href="http://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
@@ -722,7 +722,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/runtime-container-integration/bpm-platform-services/" >Camunda Platform Services</a>
+      <a href="/user-guide/runtime-container-integration/bpm-platform-services/" >Camunda Platform 服务</a>
     
   </li>
 
@@ -730,7 +730,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/runtime-container-integration/jndi-bindings-for-bpmn-platform-services/" >JNDI Bindings for Camunda Platform Services</a>
+      <a href="/user-guide/runtime-container-integration/jndi-bindings-for-bpmn-platform-services/" >JNDI 绑定</a>
     
   </li>
 
@@ -754,7 +754,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/runtime-container-integration/job-execution-with-managed-resources/" >Job Execution with Managed Resources</a>
+      <a href="/user-guide/runtime-container-integration/job-execution-with-managed-resources/" >Job Execution 与 托管服务</a>
     
   </li>
 
@@ -8171,7 +8171,7 @@ var _mtac = {};
     <i>编辑此页</i> <span class="cam-docs-github"></span></a>
 </div>
 
-      <h1 class="page-title">The Camunda JBoss/WildFly Subsystem</h1>
+      <h1 class="page-title">Camunda JBoss/WildFly 子系统</h1>
     </div>
 
     <div class="col-xs-12 content-text">
@@ -8179,28 +8179,28 @@ var _mtac = {};
 
 
 <div class="note bg-info docs-info">
-  <h3>Installation Guide</h3>
-  <p><p>If you <a href="http://camunda.org/download/">download a full distribution</a>, the Camunda JBoss/Wildfly subsystem is readily installed into the application server.</p>
+  <h3>安装指南</h3>
+  <p><p>如果你<a href="http://camunda.org/download/">下载完整发行版</a>, Camunda JBoss/Wildfly 子系统已经内置于应用程序服务器中了。</p>
 
-<p><a href="http://camunda-cn.shaochenfeng.com/installation/full/jboss/">Read the installation guide</a> to learn how to install the Camunda JBoss/Wildfly subsystem into your JBoss AS 7 or Wildfly Server.</p>
+<p><a href="http://camunda-cn.shaochenfeng.com/installation/full/jboss/">阅读安装指南</a> 了解如何将 Camunda JBoss/Wildfly 子系统安装到您的 JBoss AS 7 或 Wildfly 服务器中。</p>
 </p>
 </div>
 
 
-<p>Camunda Platform provides advanced integration for JBoss AS 7 and Wildfly in the form of a custom <a href="https://docs.jboss.org/author/display/AS71/Extending+JBoss+AS+7">JBoss/Wildfly Subsystem</a>.</p>
+<p>Camunda 平台以自定义 <a href="https://docs.jboss.org/author/display/AS71/Extending+JBoss+AS+7">JBoss/Wildfly 子系统</a>. 的形式为 JBoss AS 7 和 Wildfly 提供高级集成</p>
 
-<p>The most prominent features are:</p>
+<p>最突出的特点是：</p>
 
 <ul>
-<li>Deploy the process engine as shared JBoss module.</li>
-<li>Configure the process engine in <code>standalone.xml</code> / <code>domain.xml</code> and administer it though the JBoss Management System.</li>
-<li>Process Engines are native JBoss Services with service lifecycles and dependencies.</li>
-<li>Automatic deployment of BPMN 2.0 processes (through the Process Application API).</li>
-<li>(JBoss AS 7 only) - Use a managed Thread Pool provided by JBoss Threads in combination with the Job Executor.</li>
-<li>(Wildfly only) - Use a managed Thread Pool for the Job Executor configured through the Camunda Platform Subsystem.</li>
+<li>将流程引擎部署为共享 JBoss 模块。</li>
+<li>在 <code>standalone.xml</code> / <code>domain.xml</code> 中配置流程引擎并通过 JBoss 管理系统对其进行管理。</li>
+<li>流程引擎是具有服务生命周期和依赖关系的原生 JBoss 服务。</li>
+<li>自动部署 BPMN 2.0 流程（通过流程应用 API）。</li>
+<li>（仅限 JBoss AS 7）- 将 JBoss Threads 提供的托管线程池与 Job Executor 结合使用。</li>
+<li>（仅限 Wildfly）- 为通过 Camunda 平台子系统配置的作业执行器使用托管线程池。</li>
 </ul>
 
-<h1 id="configure-the-job-executor-in-standalone-xml-domain-xml">Configure the Job Executor in standalone.xml/domain.xml</h1>
+<h1 id="配置-job-执行器-standalone-xml-domain-xml">配置 Job 执行器 standalone.xml/domain.xml</h1>
 
 
 <div class="note bg-info docs-info">
@@ -8230,7 +8230,7 @@ You are able to configure it through the following new configuration elements be
 
 <p>Shown values are the default ones.</p>
 
-<h1 id="configure-a-process-engine-in-standalone-xml-domain-xml">Configure a Process Engine in standalone.xml/domain.xml</h1>
+<h1 id="配置流程引擎-standalone-xml-domain-xml">配置流程引擎 standalone.xml/domain.xml</h1>
 
 <p>Using the Camunda JBoss/Wildfly subsystem, it is possible to configure and manage the process engine through the JBoss Management Model. The most straightforward way is to add the process engine configuration to the <code>standalone.xml</code> file of the JBoss AS 7 / Wildfly Server:</p>
 
@@ -8267,7 +8267,7 @@ You are able to configure it through the following new configuration elements be
 
 <p>If you start up your JBoss AS 7 / Wildfly server with this configuration, it will automatically create the corresponding services and expose them through the management model.</p>
 
-<h1 id="provide-a-custom-process-engine-configuration-class">Provide a Custom Process Engine Configuration Class</h1>
+<h1 id="提供自定义流程引擎配置类">提供自定义流程引擎配置类</h1>
 
 <p>It is possible to provide a custom Process Engine Configuration class on JBoss AS 7 and Wildfly Application Server. To this extent, provide the fully qualified classname of the class in the <code>standalone.xml</code> file:</p>
 
@@ -8309,7 +8309,7 @@ class would provide a method named</p>
 </div>
 
 
-<h1 id="extend-a-process-engine-using-process-engine-plugins">Extend a Process Engine Using Process Engine Plugins</h1>
+<h1 id="使用流程引擎插件扩展流程引擎">使用流程引擎插件扩展流程引擎</h1>
 
 <p>It is possible to extend a process engine using the process engine plugins concept.
 You specify the process engine plugins in <code>standalone.xml</code>/<code>domain.xml</code> for each process engine separately as shown below:</p>
@@ -8346,13 +8346,13 @@ The restrictions which apply for <a href="#provide-a-custom-process-engine-confi
 <li>Properties map can be used for invoking primitive valued setters (Integer, String, Boolean) that follow the Java Bean conventions.</li>
 </ul>
 
-<h1 id="using-system-properties">Using System Properties</h1>
+<h1 id="使用系统属性">使用系统属性</h1>
 
 <p>To externalize environment specific parts of the configuration, it is possible to reference system properties using Ant-style expressions (i.e., <code>${PROPERTY_KEY}</code>).
 Expression resolution is supported for all elements and attributes except for the <code>name</code> attribute on the elements <code>process-engine</code> and <code>job-acquisition</code>.
 System properties may be set via command line (<code>-D</code>option). Read more on expressions in the documentation for <a href="https://docs.jboss.org/author/display/AS71/Expressions">JBoss</a> and <a href="http://docs.wildfly.org/15/Extending_WildFly.html#expressions">WildFly</a>.</p>
 
-<h2 id="example">Example</h2>
+<h2 id="案例">案例</h2>
 
 <pre><code class="language-xml">&lt;!-- ... --&gt;
 &lt;plugin&gt;
@@ -8364,7 +8364,7 @@ System properties may be set via command line (<code>-D</code>option). Read more
 &lt;!-- ... --&gt;
 </code></pre>
 
-<h1 id="look-up-a-process-engine-in-jndi">Look Up a Process Engine in JNDI</h1>
+<h1 id="在-jndi-中查找流程引擎">在 JNDI 中查找流程引擎</h1>
 
 <p>The Camunda JBoss/Wildfly subsystem provides the same <a href="http://camunda-cn.shaochenfeng.com/user-guide/runtime-container-integration/jndi-bindings-for-bpmn-platform-services/">JNDI bindings for the ProcessApplicationService and the ProcessEngineService</a> as provided on other containers. In addition, the Camunda JBoss/Wildfly subsystem creates JNDI Bindings for all managed process engines, allowing us to look them up directly.</p>
 
@@ -8388,11 +8388,11 @@ A declarative mechanism like <code>@Resource</code> could be</p>
 </div>
 
 
-<h1 id="manage-the-process-engine-through-the-jboss-management-system">Manage the Process Engine Through the JBoss Management System</h1>
+<h1 id="通过-jboss-管理系统管理流程引擎">通过 JBoss 管理系统管理流程引擎</h1>
 
 <p>To inspect and change the management model, we can use <a href="https://docs.jboss.org/author/display/AS72/Management+Clients">one of the multiple JBoss Management clients available</a>.</p>
 
-<h2 id="inspect-the-configuration">Inspect the Configuration</h2>
+<h2 id="检查配置">检查配置</h2>
 
 <p>It is possible to inspect the configuration using the CLI (Command Line Interface, jboss-cli.bat/sh):</p>
 
@@ -8430,7 +8430,7 @@ A declarative mechanism like <code>@Resource</code> could be</p>
 }
 </code></pre>
 
-<h2 id="stop-the-process-engine-through-the-jboss-management-system">Stop the Process Engine Through the JBoss Management System</h2>
+<h2 id="通过-jboss-管理系统停止流程引擎">通过 JBoss 管理系统停止流程引擎</h2>
 
 <p>Once the process engine is registered in the JBoss Management Model, it is possible to control it through the management API. For example, you can stop it through the CLI:</p>
 
@@ -8448,7 +8448,7 @@ A declarative mechanism like <code>@Resource</code> could be</p>
 </div>
 
 
-<h2 id="start-the-process-engine-through-the-jboss-management-system">Start the Process Engine Through the JBoss Management System</h2>
+<h2 id="通过-jboss-管理系统启动流程引擎">通过 JBoss 管理系统启动流程引擎</h2>
 
 <p>It is also possible to start a new process engine at runtime:</p>
 
@@ -8463,7 +8463,7 @@ A declarative mechanism like <code>@Resource</code> could be</p>
 <li>Distribute the configuration in the cluster and start / stop the process engine on all servers that are part of the same domain.</li>
 </ul>
 
-<h2 id="use-the-jboss-jconsole-extensions">Use the JBoss JConsole Extensions</h2>
+<h2 id="使用-jboss-jconsole-扩展">使用 JBoss JConsole 扩展</h2>
 
 <p>In some cases, you may find it more convenient to use the JBoss JConsole extension for starting a process engine.</p>
 
@@ -8478,7 +8478,7 @@ A declarative mechanism like <code>@Resource</code> could be</p>
 
 <p>The JConsole plugin allows you to inspect the management model graphically and build operations using a wizard. To start the JBoss JConsole plugin, start the jconsole.bat/sh file provided in the JBoss distribution. <a href="https://docs.jboss.org/author/display/AS72/JMX+subsystem+configuration">More Information in the JBoss Docs</a>.</p>
 
-<h1 id="manage-classpath-dependencies">Manage Classpath Dependencies</h1>
+<h1 id="管理-classpath-依赖项">管理 Classpath 依赖项</h1>
 
 
 <div class="note bg-info docs-info">
@@ -8492,11 +8492,11 @@ A declarative mechanism like <code>@Resource</code> could be</p>
 
 <p>By default, the application server will not add this module to the classpath of applications. If an application needs to interact with the process engine, we must declare a module dependency in the application. This can be achieved using either an implicit or an explicit module dependency.</p>
 
-<h2 id="implicit-module-dependencies-with-the-process-application-api">Implicit Module Dependencies with the Process Application API</h2>
+<h2 id="process-application-api-的隐式模块依赖关系">Process Application API 的隐式模块依赖关系</h2>
 
 <p>When using the Process Application API (i.e., when deploying either a ServletProcessApplication or an EjbProcessApplication), the Camunda JBoss/Wildfly subsystem will detect the <code>@ProcessApplication</code> class in the deployment and automatically add a module dependency between the application and the process engine module. As a result, we don&rsquo;t have to declare the dependency ourselves. It is called an <a href="https://docs.jboss.org/author/display/AS72/Implicit+module+dependencies+for+deployments">implicit module dependency</a> because it is not explicitly declared but can be derived by inspecting the application and seeing that it provides a <code>@ProcessApplication</code> class.</p>
 
-<h2 id="explicit-module-dependencies">Explicit Module Dependencies</h2>
+<h2 id="显式模块依赖">显式模块依赖</h2>
 
 <p>If an application does not use the Process Application API but still needs the process engine classes to be added to its classpath, an explicit module dependency is required.
 JBoss AS 7 and Wildfly offer multiple <a href="https://docs.jboss.org/author/display/AS72/Class+Loading+in+AS7">different mechanisms for achieving this</a>. The simplest way is to add a manifest entry to the MANIFEST.MF file of the deployment. The following example illustrates how to generate such a dependency using the maven WAR plugin:</p>
@@ -8521,7 +8521,7 @@ JBoss AS 7 and Wildfly offer multiple <a href="https://docs.jboss.org/author/dis
 
 <p>As a result, the Application Service will add the process engine module to the classpath of the application.</p>
 
-<h1 id="manage-service-dependencies">Manage Service Dependencies</h1>
+<h1 id="管理服务依赖">管理服务依赖</h1>
 
 
 <div class="note bg-info docs-info">
@@ -8543,11 +8543,11 @@ JBoss AS 7 and Wildfly offer multiple <a href="https://docs.jboss.org/author/dis
 
 <p>There are three applications deployed and two process engine services exist. Application 1 and Application 2 are using Process Engine 1 and Application 3 is using Process Engine 2.</p>
 
-<h2 id="implicit-service-dependencies">Implicit Service Dependencies</h2>
+<h2 id="隐式服务依赖">隐式服务依赖</h2>
 
 <p>When using the Process Application API (i.e., when deploying either a ServletProcessApplication or an EjbProcessApplication), the Camunda JBoss/Wildfly subsystem will detect the <code>@ProcessApplication</code> class in the deployment and automatically add a service dependency between the process application component and the process engine module. This ensures that the process engine is available when the process application is deployed.</p>
 
-<h2 id="explicit-service-dependencies">Explicit Service Dependencies</h2>
+<h2 id="显式服务依赖">显式服务依赖</h2>
 
 <p>If an application does not use the Process Application API but still needs to interact with a process engine, it is important to declare the dependency on the Process Engine Service explicitly. If we fail to declare the dependency, there is no guarantee that the process engine is available to the application.</p>
 
@@ -8591,31 +8591,31 @@ public class PaComponent {
   <h3>目录:</h3>
   <nav id="TableOfContents">
 <ul>
-<li><a href="#configure-the-job-executor-in-standalone-xml-domain-xml">Configure the Job Executor in standalone.xml/domain.xml</a></li>
-<li><a href="#configure-a-process-engine-in-standalone-xml-domain-xml">Configure a Process Engine in standalone.xml/domain.xml</a></li>
-<li><a href="#provide-a-custom-process-engine-configuration-class">Provide a Custom Process Engine Configuration Class</a></li>
-<li><a href="#extend-a-process-engine-using-process-engine-plugins">Extend a Process Engine Using Process Engine Plugins</a></li>
-<li><a href="#using-system-properties">Using System Properties</a>
+<li><a href="#配置-job-执行器-standalone-xml-domain-xml">配置 Job 执行器 standalone.xml/domain.xml</a></li>
+<li><a href="#配置流程引擎-standalone-xml-domain-xml">配置流程引擎 standalone.xml/domain.xml</a></li>
+<li><a href="#提供自定义流程引擎配置类">提供自定义流程引擎配置类</a></li>
+<li><a href="#使用流程引擎插件扩展流程引擎">使用流程引擎插件扩展流程引擎</a></li>
+<li><a href="#使用系统属性">使用系统属性</a>
 <ul>
-<li><a href="#example">Example</a></li>
+<li><a href="#案例">案例</a></li>
 </ul></li>
-<li><a href="#look-up-a-process-engine-in-jndi">Look Up a Process Engine in JNDI</a></li>
-<li><a href="#manage-the-process-engine-through-the-jboss-management-system">Manage the Process Engine Through the JBoss Management System</a>
+<li><a href="#在-jndi-中查找流程引擎">在 JNDI 中查找流程引擎</a></li>
+<li><a href="#通过-jboss-管理系统管理流程引擎">通过 JBoss 管理系统管理流程引擎</a>
 <ul>
-<li><a href="#inspect-the-configuration">Inspect the Configuration</a></li>
-<li><a href="#stop-the-process-engine-through-the-jboss-management-system">Stop the Process Engine Through the JBoss Management System</a></li>
-<li><a href="#start-the-process-engine-through-the-jboss-management-system">Start the Process Engine Through the JBoss Management System</a></li>
-<li><a href="#use-the-jboss-jconsole-extensions">Use the JBoss JConsole Extensions</a></li>
+<li><a href="#检查配置">检查配置</a></li>
+<li><a href="#通过-jboss-管理系统停止流程引擎">通过 JBoss 管理系统停止流程引擎</a></li>
+<li><a href="#通过-jboss-管理系统启动流程引擎">通过 JBoss 管理系统启动流程引擎</a></li>
+<li><a href="#使用-jboss-jconsole-扩展">使用 JBoss JConsole 扩展</a></li>
 </ul></li>
-<li><a href="#manage-classpath-dependencies">Manage Classpath Dependencies</a>
+<li><a href="#管理-classpath-依赖项">管理 Classpath 依赖项</a>
 <ul>
-<li><a href="#implicit-module-dependencies-with-the-process-application-api">Implicit Module Dependencies with the Process Application API</a></li>
-<li><a href="#explicit-module-dependencies">Explicit Module Dependencies</a></li>
+<li><a href="#process-application-api-的隐式模块依赖关系">Process Application API 的隐式模块依赖关系</a></li>
+<li><a href="#显式模块依赖">显式模块依赖</a></li>
 </ul></li>
-<li><a href="#manage-service-dependencies">Manage Service Dependencies</a>
+<li><a href="#管理服务依赖">管理服务依赖</a>
 <ul>
-<li><a href="#implicit-service-dependencies">Implicit Service Dependencies</a></li>
-<li><a href="#explicit-service-dependencies">Explicit Service Dependencies</a></li>
+<li><a href="#隐式服务依赖">隐式服务依赖</a></li>
+<li><a href="#显式服务依赖">显式服务依赖</a></li>
 </ul></li>
 </ul>
 </nav>

@@ -55,7 +55,7 @@ var _mtac = {};
     
   
 
-  <title>Apache Tomcat Integration | docs.camunda.org</title>
+  <title>Apache Tomcat 整合 | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
   <link rel="shortcut icon" href="http://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
@@ -722,7 +722,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/runtime-container-integration/bpm-platform-services/" >Camunda Platform Services</a>
+      <a href="/user-guide/runtime-container-integration/bpm-platform-services/" >Camunda Platform 服务</a>
     
   </li>
 
@@ -730,7 +730,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/runtime-container-integration/jndi-bindings-for-bpmn-platform-services/" >JNDI Bindings for Camunda Platform Services</a>
+      <a href="/user-guide/runtime-container-integration/jndi-bindings-for-bpmn-platform-services/" >JNDI 绑定</a>
     
   </li>
 
@@ -754,7 +754,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/runtime-container-integration/job-execution-with-managed-resources/" >Job Execution with Managed Resources</a>
+      <a href="/user-guide/runtime-container-integration/job-execution-with-managed-resources/" >Job Execution 与 托管服务</a>
     
   </li>
 
@@ -8171,15 +8171,15 @@ var _mtac = {};
     <i>编辑此页</i> <span class="cam-docs-github"></span></a>
 </div>
 
-      <h1 class="page-title">Apache Tomcat Integration</h1>
+      <h1 class="page-title">Apache Tomcat 整合</h1>
     </div>
 
     <div class="col-xs-12 content-text">
       
 
-<h1 id="jndi-bindings">JNDI Bindings</h1>
+<h1 id="jndi-绑定">JNDI 绑定</h1>
 
-<p>To use the JNDI Bindings for Camunda Platform Services on Apache Tomcat you have to add the file <code>META-INF/context.xml</code> to your process application and add the following <a href="http://tomcat.apache.org/tomcat-9.0-doc/config/context.html#Resource_Links">ResourceLinks</a>:</p>
+<p>要在 Apache Tomcat 上使用 Camunda 平台服务的 JNDI 绑定，您必须将文件“META-INF/context.xml”添加到流程应用程序并添加以下 <a href="http://tomcat.apache.org/tomcat-9.0-doc/config/context.html#Resource_Links">ResourceLinks</a>:</p>
 
 <pre><code class="language-xml">&lt;Context&gt;
   &lt;ResourceLink name=&quot;ProcessEngineService&quot;
@@ -8192,9 +8192,9 @@ var _mtac = {};
 &lt;/Context&gt;
 </code></pre>
 
-<p>These elements are used to create a link to the global JNDI Resources defined in <code>$TOMCAT_HOME/conf/server.xml</code>.</p>
+<p>这些元素用于创建到在<code>$TOMCAT_HOME/conf/server.xml</code> 中定义的全局 JNDI 资源的链接。</p>
 
-<p>Furthermore, declare the dependency on the JNDI binding inside the <code>WEB-INF/web.xml</code> deployment descriptor.</p>
+<p>此外，在<code>WEB-INF/web.xml</code> 部署描述符中声明对JNDI 绑定的依赖。</p>
 
 <pre><code class="language-xml">&lt;web-app&gt;
   &lt;resource-ref&gt;
@@ -8213,80 +8213,66 @@ var _mtac = {};
 &lt;/web-app&gt;
 </code></pre>
 
-<p><strong>Note</strong>: You can choose different resource link names for the Process Engine Service and Process Application Service. The resource link name has to match the value inside the <code>&lt;res-ref-name&gt;</code>-element inside the corresponding <code>&lt;resource-ref&gt;</code>-element in <code>WEB-INF/web.xml</code>. We propose the name <code>ProcessEngineService</code> for the Process Engine Service and <code>ProcessApplicationService</code> for the Process Application Service.</p>
+<p><strong>注意</strong>: 您可以为流程引擎服务和流程应用服务选择不同的资源链接名。资源链接名必须与“WEB-INF/web.xml”中相应“<resource-ref>”元素内的“<res-ref-name>”元素的值相匹配。我们建议流程引擎服务的名为“ProcessEngineService”，流程应用程序服务的名为“ProcessApplicationService”。</p>
 
-<p>To do a lookup for a Camunda Platform Service you have to use the resource link name to get the linked global resource. For example:</p>
+<p>要查找 Camunda 平台服务，您必须使用资源链接名称来获取链接的全局资源。 例如：</p>
 
 <ul>
 <li>Process Engine Service: <code>java:comp/env/ProcessEngineService</code></li>
 <li>Process Application Service: <code>java:comp/env/ProcessApplicationService</code></li>
 </ul>
 
-<p>If you have declared other resource link names than we proposed, you have to use <code>java:comp/env/$YOUR_RESOURCE_LINK_NAME</code> to do a lookup to get the corresponding Camunda Platform Service.</p>
+<p>如果您声明了我们建议的其他资源链接名称，则必须使用<code>java:comp/env/$YOUR_RESOURCE_LINK_NAME</code> 进行查找以获取相应的 Camunda 平台服务。</p>
 
-<h1 id="job-executor-configuration">Job Executor Configuration</h1>
+<h1 id="job执行器配置">Job执行器配置</h1>
 
-<h2 id="tomcat-default-job-executor">Tomcat Default Job Executor</h2>
+<h2 id="tomcat-默认-job执行器">Tomcat 默认 Job执行器</h2>
 
-<p>The Camunda Platform on Apache Tomcat 9.x uses the default job executor. The default <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/">job executor</a> uses a ThreadPoolExecutor which manages a thread
-pool and a job queue.</p>
+<p>Apache Tomcat 9.x 上的 Camunda 平台使用默认Job执行程序。 默认的 <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/">job执行器</a> 使用 ThreadPoolExecutor 来管理线程池和Job队列。</p>
 
-<p>The core pool size, queue size, maximum pool size and keep-alive-time can be configured in the <code>bpm-platform.xml</code>.
-After configuring job acquisition, it is possible to set the values with the help of a <code>&lt;properties&gt;</code>
-tag. The correct syntax can be found in the <a href="http://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/job-executor/">references</a>.</p>
+<p>核心池大小、队列大小、最大池大小和保持活动时间可以在 <code>bpm-platform.xml</code> 中配置。
+配置job获取后，可以在<code>&lt;properties&gt;</code>标签下设置值。语法可以参考<a href="http://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/job-executor/">文档</a> 。</p>
 
-<p>All the previously mentioned properties except the queue size can be modified at runtime via the use of a JMX client.</p>
+<p>除了队列大小之外，前面提到的所有属性都可以在运行时通过 JMX 客户端进行修改。</p>
 
-<h2 id="core-pool-size">Core Pool Size</h2>
+<h2 id="核心池大小">核心池大小</h2>
 
-<p>The ThreadPoolExecutor automatically adjusts the size of the thread pool. The number of threads in
-the thread pool will tend to come to equilibrium with the number of threads set to core pool size.
-If a new job is presented to the job executor and the total number of threads in the pool is less
-than core, then a new thread will be created. Hence on initial use, the number of threads in the
-thread pool will ramp up to the core thread count.</p>
+<p>ThreadPoolExecutor 会自动调整线程池的大小。 线程池中的线程数将趋向于与设置为核心池大小的线程数达到平衡。
+如果一个新的Job提交给Job执行器并且池中的线程总数小于核心，那么将创建一个新线程。 因此，在初次使用时，线程池中的线程数将增加到核心线程数。</p>
 
 <ul>
-<li>The default core pool size is 3.</li>
+<li>默认核心池大小为 3 。</li>
 </ul>
 
-<h2 id="queue-size">Queue Size</h2>
+<h2 id="队列大小">队列大小</h2>
 
-<p>The ThreadPoolExecutor includes a job queue for buffering jobs. Once the core number of threads has
-been reached (and are in use), a new job presented to the job executor will result in the job being
-added to the ThreadPoolExecutor job queue.</p>
+<p>ThreadPoolExecutor 包括一个用于缓冲Job的Job队列。 一旦达到（并正在使用）线程的核心数量，提交给Job执行器的新Job将导致该Job被添加到 ThreadPoolExecutor Job队列。</p>
 
 <ul>
-<li>The default maximum length of the job queue is 3.</li>
+<li>Job队列的默认最大长度为 3 。</li>
 </ul>
 
-<h2 id="maximum-pool-size">Maximum Pool Size</h2>
+<h2 id="最大池大小">最大池大小</h2>
 
-<p>If the length of the queue were to exceed the maximum queue size, and the number of threads in the
-thread pool is less than the maximum pool size, then an additional thread is added to the thread
-pool. This will continue until the number of threads in the pool is equal to the maximum pool size:</p>
+<p>如果队列的长度超过最大队列大小，并且线程池中的线程数小于最大池大小，则将额外的线程添加到线程池中。 这将一直持续到池中的线程数等于最大池大小：</p>
 
 <ul>
-<li>The default maximum pool size is 10.</li>
+<li>默认的最大池大小为 10 。</li>
 </ul>
 
-<h2 id="keepalive">KeepAlive</h2>
+<h2 id="keepalive">keepalive</h2>
 
-<p>If a thread remains idle in the thread pool for longer than the keepalive time, and the number of
-threads exceeds core pool size, then the thread will be terminated. Hence the pool tends to settle
-around core thread count.</p>
+<p>如果线程在线程池中空闲的时间长于 keepalive 时间，并且线程数超过核心池大小，则该线程将被终止。 因此，池倾向于围绕核心线程数来解决。</p>
 
 <ul>
-<li>The default keepalive time is 0.</li>
+<li>默认 keepalive 时间为 0。</li>
 </ul>
 
-<h2 id="clustered-deployment">Clustered Deployment</h2>
+<h2 id="集群部署">集群部署</h2>
 
-<p>In a clustered deployment, multiple job executors will work with each other (Note: see <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/#job-execution-in-heterogeneous-clusters">Job
-Execution in Heterogeneous
-Clusters</a>).
-On startup, each job executor allocates a UUID which is used for identifying locked job ownership in the job
-table.  Hence in a two node cluster, the job executors may total up to 20 concurrent threads of
-execution.</p>
+<p>在集群部署中，多个Job执行程序将相互协作（注意：请参阅 <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/#job-execution-in-heterogeneous-clusters">Job
+在异构集群中执行</a>）.
+在启动时，每个Job执行器分配一个 UUID，用于标识Job表中锁定的Job所有权。 因此，在一个双节点集群中，Job执行程序总共可能有多达 20 个并发执行线程。</p>
 
     </div>
   </div>
@@ -8296,15 +8282,15 @@ execution.</p>
   <h3>目录:</h3>
   <nav id="TableOfContents">
 <ul>
-<li><a href="#jndi-bindings">JNDI Bindings</a></li>
-<li><a href="#job-executor-configuration">Job Executor Configuration</a>
+<li><a href="#jndi-绑定">JNDI 绑定</a></li>
+<li><a href="#job执行器配置">Job执行器配置</a>
 <ul>
-<li><a href="#tomcat-default-job-executor">Tomcat Default Job Executor</a></li>
-<li><a href="#core-pool-size">Core Pool Size</a></li>
-<li><a href="#queue-size">Queue Size</a></li>
-<li><a href="#maximum-pool-size">Maximum Pool Size</a></li>
-<li><a href="#keepalive">KeepAlive</a></li>
-<li><a href="#clustered-deployment">Clustered Deployment</a></li>
+<li><a href="#tomcat-默认-job执行器">Tomcat 默认 Job执行器</a></li>
+<li><a href="#核心池大小">核心池大小</a></li>
+<li><a href="#队列大小">队列大小</a></li>
+<li><a href="#最大池大小">最大池大小</a></li>
+<li><a href="#keepalive">keepalive</a></li>
+<li><a href="#集群部署">集群部署</a></li>
 </ul></li>
 </ul>
 </nav>
