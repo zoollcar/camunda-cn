@@ -55,7 +55,7 @@ var _mtac = {};
     
   
 
-  <title>Spring-Based Testing | docs.camunda.org</title>
+  <title>Spring-Based 测试 | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
   <link rel="shortcut icon" href="http://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
@@ -767,13 +767,21 @@ var _mtac = {};
           
   <li>
     
+      <a href="/user-guide/camunda-bpm-run/" >Camunda Platform Run</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
       <a href="/user-guide/spring-framework-integration/" >Spring 框架集成</a>
       <ul>
         
           
   <li>
     
-      <a href="/user-guide/spring-framework-integration/configuration/" >Bootstrapping</a>
+      <a href="/user-guide/spring-framework-integration/configuration/" >引导</a>
     
   </li>
 
@@ -789,7 +797,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/spring-framework-integration/deployment/" >Deployment</a>
+      <a href="/user-guide/spring-framework-integration/deployment/" >部署</a>
     
   </li>
 
@@ -797,7 +805,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/spring-framework-integration/expressions/" >Spring Bean Resolving</a>
+      <a href="/user-guide/spring-framework-integration/expressions/" >Spring Bean 解释</a>
     
   </li>
 
@@ -805,20 +813,12 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/spring-framework-integration/testing/" >Testing</a>
+      <a href="/user-guide/spring-framework-integration/testing/" >测试</a>
     
   </li>
 
         
       </ul>
-    
-  </li>
-
-        
-          
-  <li>
-    
-      <a href="/user-guide/camunda-bpm-run/" >运行Camunda平台</a>
     
   </li>
 
@@ -6774,7 +6774,7 @@ var _mtac = {};
     
   <li>
     
-      <a href="/webapps/" >Web应用程序</a>
+      <a href="/webapps/" >Web应用</a>
       <ul>
         
           
@@ -8171,11 +8171,11 @@ var _mtac = {};
     <i>编辑此页</i> <span class="cam-docs-github"></span></a>
 </div>
 
-      <h1 class="page-title">Spring-Based Testing</h1>
+      <h1 class="page-title">Spring-Based 测试</h1>
     </div>
 
     <div class="col-xs-12 content-text">
-      <p>When integrating with Spring, business processes can be tested very easily (in scope 2, see <a href="http://camunda-cn.shaochenfeng.com/user-guide/testing/#scoping-tests">Testing Scopes</a>) using the standard Camunda testing facilities. The following example shows how a business process is tested in a typical Spring-based unit test:</p>
+      <p>与 Spring 集成时，可以使用标准的 Camunda 测试工具非常轻松地测试业务流程（在范围 2 中，请参阅 <a href="http://camunda-cn.shaochenfeng.com/user-guide/testing/#scoping-tests">测试范围</a>）。 以下示例显示了如何在典型的基于 Spring 的单元测试中测试业务流程：</p>
 
 <pre><code class="language-java">@RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(&quot;classpath:org/camunda/bpm/engine/spring/test/junit4/springTypicalUsageTest-context.xml&quot;)
@@ -8205,8 +8205,8 @@ public class MyBusinessProcessTest {
 }
 </code></pre>
 
-<p>Note that for this to work, you need to define a <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/test/ProcessEngineRule.html">ProcessEngineRule</a>
- bean in the Spring configuration (which is injected by auto-wiring in the example above).</p>
+<p>请注意，要使其正常工作，你需要在 Spring 配置中定义一个 <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/test/ProcessEngineRule.html">ProcessEngineRule</a>
+ bean（即 在上面的例子中通过自动布线注入）。</p>
 
 <pre><code class="language-xml">&lt;bean id=&quot;processEngineRule&quot; class=&quot;org.camunda.bpm.engine.test.ProcessEngineRule&quot;&gt;
   &lt;property name=&quot;processEngine&quot; ref=&quot;processEngine&quot; /&gt;

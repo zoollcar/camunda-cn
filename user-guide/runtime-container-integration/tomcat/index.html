@@ -767,13 +767,21 @@ var _mtac = {};
           
   <li>
     
+      <a href="/user-guide/camunda-bpm-run/" >Camunda Platform Run</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
       <a href="/user-guide/spring-framework-integration/" >Spring 框架集成</a>
       <ul>
         
           
   <li>
     
-      <a href="/user-guide/spring-framework-integration/configuration/" >Bootstrapping</a>
+      <a href="/user-guide/spring-framework-integration/configuration/" >引导</a>
     
   </li>
 
@@ -789,7 +797,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/spring-framework-integration/deployment/" >Deployment</a>
+      <a href="/user-guide/spring-framework-integration/deployment/" >部署</a>
     
   </li>
 
@@ -797,7 +805,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/spring-framework-integration/expressions/" >Spring Bean Resolving</a>
+      <a href="/user-guide/spring-framework-integration/expressions/" >Spring Bean 解释</a>
     
   </li>
 
@@ -805,20 +813,12 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/spring-framework-integration/testing/" >Testing</a>
+      <a href="/user-guide/spring-framework-integration/testing/" >测试</a>
     
   </li>
 
         
       </ul>
-    
-  </li>
-
-        
-          
-  <li>
-    
-      <a href="/user-guide/camunda-bpm-run/" >运行Camunda平台</a>
     
   </li>
 
@@ -6774,7 +6774,7 @@ var _mtac = {};
     
   <li>
     
-      <a href="/webapps/" >Web应用程序</a>
+      <a href="/webapps/" >Web应用</a>
       <ul>
         
           
@@ -8179,7 +8179,7 @@ var _mtac = {};
 
 <h1 id="jndi-绑定">JNDI 绑定</h1>
 
-<p>要在 Apache Tomcat 上使用 Camunda 平台服务的 JNDI 绑定，您必须将文件“META-INF/context.xml”添加到流程应用程序并添加以下 <a href="http://tomcat.apache.org/tomcat-9.0-doc/config/context.html#Resource_Links">ResourceLinks</a>:</p>
+<p>要在 Apache Tomcat 上使用 Camunda 平台服务的 JNDI 绑定，你必须将文件“META-INF/context.xml”添加到流程应用程序并添加以下 <a href="http://tomcat.apache.org/tomcat-9.0-doc/config/context.html#Resource_Links">ResourceLinks</a>:</p>
 
 <pre><code class="language-xml">&lt;Context&gt;
   &lt;ResourceLink name=&quot;ProcessEngineService&quot;
@@ -8213,16 +8213,16 @@ var _mtac = {};
 &lt;/web-app&gt;
 </code></pre>
 
-<p><strong>注意</strong>: 您可以为流程引擎服务和流程应用服务选择不同的资源链接名。资源链接名必须与“WEB-INF/web.xml”中相应“<resource-ref>”元素内的“<res-ref-name>”元素的值相匹配。我们建议流程引擎服务的名为“ProcessEngineService”，流程应用程序服务的名为“ProcessApplicationService”。</p>
+<p><strong>注意</strong>: 你可以为流程引擎服务和流程应用服务选择不同的资源链接名。资源链接名必须与“WEB-INF/web.xml”中相应“<resource-ref>”元素内的“<res-ref-name>”元素的值相匹配。我们建议流程引擎服务的名为“ProcessEngineService”，流程应用程序服务的名为“ProcessApplicationService”。</p>
 
-<p>要查找 Camunda 平台服务，您必须使用资源链接名称来获取链接的全局资源。 例如：</p>
+<p>要查找 Camunda 平台服务，你必须使用资源链接名称来获取链接的全局资源。 例如：</p>
 
 <ul>
 <li>Process Engine Service: <code>java:comp/env/ProcessEngineService</code></li>
 <li>Process Application Service: <code>java:comp/env/ProcessApplicationService</code></li>
 </ul>
 
-<p>如果您声明了我们建议的其他资源链接名称，则必须使用<code>java:comp/env/$YOUR_RESOURCE_LINK_NAME</code> 进行查找以获取相应的 Camunda 平台服务。</p>
+<p>如果你声明了我们建议的其他资源链接名称，则必须使用<code>java:comp/env/$YOUR_RESOURCE_LINK_NAME</code> 进行查找以获取相应的 Camunda 平台服务。</p>
 
 <h1 id="job执行器配置">Job执行器配置</h1>
 

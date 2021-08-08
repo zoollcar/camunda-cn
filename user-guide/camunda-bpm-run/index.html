@@ -55,7 +55,7 @@ var _mtac = {};
     
   
 
-  <title>运行Camunda平台 | docs.camunda.org</title>
+  <title>Camunda Platform Run | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
   <link rel="shortcut icon" href="http://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
@@ -767,13 +767,21 @@ var _mtac = {};
           
   <li>
     
+      <a href="/user-guide/camunda-bpm-run/" >Camunda Platform Run</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
       <a href="/user-guide/spring-framework-integration/" >Spring 框架集成</a>
       <ul>
         
           
   <li>
     
-      <a href="/user-guide/spring-framework-integration/configuration/" >Bootstrapping</a>
+      <a href="/user-guide/spring-framework-integration/configuration/" >引导</a>
     
   </li>
 
@@ -789,7 +797,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/spring-framework-integration/deployment/" >Deployment</a>
+      <a href="/user-guide/spring-framework-integration/deployment/" >部署</a>
     
   </li>
 
@@ -797,7 +805,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/spring-framework-integration/expressions/" >Spring Bean Resolving</a>
+      <a href="/user-guide/spring-framework-integration/expressions/" >Spring Bean 解释</a>
     
   </li>
 
@@ -805,20 +813,12 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/spring-framework-integration/testing/" >Testing</a>
+      <a href="/user-guide/spring-framework-integration/testing/" >测试</a>
     
   </li>
 
         
       </ul>
-    
-  </li>
-
-        
-          
-  <li>
-    
-      <a href="/user-guide/camunda-bpm-run/" >运行Camunda平台</a>
     
   </li>
 
@@ -6774,7 +6774,7 @@ var _mtac = {};
     
   <li>
     
-      <a href="/webapps/" >Web应用程序</a>
+      <a href="/webapps/" >Web应用</a>
       <ul>
         
           
@@ -8171,23 +8171,23 @@ var _mtac = {};
     <i>编辑此页</i> <span class="cam-docs-github"></span></a>
 </div>
 
-      <h1 class="page-title">运行Camunda平台</h1>
+      <h1 class="page-title">Camunda Platform Run</h1>
     </div>
 
     <div class="col-xs-12 content-text">
       
 
-<p>This guide gives an introduction to Camunda Platform Run, a pre-packaged, lightweight distribution of the Camunda Platform. Camunda Platform Run is easy to configure and does not require Java knowledge.</p>
+<p>本指南介绍了 Camunda Platform Run，这是 Camunda Platform 的一个预打包的轻量级发行版。 Camunda Platform Run 易于配置，不需要 Java 知识。</p>
 
-<h1 id="prerequisites-and-audience">Prerequisites and audience</h1>
+<h1 id="前提条件和受众">前提条件和受众</h1>
 
-<p>To use this guide, you should at least know what Camunda Platform is and what it does. Check out the <a href="https://docs.camunda.org/get-started/quick-start/">Get Started guides</a> if you have never used Camunda Platform before. The <a href="http://camunda-cn.shaochenfeng.com/installation/camunda-bpm-run/">Installation guide</a> is also worth looking at if you are completely new to Camunda Platform.</p>
+<p>要使用本指南，您至少应该知道 Camunda 平台是什么以及它的作用。 如果您之前从未使用过Camunda平台，请查看 <a href="https://docs.camunda.org/get-started/quick-start/">入门指南</a>。如果您是 Camunda 平台的新手， <a href="http://camunda-cn.shaochenfeng.com/installation/camunda-bpm-run/">安装指南</a>也值得一看。</p>
 
-<p>This guide will teach you about Camunda Platform Run and how to configure it. It can serve as a reference page for configuration and operation options. It will not give you a step-by-step guide on how to install Camunda Platform Run. Head over to the <a href="http://camunda-cn.shaochenfeng.com/installation/camunda-bpm-run/">Installation guide</a> for details on how to install and start Camunda Platform Run.</p>
+<p>本指南将教您有关 Camunda Platform Run 以及如何配置它。 它可以作为配置和操作选项的参考页面。 它不会为您提供有关如何安装 Camunda Platform Run 的分步指南。 有关如何安装和启动 Camunda Platform Run 的详细信息，请转到 <a href="http://camunda-cn.shaochenfeng.com/installation/camunda-bpm-run/">安装指南</a>。</p>
 
-<h1 id="what-is-camunda-platform-run">What is Camunda Platform Run?</h1>
+<h1 id="什么是-camunda-platform-run">什么是 Camunda Platform Run ？</h1>
 
-<p>Camunda Platform Run is a full distribution of the Camunda Platform. It includes:</p>
+<p>Camunda Platform Run 是 Camunda Platform 的完整发行版。 这包括：</p>
 
 <ul>
 <li>Camunda webapps
@@ -8198,12 +8198,12 @@ var _mtac = {};
 <li>Admin</li>
 </ul></li>
 <li><a href="http://camunda-cn.shaochenfeng.com/reference/rest/overview/">REST API</a></li>
-<li><a href="https://github.com/swagger-api/swagger-ui">Swagger UI</a> (web application for exploring the REST API)</li>
+<li><a href="https://github.com/swagger-api/swagger-ui">Swagger UI</a> (用于查看 REST API 的 Web 应用)</li>
 </ul>
 
-<h1 id="starting-with-camunda-platform-run">Starting with Camunda Platform Run</h1>
+<h1 id="camunda-platform-run-启动">Camunda Platform Run 启动</h1>
 
-<p>To start with Camunda Platform Run, download the <a href="https://downloads.camunda.cloud/release/camunda-bpm/run/">distribution</a> (<a href="https://downloads.camunda.cloud/enterprise-release/camunda-bpm/run/">enterprise</a>) and unpacking it. You will find the following structure:</p>
+<p>要开始使用 Camunda Platform Run，请下载 <a href="https://downloads.camunda.cloud/release/camunda-bpm/run/">发行版</a> (<a href="https://downloads.camunda.cloud/enterprise-release/camunda-bpm/run/">企业发行版</a>) 并解压它。 您会看到如下结构：</p>
 
 <pre><code>camunda-bpm-run
 ├── configuration/
@@ -8222,19 +8222,19 @@ var _mtac = {};
 └── start.sh
 </code></pre>
 
-<p>Execute one of the two start scripts (<code>start.bat</code> for Windows, <code>start.sh</code> for Linux/Mac). After a few seconds, you will be able to access the Camunda webapps via <a href="http://localhost:8080/camunda/app/">http://localhost:8080/camunda/app/</a>, the REST API via <a href="http://localhost:8080/engine-rest/">http://localhost:8080/engine-rest/</a> and Swagger UI via <a href="http://localhost:8080/swaggerui/">http://localhost:8080/swaggerui/</a>.</p>
+<p>执行两个启动脚本之一（Windows 的<code>start.bat</code>，Linux/Mac 的<code>start.sh</code>）。几秒钟后，您将能查看 Camunda webapps 于 <a href="http://localhost:8080/camunda/app/">http://localhost:8080/camunda/app/</a> ， REST API 于 <a href="http://localhost:8080/engine-rest/">http://localhost:8080/engine-rest/</a> 和 Swagger UI 于 <a href="http://localhost:8080/swaggerui/。">http://localhost:8080/swaggerui/。</a></p>
 
-<h2 id="starting-camunda-platform-run-using-docker">Starting Camunda Platform Run using Docker</h2>
+<h2 id="使用-docker-启动-camunda-platform-run">使用 Docker 启动 Camunda Platform Run</h2>
 
-<p>Camunda Platform Run is also available as a Docker image. Please see the Camunda Platform Run section of the Camunda Docker documentation <a href="http://camunda-cn.shaochenfeng.com/installation/docker/#start-camunda-bpm-run-using-docker">here</a> for more details.</p>
+<p>Camunda Platform Run 也可用作 Docker 映像运行。更多详细信息，请参阅 Camunda Docker 文档 <a href="http://camunda-cn.shaochenfeng.com/installation/docker/#start-camunda-bpm-run-using-docker">此处</a> 的 Camunda Platform Run 部分。</p>
 
-<h2 id="disable-components">Disable components</h2>
+<h2 id="禁用组件">禁用组件</h2>
 
-<p>By default, Camunda Platform Run launches with the webapps, REST API and Swagger UI modules. If you want only a subset of them enabled, execute the start script through a command-line interface with any of the <code>--webapps</code>, <code>--rest</code> or <code>--swaggerui</code> properties to enable the specific module.</p>
+<p>默认情况下，Camunda Platform Run 与 webapps、REST API 和 Swagger UI 模块一起启动。 如果您只想启用其中的一个子集，请通过命令行界面执行启动脚本，并使用任何 <code>--webapps</code>、<code>--rest</code> 或 <code>--swaggerui</code> 参数来启用特定模块。</p>
 
-<h2 id="choose-between-default-and-production-configuration">Choose between default and production configuration</h2>
+<h2 id="在默认配置和生产配置之间进行选择">在默认配置和生产配置之间进行选择</h2>
 
-<p>Camunda Platform Run ships with two different configuration files which are both located in the <code>configuration</code> folder.</p>
+<p>Camunda Platform Run 附带了两个不同的配置文件，它们都位于“configuration”文件夹中。</p>
 
 <ul>
 <li>The <code>default.yml</code> configuration only contains necessary configuration like the H2 database, a demo user and <a href="#cross-origin-resource-sharing">CORS</a> for REST calls from a client application.</li>
@@ -8478,13 +8478,13 @@ To configure the logging behavior in Camunda Platform Run, customize your config
   <h3>目录:</h3>
   <nav id="TableOfContents">
 <ul>
-<li><a href="#prerequisites-and-audience">Prerequisites and audience</a></li>
-<li><a href="#what-is-camunda-platform-run">What is Camunda Platform Run?</a></li>
-<li><a href="#starting-with-camunda-platform-run">Starting with Camunda Platform Run</a>
+<li><a href="#前提条件和受众">前提条件和受众</a></li>
+<li><a href="#什么是-camunda-platform-run">什么是 Camunda Platform Run ？</a></li>
+<li><a href="#camunda-platform-run-启动">Camunda Platform Run 启动</a>
 <ul>
-<li><a href="#starting-camunda-platform-run-using-docker">Starting Camunda Platform Run using Docker</a></li>
-<li><a href="#disable-components">Disable components</a></li>
-<li><a href="#choose-between-default-and-production-configuration">Choose between default and production configuration</a></li>
+<li><a href="#使用-docker-启动-camunda-platform-run">使用 Docker 启动 Camunda Platform Run</a></li>
+<li><a href="#禁用组件">禁用组件</a></li>
+<li><a href="#在默认配置和生产配置之间进行选择">在默认配置和生产配置之间进行选择</a></li>
 <li><a href="#connect-to-a-database">Connect to a Database</a></li>
 <li><a href="#deploy-bpmn-models">Deploy BPMN Models</a></li>
 <li><a href="#automatic-license-pickup">Automatic License Pickup</a></li>

@@ -55,7 +55,7 @@ var _mtac = {};
     
   
 
-  <title>Spring Beans in Processes | docs.camunda.org</title>
+  <title>流程引擎中的 Spring Beans | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
   <link rel="shortcut icon" href="http://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
@@ -767,13 +767,21 @@ var _mtac = {};
           
   <li>
     
+      <a href="/user-guide/camunda-bpm-run/" >Camunda Platform Run</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
       <a href="/user-guide/spring-framework-integration/" >Spring 框架集成</a>
       <ul>
         
           
   <li>
     
-      <a href="/user-guide/spring-framework-integration/configuration/" >Bootstrapping</a>
+      <a href="/user-guide/spring-framework-integration/configuration/" >引导</a>
     
   </li>
 
@@ -789,7 +797,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/spring-framework-integration/deployment/" >Deployment</a>
+      <a href="/user-guide/spring-framework-integration/deployment/" >部署</a>
     
   </li>
 
@@ -797,7 +805,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/spring-framework-integration/expressions/" >Spring Bean Resolving</a>
+      <a href="/user-guide/spring-framework-integration/expressions/" >Spring Bean 解释</a>
     
   </li>
 
@@ -805,20 +813,12 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/spring-framework-integration/testing/" >Testing</a>
+      <a href="/user-guide/spring-framework-integration/testing/" >测试</a>
     
   </li>
 
         
       </ul>
-    
-  </li>
-
-        
-          
-  <li>
-    
-      <a href="/user-guide/camunda-bpm-run/" >运行Camunda平台</a>
     
   </li>
 
@@ -6774,7 +6774,7 @@ var _mtac = {};
     
   <li>
     
-      <a href="/webapps/" >Web应用程序</a>
+      <a href="/webapps/" >Web应用</a>
       <ul>
         
           
@@ -8171,7 +8171,7 @@ var _mtac = {};
     <i>编辑此页</i> <span class="cam-docs-github"></span></a>
 </div>
 
-      <h1 class="page-title">Spring Beans in Processes</h1>
+      <h1 class="page-title">流程引擎中的 Spring Beans</h1>
     </div>
 
     <div class="col-xs-12 content-text">
@@ -8179,7 +8179,7 @@ var _mtac = {};
 
 <h1 id="limit-the-exposing-spring-beans-in-expressions">Limit the Exposing Spring Beans in Expressions</h1>
 
-<p>When using the <code>ProcessEngineFactoryBean</code>, by default, all expressions in the BPMN processes will also &ldquo;see&rdquo; all the Spring beans. It&rsquo;s possible to limit the beans you want to expose in expressions or even exposing no beans at all using a map that you can configure. The example below exposes a single bean (printer), available to use under the key <code>printer</code>. To have NO beans exposed at all, just pass an empty list as <code>beans</code> property on the <code>SpringProcessEngineConfiguration</code>. When no <code>beans</code> property is set, all Spring beans in the context will be available.</p>
+<p>使用 ProcessEngineFactoryBean 时，默认情况下，BPMN 流程中的所有表达式也将“看到”所有 Spring bean。 可以使用可配置的映射来限制要在表达式中公开的 bean，甚至根本不公开 bean。 下面的示例公开了一个 bean（printer），可在键 <code>printer</code> 下使用。 要完全不暴露 bean，只需在 <code>SpringProcessEngineConfiguration</code> 上传递一个空列表作为 <code>beans</code> 属性。 当没有设置 <code>beans</code> 属性时，上下文中的所有 Spring bean 都将可用。</p>
 
 <pre><code class="language-xml">&lt;bean id=&quot;processEngineConfiguration&quot;
       class=&quot;org.camunda.bpm.engine.spring.SpringProcessEngineConfiguration&quot;&gt;
@@ -8195,9 +8195,9 @@ var _mtac = {};
       class=&quot;org.camunda.bpm.engine.spring.test.transaction.Printer&quot; /&gt;
 </code></pre>
 
-<h1 id="using-spring-beans-in-expressions">Using Spring Beans in Expressions</h1>
+<h1 id="在表达式中使用-spring-bean">在表达式中使用 Spring Bean</h1>
 
-<p>The exposed beans can be used in expressions. For example, the <code>SpringTransactionIntegrationTest</code> <code>testBasicActivitiSpringIntegration.bpmn20.xml</code> shows how a method on a Spring bean can be invoked using a UEL method expression:</p>
+<p>暴露的 bean 可以在表达式中使用。 例如，<code>SpringTransactionIntegrationTest</code><code>testBasicActivitiSpringIntegration.bpmn20.xml</code> 显示了如何使用 UEL 方法表达式调用 Spring bean 上的方法：</p>
 
 <pre><code class="language-xml">&lt;definitions id=&quot;definitions&quot; ...&gt;
 
@@ -8220,7 +8220,7 @@ var _mtac = {};
 &lt;/definitions&gt;
 </code></pre>
 
-<p>Where Printer looks like this:</p>
+<p>Printer 看起来像这样：</p>
 
 <pre><code class="language-java">public class Printer {
 
@@ -8230,7 +8230,7 @@ var _mtac = {};
 }
 </code></pre>
 
-<p>And the Spring bean configuration (also shown above) looks like this:</p>
+<p>Spring bean 配置如下所示：</p>
 
 <pre><code class="language-xml">&lt;beans ...&gt;
   ...
@@ -8240,16 +8240,16 @@ var _mtac = {};
 &lt;/beans&gt;
 </code></pre>
 
-<h1 id="expression-resolving-with-the-shared-process-engine">Expression Resolving With the Shared Process Engine</h1>
+<h1 id="使用共享流程引擎进行表达式解析">使用共享流程引擎进行表达式解析</h1>
 
-<p>In a shared process engine deployment scenario, you have a process engine which dispatches to multiple applications. In this case, there is not a single Spring application context but each application may maintain its own application context. The process engine cannot use a single expression resolver for a single application context but must delegate to the appropriate process application, depending on which process is currently being executed.</p>
+<p>在共享流程引擎部署场景中，你的一个流程引擎可以分派到多个应用程序。在这种情况下，没有单一的 Spring 应用程序上下文，每个应用程序都可以维护自己的应用程序上下文。流程引擎不能将单个表达式解析器用于单个应用程序上下文，但必须委托给适当的流程应用程序，具体取决于当前正在执行的流程。</p>
 
-<p>This functionality is provided by the <code>org.camunda.bpm.engine.spring.application.SpringProcessApplicationElResolver</code>. This class is a <code>ProcessApplicationElResolver</code> implementation delegating to the local application context. Expression resolving then works in the following way:</p>
+<p>此功能由 <code>org.camunda.bpm.engine.spring.application.SpringProcessApplicationElResolver</code> 提供。此类是委托给本地应用程序上下文的“ProcessApplicationElResolver”实现。表达式解析然后按以下方式工作：</p>
 
 <ol>
-<li>The shared process engine checks which process application corresponds to the process it is currently executing.</li>
-<li>It then delegates to that process application for resolving expressions.</li>
-<li>The process application delegates to the <code>SpringProcessApplicationElResolver</code> which uses the local Spring application context for resolving beans.</li>
+<li>共享流程引擎检查哪个流程应用程序对应于它当前正在执行的流程。</li>
+<li>然后它委托该流程应用程序来解析表达式。</li>
+<li>流程应用程序委托给<code>SpringProcessApplicationElResolver</code>，它使用本地Spring 应用程序上下文来解析bean。</li>
 </ol>
 
 
@@ -8259,9 +8259,9 @@ var _mtac = {};
 </div>
 
 
-<h1 id="using-spring-beans-in-scripting">Using Spring Beans in Scripting</h1>
+<h1 id="在脚本中使用-spring-bean">在脚本中使用 Spring Bean</h1>
 
-<p>When using <code>ProcessEngineFactoryBean</code>, all Spring beans are accessible in Groovy, JavaScript, and Jython. For example, the <code>ScriptTaskTest-applicationContext.xml</code> exposes the bean &lsquo;testbean&rsquo;:</p>
+<p>使用 ProcessEngineFactoryBean 时，所有 Spring bean 都可以在 Groovy、JavaScript 和 Jython 中访问。 例如，<code>ScriptTaskTest-applicationContext.xml</code> 公开了 bean &lsquo;testbean&rsquo;：</p>
 
 <pre><code class="language-xml">&lt;beans ...&gt;
   ...
@@ -8271,7 +8271,7 @@ var _mtac = {};
 &lt;/beans&gt;
 </code></pre>
 
-<p>Where Testbean looks like this:</p>
+<p>Testbean 如下所示：</p>
 
 <pre><code class="language-java">@Component
 public class Testbean {
@@ -8283,7 +8283,7 @@ public class Testbean {
 }
 </code></pre>
 
-<p><code>Testbean</code> is referenced then form JavaScript:</p>
+<p><code>Testbean</code> 被引用，然后 JavaScript：</p>
 
 <pre><code class="language-javascript">  execution.setVariable('foo', testbean.name);
 </code></pre>
@@ -8297,9 +8297,9 @@ public class Testbean {
   <nav id="TableOfContents">
 <ul>
 <li><a href="#limit-the-exposing-spring-beans-in-expressions">Limit the Exposing Spring Beans in Expressions</a></li>
-<li><a href="#using-spring-beans-in-expressions">Using Spring Beans in Expressions</a></li>
-<li><a href="#expression-resolving-with-the-shared-process-engine">Expression Resolving With the Shared Process Engine</a></li>
-<li><a href="#using-spring-beans-in-scripting">Using Spring Beans in Scripting</a></li>
+<li><a href="#在表达式中使用-spring-bean">在表达式中使用 Spring Bean</a></li>
+<li><a href="#使用共享流程引擎进行表达式解析">使用共享流程引擎进行表达式解析</a></li>
+<li><a href="#在脚本中使用-spring-bean">在脚本中使用 Spring Bean</a></li>
 </ul>
 </nav>
   

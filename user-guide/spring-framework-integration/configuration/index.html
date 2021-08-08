@@ -55,7 +55,7 @@ var _mtac = {};
     
   
 
-  <title>Process Engine Configuration | docs.camunda.org</title>
+  <title>Process Engine 配置 | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
   <link rel="shortcut icon" href="http://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
@@ -767,13 +767,21 @@ var _mtac = {};
           
   <li>
     
+      <a href="/user-guide/camunda-bpm-run/" >Camunda Platform Run</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
       <a href="/user-guide/spring-framework-integration/" >Spring 框架集成</a>
       <ul>
         
           
   <li>
     
-      <a href="/user-guide/spring-framework-integration/configuration/" >Bootstrapping</a>
+      <a href="/user-guide/spring-framework-integration/configuration/" >引导</a>
     
   </li>
 
@@ -789,7 +797,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/spring-framework-integration/deployment/" >Deployment</a>
+      <a href="/user-guide/spring-framework-integration/deployment/" >部署</a>
     
   </li>
 
@@ -797,7 +805,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/spring-framework-integration/expressions/" >Spring Bean Resolving</a>
+      <a href="/user-guide/spring-framework-integration/expressions/" >Spring Bean 解释</a>
     
   </li>
 
@@ -805,20 +813,12 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/spring-framework-integration/testing/" >Testing</a>
+      <a href="/user-guide/spring-framework-integration/testing/" >测试</a>
     
   </li>
 
         
       </ul>
-    
-  </li>
-
-        
-          
-  <li>
-    
-      <a href="/user-guide/camunda-bpm-run/" >运行Camunda平台</a>
     
   </li>
 
@@ -6774,7 +6774,7 @@ var _mtac = {};
     
   <li>
     
-      <a href="/webapps/" >Web应用程序</a>
+      <a href="/webapps/" >Web应用</a>
       <ul>
         
           
@@ -8171,19 +8171,19 @@ var _mtac = {};
     <i>编辑此页</i> <span class="cam-docs-github"></span></a>
 </div>
 
-      <h1 class="page-title">Process Engine Configuration</h1>
+      <h1 class="page-title">Process Engine 配置</h1>
     </div>
 
     <div class="col-xs-12 content-text">
       
 
-<p>You can use a Spring application context XML file to bootstrap the process engine. It is possible to bootstrap both application-managed and container-managed process engines through Spring.</p>
+<p>你可以使用 Spring 应用上下文 XML 文件来引导流程引擎。 可以通过 Spring 引导应用管理和容器管理的流程引擎。</p>
 
-<p>Note that you can also use a <a href="#using-spring-javaconfig">Spring JavaConfig</a> for bootstrapping instead of XML.</p>
+<p>请注意，你还可以使用 <a href="#using-spring-javaconfig">Spring JavaConfig</a> 代替 XML 进行引导。</p>
 
-<h1 id="configure-an-application-managed-process-engine">Configure an Application-Managed Process Engine</h1>
+<h1 id="配置应用程序管理的流程引擎">配置应用程序管理的流程引擎</h1>
 
-<p>The ProcessEngine can be configured as a regular Spring bean. The starting point of the integration is the class <code>org.camunda.bpm.engine.spring.ProcessEngineFactoryBean</code>. That bean takes a process engine configuration and creates the process engine. This means that the creation and configuration of properties for Spring is the same as documented in the configuration section. For Spring integration the configuration and engine beans will look like this:</p>
+<p>ProcessEngine 可以配置为常规的 Spring bean。 集成的起点是类 <code>org.camunda.bpm.engine.spring.ProcessEngineFactoryBean</code>。 该 bean 采用流程引擎配置并创建流程引擎。 这意味着 Spring 属性的创建和配置与配置部分中记录的相同。 对于 Spring 集成，配置和引擎 bean 将如下所示：</p>
 
 <pre><code class="language-xml">&lt;bean id=&quot;processEngineConfiguration&quot;
       class=&quot;org.camunda.bpm.engine.spring.SpringProcessEngineConfiguration&quot;&gt;
@@ -8196,16 +8196,16 @@ var _mtac = {};
 &lt;/bean&gt;
 </code></pre>
 
-<p>Note that the processEngineConfiguration bean uses the <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/spring/SpringProcessEngineConfiguration.html">SpringProcessEngineConfiguration</a>
- class.</p>
+<p>请注意， processEngineConfiguration bean 使用 <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/spring/SpringProcessEngineConfiguration.html">SpringProcessEngineConfiguration</a>
+ 类。</p>
 
-<h1 id="configure-a-container-managed-process-engine-as-a-spring-bean">Configure a Container-Managed Process Engine as a Spring Bean</h1>
+<h1 id="将容器管理的流程引擎配置为-spring-bean">将容器管理的流程引擎配置为 Spring Bean</h1>
 
-<p>If you want the process engine to be registered with the Camunda Platform ProcessEngineService, you must use <code>org.camunda.bpm.engine.spring.container.ManagedProcessEngineFactoryBean</code> instead of the ProcessEngineFactoryBean shown in the example above. You will also need to ensure:</p>
+<p>如果你希望流程引擎注册到 Camunda Platform ProcessEngineService，你必须使用 <code>org.camunda.bpm.engine.spring.container.ManagedProcessEngineFactoryBean</code> 而不是上面示例中显示的 ProcessEngineFactoryBean。 你还需要确保：</p>
 
 <ol>
-<li>That none of your webapps include camunda-webapp*.jar within their own lib folder, this should be at a shared level.</li>
-<li>That your server.xml contains JNDI entries for the &lsquo;ProcessEngineService&rsquo; and &lsquo;ProcessApplicationService&rsquo; as below:</li>
+<li>你的所有 web 应用都不要在它们自己的 lib 文件夹中包含 camunda-webapp*.jar，这应该处于共享级别。</li>
+<li>server.xml 包含“ProcessEngineService”和“ProcessApplicationService”的 JNDI 条目，如下所示：</li>
 </ol>
 
 <pre><code class="language-xml">&lt;!-- Global JNDI resources
@@ -8228,12 +8228,12 @@ var _mtac = {};
   &lt;/GlobalNamingResources&gt;
 </code></pre>
 
-<p>In that case the constructed process engine object is registered with the Camunda Platform and can be referenced for creating process application deployments and exposed through the runtime container integration.</p>
+<p>在这种情况下，构建的流程引擎对象会注册到 Camunda 平台，并且可以被引用以创建流程应用程序部署并通过运行时容器集成公开。</p>
 
-<h1 id="configure-a-process-engine-plugin">Configure a Process Engine Plugin</h1>
+<h1 id="配置流程引擎插件">配置流程引擎插件</h1>
 
-<p>In Spring you can configure a process engine plugin by setting a list value to the
-<code>processEnginePlugins</code> property of the <code>processEngineConfiguration</code> bean:</p>
+<p>在 Spring 中，你可以通过将列表值设置为
+<code>processEngineConfiguration</code> bean 的 <code>processEnginePlugins</code> 属性：</p>
 
 <pre><code class="language-xml">&lt;bean id=&quot;processEngineConfiguration&quot; class=&quot;org.camunda.bpm.engine.spring.SpringProcessEngineConfiguration&quot;&gt;
   ...
@@ -8246,19 +8246,17 @@ var _mtac = {};
 &lt;/bean&gt;
 </code></pre>
 
-<h1 id="using-spring-javaconfig">Using Spring JavaConfig</h1>
+<h1 id="使用-spring-javaconfig">使用 Spring JavaConfig</h1>
 
-<p>In addition to the Spring application context XML file, you can bootstrap the process engine using Spring JavaConfig. The configuration class can look like this:</p>
+<p>除了 Spring 应用程序上下文 XML 文件之外，你还可以使用 Spring JavaConfig 引导流程引擎。 配置类可以是这样的：</p>
 
 <pre><code class="language-java">@Configuration
 public class ExampleProcessEngineConfiguration {
 
   @Bean
   public DataSource dataSource() {
-     // Use a JNDI data source or read the properties from
-     // env or a properties file.
-     // Note: The following shows only a simple data source
-     // for In-Memory H2 database.
+     // 使用 JNDI 数据源或从 env 或属性文件中读取属性。
+     // 注意：以下仅演示了使用 内存数据库H2 作为一个简单数据源。
 
     SimpleDriverDataSource dataSource = new SimpleDriverDataSource();
     dataSource.setDriverClass(org.h2.Driver.class);
@@ -8309,12 +8307,12 @@ public class ExampleProcessEngineConfiguration {
     return processEngine.getTaskService();
   }
 
-  // more engine services and additional beans ...
+  // 更多的引擎服务和额外的 bean ...
 
 }
 </code></pre>
 
-<p>Note that you can define your custom beans in the configuration class, in combination with an additional XML file or using component scan. The following example adds a component scan to the configuration class to detect and instantiate all beans in the package &ldquo;com.example&rdquo;.</p>
+<p>请注意，你可以在配置类中定义自定义 bean，结合附加的 XML 文件或使用组件扫描。 下面的示例在配置类中添加了一个组件扫描，以检测并实例化包“com.example”中的所有bean。</p>
 
 <pre><code class="language-java">@Configuration
 @ComponentScan(&quot;com.example&quot;)
@@ -8333,10 +8331,10 @@ public class ExampleProcessEngineConfiguration {
   <h3>目录:</h3>
   <nav id="TableOfContents">
 <ul>
-<li><a href="#configure-an-application-managed-process-engine">Configure an Application-Managed Process Engine</a></li>
-<li><a href="#configure-a-container-managed-process-engine-as-a-spring-bean">Configure a Container-Managed Process Engine as a Spring Bean</a></li>
-<li><a href="#configure-a-process-engine-plugin">Configure a Process Engine Plugin</a></li>
-<li><a href="#using-spring-javaconfig">Using Spring JavaConfig</a></li>
+<li><a href="#配置应用程序管理的流程引擎">配置应用程序管理的流程引擎</a></li>
+<li><a href="#将容器管理的流程引擎配置为-spring-bean">将容器管理的流程引擎配置为 Spring Bean</a></li>
+<li><a href="#配置流程引擎插件">配置流程引擎插件</a></li>
+<li><a href="#使用-spring-javaconfig">使用 Spring JavaConfig</a></li>
 </ul>
 </nav>
   

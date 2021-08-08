@@ -1115,10 +1115,6 @@
   </url>
   
   <url>
-    <loc>http://camunda-cn.shaochenfeng.com/user-guide/spring-framework-integration/deployment/</loc>
-  </url>
-  
-  <url>
     <loc>http://camunda-cn.shaochenfeng.com/reference/rest/history/case-activity-instance/</loc>
   </url>
   
@@ -1455,6 +1451,10 @@
   </url>
   
   <url>
+    <loc>http://camunda-cn.shaochenfeng.com/user-guide/spring-framework-integration/deployment/</loc>
+  </url>
+  
+  <url>
     <loc>http://camunda-cn.shaochenfeng.com/introduction/architecture/</loc>
   </url>
   
@@ -1731,10 +1731,6 @@
   </url>
   
   <url>
-    <loc>http://camunda-cn.shaochenfeng.com/user-guide/spring-framework-integration/expressions/</loc>
-  </url>
-  
-  <url>
     <loc>http://camunda-cn.shaochenfeng.com/reference/bpmn20/subprocesses/</loc>
   </url>
   
@@ -1784,6 +1780,10 @@
   
   <url>
     <loc>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/variables/</loc>
+  </url>
+  
+  <url>
+    <loc>http://camunda-cn.shaochenfeng.com/user-guide/spring-framework-integration/expressions/</loc>
   </url>
   
   <url>
@@ -1840,6 +1840,10 @@
   
   <url>
     <loc>http://camunda-cn.shaochenfeng.com/user-guide/runtime-container-integration/jboss/</loc>
+  </url>
+  
+  <url>
+    <loc>http://camunda-cn.shaochenfeng.com/user-guide/camunda-bpm-run/</loc>
   </url>
   
   <url>
@@ -2120,10 +2124,6 @@
   
   <url>
     <loc>http://camunda-cn.shaochenfeng.com/introduction/extensions/</loc>
-  </url>
-  
-  <url>
-    <loc>http://camunda-cn.shaochenfeng.com/user-guide/camunda-bpm-run/</loc>
   </url>
   
   <url>

@@ -55,7 +55,7 @@ var _mtac = {};
     
   
 
-  <title>Spring Transaction Integration | docs.camunda.org</title>
+  <title>Spring Transaction 集成 | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
   <link rel="shortcut icon" href="http://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
@@ -767,13 +767,21 @@ var _mtac = {};
           
   <li>
     
+      <a href="/user-guide/camunda-bpm-run/" >Camunda Platform Run</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
       <a href="/user-guide/spring-framework-integration/" >Spring 框架集成</a>
       <ul>
         
           
   <li>
     
-      <a href="/user-guide/spring-framework-integration/configuration/" >Bootstrapping</a>
+      <a href="/user-guide/spring-framework-integration/configuration/" >引导</a>
     
   </li>
 
@@ -789,7 +797,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/spring-framework-integration/deployment/" >Deployment</a>
+      <a href="/user-guide/spring-framework-integration/deployment/" >部署</a>
     
   </li>
 
@@ -797,7 +805,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/spring-framework-integration/expressions/" >Spring Bean Resolving</a>
+      <a href="/user-guide/spring-framework-integration/expressions/" >Spring Bean 解释</a>
     
   </li>
 
@@ -805,20 +813,12 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/spring-framework-integration/testing/" >Testing</a>
+      <a href="/user-guide/spring-framework-integration/testing/" >测试</a>
     
   </li>
 
         
       </ul>
-    
-  </li>
-
-        
-          
-  <li>
-    
-      <a href="/user-guide/camunda-bpm-run/" >运行Camunda平台</a>
     
   </li>
 
@@ -6774,7 +6774,7 @@ var _mtac = {};
     
   <li>
     
-      <a href="/webapps/" >Web应用程序</a>
+      <a href="/webapps/" >Web应用</a>
       <ul>
         
           
@@ -8171,13 +8171,13 @@ var _mtac = {};
     <i>编辑此页</i> <span class="cam-docs-github"></span></a>
 </div>
 
-      <h1 class="page-title">Spring Transaction Integration</h1>
+      <h1 class="page-title">Spring Transaction 集成</h1>
     </div>
 
     <div class="col-xs-12 content-text">
       
 
-<h1 id="transaction-integration-by-example">Transaction Integration by Example</h1>
+<h1 id="transaction-整合案例">Transaction 整合案例</h1>
 
 <p>The following explains the <a href="https://github.com/camunda/camunda-bpm-platform/blob/7.15.0/engine-spring/core/src/test/java/org/camunda/bpm/engine/spring/test/transaction/SpringTransactionIntegrationTest.java">SpringTransactionIntegrationTest</a> of the core codebase step by step. Below is the Spring configuration file that we use in this example (you can find it in <a href="https://github.com/camunda/camunda-bpm-platform/blob/7.15.0/engine-spring/core/src/test/resources/org/camunda/bpm/engine/spring/test/transaction/SpringTransactionIntegrationTest-context.xml">SpringTransactionIntegrationTest-context.xml</a>). The section shown below contains the <code>dataSource</code>, <code>transactionManager</code>, <code>processEngine</code> and the process engine services.</p>
 
@@ -8295,7 +8295,7 @@ userBean.hello();
 }
 </code></pre>
 
-<h1 id="using-inner-spring-transactions">Using Inner Spring Transactions</h1>
+<h1 id="使用内置-spring-transactions">使用内置 Spring Transactions</h1>
 
 <p>When engine API calls are executed in the Spring context, Spring doesn&rsquo;t
 make it transparent to the Process Engine when nested API calls need to
@@ -8316,7 +8316,7 @@ will be reverted.</p>
 <code>Propagation.REQUIRES_NEW</code> inner transaction is defined in an already
 running transaction.</p>
 
-<h2 id="example">Example</h2>
+<h2 id="案例">案例</h2>
 
 <p>In the following code-snippet, we can see a Spring <code>Propagation.REQUIRED</code>
 transaction, defined on the <code>execute</code> method, and a Spring <code>Propagation.REQUIRES_NEW</code>
@@ -8389,7 +8389,7 @@ engine API call of the example above:</p>
 }
 </code></pre>
 
-<h1 id="using-spring-transactions-with-cockroachdb">Using Spring Transactions with CockroachDB</h1>
+<h1 id="使用-spring-transactions-和-cockroachdb">使用 Spring Transactions 和 CockroachDB</h1>
 
 <p>Please see the documentation section on <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/database/cockroachdb-configuration/#using-external-transaction-management-with-the-spring-java-ee-integrations">external transaction management with CockroachDB</a>
 to understand how to use the Spring Transaction integration with CockroachDB.</p>
@@ -8402,12 +8402,12 @@ to understand how to use the Spring Transaction integration with CockroachDB.</p
   <h3>目录:</h3>
   <nav id="TableOfContents">
 <ul>
-<li><a href="#transaction-integration-by-example">Transaction Integration by Example</a></li>
-<li><a href="#using-inner-spring-transactions">Using Inner Spring Transactions</a>
+<li><a href="#transaction-整合案例">Transaction 整合案例</a></li>
+<li><a href="#使用内置-spring-transactions">使用内置 Spring Transactions</a>
 <ul>
-<li><a href="#example">Example</a></li>
+<li><a href="#案例">案例</a></li>
 </ul></li>
-<li><a href="#using-spring-transactions-with-cockroachdb">Using Spring Transactions with CockroachDB</a></li>
+<li><a href="#使用-spring-transactions-和-cockroachdb">使用 Spring Transactions 和 CockroachDB</a></li>
 </ul>
 </nav>
   
