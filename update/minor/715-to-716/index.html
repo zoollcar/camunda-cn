@@ -944,7 +944,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/testing/" >Testing</a>
+      <a href="/user-guide/testing/" >测试</a>
     
   </li>
 
@@ -1296,7 +1296,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/license-use/" >Camunda License Keys</a>
+      <a href="/user-guide/license-use/" >Camunda 许可证密钥</a>
     
   </li>
 
@@ -6543,6 +6543,14 @@ var _mtac = {};
           
   <li>
     
+      <a href="/installation/database-schema/" >Database Schema</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
       <a href="/installation/camunda-bpm-run/" >Remote Engine Distribution</a>
     
   </li>
@@ -8185,32 +8193,16 @@ var _mtac = {};
 <li>For administrators: <a href="#standalone-web-application">Standalone Web Application</a></li>
 <li>For administrators: <a href="#set-variables-on-process-instance-migration">Set Variables on Process Instance Migration</a></li>
 <li>For administrators: <a href="#java-15-and-graalvm-javascript-support">Java 15 and GraalVM JavaScript support</a></li>
+<li>For administrators: <a href="#upcoming-liquibase-support">Upcoming Liquibase support</a></li>
 </ol>
 
 <p>This guide covers mandatory migration steps as well as optional considerations for the initial configuration of new functionality included in Camunda Platform 7.16.</p>
 
 <h1 id="database-updates">Database Updates</h1>
 
-<p>Every Camunda installation requires a database schema update.</p>
+<p>Every Camunda installation requires a database schema update. Check our <a href="http://camunda-cn.shaochenfeng.com/installation/database-schema/#update">database schema update guide</a> for further instructions.</p>
 
-<h2 id="procedure">Procedure</h2>
-
-<ol>
-<li><p>Check for <a href="http://camunda-cn.shaochenfeng.com/update/patch-level/#database-patches">available database patch scripts</a> for your database that are within the bounds of your update path.
-Locate the scripts at <code>$DISTRIBUTION_PATH/sql/upgrade</code> in the pre-packaged distribution (where <code>$DISTRIBUTION_PATH</code> is the path of an unpacked distribution) or in the <a href="https://app.camunda.com/nexus/service/rest/repository/browse/public/org/camunda/bpm/distro/camunda-sql-scripts/">Camunda Nexus</a>.
-We highly recommend executing these patches before updating. Execute them in ascending order by version number.
-The naming pattern is <code>$DATABASENAME_engine_7.15_patch_?.sql</code>.</p></li>
-
-<li><p>Execute the corresponding update scripts named</p>
-
-<ul>
-<li><code>$DATABASENAME_engine_7.15_to_7.16.sql</code></li>
-</ul>
-
-<p>The scripts update the database from one minor version to the next, and change the underlying database structure. So make sure to backup your database in case there are any failures during the update process.</p></li>
-
-<li><p>We highly recommend to also check for any existing patch scripts for your database that are within the bounds of the new minor version you are updating to. Execute them in ascending order by version number. <em>Attention</em>: This step is only relevant when you are using an enterprise version of the Camunda Platform, e.g., <code>7.16.X</code> where <code>X &gt; 0</code>. The procedure is the same as in step 1, only for the new minor version.</p></li>
-</ol>
+<p><strong>Note</strong>: Updating to Camunda Platform <code>7.16</code> from any version prior to <code>7.16</code> requires using the <a href="http://camunda-cn.shaochenfeng.com/installation/database-schema/#manual-update">manual update</a> approach.</p>
 
 <h1 id="full-distribution">Full Distribution</h1>
 
@@ -8382,6 +8374,12 @@ Using this, you can migrate to <strong>GraalVM JavaScript</strong> in general an
 <p>Furthermore, you can also configure the <strong>GraalVM JavaScript</strong> engine to your needs if necessary.
 Please consult the <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/scripting/#configure-script-engine">Configure Script Engine Guide</a> on how to achieve this.</p>
 
+<h1 id="upcoming-liquibase-support">Upcoming Liquibase support</h1>
+
+<p>Starting with Camunda Platform <code>7.16.0</code>, Liquibase can be used to <a href="http://camunda-cn.shaochenfeng.com/installation/database-schema/">install the database schema</a> and keep track of necessary changes to it.
+However, Liquibase can <em>NOT</em> be used to update from <code>7.15.x</code> to <code>7.16</code>. Please use the <a href="http://camunda-cn.shaochenfeng.com/installation/database-schema/#manual-update">manual update approach</a> for that.
+Nonetheless, you can already <a href="http://camunda-cn.shaochenfeng.com/installation/database-schema/#migrate-to-liquibase">migrate to Liquibase</a> as soon as you updated to <code>7.16.0</code> and prepare your installation for any future updates.</p>
+
     </div>
   </div>
 </div>
@@ -8390,10 +8388,7 @@ Please consult the <a href="http://camunda-cn.shaochenfeng.com/user-guide/proces
   <h3>目录:</h3>
   <nav id="TableOfContents">
 <ul>
-<li><a href="#database-updates">Database Updates</a>
-<ul>
-<li><a href="#procedure">Procedure</a></li>
-</ul></li>
+<li><a href="#database-updates">Database Updates</a></li>
 <li><a href="#full-distribution">Full Distribution</a>
 <ul>
 <li><a href="#camunda-libraries-and-applications">Camunda Libraries and Applications</a></li>
@@ -8411,6 +8406,7 @@ Please consult the <a href="http://camunda-cn.shaochenfeng.com/user-guide/proces
 </ul></li>
 <li><a href="#default-javascript-engine">Default JavaScript engine</a></li>
 </ul></li>
+<li><a href="#upcoming-liquibase-support">Upcoming Liquibase support</a></li>
 </ul>
 </nav>
   

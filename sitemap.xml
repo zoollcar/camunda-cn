@@ -43,6 +43,10 @@
   </url>
   
   <url>
+    <loc>http://camunda-cn.shaochenfeng.com/installation/database-schema/</loc>
+  </url>
+  
+  <url>
     <loc>http://camunda-cn.shaochenfeng.com/reference/rest/task/variables/</loc>
   </url>
   
@@ -2511,10 +2515,6 @@
   </url>
   
   <url>
-    <loc>http://camunda-cn.shaochenfeng.com/user-guide/testing/</loc>
-  </url>
-  
-  <url>
     <loc>http://camunda-cn.shaochenfeng.com/reference/rest/task/post-unclaim/</loc>
   </url>
   
@@ -2540,6 +2540,10 @@
   
   <url>
     <loc>http://camunda-cn.shaochenfeng.com/reference/rest/decision-definition/put-history-time-to-live/</loc>
+  </url>
+  
+  <url>
+    <loc>http://camunda-cn.shaochenfeng.com/user-guide/testing/</loc>
   </url>
   
   <url>

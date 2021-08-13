@@ -944,7 +944,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/testing/" >Testing</a>
+      <a href="/user-guide/testing/" >测试</a>
     
   </li>
 
@@ -1296,7 +1296,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/license-use/" >Camunda License Keys</a>
+      <a href="/user-guide/license-use/" >Camunda 许可证密钥</a>
     
   </li>
 
@@ -6543,6 +6543,14 @@ var _mtac = {};
           
   <li>
     
+      <a href="/installation/database-schema/" >Database Schema</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
       <a href="/installation/camunda-bpm-run/" >Remote Engine Distribution</a>
     
   </li>
@@ -8181,7 +8189,7 @@ This applies to any updates of the version number &ldquo;after the first dot&rdq
 
 <div class="note bg-warning docs-warning">
   <h3>Do I need to apply every minor version if I missed a few?</h3>
-  <p>If you need to apply multiple minor versions you MUST execute the database alteration scripts in minor version order as they are NOT cumulative. Application library updates are cumulative and don&rsquo;t necessarily require sequential minor version updates. You can just apply your target minor application libraries. You should, however, check the migration guide of EVERY intermediate minor version to understand all noteworthy changes in behavior.</p>
+  <p>Database update scripts are are NOT cumulative. Consult our <a href="http://camunda-cn.shaochenfeng.com/installation/database-schema/#update">database schema update guide</a> for details on how to account for that. Application library updates are cumulative and don&rsquo;t necessarily require sequential minor version updates. You can just apply your target minor application libraries. You should, however, check the migration guide of EVERY intermediate minor version to understand all noteworthy changes in behavior.</p>
 </div>
 
 

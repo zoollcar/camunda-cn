@@ -16,10 +16,19 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/installation/camunda-modeler/</guid>
-      <description>This page explains how to install the Camunda Modeler for modeling BPMN 2.0 diagrams, CMMN 1.1 cases and DMN 1.3 decision tables.
+      <description>This page explains how to install the Camunda Modeler for modeling BPMN 2.0 diagrams, DMN 1.3 decision tables and Camunda Forms.
 Requirements Operation Systems Officially supported on the following operating systems:
  Windows 7 / 10 Mac OS X 10.11 and later Ubuntu LTS (latest)  Reported to work on these operating systems, too:
  Ubuntu 12.04 and later Fedora 21 Debian 8  Matching Camunda Process Engine Version For executing BPMN Diagrams created using Camunda Modeler, Process Engine version 7.</description>
+    </item>
+    
+    <item>
+      <title>Install the Database Schema</title>
+      <link>http://camunda-cn.shaochenfeng.com/installation/database-schema/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://camunda-cn.shaochenfeng.com/installation/database-schema/</guid>
+      <description>This document will guide you through the installation and update of the Camunda Platform database schema used by the process engine. Regardless of the architecture of your application setup, the process engine always requires this database schema. In a production environment, we recommend setting up this schema yourself and reference the prepared database instance in your application configuration. Consult the installation guide related to your setup to configure the database for a remote engine, shared engine, or embedded engine accordingly.</description>
     </item>
     
     <item>
@@ -2176,7 +2185,7 @@ ProcessInstance processInstance = runtimeService.startProcessInstanceByKey(&#39;
       <guid>http://camunda-cn.shaochenfeng.com/update/patch-level/</guid>
       <description>This guide explains how to perform a patch level update. The patch level is the version number &amp;ldquo;after the second dot&amp;rdquo;. Example: update from 7.14.2 to 7.14.3.
 企业版特征Please note that Patch Level Updates are only provided to enterprise customers, they are not available in the community edition.
-查看 Camunda 企业版主页了解更多信息以及获得免费试用版。Reading this GuideIn this guide, a number of variables are used to denote common path names and constants:</description>
+查看 Camunda 企业版主页了解更多信息以及获得免费试用版。Database Patches Between patch levels, the structure of the database schema is not changed. The database structure of all patch releases is backward compatible with the corresponding minor version.</description>
     </item>
     
     <item>
@@ -4250,7 +4259,7 @@ DMN Decision Task CMMN 决策任务引用了一个部署的 决策定义。 激�
       
       <guid>http://camunda-cn.shaochenfeng.com/introduction/supported-environments/</guid>
       <description>你可以在任何可运行Java的环境中运行Camunda平台。但以下环境中运行可以得到了我们的质量保证。你可以在我们的企业支持页面中获得更多的信息。
-支持的运行环境请注意，本节中列出的环境与Camunda平台的版本有关。请选择本文档的相应版本，以查看适合你的Camunda平台版本的环境。例如，7.3版本的支持环境。
+支持的运行环境请注意，本节中列出的环境与Camunda平台的版本有关。请选择本文档的相应版本，以查看适合你的Camunda平台版本的环境。例如，7.15版本的支持环境。
 容器/应用 服务器 嵌入应用程序的流程引擎  所有的 Java 应用服务器 Camunda Spring Boot Starter: 启用 Tomcat （参见 支持的版本 和 部署场景）  容器管理的流程引擎 和 Camunda Cockpit, Tasklist, Admin  Apache Tomcat 9.0 JBoss EAP 7.0 / 7.1 / 7.2 / 7.3 Wildfly Application Server 13.0 / 14.0 / 15.0 / 16.0 / 17.0 / 18.0 / 19.0 / 20.0 / 21.0 / 22.0 / 23.0 IBM WebSphere Application Server 8.</description>
     </item>
     
@@ -7866,13 +7875,14 @@ In order to secure a Camunda installation, Camunda itself must be configured cor
     </item>
     
     <item>
-      <title>Camunda License Keys</title>
+      <title>Camunda 许可证密钥</title>
       <link>http://camunda-cn.shaochenfeng.com/user-guide/license-use/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/license-use/</guid>
-      <description>Some Camunda Platform features (e.g. enterprise plugins) require a license key. The license will be provided as a string by the Camunda support team. The license mechanism has no impact on the engine or other runtime components. The following section explains the various methods by which a Camunda license can be added to the Process Engine.
-Deployment Scenarios and the License Key A Camunda license key should be applied per database.</description>
+      <description>某些 Camunda 平台功能（例如企业插件）需要许可证密钥。 许可证由 Camunda 支持团队 以字符串形式提供。 许可机制对引擎或其他运行时组件没有影响。 以下部分说明了将 Camunda 许可证添加到 Process Engine 的各种方法。
+Deployment Scenarios and the License Key A Camunda license key should be applied per database.
+In a clustered scenario, where multiple engines on multiple nodes access a single database, the license only needs to be activated once. When activated, a license is valid until the expiration date or until you have deleted your database. The license key is valid for an unlimited amount of engines.</description>
     </item>
     
     <item>

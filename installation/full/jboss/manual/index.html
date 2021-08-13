@@ -944,7 +944,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/testing/" >Testing</a>
+      <a href="/user-guide/testing/" >测试</a>
     
   </li>
 
@@ -1296,7 +1296,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/license-use/" >Camunda License Keys</a>
+      <a href="/user-guide/license-use/" >Camunda 许可证密钥</a>
     
   </li>
 
@@ -6543,6 +6543,14 @@ var _mtac = {};
           
   <li>
     
+      <a href="/installation/database-schema/" >Database Schema</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
       <a href="/installation/camunda-bpm-run/" >Remote Engine Distribution</a>
     
   </li>
@@ -8276,29 +8284,10 @@ This also configures the default process engine.</p>
 
 <ul>
 <li>Create a database schema for the Camunda Platform yourself.</li>
-<li>Execute the SQL DDL scripts which create all required tables and default indices.</li>
+<li>Install the database schema to create all required tables and default indices using our <a href="http://camunda-cn.shaochenfeng.com/installation/database-schema/">database schema installation guide</a>.</li>
 </ul>
 
-<p>The SQL DDL scripts reside in the <code>sql/create</code> folder of the distribution:</p>
-
-<p><code>$JBOSS_DISTRIBUTION/sql/create/*_engine_$PLATFORM_VERSION.sql</code>
-<code>$JBOSS_DISTRIBUTION/sql/create/*_identity_$PLATFORM_VERSION.sql</code></p>
-
-<p>As an alternative, you can also find a collection of the SQL scripts on our <a href="https://app.camunda.com/nexus/service/rest/repository/browse/camunda-bpm/org/camunda/bpm/distro/camunda-sql-scripts/">Nexus</a>. Select the respective version and download the scripts as a <code>zip</code> or <code>tar.gz</code> file, then open the <code>camunda-sql-scripts-$PLATFORM_VERSION/create</code> folder.</p>
-
-<p>There is an individual SQL script for each supported database. Select the appropriate script for your database and run it with your database administration tool (e.g., SqlDeveloper for Oracle).</p>
-
 <p>When you create the tables manually, then you have to configure the engine to <strong>not</strong> create tables at startup by setting the <code>isAutoSchemaUpdate</code> property to <code>false</code> (or, in case you are using Oracle, to <code>noop</code>). In JBoss, this is done in the <code>standalone.xml</code>, located in the <code>$JBOSS_DISTRIBUTION\server\jboss-as-$VERSION\standalone\configuration\</code> folder.</p>
-
-
-<div class="note bg-info docs-info">
-  <h3>Heads Up!</h3>
-  <p><p>If you have defined a specific prefix for the entities of your database, then you will have to manually adjust the <code>create</code> scripts accordingly so that the tables are created with the prefix.</p>
-
-<p>Please note further that READ COMMITED is the required isolation level for database systems to run Camunda with. You may have to change the default setting on your database when installing Camunda. For more information see the documentation on <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/database/database-configuration/#isolation-level-configuration">isolation levels</a>.</p>
-</p>
-</div>
-
 
 <h2 id="create-a-datasource">Create a Datasource</h2>
 
