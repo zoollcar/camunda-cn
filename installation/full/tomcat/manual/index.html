@@ -409,7 +409,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/database/mssql-configuration/" >Microsoft Sql Server 数据库配置</a>
+      <a href="/user-guide/process-engine/database/mssql-configuration/" >Microsoft SQL Server 和 Azure SQL Database 配置</a>
     
   </li>
 
@@ -881,6 +881,49 @@ var _mtac = {};
   <li>
     
       <a href="/user-guide/spring-boot-integration/develop-and-test/" >部署和测试</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/" >Quarkus Integration</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/version-compatibility/" >Version Compatibility</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/configuration/" >Configuration</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/cdi-integration/" >Engine CDI Integration</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/deployments/" >Resource Deployments</a>
     
   </li>
 
@@ -4193,6 +4236,14 @@ var _mtac = {};
   <li>
     
       <a href="/reference/rest/process-definition/get-activity-statistics/" >Get Activity Instance Statistics</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/reference/rest/process-definition/get-static-called-process-definitions/" >Get Static Called Process Definitions</a>
     
   </li>
 
@@ -8420,8 +8471,21 @@ For example, <a href="http://localhost:8080/engine-rest/engine">http://localhost
 
 <ul>
 <li><code>camunda-template-engines-freemarker-$TEMPLATE_VERSION.jar</code></li>
-<li><code>freemarker-2.3.29.jar</code></li>
+<li><code>freemarker-2.3.31.jar</code></li>
 <li><code>camunda-commons-utils-$COMMONS_VERSION.jar</code></li>
+</ul>
+
+<h2 id="graalvm-javascript-integration">GraalVM JavaScript Integration</h2>
+
+<p>Add the following artifacts (if not existing) from the folder <code>$TOMCAT_DISTRIBUTION/lib/</code> to the folder <code>$TOMCAT_HOME/lib/</code>:</p>
+
+<ul>
+<li><code>graal-sdk-21.1.0.jar</code></li>
+<li><code>icu4j-68.2.jar</code></li>
+<li><code>js-21.1.0.jar</code></li>
+<li><code>js-scriptengine-21.1.0.jar</code></li>
+<li><code>regex-21.1.0.jar</code></li>
+<li><code>truffle-api-21.1.0.jar</code></li>
 </ul>
 
     </div>
@@ -8450,6 +8514,7 @@ For example, <a href="http://localhost:8080/engine-rest/engine">http://localhost
 <li><a href="#camunda-spin">Camunda Spin</a></li>
 <li><a href="#groovy-scripting">Groovy Scripting</a></li>
 <li><a href="#freemarker-integration">Freemarker Integration</a></li>
+<li><a href="#graalvm-javascript-integration">GraalVM JavaScript Integration</a></li>
 </ul></li>
 </ul>
 </nav>

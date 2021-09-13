@@ -409,7 +409,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/database/mssql-configuration/" >Microsoft Sql Server 数据库配置</a>
+      <a href="/user-guide/process-engine/database/mssql-configuration/" >Microsoft SQL Server 和 Azure SQL Database 配置</a>
     
   </li>
 
@@ -881,6 +881,49 @@ var _mtac = {};
   <li>
     
       <a href="/user-guide/spring-boot-integration/develop-and-test/" >部署和测试</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/" >Quarkus Integration</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/version-compatibility/" >Version Compatibility</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/configuration/" >Configuration</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/cdi-integration/" >Engine CDI Integration</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/deployments/" >Resource Deployments</a>
     
   </li>
 
@@ -4193,6 +4236,14 @@ var _mtac = {};
   <li>
     
       <a href="/reference/rest/process-definition/get-activity-statistics/" >Get Activity Instance Statistics</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/reference/rest/process-definition/get-static-called-process-definitions/" >Get Static Called Process Definitions</a>
     
   </li>
 
@@ -8187,17 +8238,17 @@ var _mtac = {};
 
 <p>There are different types of forms which are primarily used in Tasklist. To implement a task form in your application, you have to connect the form resource with the BPMN 2.0 element in your process diagram. Suitable BPMN 2.0 elements for calling tasks forms are the <a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/events/start-events/">StartEvent</a> and the <a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/tasks/user-task/">UserTask</a>.</p>
 
-<p>Forms are Referenced using Form Keys and can either be embedded in Camunda Tasklist or handled by a custom application. Depending on you use-case, different Form Types can be used:</p>
+<p>Forms are referenced using Form Keys or Form References and can either be embedded in Camunda Tasklist or handled by a custom application. Depending on you use-case, different Form Types can be used:</p>
 
 <ol>
 <li><a href="#embedded-task-forms">Embedded Task Forms</a> allow you to embed custom HTML and JavaScript forms into Tasklist.</li>
-<li><a href="#camunda-forms">Camunda Forms</a> offer visual editing of forms in the Camunda Modeler and can be used for less complex forms.</li>
+<li><a href="#camunda-forms">Camunda Forms</a> offer visual editing of forms in the Camunda Modeler and can be used for less complex forms. Camunda Forms are the only form type that can be referenced either by Form Key or by Form Reference.</li>
 <li><a href="#external-task-forms">External Task Forms</a> can be used to link to custom applications. The Form will not be embedded in Tasklist.</li>
 </ol>
 
 <p>If no form key is present, a <a href="#generic-task-forms">Generic Task Form</a> will be shown.</p>
 
-<h1 id="form-key-details">Form Key Details</h1>
+<h1 id="form-key-details">Form Key details</h1>
 
 <p>Form keys that are used in Tasklist have the structure <code>FORM-TYPE:LOCATION:FORM.NAME</code>.</p>
 
@@ -8283,6 +8334,36 @@ var _mtac = {};
 </figure>
 
 
+<h1 id="form-reference">Form Reference</h1>
+
+<p>With Form References, Camunda Forms provide an additional way of linking an element in a BPMN diagram to a form. To link a BPMN element (<a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/events/start-events/">StartEvent</a> or <a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/tasks/user-task/">UserTask</a>) to a Camunda Form, you have to specify the key of the Camunda Form as the <code>camunda:FormRef</code> attribute. Additionally, the <code>camunda:formRefBinding</code> attribute specifies which version of the Camunda Form to reference.</p>
+
+<p>Valid values are:</p>
+
+<ul>
+<li><code>deployment</code>, which references the Camunda Form with the given key that was deployed with the same deployment as the referencing process.</li>
+<li><code>latest</code>, which will refer to the latest deployed version of the Camunda Form.</li>
+<li><code>version</code>, which allows you to specify a specific version to be referenced from the BPMN element with the <code>camunda:formRefVersion</code> attribute.</li>
+</ul>
+
+<pre><code class="language-xml">&lt;bpmn:userTask 
+    id=&quot;myUserTask&quot;
+    camunda:formRef=&quot;formId&quot;
+    camunda:formRefBinding=&quot;version&quot;
+    camunda:formRefVersion=&quot;1&quot;&gt;
+&lt;/bpmn:userTask&gt;
+</code></pre>
+
+<p>The attributes <code>camunda:formRef</code> and <code>camunda:formRefVersion</code> can be specified as an expression which will be evaluated on execution of the task or start event.</p>
+
+<pre><code class="language-xml">&lt;bpmn:userTask 
+    id=&quot;myUserTask&quot;
+    camunda:formRef=&quot;${formId}&quot;
+    camunda:formRefBinding=&quot;version&quot;
+    camunda:formRefVersion=&quot;${formVersion}&quot;&gt;
+&lt;/bpmn:userTask&gt;
+</code></pre>
+
 <h2 id="process-variable-binding">Process Variable Binding</h2>
 
 <p>To define a default value for a form field, a process variable with the same name as the form field key needs to be defined. Local variables (e.g. created by defining an <a href="../process-engine/variables/#input-output-variable-mapping">Input Parameter</a> for the User Task) take precedence over process variables.</p>
@@ -8316,6 +8397,8 @@ var _mtac = {};
        /></span>
 </figure>
 
+
+<p>You can also include Camunda Forms from other deployments by using <a href="#form-reference">form references</a>.</p>
 
 <h1 id="external-task-forms">External Task Forms</h1>
 
@@ -8614,11 +8697,14 @@ After hitting the <em>Complete</em> button, the process instance contains the en
   <h3>目录:</h3>
   <nav id="TableOfContents">
 <ul>
-<li><a href="#form-key-details">Form Key Details</a></li>
+<li><a href="#form-key-details">Form Key details</a></li>
 <li><a href="#embedded-task-forms">Embedded Task Forms</a></li>
 <li><a href="#camunda-forms">Camunda Forms</a>
 <ul>
 <li><a href="#form-key">Form Key</a></li>
+</ul></li>
+<li><a href="#form-reference">Form Reference</a>
+<ul>
 <li><a href="#process-variable-binding">Process Variable Binding</a></li>
 <li><a href="#deployment">Deployment</a></li>
 </ul></li>

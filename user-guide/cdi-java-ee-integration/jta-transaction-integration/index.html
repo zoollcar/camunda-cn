@@ -409,7 +409,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/database/mssql-configuration/" >Microsoft Sql Server 数据库配置</a>
+      <a href="/user-guide/process-engine/database/mssql-configuration/" >Microsoft SQL Server 和 Azure SQL Database 配置</a>
     
   </li>
 
@@ -881,6 +881,49 @@ var _mtac = {};
   <li>
     
       <a href="/user-guide/spring-boot-integration/develop-and-test/" >部署和测试</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/" >Quarkus Integration</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/version-compatibility/" >Version Compatibility</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/configuration/" >Configuration</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/cdi-integration/" >Engine CDI Integration</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/deployments/" >Resource Deployments</a>
     
   </li>
 
@@ -4193,6 +4236,14 @@ var _mtac = {};
   <li>
     
       <a href="/reference/rest/process-definition/get-activity-statistics/" >Get Activity Instance Statistics</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/reference/rest/process-definition/get-static-called-process-definitions/" >Get Static Called Process Definitions</a>
     
   </li>
 
@@ -8185,7 +8236,7 @@ var _mtac = {};
     <div class="col-xs-12 content-text">
       
 
-<h1 id="embedded-process-engine">Embedded Process Engine</h1>
+<h2 id="embedded-process-engine">Embedded Process Engine</h2>
 
 <p>The process engine transaction management can integrate with JTA. To use JTA transaction
 manager integration, you need to use the</p>
@@ -8208,11 +8259,33 @@ resolving support.
 </div>
 
 
-<h1 id="shared-process-engine">Shared Process Engine</h1>
+<h2 id="shared-process-engine">Shared Process Engine</h2>
 
 <p>The shared process engine distributions for Java EE Application Servers (Wildfly, JBoss, IBM WebSphere Application Server, Oracle WebLogic Application Server) provide JTA integration out of the box.</p>
 
-<h1 id="using-jta-transaction-integration-with-cockroachdb">Using JTA Transaction Integration with CockroachDB</h1>
+<h2 id="example">Example</h2>
+
+<p>The following example shows how to integrate your custom business logic into a transaction of the process engine:</p>
+
+<pre><code class="language-java">@Named
+@Dependent
+public class MyBean {
+
+  @Inject
+  public RuntimeService runtimeService;
+
+  @Transactional
+  public void doSomethingTransactional() {
+    // Here you can do transactional stuff in your domain model and it will be 
+    // combined in the same transaction as the the following RuntimeService API 
+    // call to start a process instance:
+    runtimeService.startProcessInstanceByKey(&quot;my-process&quot;);
+  }
+
+}
+</code></pre>
+
+<h2 id="using-jta-transaction-integration-with-cockroachdb">Using JTA Transaction Integration with CockroachDB</h2>
 
 <p>Please see the documentation section on <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/database/cockroachdb-configuration/#using-external-transaction-management-with-the-spring-java-ee-integrations">external transaction management with CockroachDB</a>
 to understand how to use the JTA Transaction Integration with CockroachDB.</p>
@@ -8225,9 +8298,13 @@ to understand how to use the JTA Transaction Integration with CockroachDB.</p>
   <h3>目录:</h3>
   <nav id="TableOfContents">
 <ul>
+<li>
+<ul>
 <li><a href="#embedded-process-engine">Embedded Process Engine</a></li>
 <li><a href="#shared-process-engine">Shared Process Engine</a></li>
+<li><a href="#example">Example</a></li>
 <li><a href="#using-jta-transaction-integration-with-cockroachdb">Using JTA Transaction Integration with CockroachDB</a></li>
+</ul></li>
 </ul>
 </nav>
   

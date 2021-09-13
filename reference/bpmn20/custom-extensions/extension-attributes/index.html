@@ -409,7 +409,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/database/mssql-configuration/" >Microsoft Sql Server 数据库配置</a>
+      <a href="/user-guide/process-engine/database/mssql-configuration/" >Microsoft SQL Server 和 Azure SQL Database 配置</a>
     
   </li>
 
@@ -881,6 +881,49 @@ var _mtac = {};
   <li>
     
       <a href="/user-guide/spring-boot-integration/develop-and-test/" >部署和测试</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/" >Quarkus Integration</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/version-compatibility/" >Version Compatibility</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/configuration/" >Configuration</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/cdi-integration/" >Engine CDI Integration</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/deployments/" >Resource Deployments</a>
     
   </li>
 
@@ -4193,6 +4236,14 @@ var _mtac = {};
   <li>
     
       <a href="/reference/rest/process-definition/get-activity-statistics/" >Get Activity Instance Statistics</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/reference/rest/process-definition/get-static-called-process-definitions/" >Get Static Called Process Definitions</a>
     
   </li>
 
@@ -9341,6 +9392,103 @@ var _mtac = {};
   </tr>
 </table>
 
+<h1 id="formref">formRef</h1>
+
+<table class="table table-striped">
+  <tr>
+    <th>Description</th>
+    <td>
+      The attribute references a Camunda form definition by its key. See <a href="http://camunda-cn.shaochenfeng.com/user-guide/task-forms/">task forms</a> for more information.
+    </td>
+  </tr>
+  <tr>
+    <th>Type</th>
+    <td><code>java.lang.String</code> or <code>org.camunda.bpm.engine.delegate.Expression</code></td>
+  </tr>
+  <tr>
+    <th>Possible Values</th>
+    <td>
+      A <code>java.lang.String</code> or a <code>org.camunda.bpm.engine.delegate.Expression</code> which <a href="http://camunda-cn.shaochenfeng.com/webapps/tasklist/">Tasklist</a> can evaluate to display the referenced Camunda Form, e.g., myCamundaFormDefinitionKey or ${formKey}.
+    </td>
+  </tr>
+  <tr>
+    <th>Default Value</th>
+    <td>&ndash;</td>
+  </tr>
+  <tr>
+    <th>BPMN 2.0 Elements</th>
+    <td>
+      Initial <a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/events/start-events/">Start Event</a> of a Process,
+      <a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/tasks/user-task/">User Task</a>
+    </td>
+  </tr>
+</table>
+
+<h1 id="formrefbinding">formRefBinding</h1>
+
+<table class="table table-striped">
+  <tr>
+    <th>Description</th>
+      <td>
+      The attribute specifies which Camunda form definition version the activity references. If the value is <code>version</code>, the attribute <a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/extension-attributes/#formrefversion">camunda:formRefVersion</a> is required.
+    </td>
+  </tr>
+  <tr>
+    <th>Type</th>
+    <td><code>java.lang.String</code></td>
+  </tr>
+    <tr>
+    <th>Possible Values</th>
+    <td>
+      <code>latest</code>, <code>deployment</code>, <code>version</code>
+    </td>
+  </tr>
+  <tr>
+    <th>Default Value</th>
+    <td><code>latest</code></td>
+  </tr>
+  <tr>
+    <th>BPMN 2.0 Elements</th>
+    <td>
+      Initial <a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/events/start-events/">Start Event</a> of a Process,
+      <a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/tasks/user-task/">User Task</a>
+    </td>
+  </tr>
+</table>
+
+<h1 id="formrefversion">formRefVersion</h1>
+
+<table class="table table-striped">
+  <tr>
+    <th>Description</th>
+    <td>
+      The attribute specifies which Camunda form definition version the activity references if the <a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/extension-attributes/#formrefbinding">camunda:formRefBinding</a>
+      is set to <code>version</code>.
+    </td>
+  </tr>
+  <tr>
+    <th>Type</th>
+    <td><code>java.lang.Integer</code> or <code>org.camunda.bpm.engine.delegate.Expression</code></td>
+  </tr>
+  <tr>
+    <th>Possible Values</th>
+    <td>
+      A concrete version of all deployed version numbers of the Camunda form definition as <code>java.lang.Integer</code> or an expression which evaluates to a <code>java.lang.Integer</code> e.g., <code>${versionToReference}</code>
+    </td>
+  </tr>
+  <tr>
+    <th>Default Value</th>
+    <td>&ndash;</td>
+  </tr>
+  <tr>
+    <th>BPMN 2.0 Elements</th>
+    <td>
+      Initial <a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/events/start-events/">Start Event</a> of a Process,
+      <a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/tasks/user-task/">User Task</a>
+    </td>
+  </tr>
+</table>
+
 <h1 id="historytimetolive">historyTimeToLive</h1>
 
 <table class="table table-striped">
@@ -9933,6 +10081,9 @@ var _mtac = {};
 <li><a href="#expression">expression</a></li>
 <li><a href="#formhandlerclass">formHandlerClass</a></li>
 <li><a href="#formkey">formKey</a></li>
+<li><a href="#formref">formRef</a></li>
+<li><a href="#formrefbinding">formRefBinding</a></li>
+<li><a href="#formrefversion">formRefVersion</a></li>
 <li><a href="#historytimetolive">historyTimeToLive</a></li>
 <li><a href="#initiator">initiator</a></li>
 <li><a href="#isstartableintasklist">isStartableInTasklist</a></li>

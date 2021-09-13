@@ -55,7 +55,7 @@ var _mtac = {};
     
   
 
-  <title>Microsoft Sql Server 数据库配置 | docs.camunda.org</title>
+  <title>Microsoft SQL Server 和 Azure SQL Database 配置 | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
   <link rel="shortcut icon" href="http://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
@@ -409,7 +409,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/database/mssql-configuration/" >Microsoft Sql Server 数据库配置</a>
+      <a href="/user-guide/process-engine/database/mssql-configuration/" >Microsoft SQL Server 和 Azure SQL Database 配置</a>
     
   </li>
 
@@ -881,6 +881,49 @@ var _mtac = {};
   <li>
     
       <a href="/user-guide/spring-boot-integration/develop-and-test/" >部署和测试</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/" >Quarkus Integration</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/version-compatibility/" >Version Compatibility</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/configuration/" >Configuration</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/cdi-integration/" >Engine CDI Integration</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/deployments/" >Resource Deployments</a>
     
   </li>
 
@@ -4193,6 +4236,14 @@ var _mtac = {};
   <li>
     
       <a href="/reference/rest/process-definition/get-activity-statistics/" >Get Activity Instance Statistics</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/reference/rest/process-definition/get-static-called-process-definitions/" >Get Static Called Process Definitions</a>
     
   </li>
 
@@ -8179,14 +8230,42 @@ var _mtac = {};
     <i>编辑此页</i> <span class="cam-docs-github"></span></a>
 </div>
 
-      <h1 class="page-title">Microsoft Sql Server 数据库配置</h1>
+      <h1 class="page-title">Microsoft SQL Server 和 Azure SQL Database 配置</h1>
     </div>
 
     <div class="col-xs-12 content-text">
-      <p>Microsoft SQL Server实现的隔离级别 <code>READ_COMMITTED</code> 与大多数数据库不同，与流程引擎的[乐观锁](http://camunda-cn.shaochenfeng.com/user-guide/process-engine/transactions-in-processes/#optimistic-lock方案不能很好地兼容。
-因此，当把流程引擎放在高负荷下时，可能会遇到死锁。</p>
+      
 
-<p>如果你在MSSQL安装中遇到死锁，则必须执行以下语句以启用 SNAPSHOT 隔离：</p>
+<p>This section documents the additional database configuration changes necessary to correctly use
+Microsoft SQL Server or Microsoft Azure SQL databases with the Camunda Platform. It provides guides
+on:</p>
+
+<ul>
+<li>How to set the correct database transaction isolation level.</li>
+<li>How different Microsoft SQL Server versions are supported in Azure SQL.</li>
+<li>How Camunda supports Azure SQL.</li>
+<li>How to configure a database on Azure SQL to be supported by Camunda.</li>
+</ul>
+
+<p>To use these guides, you should have a basic understanding of (Microsoft&rsquo;s) T-SQL syntax. You should
+also have access to a database administration tool that can interact with your Microsoft database.</p>
+
+<h1 id="transaction-isolation-levels">Transaction Isolation Levels</h1>
+
+<p>This section applies to the following database types:</p>
+
+<ul>
+<li>Microsoft SQL Server</li>
+<li>Microsoft Azure SQL</li>
+</ul>
+
+<p>Microsoft SQL Server and Azure SQL implement the <code>READ_COMMITTED</code> isolation level different
+than most databases and do not interact well with the process engine&rsquo;s
+<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/transactions-in-processes/#optimistic-locking">optimistic locking</a> scheme.
+As a result you may suffer deadlocks when putting the process engine under high load.</p>
+
+<p>If you experience deadlocks in your MSSQL installation, you must execute the
+following statements in order to enable SNAPSHOT isolation:</p>
 
 <pre><code class="language-sql">ALTER DATABASE [process-engine]
 SET ALLOW_SNAPSHOT_ISOLATION ON
@@ -8195,7 +8274,52 @@ ALTER DATABASE [process-engine]
 SET READ_COMMITTED_SNAPSHOT ON
 </code></pre>
 
-<p>其中 <code>[process-engine]</code> 是数据库的名称。</p>
+<p>where <code>[process-engine]</code> contains the name of your database.</p>
+
+<h1 id="camunda-support-for-azure-sql">Camunda support for Azure SQL</h1>
+
+<p>This section applies only to the following Microsoft database products:</p>
+
+<ul>
+<li><em>Azure SQL Managed Instance</em></li>
+<li><em>Azure SQL Database</em></li>
+</ul>
+
+<p>The SQL Server database engine has a <em>Database Compatibility Level</em> setting that provides backward
+compatibility with earlier versions of SQL Server. This backward compatibility covers Transact-SQL
+and query optimization behaviors, and can be applied per database.</p>
+
+<p>Microsoft&rsquo;s <em>Azure SQL Managed Instance</em> and <em>Azure SQL Database</em> products always use the latest
+stable version of the SQL Server database engine. In order to provide backward compatibility with
+earlier SQL Server versions, the Azure SQL products utilize the <em>Database Compatibility Level</em> setting.</p>
+
+<h2 id="azure-sql-compatibility-levels-supported-by-camunda">Azure SQL compatibility levels supported by Camunda</h2>
+
+<p>Microsoft associates each SQL Server version with a <em>Database Compatibility Level</em>. You can find a table
+of the SQL Server versions, and their associated compatibility level values
+<a href="https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-ver15#arguments">at the Microsoft <em>Alter Compatibility Level</em> page</a>.</p>
+
+<p>Camunda supports the <em>Database Compatibility Level</em> values of the currently supported Microsoft
+SQL Server versions documented in our <a href="http://camunda-cn.shaochenfeng.com/introduction/supported-environments/#supported-database-products">Supported Database Products section</a>.</p>
+
+<h2 id="configuring-a-database-on-azure-sql">Configuring a database on Azure SQL</h2>
+
+<p>It is advised to explicitly set the <em>Database Compatibility Level</em> setting for each database created on
+Azure SQL. The default value of the <em>Database Compatibility Level</em> setting is updated every time a new
+SQL Server version is released. If a <em>Database Compatibility Level</em> value isn&rsquo;t explicitly set on a
+database, the default value will be used. Using the default value may lead to unexpected behavior, or
+behavior unsupported by Camunda.</p>
+
+<p>To set the <em>Database Compatibility Level</em> to a specific value, execute the following code:</p>
+
+<pre><code class="language-sql">ALTER DATABASE [database_name]
+SET COMPATIBILITY_LEVEL = [compatibility_level]
+</code></pre>
+
+<p>In the code above, <code>[database_name]</code> should be replaced with the name of your database, and
+<code>[compatibility_level]</code> should be replaced with the <em>Database Compatibility Level</em> value of the
+SQL Server version you would like to use. You can see a list of all the available values
+<a href="https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-ver15#arguments">at the Microsoft <em>Alter Compatibility Level</em> page</a>.</p>
 
     </div>
   </div>
@@ -8203,7 +8327,16 @@ SET READ_COMMITTED_SNAPSHOT ON
 
 <div class="page-toc">
   <h3>目录:</h3>
-  
+  <nav id="TableOfContents">
+<ul>
+<li><a href="#transaction-isolation-levels">Transaction Isolation Levels</a></li>
+<li><a href="#camunda-support-for-azure-sql">Camunda support for Azure SQL</a>
+<ul>
+<li><a href="#azure-sql-compatibility-levels-supported-by-camunda">Azure SQL compatibility levels supported by Camunda</a></li>
+<li><a href="#configuring-a-database-on-azure-sql">Configuring a database on Azure SQL</a></li>
+</ul></li>
+</ul>
+</nav>
   
 </div>
 

@@ -409,7 +409,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/database/mssql-configuration/" >Microsoft Sql Server 数据库配置</a>
+      <a href="/user-guide/process-engine/database/mssql-configuration/" >Microsoft SQL Server 和 Azure SQL Database 配置</a>
     
   </li>
 
@@ -881,6 +881,49 @@ var _mtac = {};
   <li>
     
       <a href="/user-guide/spring-boot-integration/develop-and-test/" >部署和测试</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/" >Quarkus Integration</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/version-compatibility/" >Version Compatibility</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/configuration/" >Configuration</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/cdi-integration/" >Engine CDI Integration</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/deployments/" >Resource Deployments</a>
     
   </li>
 
@@ -4193,6 +4236,14 @@ var _mtac = {};
   <li>
     
       <a href="/reference/rest/process-definition/get-activity-statistics/" >Get Activity Instance Statistics</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/reference/rest/process-definition/get-static-called-process-definitions/" >Get Static Called Process Definitions</a>
     
   </li>
 
@@ -8198,7 +8249,12 @@ var _mtac = {};
 
 <p>In the <code>Process Instances</code> tab all running instances are listed in a tabular view. Besides information about start time, business key and state you can select an instance by ID and go down to the <a href="http://camunda-cn.shaochenfeng.com/webapps/cockpit/bpmn/process-instance-view/">process instance view</a>.</p>
 
-<p>The <code>Called Process Definitions</code> tab displays the called child processes. In the column <em>Called Process Definition</em> the names of the called sub processes are listed. Click on the name to display the process in the process definition view. Please note that a filter called Parent is automatically set for the process so that you only see the instances that belong to the parent process. In the <em>Activity</em> column you can select the instance that is calling the child process.</p>
+<p>The <code>Called Process Definitions</code> tab displays the called child processes.
+You can learn more about navigating called process definitions and this tab in the section about <a href="http://camunda-cn.shaochenfeng.com/webapps/cockpit/bpmn/process-definition-view/#call-activity-navigation">Call Activity Navigation</a>.
+In the column <em>Called Process Definition</em> the names of the called sub processes are listed.
+Click on the name to display the process in the process definition view.
+Please note that a filter called Parent is automatically set for the process so that you only see the instances that belong to the parent process.
+In the <em>Activity</em> column you can select the instance that is calling the child process.</p>
 
 <p>The <code>Job Definitions</code> tab displays the job definitions that are linked to this process definition. Observe the name of the activity, the type of job, the configuration and the state thereof. You can also suspend and re-activate the job definition (see <a href="http://camunda-cn.shaochenfeng.com/webapps/cockpit/bpmn/suspension/#job-definition-suspension">Job Definition Suspension</a> for more information). It is also possible to <a href="http://camunda-cn.shaochenfeng.com/webapps/cockpit/bpmn/process-definition-view/#set-job-priority">set the priority of jobs</a>.</p>
 
@@ -8463,6 +8519,44 @@ The <code>like</code> operator is for string variables only. You can use <code>%
 </button>
  button to the right of the process diagram, you can set the job priority of all jobs contained in the process definition at once.</p>
 
+<h1 id="call-activity-navigation">Call Activity Navigation</h1>
+
+<p>You can navigate from a process that contains Call Activities to its respectively called process definitions.
+Hover over a Call Activity in the BPMN diagram to display a link in the upper right corner of the Call Activity.</p>
+
+
+<div class="note bg-info docs-info">
+  <h3>Limitation</h3>
+  <p>When a to be called process is referenced via a process variable or an expression, the called process
+can only be determined at runtime. For these types of call activities, the diagram shows a greyed out overlay, unless
+there is currently a process instance running at that call activity.</p>
+</div>
+
+
+<p>Additionally, you can use the called process definitions tab to get an overview of which call activity
+calls which process definition.
+We differentiate between three states:</p>
+
+<ul>
+<li><em>Referenced</em>: the called process definition can be derived without any runtime information.</li>
+<li><em>Running and referenced</em>: the called process definition can be derived without any runtime
+information and a call activity in this process is currently calling it.</li>
+<li><em>Running</em>: There is currently a process instance calling this process definition.
+However, the called process definition can only be resolved at runtime and is only valid for a particular process instance.</li>
+</ul>
+
+<figure class="image">
+  <span><img
+      src="../../img/cockpit-call-activity-definition-navigation.png"
+      
+          title="Navigate to called processes definition"
+       /></span>
+</figure>
+
+
+<p>For more drill down options on call activities you can check out the <a href="http://camunda-cn.shaochenfeng.com/webapps/cockpit/bpmn/process-instance-view/">process instance view</a>
+and the <a href="http://camunda-cn.shaochenfeng.com/webapps/cockpit/bpmn/process-history-views/">process history views</a>.</p>
+
     </div>
   </div>
 </div>
@@ -8480,6 +8574,7 @@ The <code>like</code> operator is for string variables only. You can use <code>%
 <li><a href="#delete-a-process-definition-version">Delete A Process Definition Version</a></li>
 <li><a href="#bpmn-documentation">BPMN Documentation</a></li>
 <li><a href="#set-job-priority">Set Job priority</a></li>
+<li><a href="#call-activity-navigation">Call Activity Navigation</a></li>
 </ul>
 </nav>
   

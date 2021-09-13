@@ -817,6 +817,15 @@ Parameters Query Parameters  Name Description   version Only return schema log e
     </item>
     
     <item>
+      <title>Get Static Called Process Definitions</title>
+      <link>http://camunda-cn.shaochenfeng.com/reference/rest/process-definition/get-static-called-process-definitions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://camunda-cn.shaochenfeng.com/reference/rest/process-definition/get-static-called-process-definitions/</guid>
+      <description>For the given process, returns a list of called process definitions corresponding to the CalledProcessDefinition interface in the engine. The list contains all process definitions that are referenced statically by call activities in the given process. This endpoint does not resolve process definitions that are referenced with expressions. Each called process definition contains a list of call activity ids, which specifies the call activities that are calling that process. This endpoint does not resolve references to case definitions.</description>
+    </item>
+    
+    <item>
       <title>Get Sum</title>
       <link>http://camunda-cn.shaochenfeng.com/reference/rest/metrics/get-metrics-sum/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1066,6 +1075,16 @@ ServletProcessApplication 类是基于 Servlet 规范（Java Web 应用程序）
 &amp;lt;bean id=&amp;quot;processEngineConfiguration&amp;quot; class=&amp;quot;org.camunda.bpm.engine.spring.SpringProcessEngineConfiguration&amp;quot;&amp;gt; ... &amp;lt;/bean&amp;gt; &amp;lt;bean id=&amp;quot;processEngine&amp;quot; class=&amp;quot;org.camunda.bpm.engine.spring.ProcessEngineFactoryBean&amp;quot;&amp;gt; &amp;lt;property name=&amp;quot;processEngineConfiguration&amp;quot; ref=&amp;quot;processEngineConfiguration&amp;quot; /&amp;gt; &amp;lt;/bean&amp;gt;  请注意， processEngineConfiguration bean 使用 SpringProcessEngineConfiguration类。
 将容器管理的流程引擎配置为 Spring Bean 如果你希望流程引擎注册到 Camunda Platform ProcessEngineService，你必须使用 org.camunda.bpm.engine.spring.container.ManagedProcessEngineFactoryBean 而不是上面示例中显示的 ProcessEngineFactoryBean。 你还需要确保：
  你的所有 web 应用都不要在它们自己的 lib 文件夹中包含 camunda-webapp*.</description>
+    </item>
+    
+    <item>
+      <title>Quarkus Version Compatibility</title>
+      <link>http://camunda-cn.shaochenfeng.com/user-guide/quarkus-integration/version-compatibility/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://camunda-cn.shaochenfeng.com/user-guide/quarkus-integration/version-compatibility/</guid>
+      <description>Each version of the Camunda Engine Quarkus Extension is bound to a specific version of Camunda Platform and Quarkus. Only these default combinations are recommended (and supported) by Camunda.
+ Camunda Platform version Quarkus version   7.16.0 2.1.2.Final   In case a certain Quarkus version has a bug, you can override the existing Quarkus version by adding the following inside your pom.xml. Note that this new Camunda/Quarkus version combination should also be supported by Camunda.</description>
     </item>
     
     <item>
@@ -1614,6 +1633,16 @@ Response Codes  Code Media type Description   204 application/json Request succe
       <guid>http://camunda-cn.shaochenfeng.com/modeler/dmn/</guid>
       <description>Quickstart Create new DMN Decision Requirement Diagram To start modeling, create a new DMN 1.3 diagram for the Camunda Platform by selecting Create diagram &amp;gt; Create new DMN diagram (Camunda Platform) in the top-level menu.
 Start Modeling Now you can start to create a DMN 1.3 model. Add the desired elements from the palette on the left hand side by dragging and dropping them onto the diagram canvas.</description>
+    </item>
+    
+    <item>
+      <title>Engine CDI Integration</title>
+      <link>http://camunda-cn.shaochenfeng.com/user-guide/quarkus-integration/cdi-integration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://camunda-cn.shaochenfeng.com/user-guide/quarkus-integration/cdi-integration/</guid>
+      <description>Quarkus comes with a built-in solution for CDI (short for &amp;ldquo;Context and Dependency Injection&amp;rdquo;) called ArC, which is based on the Java CDI 2.0 standard. Quarkus ArC does not entirely cover the CDI 2.0 standard but only implements a subset of it.
+The Camunda Engine offers CDI integration with the camunda-engine-cdi module. This module is integrated directly into the Quarkus Extension. You can learn more about the features and the programming model at CDI and Java EE Integration.</description>
     </item>
     
     <item>
@@ -2219,6 +2248,17 @@ The following descriptions cover the CMMN lifecycles as supported by the Camunda
     </item>
     
     <item>
+      <title>Quarkus Extension Configuration</title>
+      <link>http://camunda-cn.shaochenfeng.com/user-guide/quarkus-integration/configuration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://camunda-cn.shaochenfeng.com/user-guide/quarkus-integration/configuration/</guid>
+      <description>This section of the Camunda Quarkus extension documentation covers the configuration options for the process engine within a Quarkus application.
+The documentation on the Camunda Quarkus Extension Configuration is intended for Quarkus application developers. It requires some knowledge on Quarkus CDI support, Quarkus configuration, as well as Camunda Process Engine Configuration properties.
+Process Engine Configuration An instance of the QuarkusProcessEngineConfiguration class configures the process engine in a Quarkus application. A QuarkusProcessEngineConfiguration instance provides the following defaults:</description>
+    </item>
+    
+    <item>
       <title>Required Rule</title>
       <link>http://camunda-cn.shaochenfeng.com/reference/cmmn11/markers/required-rule/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2227,6 +2267,17 @@ The following descriptions cover the CMMN lifecycles as supported by the Camunda
       <description>Can be used with: Task, Stage and Milestone
 A plan item may be required, meaning that it has to reach an end-like state before the containing stage can complete. Whether a plan item is required can be specified by a required rule.
 This rule is evaluated when the milestone, stage or task is instantiated and transitions to the state AVAILABLE, and its result value of type boolean is maintained throughout the remainder of the case instance.</description>
+    </item>
+    
+    <item>
+      <title>Resource Deployments</title>
+      <link>http://camunda-cn.shaochenfeng.com/user-guide/quarkus-integration/deployments/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://camunda-cn.shaochenfeng.com/user-guide/quarkus-integration/deployments/</guid>
+      <description>This section documents how to perform process engine deployments with a Quarkus application containing an embedded process engine. The documentation assumes some familiarity with Quarkus CDI support and the Camunda DeploymentBuilderAPI.
+The Camunda Engine Quarkus Extension only supports programmatic deployments. A user can observe for the CamundaEngineStartupEvent CDI event. The CamundaEngineStartupEvent signals that a process engine has been successfully bootstrapped, and a deployment can be performed.
+The following example shows how a single process engine deployment can be performed in a Quarkus application:</description>
     </item>
     
     <item>
@@ -3226,14 +3277,13 @@ Defining a Message A message event definition is declared by using the messageEv
     </item>
     
     <item>
-      <title>Microsoft Sql Server 数据库配置</title>
+      <title>Microsoft SQL Server 和 Azure SQL Database 配置</title>
       <link>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/database/mssql-configuration/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/database/mssql-configuration/</guid>
-      <description>Microsoft SQL Server实现的隔离级别 READ_COMMITTED 与大多数数据库不同，与流程引擎的[乐观锁](http://camunda-cn.shaochenfeng.com/user-guide/process-engine/transactions-in-processes/#optimistic-lock方案不能很好地兼容。 因此，当把流程引擎放在高负荷下时，可能会遇到死锁。
-如果你在MSSQL安装中遇到死锁，则必须执行以下语句以启用 SNAPSHOT 隔离：
-ALTER DATABASE [process-engine] SET ALLOW_SNAPSHOT_ISOLATION ON ALTER DATABASE [process-engine] SET READ_COMMITTED_SNAPSHOT ON  其中 [process-engine] 是数据库的名称。</description>
+      <description>This section documents the additional database configuration changes necessary to correctly use Microsoft SQL Server or Microsoft Azure SQL databases with the Camunda Platform. It provides guides on:
+ How to set the correct database transaction isolation level. How different Microsoft SQL Server versions are supported in Azure SQL. How Camunda supports Azure SQL. How to configure a database on Azure SQL to be supported by Camunda.  To use these guides, you should have a basic understanding of (Microsoft&amp;rsquo;s) T-SQL syntax.</description>
     </item>
     
     <item>
@@ -4260,7 +4310,7 @@ DMN Decision Task CMMN 决策任务引用了一个部署的 决策定义。 激�
       <guid>http://camunda-cn.shaochenfeng.com/introduction/supported-environments/</guid>
       <description>你可以在任何可运行Java的环境中运行Camunda平台。但以下环境中运行可以得到了我们的质量保证。你可以在我们的企业支持页面中获得更多的信息。
 支持的运行环境请注意，本节中列出的环境与Camunda平台的版本有关。请选择本文档的相应版本，以查看适合你的Camunda平台版本的环境。例如，7.15版本的支持环境。
-容器/应用 服务器 嵌入应用程序的流程引擎  所有的 Java 应用服务器 Camunda Spring Boot Starter: 启用 Tomcat （参见 支持的版本 和 部署场景）  容器管理的流程引擎 和 Camunda Cockpit, Tasklist, Admin  Apache Tomcat 9.0 JBoss EAP 7.0 / 7.1 / 7.2 / 7.3 Wildfly Application Server 13.0 / 14.0 / 15.0 / 16.0 / 17.0 / 18.0 / 19.0 / 20.0 / 21.0 / 22.0 / 23.0 IBM WebSphere Application Server 8.</description>
+容器/应用 服务器 嵌入应用程序的流程引擎  所有的 Java 应用服务器 Camunda Spring Boot Starter: 启用 Tomcat  支持的版本 部署场景）  Camunda Engine Quarkus Extension  支持的版本 部署场景   容器管理的流程引擎 和 Camunda Cockpit, Tasklist, Admin  Apache Tomcat 9.0 JBoss EAP 7.0 / 7.1 / 7.2 / 7.3 / 7.4 Wildfly Application Server 13.0 / 14.0 / 15.0 / 16.0 / 17.0 / 18.0 / 19.0 / 20.0 / 21.</description>
     </item>
     
     <item>
@@ -4287,7 +4337,7 @@ DMN Decision Task CMMN 决策任务引用了一个部署的 决策定义。 激�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/spring-framework-integration/expressions/</guid>
-      <description>Limit the Exposing Spring Beans in Expressions 使用 ProcessEngineFactoryBean 时，默认情况下，BPMN 流程中的所有表达式也将“看到”所有 Spring bean。 可以使用可配置的映射来限制要在表达式中公开的 bean，甚至根本不公开 bean。 下面的示例公开了一个 bean（printer），可在键 printer 下使用。 要完全不暴露 bean，只需在 SpringProcessEngineConfiguration 上传递一个空列表作为 beans 属性。 当没有设置 beans 属性时，上下文中的所有 Spring bean 都将可用。
+      <description>公开 Spring Beans 的限制 使用 ProcessEngineFactoryBean 时，默认情况下，BPMN 流程中的所有表达式和脚本也将“看到”所有 Spring bean。 可以使用可以配置的映射来限制要公开的 bean，甚至根本不公开 bean。 下面的示例公开了一个 bean（printer），可在通过key printer 使用。 要完全公开任何 bean，请将空映射作为 SpringProcessEngineConfiguration 上的 beans 属性传递。 当没有设置 beans 属性时，上下文中的所有 Spring bean 都将可用。
 &amp;lt;bean id=&amp;quot;processEngineConfiguration&amp;quot; class=&amp;quot;org.camunda.bpm.engine.spring.SpringProcessEngineConfiguration&amp;quot;&amp;gt; ... &amp;lt;property name=&amp;quot;beans&amp;quot;&amp;gt; &amp;lt;map&amp;gt; &amp;lt;entry key=&amp;quot;printer&amp;quot; value-ref=&amp;quot;printer&amp;quot; /&amp;gt; &amp;lt;/map&amp;gt; &amp;lt;/property&amp;gt; &amp;lt;/bean&amp;gt; &amp;lt;bean id=&amp;quot;printer&amp;quot; class=&amp;quot;org.camunda.bpm.engine.spring.test.transaction.Printer&amp;quot; /&amp;gt;  在表达式中使用 Spring Bean 暴露的 bean 可以在表达式中使用。 例如，SpringTransactionIntegrationTesttestBasicActivitiSpringIntegration.bpmn20.xml 显示了如何使用 UEL 方法表达式调用 Spring bean 上的方法：
 &amp;lt;definitions id=&amp;quot;definitions&amp;quot; ...&amp;gt; &amp;lt;process id=&amp;quot;helloProcess&amp;quot; isExecutable=&amp;quot;true&amp;quot;&amp;gt; &amp;lt;startEvent id=&amp;quot;start&amp;quot; /&amp;gt; &amp;lt;sequenceFlow id=&amp;quot;flow1&amp;quot; sourceRef=&amp;quot;start&amp;quot; targetRef=&amp;quot;print&amp;quot; /&amp;gt; &amp;lt;serviceTask id=&amp;quot;print&amp;quot; camunda:expression=&amp;quot;#{printer.</description>
     </item>
@@ -4372,7 +4422,7 @@ Overview On the left side of the page, two lists of running and finished batches
 阅读安装指南 了解如何将 Camunda JBoss/Wildfly 子系统安装到你的 JBoss AS 7 或 Wildfly 服务器中。
 Camunda 平台以自定义 JBoss/Wildfly 子系统. 的形式为 JBoss AS 7 和 Wildfly 提供高级集成
 最突出的特点是：
- 将流程引擎部署为共享 JBoss 模块。 在 standalone.xml / domain.xml 中配置流程引擎并通过 JBoss 管理系统对其进行管理。 流程引擎是具有服务生命周期和依赖关系的原生 JBoss 服务。 自动部署 BPMN 2.0 流程（通过流程应用 API）。 （仅限 JBoss AS 7）- 将 JBoss Threads 提供的托管线程池与 Job Executor 结合使用。 （仅限 Wildfly）- 为通过 Camunda 平台子系统配置的作业执行器使用托管线程池。  配置 Job 执行器 standalone.xml/domain.xml This section only applies to Wildfly!</description>
+ 将流程引擎部署为共享 JBoss 模块。 在 standalone.xml / domain.xml 中配置流程引擎并通过 JBoss 管理系统对其进行管理。 流程引擎是具有服务生命周期和依赖关系的原生 JBoss 服务。 自动部署 BPMN 2.0 流程（通过流程应用 API）。 （仅限 JBoss AS 7）- 将 JBoss Threads 提供的托管线程池与 Job Executor 结合使用。 （仅限 Wildfly）- 为通过 Camunda 平台子系统配置的Job执行器使用托管线程池。  配置 Job 执行器 standalone.xml/domain.xml This section only applies to Wildfly!</description>
     </item>
     
     <item>
@@ -5498,7 +5548,7 @@ Binding a Hidden Element to a Process Variable A hidden input can be bound to a 
       <guid>http://camunda-cn.shaochenfeng.com/user-guide/runtime-container-integration/job-execution-with-managed-resources/</guid>
       <description>对于支持的环境 ，Camunda 平台提供了将Job执行与应用程序服务器的托管线程池集成的服务器模块。如果你使用其中一种环境，建议使用随附的集成。
 此页面上的描述适用于 不提供 现有资源感知实现的用例。 在这些情况下，建议使用应用程序服务器提供的托管资源而不是使用非托管资源。为了使集成工作，需要一个符合 JEE 7+ 的应用服务器。
-ManagedJobExecutor 没有资源感知实现的应用程序服务器的集成由称为“ManagedJobExecutor”的特定类型的“JobExecutor”提供。 ManagedJobExecutor 的目的是通过使用托管资源（主要是：托管线程）确保流程引擎中的作业执行由应用程序服务器正确控制。
+ManagedJobExecutor 没有资源感知实现的应用程序服务器的集成由称为“ManagedJobExecutor”的特定类型的“JobExecutor”提供。 ManagedJobExecutor 的目的是通过使用托管资源（主要是：托管线程）确保流程引擎中的Job执行由应用程序服务器正确控制。
 引擎必须配置以使用ManagedJobExecutor。 例如，当从 Java 代码引导引擎时，你将创建一个“ManagedJobExecutor”的新实例，并通过从应用程序服务器的环境中注入它来提供它所具有的资源依赖关系。 然后可以将“ManagedJobExecutor”设置为流程引擎应该使用的“JobExecutor”。
 示例用法 以下代码示例了基本配置。
 @ApplicationScoped public class EngineBuilder { // 从应用服务器注入 ManagedExecutorService @Resource private ManagedExecutorService managedExecutorService; private ProcessEngine processEngine; private ManagedJobExecutor managedJobExecutor; @PostConstruct public void build() { // 创建一个新的 ManagedJobExecutor managedJobExecutor = new ManagedJobExecutor(this.managedExecutorService); // 创建一个流程引擎配置 ProcessEngineConfigurationImpl engineConfiguration = ... // 其他配置 // 使用 ManagedJobExecutor engineConfiguration.setJobExecutor(managedJobExecutor); // 构建流程引擎 processEngine = engineConfiguration.buildProcessEngine(); } @PreDestroy public void stopEngine() { // 确保引擎和Job执行器也关闭 processEngine.</description>
@@ -6466,10 +6516,10 @@ Parameters Path Parameters  Name Description   id The id of the case execution t
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://camunda-cn.shaochenfeng.com/reference/bpmn20/events/terminate-event/</guid>
-      <description>A terminate event ends the complete scope where the event is raised and all inner scopes.
-It is useful if you have a parallel split in your process and you want to immediately consume all tokens that are currently available.
-If you use it on the process instance level, the whole process is terminated. On a subprocess level the current scope and all inner processes will be terminated.
- Terminate Event Definition A terminate event is modeled as a end event with an additional definition element to mark the termination:</description>
+      <description>A terminate event ends the complete scope it is raised in and all contained inner scopes.
+It is useful if you have a parallel token flow in a process and you want to consume all tokens available in the same scope immediately.
+A terminate event on process instance level terminates the complete instance. On subprocess level the current scope and all contained processes instances will be terminated.
+ Terminate Event Definition A terminate event is modeled as an end event with an additional definition element to mark the termination:</description>
     </item>
     
     <item>

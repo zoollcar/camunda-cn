@@ -409,7 +409,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/database/mssql-configuration/" >Microsoft Sql Server 数据库配置</a>
+      <a href="/user-guide/process-engine/database/mssql-configuration/" >Microsoft SQL Server 和 Azure SQL Database 配置</a>
     
   </li>
 
@@ -881,6 +881,49 @@ var _mtac = {};
   <li>
     
       <a href="/user-guide/spring-boot-integration/develop-and-test/" >部署和测试</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/" >Quarkus Integration</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/version-compatibility/" >Version Compatibility</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/configuration/" >Configuration</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/cdi-integration/" >Engine CDI Integration</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/deployments/" >Resource Deployments</a>
     
   </li>
 
@@ -4193,6 +4236,14 @@ var _mtac = {};
   <li>
     
       <a href="/reference/rest/process-definition/get-activity-statistics/" >Get Activity Instance Statistics</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/reference/rest/process-definition/get-static-called-process-definitions/" >Get Static Called Process Definitions</a>
     
   </li>
 
@@ -8188,10 +8239,7 @@ var _mtac = {};
 
 <div class="note bg-info docs-info">
   <h3>Support for Camunda Forms</h3>
-  <p><p>The Camunda Forms feature was added with the 7.15.0 release of Camunda Platform and the 4.7.0 release of the Camunda Modeler.</p>
-
-<p>Please note that the initial release of Camunda Forms only includes a first minimal feature set, which will be expanded with upcoming versions.</p>
-</p>
+  <p>The Camunda Forms feature was added with the 7.15.0 release of Camunda Platform and the 4.7.0 release of the Camunda Modeler.</p>
 </div>
 
 
@@ -8203,7 +8251,7 @@ var _mtac = {};
 <li>Camunda Forms are powered by the open source <a href="https://github.com/bpmn-io/form-js">bpmn-io form-js library</a>. Visit the <a href="https://github.com/bpmn-io/form-js">open source repository</a> to find out how to render a form using plain JavaScript in a custom application (note that this also requires you to to fetch the form from the respective BPMN 2.0 element and provide data as needed to the form).</li>
 </ul>
 
-<h1 id="configuration">Configuration</h1>
+<h1 id="components">Components</h1>
 
 <p>Use the <a href="http://camunda-cn.shaochenfeng.com/modeler/forms/">Camunda Modeler</a> to configure your Camunda Form. The following form elements are currently supported.</p>
 
@@ -8213,7 +8261,7 @@ var _mtac = {};
 
 <figure class="image">
   <span><img
-      src="img/form-text-field.png"
+      src="img/form-textField.svg"
       
           title="Form Text Field Symbol"
        /></span>
@@ -8225,7 +8273,7 @@ var _mtac = {};
 <ul>
 <li><strong>Field Label</strong>: Label displayed on top of the text field.</li>
 <li><strong>Field Description</strong>: Description provided below the text field.</li>
-<li><strong>Key</strong>: Identifier used to map data to the text field (1) during initial loading of the form, and (2) during submission of the form. When a form is <a href="http://camunda-cn.shaochenfeng.com/user-guide/task-forms/#camunda-forms">referenced by a User Task</a> and viewed in the <a href="http://camunda-cn.shaochenfeng.com/webapps/tasklist/">Camunda Tasklist</a>, the key will be used to refer to a <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/variables/">Process Variable</a>. This means that the value of the Process Variable will be used to populate the text field initially and that the value of the text field will be saved in the Process Variable during submission of the form.</li>
+<li><strong>Key</strong>: Identifier used to map data to the text field (see <a href="#mapping-components-to-process-variables">Mapping components to Process Variables</a>).</li>
 <li><strong>Validation</strong>: Given that one of the following properties is set, the form will only submit when the respective condition is fulfilled. Otherwise a validation error will be displayed.
 
 <ul>
@@ -8236,15 +8284,197 @@ var _mtac = {};
 </ul></li>
 </ul>
 
+<h2 id="number">Number</h2>
+
+<p>A number field allowing the user to read and edit numeric data.</p>
+
+<figure class="image">
+  <span><img
+      src="img/form-number.svg"
+      
+          title="Form Number Symbol"
+       /></span>
+</figure>
+
+
+<p>A number can be configured using the following configuration properties:</p>
+
+<ul>
+<li><strong>Field Label</strong>: Label displayed on top of the number field.</li>
+<li><strong>Field Description</strong>: Description provided below the number field.</li>
+<li><strong>Key</strong>: Identifier used to map data to the number field (see <a href="#mapping-components-to-process-variables">Mapping components to Process Variables</a>).</li>
+<li><strong>Validation</strong>: Given that one of the following properties is set, the form will only submit when the respective condition is fulfilled. Otherwise a validation error will be displayed.
+
+<ul>
+<li><strong>Required</strong>: Number field must contain a value.</li>
+<li><strong>Minimum Length</strong>: Number field must have at least x characters.</li>
+<li><strong>Maximum Length</strong>: Number field must not have more than x characters.</li>
+</ul></li>
+</ul>
+
+<h2 id="checkbox">Checkbox</h2>
+
+<p>A checkbox allowing the user to read and edit boolean data.</p>
+
+<figure class="image">
+  <span><img
+      src="img/form-checkbox.svg"
+      
+          title="Form Checkbox Symbol"
+       /></span>
+</figure>
+
+
+<p>A checkbox can be configured using the following configuration properties:</p>
+
+<ul>
+<li><strong>Field Label</strong>: Label displayed on top of the checkbox.</li>
+<li><strong>Field Description</strong>: Description provided below the checkbox.</li>
+<li><strong>Key</strong>: Identifier used to map data to the checkbox (see <a href="#mapping-components-to-process-variables">Mapping components to Process Variables</a>).</li>
+</ul>
+
+<h2 id="radio">Radio</h2>
+
+<p>A radio button allowing the user to select one of multiple radio button entries.</p>
+
+<figure class="image">
+  <span><img
+      src="img/form-radio.svg"
+      
+          title="Form Radio Symbol"
+       /></span>
+</figure>
+
+
+<p>A radio button can be configured using the following configuration properties:</p>
+
+<ul>
+<li><strong>Field Label</strong>: Label displayed on top of the checkbox.</li>
+<li><strong>Field Description</strong>: Description provided below the checkbox.</li>
+<li><strong>Key</strong>: Identifier used to map data to the checkbox (see <a href="#mapping-components-to-process-variables">Mapping components to Process Variables</a>).</li>
+<li><strong>Values</strong>: A list of values, each representing one radio button which the user can click. Click the <strong>Plus</strong> icon to add a new value and the <strong>Trash</strong> icon to remove a value.
+
+<ul>
+<li><strong>Label</strong>: Label of the radio button.</li>
+<li><strong>Value</strong>: Value that the radio button maps to (see <a href="#mapping-components-to-process-variables">Mapping components to Process Variables</a>).</li>
+</ul></li>
+<li><strong>Validation</strong>: Given that one of the following properties is set, the form will only submit when the respective condition is fulfilled. Otherwise a validation error will be displayed.
+
+<ul>
+<li><strong>Required</strong>: One radio option must be selected.</li>
+</ul></li>
+</ul>
+
+<h2 id="select">Select</h2>
+
+<p>A select allowing the user to select one of multiple entries from a dropdown menu.</p>
+
+<figure class="image">
+  <span><img
+      src="img/form-select.svg"
+      
+          title="Form Select Symbol"
+       /></span>
+</figure>
+
+
+<p>A select can be configured using the following configuration properties:</p>
+
+<ul>
+<li><strong>Field Label</strong>: Label displayed on top of the select.</li>
+<li><strong>Field Description</strong>: Description provided below the select.</li>
+<li><strong>Key</strong>: Identifier used to map data to the select (see <a href="#mapping-components-to-process-variables">Mapping components to Process Variables</a>).</li>
+<li><strong>Values</strong>: A list of values, each representing one select option which the user can select. Click the <strong>Plus</strong> icon to add a new value and the <strong>Trash</strong> icon to remove a value.
+
+<ul>
+<li><strong>Label</strong>: Label of the select entry.</li>
+<li><strong>Value</strong>: Value that the select entry maps to (see <a href="#mapping-components-to-process-variables">Mapping components to Process Variables</a>).</li>
+</ul></li>
+<li><strong>Validation</strong>: Given that one of the following properties is set, the form will only submit when the respective condition is fulfilled. Otherwise a validation error will be displayed.
+
+<ul>
+<li><strong>Required</strong>: One select entry must be selected.</li>
+</ul></li>
+</ul>
+
+<h2 id="text">Text</h2>
+
+<p>A text component allowing to display static information to the user.</p>
+
+<figure class="image">
+  <span><img
+      src="img/form-text.svg"
+      
+          title="Form Text Symbol"
+       /></span>
+</figure>
+
+
+<p>A text component can be configured using the following configuration properties:</p>
+
+<ul>
+<li><p><strong>Text</strong>: Either <strong>Markdown</strong> or <strong>basic HTML</strong> which will be rendered in the Form. Please note that dangerous HTML elements will not be rendered so to prevent the risk of cross-site scripting using Camunda Forms.</p>
+
+<ul>
+<li><strong>Example for Markdown</strong>:</li>
+
+<li><p>```</p>
+
+<h1 id="this-is-a-heading">This is a heading</h1></li>
+</ul>
+
+<p>This shows an image:
+  <img src="https://someurl.com/image.png" alt="alternative image text" /></p>
+
+<p>## This is a sub-heading</p>
+
+<p>Text can be shown for example using
+  <strong>bold</strong>, or <em>italic</em> font.</p>
+
+<ul>
+<li>This is an unordered list&hellip;</li>
+<li>&hellip;with two list items</li>
+</ul>
+
+<ol>
+<li>This is an ordered list&hellip;</li>
+<li>&hellip;with two list items
+```</li>
+<li><strong>Example for HTML</strong>:</li>
+<li>```
+<h1>This is a heading</h1></li>
+</ol>
+
+<p>This shows an image:
+  <img src="https://someurl.com/image.png"
+  alt="alternative image text"></p>
+
+<p><h2>This is a sub-heading</h2></p>
+
+<p>Text can be shown for example
+  using <b>bold</b>, or <i>italic</i> font.</p>
+
+<p><ul>
+    <li>This is an unordered list&hellip;</li>
+    <li>&hellip;with two list items</li>
+  </ul></p>
+
+<p><ol>
+    <li>This is an ordered list&hellip;</li>
+    <li>&hellip;with two list items</li>
+  </ol>
+  ```</p></li>
+</ul>
+
 <h2 id="button">Button</h2>
 
 <p>A button allowing the user to submit or reset the form.</p>
 
 <figure class="image">
   <span><img
-      src="img/form-button.png"
+      src="img/form-button.svg"
       
-          title="Form Text Field Symbol"
+          title="Form Button Symbol"
        /></span>
 </figure>
 
@@ -8261,6 +8491,12 @@ var _mtac = {};
 </ul></li>
 </ul>
 
+<h1 id="mapping-components-to-process-variables">Mapping components to Process Variables</h1>
+
+<p>Each Camunda Forms component which allows data manipulation has a <strong>Key</strong> attribute. This attribute is used as an identifier to map data of the respective field (1) during initial loading of the form, and (2) during submission of the form.</p>
+
+<p>When a form is <a href="http://camunda-cn.shaochenfeng.com/user-guide/task-forms/#camunda-forms">referenced by a User Task or Start Event</a> and viewed in the <a href="http://camunda-cn.shaochenfeng.com/webapps/tasklist/">Camunda Tasklist</a>, the key will be used to refer to a <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/variables/">Process Variable</a>. This means that the value of the Process Variable will be used to populate the respective component initially and that the value of the component will be saved in the Process Variable during submission of the form.</p>
+
     </div>
   </div>
 </div>
@@ -8269,11 +8505,20 @@ var _mtac = {};
   <h3>目录:</h3>
   <nav id="TableOfContents">
 <ul>
-<li><a href="#configuration">Configuration</a>
+<li><a href="#components">Components</a>
 <ul>
 <li><a href="#text-field">Text Field</a></li>
+<li><a href="#number">Number</a></li>
+<li><a href="#checkbox">Checkbox</a></li>
+<li><a href="#radio">Radio</a></li>
+<li><a href="#select">Select</a></li>
+<li><a href="#text">Text</a></li>
+</ul></li>
+<li><a href="#this-is-a-heading">This is a heading</a>
+<ul>
 <li><a href="#button">Button</a></li>
 </ul></li>
+<li><a href="#mapping-components-to-process-variables">Mapping components to Process Variables</a></li>
 </ul>
 </nav>
   

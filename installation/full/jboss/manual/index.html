@@ -409,7 +409,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/database/mssql-configuration/" >Microsoft Sql Server 数据库配置</a>
+      <a href="/user-guide/process-engine/database/mssql-configuration/" >Microsoft SQL Server 和 Azure SQL Database 配置</a>
     
   </li>
 
@@ -881,6 +881,49 @@ var _mtac = {};
   <li>
     
       <a href="/user-guide/spring-boot-integration/develop-and-test/" >部署和测试</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/" >Quarkus Integration</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/version-compatibility/" >Version Compatibility</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/configuration/" >Configuration</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/cdi-integration/" >Engine CDI Integration</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/deployments/" >Resource Deployments</a>
     
   </li>
 
@@ -4193,6 +4236,14 @@ var _mtac = {};
   <li>
     
       <a href="/reference/rest/process-definition/get-activity-statistics/" >Get Activity Instance Statistics</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/reference/rest/process-definition/get-static-called-process-definitions/" >Get Static Called Process Definitions</a>
     
   </li>
 
@@ -8410,23 +8461,14 @@ You are able to configure it through the following new configuration elements in
 
 <h2 id="create-the-database-schema">Create the Database Schema</h2>
 
-<p>By default, the database schema is automatically created in an H2 database when the engine starts up for the first time. If you do not want to use the H2 database, you first have to create a database schema for the Camunda Platform. The Camunda Platform distribution ships with a set of SQL create scripts that can be executed by a database administrator.</p>
+<p>By default, the database schema is automatically created in an H2 database when the engine starts up for the first time. If you do not want to use the H2 database, you have to</p>
 
-<p>The database creation scripts are reside in the <code>sql/create</code> folder:</p>
-
-<p><code>$WILDFLY_DISTRIBUTION/sql/create/*_engine_$PLATFORM_VERSION.sql</code>
-<code>$WILDFLY_DISTRIBUTION/sql/create/*_identity_$PLATFORM_VERSION.sql</code></p>
-
-<p>There is an individual SQL script for each supported database. Select the appropriate script for your database and run it with your database administration tool. (e.g., SqlDeveloper for Oracle).</p>
+<ul>
+<li>Create a database schema for the Camunda Platform yourself.</li>
+<li>Install the database schema to create all required tables and default indices using our <a href="http://camunda-cn.shaochenfeng.com/installation/database-schema/">database schema installation guide</a>.</li>
+</ul>
 
 <p>When you create the tables manually, then you can also configure the engine to <strong>not</strong> create tables at startup by setting the <code>isAutoSchemaUpdate</code> property to <code>false</code> (or, in case you are using Oracle, to <code>noop</code>). In WildFly, this is done in the <code>standalone.xml</code>, located in the <code>$WildFly_DISTRIBUTION\server\WildFly-$VERSION\standalone\configuration\</code> folder.</p>
-
-
-<div class="note bg-info docs-info">
-  <h3>Heads Up!</h3>
-  <p>If you have defined a specific prefix for the entities of your database, then you will have to manually adjust the <code>create</code> scripts accordingly so that the tables are created with the prefix.</p>
-</div>
-
 
 <h2 id="create-a-datasource-1">Create a Datasource</h2>
 
@@ -8610,6 +8652,19 @@ The Spin plugin also comes into play when JSON variables are set or read by the 
 <li><code>org/camunda/commons/camunda-commons-utils</code></li>
 </ul>
 
+<h2 id="graalvm-javascript-integration">GraalVM JavaScript Integration</h2>
+
+<p>Add the following modules (if not existing) from the folder <code>$JBOSS_DISTRIBUTION/modules/</code> to the folder <code>$JBOSS_HOME/modules/</code>:</p>
+
+<ul>
+<li><code>org/graalvm/js/js</code></li>
+<li><code>org/graalvm/js/js-scriptengine</code></li>
+<li><code>org/graalvm/regex/regex</code></li>
+<li><code>org/graalvm/sdk/graal-sdk</code></li>
+<li><code>org/graalvm/truffle/truffle-api</code></li>
+<li><code>com/ibm/icu/icu4j</code></li>
+</ul>
+
     </div>
   </div>
 </div>
@@ -8645,6 +8700,7 @@ The Spin plugin also comes into play when JSON variables are set or read by the 
 </ul></li>
 <li><a href="#groovy-scripting">Groovy Scripting</a></li>
 <li><a href="#freemarker-integration">Freemarker Integration</a></li>
+<li><a href="#graalvm-javascript-integration">GraalVM JavaScript Integration</a></li>
 </ul></li>
 </ul>
 </nav>

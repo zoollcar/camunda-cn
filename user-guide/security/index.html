@@ -409,7 +409,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/database/mssql-configuration/" >Microsoft Sql Server 数据库配置</a>
+      <a href="/user-guide/process-engine/database/mssql-configuration/" >Microsoft SQL Server 和 Azure SQL Database 配置</a>
     
   </li>
 
@@ -881,6 +881,49 @@ var _mtac = {};
   <li>
     
       <a href="/user-guide/spring-boot-integration/develop-and-test/" >部署和测试</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/" >Quarkus Integration</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/version-compatibility/" >Version Compatibility</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/configuration/" >Configuration</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/cdi-integration/" >Engine CDI Integration</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/deployments/" >Resource Deployments</a>
     
   </li>
 
@@ -4193,6 +4236,14 @@ var _mtac = {};
   <li>
     
       <a href="/reference/rest/process-definition/get-activity-statistics/" >Get Activity Instance Statistics</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/reference/rest/process-definition/get-static-called-process-definitions/" >Get Static Called Process Definitions</a>
     
   </li>
 
@@ -8295,6 +8346,29 @@ advisable to manage accounts via the ways mentioned above.</p>
 However, we want to inform you about the options to prevent unrecommended usage, which makes the product
 vulnerable to attacks.</p>
 
+<h2 id="deployments">Deployments</h2>
+
+<p><a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/deployments/">Deployments</a> to the process engine can contain resources that are interpreted like code:</p>
+
+<ul>
+<li>BPMN, DMN, CMMN models that the process engine executes on the Camunda server</li>
+<li>Scripts and templates in various languages (Javascript, Groovy, Freemarker, &hellip;) that the BPMN, DMN, CMMN models reference and that the process engine executes on the Camunda server</li>
+<li>Java EL expressions that BPMN, DMN, CMMN models include and that are executed on the Camunda server</li>
+<li>Forms that a client application like Camunda Tasklist renders in the browser of the end user</li>
+</ul>
+
+<p>Camunda does not provide a safe sandbox environment for the execution and rendering of these resources. Attackers that are able to make deployments can effectively perform remote code execution in the Camunda system. It is therefore critical that only trusted users and systems can make deployments.</p>
+
+<p>For example, you can restrict deployment access in the following ways:</p>
+
+<ul>
+<li>Using <a href="#authorization">authorizations</a>, administrators grant the <code>CREATE</code> permission on the <code>Deployment</code> resource only to trusted users</li>
+<li>An application that embeds the Camunda Java API can choose to not expose the deployment API on untrusted channels (such as to HTTP requests)</li>
+<li>System administrators ensure that only trusted users have network access to the Camunda installation</li>
+</ul>
+
+<p>See also the user guide section <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/securing-custom-code/">Custom Code &amp; Security</a> for further information.</p>
+
 <h2 id="throttle-login-attempts">Throttle login attempts</h2>
 
 <p>The engine gives option to throttle login attempts. The mechanism behind this is enabled by default. You can read more about it under <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/identity-service/#throttle-login-attempts">Identity Service</a> in User Guide.</p>
@@ -8318,17 +8392,6 @@ also see the <a href="https://github.com/OWASP/CheatSheetSeries/blob/7d94e9a2917
 on password complexity).</p>
 
 <p>You can find more information on how to enable the base password policy and how to implement a custom password policy in our <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/password-policy/">User Guide</a>.</p>
-
-<h2 id="script-execution">Script Execution</h2>
-
-<p>Camunda allows users to deploy scripts to be used by BPMN processes or DMN decision tables. This is a very flexible and powerful feature and facilitates changing business logic fast since generally scripts can be deployed at runtime without restarting the server.
-However, script languages such as Groovy or Javascript are executed directly inside the same JVM which also hosts Camunda itself. It is not easily feasible to sandbox the execution of such scripts effectively which is why deployment of such scripts should only be allowed to trusted users. To achieve this:</p>
-
-<ul>
-<li>Control who can deploy scripts through the appropriate CREATE <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/authorization-service/#resources">authorizations</a> on the DEPLOYMENT resource.</li>
-<li>Consider disabling execution of scripts all together if the feature is not needed. See also: <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/securing-custom-code/">Custom Code &amp; Security
-</a></li>
-</ul>
 
 <h2 id="forms">Forms</h2>
 
@@ -8586,10 +8649,10 @@ technical details are disclosed when an error occurs on the application server l
 <li><a href="#restricting-data-access-with-authorizations">Restricting Data Access with Authorizations</a></li>
 <li><a href="#prevent-enumerating-user-accounts-by-brute-force-creating-new-users">Prevent enumerating user accounts by brute-force creating new users</a></li>
 </ul></li>
+<li><a href="#deployments">Deployments</a></li>
 <li><a href="#throttle-login-attempts">Throttle login attempts</a></li>
 <li><a href="#custom-whitelist-for-user-group-and-tenant-ids">Custom Whitelist for User, Group and Tenant IDs</a></li>
 <li><a href="#password-policy">Password Policy</a></li>
-<li><a href="#script-execution">Script Execution</a></li>
 <li><a href="#forms">Forms</a></li>
 <li><a href="#queries">Queries</a>
 <ul>

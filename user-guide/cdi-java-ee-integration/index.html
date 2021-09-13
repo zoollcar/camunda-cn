@@ -409,7 +409,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/database/mssql-configuration/" >Microsoft Sql Server 数据库配置</a>
+      <a href="/user-guide/process-engine/database/mssql-configuration/" >Microsoft SQL Server 和 Azure SQL Database 配置</a>
     
   </li>
 
@@ -881,6 +881,49 @@ var _mtac = {};
   <li>
     
       <a href="/user-guide/spring-boot-integration/develop-and-test/" >部署和测试</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/" >Quarkus Integration</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/version-compatibility/" >Version Compatibility</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/configuration/" >Configuration</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/cdi-integration/" >Engine CDI Integration</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/deployments/" >Resource Deployments</a>
     
   </li>
 
@@ -4193,6 +4236,14 @@ var _mtac = {};
   <li>
     
       <a href="/reference/rest/process-definition/get-activity-statistics/" >Get Activity Instance Statistics</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/reference/rest/process-definition/get-static-called-process-definitions/" >Get Static Called Process Definitions</a>
     
   </li>
 
@@ -8196,6 +8247,14 @@ var _mtac = {};
 <li>Support for unit testing.</li>
 </ul>
 
+
+<div class="note bg-info docs-info">
+  <h3>Quarkus Engine Extension</h3>
+  <p>Since Quarkus ArC does not aim to fully implement CDI 2.0, you cannot use the full range of features the <code>camunda-engine-cdi</code> module provides.
+Read about the limitations in the <a href="http://camunda-cn.shaochenfeng.com/user-guide/quarkus-integration/cdi-integration/#limitations">Quarkus Integration</a> guide.</p>
+</div>
+
+
 <h1 id="maven-dependency">Maven Dependency</h1>
 
 <p>To use the camunda-engine-cdi module inside your application, you must include the following Maven dependency:</p>
@@ -8256,6 +8315,12 @@ var _mtac = {};
 
     
       
+
+        
+
+        
+      
+    
 
         
 

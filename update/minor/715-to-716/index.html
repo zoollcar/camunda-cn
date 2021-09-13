@@ -409,7 +409,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/database/mssql-configuration/" >Microsoft Sql Server 数据库配置</a>
+      <a href="/user-guide/process-engine/database/mssql-configuration/" >Microsoft SQL Server 和 Azure SQL Database 配置</a>
     
   </li>
 
@@ -881,6 +881,49 @@ var _mtac = {};
   <li>
     
       <a href="/user-guide/spring-boot-integration/develop-and-test/" >部署和测试</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/" >Quarkus Integration</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/version-compatibility/" >Version Compatibility</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/configuration/" >Configuration</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/cdi-integration/" >Engine CDI Integration</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/deployments/" >Resource Deployments</a>
     
   </li>
 
@@ -4193,6 +4236,14 @@ var _mtac = {};
   <li>
     
       <a href="/reference/rest/process-definition/get-activity-statistics/" >Get Activity Instance Statistics</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/reference/rest/process-definition/get-static-called-process-definitions/" >Get Static Called Process Definitions</a>
     
   </li>
 
@@ -8194,6 +8245,7 @@ var _mtac = {};
 <li>For administrators: <a href="#set-variables-on-process-instance-migration">Set Variables on Process Instance Migration</a></li>
 <li>For administrators: <a href="#java-15-and-graalvm-javascript-support">Java 15 and GraalVM JavaScript support</a></li>
 <li>For administrators: <a href="#upcoming-liquibase-support">Upcoming Liquibase support</a></li>
+<li>For administrators and developers: <a href="#new-version-of-templating-engines-freemarker-velocity">New Version of Templating Engines (Freemarker, Velocity)</a></li>
 </ol>
 
 <p>This guide covers mandatory migration steps as well as optional considerations for the initial configuration of new functionality included in Camunda Platform 7.16.</p>
@@ -8374,11 +8426,46 @@ Using this, you can migrate to <strong>GraalVM JavaScript</strong> in general an
 <p>Furthermore, you can also configure the <strong>GraalVM JavaScript</strong> engine to your needs if necessary.
 Please consult the <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/scripting/#configure-script-engine">Configure Script Engine Guide</a> on how to achieve this.</p>
 
+<h1 id="camunda-form-definition-parsing">Camunda Form Definition parsing</h1>
+
+<p>The 7.16.0 release introduces a new database entity called Camunda Form Definition. After Process, Decision, and Case Definition, this is the fourth definition entity in the engine.
+Camunda Form Definitions represent a <a href="http://camunda-cn.shaochenfeng.com/user-guide/task-forms/#camunda-forms">Camunda Form</a> and introduce versioning and more powerful ways of referencing Camunda Forms from other deployments.</p>
+
+<p>To create Camunda Form Definitions, the engine will parse the form JSON when it is deployed. All files with the <code>.form</code> file ending will be treated as Camunda Form Definitions. This
+might lead to unwanted behavior in cases where files with the <code>.form</code> ending that are not Camunda Forms already exist or are deployed to the engine. In those cases, the parser will throw
+an exception as the definition could not be parsed correctly.</p>
+
 <h1 id="upcoming-liquibase-support">Upcoming Liquibase support</h1>
 
 <p>Starting with Camunda Platform <code>7.16.0</code>, Liquibase can be used to <a href="http://camunda-cn.shaochenfeng.com/installation/database-schema/">install the database schema</a> and keep track of necessary changes to it.
 However, Liquibase can <em>NOT</em> be used to update from <code>7.15.x</code> to <code>7.16</code>. Please use the <a href="http://camunda-cn.shaochenfeng.com/installation/database-schema/#manual-update">manual update approach</a> for that.
 Nonetheless, you can already <a href="http://camunda-cn.shaochenfeng.com/installation/database-schema/#migrate-to-liquibase">migrate to Liquibase</a> as soon as you updated to <code>7.16.0</code> and prepare your installation for any future updates.</p>
+
+<h1 id="new-version-of-templating-engines-freemarker-velocity">New Version of Templating Engines (Freemarker, Velocity)</h1>
+
+<p>Camunda 7.16 includes version 2.1.0 of the <code>org.camunda.template-engines</code> artifacts, in particular <code>camunda-template-engines-freemarker</code>, <code>camunda-template-engines-velocity</code>, and <code>camunda-template-engines-xquery-saxon</code>.</p>
+
+<p>This updates the following template engine versions:</p>
+
+<ul>
+<li>Apache Freemarker
+
+<ul>
+<li>Old version: 2.3.29 (Release date: August 2019)</li>
+<li>New version: 2.3.31 (Release date: February 2021)</li>
+<li>Change log: <a href="https://freemarker.apache.org/docs/api/freemarker/template/Configuration.html#Configuration-freemarker.template.Version-">https://freemarker.apache.org/docs/api/freemarker/template/Configuration.html#Configuration-freemarker.template.Version-</a></li>
+</ul></li>
+<li>Apache Velocity
+
+<ul>
+<li>Old version: 2.2 (Release date: January 2020)</li>
+<li>New version: 2.3 (Release date: March 2021)</li>
+<li>Change log: <a href="https://velocity.apache.org/engine/2.3/upgrading.html">https://velocity.apache.org/engine/2.3/upgrading.html</a>
+<br /></li>
+</ul></li>
+</ul>
+
+<p>Please note that the new version of Freemarker contains changes that are not compatible with the previous version. We strongly recommend to test the execution of your templates before applying the update. In addition, you can replace the artifacts of version 2.1.0 by the old artifacts in version 2.0.0 to continue using the old versions of Freemarker and Velocity.</p>
 
     </div>
   </div>
@@ -8406,7 +8493,9 @@ Nonetheless, you can already <a href="http://camunda-cn.shaochenfeng.com/install
 </ul></li>
 <li><a href="#default-javascript-engine">Default JavaScript engine</a></li>
 </ul></li>
+<li><a href="#camunda-form-definition-parsing">Camunda Form Definition parsing</a></li>
 <li><a href="#upcoming-liquibase-support">Upcoming Liquibase support</a></li>
+<li><a href="#new-version-of-templating-engines-freemarker-velocity">New Version of Templating Engines (Freemarker, Velocity)</a></li>
 </ul>
 </nav>
   

@@ -409,7 +409,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/database/mssql-configuration/" >Microsoft Sql Server 数据库配置</a>
+      <a href="/user-guide/process-engine/database/mssql-configuration/" >Microsoft SQL Server 和 Azure SQL Database 配置</a>
     
   </li>
 
@@ -881,6 +881,49 @@ var _mtac = {};
   <li>
     
       <a href="/user-guide/spring-boot-integration/develop-and-test/" >部署和测试</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/" >Quarkus Integration</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/version-compatibility/" >Version Compatibility</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/configuration/" >Configuration</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/cdi-integration/" >Engine CDI Integration</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/deployments/" >Resource Deployments</a>
     
   </li>
 
@@ -4193,6 +4236,14 @@ var _mtac = {};
   <li>
     
       <a href="/reference/rest/process-definition/get-activity-statistics/" >Get Activity Instance Statistics</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/reference/rest/process-definition/get-static-called-process-definitions/" >Get Static Called Process Definitions</a>
     
   </li>
 
@@ -8185,9 +8236,9 @@ var _mtac = {};
     <div class="col-xs-12 content-text">
       
 
-<h1 id="limit-the-exposing-spring-beans-in-expressions">Limit the Exposing Spring Beans in Expressions</h1>
+<h1 id="公开-spring-beans-的限制">公开 Spring Beans 的限制</h1>
 
-<p>使用 ProcessEngineFactoryBean 时，默认情况下，BPMN 流程中的所有表达式也将“看到”所有 Spring bean。 可以使用可配置的映射来限制要在表达式中公开的 bean，甚至根本不公开 bean。 下面的示例公开了一个 bean（printer），可在键 <code>printer</code> 下使用。 要完全不暴露 bean，只需在 <code>SpringProcessEngineConfiguration</code> 上传递一个空列表作为 <code>beans</code> 属性。 当没有设置 <code>beans</code> 属性时，上下文中的所有 Spring bean 都将可用。</p>
+<p>使用 ProcessEngineFactoryBean 时，默认情况下，BPMN 流程中的所有表达式和脚本也将“看到”所有 Spring bean。 可以使用可以配置的映射来限制要公开的 bean，甚至根本不公开 bean。 下面的示例公开了一个 bean（printer），可在通过key <code>printer</code> 使用。 要完全公开任何 bean，请将空映射作为 <code>SpringProcessEngineConfiguration</code> 上的 <code>beans</code> 属性传递。 当没有设置 <code>beans</code> 属性时，上下文中的所有 Spring bean 都将可用。</p>
 
 <pre><code class="language-xml">&lt;bean id=&quot;processEngineConfiguration&quot;
       class=&quot;org.camunda.bpm.engine.spring.SpringProcessEngineConfiguration&quot;&gt;
@@ -8304,7 +8355,7 @@ public class Testbean {
   <h3>目录:</h3>
   <nav id="TableOfContents">
 <ul>
-<li><a href="#limit-the-exposing-spring-beans-in-expressions">Limit the Exposing Spring Beans in Expressions</a></li>
+<li><a href="#公开-spring-beans-的限制">公开 Spring Beans 的限制</a></li>
 <li><a href="#在表达式中使用-spring-bean">在表达式中使用 Spring Bean</a></li>
 <li><a href="#使用共享流程引擎进行表达式解析">使用共享流程引擎进行表达式解析</a></li>
 <li><a href="#在脚本中使用-spring-bean">在脚本中使用 Spring Bean</a></li>

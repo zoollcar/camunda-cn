@@ -409,7 +409,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/database/mssql-configuration/" >Microsoft Sql Server 数据库配置</a>
+      <a href="/user-guide/process-engine/database/mssql-configuration/" >Microsoft SQL Server 和 Azure SQL Database 配置</a>
     
   </li>
 
@@ -881,6 +881,49 @@ var _mtac = {};
   <li>
     
       <a href="/user-guide/spring-boot-integration/develop-and-test/" >部署和测试</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/" >Quarkus Integration</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/version-compatibility/" >Version Compatibility</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/configuration/" >Configuration</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/cdi-integration/" >Engine CDI Integration</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/deployments/" >Resource Deployments</a>
     
   </li>
 
@@ -4193,6 +4236,14 @@ var _mtac = {};
   <li>
     
       <a href="/reference/rest/process-definition/get-activity-statistics/" >Get Activity Instance Statistics</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/reference/rest/process-definition/get-static-called-process-definitions/" >Get Static Called Process Definitions</a>
     
   </li>
 
@@ -8371,6 +8422,10 @@ The size of the result set can be retrieved by using the <a href="http://camunda
     <td>Only include tasks which are assigned to one of the user ids passed in the array</td>
   </tr>
   <tr>
+    <td>assigneeNotIn</td>
+    <td>Only include tasks which are not assigned to one of the user ids passed in the array.</td>
+  </tr>
+  <tr>
     <td>owner</td>
     <td>Restrict to tasks that the given user owns.</td>
   </tr>
@@ -8860,6 +8915,34 @@ Each task object has the following properties:</p>
     <td>If not null, the form key for the task.</td>
   </tr>
   <tr>
+    <td>camundaFormRef</td>
+    <td>String</td>
+    <td>If not null, the form binding for the Camunda Form with the following properties.
+      <table class="table table-striped">
+        <tr>
+          <th>Name</th>
+          <th>Value</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>key</td>
+          <td>String</td>
+          <td>The key of the linked Camunda Form.</td>
+        </tr>
+        <tr>
+          <td>binding</td>
+          <td>String</td>
+          <td>The binding type. Can be one of <code>latest</code>, <code>deployment</code> or <code>version</code>.</td>
+        </tr>
+        <tr>
+          <td>version</td>
+          <td>Integer</td>
+          <td>The concrete version of the linked Camunda Form. Only non-null when <code>binding</code> is <code>version</code>.</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
     <td>tenantId</td>
     <td>String</td>
     <td>If not null, the tenant id for the task.</td>
@@ -8944,6 +9027,11 @@ Each task object has the following properties:</p>
  &quot;taskDefinitionKey&quot;:&quot;aTaskDefinitionKey&quot;,
  &quot;suspended&quot;: false,
  &quot;formKey&quot;:&quot;aFormKey&quot;,
+ &quot;camundaFormRef&quot;: {
+   &quot;key&quot;: &quot;aCamundaForm&quot;,
+   &quot;binding&quot;: &quot;version&quot;,
+   &quot;version&quot;: 3
+ },
  &quot;tenantId&quot;:&quot;aTenantId&quot;}]
 </code></pre>
 

@@ -409,7 +409,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/database/mssql-configuration/" >Microsoft Sql Server 数据库配置</a>
+      <a href="/user-guide/process-engine/database/mssql-configuration/" >Microsoft SQL Server 和 Azure SQL Database 配置</a>
     
   </li>
 
@@ -881,6 +881,49 @@ var _mtac = {};
   <li>
     
       <a href="/user-guide/spring-boot-integration/develop-and-test/" >部署和测试</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/" >Quarkus Integration</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/version-compatibility/" >Version Compatibility</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/configuration/" >Configuration</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/cdi-integration/" >Engine CDI Integration</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/deployments/" >Resource Deployments</a>
     
   </li>
 
@@ -4193,6 +4236,14 @@ var _mtac = {};
   <li>
     
       <a href="/reference/rest/process-definition/get-activity-statistics/" >Get Activity Instance Statistics</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/reference/rest/process-definition/get-static-called-process-definitions/" >Get Static Called Process Definitions</a>
     
   </li>
 
@@ -8185,17 +8236,17 @@ var _mtac = {};
     <div class="col-xs-12 content-text">
       
 
-<p>A terminate event ends the complete scope where the event is raised and all inner scopes.</p>
+<p>A terminate event ends the complete scope it is raised in and all contained inner scopes.</p>
 
-<p>It is useful if you have a parallel split in your process and you want to immediately consume all tokens that are currently available.</p>
+<p>It is useful if you have a parallel token flow in a process and you want to consume all tokens available in the same scope immediately.</p>
 
-<p>If you use it on the process instance level, the whole process is terminated. On a subprocess level the current scope and all inner processes will be terminated.</p>
+<p>A terminate event on process instance level terminates the complete instance. On subprocess level the current scope and all contained processes instances will be terminated.</p>
 
 <div data-bpmn-diagram="../bpmn/event-terminate"></div>
 
 <h1 id="terminate-event-definition">Terminate Event Definition</h1>
 
-<p>A terminate event is modeled as a end event with an additional definition element to mark the termination:</p>
+<p>A terminate event is modeled as an end event with an additional definition element to mark the termination:</p>
 
 <pre><code class="language-xml">&lt;process id=&quot;someProcess&quot;&gt;
   &lt;!-- ... --&gt;

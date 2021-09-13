@@ -409,7 +409,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/database/mssql-configuration/" >Microsoft Sql Server 数据库配置</a>
+      <a href="/user-guide/process-engine/database/mssql-configuration/" >Microsoft SQL Server 和 Azure SQL Database 配置</a>
     
   </li>
 
@@ -881,6 +881,49 @@ var _mtac = {};
   <li>
     
       <a href="/user-guide/spring-boot-integration/develop-and-test/" >部署和测试</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/" >Quarkus Integration</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/version-compatibility/" >Version Compatibility</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/configuration/" >Configuration</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/cdi-integration/" >Engine CDI Integration</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/deployments/" >Resource Deployments</a>
     
   </li>
 
@@ -4193,6 +4236,14 @@ var _mtac = {};
   <li>
     
       <a href="/reference/rest/process-definition/get-activity-statistics/" >Get Activity Instance Statistics</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/reference/rest/process-definition/get-static-called-process-definitions/" >Get Static Called Process Definitions</a>
     
   </li>
 
@@ -8448,6 +8499,32 @@ this, with <code>DB-DRIVER-CLASS</code>, <code>JDBC-URL</code>, <code>DB-USER</c
 &lt;/bean&gt;
 </code></pre>
 
+<h2 id="7-15-5-to-7-15-6-7-14-11-to-7-14-12-7-13-17-to-7-13-18">7.15.5 to 7.15.6 / 7.14.11 to 7.14.12 / 7.13.17 to 7.13.18</h2>
+
+<p>The patches include version 2.1.0 of the <code>org.camunda.template-engines</code> artifacts, in particular <code>camunda-template-engines-freemarker</code>, <code>camunda-template-engines-velocity</code>, and <code>camunda-template-engines-xquery-saxon</code>.</p>
+
+<p>This updates the following template engine versions:</p>
+
+<ul>
+<li>Apache Freemarker
+
+<ul>
+<li>Old version: 2.3.29 (Release date: August 2019)</li>
+<li>New version: 2.3.31 (Release date: February 2021)</li>
+<li>Change log: <a href="https://freemarker.apache.org/docs/api/freemarker/template/Configuration.html#Configuration-freemarker.template.Version-">https://freemarker.apache.org/docs/api/freemarker/template/Configuration.html#Configuration-freemarker.template.Version-</a></li>
+</ul></li>
+<li>Apache Velocity
+
+<ul>
+<li>Old version: 2.2 (Release date: January 2020)</li>
+<li>New version: 2.3 (Release date: March 2021)</li>
+<li>Change log: <a href="https://velocity.apache.org/engine/2.3/upgrading.html">https://velocity.apache.org/engine/2.3/upgrading.html</a>
+<br /></li>
+</ul></li>
+</ul>
+
+<p>Please note that the new version of Freemarker contains changes that are not compatible with the previous version. We strongly recommend to test the execution of your templates before applying the update. In addition, you can replace the artifacts of version 2.1.0 by the old artifacts in version 2.0.0 to continue using the old versions of Freemarker and Velocity.</p>
+
 <h1 id="full-distribution">Full Distribution</h1>
 
 <p>This section is applicable if you installed the <a href="http://camunda-cn.shaochenfeng.com/introduction/downloading-camunda/#full-distribution">Full Distribution</a> with a <strong>shared process engine</strong>. In this case you need to update the libraries and applications installed inside the application server.</p>
@@ -8543,6 +8620,7 @@ this, with <code>DB-DRIVER-CLASS</code>, <code>JDBC-URL</code>, <code>DB-USER</c
 <li><a href="#spin-updated-dependencies">Spin: updated dependencies</a></li>
 <li><a href="#standalone-webapplication-hikaricp-replaces-commons-dbcp">Standalone Webapplication: HikariCP replaces Commons DBCP</a></li>
 </ul></li>
+<li><a href="#7-15-5-to-7-15-6-7-14-11-to-7-14-12-7-13-17-to-7-13-18">7.15.5 to 7.15.6 / 7.14.11 to 7.14.12 / 7.13.17 to 7.13.18</a></li>
 </ul></li>
 <li><a href="#full-distribution">Full Distribution</a></li>
 <li><a href="#application-with-embedded-process-engine">Application With Embedded Process Engine</a></li>

@@ -409,7 +409,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/process-engine/database/mssql-configuration/" >Microsoft Sql Server 数据库配置</a>
+      <a href="/user-guide/process-engine/database/mssql-configuration/" >Microsoft SQL Server 和 Azure SQL Database 配置</a>
     
   </li>
 
@@ -881,6 +881,49 @@ var _mtac = {};
   <li>
     
       <a href="/user-guide/spring-boot-integration/develop-and-test/" >部署和测试</a>
+    
+  </li>
+
+        
+      </ul>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/" >Quarkus Integration</a>
+      <ul>
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/version-compatibility/" >Version Compatibility</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/configuration/" >Configuration</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/cdi-integration/" >Engine CDI Integration</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/user-guide/quarkus-integration/deployments/" >Resource Deployments</a>
     
   </li>
 
@@ -4193,6 +4236,14 @@ var _mtac = {};
   <li>
     
       <a href="/reference/rest/process-definition/get-activity-statistics/" >Get Activity Instance Statistics</a>
+    
+  </li>
+
+        
+          
+  <li>
+    
+      <a href="/reference/rest/process-definition/get-static-called-process-definitions/" >Get Static Called Process Definitions</a>
     
   </li>
 
@@ -8271,9 +8322,18 @@ Map&lt;String, Object&gt; variables = Variables.putValue(&quot;my-variable&quot;
 runtimeService.setVariablesAsync(processInstanceIds, variables);
 </code></pre>
 
-<h3 id="已知的限制">已知的限制</h3>
 
-<p>目前，无法通过批处理操作设置瞬时变量。 但是，你可以同步<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/variables/#transient-variables">设置瞬时变量</a>。</p>
+<div class="note bg-info docs-info">
+  <h3>已知的限制</h3>
+  <p><p>目前，无法通过批处理操作设置瞬时变量。 但是，你可以同步[设置瞬时变量][set transient variables]。</p>
+
+<p>The execution jobs of this batch can be scheduled by the job executor as <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/#exclusive-jobs">exclusive jobs</a>.
+As a result, the execution of some of this batch&rsquo;s jobs may be delayed by other exclusive jobs that are related to the same process instance that the variables should be set to.
+However, exclusive scheduling only happens when the jobs of this batch relate to exactly one process instance.
+This can be controlled by configuring the <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/batch/#configuration">invocationsPerBatchJob</a> property.</p>
+</p>
+</div>
+
 
 <h2 id="设置移除时间">设置移除时间</h2>
 
@@ -8370,10 +8430,7 @@ Batch batch = historyService.setRemovalTimeToHistoricBatches()
 <li><a href="#更新流程实例的暂停状态">更新流程实例的暂停状态</a></li>
 <li><a href="#设置流程实例关联的job的重试">设置流程实例关联的Job的重试</a></li>
 <li><a href="#设置外部任务的重试">设置外部任务的重试</a></li>
-<li><a href="#设置流程实例变量">设置流程实例变量</a>
-<ul>
-<li><a href="#已知的限制">已知的限制</a></li>
-</ul></li>
+<li><a href="#设置流程实例变量">设置流程实例变量</a></li>
 <li><a href="#设置移除时间">设置移除时间</a>
 <ul>
 <li><a href="#历史流程实例">历史流程实例</a></li>

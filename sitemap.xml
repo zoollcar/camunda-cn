@@ -375,6 +375,10 @@
   </url>
   
   <url>
+    <loc>http://camunda-cn.shaochenfeng.com/reference/rest/process-definition/get-static-called-process-definitions/</loc>
+  </url>
+  
+  <url>
     <loc>http://camunda-cn.shaochenfeng.com/reference/rest/metrics/get-metrics-sum/</loc>
   </url>
   
@@ -480,6 +484,10 @@
   
   <url>
     <loc>http://camunda-cn.shaochenfeng.com/user-guide/spring-framework-integration/configuration/</loc>
+  </url>
+  
+  <url>
+    <loc>http://camunda-cn.shaochenfeng.com/user-guide/quarkus-integration/version-compatibility/</loc>
   </url>
   
   <url>
@@ -743,6 +751,10 @@
   </url>
   
   <url>
+    <loc>http://camunda-cn.shaochenfeng.com/user-guide/quarkus-integration/cdi-integration/</loc>
+  </url>
+  
+  <url>
     <loc>http://camunda-cn.shaochenfeng.com/user-guide/dmn-engine/evaluate-decisions/</loc>
   </url>
   
@@ -991,7 +1003,15 @@
   </url>
   
   <url>
+    <loc>http://camunda-cn.shaochenfeng.com/user-guide/quarkus-integration/configuration/</loc>
+  </url>
+  
+  <url>
     <loc>http://camunda-cn.shaochenfeng.com/reference/cmmn11/markers/required-rule/</loc>
+  </url>
+  
+  <url>
+    <loc>http://camunda-cn.shaochenfeng.com/user-guide/quarkus-integration/deployments/</loc>
   </url>
   
   <url>
@@ -2156,6 +2176,10 @@
   
   <url>
     <loc>http://camunda-cn.shaochenfeng.com/update/minor/77-to-78/</loc>
+  </url>
+  
+  <url>
+    <loc>http://camunda-cn.shaochenfeng.com/user-guide/quarkus-integration/</loc>
   </url>
   
   <url>
