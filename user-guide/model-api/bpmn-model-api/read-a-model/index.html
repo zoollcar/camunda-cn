@@ -55,7 +55,7 @@ var _mtac = {};
     
   
 
-  <title>Read a Model | docs.camunda.org</title>
+  <title>读取模型 | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
   <link rel="shortcut icon" href="http://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
@@ -1007,7 +1007,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/model-api/bpmn-model-api/read-a-model/" >Read a Model</a>
+      <a href="/user-guide/model-api/bpmn-model-api/read-a-model/" >读取模型</a>
     
   </li>
 
@@ -1015,7 +1015,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/model-api/bpmn-model-api/create-a-model/" >Create a Model</a>
+      <a href="/user-guide/model-api/bpmn-model-api/create-a-model/" >创建模型</a>
     
   </li>
 
@@ -1023,7 +1023,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/model-api/bpmn-model-api/delegation-code/" >Delegation Code</a>
+      <a href="/user-guide/model-api/bpmn-model-api/delegation-code/" >委托代码</a>
     
   </li>
 
@@ -8230,60 +8230,61 @@ var _mtac = {};
     <i>编辑此页</i> <span class="cam-docs-github"></span></a>
 </div>
 
-      <h1 class="page-title">Read a Model</h1>
+      <h1 class="page-title">读取模型</h1>
     </div>
 
     <div class="col-xs-12 content-text">
-      <p>If you already created a BPMN model and want to process it through the BPMN model API, you can import it with the
-following methods.</p>
+      <p>如果你已经创建了一个BPMN模型，并想通过BPMN模型API来处理它，你可以用以下方法导入它。</p>
 
-<pre><code class="language-java">// read a model from a file
+<pre><code class="language-java">// 从文件中读取一个模型
 File file = new File(&quot;PATH/TO/MODEL.bpmn&quot;);
 BpmnModelInstance modelInstance = Bpmn.readModelFromFile(file);
 
-// read a model from a stream
+// 从流中读取一个模型
 InputStream stream = [...]
 BpmnModelInstance modelInstance = Bpmn.readModelFromStream(stream);
 </code></pre>
 
-<p>After you imported your model you can search for elements by their id or by the type of element.</p>
+<p>在导入你的模型后，你可以通过他们的id或元素的类型来搜索元素。</p>
 
-<pre><code class="language-java">// find element instance by ID
+<pre><code class="language-java">// 通过id获取模型实例
 StartEvent start = (StartEvent) modelInstance.getModelElementById(&quot;start&quot;);
 
-// find all elements of the type task
+// 找到所有task类型的元素
 ModelElementType taskType = modelInstance.getModel().getType(Task.class);
 Collection&lt;ModelElementInstance&gt; taskInstances = modelInstance.getModelElementsByType(taskType);
 </code></pre>
 
-<p>For every element instance you can now read and edit the attribute values. You can do this by either using the provided
-helper methods or the generic XML model API. If you added custom attributes to the BPMN elements, you can
-always access them with the generic XML model API.</p>
+<p>对于每个元素实例，你现在可以读取和编辑属性值。</p>
+
+<p>你可以通过使用辅助方法或通用的XML模型API来实现。</p>
+
+<p>如果你在BPMN元素中添加了自定义属性，你可以始终使用通用的XML模型API来访问它们。</p>
 
 <pre><code class="language-java">StartEvent start = (StartEvent) modelInstance.getModelElementById(&quot;start&quot;);
 
-// read attributes by helper methods
+// 通过辅助方法读取属性
 String id = start.getId();
 String name = start.getName();
 
-// edit attributes by helper methods
+// 通过辅助方法编辑属性
 start.setId(&quot;new-id&quot;);
 start.setName(&quot;new name&quot;);
 
-// read attributes by generic XML model API (with optional namespace)
+// 通过通用的XML模型API读取属性（有可选的命名空间）。
 String custom1 = start.getAttributeValue(&quot;custom-attribute&quot;);
 String custom2 = start.getAttributeValueNs(&quot;custom-attribute-2&quot;, &quot;http://camunda.org/custom&quot;);
 
-// edit attributes by generic XML model API (with optional namespace)
+// 通过通用的XML模型API编辑属性（有可选的命名空间）。
 start.setAttributeValue(&quot;custom-attribute&quot;, &quot;new value&quot;);
 start.setAttributeValueNs(&quot;custom-attribute&quot;, &quot;http://camunda.org/custom&quot;, &quot;new value&quot;);
 </code></pre>
 
-<p>You can also access the child elements of an element or references to other elements. For example, a sequence flow
-references a source and a target element while a flow node (like start event, tasks, etc.) has child elements
-for incoming and outgoing sequence flows.</p>
+<p>你也可以访问一个元素的子元素或对其他元素的引用。</p>
 
-<p>For example, the following BPMN model was created by the BPMN model API as an example for a simple process.</p>
+<p>例如，一个序列流引用了一个源元素和一个目标元素，而一个流节点（如开始事件、任务等）有子元素用于传入和传出的序列流。</p>
+
+<p>例如，下面的BPMN模型是由BPMN模型API创建的，作为一个简单流程的例子。</p>
 
 <pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
 &lt;definitions targetNamespace=&quot;http://camunda.org/examples&quot; xmlns=&quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;&gt;
@@ -8304,7 +8305,7 @@ for incoming and outgoing sequence flows.</p>
 &lt;/definitions&gt;
 </code></pre>
 
-<p>You can now use the BPMN model API to get the source and target flow node of the sequence flow with the ID <em>start-task1</em>.</p>
+<p>现在你可以使用BPMN模型API来获得ID为*start-task1*的序列流的源和目标流节点。</p>
 
 <pre><code class="language-java">// read bpmn model from file
 BpmnModelInstance modelInstance = Bpmn.readModelFromFile(new File(&quot;/PATH/TO/MODEL.bpmn&quot;));
@@ -8321,8 +8322,9 @@ Collection&lt;SequenceFlow&gt; outgoing = source.getOutgoing();
 assert(outgoing.contains(sequenceFlow));
 </code></pre>
 
-<p>With these references you can easily create helper methods for different use cases. For example, if you want to
-find the following flow nodes of a task or a gateway you can use a helper method like the following.</p>
+<p>有了这些引用，你可以很容易地为不同的使用情况创建辅助方法。</p>
+
+<p>例如，如果你想找到一个任务或网关的流程节点，你可以使用下面这样一个辅助方法。</p>
 
 <pre><code class="language-java">public Collection&lt;FlowNode&gt; getFlowingFlowNodes(FlowNode node) {
   Collection&lt;FlowNode&gt; followingFlowNodes = new ArrayList&lt;FlowNode&gt;();
@@ -8356,7 +8358,7 @@ find the following flow nodes of a task or a gateway you can use a helper method
           <p>
             <a href="http://camunda.org">camunda.org</a> and <a href="http://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
-            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2021
+            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2022
           </p>
           <p>
             <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a> The content on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.

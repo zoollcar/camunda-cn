@@ -495,10 +495,6 @@
   </url>
   
   <url>
-    <loc>http://camunda-cn.shaochenfeng.com/user-guide/model-api/bpmn-model-api/read-a-model/</loc>
-  </url>
-  
-  <url>
     <loc>http://camunda-cn.shaochenfeng.com/user-guide/model-api/cmmn-model-api/read-a-model/</loc>
   </url>
   
@@ -588,6 +584,10 @@
   
   <url>
     <loc>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-bootstrapping/</loc>
+  </url>
+  
+  <url>
+    <loc>http://camunda-cn.shaochenfeng.com/user-guide/model-api/bpmn-model-api/read-a-model/</loc>
   </url>
   
   <url>
@@ -691,10 +691,6 @@
   </url>
   
   <url>
-    <loc>http://camunda-cn.shaochenfeng.com/user-guide/model-api/bpmn-model-api/create-a-model/</loc>
-  </url>
-  
-  <url>
     <loc>http://camunda-cn.shaochenfeng.com/user-guide/model-api/cmmn-model-api/create-a-model/</loc>
   </url>
   
@@ -720,10 +716,6 @@
   
   <url>
     <loc>http://camunda-cn.shaochenfeng.com/reference/dmn/drg/</loc>
-  </url>
-  
-  <url>
-    <loc>http://camunda-cn.shaochenfeng.com/user-guide/model-api/bpmn-model-api/delegation-code/</loc>
   </url>
   
   <url>
@@ -1068,6 +1060,14 @@
   
   <url>
     <loc>http://camunda-cn.shaochenfeng.com/user-guide/process-applications/the-processes-xml-deployment-descriptor/</loc>
+  </url>
+  
+  <url>
+    <loc>http://camunda-cn.shaochenfeng.com/user-guide/model-api/bpmn-model-api/create-a-model/</loc>
+  </url>
+  
+  <url>
+    <loc>http://camunda-cn.shaochenfeng.com/user-guide/model-api/bpmn-model-api/delegation-code/</loc>
   </url>
   
   <url>

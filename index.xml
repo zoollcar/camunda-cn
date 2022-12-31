@@ -1089,16 +1089,6 @@ ServletProcessApplication 类是基于 Servlet 规范（Java Web 应用程序）
     
     <item>
       <title>Read a Model</title>
-      <link>http://camunda-cn.shaochenfeng.com/user-guide/model-api/bpmn-model-api/read-a-model/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://camunda-cn.shaochenfeng.com/user-guide/model-api/bpmn-model-api/read-a-model/</guid>
-      <description>If you already created a BPMN model and want to process it through the BPMN model API, you can import it with the following methods.
-// read a model from a file File file = new File(&amp;quot;PATH/TO/MODEL.bpmn&amp;quot;); BpmnModelInstance modelInstance = Bpmn.readModelFromFile(file); // read a model from a stream InputStream stream = [...] BpmnModelInstance modelInstance = Bpmn.readModelFromStream(stream);  After you imported your model you can search for elements by their id or by the type of element.</description>
-    </item>
-    
-    <item>
-      <title>Read a Model</title>
       <link>http://camunda-cn.shaochenfeng.com/user-guide/model-api/cmmn-model-api/read-a-model/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -1327,6 +1317,20 @@ ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine()  camunda.
     </item>
     
     <item>
+      <title>读取模型</title>
+      <link>http://camunda-cn.shaochenfeng.com/user-guide/model-api/bpmn-model-api/read-a-model/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://camunda-cn.shaochenfeng.com/user-guide/model-api/bpmn-model-api/read-a-model/</guid>
+      <description>如果你已经创建了一个BPMN模型，并想通过BPMN模型API来处理它，你可以用以下方法导入它。
+// 从文件中读取一个模型 File file = new File(&amp;quot;PATH/TO/MODEL.bpmn&amp;quot;); BpmnModelInstance modelInstance = Bpmn.readModelFromFile(file); // 从流中读取一个模型 InputStream stream = [...] BpmnModelInstance modelInstance = Bpmn.readModelFromStream(stream);  在导入你的模型后，你可以通过他们的id或元素的类型来搜索元素。
+// 通过id获取模型实例 StartEvent start = (StartEvent) modelInstance.getModelElementById(&amp;quot;start&amp;quot;); // 找到所有task类型的元素 ModelElementType taskType = modelInstance.getModel().getType(Task.class); Collection&amp;lt;ModelElementInstance&amp;gt; taskInstances = modelInstance.getModelElementsByType(taskType);  对于每个元素实例，你现在可以读取和编辑属性值。
+你可以通过使用辅助方法或通用的XML模型API来实现。
+如果你在BPMN元素中添加了自定义属性，你可以始终使用通用的XML模型API来访问它们。
+StartEvent start = (StartEvent) modelInstance.getModelElementById(&amp;quot;start&amp;quot;); // 通过辅助方法读取属性 String id = start.getId(); String name = start.getName(); // 通过辅助方法编辑属性 start.setId(&amp;quot;new-id&amp;quot;); start.setName(&amp;quot;new name&amp;quot;); // 通过通用的XML模型API读取属性（有可选的命名空间）。 String custom1 = start.</description>
+    </item>
+    
+    <item>
       <title>配置 DMN 引擎</title>
       <link>http://camunda-cn.shaochenfeng.com/user-guide/process-engine/decisions/configuration/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1488,17 +1492,6 @@ The Web applications set the following cookies:
     
     <item>
       <title>Create a Model</title>
-      <link>http://camunda-cn.shaochenfeng.com/user-guide/model-api/bpmn-model-api/create-a-model/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://camunda-cn.shaochenfeng.com/user-guide/model-api/bpmn-model-api/create-a-model/</guid>
-      <description>To create a new BPMN model from scratch you have to create an empty BPMN model instance with the following method:
-BpmnModelInstance modelInstance = Bpmn.createEmptyModel();  The next step is to create a BPMN definitions element. Set the target namespace on it and add it to the newly created empty model instance.
-Definitions definitions = modelInstance.newInstance(Definitions.class); definitions.setTargetNamespace(&amp;quot;http://camunda.org/examples&amp;quot;); modelInstance.setDefinitions(definitions);  Usually you want to add a process to your model. This follows the same 3 steps as the creation of the BPMN definitions element:</description>
-    </item>
-    
-    <item>
-      <title>Create a Model</title>
       <link>http://camunda-cn.shaochenfeng.com/user-guide/model-api/cmmn-model-api/create-a-model/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -1556,16 +1549,6 @@ An output clause is represented by an output element inside a decisionTable XML 
       <guid>http://camunda-cn.shaochenfeng.com/webapps/cockpit/dmn/decision-instance-view/</guid>
       <description>On the decision instance page you find the table or literal expression of the decision that was executed as well as the values for the input variables and the decision result.
 The input and output values for this decision instance are shown directly on the table in the corresponding cells as well as in the Inputs and Outputs tabs below the table. Complex variables like Objects, Files and Bytes are not displayed on the table.</description>
-    </item>
-    
-    <item>
-      <title>Delegation Code</title>
-      <link>http://camunda-cn.shaochenfeng.com/user-guide/model-api/bpmn-model-api/delegation-code/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://camunda-cn.shaochenfeng.com/user-guide/model-api/bpmn-model-api/delegation-code/</guid>
-      <description>If you use Delegation Code, you can access the BPMN model instance and current element of the executed process. If a BPMN model is accessed, it will be cached to avoid redundant database queries.
-Java Delegate If your class implements the org.camunda.bpm.engine.delegate.JavaDelegate interface, you can access the BPMN model instance and the current flow element. In the following example the JavaDelegate was added to a service task in the BPMN model.</description>
     </item>
     
     <item>
@@ -2425,6 +2408,36 @@ Xml Schema Namespace The namespace for the processes.xml file is http://www.camu
 空 processes.xml processes.xml 可以选择为空（留空）。 在这种情况下，使用默认值。 空的processes.xml对应如下配置：
 &amp;lt;process-application xmlns=&amp;quot;http://www.camunda.org/schema/1.0/ProcessApplication&amp;quot; xmlns:xsi=&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot;&amp;gt; &amp;lt;process-archive&amp;gt; &amp;lt;properties&amp;gt; &amp;lt;property name=&amp;quot;isDeleteUponUndeploy&amp;quot;&amp;gt;false&amp;lt;/property&amp;gt; &amp;lt;property name=&amp;quot;isScanForProcessDefinitions&amp;quot;&amp;gt;true&amp;lt;/property&amp;gt; &amp;lt;/properties&amp;gt; &amp;lt;/process-archive&amp;gt; &amp;lt;/process-application&amp;gt;  空的 processes.xml 将扫描流程定义并对默认流程引擎执行单一部署。
 processes.xml 文件的位置 processes.xml 文件的默认位置是META-INF/processes.</description>
+    </item>
+    
+    <item>
+      <title>创建模型</title>
+      <link>http://camunda-cn.shaochenfeng.com/user-guide/model-api/bpmn-model-api/create-a-model/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://camunda-cn.shaochenfeng.com/user-guide/model-api/bpmn-model-api/create-a-model/</guid>
+      <description>为了从头创建一个新的BPMN模型，你需要用以下方法创建一个空的BPMN模型实例。
+BpmnModelInstance modelInstance = Bpmn.createEmptyModel();  下一步是创建一个BPMN的定义元素（bpmn:definitions）。在定义上设置targetNamespace并将其添加到新创建的空模型实例。
+Definitions definitions = modelInstance.newInstance(Definitions.class); definitions.setTargetNamespace(&amp;quot;http://camunda.org/examples&amp;quot;); modelInstance.setDefinitions(definitions);   译者注：
+生成出来的xml类似于此
+&amp;gt; &amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;no&amp;quot;?&amp;gt; &amp;gt; &amp;lt;definitions id=&amp;quot;definitions_a94e86f0-3b8e-4aab-acdc-0baeba3d5dd0&amp;quot; targetNamespace=&amp;quot;http://camunda.org/examples&amp;quot; xmlns=&amp;quot;http://www.omg.org/spec/BPMN/20100524/MODEL&amp;quot;/&amp;gt; &amp;gt; &amp;gt; ``` 通常情况下，你想在模型中添加一个`process`过程。这与创建BPMN定义元素的3个步骤相同： 1. 创建一个BPMN元素的新实例 2. 设置元素实例的属性和子元素 3. 将新创建的元素实例添加到相应的父元素中 ```java Process process = modelInstance.newInstance(Process.class); process.setId(&amp;quot;process&amp;quot;); definitions.addChildElement(process);  译者注：
+生成出来的xml类似于此
+&amp;gt; &amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; standalone=&amp;quot;no&amp;quot;?&amp;gt; &amp;gt; &amp;lt;definitions id=&amp;quot;definitions_2cc92107-3cde-45b2-86c8-11b0e88f5903&amp;quot; targetNamespace=&amp;quot;http://camunda.org/examples&amp;quot; xmlns=&amp;quot;http://www.omg.org/spec/BPMN/20100524/MODEL&amp;quot;&amp;gt; &amp;gt; &amp;lt;process id=&amp;quot;process&amp;quot;/&amp;gt; &amp;gt; &amp;lt;/definitions&amp;gt; &amp;gt; ``` &amp;gt; &amp;gt; 如果不手动指定`process id`，会生成默认`process id` 类似于：` &amp;lt;process id=&amp;quot;process_a35ec973-16ad-4883-82be-c79de5d00b20&amp;quot;/&amp;gt;` 为了简化这个重复的程序，你可以使用一个像这样的辅助方法。 ```java protected &amp;lt;T extends BpmnModelElementInstance&amp;gt; T createElement(BpmnModelElementInstance parentElement, String id, Class&amp;lt;T&amp;gt; elementClass) { T element = parentElement.</description>
+    </item>
+    
+    <item>
+      <title>委托代码</title>
+      <link>http://camunda-cn.shaochenfeng.com/user-guide/model-api/bpmn-model-api/delegation-code/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://camunda-cn.shaochenfeng.com/user-guide/model-api/bpmn-model-api/delegation-code/</guid>
+      <description>如果你使用 委托代码, 你可以访问BPMN模型实例和当前执行流程的元素。如果访问BPMN模型，它将被缓存，以避免冗余的数据库查询。
+Java 代理类 如果你的类实现了org.camunda.bpm.engine.delegate.JavaDelegate接口，你可以访问BPMN模型实例和当前的流程元素。
+在下面的例子中，JavaDelegate被添加到BPMN模型的一个服务任务中。因此，返回的流程元素可以被转换为ServiceTask。
+public class ExampleServiceTask implements JavaDelegate { public void execute(DelegateExecution execution) throws Exception { BpmnModelInstance modelInstance = execution.getBpmnModelInstance(); ServiceTask serviceTask = (ServiceTask) execution.getBpmnModelElementInstance(); } }  执行监听器 如果你的类实现了org.camunda.bpm.engine.delegate.ExecutionListener接口，你可以访问BPMN模型实例和当前的流程元素。
+由于一个执行监听器可以被添加到多个元素中，如流程、事件、任务、网关和序列流，因此不能保证流元素的类型。
+public class ExampleExecutionListener implements ExecutionListener { public void notify(DelegateExecution execution) throws Exception { BpmnModelInstance modelInstance = execution.getBpmnModelInstance(); FlowElement flowElement = execution.getBpmnModelElementInstance(); } }  任务监听器 如果你的类实现了org.camunda.bpm.engine.delegate.TaskListener接口，你可以访问BPMN模型实例和当前的用户任务，因为任务监听器只能被添加到用户任务中。
+public class ExampleTaskListener implements TaskListener { public void notify(DelegateTask delegateTask) { BpmnModelInstance modelInstance = delegateTask.</description>
     </item>
     
     <item>

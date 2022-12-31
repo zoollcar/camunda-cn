@@ -55,7 +55,7 @@ var _mtac = {};
     
   
 
-  <title>Create a Model | docs.camunda.org</title>
+  <title>创建模型 | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
   <link rel="shortcut icon" href="http://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
@@ -1007,7 +1007,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/model-api/bpmn-model-api/read-a-model/" >Read a Model</a>
+      <a href="/user-guide/model-api/bpmn-model-api/read-a-model/" >读取模型</a>
     
   </li>
 
@@ -1015,7 +1015,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/model-api/bpmn-model-api/create-a-model/" >Create a Model</a>
+      <a href="/user-guide/model-api/bpmn-model-api/create-a-model/" >创建模型</a>
     
   </li>
 
@@ -1023,7 +1023,7 @@ var _mtac = {};
           
   <li>
     
-      <a href="/user-guide/model-api/bpmn-model-api/delegation-code/" >Delegation Code</a>
+      <a href="/user-guide/model-api/bpmn-model-api/delegation-code/" >委托代码</a>
     
   </li>
 
@@ -8230,52 +8230,75 @@ var _mtac = {};
     <i>编辑此页</i> <span class="cam-docs-github"></span></a>
 </div>
 
-      <h1 class="page-title">Create a Model</h1>
+      <h1 class="page-title">创建模型</h1>
     </div>
 
     <div class="col-xs-12 content-text">
       
 
-<p>To create a new BPMN model from scratch you have to create an empty BPMN model instance with the following method:</p>
+<p>为了从头创建一个新的BPMN模型，你需要用以下方法创建一个空的BPMN模型实例。</p>
 
 <pre><code class="language-java">BpmnModelInstance modelInstance = Bpmn.createEmptyModel();
 </code></pre>
 
-<p>The next step is to create a BPMN definitions element. Set the target namespace on it and add it
-to the newly created empty model instance.</p>
+<p>下一步是创建一个BPMN的定义元素（<code>bpmn:definitions</code>）。在定义上设置<code>targetNamespace</code>并将其添加到新创建的空模型实例。</p>
 
 <pre><code class="language-java">Definitions definitions = modelInstance.newInstance(Definitions.class);
 definitions.setTargetNamespace(&quot;http://camunda.org/examples&quot;);
 modelInstance.setDefinitions(definitions);
 </code></pre>
 
-<p>Usually you want to add a process to your model. This follows
-the same 3 steps as the creation of the BPMN definitions element:</p>
+<blockquote>
+<p>译者注：</p>
 
-<ol>
-<li>Create a new instance of the BPMN element</li>
-<li>Set attributes and child elements of the element instance</li>
-<li>Add the newly created element instance to the corresponding parent element</li>
-</ol>
+<p>生成出来的xml类似于此</p>
 
-<pre><code class="language-java">Process process = modelInstance.newInstance(Process.class);
+<pre><code class="language-xml">&gt; &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
+&gt; &lt;definitions id=&quot;definitions_a94e86f0-3b8e-4aab-acdc-0baeba3d5dd0&quot; targetNamespace=&quot;http://camunda.org/examples&quot; xmlns=&quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;/&gt;
+&gt; 
+&gt; ```
+
+
+
+通常情况下，你想在模型中添加一个`process`过程。这与创建BPMN定义元素的3个步骤相同：
+
+1. 创建一个BPMN元素的新实例
+2. 设置元素实例的属性和子元素
+3. 将新创建的元素实例添加到相应的父元素中
+
+```java
+Process process = modelInstance.newInstance(Process.class);
 process.setId(&quot;process&quot;);
 definitions.addChildElement(process);
 </code></pre>
 
-<p>To simplify this repeating procedure, you can use a helper method like this one.</p>
+<p>译者注：</p>
 
-<pre><code class="language-java">protected &lt;T extends BpmnModelElementInstance&gt; T createElement(BpmnModelElementInstance parentElement, String id, Class&lt;T&gt; elementClass) {
+<p>生成出来的xml类似于此</p>
+
+<pre><code class="language-xml">&gt; &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
+&gt; &lt;definitions id=&quot;definitions_2cc92107-3cde-45b2-86c8-11b0e88f5903&quot; targetNamespace=&quot;http://camunda.org/examples&quot; xmlns=&quot;http://www.omg.org/spec/BPMN/20100524/MODEL&quot;&gt;
+&gt;   &lt;process id=&quot;process&quot;/&gt;
+&gt; &lt;/definitions&gt;
+&gt; ```
+&gt;
+&gt; 如果不手动指定`process id`，会生成默认`process id` 类似于：`  &lt;process id=&quot;process_a35ec973-16ad-4883-82be-c79de5d00b20&quot;/&gt;`
+
+为了简化这个重复的程序，你可以使用一个像这样的辅助方法。
+
+```java
+protected &lt;T extends BpmnModelElementInstance&gt; T createElement(BpmnModelElementInstance parentElement, String id, Class&lt;T&gt; elementClass) {
   T element = parentElement.getModelInstance().newInstance(elementClass);
   element.setAttributeValue(&quot;id&quot;, id, true);
   parentElement.addChildElement(element);
   return element;
 }
 </code></pre>
+</blockquote>
 
-<p>After you created the elements of your process like start event, tasks, gateways and end event, you have to connect
-the elements with sequence flows. Again, this follows the same 3 steps of element creation and can be simplified by the
-following helper method.</p>
+<p>在你创建了流程元素，如开始事件、任务、网关和结束事件后，你必须用序列流去连接元素与序列流。</p>
+
+<p>同样的，这也是按照创建元素的3个步骤进行的，可以通过以下的辅助方法来简化</p>
 
 <pre><code class="language-java">public SequenceFlow createSequenceFlow(Process process, FlowNode from, FlowNode to) {
   String identifier = from.getId() + &quot;-&quot; + to.getId();
@@ -8289,28 +8312,28 @@ following helper method.</p>
 }
 </code></pre>
 
-<p>Validate the model against the BPMN 2.0 specification and convert it to
-an XML string or save it to a file or stream.</p>
+<p>根据BPMN 2.0规范验证模型，并将其转换成一个XML字符串或将其保存到一个文件或流中。</p>
 
-<pre><code class="language-java">// validate the model
-Bpmn.validateModel(modelInstance);
+<pre><code class="language-java">// 验证模型
+Bpmn.validateModel(modelInstance);  
 
-// convert to string
+// 转换成字符串
 String xmlString = Bpmn.convertToString(modelInstance);
 
-// write to output stream
+// 写到一个输入流中
 OutputStream outputStream = new OutputStream(...);
 Bpmn.writeModelToStream(outputStream, modelInstance);
 
-// write to file
+// 写到一个文件中
 File file = new File(...);
 Bpmn.writeModelToFile(file, modelInstance);
 </code></pre>
 
-<h1 id="example-1-create-a-simple-process-with-one-user-task">Example 1: Create a Simple Process With One User Task</h1>
+<h1 id="示例-1-用一个用户任务创建一个简单的流程">示例 1: 用一个用户任务创建一个简单的流程</h1>
 
-<p>With the basic helper methods from above it is very easy and straightforward to create simple processes. First, create a
-process with a start event, user task and an end event.</p>
+<p>有了上面的辅助方法，创建简单的流程是非常容易和直接的。</p>
+
+<p>首先，创建一个流程，包括一个开始事件、用户任务和一个结束事件。</p>
 
 <figure class="image">
   <span><img
@@ -8321,36 +8344,36 @@ process with a start event, user task and an end event.</p>
 </figure>
 
 
-<p>The following code creates this process using the helper methods from above (without the DI elements).</p>
+<p>下面的代码使用上面的帮助方法创建了这个过程（没有DI元素）。</p>
 
-<pre><code class="language-java">// create an empty model
+<pre><code class="language-java">// 创建一个空白模型
 BpmnModelInstance modelInstance = Bpmn.createEmptyModel();
 Definitions definitions = modelInstance.newInstance(Definitions.class);
 definitions.setTargetNamespace(&quot;http://camunda.org/examples&quot;);
 modelInstance.setDefinitions(definitions);
 
-// create the process
+// 创建流程元素
 Process process = createElement(definitions, &quot;process-with-one-task&quot;, Process.class);
 
-// create start event, user task and end event
+// 创建开始事件，用户任务，结束事件
 StartEvent startEvent = createElement(process, &quot;start&quot;, StartEvent.class);
 UserTask task1 = createElement(process, &quot;task1&quot;, UserTask.class);
 task1.setName(&quot;User Task&quot;);
 EndEvent endEvent = createElement(process, &quot;end&quot;, EndEvent.class);
 
-// create the connections between the elements
+// 创建各个元素之间的连接
 createSequenceFlow(process, startEvent, task1);
 createSequenceFlow(process, task1, endEvent);
 
-// validate and write model to file
+// 验证模型并写入到文件中
 Bpmn.validateModel(modelInstance);
 File file = File.createTempFile(&quot;bpmn-model-api-&quot;, &quot;.bpmn&quot;);
 Bpmn.writeModelToFile(file, modelInstance);
 </code></pre>
 
-<h1 id="example-2-create-a-simple-process-with-two-parallel-tasks">Example 2: Create a Simple Process With Two Parallel Tasks</h1>
+<h1 id="示例-2-创建有两个并行任务的简单流程">示例 2: 创建有两个并行任务的简单流程</h1>
 
-<p>Even more complex processes can be created with a few lines of code with the standard BPMN model API.</p>
+<p>更复杂的流程也可以通过标准的BPMN模型API用几行代码来创建。</p>
 
 <figure class="image">
   <span><img
@@ -8399,8 +8422,8 @@ Bpmn.writeModelToFile(file, modelInstance);
   <h3>目录:</h3>
   <nav id="TableOfContents">
 <ul>
-<li><a href="#example-1-create-a-simple-process-with-one-user-task">Example 1: Create a Simple Process With One User Task</a></li>
-<li><a href="#example-2-create-a-simple-process-with-two-parallel-tasks">Example 2: Create a Simple Process With Two Parallel Tasks</a></li>
+<li><a href="#示例-1-用一个用户任务创建一个简单的流程">示例 1: 用一个用户任务创建一个简单的流程</a></li>
+<li><a href="#示例-2-创建有两个并行任务的简单流程">示例 2: 创建有两个并行任务的简单流程</a></li>
 </ul>
 </nav>
   
@@ -8419,7 +8442,7 @@ Bpmn.writeModelToFile(file, modelInstance);
           <p>
             <a href="http://camunda.org">camunda.org</a> and <a href="http://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
-            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2021
+            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2022
           </p>
           <p>
             <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a> The content on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
