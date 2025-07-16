@@ -58,11 +58,11 @@ var _mtac = {};
   <title>Update from 7.3 to 7.4 | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="http://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="https://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="http://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
 </head>
 <body class="">
 
@@ -73,8 +73,8 @@ var _mtac = {};
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="http://camunda-cn.shaochenfeng.com/">
-      <img src="http://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="https://camunda-cn.shaochenfeng.com/">
+      <img src="https://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">中文站</span>
       </a>
@@ -8187,7 +8187,7 @@ var _mtac = {};
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="http://camunda-cn.shaochenfeng.com/">
+    <select id="version-select" data-basepath="/manual" base-url="https://camunda-cn.shaochenfeng.com/">
       
         <option  selected >develop</option>
       
@@ -8249,9 +8249,9 @@ var _mtac = {};
 <p>Noteworthy new Features and Changes in 7.4:</p>
 
 <ul>
-<li><strong>DMN 1.1:</strong> <a href="http://camunda-cn.shaochenfeng.com/reference/dmn/">Decision Model And Notation</a> is a standard for defining and executing business rules in the form of decisions and integrates with <a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/">BPMN</a> and <a href="http://camunda-cn.shaochenfeng.com/reference/cmmn11/">CMMN</a>. Camunda Platform 7.4 implements this standard for decision tables and therefore introduces new artifacts and extends the database schema during update. If you do not plan to use DMN, the DMN-related tables will stay empty.</li>
-<li><strong>CMMN 1.1:</strong> In addition to the already implemented version 1.0, the new version 1.1 of <a href="http://camunda-cn.shaochenfeng.com/reference/cmmn11/">Case Management Model And Notation</a> (CMMN) is supported with Camunda Platform 7.4. The execution of CMMN 1.0 models is still supported by Camunda Platform.</li>
-<li><strong>Logging:</strong> Camunda 7.4 uses SLF4J as a logging API instead of JDK logging as before. This introduces the SLF4J API as a core dependency for the process engine. Please refer to the application server-specific sub-chapters of this document for implications on updating a full distribution installation. Also see the User Guide for <a href="http://camunda-cn.shaochenfeng.com/user-guide/logging/">information on how to set up logging</a>.</li>
+<li><strong>DMN 1.1:</strong> <a href="https://camunda-cn.shaochenfeng.com/reference/dmn/">Decision Model And Notation</a> is a standard for defining and executing business rules in the form of decisions and integrates with <a href="https://camunda-cn.shaochenfeng.com/reference/bpmn20/">BPMN</a> and <a href="https://camunda-cn.shaochenfeng.com/reference/cmmn11/">CMMN</a>. Camunda Platform 7.4 implements this standard for decision tables and therefore introduces new artifacts and extends the database schema during update. If you do not plan to use DMN, the DMN-related tables will stay empty.</li>
+<li><strong>CMMN 1.1:</strong> In addition to the already implemented version 1.0, the new version 1.1 of <a href="https://camunda-cn.shaochenfeng.com/reference/cmmn11/">Case Management Model And Notation</a> (CMMN) is supported with Camunda Platform 7.4. The execution of CMMN 1.0 models is still supported by Camunda Platform.</li>
+<li><strong>Logging:</strong> Camunda 7.4 uses SLF4J as a logging API instead of JDK logging as before. This introduces the SLF4J API as a core dependency for the process engine. Please refer to the application server-specific sub-chapters of this document for implications on updating a full distribution installation. Also see the User Guide for <a href="https://camunda-cn.shaochenfeng.com/user-guide/logging/">information on how to set up logging</a>.</li>
 <li><strong>Changed URL of BPMN Extensions Namespace</strong>: With 7.4 the namespace URL for BPMN extensions is changed. See last section on this page for details.</li>
 </ul>
 
@@ -8269,7 +8269,7 @@ var _mtac = {};
 <h2 id="procedure">Procedure</h2>
 
 <ol>
-<li><p>Check for <a href="http://camunda-cn.shaochenfeng.com/update/patch-level/#database-patches">available database patch scripts</a> for your database that are within the bounds of your update path.
+<li><p>Check for <a href="https://camunda-cn.shaochenfeng.com/update/patch-level/#database-patches">available database patch scripts</a> for your database that are within the bounds of your update path.
 Locate the scripts at <code>$DISTRIBUTION_PATH/sql/upgrade</code> in the pre-packaged distribution (where <code>$DISTRIBUTION_PATH</code> is the path of an unpacked distribution) or in the <a href="https://app.camunda.com/nexus/service/rest/repository/browse/public/org/camunda/bpm/distro/camunda-sql-scripts/">Camunda Nexus</a>.
 We highly recommend to execute these patches before updating. Execute them in ascending order by version number.
 The naming pattern is <code>$DATABASENAME_engine_7.3_patch_?.sql</code>.</p></li>
@@ -8294,7 +8294,7 @@ This script is the same as patch <code>$DATABASE_engine_7.3_patch_7.3.2_to_7.3.3
 
 <h1 id="full-distribution">Full Distribution</h1>
 
-<p>This section is applicable if you installed the <a href="http://camunda-cn.shaochenfeng.com/introduction/downloading-camunda/#full-distribution">Full Distribution</a> with a <strong>shared process engine</strong>.</p>
+<p>This section is applicable if you installed the <a href="https://camunda-cn.shaochenfeng.com/introduction/downloading-camunda/#full-distribution">Full Distribution</a> with a <strong>shared process engine</strong>.</p>
 
 <p>The following steps are required:</p>
 
@@ -8310,11 +8310,11 @@ This script is the same as patch <code>$DATABASE_engine_7.3_patch_7.3.2_to_7.3.3
 <p>Please choose the application server you are working with from the following list:</p>
 
 <ul>
-<li><a href="http://camunda-cn.shaochenfeng.com/update/minor/73-to-74/tomcat/">Apache Tomcat</a></li>
-<li><a href="http://camunda-cn.shaochenfeng.com/update/minor/73-to-74/jboss/">JBoss AS/Wildfly</a></li>
-<li><a href="http://camunda-cn.shaochenfeng.com/update/minor/73-to-74/glassfish/">Glassfish</a></li>
-<li><a href="http://camunda-cn.shaochenfeng.com/update/minor/73-to-74/was/">IBM WebSphere</a></li>
-<li><a href="http://camunda-cn.shaochenfeng.com/update/minor/73-to-74/wls/">Oracle WebLogic</a></li>
+<li><a href="https://camunda-cn.shaochenfeng.com/update/minor/73-to-74/tomcat/">Apache Tomcat</a></li>
+<li><a href="https://camunda-cn.shaochenfeng.com/update/minor/73-to-74/jboss/">JBoss AS/Wildfly</a></li>
+<li><a href="https://camunda-cn.shaochenfeng.com/update/minor/73-to-74/glassfish/">Glassfish</a></li>
+<li><a href="https://camunda-cn.shaochenfeng.com/update/minor/73-to-74/was/">IBM WebSphere</a></li>
+<li><a href="https://camunda-cn.shaochenfeng.com/update/minor/73-to-74/wls/">Oracle WebLogic</a></li>
 </ul>
 
 <h2 id="custom-process-applications">Custom Process Applications</h2>
@@ -8354,22 +8354,22 @@ This script is the same as patch <code>$DATABASE_engine_7.3_patch_7.3.2_to_7.3.3
 
 <p>As of 7.4 the process engine uses SLF4J for logging. The SLF4J API is pulled in transitively by the process engine maven module.
 However, in order for any actual logging to occur, you need to add an slf4j compatible logging backend. Please refer to the user guide for
-<a href="http://camunda-cn.shaochenfeng.com/user-guide/logging/">Information on how to setup logging</a>.</p>
+<a href="https://camunda-cn.shaochenfeng.com/user-guide/logging/">Information on how to setup logging</a>.</p>
 
 <h3 id="task-query-expressions">Task Query Expressions</h3>
 
-<p>As of 7.4, the default handling of expressions submitted as parameters of task queries has changed. Passing EL expressions in a task query enables execution of arbitrary code when the query is evaluated. The process engine no longer evaluates these expressions by default and throws an exception instead. This behavior can be toggled in the process engine configuration using the properties <code>enableExpressionsInAdhocQueries</code> (default <code>false</code>) and <code>enableExpressionsInStoredQueries</code> (default <code>true</code>). To restore the engine&rsquo;s previous behavior, set both flags to <code>true</code>. See the user guide on <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/securing-custom-code/">security considerations for custom code</a> for details.
+<p>As of 7.4, the default handling of expressions submitted as parameters of task queries has changed. Passing EL expressions in a task query enables execution of arbitrary code when the query is evaluated. The process engine no longer evaluates these expressions by default and throws an exception instead. This behavior can be toggled in the process engine configuration using the properties <code>enableExpressionsInAdhocQueries</code> (default <code>false</code>) and <code>enableExpressionsInStoredQueries</code> (default <code>true</code>). To restore the engine&rsquo;s previous behavior, set both flags to <code>true</code>. See the user guide on <a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/securing-custom-code/">security considerations for custom code</a> for details.
 This is already the default for Camunda Platform versions after and including 7.3.3 and 7.2.8.</p>
 
 <h3 id="user-operation-log">User Operation Log</h3>
 
-<p>The behavior of the <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/history/#user-operation-log">user operation log</a> has changed, so that operations are only logged if they are performed in the context of a logged in user. This behavior can be toggled in the process engine configuration using the property <code>restrictUserOperationLogToAuthenticatedUsers</code> (default <code>true</code>). To restore the engine&rsquo;s prior behavior, i.e., to write log entries regardless of user context, set the flag to <code>false</code>.</p>
+<p>The behavior of the <a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/history/#user-operation-log">user operation log</a> has changed, so that operations are only logged if they are performed in the context of a logged in user. This behavior can be toggled in the process engine configuration using the property <code>restrictUserOperationLogToAuthenticatedUsers</code> (default <code>true</code>). To restore the engine&rsquo;s prior behavior, i.e., to write log entries regardless of user context, set the flag to <code>false</code>.</p>
 
 <p>Furthermore, with 7.4 task events are only logged when they occur in the context of a logged in user. Task events are accessible via the deprecated API <code>TaskService#getTaskEvents</code>. If you rely on this API method, the previous behavior can be restored by setting the flag <code>restrictUserOperationLogToAuthenticatedUsers</code> to <code>false</code>.</p>
 
 <h3 id="cmmn-model-api">CMMN Model API</h3>
 
-<p>As a consequence of supporting CMMN 1.1, the CMMN model API is now based on the schema of CMMN 1.1. This leads to <a href="http://camunda-cn.shaochenfeng.com/user-guide/model-api/cmmn-model-api/limitations/">limitations</a> when editing CMMN 1.0 models. We therefore recommend to <a href="http://camunda-cn.shaochenfeng.com/reference/cmmn11/migration/10-to-11/">migrate your CMMN 1.0 models to CMMN 1.1</a>.</p>
+<p>As a consequence of supporting CMMN 1.1, the CMMN model API is now based on the schema of CMMN 1.1. This leads to <a href="https://camunda-cn.shaochenfeng.com/user-guide/model-api/cmmn-model-api/limitations/">limitations</a> when editing CMMN 1.0 models. We therefore recommend to <a href="https://camunda-cn.shaochenfeng.com/reference/cmmn11/migration/10-to-11/">migrate your CMMN 1.0 models to CMMN 1.1</a>.</p>
 
 <h1 id="changed-url-of-bpmn-extensions-namespace">Changed URL of BPMN Extensions Namespace</h1>
 
@@ -8477,9 +8477,9 @@ If you click &ldquo;No&rdquo;, the modeler does not migrate the namespace and yo
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="http://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="https://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
-            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2022
+            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2025
           </p>
           <p>
             <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a> The content on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
@@ -8492,7 +8492,7 @@ If you click &ldquo;No&rdquo;, the modeler does not migrate the namespace and yo
 
   
 
-  <script type="text/javascript" src="http://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

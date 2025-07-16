@@ -58,11 +58,11 @@ var _mtac = {};
   <title>流程变量 | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="http://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="https://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="http://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
 </head>
 <body class="">
 
@@ -73,8 +73,8 @@ var _mtac = {};
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="http://camunda-cn.shaochenfeng.com/">
-      <img src="http://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="https://camunda-cn.shaochenfeng.com/">
+      <img src="https://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">中文站</span>
       </a>
@@ -8187,7 +8187,7 @@ var _mtac = {};
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="http://camunda-cn.shaochenfeng.com/">
+    <select id="version-select" data-basepath="/manual" base-url="https://camunda-cn.shaochenfeng.com/">
       
         <option  selected >develop</option>
       
@@ -8240,7 +8240,7 @@ var _mtac = {};
 
 <h1 id="变量作用域和变量可访问性">变量作用域和变量可访问性</h1>
 
-<p>所有可以拥有变量的实体被称为 <em>变量作用域</em> 。包括执行（包括流程实例在内）和任务。正如在<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-concepts/#executions">概念</a>章节所描述的，流程实例的运行状态由一棵执行树表示。参看下面的流程模型，其中红点标志着活动任务。</p>
+<p>所有可以拥有变量的实体被称为 <em>变量作用域</em> 。包括执行（包括流程实例在内）和任务。正如在<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-concepts/#executions">概念</a>章节所描述的，流程实例的运行状态由一棵执行树表示。参看下面的流程模型，其中红点标志着活动任务。</p>
 
 <figure class="image">
   <span><img
@@ -8297,7 +8297,7 @@ var _mtac = {};
 <li>传递信息</li>
 <li>任务生命周期的转换，如完成或解决</li>
 <li>从外部设置/获取变量</li>
-<li>设置/获取<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/delegation-code/">Delegate</a>中的变量</li>
+<li>设置/获取<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/delegation-code/">Delegate</a>中的变量</li>
 <li>流程模型中的表达式</li>
 <li>流程模型中的脚本</li>
 <li>（历史性的）变量查询</li>
@@ -8401,7 +8401,7 @@ execution.setVariable(&quot;diff&quot;, typedDiff);
 </div>
 
 
-<p>流程变量可以用<a href="http://camunda-cn.shaochenfeng.com/user-guide/data-formats/">Camunda Spin插件</a> 提供的JSON和XML等格式存储。Spin为 <code>object</code> 类型的变量提供了序列化器，这样Java变量就可以以这JSON或XML格式持久化到数据库中了。此外，通过<code>xml</code>和<code>json</code>的值类型，可以直接将JSON和XML文档存储为Spin对象。相对于普通的<code>string</code>变量，Spin对象提供了一个流畅的API来对这类文档进行普通的操作，如读写变量对象的属性。</p>
+<p>流程变量可以用<a href="https://camunda-cn.shaochenfeng.com/user-guide/data-formats/">Camunda Spin插件</a> 提供的JSON和XML等格式存储。Spin为 <code>object</code> 类型的变量提供了序列化器，这样Java变量就可以以这JSON或XML格式持久化到数据库中了。此外，通过<code>xml</code>和<code>json</code>的值类型，可以直接将JSON和XML文档存储为Spin对象。相对于普通的<code>string</code>变量，Spin对象提供了一个流畅的API来对这类文档进行普通的操作，如读写变量对象的属性。</p>
 
 <h2 id="object值-序列化">Object值 序列化</h2>
 
@@ -8432,7 +8432,7 @@ execution.setVariable(&quot;someVariable&quot;, customerDataValue);
 
 <div class="note bg-info docs-info">
   <h3>将对象序列化为XML和JSON</h3>
-  <p><a href="http://camunda-cn.shaochenfeng.com/user-guide/data-formats/">Camunda Spin 插件</a> 提供了能够将对象序列化为XML和JSON的序列化器。当希望序列化的值可以被人类解释时，或者当序列化的值应该是有意义的而没有相应的Java类时，就可以使用它们。当使用预构建的Camunda发行版时，Camunda Spin 已经预先配置好了，你可以无需进一步配置的尝试使用这些格式。</p>
+  <p><a href="https://camunda-cn.shaochenfeng.com/user-guide/data-formats/">Camunda Spin 插件</a> 提供了能够将对象序列化为XML和JSON的序列化器。当希望序列化的值可以被人类解释时，或者当序列化的值应该是有意义的而没有相应的Java类时，就可以使用它们。当使用预构建的Camunda发行版时，Camunda Spin 已经预先配置好了，你可以无需进一步配置的尝试使用这些格式。</p>
 </div>
 
 
@@ -8574,14 +8574,14 @@ com.example.Order retrievedOrder = (com.example.Order) retrievedTypedObjectValue
 <div class="note bg-warning docs-warning">
   <h3>Java serialization format</h3>
   <p>请注意，当使用变量的序列化表示时，Java序列化格式默认是被禁止的。你应该使用任意一种格式（JSON或XML）或明确启用Java序列化，
-  可以查看 <a href="http://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#javaSerializationFormatEnabled"><code>javaSerializationFormatEnabled</code></a> 配置。
-  但是，在启用前请务必阅读<a href="http://camunda-cn.shaochenfeng.com/user-guide/security/#variable-values-from-untrusted-sources">安全</a>相关内容。</p>
+  可以查看 <a href="https://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#javaSerializationFormatEnabled"><code>javaSerializationFormatEnabled</code></a> 配置。
+  但是，在启用前请务必阅读<a href="https://camunda-cn.shaochenfeng.com/user-guide/security/#variable-values-from-untrusted-sources">安全</a>相关内容。</p>
 </div>
 
 
 <h2 id="json和xml值">JSON和XML值</h2>
 
-<p>Camunda Spin插件为JSON和XML文档提供了一个抽象，以方便它们的处理和操作。这通常比将此类文档存储为普通的 &ldquo;字符串&rdquo; 变量更方便。参见Camunda SPIN的文档<a href="http://camunda-cn.shaochenfeng.com/user-guide/data-formats/json/#native-json-variable-value">存储为JSON</a>和<a href="http://camunda-cn.shaochenfeng.com/user-guide/data-formats/xml/#native-xml-variable-value">存储为XML</a></p>
+<p>Camunda Spin插件为JSON和XML文档提供了一个抽象，以方便它们的处理和操作。这通常比将此类文档存储为普通的 &ldquo;字符串&rdquo; 变量更方便。参见Camunda SPIN的文档<a href="https://camunda-cn.shaochenfeng.com/user-guide/data-formats/json/#native-json-variable-value">存储为JSON</a>和<a href="https://camunda-cn.shaochenfeng.com/user-guide/data-formats/xml/#native-xml-variable-value">存储为XML</a></p>
 
 <h2 id="瞬时变量">瞬时变量</h2>
 
@@ -8604,7 +8604,7 @@ TypedValue typedTransientFileValue = Variables.fileValue(&quot;file.txt&quot;, t
   .create();
 </code></pre>
 
-<p>瞬时变量可以通过REST API使用，可以查看<a href="http://camunda-cn.shaochenfeng.com/reference/rest/process-definition/post-start-process-instance/">启动一个新的流程实例</a>.</p>
+<p>瞬时变量可以通过REST API使用，可以查看<a href="https://camunda-cn.shaochenfeng.com/reference/rest/process-definition/post-start-process-instance/">启动一个新的流程实例</a>.</p>
 
 <h2 id="设置多个类型值-typed-values">设置多个类型值（Typed Values）</h2>
 
@@ -8631,10 +8631,10 @@ runtimeService.setVariablesLocal(execution.getId(), &quot;order&quot;, variables
 <p>为了提高源代码和业务逻辑的可重用性，Camunda平台提供输入/输出流程变量的映射。
 这可用于任务、事件和子流程中。</p>
 
-<p>为了使用变量映射，Camunda扩展元素<a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/extension-elements/#camunda-inputoutput">inputOutput</a>必须被添加到
-到该元素中。它可以包含多个<a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/extension-elements/#inputparameter">inputParameter</a>和<a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/extension-elements/#outputparameter">outputParameter</a>元素。
-指定哪些变量应该被映射。<a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/extension-elements/#inputparameter">inputParameter</a> 的<code>name</code>属性表示
-活动中的变量名称（要创建的局部变量），而 <a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/extension-elements/#outputparameter">outputParameter</a> 的 <code>name</code>属性表示活动外的变量名称。</p>
+<p>为了使用变量映射，Camunda扩展元素<a href="https://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/extension-elements/#camunda-inputoutput">inputOutput</a>必须被添加到
+到该元素中。它可以包含多个<a href="https://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/extension-elements/#inputparameter">inputParameter</a>和<a href="https://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/extension-elements/#outputparameter">outputParameter</a>元素。
+指定哪些变量应该被映射。<a href="https://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/extension-elements/#inputparameter">inputParameter</a> 的<code>name</code>属性表示
+活动中的变量名称（要创建的局部变量），而 <a href="https://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/extension-elements/#outputparameter">outputParameter</a> 的 <code>name</code>属性表示活动外的变量名称。</p>
 
 <p>inputParameter/outputParameter 的内容指定了被映射到相应的
 变量。它可以是一个简单的常量字符串或一个表达式。
@@ -8648,7 +8648,7 @@ runtimeService.setVariablesLocal(execution.getId(), &quot;order&quot;, variables
 &lt;/camunda:inputOutput&gt;
 </code></pre>
 
-<p>甚至可以使用<a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/extension-elements/#camunda-list">lists</a>和<a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/extension-elements/#camunda-map">maps</a>这样的复杂结构。这两种结构也可以嵌套使用。</p>
+<p>甚至可以使用<a href="https://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/extension-elements/#camunda-list">lists</a>和<a href="https://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/extension-elements/#camunda-map">maps</a>这样的复杂结构。这两种结构也可以嵌套使用。</p>
 
 <pre><code class="language-xml">&lt;camunda:inputOutput&gt;
   &lt;camunda:inputParameter name=&quot;x&quot;&gt;
@@ -8677,7 +8677,7 @@ runtimeService.setVariablesLocal(execution.getId(), &quot;order&quot;, variables
 </code></pre>
 
 <p>也可以用一个脚本来提供变量值。请参阅相应的
-<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/scripting/#use-scripts-as-inputoutput-parameters">脚本章节</a> 查看如何指定一个脚本</p>
+<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/scripting/#use-scripts-as-inputoutput-parameters">脚本章节</a> 查看如何指定一个脚本</p>
 
 <p>输入/输出映射的好处的一个简单例子是复杂的计算。
 一个复杂的计算如果被多个流程定义所使用的。则这个计算可以被开发成独立的委托代码或脚本，并在每个流程中重复使用，即使这些流程使用不同的变量集。
@@ -8733,7 +8733,7 @@ runtimeService.setVariablesLocal(execution.getId(), &quot;order&quot;, variables
 
 <p>如果一个活动被取消（例如由于抛出一个 BPMN 错误），IO 映射仍然被执行。如果输出映射引用了当时不存在于活动范围内的变量，则这可能导致异常。</p>
 
-<p>以上是默认行为，引擎会仍然试图在取消的活动上执行输出映射，如果没有找到变量，就会出现异常。可以通过启用 <a href="http://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#skipOutputMappingOnCanceledActivities">跳过取消活动的输出映射</a> 配置项 (设置其为 <code>true</code>) 引擎将不对任何被取消的活动进行输出映射。</p>
+<p>以上是默认行为，引擎会仍然试图在取消的活动上执行输出映射，如果没有找到变量，就会出现异常。可以通过启用 <a href="https://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#skipOutputMappingOnCanceledActivities">跳过取消活动的输出映射</a> 配置项 (设置其为 <code>true</code>) 引擎将不对任何被取消的活动进行输出映射。</p>
 
     </div>
   </div>
@@ -8787,9 +8787,9 @@ runtimeService.setVariablesLocal(execution.getId(), &quot;order&quot;, variables
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="http://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="https://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
-            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2022
+            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2025
           </p>
           <p>
             <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a> The content on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
@@ -8802,7 +8802,7 @@ runtimeService.setVariablesLocal(execution.getId(), &quot;order&quot;, variables
 
   
 
-  <script type="text/javascript" src="http://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

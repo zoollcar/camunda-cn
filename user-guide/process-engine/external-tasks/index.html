@@ -58,11 +58,11 @@ var _mtac = {};
   <title>外部任务 | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="http://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="https://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="http://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
 </head>
 <body class="">
 
@@ -73,8 +73,8 @@ var _mtac = {};
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="http://camunda-cn.shaochenfeng.com/">
-      <img src="http://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="https://camunda-cn.shaochenfeng.com/">
+      <img src="https://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">中文站</span>
       </a>
@@ -8187,7 +8187,7 @@ var _mtac = {};
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="http://camunda-cn.shaochenfeng.com/">
+    <select id="version-select" data-basepath="/manual" base-url="https://camunda-cn.shaochenfeng.com/">
       
         <option  selected >develop</option>
       
@@ -8243,7 +8243,7 @@ var _mtac = {};
 <li>外部任务：在一个可以被工作者轮询的列表中提供一个工作单元</li>
 </ol>
 
-<p>当代码被实现为<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/delegation-code/">委托代码</a>或 <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/scripting/">脚本</a>时，会使用第一个内部服务任务。外部（服务）任务的工作方式是：流程引擎将一个工作单元发布给外部工作者去完成。我们把这称为 <em>外部任务模式</em> 。</p>
+<p>当代码被实现为<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/delegation-code/">委托代码</a>或 <a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/scripting/">脚本</a>时，会使用第一个内部服务任务。外部（服务）任务的工作方式是：流程引擎将一个工作单元发布给外部工作者去完成。我们把这称为 <em>外部任务模式</em> 。</p>
 
 <p>请注意，上面的区别并没有说实际的 &ldquo;业务逻辑&rdquo; 是在本地实现还是作为远程服务实现。内部服务任务调用的 Java代理类 也可以自己实现业务逻辑，也可以调用 Web/rest 服务，向另一个系统发送消息等等。对于外部工作者也是如此。外部工作者可以直接实现业务逻辑或再次委托给远程服务实现。</p>
 
@@ -8300,17 +8300,17 @@ var _mtac = {};
   camunda:topic=&quot;AddressValidation&quot; /&gt;
 </code></pre>
 
-<p>也可以使用<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/expression-language/">表达式</a>而不是固定值定义主题的名字。</p>
+<p>也可以使用<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/expression-language/">表达式</a>而不是固定值定义主题的名字。</p>
 
-<p>此外，其他类似 <em>服务任务</em> 的元素，如发送任务、业务规则任务和抛出消息事件，都可以用外部任务模式来实现。更多细节参见<a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/">BPMN 2.0实现参考</a></p>
+<p>此外，其他类似 <em>服务任务</em> 的元素，如发送任务、业务规则任务和抛出消息事件，都可以用外部任务模式来实现。更多细节参见<a href="https://camunda-cn.shaochenfeng.com/reference/bpmn20/">BPMN 2.0实现参考</a></p>
 
 <h3 id="错误事件定义">错误事件定义</h3>
 
-<p>外部任务允许定义错误事件，抛出一个指定的BPMN错误。这可以通过在任务定义中添加一个扩展元素 <a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/extension-elements/#erroreventdefinition">camunda:errorEventDefinition</a>来完成。 与<code>bpmn:errorEventDefinition</code>相比，<code>camunda:errorEventDefinition</code>元素可以接受一个额外的<code>expression</code>属性，支持任何JUEL表达。在表达式内，你可以访问 <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/externaltask/ExternalTask.html">外部任务实体</a>
+<p>外部任务允许定义错误事件，抛出一个指定的BPMN错误。这可以通过在任务定义中添加一个扩展元素 <a href="https://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/extension-elements/#erroreventdefinition">camunda:errorEventDefinition</a>来完成。 与<code>bpmn:errorEventDefinition</code>相比，<code>camunda:errorEventDefinition</code>元素可以接受一个额外的<code>expression</code>属性，支持任何JUEL表达。在表达式内，你可以访问 <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/externaltask/ExternalTask.html">外部任务实体</a>
  对象，使用key &ldquo;externalTask&rdquo; 通过getter方法访问 &ldquo;errorMessage&rdquo;、&rdquo;errorDetails&rdquo;、&rdquo;workerId&rdquo;、&rdquo;retries&rdquo;。</p>
 
 <p>该表达式在调用<code>ExternalTaskService#complete</code>和<code>ExternalTaskService#handleFailure</code>时被计算。
-外部任务服务 <code>#handleFailure</code> 在调用时进行评估。如果表达式评估为 <code>true</code>，实际的方法执行将被取消，并被抛出相应的BPMN错误。这个错误可以被<a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/events/error-events/#error-boundary-event">错误边界事件</a>所捕获。这意味着错误事件定义在成功和失败的情况下同样使用&ndash;即使任务成功完成，你仍然可以决定抛出一个BPMN错误。</p>
+外部任务服务 <code>#handleFailure</code> 在调用时进行评估。如果表达式评估为 <code>true</code>，实际的方法执行将被取消，并被抛出相应的BPMN错误。这个错误可以被<a href="https://camunda-cn.shaochenfeng.com/reference/bpmn20/events/error-events/#error-boundary-event">错误边界事件</a>所捕获。这意味着错误事件定义在成功和失败的情况下同样使用&ndash;即使任务成功完成，你仍然可以决定抛出一个BPMN错误。</p>
 
 <pre><code class="language-xml">&lt;serviceTask id=&quot;validateAddressTask&quot;
   name=&quot;Validate Address&quot;
@@ -8324,11 +8324,11 @@ var _mtac = {};
 &lt;/serviceTask&gt;
 </code></pre>
 
-<p>关于外部任务的错误事件定义的进一步信息可以在<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/expression-language/#external-task-error-handling">表达式语言用户指南</a>中找到。在RPA协调场景的外部任务中的具体使用方法在<a href="http://camunda-cn.shaochenfeng.com/user-guide/camunda-bpm-rpa-bridge/#error-handling">Camunda平台 RPA Bridge</a>。</p>
+<p>关于外部任务的错误事件定义的进一步信息可以在<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/expression-language/#external-task-error-handling">表达式语言用户指南</a>中找到。在RPA协调场景的外部任务中的具体使用方法在<a href="https://camunda-cn.shaochenfeng.com/user-guide/camunda-bpm-rpa-bridge/#error-handling">Camunda平台 RPA Bridge</a>。</p>
 
 <h2 id="rest-api">Rest API</h2>
 
-<p>关于如何通过HTTP访问API操作，请参见<a href="http://camunda-cn.shaochenfeng.com/reference/rest/external-task/">REST API文档</a>。</p>
+<p>关于如何通过HTTP访问API操作，请参见<a href="https://camunda-cn.shaochenfeng.com/reference/rest/external-task/">REST API文档</a>。</p>
 
 <h3 id="长轮询以获取并锁定外部任务">长轮询以获取并锁定外部任务</h3>
 
@@ -8345,7 +8345,7 @@ var _mtac = {};
 
 <p>长轮询大大减少了请求的数量，使服务器和客户端都能更有效地利用资源。</p>
 
-<p>参见 <a href="http://camunda-cn.shaochenfeng.com/reference/rest/external-task/fetch/">REST API文档</a>.</p>
+<p>参见 <a href="https://camunda-cn.shaochenfeng.com/reference/rest/external-task/fetch/">REST API文档</a>.</p>
 
 
 <div class="note bg-info docs-info">
@@ -8443,7 +8443,7 @@ for (LockedExternalTask task : tasks) {
 }
 </code></pre>
 
-<p>之后，产生的任务就包含了所请求的变量。注意，变量值是外部任务执行时在作用域中的。详情参见<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/variables/#variable-scopes-and-variable-visibility">变量作用域和变量可见性</a>一章。</p>
+<p>之后，产生的任务就包含了所请求的变量。注意，变量值是外部任务执行时在作用域中的。详情参见<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/variables/#variable-scopes-and-variable-visibility">变量作用域和变量可见性</a>一章。</p>
 
 <p>如果想要获取所有变量，不调用 <code>variables</code> 方法即可。</p>
 
@@ -8480,7 +8480,7 @@ for (LockedExternalTask task : tasks) {
 <h3 id="外部任务的优先顺序">外部任务的优先顺序</h3>
 
 <p>外部任务的优先级与Job的优先级相似。也存在同样的饥饿问题（一种锁的问题）需要考虑。
-进一步的细节，见<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/#the-job-priority">Job优先级</a>一节。</p>
+进一步的细节，见<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/#the-job-priority">Job优先级</a>一节。</p>
 
 <h3 id="外部任务的配置">外部任务的配置</h3>
 
@@ -8498,7 +8498,7 @@ for (LockedExternalTask task : tasks) {
 
 <p>外部任务的优先级可以在流程或活动级别分配。使用Camunda扩展属性<code>camunda:taskPriority</code>。</p>
 
-<p>指定优先级使用常量值和<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/expression-language/">表达式</a>都可以。
+<p>指定优先级使用常量值和<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/expression-language/">表达式</a>都可以。
 当使用常量值时，该流程或活动的所有实例都将使用相同的优先级。
 表达式允许给流程或活动的每个实例分配不同的优先级。表达式返回类型必须为 Java <code>long</code> 范围内的一个数字。
 具体数值可以是复杂计算的结果，并基于用户提供的数据（来自任务表格或其他来源）。</p>
@@ -8576,7 +8576,7 @@ for (LockedExternalTask task : tasks) {
 
 <div class="note bg-info docs-info">
   <h3>错误事件</h3>
-  <p>外部任务可以包括<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/external-tasks/#error-event-definitions">错误事件定义</a> 在错误事件的表达式评估为 <code>true</code>的情况下，可以取消<code>#complete</code>的执行。如果错误事件的表达式评估产生了一个异常，对 <code>#complete</code> 的调用也会因为这个异常而失败。</p>
+  <p>外部任务可以包括<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/external-tasks/#error-event-definitions">错误事件定义</a> 在错误事件的表达式评估为 <code>true</code>的情况下，可以取消<code>#complete</code>的执行。如果错误事件的表达式评估产生了一个异常，对 <code>#complete</code> 的调用也会因为这个异常而失败。</p>
 </div>
 
 
@@ -8618,13 +8618,13 @@ externalTaskService.getExternalTaskErrorDetails(task.getId());
 
 <div class="note bg-info docs-info">
   <h3>错误事件</h3>
-  <p>外部任务可以包括<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/external-tasks/#error-event-definitions">错误事件定义</a> 如果错误事件的表达式返回结果为 &ldquo;true&rdquo;，可以取消 &ldquo;#handleFailure&rdquo;的执行。如果错误事件的表达式执行引发异常，该表达式将被视为 &ldquo;false&rdquo;。</p>
+  <p>外部任务可以包括<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/external-tasks/#error-event-definitions">错误事件定义</a> 如果错误事件的表达式返回结果为 &ldquo;true&rdquo;，可以取消 &ldquo;#handleFailure&rdquo;的执行。如果错误事件的表达式执行引发异常，该表达式将被视为 &ldquo;false&rdquo;。</p>
 </div>
 
 
 <h3 id="报告bpmn错误">报告BPMN错误</h3>
 
-<p>见<a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/events/error-events/#error-boundary-event">错误边界事件</a>的一章。</p>
+<p>见<a href="https://camunda-cn.shaochenfeng.com/reference/bpmn20/events/error-events/#error-boundary-event">错误边界事件</a>的一章。</p>
 
 <p>由于某些原因，执行过程中会出现业务错误。在这种情况下，外部工作者可以通过使用<code>ExternalTaskService#handleBpmnError</code>向流程引擎报告一个BPMN错误。
 与 &ldquo;#complete&rdquo;或 &ldquo;#handleFailure&rdquo;一样，它只能由拥有最新任务锁的工作者调用。
@@ -8722,9 +8722,9 @@ externalTaskService.handleBpmnError(
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="http://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="https://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
-            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2022
+            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2025
           </p>
           <p>
             <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a> The content on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
@@ -8737,7 +8737,7 @@ externalTaskService.handleBpmnError(
 
   
 
-  <script type="text/javascript" src="http://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

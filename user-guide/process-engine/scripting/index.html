@@ -58,11 +58,11 @@ var _mtac = {};
   <title>脚本 | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="http://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="https://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="http://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
 </head>
 <body class="">
 
@@ -73,8 +73,8 @@ var _mtac = {};
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="http://camunda-cn.shaochenfeng.com/">
-      <img src="http://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="https://camunda-cn.shaochenfeng.com/">
+      <img src="https://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">中文站</span>
       </a>
@@ -8187,7 +8187,7 @@ var _mtac = {};
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="http://camunda-cn.shaochenfeng.com/">
+    <select id="version-select" data-basepath="/manual" base-url="https://camunda-cn.shaochenfeng.com/">
       
         <option  selected >develop</option>
       
@@ -8296,7 +8296,7 @@ var _mtac = {};
 
 <h1 id="使用脚本任务">使用脚本任务</h1>
 
-<p>通过BPMN 2.0脚本任务，你可以向你的BPM流程添加一个脚本（更多信息请参见<a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/tasks/script-task/">BPMN 2.0参考</a>）。</p>
+<p>通过BPMN 2.0脚本任务，你可以向你的BPM流程添加一个脚本（更多信息请参见<a href="https://camunda-cn.shaochenfeng.com/reference/bpmn20/tasks/script-task/">BPMN 2.0参考</a>）。</p>
 
 <p>下面的流程是一个简单的例子，有一个Groovy脚本任务，对一个数组的元素进行求和：</p>
 
@@ -8334,7 +8334,7 @@ runtimeService.startProcessInstanceByKey(&quot;process&quot;, variables);
 
 <h1 id="在执行监听器中使用脚本">在执行监听器中使用脚本</h1>
 
-<p>除了Java代码和表达式语言，Camunda平台还支持执行监听器脚本的执行。关于执行监听器的一般信息，请参见相应的<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/delegation-code/#execution-listener">章节</a>.</p>
+<p>除了Java代码和表达式语言，Camunda平台还支持执行监听器脚本的执行。关于执行监听器的一般信息，请参见相应的<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/delegation-code/#execution-listener">章节</a>.</p>
 
 <p>要在执行监听器中使用脚本，必须在<code>camunda:executionListener</code>元素下添加一个<code>camunda:script</code>子元素。在脚本执行期间，变量<code>execution</code>是可用的，它对应于<code>DelegateExecution</code>接口。</p>
 
@@ -8374,7 +8374,7 @@ runtimeService.startProcessInstanceByKey(&quot;process&quot;, variables);
 
 <h1 id="在任务监听器中使用脚本">在任务监听器中使用脚本</h1>
 
-<p>与执行监听器类似，任务监听器也可以使用脚本实现。关于任务监听器的更多信息，请参见相应的<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/delegation-code/#task-listener">章节</a>.</p>
+<p>与执行监听器类似，任务监听器也可以使用脚本实现。关于任务监听器的更多信息，请参见相应的<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/delegation-code/#task-listener">章节</a>.</p>
 
 <p>要在任务监听器中使用脚本，必须在<code>camunda:taskListener</code>元素中添加<code>camunda:script</code>子元素。在脚本中，变量<code>task</code>是可用的，它对应于<code>DelegateTask</code>接口。</p>
 
@@ -8480,7 +8480,7 @@ runtimeService.startProcessInstanceByKey(&quot;process&quot;, variables);
 
 <p>每当流程引擎到达必须执行脚本的时候，流程引擎就会按语言名称寻找一个脚本引擎。默认的行为是，如果是第一次请求，就会创建一个新的脚本引擎。如果脚本引擎声明是线程安全的，它也会被缓存起来。通过缓存可以防止流程引擎为同一脚本语言的每个请求创建一个新的脚本引擎。</p>
 
-<p>默认情况下，脚本引擎的缓存发生在流程应用程序层面。每个流程应用程序都持有一个特定语言的脚本引擎的实例。这种行为可以通过将名为 &ldquo;enableFetchScriptEngineFromProcessApplication&rdquo; 的流程引擎配置设置为false来禁用。因此，脚本引擎在流程引擎层面被全局缓存，它们在每个流程应用程序之间被共享。关于流程引擎配置标志 &ldquo;enableFetchScriptEngineFromProcessApplication&rdquo; 的更多信息，请阅读关于<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/scripting/#reference-process-application-provided-classes">引用流程应用程序类</a>的部分。</p>
+<p>默认情况下，脚本引擎的缓存发生在流程应用程序层面。每个流程应用程序都持有一个特定语言的脚本引擎的实例。这种行为可以通过将名为 &ldquo;enableFetchScriptEngineFromProcessApplication&rdquo; 的流程引擎配置设置为false来禁用。因此，脚本引擎在流程引擎层面被全局缓存，它们在每个流程应用程序之间被共享。关于流程引擎配置标志 &ldquo;enableFetchScriptEngineFromProcessApplication&rdquo; 的更多信息，请阅读关于<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/scripting/#reference-process-application-provided-classes">引用流程应用程序类</a>的部分。</p>
 
 <p>如果大多数情况下不希望对脚本引擎进行缓存，可以通过将流程引擎配置 <code>enableScriptEngineCaching</code> 设置为false来禁用它。</p>
 
@@ -8546,11 +8546,11 @@ We provide the following default configurations for supported script engines bef
 <p>You can use the following process engine configuration flags to influence the configuration of specific script engines:</p>
 
 <ul>
-<li><a href="http://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#configureScriptEngineHostAccess">configureScriptEngineHostAccess</a> -
+<li><a href="https://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#configureScriptEngineHostAccess">configureScriptEngineHostAccess</a> -
 Specifies whether host language resources like classes and their methods are accessible or not.</li>
-<li><a href="http://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#enableScriptEngineLoadExternalResources">enableScriptEngineLoadExternalResources</a> -
+<li><a href="https://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#enableScriptEngineLoadExternalResources">enableScriptEngineLoadExternalResources</a> -
 Specifies whether external resources can be loaded from file system or not.</li>
-<li><a href="http://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#enableScriptEngineNashornCompatibility">enableScriptEngineNashornCompatibility</a> -
+<li><a href="https://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#enableScriptEngineNashornCompatibility">enableScriptEngineNashornCompatibility</a> -
 Specifies whether Nashorn compatibility mode is enabled or not.</li>
 </ul>
 
@@ -8761,7 +8761,7 @@ system.out.println('This prints to the console');
 <pre><code class="language-xml">&lt;scriptTask scriptFormat=&quot;groovy&quot; camunda:resource=&quot;${scriptPath}&quot;/&gt;
 </code></pre>
 
-<p>想要了解更多信息， 参见 <a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/">Custom Extensions</a> 中的 <a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/extension-attributes/#resource">camunda:resource</a>章节。</p>
+<p>想要了解更多信息， 参见 <a href="https://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/">Custom Extensions</a> 中的 <a href="https://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/extension-attributes/#resource">camunda:resource</a>章节。</p>
 
 <h1 id="javascript-考虑事项">JavaScript 考虑事项</h1>
 
@@ -8821,9 +8821,9 @@ It also contains a guide on <a href="https://www.graalvm.org/reference-manual/js
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="http://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="https://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
-            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2022
+            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2025
           </p>
           <p>
             <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a> The content on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
@@ -8836,7 +8836,7 @@ It also contains a guide on <a href="https://www.graalvm.org/reference-manual/js
 
   
 
-  <script type="text/javascript" src="http://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

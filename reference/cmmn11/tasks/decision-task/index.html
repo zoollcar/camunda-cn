@@ -58,11 +58,11 @@ var _mtac = {};
   <title>Decision Task | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="http://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="https://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="http://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
 </head>
 <body class="">
 
@@ -73,8 +73,8 @@ var _mtac = {};
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="http://camunda-cn.shaochenfeng.com/">
-      <img src="http://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="https://camunda-cn.shaochenfeng.com/">
+      <img src="https://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">中文站</span>
       </a>
@@ -8187,7 +8187,7 @@ var _mtac = {};
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="http://camunda-cn.shaochenfeng.com/">
+    <select id="version-select" data-basepath="/manual" base-url="https://camunda-cn.shaochenfeng.com/">
       
         <option  selected >develop</option>
       
@@ -8236,9 +8236,9 @@ var _mtac = {};
     <div class="col-xs-12 content-text">
       
 
-<p>A <em>decision task</em> can be used to invoke a <a href="http://camunda-cn.shaochenfeng.com/reference/dmn/">DMN 1.3</a> decision from a case.</p>
+<p>A <em>decision task</em> can be used to invoke a <a href="https://camunda-cn.shaochenfeng.com/reference/dmn/">DMN 1.3</a> decision from a case.</p>
 
-<div class="cmmn-symbol"><img src="http://camunda-cn.shaochenfeng.com//img/short-codes/cmmn-decision-task.png" /></div>
+<div class="cmmn-symbol"><img src="https://camunda-cn.shaochenfeng.com//img/short-codes/cmmn-decision-task.png" /></div>
 
 
 <p>A decision task is a regular task that requires a <code>decisionRef</code> attribute that references a
@@ -8331,7 +8331,7 @@ If the calling case definition has a tenant id, a decision definition with the p
 
 <h1 id="decision-result">Decision Result</h1>
 
-<p>The output of the decision, also called decision result, is not saved as case variable automatically. It has to pass into a case variable by using a <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/decisions/bpmn-cmmn/#predefined-mapping-of-the-decision-result">predefined</a> or a <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/decisions/bpmn-cmmn/#custom-mapping-to-case-variables">custom</a> mapping of the decision result.</p>
+<p>The output of the decision, also called decision result, is not saved as case variable automatically. It has to pass into a case variable by using a <a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/decisions/bpmn-cmmn/#predefined-mapping-of-the-decision-result">predefined</a> or a <a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/decisions/bpmn-cmmn/#custom-mapping-to-case-variables">custom</a> mapping of the decision result.</p>
 
 <p>In case of a predefined mapping, the <code>camunda:mapDecisionResult</code> attribute references the mapper to use. The result of the mapping is saved in the variable which is specified by the <code>camunda:resultVariable</code> attribute. If no predefined mapper is set then the <code>resultList</code> mapper is used by default.</p>
 
@@ -8345,7 +8345,7 @@ entry or none at all.</p>
     camunda:resultVariable=&quot;result&quot; /&gt;
 </code></pre>
 
-<p>See the <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/decisions/bpmn-cmmn/#the-decision-result">User Guide</a> for details about the mapping.</p>
+<p>See the <a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/decisions/bpmn-cmmn/#the-decision-result">User Guide</a> for details about the mapping.</p>
 
 
 <div class="note bg-warning docs-warning">
@@ -8356,7 +8356,7 @@ entry or none at all.</p>
 
 <h1 id="limitations-of-the-decision-task">Limitations of the Decision Task</h1>
 
-<p>To evaluate a referenced decision, the integration of the Camunda DMN engine is used. As a result, only <a href="http://camunda-cn.shaochenfeng.com/reference/dmn/">DMN 1.3</a> decisions can be evaluated with a decision task. There is no option to integrate with other rule engines.</p>
+<p>To evaluate a referenced decision, the integration of the Camunda DMN engine is used. As a result, only <a href="https://camunda-cn.shaochenfeng.com/reference/dmn/">DMN 1.3</a> decisions can be evaluated with a decision task. There is no option to integrate with other rule engines.</p>
 
 <h1 id="camunda-extensions">Camunda Extensions</h1>
 
@@ -8364,18 +8364,18 @@ entry or none at all.</p>
   <tr>
     <th>Attributes</th>
     <td>
-      <a href="http://camunda-cn.shaochenfeng.com/reference/cmmn11/custom-extensions/camunda-attributes/#decisionbinding">camunda:decisionBinding</a>,
-            <a href="http://camunda-cn.shaochenfeng.com/reference/cmmn11/custom-extensions/camunda-attributes/#decisiontenantid">camunda:decisionTenantId</a>,
-      <a href="http://camunda-cn.shaochenfeng.com/reference/cmmn11/custom-extensions/camunda-attributes/#decisionversion">camunda:decisionVersion</a>,
-      <a href="http://camunda-cn.shaochenfeng.com/reference/cmmn11/custom-extensions/camunda-attributes/#mapdecisionresult">camunda:mapDecisionResult</a>,
-      <a href="http://camunda-cn.shaochenfeng.com/reference/cmmn11/custom-extensions/camunda-attributes/#resultvariable">camunda:resultVariable</a>
+      <a href="https://camunda-cn.shaochenfeng.com/reference/cmmn11/custom-extensions/camunda-attributes/#decisionbinding">camunda:decisionBinding</a>,
+            <a href="https://camunda-cn.shaochenfeng.com/reference/cmmn11/custom-extensions/camunda-attributes/#decisiontenantid">camunda:decisionTenantId</a>,
+      <a href="https://camunda-cn.shaochenfeng.com/reference/cmmn11/custom-extensions/camunda-attributes/#decisionversion">camunda:decisionVersion</a>,
+      <a href="https://camunda-cn.shaochenfeng.com/reference/cmmn11/custom-extensions/camunda-attributes/#mapdecisionresult">camunda:mapDecisionResult</a>,
+      <a href="https://camunda-cn.shaochenfeng.com/reference/cmmn11/custom-extensions/camunda-attributes/#resultvariable">camunda:resultVariable</a>
     </td>
   </tr>
   <tr>
     <th>Extension Elements</th>
     <td>
-      <a href="http://camunda-cn.shaochenfeng.com/reference/cmmn11/custom-extensions/camunda-elements/#caseexecutionlistener">camunda:caseExecutionListener</a>,
-      <a href="http://camunda-cn.shaochenfeng.com/reference/cmmn11/custom-extensions/camunda-elements/#variablelistener">camunda:variableListener</a>
+      <a href="https://camunda-cn.shaochenfeng.com/reference/cmmn11/custom-extensions/camunda-elements/#caseexecutionlistener">camunda:caseExecutionListener</a>,
+      <a href="https://camunda-cn.shaochenfeng.com/reference/cmmn11/custom-extensions/camunda-elements/#variablelistener">camunda:variableListener</a>
     </td>
   </tr>
   <tr>
@@ -8421,9 +8421,9 @@ entry or none at all.</p>
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="http://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="https://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
-            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2022
+            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2025
           </p>
           <p>
             <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a> The content on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
@@ -8436,7 +8436,7 @@ entry or none at all.</p>
 
   
 
-  <script type="text/javascript" src="http://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

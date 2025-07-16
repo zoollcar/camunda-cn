@@ -58,11 +58,11 @@ var _mtac = {};
   <title>错误处理 | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="http://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="https://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="http://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
 </head>
 <body class="">
 
@@ -73,8 +73,8 @@ var _mtac = {};
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="http://camunda-cn.shaochenfeng.com/">
-      <img src="http://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="https://camunda-cn.shaochenfeng.com/">
+      <img src="https://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">中文站</span>
       </a>
@@ -8187,7 +8187,7 @@ var _mtac = {};
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="http://camunda-cn.shaochenfeng.com/">
+    <select id="version-select" data-basepath="/manual" base-url="https://camunda-cn.shaochenfeng.com/">
       
         <option  selected >develop</option>
       
@@ -8249,13 +8249,13 @@ var _mtac = {};
 
 <h2 id="事务回滚">事务回滚</h2>
 
-<p>标准的处理策略是向客户端抛出异常，即回滚当前事务。 这意味着进程状态回滚到最后的等待状态。 此行为在 <a href="http://camunda-cn.shaochenfeng.com/user-guide/">用户指南</a>的<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/transactions-in-processes/">流程中的事务</a>章节中有详细描述。错误处理由引擎委托给客户端。</p>
+<p>标准的处理策略是向客户端抛出异常，即回滚当前事务。 这意味着进程状态回滚到最后的等待状态。 此行为在 <a href="https://camunda-cn.shaochenfeng.com/user-guide/">用户指南</a>的<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/transactions-in-processes/">流程中的事务</a>章节中有详细描述。错误处理由引擎委托给客户端。</p>
 
 <p>让我们用一个具体的例子来说明这一点：用户在前端收到一个错误对话框，指出由于网络错误，当前无法访问库存管理软件。 要执行重试，用户可能必须再次单击同一按钮。 即使这通常不是所希望的，它仍然是一种适用于许多情况的简单策略。</p>
 
 <h2 id="异步并失败的job">异步并失败的Job</h2>
 
-<p>如果你不希望向用户显示异常，一种选择是流程服务调用，这可能会导致错误、异步（如 <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/transactions-in-processes/">流程中的事务</a>) 中所述）。在这种情况下，异常存储在流程引擎数据库和 <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/">Job</a>中，后台被标记为失败（更准确地说，异常被存储并且一些重试计数器递减）。</p>
+<p>如果你不希望向用户显示异常，一种选择是流程服务调用，这可能会导致错误、异步（如 <a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/transactions-in-processes/">流程中的事务</a>) 中所述）。在这种情况下，异常存储在流程引擎数据库和 <a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/">Job</a>中，后台被标记为失败（更准确地说，异常被存储并且一些重试计数器递减）。</p>
 
 <p>在上面的例子中，这意味着用户不会看到错误，而是“一切都成功”的对话框。 异常存储在Job中。 现在，要么聪明的重试策略将在稍后（当网络再次可用时）自动重新触发Job，要么操作员需要查看错误并触发额外的重试。 这将在后面更详细地显示。</p>
 
@@ -8293,11 +8293,11 @@ var _mtac = {};
 </figure>
 
 
-<p>参考 <a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/">BPMN 2.0 实施参考</a>中的<a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/events/error-events/">错误事件</a> 章节 和 <a href="http://camunda-cn.shaochenfeng.com/user-guide/">用户指南</a>中的<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/delegation-code/#从委托代码中抛出bpmn-errors">从委托代码中抛出BPMN Errors</a> 章节了解更多信息。</p>
+<p>参考 <a href="https://camunda-cn.shaochenfeng.com/reference/bpmn20/">BPMN 2.0 实施参考</a>中的<a href="https://camunda-cn.shaochenfeng.com/reference/bpmn20/events/error-events/">错误事件</a> 章节 和 <a href="https://camunda-cn.shaochenfeng.com/user-guide/">用户指南</a>中的<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/delegation-code/#从委托代码中抛出bpmn-errors">从委托代码中抛出BPMN Errors</a> 章节了解更多信息。</p>
 
 <h2 id="bpmn-2-0-compensation-and-business-transactions">BPMN 2.0 Compensation and Business Transactions</h2>
 
-<p>BPMN 2.0 transactions and compensations allow you to model business transaction boundaries (however, not in a technical ACID manner) and make sure already executed actions are compensated during a rollback. Compensation means to make the effect of the action invisible, e.g. book in goods if you have previously booked out the goods. See the <a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/events/cancel-and-compensation-events/">BPMN Compensation event</a> and the <a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/subprocesses/transaction-subprocess/">BPMN Transaction Subprocess</a> sections of the <a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/">BPMN 2.0 Implementation Reference</a> for details.</p>
+<p>BPMN 2.0 transactions and compensations allow you to model business transaction boundaries (however, not in a technical ACID manner) and make sure already executed actions are compensated during a rollback. Compensation means to make the effect of the action invisible, e.g. book in goods if you have previously booked out the goods. See the <a href="https://camunda-cn.shaochenfeng.com/reference/bpmn20/events/cancel-and-compensation-events/">BPMN Compensation event</a> and the <a href="https://camunda-cn.shaochenfeng.com/reference/bpmn20/subprocesses/transaction-subprocess/">BPMN Transaction Subprocess</a> sections of the <a href="https://camunda-cn.shaochenfeng.com/reference/bpmn20/">BPMN 2.0 Implementation Reference</a> for details.</p>
 
 <h1 id="监控和恢复策略">监控和恢复策略</h1>
 
@@ -8309,9 +8309,9 @@ var _mtac = {};
 
 <h2 id="重试失败的job">重试失败的Job</h2>
 
-<p>如果你使用 Jobs (<code>async</code>)，你可以利用 Cockpit 作为监控工具来处理失败的Job，在这种情况下，最终用户不会看到异常。 然后，当重试耗尽时，你通常会在驾驶舱中看到失败（请参阅 <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/#failed-jobs">失败的Job</a> <a href="http://camunda-cn.shaochenfeng.com/webapps/cockpit/">Web 应用程序</a> 的部分以获取更多信息）。</p>
+<p>如果你使用 Jobs (<code>async</code>)，你可以利用 Cockpit 作为监控工具来处理失败的Job，在这种情况下，最终用户不会看到异常。 然后，当重试耗尽时，你通常会在驾驶舱中看到失败（请参阅 <a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/#failed-jobs">失败的Job</a> <a href="https://camunda-cn.shaochenfeng.com/webapps/cockpit/">Web 应用程序</a> 的部分以获取更多信息）。</p>
 
-<p>参考 <a href="http://camunda-cn.shaochenfeng.com/webapps/cockpit/">Web 应用</a> 中的 <a href="http://camunda-cn.shaochenfeng.com/webapps/cockpit/bpmn/failed-jobs/">Cockpit中失败的Job</a> 章节获取更多细节。</p>
+<p>参考 <a href="https://camunda-cn.shaochenfeng.com/webapps/cockpit/">Web 应用</a> 中的 <a href="https://camunda-cn.shaochenfeng.com/webapps/cockpit/bpmn/failed-jobs/">Cockpit中失败的Job</a> 章节获取更多细节。</p>
 
 <p>如果不想使用 Cockpit，也可以自己通过 API 查找失败的Job：</p>
 
@@ -8392,9 +8392,9 @@ for (Job failedJob : failedJobs) {
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="http://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="https://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
-            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2022
+            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2025
           </p>
           <p>
             <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a> The content on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
@@ -8407,7 +8407,7 @@ for (Job failedJob : failedJobs) {
 
   
 
-  <script type="text/javascript" src="http://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

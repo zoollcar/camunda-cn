@@ -58,11 +58,11 @@ var _mtac = {};
   <title>修改流程实例 | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="http://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="https://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="http://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
 </head>
 <body class="">
 
@@ -73,8 +73,8 @@ var _mtac = {};
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="http://camunda-cn.shaochenfeng.com/">
-      <img src="http://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="https://camunda-cn.shaochenfeng.com/">
+      <img src="https://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">中文站</span>
       </a>
@@ -8187,7 +8187,7 @@ var _mtac = {};
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="http://camunda-cn.shaochenfeng.com/">
+    <select id="version-select" data-basepath="/manual" base-url="https://camunda-cn.shaochenfeng.com/">
       
         <option  selected >develop</option>
       
@@ -8264,7 +8264,7 @@ var _mtac = {};
 <div class="note enterprise-feature">
   <h3>企业版特征</h3>
 
-  <p class="description">Camunda企业版提供了一个用户界面，可以在<a href="http://camunda-cn.shaochenfeng.com/webapps/cockpit/bpmn/process-instance-modification/">Camunda Cockpit</a>的BPMN图上直观地对流程实例的进行修改。</p>
+  <p class="description">Camunda企业版提供了一个用户界面，可以在<a href="https://camunda-cn.shaochenfeng.com/webapps/cockpit/bpmn/process-instance-modification/">Camunda Cockpit</a>的BPMN图上直观地对流程实例的进行修改。</p>
 
   <p>
     查看 <a href="http://camunda.com/bpm/enterprise/">Camunda 企业版主页</a>
@@ -8395,7 +8395,7 @@ runtimeService.createProcessInstanceModification(processInstance.getId())
 ProcessInstanceModificationBuilder#startBeforeActivity(String activityId, String ancestorActivityInstanceId)
 </code></pre>
 
-<p>通过<code>startBeforeActivity</code>在一个活动之前启动。该指令支持<code>asyncBefore</code>标志，意味着如果活动是<code>asyncBefore</code>，将创建一个job。一般来说，该指令从指定的活动开始执行流程模型，直到遇到一个等待状态。关于等待状态的详细信息，详情请参见<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/transactions-in-processes/">Transactions in Processes</a>。</p>
+<p>通过<code>startBeforeActivity</code>在一个活动之前启动。该指令支持<code>asyncBefore</code>标志，意味着如果活动是<code>asyncBefore</code>，将创建一个job。一般来说，该指令从指定的活动开始执行流程模型，直到遇到一个等待状态。关于等待状态的详细信息，详情请参见<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/transactions-in-processes/">Transactions in Processes</a>。</p>
 
 <h3 id="在活动后启动">在活动后启动</h3>
 
@@ -8448,7 +8448,7 @@ ProcessInstanceModificationBuilder#startTransition(String transition, String anc
 
 <p>变量会在 <a href="#nested-instantiation">创建了实例化的必要范围</a> <strong>之后</strong>，在指定活动执行<strong>之前</strong>。 这意味着，在流程引擎历史记录中，这些变量不会出现，因为它们是在执行指定活动的 &ldquo;startBefore&rdquo; 和 &ldquo;startAfter&rdquo; 指令时设置的。局部变量设置在即将执行的活动上被设置，例如，进入活动等。</p>
 
-<p>查看<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/variables/">本指南的变量一章</a>，了解有关变量和范围的详细信息。</p>
+<p>查看<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/variables/">本指南的变量一章</a>，了解有关变量和范围的详细信息。</p>
 
 <h2 id="基于流程实例的api">基于流程实例的API</h2>
 
@@ -8725,7 +8725,7 @@ runtimeService.createProcessInstanceModification(processInstance.getId())
 
 <h2 id="异步修改流程实例">异步修改流程实例</h2>
 
-<p>你可以异步地执行单个流程实例的<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-instance-modification/#modification-instruction-types">修改</a> 指令与同步修改相同，流式语法如下：</p>
+<p>你可以异步地执行单个流程实例的<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-instance-modification/#modification-instruction-types">修改</a> 指令与同步修改相同，流式语法如下：</p>
 
 <pre><code class="language-java">Batch modificationBatch = runtimeService.createProcessInstanceModification(processInstanceId)
         .cancelActivityInstance(&quot;exampleActivityId:1&quot;)
@@ -8733,7 +8733,7 @@ runtimeService.createProcessInstanceModification(processInstance.getId())
         .executeAsync();
 </code></pre>
 
-<p>这将创建一个修改的<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/batch/">batch</a>，然后以异步方式执行。
+<p>这将创建一个修改的<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/batch/">batch</a>，然后以异步方式执行。
 在执行单个流程实例的异步修改时，不支持修改变量。</p>
 
 <h2 id="修改多个流程实例">修改多个流程实例</h2>
@@ -8763,7 +8763,7 @@ runtimeService.createModification(&quot;exampleProcessDefinitionId&quot;)
 </code></pre>
 
 <p>对多个流程实例的修改可以同步或异步执行。
-关于同步执行和异步执行的更多信息，请参考<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-instance-migration/#executing-a-migration-plan">用户指南</a>的相关章节。</p>
+关于同步执行和异步执行的更多信息，请参考<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-instance-migration/#executing-a-migration-plan">用户指南</a>的相关章节。</p>
 
 <p>同步执行的一个例子：</p>
 
@@ -8798,7 +8798,7 @@ runtimeService.createModification(&quot;exampleProcessDefinitionId&quot;)
   .execute();
 </code></pre>
 
-<p>它将在执行修改操作的<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/history/#annotation-of-user-operation-logs">用户操作日志</a>中记录。</p>
+<p>它将在执行修改操作的<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/history/#annotation-of-user-operation-logs">用户操作日志</a>中记录。</p>
 
 <h2 id="健全性检查">健全性检查</h2>
 
@@ -8863,9 +8863,9 @@ runtimeService.createModification(&quot;exampleProcessDefinitionId&quot;)
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="http://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="https://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
-            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2022
+            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2025
           </p>
           <p>
             <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a> The content on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
@@ -8878,7 +8878,7 @@ runtimeService.createModification(&quot;exampleProcessDefinitionId&quot;)
 
   
 
-  <script type="text/javascript" src="http://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

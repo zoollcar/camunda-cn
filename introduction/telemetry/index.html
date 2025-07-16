@@ -58,11 +58,11 @@ var _mtac = {};
   <title>Telemetry 遥测 | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="http://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="https://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="http://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
 </head>
 <body class="">
 
@@ -73,8 +73,8 @@ var _mtac = {};
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="http://camunda-cn.shaochenfeng.com/">
-      <img src="http://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="https://camunda-cn.shaochenfeng.com/">
+      <img src="https://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">中文站</span>
       </a>
@@ -8187,7 +8187,7 @@ var _mtac = {};
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="http://camunda-cn.shaochenfeng.com/">
+    <select id="version-select" data-basepath="/manual" base-url="https://camunda-cn.shaochenfeng.com/">
       
         <option  selected >develop</option>
       
@@ -8263,7 +8263,7 @@ var _mtac = {};
 No other information will be included in that report. Furthermore, this report will be sent exactly once on the first run of your installation.
 In case you disabled telemetry explicitly or did not configure it at all, this is the only report that will ever be sent to Camunda.</p>
 
-<p>If there is the necessity to also prevent this anonymized report from being sent to us, you can set the <code>telemetryReporterActivate</code> configuration <a href="http://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#telemetryReporterActivate">flag</a> to <code>false</code>.
+<p>If there is the necessity to also prevent this anonymized report from being sent to us, you can set the <code>telemetryReporterActivate</code> configuration <a href="https://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#telemetryReporterActivate">flag</a> to <code>false</code>.
 With this, the reporter thread will not be started and no request will ever be sent to Camunda. See the <a href="#how-to-enable-telemetry">How to Enable Telemetry</a> section for how to do this.</p>
 
 <h2 id="collected-data">Collected Data</h2>
@@ -8375,20 +8375,20 @@ The counts are collected from the start of the engine or the last reported time 
 
 <h3 id="logger">Logger</h3>
 
-<p>The logger with name <code>org.camunda.bpm.engine.telemetry</code> logs details about the sent information and errors in case the data couldn&rsquo;t be collected or sent. For further information check the <a href="http://camunda-cn.shaochenfeng.com/user-guide/logging/#telemetry-data">Logging</a> page in the User Guide.</p>
+<p>The logger with name <code>org.camunda.bpm.engine.telemetry</code> logs details about the sent information and errors in case the data couldn&rsquo;t be collected or sent. For further information check the <a href="https://camunda-cn.shaochenfeng.com/user-guide/logging/#telemetry-data">Logging</a> page in the User Guide.</p>
 
 <h2 id="how-to-enable-telemetry">How to Enable Telemetry</h2>
 
 <h3 id="process-engine-configuration">Process Engine Configuration</h3>
 
-<p>Use the <code>initializeTelemetry</code> configuration <a href="http://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#initializeTelemetry">flag</a> to enable the telemetry before starting the process engine. You can simply add it to your process engine configuration:</p>
+<p>Use the <code>initializeTelemetry</code> configuration <a href="https://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#initializeTelemetry">flag</a> to enable the telemetry before starting the process engine. You can simply add it to your process engine configuration:</p>
 
 <pre><code>  &lt;property name=&quot;initializeTelemetry&quot;&gt;true&lt;/property&gt;
 </code></pre>
 
 <p>Note that this property only has an effect when telemetry is initialized on the first engine startup. After that, it can be enabled/disabled via the engine API.</p>
 
-<p>In case telemetry is not used, the <code>telemetryReporterActivate</code> configuration <a href="http://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#telemetryReporterActivate">flag</a> can be set to <code>false</code> to prevent the process engine from starting the telemetry reporter thread at all. This configuration is also useful for unit testing scenarios.</p>
+<p>In case telemetry is not used, the <code>telemetryReporterActivate</code> configuration <a href="https://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#telemetryReporterActivate">flag</a> can be set to <code>false</code> to prevent the process engine from starting the telemetry reporter thread at all. This configuration is also useful for unit testing scenarios.</p>
 
 <h3 id="java-rest-api">Java/Rest API</h3>
 
@@ -8399,15 +8399,15 @@ The counts are collected from the start of the engine or the last reported time 
 <pre><code class="language-java">  managementService.toggleTelemetry(true);
 </code></pre>
 
-<p>To achieve the same, you can also use the respective REST API request. For more information, have a look at the <a href="http://camunda-cn.shaochenfeng.com/reference/rest/telemetry/port-telemetry/">telemetry</a> page in the REST API documentation.</p>
+<p>To achieve the same, you can also use the respective REST API request. For more information, have a look at the <a href="https://camunda-cn.shaochenfeng.com/reference/rest/telemetry/port-telemetry/">telemetry</a> page in the REST API documentation.</p>
 
 <h3 id="admin-webapp">Admin Webapp</h3>
 
-<p>Configuration adjustment can be performed in the <a href="http://camunda-cn.shaochenfeng.com/webapps/admin/system-management/">Admin</a> web application. There, a user member of camunda-admin group can enable/disable the telemetry.</p>
+<p>Configuration adjustment can be performed in the <a href="https://camunda-cn.shaochenfeng.com/webapps/admin/system-management/">Admin</a> web application. There, a user member of camunda-admin group can enable/disable the telemetry.</p>
 
 <h2 id="legal-note">Legal Note</h2>
 
-<p>Before you install a Camunda Platform Runtime version &gt;= 7.14.0-alpha1 (and 7.13.7+, 7.12.12+, 7.11.19+) or activate the telemetry functionality, please make sure that you are authorized to take this step, and that the installation or activation of the <a href="http://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#initializeTelemetry">telemetry functionality</a> is not in conflict with any company-internal policies, compliance guidelines, any contractual or other provisions or obligations of your company.</p>
+<p>Before you install a Camunda Platform Runtime version &gt;= 7.14.0-alpha1 (and 7.13.7+, 7.12.12+, 7.11.19+) or activate the telemetry functionality, please make sure that you are authorized to take this step, and that the installation or activation of the <a href="https://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#initializeTelemetry">telemetry functionality</a> is not in conflict with any company-internal policies, compliance guidelines, any contractual or other provisions or obligations of your company.</p>
 
 <p>Camunda cannot be held responsible in the event of unauthorized installation or activation of this function.</p>
 
@@ -8460,9 +8460,9 @@ The counts are collected from the start of the engine or the last reported time 
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="http://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="https://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
-            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2022
+            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2025
           </p>
           <p>
             <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a> The content on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
@@ -8475,7 +8475,7 @@ The counts are collected from the start of the engine or the last reported time 
 
   
 
-  <script type="text/javascript" src="http://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

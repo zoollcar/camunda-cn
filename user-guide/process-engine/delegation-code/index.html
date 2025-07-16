@@ -58,11 +58,11 @@ var _mtac = {};
   <title>委托代码 | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="http://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="https://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="http://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
 </head>
 <body class="">
 
@@ -73,8 +73,8 @@ var _mtac = {};
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="http://camunda-cn.shaochenfeng.com/">
-      <img src="http://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="https://camunda-cn.shaochenfeng.com/">
+      <img src="https://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">中文站</span>
       </a>
@@ -8187,7 +8187,7 @@ var _mtac = {};
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="http://camunda-cn.shaochenfeng.com/">
+    <select id="version-select" data-basepath="/manual" base-url="https://camunda-cn.shaochenfeng.com/">
       
         <option  selected >develop</option>
       
@@ -8241,8 +8241,8 @@ var _mtac = {};
 <p>有四种不同类型委托代码：</p>
 
 <ul>
-<li><strong>Java 代理类（JAVA Delegates）</strong> 可以附加到 <a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/tasks/service-task/">BPMN 服务任务</a>。</li>
-<li><strong>变量映射（Delegate Variable Mapping）</strong> 可以附加到 <a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/subprocesses/call-activity/">发起活动</a>。</li>
+<li><strong>Java 代理类（JAVA Delegates）</strong> 可以附加到 <a href="https://camunda-cn.shaochenfeng.com/reference/bpmn20/tasks/service-task/">BPMN 服务任务</a>。</li>
+<li><strong>变量映射（Delegate Variable Mapping）</strong> 可以附加到 <a href="https://camunda-cn.shaochenfeng.com/reference/bpmn20/subprocesses/call-activity/">发起活动</a>。</li>
 <li><strong>执行监听器（Execution Listeners）</strong> 可以附加到令牌流动的任何实践，例如，启动一个流程实例或进入一个活动。</li>
 <li><strong>任务监听器（Task Listeners）</strong> 可以附加到用户任务生命周期内的任何事件，例如，用户任务的创建或完成。</li>
 </ul>
@@ -8404,7 +8404,7 @@ setter/private field on the injection target should always be <code>org.camunda.
 输入变量应该被放入给定的变量map中。
 <code>mapOutputVariables</code> 方法在调用活动被执行后被调用，以映射输出变量。
 输出变量应该直接设置到调用者的执行中。
-类加载的方法类似于<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/delegation-code/#java-delegate">Java 代理类</a>。</p>
+类加载的方法类似于<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/delegation-code/#java-delegate">Java 代理类</a>。</p>
 
 <h1 id="执行监听器">执行监听器</h1>
 
@@ -8473,7 +8473,7 @@ setter/private field on the injection target should always be <code>org.camunda.
 
 <p>也可以使用实现了<code>org.camunda.bpm.engine.delegate.JavaDelegate</code>接口的委托类。然后，这些委托类可以在其他结构中重复使用，比如服务任务。</p>
 
-<p>第二个执行监听器在执行过渡时被调用。请注意，监听器元素并没有定义事件，因为只有事件是在执行过渡时被触发。当监听器被定义在一个过渡上时，事件属性中的值会被忽略。它还包含一个 <a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/extension-elements/#camunda-script">camunda:script</a> 子元素，它定义了一个将被执行监听器执行的脚本。另外，也可以将脚本源代码指定为外部资源（见关于脚本任务的 <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/scripting/#script-source">script sources</a> 的文档）。</p>
+<p>第二个执行监听器在执行过渡时被调用。请注意，监听器元素并没有定义事件，因为只有事件是在执行过渡时被触发。当监听器被定义在一个过渡上时，事件属性中的值会被忽略。它还包含一个 <a href="https://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/extension-elements/#camunda-script">camunda:script</a> 子元素，它定义了一个将被执行监听器执行的脚本。另外，也可以将脚本源代码指定为外部资源（见关于脚本任务的 <a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/scripting/#script-source">script sources</a> 的文档）。</p>
 
 <p>最后一个执行监听器在活动secondTask结束时被调用。与其在监听器声明中使用类，不如定义一个表达式，当事件被触发时被计算或调用</p>
 
@@ -8551,7 +8551,7 @@ setter/private field on the injection target should always be <code>org.camunda.
 可能的事件为: <strong>create</strong>, <strong>assignment</strong>, <strong>update</strong>, <strong>complete</strong>, <strong>delete</strong> 和
  <strong>timeout</strong>;</p>
 
-<p>注意，<strong>timeout</strong> 事件需要任务监听器中的<a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/events/timer-events/#defining-a-timer">timerEventDefinition</a>子元素，并且只有在<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/">Job Executor</a>被启用时才会触发。</p></li>
+<p>注意，<strong>timeout</strong> 事件需要任务监听器中的<a href="https://camunda-cn.shaochenfeng.com/reference/bpmn20/events/timer-events/#defining-a-timer">timerEventDefinition</a>子元素，并且只有在<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/">Job Executor</a>被启用时才会触发。</p></li>
 
 <li><p><strong>class</strong>: 被调用的委托类。这个类必须实现<code>org.camunda.bpm.engine.impl.pvm.delegate.TaskListener</code>接口。</p>
 
@@ -8579,7 +8579,7 @@ setter/private field on the injection target should always be <code>org.camunda.
 <li><p><strong>id</strong>: 用户任务范围内监听器的唯一标识符，只有当<code>event</code>被设置为<code>timeout</code>时才需要。</p></li>
 </ul>
 
-<p>除了 <code>class</code>, <code>expression</code> 和 <code>delegateExpression</code> 属性, <a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/extension-elements/#camunda-script">camunda:script</a> 子元素可以用来指定一个脚本作为任务监听器。外部脚本资源也可以用<code>camunda:script</code> 元素的资源属性来声明（参见关于脚本任务的<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/scripting/#script-source">script sources</a>的文档）。</p>
+<p>除了 <code>class</code>, <code>expression</code> 和 <code>delegateExpression</code> 属性, <a href="https://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/extension-elements/#camunda-script">camunda:script</a> 子元素可以用来指定一个脚本作为任务监听器。外部脚本资源也可以用<code>camunda:script</code> 元素的资源属性来声明（参见关于脚本任务的<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/scripting/#script-source">script sources</a>的文档）。</p>
 
 <pre><code class="language-xml">  &lt;userTask id=&quot;task&quot;&gt;
     &lt;extensionElements&gt;
@@ -8592,7 +8592,7 @@ setter/private field on the injection target should always be <code>org.camunda.
   &lt;/userTask&gt;
 </code></pre>
 
-<p>此外, <a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/events/timer-events/#defining-a-timer">timerEventDefinition</a> 子元素可以和<code>event</code>类型<code>timeout</code>一起使用，以便定义相关的计时器。当定时器到期时，指定的委托将被<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/">Job 执行器</a>调用。用户任务的执行将 <strong>不会</strong> 被打断。</p>
+<p>此外, <a href="https://camunda-cn.shaochenfeng.com/reference/bpmn20/events/timer-events/#defining-a-timer">timerEventDefinition</a> 子元素可以和<code>event</code>类型<code>timeout</code>一起使用，以便定义相关的计时器。当定时器到期时，指定的委托将被<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/">Job 执行器</a>调用。用户任务的执行将 <strong>不会</strong> 被打断。</p>
 
 <pre><code class="language-xml">  &lt;userTask id=&quot;task&quot;&gt;
     &lt;extensionElements&gt;
@@ -8725,7 +8725,7 @@ setter/private field on the injection target should always be <code>org.camunda.
 
 <div class="note bg-info docs-info">
   <h3>笔记!</h3>
-  <p>在委托代码中抛出一个<code>BpmnError</code>，结果与错误结束事件类似。关于行为的细节，特别是错误边界事件，请参见<a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/events/error-events/#error-boundary-event">参考指南</a>。如果在作用域上没有发现错误边界事件，执行就会结束。</p>
+  <p>在委托代码中抛出一个<code>BpmnError</code>，结果与错误结束事件类似。关于行为的细节，特别是错误边界事件，请参见<a href="https://camunda-cn.shaochenfeng.com/reference/bpmn20/events/error-events/#error-boundary-event">参考指南</a>。如果在作用域上没有发现错误边界事件，执行就会结束。</p>
 </div>
 
 
@@ -8789,9 +8789,9 @@ setter/private field on the injection target should always be <code>org.camunda.
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="http://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="https://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
-            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2022
+            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2025
           </p>
           <p>
             <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a> The content on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
@@ -8804,7 +8804,7 @@ setter/private field on the injection target should always be <code>org.camunda.
 
   
 
-  <script type="text/javascript" src="http://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

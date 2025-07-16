@@ -58,11 +58,11 @@ var _mtac = {};
   <title>Signal Events | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="http://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="https://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="http://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
 </head>
 <body class="">
 
@@ -73,8 +73,8 @@ var _mtac = {};
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="http://camunda-cn.shaochenfeng.com/">
-      <img src="http://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="https://camunda-cn.shaochenfeng.com/">
+      <img src="https://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">中文站</span>
       </a>
@@ -8187,7 +8187,7 @@ var _mtac = {};
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="http://camunda-cn.shaochenfeng.com/">
+    <select id="version-select" data-basepath="/manual" base-url="https://camunda-cn.shaochenfeng.com/">
       
         <option  selected >develop</option>
       
@@ -8327,7 +8327,7 @@ RuntimeService.signalEventReceived(String signalName, String executionId);
 
 <h2 id="signal-start-event">Signal Start Event</h2>
 
-<div class="bpmn-symbol"><img src="http://camunda-cn.shaochenfeng.com//img/short-codes/bpmn-signal-start-event.png" /></div>
+<div class="bpmn-symbol"><img src="https://camunda-cn.shaochenfeng.com//img/short-codes/bpmn-signal-start-event.png" /></div>
 
 
 <p>A signal start event can be used to start a process instance using a named signal.</p>
@@ -8357,7 +8357,7 @@ void signalEventReceived(String signalName, Map&lt;String, Object&gt; processVar
 
 <h2 id="signal-intermediate-catching-event">Signal Intermediate Catching Event</h2>
 
-<div class="bpmn-symbol"><img src="http://camunda-cn.shaochenfeng.com//img/short-codes/bpmn-signal-intermediate-catch-event.png" /></div>
+<div class="bpmn-symbol"><img src="https://camunda-cn.shaochenfeng.com//img/short-codes/bpmn-signal-intermediate-catch-event.png" /></div>
 
 
 <p>When a token arrives at the signal intermediate catching event, it will wait there until a signal with the proper name arrives.</p>
@@ -8379,7 +8379,7 @@ void signalEventReceived(String signalName, Map&lt;String, Object&gt; processVar
   <tr>
     <th>Extension Elements</th>
     <td>
-      <a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/extension-elements/#inputoutput">
+      <a href="https://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/extension-elements/#inputoutput">
         camunda:inputOutput</a>
     </td>
   </tr>
@@ -8406,7 +8406,7 @@ void signalEventReceived(String signalName, Map&lt;String, Object&gt; processVar
 
 <p>A signal intermediate throwing event throws a signal event for a defined signal.</p>
 
-<div class="bpmn-symbol"><img src="http://camunda-cn.shaochenfeng.com//img/short-codes/bpmn-signal-intermediate-throw-event.png" /></div>
+<div class="bpmn-symbol"><img src="https://camunda-cn.shaochenfeng.com//img/short-codes/bpmn-signal-intermediate-throw-event.png" /></div>
 
 
 <p>The signal is broadcast to all active handlers (i.e., all catching signal events). Signals can be published synchronously or asynchronously.</p>
@@ -8432,7 +8432,7 @@ void signalEventReceived(String signalName, Map&lt;String, Object&gt; processVar
 
 <h2 id="signal-end-event">Signal End Event</h2>
 
-<div class="bpmn-symbol"><img src="http://camunda-cn.shaochenfeng.com//img/short-codes/bpmn-signal-end-event.png" /></div>
+<div class="bpmn-symbol"><img src="https://camunda-cn.shaochenfeng.com//img/short-codes/bpmn-signal-end-event.png" /></div>
 
 
 <p>A signal end event throws a signal event for a defined signal and the current path of execution is ended. It has the same behavior as a signal intermediate throwing event.</p>
@@ -8520,10 +8520,10 @@ void signalEventReceived(String signalName, Map&lt;String, Object&gt; processVar
   <tr>
     <th>Extension Elements</th>
     <td>
-      <a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/extension-elements/#in">camunda:in</a>,
-      <a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/extension-elements/#failedjobretrytimecycle">
+      <a href="https://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/extension-elements/#in">camunda:in</a>,
+      <a href="https://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/extension-elements/#failedjobretrytimecycle">
         camunda:failedJobRetryTimeCycle</a>,
-      <a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/extension-elements/#inputoutput">
+      <a href="https://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/extension-elements/#inputoutput">
         camunda:inputOutput</a>
     </td>
   </tr>
@@ -8588,9 +8588,9 @@ void signalEventReceived(String signalName, Map&lt;String, Object&gt; processVar
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="http://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="https://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
-            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2022
+            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2025
           </p>
           <p>
             <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a> The content on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
@@ -8603,7 +8603,7 @@ void signalEventReceived(String signalName, Map&lt;String, Object&gt; processVar
 
   
 
-  <script type="text/javascript" src="http://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

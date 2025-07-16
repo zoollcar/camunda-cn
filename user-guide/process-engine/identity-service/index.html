@@ -58,11 +58,11 @@ var _mtac = {};
   <title>身份服务 Identity Service | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="http://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="https://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="http://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
 </head>
 <body class="">
 
@@ -73,8 +73,8 @@ var _mtac = {};
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="http://camunda-cn.shaochenfeng.com/">
-      <img src="http://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="https://camunda-cn.shaochenfeng.com/">
+      <img src="https://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">中文站</span>
       </a>
@@ -8187,7 +8187,7 @@ var _mtac = {};
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="http://camunda-cn.shaochenfeng.com/">
+    <select id="version-select" data-basepath="/manual" base-url="https://camunda-cn.shaochenfeng.com/">
       
         <option  selected >develop</option>
       
@@ -8291,7 +8291,7 @@ var _mtac = {};
 
 <h1 id="基于-ldap-的身份服务">基于 LDAP 的身份服务</h1>
 
-<p>LDAP身份服务提供对基于LDAP的用户/组资源库的只读访问。该身份服务提供方式作为<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-plugins/">流程引擎插件</a>实现，可以被添加到流程引擎配置中。添加后，它会取代默认的数据库身份服务。</p>
+<p>LDAP身份服务提供对基于LDAP的用户/组资源库的只读访问。该身份服务提供方式作为<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-plugins/">流程引擎插件</a>实现，可以被添加到流程引擎配置中。添加后，它会取代默认的数据库身份服务。</p>
 
 <p>使用LDAP身份服务，需要将<code>camunda-identity-ldap.jar</code>库添加到流程引擎的classloader中。</p>
 
@@ -8396,14 +8396,14 @@ var _mtac = {};
 
 <div class="note bg-info docs-info">
   <h3>管理员授权插件</h3>
-  <p>LDAP Identity Provider Plugin 通常与<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/authorization-service/#the-administrator-authorization-plugin">Administrator Authorization Plugin</a> 结合使用 它允许你为特定的 LDAP用户/组 授予管理员权限。</p>
+  <p>LDAP Identity Provider Plugin 通常与<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/authorization-service/#the-administrator-authorization-plugin">Administrator Authorization Plugin</a> 结合使用 它允许你为特定的 LDAP用户/组 授予管理员权限。</p>
 </div>
 
 
 
 <div class="note bg-info docs-info">
   <h3>多租户</h3>
-  <p>目前，LDPA 身份服务不支持 <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/multi-tenancy/#single-process-engine-with-tenant-identifiers">多租户</a>。 这意味着无法从 LDAP 获取租户，并且默认情况下透明的多租户访问限制不起作用。</p>
+  <p>目前，LDPA 身份服务不支持 <a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/multi-tenancy/#single-process-engine-with-tenant-identifiers">多租户</a>。 这意味着无法从 LDAP 获取租户，并且默认情况下透明的多租户访问限制不起作用。</p>
 </div>
 
 
@@ -8588,7 +8588,7 @@ var _mtac = {};
 
 <p>存在一种机制来防止后续不成功的登录尝试。其本质是用户在登录尝试不成功后的特定时间内无法登录。
 每次尝试后都会计算时间量，但受最大延迟时间限制。
-在预定义的失败尝试次数后，用户将被锁定，只有管理员有权<a href="http://camunda-cn.shaochenfeng.com/webapps/admin/user-management/">解锁</a> 他们。</p>
+在预定义的失败尝试次数后，用户将被锁定，只有管理员有权<a href="https://camunda-cn.shaochenfeng.com/webapps/admin/user-management/">解锁</a> 他们。</p>
 
 <p>该机制可以使用以下属性和它们的默认值进行配置。</p>
 
@@ -8599,7 +8599,7 @@ var _mtac = {};
 <li><code>loginDelayBase=3</code></li>
 </ul>
 
-<p>有关更多信息，请查看流程引擎的 <a href="http://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#login-parameters">登录属性</a> 部分。</p>
+<p>有关更多信息，请查看流程引擎的 <a href="https://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#login-parameters">登录属性</a> 部分。</p>
 
 <p>延迟的计算通过以下公式完成：<code>baseTime * factor^(attempt-1)</code>。
 默认配置的行为将是：
@@ -8644,9 +8644,9 @@ var _mtac = {};
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="http://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="https://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
-            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2022
+            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2025
           </p>
           <p>
             <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a> The content on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
@@ -8659,7 +8659,7 @@ var _mtac = {};
 
   
 
-  <script type="text/javascript" src="http://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

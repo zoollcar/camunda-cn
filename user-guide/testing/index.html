@@ -58,11 +58,11 @@ var _mtac = {};
   <title>测试 | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="http://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="https://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="http://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
 </head>
 <body class="">
 
@@ -73,8 +73,8 @@ var _mtac = {};
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="http://camunda-cn.shaochenfeng.com/">
-      <img src="http://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="https://camunda-cn.shaochenfeng.com/">
+      <img src="https://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">中文站</span>
       </a>
@@ -8187,7 +8187,7 @@ var _mtac = {};
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="http://camunda-cn.shaochenfeng.com/">
+    <select id="version-select" data-basepath="/manual" base-url="https://camunda-cn.shaochenfeng.com/">
       
         <option  selected >develop</option>
       
@@ -8274,7 +8274,7 @@ This section explains how to write unit tests and integration tests with Camunda
 
 <div class="note bg-info docs-info">
   <h3></h3>
-  <p>Our <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-applications/maven-archetypes/">Project Templates for Maven</a> give you a complete running project including a JUnit test out of the box.</p>
+  <p>Our <a href="https://camunda-cn.shaochenfeng.com/user-guide/process-applications/maven-archetypes/">Project Templates for Maven</a> give you a complete running project including a JUnit test out of the box.</p>
 </div>
 
 
@@ -8349,7 +8349,7 @@ more details.</p>
 
 <h2 id="disabling-telemetry">Disabling Telemetry</h2>
 
-<p>Telemetry reports are introduced with Camunda Platform 7.14.0. To prevent sending data generated during testing, we encourage you to disable the <a href="http://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#telemetryReporterActivate">telemetry reporter</a>. Please read more about the topic in the dedicated page for <a href="http://camunda-cn.shaochenfeng.com/introduction/telemetry/#initial-data-report">Telemetry</a>.</p>
+<p>Telemetry reports are introduced with Camunda Platform 7.14.0. To prevent sending data generated during testing, we encourage you to disable the <a href="https://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#telemetryReporterActivate">telemetry reporter</a>. Please read more about the topic in the dedicated page for <a href="https://camunda-cn.shaochenfeng.com/introduction/telemetry/#initial-data-report">Telemetry</a>.</p>
 
 <p>Example of disabling the reporter in XML-based configuration:</p>
 
@@ -8631,13 +8631,13 @@ one should make sure, that they are registered before the deployment happens. E.
 <code>@Deployment</code> annotation, beans should not be registered in <code>@Before</code> method, but rather the separate test rule can be created, that registers beans on startup,
 and chained before <code>ProcessEngineRule</code>.</p>
 
-<p><strong>The mocked beans feature should be used for testing purposes only.</strong> Beans that are stored with <code>Mocks</code> are exclusively available within the respective storing thread as it is based on <code>ThreadLocal</code>. In most productive environments, it is not possible to access mocked beans during process execution due to the reason that jobs are executed by the multi-threaded Job Executor. Since the <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/#job-executor-in-a-unit-test">Job Executor is disabled in unit test scenarios</a>, the thread of process execution is the same that creates mocked bean instances.</p>
+<p><strong>The mocked beans feature should be used for testing purposes only.</strong> Beans that are stored with <code>Mocks</code> are exclusively available within the respective storing thread as it is based on <code>ThreadLocal</code>. In most productive environments, it is not possible to access mocked beans during process execution due to the reason that jobs are executed by the multi-threaded Job Executor. Since the <a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/#job-executor-in-a-unit-test">Job Executor is disabled in unit test scenarios</a>, the thread of process execution is the same that creates mocked bean instances.</p>
 
 <h1 id="best-practice">Best Practice</h1>
 
 <h2 id="write-focused-tests">Write Focused Tests</h2>
 
-<p>The feature to <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-concepts/#start-a-process-instance-at-any-set-of-activities">start a process instance at a set of activities</a> can be used to to create a very specific scenario without much setup. Similarly, certain activities can be skipped by using <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-instance-modification/">process instance modification</a>.</p>
+<p>The feature to <a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-concepts/#start-a-process-instance-at-any-set-of-activities">start a process instance at a set of activities</a> can be used to to create a very specific scenario without much setup. Similarly, certain activities can be skipped by using <a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-instance-modification/">process instance modification</a>.</p>
 
 <h2 id="scoping-tests">Scoping Tests</h2>
 
@@ -8724,9 +8724,9 @@ and chained before <code>ProcessEngineRule</code>.</p>
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="http://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="https://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
-            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2022
+            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2025
           </p>
           <p>
             <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a> The content on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
@@ -8739,7 +8739,7 @@ and chained before <code>ProcessEngineRule</code>.</p>
 
   
 
-  <script type="text/javascript" src="http://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

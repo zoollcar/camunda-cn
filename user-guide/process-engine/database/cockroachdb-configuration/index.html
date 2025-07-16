@@ -58,11 +58,11 @@ var _mtac = {};
   <title>CockroachDB 数据库配置 | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="http://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="https://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="http://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
 </head>
 <body class="">
 
@@ -73,8 +73,8 @@ var _mtac = {};
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="http://camunda-cn.shaochenfeng.com/">
-      <img src="http://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="https://camunda-cn.shaochenfeng.com/">
+      <img src="https://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">中文站</span>
       </a>
@@ -8187,7 +8187,7 @@ var _mtac = {};
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="http://camunda-cn.shaochenfeng.com/">
+    <select id="version-select" data-basepath="/manual" base-url="https://camunda-cn.shaochenfeng.com/">
       
         <option  selected >develop</option>
       
@@ -8248,7 +8248,7 @@ for more details).</p>
 <h1 id="cockroachdb-的并发冲突">CockroachDB 的并发冲突</h1>
 
 <p>Whenever the process engine detects a concurrency conflict between transactions, it reports an
-<code>OptimisticLockingException</code> (for more details please see <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/transactions-in-processes/#the-optimisticlockingexception">this docs section</a>),
+<code>OptimisticLockingException</code> (for more details please see <a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/transactions-in-processes/#the-optimisticlockingexception">this docs section</a>),
 which is then handled internally, or reported to the user. Since CockroachDB implements the <code>SERIALIZABLE</code>
 transaction isolation level, the process engine&rsquo;s optimistic locking mechanism does not apply. When CockroachDB
 is not able to serialize a concurrent transaction, it raises an error that causes the transaction to abort.
@@ -8302,11 +8302,11 @@ retried using a CRDB-specific mechanism:</p>
 <li>When fetching external tasks:
 
 <ul>
-<li>With the External Tasks Rest API <a href="http://camunda-cn.shaochenfeng.com/reference/rest/external-task/fetch/">endpoint</a>.</li>
+<li>With the External Tasks Rest API <a href="https://camunda-cn.shaochenfeng.com/reference/rest/external-task/fetch/">endpoint</a>.</li>
 <li>With the execution of the <a href="https://docs.camunda.org/manual/latest/reference/javadoc/??org/camunda/bpm/engine/ExternalTaskService.html">ExternalTaskService#fetchAndLock</a>
  API calls.</li>
 </ul></li>
-<li>When <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/#job-acquisition">acquiring jobs</a> for execution by the job executor.</li>
+<li>When <a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/#job-acquisition">acquiring jobs</a> for execution by the job executor.</li>
 </ul>
 
 <p>It is important to note that the CockroachDB retry mechanism is applied to API calls where an
@@ -8315,7 +8315,7 @@ applied to API calls that utilize a pessimistic lock, which is redundant and dis
 (please see <a href="#pessimistic-locks-replacement-behavior">the section bellow</a> for more details).</p>
 
 <p>The number of retries the mechanism is allowed to perform can be configured with the <code>commandRetries</code>
-configuration property (more details <a href="http://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#configuration-properties">here</a>). The default value is 0 and can be set to an
+configuration property (more details <a href="https://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#configuration-properties">here</a>). The default value is 0 and can be set to an
 appropriate value based on the use-case.</p>
 
 <p>When the number of retries is exhausted or is set to 0, a <code>CrdbTransactionRetryException</code> will be thrown
@@ -8331,7 +8331,7 @@ recommendations on how to configure and use the process engine with CockroachDB.
 
 <h3 id="un-ignorable-historic-optimisticlockingexception">Un-ignorable historic <code>OptimisticLockingException</code></h3>
 
-<p>The process engine may generate large amounts of historical data, and provides the <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/history/#history-cleanup">history cleanup
+<p>The process engine may generate large amounts of historical data, and provides the <a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/history/#history-cleanup">history cleanup
 feature</a> to ensure that &ldquo;old&rdquo;
 data is removed. The History Cleanup Removal-Time-based Strategy allows for historical data associated
 with still running Process Instances to be cleaned up. Since running Process Instances continue
@@ -8339,7 +8339,7 @@ generating historical data, removing the same data in parallel is viewed as an <
 
 <p>In the regular case, this historic <code>OptimisticLockingException</code> is handled internally and ignored
 since it is expected (and can be controlled by the <code>skipHistoryOptimisticLockingExceptions</code>
-<a href="http://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#configuration-properties">configuration property</a>). However, due to the <code>SERIALIZABLE</code> transaction isolation,
+<a href="https://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#configuration-properties">configuration property</a>). However, due to the <code>SERIALIZABLE</code> transaction isolation,
 CockroachDB detects this concurrency conflict by itself and requires for a complete transaction
 rollback and retry.</p>
 
@@ -8409,7 +8409,7 @@ transactions, the recommendations from the sections above remain valid.</p>
 </div>
 
 
-<p>The <a href="http://camunda-cn.shaochenfeng.com/user-guide/spring-framework-integration/transactions/">Spring</a>/<a href="http://camunda-cn.shaochenfeng.com/user-guide/cdi-java-ee-integration/jta-transaction-integration/">Java EE</a>/<a href="http://camunda-cn.shaochenfeng.com/user-guide/quarkus-integration/configuration/#datasource">Quarkus</a>
+<p>The <a href="https://camunda-cn.shaochenfeng.com/user-guide/spring-framework-integration/transactions/">Spring</a>/<a href="https://camunda-cn.shaochenfeng.com/user-guide/cdi-java-ee-integration/jta-transaction-integration/">Java EE</a>/<a href="https://camunda-cn.shaochenfeng.com/user-guide/quarkus-integration/configuration/#datasource">Quarkus</a>
 Transaction integrations enable developers to manage transactions through the respective framework.
 This means that the process engine doesn&rsquo;t control when transactions are started, committed,
 or rolled back.</p>
@@ -8419,7 +8419,7 @@ or rolled back.</p>
 However, in the case of externally managed transactions, this mechanism will not work correctly.</p>
 
 <p>In this case, we suggest to disable the retry mechanism by setting the <code>commandRetries</code> configuration property
-(documented <a href="http://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#configuration-properties">here</a>) to 0. This will allow the <code>CrdbTransactionRetryException</code> to bubble up to
+(documented <a href="https://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#configuration-properties">here</a>) to 0. This will allow the <code>CrdbTransactionRetryException</code> to bubble up to
 the Spring/Java EE layer, where the transaction rollback and retry can be correctly implemented by the application
 developers.</p>
 
@@ -8440,7 +8440,7 @@ When using the process engine with CockroachDB, it is not possible to use Exclus
 
 <h3 id="unsupported-engine-side-query-timeout">Unsupported Engine-side Query timeout</h3>
 
-<p>The <code>jdbcStatementTimeout</code> configuration property (more details <a href="http://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#configuration-properties">here</a>) enables users to
+<p>The <code>jdbcStatementTimeout</code> configuration property (more details <a href="https://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#configuration-properties">here</a>) enables users to
 set the amount of time in seconds that the JDBC driver will wait for a response from the database. CockroachDB
 currently doesn&rsquo;t support query cancellation (<a href="https://github.com/cockroachdb/cockroach/issues/41335">CockroachDB issue</a>),
 so the process engine <code>jdbcStatementTimeout</code> property will not have any effect when used on CockroachDB.</p>
@@ -8521,9 +8521,9 @@ transaction performs a modification on another, unrelated Process Instance. This
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="http://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="https://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
-            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2022
+            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2025
           </p>
           <p>
             <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a> The content on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
@@ -8536,7 +8536,7 @@ transaction performs a modification on another, unrelated Process Instance. This
 
   
 
-  <script type="text/javascript" src="http://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

@@ -58,11 +58,11 @@ var _mtac = {};
   <title>Update an Oracle WebLogic Installation from 7.3 to 7.4 | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="http://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="https://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="http://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
 </head>
 <body class="">
 
@@ -73,8 +73,8 @@ var _mtac = {};
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="http://camunda-cn.shaochenfeng.com/">
-      <img src="http://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="https://camunda-cn.shaochenfeng.com/">
+      <img src="https://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">中文站</span>
       </a>
@@ -8187,7 +8187,7 @@ var _mtac = {};
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="http://camunda-cn.shaochenfeng.com/">
+    <select id="version-select" data-basepath="/manual" base-url="https://camunda-cn.shaochenfeng.com/">
       
         <option  selected >develop</option>
       
@@ -8236,7 +8236,7 @@ var _mtac = {};
     <div class="col-xs-12 content-text">
       
 
-<p>The following steps describe how to update the Camunda artifacts on an Oracle WebLogic application server in a shared process engine setting. For the entire procedure, refer to the <a href="http://camunda-cn.shaochenfeng.com/update/minor/73-to-74/">update guide</a>. If not already done, make sure to download the <a href="https://app.camunda.com/nexus/service/rest/repository/browse/internal/org/camunda/bpm/weblogic/camunda-bpm-weblogic/">Camunda Platform 7.4 Oracle WebLogic distribution</a>.</p>
+<p>The following steps describe how to update the Camunda artifacts on an Oracle WebLogic application server in a shared process engine setting. For the entire procedure, refer to the <a href="https://camunda-cn.shaochenfeng.com/update/minor/73-to-74/">update guide</a>. If not already done, make sure to download the <a href="https://app.camunda.com/nexus/service/rest/repository/browse/internal/org/camunda/bpm/weblogic/camunda-bpm-weblogic/">Camunda Platform 7.4 Oracle WebLogic distribution</a>.</p>
 
 <p>The update procedure takes the following steps:</p>
 
@@ -8312,7 +8312,7 @@ var _mtac = {};
 
 <h1 id="4-maintain-the-camunda-platform-configuration">4. Maintain the Camunda Platform Configuration</h1>
 
-<p>If you have previously replaced the default Camunda Platform configuration by a custom configuration following any of the ways outlined in the <a href="http://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/descriptors/bpm-platform-xml/">deployment descriptor reference</a>, it may be necessary to restore this configuration. This can be done by repeating the configuration replacement steps for the updated platform.</p>
+<p>If you have previously replaced the default Camunda Platform configuration by a custom configuration following any of the ways outlined in the <a href="https://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/descriptors/bpm-platform-xml/">deployment descriptor reference</a>, it may be necessary to restore this configuration. This can be done by repeating the configuration replacement steps for the updated platform.</p>
 
 <h1 id="5-maintain-process-engine-configuration">5. Maintain Process Engine Configuration</h1>
 
@@ -8320,12 +8320,12 @@ var _mtac = {};
 
 <h2 id="task-query-expressions">Task Query Expressions</h2>
 
-<p>As of 7.4, the default handling of expressions submitted as parameters of task queries has changed. Passing EL expressions in a task query enables execution of arbitrary code when the query is evaluated. The process engine no longer evaluates these expressions by default and throws an exception instead. This behavior can be toggled in the process engine configuration using the properties <code>enableExpressionsInAdhocQueries</code> (default <code>false</code>) and <code>enableExpressionsInStoredQueries</code> (default <code>true</code>). To restore the engine&rsquo;s previous behavior, set both flags to <code>true</code>. See the user guide on <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/securing-custom-code/">security considerations for custom code</a> for details.
+<p>As of 7.4, the default handling of expressions submitted as parameters of task queries has changed. Passing EL expressions in a task query enables execution of arbitrary code when the query is evaluated. The process engine no longer evaluates these expressions by default and throws an exception instead. This behavior can be toggled in the process engine configuration using the properties <code>enableExpressionsInAdhocQueries</code> (default <code>false</code>) and <code>enableExpressionsInStoredQueries</code> (default <code>true</code>). To restore the engine&rsquo;s previous behavior, set both flags to <code>true</code>. See the user guide on <a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/securing-custom-code/">security considerations for custom code</a> for details.
 This is already the default for Camunda Platform versions after and including 7.3.3 and 7.2.8.</p>
 
 <h2 id="user-operation-log">User Operation Log</h2>
 
-<p>The behavior of the <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/history/#user-operation-log">user operation log</a> has changed, so that operations are only logged if they are performed in the context of a logged in user. This behavior can be toggled in the process engine configuration using the property <code>restrictUserOperationLogToAuthenticatedUsers</code> (default <code>true</code>). To restore the engine&rsquo;s prior behavior, i.e., to write log entries regardless of user context, set the flag to <code>false</code>.</p>
+<p>The behavior of the <a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/history/#user-operation-log">user operation log</a> has changed, so that operations are only logged if they are performed in the context of a logged in user. This behavior can be toggled in the process engine configuration using the property <code>restrictUserOperationLogToAuthenticatedUsers</code> (default <code>true</code>). To restore the engine&rsquo;s prior behavior, i.e., to write log entries regardless of user context, set the flag to <code>false</code>.</p>
 
 <p>Furthermore, with 7.4 task events are only logged when they occur in the context of a logged in user. Task events are accessible via the deprecated API <code>TaskService#getTaskEvents</code>. If you rely on this API method, the previous behavior can be restored by setting the flag <code>restrictUserOperationLogToAuthenticatedUsers</code> to <code>false</code>.</p>
 
@@ -8335,7 +8335,7 @@ This is already the default for Camunda Platform versions after and including 7.
 
 <h2 id="cmmn-model-api">CMMN Model API</h2>
 
-<p>As a consequence of supporting CMMN 1.1, the CMMN model API is now based on the schema of CMMN 1.1. This leads to <a href="http://camunda-cn.shaochenfeng.com/user-guide/model-api/cmmn-model-api/limitations/">limitations</a> when editing CMMN 1.0 models. We therefore recommend to <a href="http://camunda-cn.shaochenfeng.com/reference/cmmn11/migration/10-to-11/">migrate your CMMN 1.0 models to CMMN 1.1</a>.</p>
+<p>As a consequence of supporting CMMN 1.1, the CMMN model API is now based on the schema of CMMN 1.1. This leads to <a href="https://camunda-cn.shaochenfeng.com/user-guide/model-api/cmmn-model-api/limitations/">limitations</a> when editing CMMN 1.0 models. We therefore recommend to <a href="https://camunda-cn.shaochenfeng.com/reference/cmmn11/migration/10-to-11/">migrate your CMMN 1.0 models to CMMN 1.1</a>.</p>
 
 <h1 id="7-install-the-camunda-archive">7. Install the Camunda Archive</h1>
 
@@ -8354,7 +8354,7 @@ This is already the default for Camunda Platform versions after and including 7.
 
 <div class="note bg-info docs-info">
   <h3>LDAP Entity Caching</h3>
-  <p>It is possible to enable entity caching for Hypertext Application Language (HAL) requests that the Camunda web applications make. This can be especially useful when you use Camunda in combination with LDAP. To activate caching, the Camunda webapp artifact has to be modified and the pre-built application cannot be used as is. See the <a href="http://camunda-cn.shaochenfeng.com/reference/rest/overview/hal/">REST Api Documentation</a> for details.</p>
+  <p>It is possible to enable entity caching for Hypertext Application Language (HAL) requests that the Camunda web applications make. This can be especially useful when you use Camunda in combination with LDAP. To activate caching, the Camunda webapp artifact has to be modified and the pre-built application cannot be used as is. See the <a href="https://camunda-cn.shaochenfeng.com/reference/rest/overview/hal/">REST Api Documentation</a> for details.</p>
 </div>
 
 
@@ -8406,9 +8406,9 @@ This is already the default for Camunda Platform versions after and including 7.
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="http://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="https://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
-            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2022
+            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2025
           </p>
           <p>
             <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a> The content on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
@@ -8421,7 +8421,7 @@ This is already the default for Camunda Platform versions after and including 7.
 
   
 
-  <script type="text/javascript" src="http://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

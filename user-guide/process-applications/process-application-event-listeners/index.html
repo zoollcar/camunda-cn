@@ -58,11 +58,11 @@ var _mtac = {};
   <title>Process Application 事件监听 | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="http://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="https://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="http://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
 </head>
 <body class="">
 
@@ -73,8 +73,8 @@ var _mtac = {};
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="http://camunda-cn.shaochenfeng.com/">
-      <img src="http://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="https://camunda-cn.shaochenfeng.com/">
+      <img src="https://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">中文站</span>
       </a>
@@ -8187,7 +8187,7 @@ var _mtac = {};
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="http://camunda-cn.shaochenfeng.com/">
+    <select id="version-select" data-basepath="/manual" base-url="https://camunda-cn.shaochenfeng.com/">
       
         <option  selected >develop</option>
       
@@ -8234,10 +8234,10 @@ var _mtac = {};
     </div>
 
     <div class="col-xs-12 content-text">
-      <p>流程引擎支持定义两种类型的事件侦听器：<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/delegation-code/#execution-listener">任务事件侦听器和执行事件侦听器</a>。
+      <p>流程引擎支持定义两种类型的事件侦听器：<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/delegation-code/#execution-listener">任务事件侦听器和执行事件侦听器</a>。
 任务事件侦听器允许对任务事件做出反应（任务已创建、已分配、已完成）。 执行侦听器允许对在执行过程中通过流程设计触发的事件做出反应：活动开始、结束和转换正在进行。</p>
 
-<p>使用流程应用程序 API 时，流程引擎确保将事件委托给正确的流程应用程序。 例如，假设有一个流程应用程序部署为“invoice.war”，它部署了一个名为“invoice”的流程定义。 发票流程有一个名为“归档发票”的任务。 应用程序“invoice.war”进一步提供了一个实现 <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/delegation-code/#execution-listener">执行侦听器</a> 接口的 Java Class 并进行了配置 每当在“归档发票”活动上触发结束事件时调用。 流程引擎确保将事件委托给位于流程应用程序内部的侦听器类：</p>
+<p>使用流程应用程序 API 时，流程引擎确保将事件委托给正确的流程应用程序。 例如，假设有一个流程应用程序部署为“invoice.war”，它部署了一个名为“invoice”的流程定义。 发票流程有一个名为“归档发票”的任务。 应用程序“invoice.war”进一步提供了一个实现 <a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/delegation-code/#execution-listener">执行侦听器</a> 接口的 Java Class 并进行了配置 每当在“归档发票”活动上触发结束事件时调用。 流程引擎确保将事件委托给位于流程应用程序内部的侦听器类：</p>
 
 <figure class="image">
   <span><img
@@ -8248,7 +8248,7 @@ var _mtac = {};
 </figure>
 
 
-<p>在 <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/delegation-code/#execution-listener">BPMN 2.0 XML 中明确配置</a> 的执行和任务侦听器之上， 流程应用程序 API 支持定义一个全局 ExecutionListener 和一个全局 TaskListener ，它们会收到有关流程应用程序部署的流程中发生的*所有事件*的通知：</p>
+<p>在 <a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/delegation-code/#execution-listener">BPMN 2.0 XML 中明确配置</a> 的执行和任务侦听器之上， 流程应用程序 API 支持定义一个全局 ExecutionListener 和一个全局 TaskListener ，它们会收到有关流程应用程序部署的流程中发生的*所有事件*的通知：</p>
 
 <pre><code>@ProcessApplication
 public class InvoiceProcessApplication extends ServletProcessApplication {
@@ -8271,7 +8271,7 @@ public class InvoiceProcessApplication extends ServletProcessApplication {
 }
 </code></pre>
 
-<p>要使用全局流程应用事件监听器，你需要激活相应的<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-plugins/">流程引擎插件</a>：</p>
+<p>要使用全局流程应用事件监听器，你需要激活相应的<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-plugins/">流程引擎插件</a>：</p>
 
 <pre><code>&lt;process-engine name=&quot;default&quot;&gt;
   ...
@@ -8285,7 +8285,7 @@ public class InvoiceProcessApplication extends ServletProcessApplication {
 
 <p>请注意，该插件在预打包的 Camunda 平台发行版中默认激活。</p>
 
-<p>如果你想<a href="http://camunda-cn.shaochenfeng.com/user-guide/cdi-java-ee-integration/the-cdi-event-bridge/">结合共享流程引擎使用CDI Events</a>流程应用，可以在Event Listener接口添加CdiEventListener桥接器。</p>
+<p>如果你想<a href="https://camunda-cn.shaochenfeng.com/user-guide/cdi-java-ee-integration/the-cdi-event-bridge/">结合共享流程引擎使用CDI Events</a>流程应用，可以在Event Listener接口添加CdiEventListener桥接器。</p>
 
     </div>
   </div>
@@ -8308,9 +8308,9 @@ public class InvoiceProcessApplication extends ServletProcessApplication {
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="http://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="https://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
-            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2022
+            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2025
           </p>
           <p>
             <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a> The content on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
@@ -8323,7 +8323,7 @@ public class InvoiceProcessApplication extends ServletProcessApplication {
 
   
 
-  <script type="text/javascript" src="http://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

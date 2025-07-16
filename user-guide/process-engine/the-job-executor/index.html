@@ -58,11 +58,11 @@ var _mtac = {};
   <title>Job 执行器 | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="http://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="https://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="http://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
 </head>
 <body class="">
 
@@ -73,8 +73,8 @@ var _mtac = {};
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="http://camunda-cn.shaochenfeng.com/">
-      <img src="http://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="https://camunda-cn.shaochenfeng.com/">
+      <img src="https://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">中文站</span>
       </a>
@@ -8187,7 +8187,7 @@ var _mtac = {};
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="http://camunda-cn.shaochenfeng.com/">
+    <select id="version-select" data-basepath="/manual" base-url="https://camunda-cn.shaochenfeng.com/">
       
         <option  selected >develop</option>
       
@@ -8236,7 +8236,7 @@ var _mtac = {};
     <div class="col-xs-12 content-text">
       
 
-<p>Job是触发流程执行的任务的明确表示。当一个定时器事件或一个标记为异步执行的任务(见<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/transactions-in-processes/">事务边界</a>接近时，就会创建一个Job。因此，Job处理可以被分成三个阶段。</p>
+<p>Job是触发流程执行的任务的明确表示。当一个定时器事件或一个标记为异步执行的任务(见<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/transactions-in-processes/">事务边界</a>接近时，就会创建一个Job。因此，Job处理可以被分成三个阶段。</p>
 
 <ul>
 <li><a href="#job-创建">Job 创建</a></li>
@@ -8278,7 +8278,7 @@ var _mtac = {};
 <p>Job是由流程引擎为很多不同的目的而创建的。存在以下Job类型：</p>
 
 <ul>
-<li>在流程中使用异步延续设置<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/transactions-in-processes/">事务边界</a></li>
+<li>在流程中使用异步延续设置<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/transactions-in-processes/">事务边界</a></li>
 <li>用于BPMN计时器事件的定时器Job</li>
 <li>BPMN事件的异步处理</li>
 </ul>
@@ -8332,7 +8332,7 @@ var _mtac = {};
 
 <p>Job优先级可以在流程或活动级别上分配。为了实现这一点，可以使用Camunda扩展属性<code>camunda:jobPriority</code>。</p>
 
-<p>指定优先级，常量值和<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/expression-language/">表达式</a>都是支持的。当使用常量值时，同一优先级被分配给流程或活动的所有实例。另一方面，表达式允许给流程或活动的每个实例分配不同的优先级。表达式必须评估为 Java <code>long</code>范围内的一个数字。
+<p>指定优先级，常量值和<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/expression-language/">表达式</a>都是支持的。当使用常量值时，同一优先级被分配给流程或活动的所有实例。另一方面，表达式允许给流程或活动的每个实例分配不同的优先级。表达式必须评估为 Java <code>long</code>范围内的一个数字。
 具体数值可以是复杂计算的结果，并基于用户提供的数据（来自任务表格或其他来源）。</p>
 
 <h4 id="在流程级别设置优先级">在流程级别设置优先级</h4>
@@ -8382,7 +8382,7 @@ var _mtac = {};
 <h4 id="优先级表达式的执行环境">优先级表达式的执行环境</h4>
 
 <p>本节解释了在计算优先级表达式时，哪些环境变量和函数是可用的。
-关于这方面的通用文档，请参见相应的<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/expression-language/#availability-of-variables-and-functions-inside-expression-language">文档部分</a>。</p>
+关于这方面的通用文档，请参见相应的<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/expression-language/#availability-of-variables-and-functions-inside-expression-language">文档部分</a>。</p>
 
 <p>所有的优先级表达式都是在当前 <em>执行</em> 的背景下进行计算的。这意味着变量 &ldquo;execution&rdquo; 是可用的，所有执行的变量也是可用的。</p>
 
@@ -8398,7 +8398,7 @@ var _mtac = {};
 
 <p>当通过 Call Activity 启动一个流程实例时，你有时希望该流程实例 &ldquo;继承&rdquo; 调用流程实例的优先级。
 实现这一目的的最简单的方法是用一个变量传递优先级，并在被调用的流程中用表达式来引用它。
-如何通过 Call Activity 传递变量，参见<a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/subprocesses/call-activity/#passing-variables">Call Activity 参数</a>章节。</p>
+如何通过 Call Activity 传递变量，参见<a href="https://camunda-cn.shaochenfeng.com/reference/bpmn20/subprocesses/call-activity/#passing-variables">Call Activity 参数</a>章节。</p>
 
 <h3 id="通过managementservice-api设置job定义的优先级">通过ManagementService API设置job定义的优先级</h3>
 
@@ -8482,10 +8482,10 @@ managementService.setOverridingJobPriorityForJobDefinition(jobDefinition.getId()
 
 <p>为了优化需要立即执行的Job的获取，&rdquo;DUEDATE_&ldquo;列没有设置（&rdquo;null&rdquo;），并添加一个（积极的）空检查作为获取的条件。</p>
 
-<p>如果每个Job都必须设置 &ldquo;DUEDATE_&ldquo;，可以禁用优化。这可以通过设置<a href="http://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#ensureJobDueDateNotNull">流程引擎配置标志</a> &ldquo;ensureJobDueDateNotNull&rdquo; 为 <code>true</code> 来实现。</p>
+<p>如果每个Job都必须设置 &ldquo;DUEDATE_&ldquo;，可以禁用优化。这可以通过设置<a href="https://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#ensureJobDueDateNotNull">流程引擎配置标志</a> &ldquo;ensureJobDueDateNotNull&rdquo; 为 <code>true</code> 来实现。</p>
 
 <p>然而，在禁用优化之前，任何 &ldquo;DUEDATE_&rdquo; 为 &ldquo;null&rdquo; 的Job将不会被Job获取阶段所获取，除非这些Job被明确地以<a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/ManagementService.html#setJobDuedate-java.lang.String-java.util.Date-">Java</a>
-/<a href="http://camunda-cn.shaochenfeng.com/reference/rest/job/put-set-job-duedate/">Rest</a>的方式更新到期时间。</p>
+/<a href="https://camunda-cn.shaochenfeng.com/reference/rest/job/put-set-job-duedate/">Rest</a>的方式更新到期时间。</p>
 
 <h2 id="job-获取的两个步骤">Job 获取的两个步骤</h2>
 
@@ -8571,7 +8571,7 @@ managementService.setOverridingJobPriorityForJobDefinition(jobDefinition.getId()
 
 <p>By default, the Job Executor executes all jobs regardless of their priorities. Some jobs might be more important to finish quicker than others, so we assign them priorities and set <code>jobExecutorAcquireByPriority</code> to <code>true</code> as described above. Depending on the workload, the Job Executor might be able to execute all jobs eventually. But if the load is high enough, we might face starvation where a Job Executor is always busy working on high-priority jobs and never manages to execute the lower priority jobs.</p>
 
-<p>To prevent this, you can specify a priority range for the job executor by setting values for <a href="http://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#jobExecutorPriorityRangeMin"><code>jobExecutorPriorityRangeMin</code></a> or <a href="http://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#jobExecutorPriorityRangeMax"><code>jobExecutorPriorityRangeMax</code></a> (or both). The Job Executor will only acquire jobs that are inside its priority range (inclusive). Both properties are optional, so it is fine only to set one of them.</p>
+<p>To prevent this, you can specify a priority range for the job executor by setting values for <a href="https://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#jobExecutorPriorityRangeMin"><code>jobExecutorPriorityRangeMin</code></a> or <a href="https://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#jobExecutorPriorityRangeMax"><code>jobExecutorPriorityRangeMax</code></a> (or both). The Job Executor will only acquire jobs that are inside its priority range (inclusive). Both properties are optional, so it is fine only to set one of them.</p>
 
 <p>To avoid job starvation, make sure to have no gaps between Job Executor priority ranges. If, for example, Job Executor A has a priority range of 0 to 100 and Job Executor B executes jobs from priority 200 to <code>Long.MAX_VALUE</code> any job that receives a priority of 101 to 199 will never be executed. Job starvation can also occur with <code>batch jobs</code> and <code>history cleanup jobs</code> as both types of jobs also receive priorities (default: <code>0</code>). You can configure them via their respective properties: <code>batchJobPriority</code> and <code>historyCleanupJobPriority</code>.</p>
 
@@ -8588,7 +8588,7 @@ managementService.setOverridingJobPriorityForJobDefinition(jobDefinition.getId()
 
 <p>获取的Job由线程池执行。线程池从获取的Job队列中消耗Job。获得的Job队列是一个具有固定容量的内存队列。当执行器开始执行一个Job时，它首先被从队列中移除。</p>
 
-<p>在嵌入式流程引擎的情况下，该线程池的默认实现是 <code>java.util.concurrent.ThreadPoolExecutor</code> 。然而，这在Java EE环境中是不允许的。在那里，我们要与应用服务器的线程管理能力挂钩。关于如何实现，请参见<a href="http://camunda-cn.shaochenfeng.com/user-guide/runtime-container-integration/">运行时容器集成</a>部分中的特定平台信息。</p>
+<p>在嵌入式流程引擎的情况下，该线程池的默认实现是 <code>java.util.concurrent.ThreadPoolExecutor</code> 。然而，这在Java EE环境中是不允许的。在那里，我们要与应用服务器的线程管理能力挂钩。关于如何实现，请参见<a href="https://camunda-cn.shaochenfeng.com/user-guide/runtime-container-integration/">运行时容器集成</a>部分中的特定平台信息。</p>
 
 <h2 id="失败的job">失败的Job</h2>
 
@@ -8603,7 +8603,7 @@ managementService.setOverridingJobPriorityForJobDefinition(jobDefinition.getId()
 </div>
 
 
-<p>如果启用了Job的事件创建，那么一旦Job重试耗尽，就会创建一个事件。 （查看 <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/incidents/#事件的激活与冻结">事件的激活与冻结</a>）.
+<p>如果启用了Job的事件创建，那么一旦Job重试耗尽，就会创建一个事件。 （查看 <a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/incidents/#事件的激活与冻结">事件的激活与冻结</a>）.
 与Job相关的事件和历史事件可以通过类似如下的Java API请求访问：</p>
 
 <pre><code class="language-java">List&lt;Incident&gt; incidents = engineRule.getRuntimeService()
@@ -8690,7 +8690,7 @@ List&lt;HistoricIncident&gt; historicIncidents = engineRule.getHistoryService()
 
 <h4 id="为多实例活动使用自定义重试策略">为多实例活动使用自定义重试策略</h4>
 
-<p>如果为多实例活动设置了重试配置，那么该配置将应用于<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/transactions-in-processes/#asynchronous-continuations-of-multi-instance-activities">多实例活动</a>。此外，内部活动的重试也可以使用扩展元素作为 &ldquo;multiInstanceLoopCharacteristics&rdquo; 元素的子元素进行配置。</p>
+<p>如果为多实例活动设置了重试配置，那么该配置将应用于<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/transactions-in-processes/#asynchronous-continuations-of-multi-instance-activities">多实例活动</a>。此外，内部活动的重试也可以使用扩展元素作为 &ldquo;multiInstanceLoopCharacteristics&rdquo; 元素的子元素进行配置。</p>
 
 <p>下面的例子自定义了一个多实例服务主体及其内部活动的异步延续任务的重试。如果在五个并行实例中的一个发生了故障，那么故障实例的Job将被重试，最多3次，延迟5秒。如果所有的实例都成功结束，并且在延续任务的事务中发生了故障，那么该Job将被重试5次，延迟5分钟。</p>
 
@@ -8766,7 +8766,7 @@ List&lt;HistoricIncident&gt; historicIncidents = engineRule.getHistoryService()
 </figure>
 
 
-<p>我们有一个并行的网关，后面是三个服务任务，它们都执行<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/transactions-in-processes/#asynchronous-continuations">异步延续</a>。 这样做的结果是，三个Job被添加到数据库中。一旦这样的Job出现在数据库中，它就可以被Job执行器处理。它获取Job并将其委托给实际处理Job的Job线程池。这意味着，使用异步延续，你可以将Job分配给这个线程池（在集群的情况下，甚至跨越集群中的多个线程池）。</p>
+<p>我们有一个并行的网关，后面是三个服务任务，它们都执行<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/transactions-in-processes/#asynchronous-continuations">异步延续</a>。 这样做的结果是，三个Job被添加到数据库中。一旦这样的Job出现在数据库中，它就可以被Job执行器处理。它获取Job并将其委托给实际处理Job的Job线程池。这意味着，使用异步延续，你可以将Job分配给这个线程池（在集群的情况下，甚至跨越集群中的多个线程池）。</p>
 
 <p>这通常是一件好事。然而，它也存在着一个固有的问题：一致性。考虑一下服务任务之后的并行连接。当一个服务任务的执行完成后，我们到达并行连接处，需要决定是否等待其他执行，或者是否可以继续前进。这意味着，对于到达并行连接的每个分支，我们需要决定是否可以继续，或者是否需要等待其他分支的一个或多个执行。</p>
 
@@ -8817,7 +8817,7 @@ List&lt;HistoricIncident&gt; historicIncidents = engineRule.getHistoryService()
 
 
 <p><strong>这种设置可以集中监控Job的获取与执行</strong>
-关于线程池在不同平台上的实现方式，请参见[运行时容器集成](http://camunda-cn.shaochenfeng.com/user-guide/runtime-container-integration/）章节的特定平台信息。</p>
+关于线程池在不同平台上的实现方式，请参见[运行时容器集成](https://camunda-cn.shaochenfeng.com/user-guide/runtime-container-integration/）章节的特定平台信息。</p>
 
 <p>不同的Job获取也可以进行不同的配置，例如，为了满足像SLA这样的业务需求。当没有更多的可执行Job出现时，每个Job获取的超时可以被配置成不同的。</p>
 
@@ -8829,7 +8829,7 @@ List&lt;HistoricIncident&gt; historicIncidents = engineRule.getHistoryService()
 &lt;/process-engine&gt;
 </code></pre>
 
-<p>Job的获取必须在Camunda平台的部署描述符中声明，详情见<a href="http://camunda-cn.shaochenfeng.com/user-guide/runtime-container-integration/">容器特定的配置选项</a>。</p>
+<p>Job的获取必须在Camunda平台的部署描述符中声明，详情见<a href="https://camunda-cn.shaochenfeng.com/user-guide/runtime-container-integration/">容器特定的配置选项</a>。</p>
 
 <h1 id="集群设置">集群设置</h1>
 
@@ -8959,9 +8959,9 @@ List&lt;HistoricIncident&gt; historicIncidents = engineRule.getHistoryService()
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="http://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="https://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
-            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2022
+            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2025
           </p>
           <p>
             <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a> The content on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
@@ -8974,7 +8974,7 @@ List&lt;HistoricIncident&gt; historicIncidents = engineRule.getHistoryService()
 
   
 
-  <script type="text/javascript" src="http://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

@@ -58,11 +58,11 @@ var _mtac = {};
   <title>软件架构总览 | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="http://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="https://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="http://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
 </head>
 <body class="">
 
@@ -73,8 +73,8 @@ var _mtac = {};
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="http://camunda-cn.shaochenfeng.com/">
-      <img src="http://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="https://camunda-cn.shaochenfeng.com/">
+      <img src="https://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">中文站</span>
       </a>
@@ -8187,7 +8187,7 @@ var _mtac = {};
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="http://camunda-cn.shaochenfeng.com/">
+    <select id="version-select" data-basepath="/manual" base-url="https://camunda-cn.shaochenfeng.com/">
       
         <option  selected >develop</option>
       
@@ -8238,7 +8238,7 @@ var _mtac = {};
 
 <p>Camunda平台是一个基于Java的框架。主要组件是用Java编写的，我们总体上专注于为Java开发者提供他们在JVM上设计、实施和运行业务流程和工作流所需的工具。然而，我们也想让非Java开发者也能使用流程引擎技术。这就是为什么Camunda平台还提供了REST API，允许你与远程流程引擎应用建立连接。</p>
 
-<p>Camunda平台既可以作为一个独立的流程引擎服务器使用，也可以嵌入到定制的Java应用程序中。可嵌入性要求是Camunda平台许多架构决定的核心。例如，我们努力使流程引擎组件成为一个轻量级的组件，尽量减少对<a href="http://camunda-cn.shaochenfeng.com/introduction/third-party-libraries/">第三方库</a>的依赖性。此外，可嵌入性促使流程引擎支持使用Spring Managed或JTA<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/transactions-in-processes/">事务和线程模型</a>的能力。</p>
+<p>Camunda平台既可以作为一个独立的流程引擎服务器使用，也可以嵌入到定制的Java应用程序中。可嵌入性要求是Camunda平台许多架构决定的核心。例如，我们努力使流程引擎组件成为一个轻量级的组件，尽量减少对<a href="https://camunda-cn.shaochenfeng.com/introduction/third-party-libraries/">第三方库</a>的依赖性。此外，可嵌入性促使流程引擎支持使用Spring Managed或JTA<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/transactions-in-processes/">事务和线程模型</a>的能力。</p>
 
 <h1 id="流程引擎架构">流程引擎架构</h1>
 
@@ -8252,15 +8252,15 @@ var _mtac = {};
 
 
 <ul>
-<li><a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-api/">流程引擎公共API</a>： 面向服务的API允许Java应用程序与流程引擎交互。流程引擎的不同部分（即流程存储库、运行时的流程交互、任务管理等）被分离到各个服务中。公共API具有<a href="http://en.wikipedia.org/wiki/Command_pattern">命令式访问模式</a>的特点：进入流程引擎的流程要经过一个命令拦截器，该拦截器用于设置流程上下文。</li>
+<li><a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-api/">流程引擎公共API</a>： 面向服务的API允许Java应用程序与流程引擎交互。流程引擎的不同部分（即流程存储库、运行时的流程交互、任务管理等）被分离到各个服务中。公共API具有<a href="http://en.wikipedia.org/wiki/Command_pattern">命令式访问模式</a>的特点：进入流程引擎的流程要经过一个命令拦截器，该拦截器用于设置流程上下文。</li>
 <li><strong>BPMN 2.0 核心引擎</strong>: 这是流程引擎的核心。它有一个轻量级的图结构执行引擎（PVM - Process Virtual Machine），一个将BPMN 2.0 XML文件转化为Java对象的BPMN 2.0解析器，以及一套BPMN行为实现（为BPMN 2.0结构提供实现，如网关或服务任务）。</li>
-<li><a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/">Job 执行器</a>: Job执行者负责处理异步的后台工作，如流程中的定时器或异步延续。</li>
+<li><a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/">Job 执行器</a>: Job执行者负责处理异步的后台工作，如流程中的定时器或异步延续。</li>
 <li><strong>持久层</strong>: 流程引擎有一个持久层，负责将流程实例状态持久化到关系数据库中。我们使用MyBatis映射引擎来实现对象的关系映射。</li>
 </ul>
 
 <h2 id="依赖的第三方库">依赖的第三方库</h2>
 
-<p>见<a href="http://camunda-cn.shaochenfeng.com/introduction/third-party-libraries/">第三方库</a>一节。</p>
+<p>见<a href="https://camunda-cn.shaochenfeng.com/introduction/third-party-libraries/">第三方库</a>一节。</p>
 
 <h1 id="camunda平台-架构">Camunda平台 架构</h1>
 
@@ -8335,12 +8335,12 @@ var _mtac = {};
 
 <h2 id="集群环境中的-job-执行器">集群环境中的 Job 执行器</h2>
 
-<p>流程引擎 <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/">job 执行器</a> 也是集群的，在每个节点上都存在。这样，就流程引擎而言，就没有单点故障。job执行器可以同时在<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/#cluster-setups">同质和异质集群</a>中运行。</p>
+<p>流程引擎 <a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/">job 执行器</a> 也是集群的，在每个节点上都存在。这样，就流程引擎而言，就没有单点故障。job执行器可以同时在<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/#cluster-setups">同质和异质集群</a>中运行。</p>
 
 
 <div class="note bg-info docs-info">
   <h3>时区</h3>
-  <p>camunda对<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/time-zones/#cluster-setup">集群中的时区选择</a>有一些限制。</p>
+  <p>camunda对<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/time-zones/#cluster-setup">集群中的时区选择</a>有一些限制。</p>
 </div>
 
 
@@ -8356,7 +8356,7 @@ var _mtac = {};
 
 <p>用户应该选择适合其数据分离需求的模式。Camunda的API提供了对每个流程和相关数据的访问。
 流程和每个租户的相关数据。
-学习更多细节可以查看<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/multi-tenancy/">多租户章节</a>。</p>
+学习更多细节可以查看<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/multi-tenancy/">多租户章节</a>。</p>
 
 <h1 id="网络应用程序架构">网络应用程序架构</h1>
 
@@ -8421,9 +8421,9 @@ var _mtac = {};
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="http://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="https://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
-            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2022
+            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2025
           </p>
           <p>
             <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a> The content on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
@@ -8436,7 +8436,7 @@ var _mtac = {};
 
   
 
-  <script type="text/javascript" src="http://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

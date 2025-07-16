@@ -58,11 +58,11 @@ var _mtac = {};
   <title>Correlate a Message | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="http://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="https://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="http://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
 </head>
 <body class="">
 
@@ -73,8 +73,8 @@ var _mtac = {};
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="http://camunda-cn.shaochenfeng.com/">
-      <img src="http://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="https://camunda-cn.shaochenfeng.com/">
+      <img src="https://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">中文站</span>
       </a>
@@ -8187,7 +8187,7 @@ var _mtac = {};
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="http://camunda-cn.shaochenfeng.com/">
+    <select id="version-select" data-basepath="/manual" base-url="https://camunda-cn.shaochenfeng.com/">
       
         <option  selected >develop</option>
       
@@ -8238,7 +8238,7 @@ var _mtac = {};
 
 <p>Correlates a message to the process engine to either trigger a message start event or an intermediate message catching event.
 Internally this maps to the engine&rsquo;s message correlation builder methods <code>MessageCorrelationBuilder#correlateWithResult()</code> and <code>MessageCorrelationBuilder#correlateAllWithResult()</code>.
-For more information about the correlation behavior, see the <a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/events/message-events/">Message Events</a> section of the <a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/">BPMN 2.0 Implementation Reference</a>.</p>
+For more information about the correlation behavior, see the <a href="https://camunda-cn.shaochenfeng.com/reference/bpmn20/events/message-events/">Message Events</a> section of the <a href="https://camunda-cn.shaochenfeng.com/reference/bpmn20/">BPMN 2.0 Implementation Reference</a>.</p>
 
 <h1 id="method">Method</h1>
 
@@ -8367,7 +8367,7 @@ For more information about the correlation behavior, see the <a href="http://cam
        
          <p>The following property can be provided for all value types:</p>
           <ul>
-            <li><code>transient</code>: Indicates whether the variable should be transient or not. See <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/variables/#transient-variables">documentation</a> for more informations.</li>
+            <li><code>transient</code>: Indicates whether the variable should be transient or not. See <a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/variables/#transient-variables">documentation</a> for more informations.</li>
           </ul>
        
     </td>
@@ -8425,7 +8425,7 @@ For more information about the correlation behavior, see the <a href="http://cam
        
          <p>The following property can be provided for all value types:</p>
           <ul>
-            <li><code>transient</code>: Indicates whether the variable should be transient or not. See <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/variables/#transient-variables">documentation</a> for more informations.</li>
+            <li><code>transient</code>: Indicates whether the variable should be transient or not. See <a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/variables/#transient-variables">documentation</a> for more informations.</li>
           </ul>
        
     </td>
@@ -8476,7 +8476,7 @@ Otherwise, a JSON array of the message correlation results will be returned. Eac
    <td>Object</td>
    <td>
     This property only has a value if the resultType is set to <code>ProcessDefinition</code>.
-    The processInstance with the properties as described in the <a href="http://camunda-cn.shaochenfeng.com/reference/rest/process-instance/get/">get single instance</a> method.
+    The processInstance with the properties as described in the <a href="https://camunda-cn.shaochenfeng.com/reference/rest/process-instance/get/">get single instance</a> method.
    </td>
   </tr>
   <tr>
@@ -8484,7 +8484,7 @@ Otherwise, a JSON array of the message correlation results will be returned. Eac
    <td>Object</td>
    <td>
     This property only has a value if the resultType is set to <code>Execution</code>.
-    The execution with the properties as described in the <a href="http://camunda-cn.shaochenfeng.com/reference/rest/execution/get/">get single execution</a> method.
+    The execution with the properties as described in the <a href="https://camunda-cn.shaochenfeng.com/reference/rest/execution/get/">get single execution</a> method.
    </td>
   </tr>
   <tr>
@@ -8519,7 +8519,7 @@ Otherwise, a JSON array of the message correlation results will be returned. Eac
     <td>400</td>
     <td>application/json</td>
     <td>If no <code>messageName</code> was supplied. If both <code>tenantId</code> and <code>withoutTenantId</code> are supplied.</br>
-    If the message has not been correlated to exactly one entity (execution or process definition), or the variable value or type is invalid, for example if the value could not be parsed to an Integer value or the passed variable type is not supported. See the <a href="http://camunda-cn.shaochenfeng.com/reference/rest/overview/#error-handling">Introduction</a> for the error response format.</td>
+    If the message has not been correlated to exactly one entity (execution or process definition), or the variable value or type is invalid, for example if the value could not be parsed to an Integer value or the passed variable type is not supported. See the <a href="https://camunda-cn.shaochenfeng.com/reference/rest/overview/#error-handling">Introduction</a> for the error response format.</td>
   </tr>
 </table>
 
@@ -8684,9 +8684,9 @@ Otherwise, a JSON array of the message correlation results will be returned. Eac
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="http://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="https://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
-            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2022
+            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2025
           </p>
           <p>
             <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a> The content on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
@@ -8699,7 +8699,7 @@ Otherwise, a JSON array of the message correlation results will be returned. Eac
 
   
 
-  <script type="text/javascript" src="http://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

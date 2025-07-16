@@ -58,11 +58,11 @@ var _mtac = {};
   <title>Update from 7.13 to 7.14 | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="http://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="https://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="http://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
 </head>
 <body class="">
 
@@ -73,8 +73,8 @@ var _mtac = {};
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="http://camunda-cn.shaochenfeng.com/">
-      <img src="http://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="https://camunda-cn.shaochenfeng.com/">
+      <img src="https://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">中文站</span>
       </a>
@@ -8187,7 +8187,7 @@ var _mtac = {};
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="http://camunda-cn.shaochenfeng.com/">
+    <select id="version-select" data-basepath="/manual" base-url="https://camunda-cn.shaochenfeng.com/">
       
         <option  selected >develop</option>
       
@@ -8258,11 +8258,11 @@ var _mtac = {};
 
 <h1 id="legal-note">Legal Note</h1>
 
-<p>Before you upgrade to a Camunda Platform Runtime version &gt;= 7.14.0-alpha1 (and 7.13.7+, 7.12.12+, 7.11.19+) or activate the telemetry functionality, please make sure that you are authorized to take this step, and that the installation or activation of the <a href="http://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#initializeTelemetry">telemetry functionality</a> is not in conflict with any company-internal policies, compliance guidelines, any contractual or other provisions or obligations of your company.</p>
+<p>Before you upgrade to a Camunda Platform Runtime version &gt;= 7.14.0-alpha1 (and 7.13.7+, 7.12.12+, 7.11.19+) or activate the telemetry functionality, please make sure that you are authorized to take this step, and that the installation or activation of the <a href="https://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#initializeTelemetry">telemetry functionality</a> is not in conflict with any company-internal policies, compliance guidelines, any contractual or other provisions or obligations of your company.</p>
 
 <p>Camunda cannot be held responsible in the event of unauthorized installation or activation of this function.</p>
 
-<p>You can find more details on the telemetry topic in the <a href="http://camunda-cn.shaochenfeng.com/introduction/telemetry/">general introduction</a>.</p>
+<p>You can find more details on the telemetry topic in the <a href="https://camunda-cn.shaochenfeng.com/introduction/telemetry/">general introduction</a>.</p>
 
 <h1 id="database-updates">Database Updates</h1>
 
@@ -8271,7 +8271,7 @@ var _mtac = {};
 <h2 id="procedure">Procedure</h2>
 
 <ol>
-<li><p>Check for <a href="http://camunda-cn.shaochenfeng.com/update/patch-level/#database-patches">available database patch scripts</a> for your database that are within the bounds of your update path.
+<li><p>Check for <a href="https://camunda-cn.shaochenfeng.com/update/patch-level/#database-patches">available database patch scripts</a> for your database that are within the bounds of your update path.
 Locate the scripts at <code>$DISTRIBUTION_PATH/sql/upgrade</code> in the pre-packaged distribution (where <code>$DISTRIBUTION_PATH</code> is the path of an unpacked distribution) or in the <a href="https://app.camunda.com/nexus/service/rest/repository/browse/public/org/camunda/bpm/distro/camunda-sql-scripts/">Camunda Nexus</a>.
 We highly recommend executing these patches before updating. Execute them in ascending order by version number.
 The naming pattern is <code>$DATABASENAME_engine_7.13_patch_?.sql</code>.</p></li>
@@ -8289,7 +8289,7 @@ The naming pattern is <code>$DATABASENAME_engine_7.13_patch_?.sql</code>.</p></l
 
 <h1 id="full-distribution">Full Distribution</h1>
 
-<p>This section is applicable if you installed the <a href="http://camunda-cn.shaochenfeng.com/introduction/downloading-camunda/#full-distribution">Full Distribution</a> with a <strong>shared process engine</strong>.</p>
+<p>This section is applicable if you installed the <a href="https://camunda-cn.shaochenfeng.com/introduction/downloading-camunda/#full-distribution">Full Distribution</a> with a <strong>shared process engine</strong>.</p>
 
 <p>The following steps are required:</p>
 
@@ -8305,10 +8305,10 @@ The naming pattern is <code>$DATABASENAME_engine_7.13_patch_?.sql</code>.</p></l
 <p>Please choose the application server you are working with from the following list:</p>
 
 <ul>
-<li><a href="http://camunda-cn.shaochenfeng.com/update/minor/713-to-714/jboss/">JBoss AS/Wildfly</a></li>
-<li><a href="http://camunda-cn.shaochenfeng.com/update/minor/713-to-714/tomcat/">Apache Tomcat</a></li>
-<li><a href="http://camunda-cn.shaochenfeng.com/update/minor/713-to-714/wls/">Oracle WebLogic</a></li>
-<li><a href="http://camunda-cn.shaochenfeng.com/update/minor/713-to-714/was/">IBM WebSphere</a></li>
+<li><a href="https://camunda-cn.shaochenfeng.com/update/minor/713-to-714/jboss/">JBoss AS/Wildfly</a></li>
+<li><a href="https://camunda-cn.shaochenfeng.com/update/minor/713-to-714/tomcat/">Apache Tomcat</a></li>
+<li><a href="https://camunda-cn.shaochenfeng.com/update/minor/713-to-714/wls/">Oracle WebLogic</a></li>
+<li><a href="https://camunda-cn.shaochenfeng.com/update/minor/713-to-714/was/">IBM WebSphere</a></li>
 </ul>
 
 <h2 id="custom-process-applications">Custom Process Applications</h2>
@@ -8333,7 +8333,7 @@ The naming pattern is <code>$DATABASENAME_engine_7.13_patch_?.sql</code>.</p></l
 <ol>
 <li>Undeploy the current version of the standalone web application</li>
 <li>Update the database to the new schema as described in the <a href="#database-updates">database update</a> section</li>
-<li>Reconfigure the database as described in the <a href="http://camunda-cn.shaochenfeng.com/installation/standalone-webapplication/#database-configuration">installation</a>
+<li>Reconfigure the database as described in the <a href="https://camunda-cn.shaochenfeng.com/installation/standalone-webapplication/#database-configuration">installation</a>
 section</li>
 <li>Deploy the new and configured standalone web application to the server</li>
 </ol>
@@ -8385,7 +8385,7 @@ for this change of behavior.</p>
 
 <h1 id="new-engine-dependency-connect">New Engine Dependency - Connect</h1>
 
-<p>Camunda Connect dependency has been added to the process engine (<code>camunda-engine</code>) artifact, allowing usage of simple <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/connectors/">connectors</a> in the context of the new <a href="http://camunda-cn.shaochenfeng.com/introduction/telemetry/">telemetry</a> feature. And changes the status of the dependency from optional to required. See below the details:</p>
+<p>Camunda Connect dependency has been added to the process engine (<code>camunda-engine</code>) artifact, allowing usage of simple <a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/connectors/">connectors</a> in the context of the new <a href="https://camunda-cn.shaochenfeng.com/introduction/telemetry/">telemetry</a> feature. And changes the status of the dependency from optional to required. See below the details:</p>
 
 <p>&ndash; In a case of <strong>Embedded engine</strong> scenario (includes <strong>Spring Boot Starter</strong> setups), there are two new dependencies added to the <code>camunda-engine</code>:</p>
 
@@ -8413,7 +8413,7 @@ for this change of behavior.</p>
 
 <p>&ndash; In a case of <strong>Shared engine</strong> scenario, you will need to add the connect modules if they are not present yet to the setup. The respective update guides for the application servers contain the necessary steps to do this.</p>
 
-<p>In case you already have a <a href="http://camunda-cn.shaochenfeng.com/reference/connect/#maven-coordinates">Connect</a> dependencies to some of your projects, please consider consolidating the version of them with one that comes as dependency with the engine. That will prevent inconsistencies on the system. Please note that the Connect process engine plugin is still an optional dependency.</p>
+<p>In case you already have a <a href="https://camunda-cn.shaochenfeng.com/reference/connect/#maven-coordinates">Connect</a> dependencies to some of your projects, please consider consolidating the version of them with one that comes as dependency with the engine. That will prevent inconsistencies on the system. Please note that the Connect process engine plugin is still an optional dependency.</p>
 
 <h1 id="changes-to-the-cockpit-config-file">Changes to the Cockpit Config File</h1>
 
@@ -8477,13 +8477,13 @@ for this change of behavior.</p>
 
 <p>As with directives, services you could inject into your AngularJS component are no longer available. Only the services included in documented in the <a href="https://docs.angularjs.org/api">AngularJS documentation</a> are available by default. Services such as <code>camAPI</code> and <code>Uri</code> can no longer be injected. You can still make requests against the REST API using the <a href="https://docs.angularjs.org/api/ng/service/$http">$http service</a> and the API Urls that get passed into the render function.</p>
 
-<p>If you changed the CSRF-cookie name or use other HTTP-clients such as the <code>fetch</code> API, you&rsquo;ll also need to set the headers appropriately. The current CSRF token is always passed into the render function in the second argument as <code>api.CSRFToken</code>. The <code>api.engineApi</code> corresponds to the root of our <a href="https://docs.camunda.org/manual/develop/reference/rest/">REST API</a>. Check out the <a href="http://camunda-cn.shaochenfeng.com/webapps/cockpit/extend/plugins/#attributes-in-detail">documentation</a> for more details on the render function.</p>
+<p>If you changed the CSRF-cookie name or use other HTTP-clients such as the <code>fetch</code> API, you&rsquo;ll also need to set the headers appropriately. The current CSRF token is always passed into the render function in the second argument as <code>api.CSRFToken</code>. The <code>api.engineApi</code> corresponds to the root of our <a href="https://docs.camunda.org/manual/develop/reference/rest/">REST API</a>. Check out the <a href="https://camunda-cn.shaochenfeng.com/webapps/cockpit/extend/plugins/#attributes-in-detail">documentation</a> for more details on the render function.</p>
 
 <h3 id="diagram-interaction">Diagram Interaction</h3>
 
 <!-- If you used `DataDepend` for your diagram Interactions -->
 
-<p>Previously, there was no documented way to create interactions with the diagram. We recommend to use 2 plugins to achieve diagram interaction - one <a href="http://camunda-cn.shaochenfeng.com/webapps/cockpit/extend/plugins/#process-definition-diagram-overlay">diagram overlay</a> to capture click events and highlight tasks and one <a href="http://camunda-cn.shaochenfeng.com/webapps/cockpit/extend/plugins/#process-definition-runtime-tab">tab plugin</a> which displays information related to the selection.</p>
+<p>Previously, there was no documented way to create interactions with the diagram. We recommend to use 2 plugins to achieve diagram interaction - one <a href="https://camunda-cn.shaochenfeng.com/webapps/cockpit/extend/plugins/#process-definition-diagram-overlay">diagram overlay</a> to capture click events and highlight tasks and one <a href="https://camunda-cn.shaochenfeng.com/webapps/cockpit/extend/plugins/#process-definition-runtime-tab">tab plugin</a> which displays information related to the selection.</p>
 
 <p>Diagram plugin points are available for all views with a BPMN viewer. We created an <a href="https://github.com/camunda/camunda-bpm-examples/tree/7.14/cockpit/cockpit-diagram-interactions">example</a> to show you how the interaction can look like.</p>
 
@@ -8491,7 +8491,7 @@ for this change of behavior.</p>
 
 <!-- If you used the `routeProvider` -->
 
-<p>If you used the <code>routeProvider</code> to create new routes, you can simply use the new <a href="http://camunda-cn.shaochenfeng.com/webapps/cockpit/extend/plugins/#route"><code>Route</code> plugin point</a>. The same principles for migrating plugins also apply to migrating routes.</p>
+<p>If you used the <code>routeProvider</code> to create new routes, you can simply use the new <a href="https://camunda-cn.shaochenfeng.com/webapps/cockpit/extend/plugins/#route"><code>Route</code> plugin point</a>. The same principles for migrating plugins also apply to migrating routes.</p>
 
 <h1 id="end-of-spring-3-support">End of Spring 3 Support</h1>
 
@@ -8499,7 +8499,7 @@ for this change of behavior.</p>
 
 <h1 id="new-process-engine-property">New Process Engine Property</h1>
 
-<p>This minor release introduces a new process engine property - <code>camunda.installation.id</code>. In case you already created a property with the same name, please consider renaming it to prevent collisions with the process engine code. So far, the property will be used for the <a href="http://camunda-cn.shaochenfeng.com/introduction/telemetry/">telemetry</a> feature, however, in the future that might change and cause issues with implemented features. To perform the renaming of an existing property, please delete the property first, store your property with a different name and restart the engine. The new <code>camunda.installation.id</code> property will be created during the start of the process engine and stored into the database. Here is an example how the change can be performed:</p>
+<p>This minor release introduces a new process engine property - <code>camunda.installation.id</code>. In case you already created a property with the same name, please consider renaming it to prevent collisions with the process engine code. So far, the property will be used for the <a href="https://camunda-cn.shaochenfeng.com/introduction/telemetry/">telemetry</a> feature, however, in the future that might change and cause issues with implemented features. To perform the renaming of an existing property, please delete the property first, store your property with a different name and restart the engine. The new <code>camunda.installation.id</code> property will be created during the start of the process engine and stored into the database. Here is an example how the change can be performed:</p>
 
 <pre><code class="language-java">managementService.deleteProperty(&quot;camunda.installation.id&quot;);
 managementService.setProperty(customCamundaInstallatioId, customCamundaInstallatioIdValue);
@@ -8510,11 +8510,11 @@ managementService.setProperty(customCamundaInstallatioId, customCamundaInstallat
 
 <h1 id="disable-telemetry-reporter-in-tests">Disable Telemetry Reporter in Tests</h1>
 
-<p>With the new <a href="http://camunda-cn.shaochenfeng.com/introduction/telemetry/">telemetry</a> feature and on a strict opt-in basis, we are looking to collect environment and usage data to further improve the user experience for you. However, for certain scenarios it will be better to completely disable the telemetry functionality. One of those scenarios is testing, if that includes process engine usage. Therefore we highly recommend to disable the telemetry reporter to prevent sending any requests from your tests:</p>
+<p>With the new <a href="https://camunda-cn.shaochenfeng.com/introduction/telemetry/">telemetry</a> feature and on a strict opt-in basis, we are looking to collect environment and usage data to further improve the user experience for you. However, for certain scenarios it will be better to completely disable the telemetry functionality. One of those scenarios is testing, if that includes process engine usage. Therefore we highly recommend to disable the telemetry reporter to prevent sending any requests from your tests:</p>
 
 <ul>
-<li>via XML-based configuration file: <a href="http://camunda-cn.shaochenfeng.com/user-guide/testing/#disabling-telemetry">example</a></li>
-<li>via YAML-based configuration file in Spring Boot: <a href="http://camunda-cn.shaochenfeng.com/user-guide/spring-boot-integration/develop-and-test/#disabling-telemetry">example</a></li>
+<li>via XML-based configuration file: <a href="https://camunda-cn.shaochenfeng.com/user-guide/testing/#disabling-telemetry">example</a></li>
+<li>via YAML-based configuration file in Spring Boot: <a href="https://camunda-cn.shaochenfeng.com/user-guide/spring-boot-integration/develop-and-test/#disabling-telemetry">example</a></li>
 <li>via Java:</li>
 </ul>
 
@@ -8531,7 +8531,7 @@ version numbers, e.g. <code>9.4</code>, <code>9.6</code>. From PostgreSQL 10, a 
 <code>11</code>, <code>12</code>.</p>
 
 <p>As this was only a change to the versioning scheme, the content of the minor releases (e.g. <code>9.4.6</code>,
-<code>9.6.18</code>, <code>10.13</code>, <code>11.2</code>, etc.) didn&rsquo;t change. Therefore, we have updated the <a href="http://camunda-cn.shaochenfeng.com/introduction/supported-environments/#supported-database-products">Camunda Supported Environments</a>,
+<code>9.6.18</code>, <code>10.13</code>, <code>11.2</code>, etc.) didn&rsquo;t change. Therefore, we have updated the <a href="https://camunda-cn.shaochenfeng.com/introduction/supported-environments/#supported-database-products">Camunda Supported Environments</a>,
 to reflect that Camunda supports all the minor version updates of a major PostgreSQL version.</p>
 
 <p>Note that this adjustment doesn&rsquo;t change the supported versions of Amazon Aurora PostgreSQL. This is a database
@@ -8590,9 +8590,9 @@ service built on top of PostgreSQL, and as such, needs to be tested for support 
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="http://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="https://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
-            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2022
+            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2025
           </p>
           <p>
             <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a> The content on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
@@ -8605,7 +8605,7 @@ service built on top of PostgreSQL, and as such, needs to be tested for support 
 
   
 
-  <script type="text/javascript" src="http://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

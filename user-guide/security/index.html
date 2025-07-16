@@ -58,11 +58,11 @@ var _mtac = {};
   <title>安全指南 | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="http://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="https://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="http://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
 </head>
 <body class="">
 
@@ -73,8 +73,8 @@ var _mtac = {};
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="http://camunda-cn.shaochenfeng.com/">
-      <img src="http://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="https://camunda-cn.shaochenfeng.com/">
+      <img src="https://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">中文站</span>
       </a>
@@ -8187,7 +8187,7 @@ var _mtac = {};
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="http://camunda-cn.shaochenfeng.com/">
+    <select id="version-select" data-basepath="/manual" base-url="https://camunda-cn.shaochenfeng.com/">
       
         <option  selected >develop</option>
       
@@ -8284,7 +8284,7 @@ var _mtac = {};
 
 <h3 id="enabling-authentication-for-the-rest-api">Enabling Authentication for the REST API</h3>
 
-<p>For ease of use by developers, the REST API&rsquo;s authentication is disabled by default. When deploying the REST API in production, it is therefore required to enable authentication. Check the corresponding section in the <a href="http://camunda-cn.shaochenfeng.com/reference/rest/overview/authentication/">REST API documentation</a>.</p>
+<p>For ease of use by developers, the REST API&rsquo;s authentication is disabled by default. When deploying the REST API in production, it is therefore required to enable authentication. Check the corresponding section in the <a href="https://camunda-cn.shaochenfeng.com/reference/rest/overview/authentication/">REST API documentation</a>.</p>
 
 <h3 id="authentication-in-the-web-applications">Authentication in the Web Applications</h3>
 
@@ -8294,11 +8294,11 @@ var _mtac = {};
 
 <p>To perform authentication, Camunda can use two sources: a database or LDAP.</p>
 
-<p>When using the the database, usernames and passwords are stored inside the <code>ACT_ID_USER</code> table (see <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/database/database-schema/#identity">documentation on database schema</a>). To protect the passwords stored in the database, Camunda uses two concepts:</p>
+<p>When using the the database, usernames and passwords are stored inside the <code>ACT_ID_USER</code> table (see <a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/database/database-schema/#identity">documentation on database schema</a>). To protect the passwords stored in the database, Camunda uses two concepts:</p>
 
 <ul>
-<li><strong>hashing</strong>: instead of storing the password in plain text, a hash is stored. When authenticating, the same hash is generated from the user&rsquo;s input and compared against the hash in the database. If both hashes are equal the authentication attempt is successful. Camunda allows users to configure and customize the hash function used. Please refer the <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/password-hashing/">documentation section on password hashing</a> for details.</li>
-<li><strong>salted hashes</strong> to protect the database against rainbow table attacks, Camunda uses salted hashes. Similar to hashing itself, this function can be configured and extended to a user&rsquo;s needs. Please refer the <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/password-hashing/">documentation section on password hashing</a> for details.</li>
+<li><strong>hashing</strong>: instead of storing the password in plain text, a hash is stored. When authenticating, the same hash is generated from the user&rsquo;s input and compared against the hash in the database. If both hashes are equal the authentication attempt is successful. Camunda allows users to configure and customize the hash function used. Please refer the <a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/password-hashing/">documentation section on password hashing</a> for details.</li>
+<li><strong>salted hashes</strong> to protect the database against rainbow table attacks, Camunda uses salted hashes. Similar to hashing itself, this function can be configured and extended to a user&rsquo;s needs. Please refer the <a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/password-hashing/">documentation section on password hashing</a> for details.</li>
 </ul>
 
 <h3 id="ldap">LDAP</h3>
@@ -8311,11 +8311,11 @@ var _mtac = {};
 
 <h3 id="do-i-need-to-enable-authorizations">Do I need to enable Authorizations?</h3>
 
-<p>Similar considerations as for authentication apply. For an in-depth discussion, see the documentation section on <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/authorization-service/#when-is-authorization-required">authorizations</a></p>
+<p>Similar considerations as for authentication apply. For an in-depth discussion, see the documentation section on <a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/authorization-service/#when-is-authorization-required">authorizations</a></p>
 
 <h3 id="restricting-data-access-with-authorizations">Restricting Data Access with Authorizations</h3>
 
-<p>Authorizations can be used to restrict a user from accessing a data object (such as a process or a task) and can be used to restrict how the user can interact with such data objects (read-only vs. modifications). Authorizations in Camunda are very powerful and it is recommended to read the corresponding <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/authorization-service/">documentation entry on authorizations</a>.</p>
+<p>Authorizations can be used to restrict a user from accessing a data object (such as a process or a task) and can be used to restrict how the user can interact with such data objects (read-only vs. modifications). Authorizations in Camunda are very powerful and it is recommended to read the corresponding <a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/authorization-service/">documentation entry on authorizations</a>.</p>
 
 <h3 id="prevent-enumerating-user-accounts-by-brute-force-creating-new-users">Prevent enumerating user accounts by brute-force creating new users</h3>
 
@@ -8327,7 +8327,7 @@ var _mtac = {};
 <li>&hellip; use an account &ldquo;self-service&rdquo; approach: Unauthenticated users are allowed to create accounts;
    i.e., you have implemented a custom REST endpoint which can create users without authentication</li>
 <li>&hellip; an authenticated user has <code>CREATE</code> permission on <code>ANY</code> <code>USER</code> resource to create new user accounts
-   and an untrusted person has access to this account (please see the <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/authorization-service/">Authorization Service</a> docs
+   and an untrusted person has access to this account (please see the <a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/authorization-service/">Authorization Service</a> docs
    to learn how permissions are granted to resources)</li>
 </ul>
 
@@ -8348,7 +8348,7 @@ vulnerable to attacks.</p>
 
 <h2 id="deployments">Deployments</h2>
 
-<p><a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/deployments/">Deployments</a> to the process engine can contain resources that are interpreted like code:</p>
+<p><a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/deployments/">Deployments</a> to the process engine can contain resources that are interpreted like code:</p>
 
 <ul>
 <li>BPMN, DMN, CMMN models that the process engine executes on the Camunda server</li>
@@ -8367,16 +8367,16 @@ vulnerable to attacks.</p>
 <li>System administrators ensure that only trusted users have network access to the Camunda installation</li>
 </ul>
 
-<p>See also the user guide section <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/securing-custom-code/">Custom Code &amp; Security</a> for further information.</p>
+<p>See also the user guide section <a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/securing-custom-code/">Custom Code &amp; Security</a> for further information.</p>
 
 <h2 id="throttle-login-attempts">Throttle login attempts</h2>
 
-<p>The engine gives option to throttle login attempts. The mechanism behind this is enabled by default. You can read more about it under <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/identity-service/#throttle-login-attempts">Identity Service</a> in User Guide.</p>
+<p>The engine gives option to throttle login attempts. The mechanism behind this is enabled by default. You can read more about it under <a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/identity-service/#throttle-login-attempts">Identity Service</a> in User Guide.</p>
 
 <h2 id="custom-whitelist-for-user-group-and-tenant-ids">Custom Whitelist for User, Group and Tenant IDs</h2>
 
 <p>To determine if the provided ID is acceptable or not, IDs can be matched against a Whitelist Pattern.
-You can read more about it under <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/identity-service/#custom-whitelist-for-user-group-and-tenant-ids">Identity Service</a> in User Guide.</p>
+You can read more about it under <a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/identity-service/#custom-whitelist-for-user-group-and-tenant-ids">Identity Service</a> in User Guide.</p>
 
 <h2 id="password-policy">Password Policy</h2>
 
@@ -8384,26 +8384,26 @@ You can read more about it under <a href="http://camunda-cn.shaochenfeng.com/use
 it is possible to configure a password policy to ensure that all user passwords meet a certain security
 standard.</p>
 
-<p>Since version 7.11, a <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/password-policy/#built-in-password-policy">built-in password policy</a>
+<p>Since version 7.11, a <a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/password-policy/#built-in-password-policy">built-in password policy</a>
 can be enabled that requires passwords to follow specific rules. However, you can achieve a much higher
 level of security by implementing a more sophisticated custom password policy (e.g., with the help of
 <a href="https://blog.korelogic.com/blog/2014/04/04/pathwell_topologies">Password Topology Blacklisting</a>,
 also see the <a href="https://github.com/OWASP/CheatSheetSeries/blob/7d94e9a29174b8fd76235ca60f47245d1f34df1e/cheatsheets/Authentication_Cheat_Sheet.md#password-complexity">OWASP guide</a>
 on password complexity).</p>
 
-<p>You can find more information on how to enable the base password policy and how to implement a custom password policy in our <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/password-policy/">User Guide</a>.</p>
+<p>You can find more information on how to enable the base password policy and how to implement a custom password policy in our <a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/password-policy/">User Guide</a>.</p>
 
 <h2 id="forms">Forms</h2>
 
 <p>Camunda offers different types of forms which are primarily used in Tasklist. In the input inside of this forms you can call and execute scripts which allows you to achieve easily your business logic. Please validate this input each time to prevent malicious behaviour.</p>
 
-<p>If you don&rsquo;t want to display form previews and execute the embedded scripts in Cockpit, you can disable it in the <a href="http://camunda-cn.shaochenfeng.com/webapps/cockpit/extend/configuration/#preview-deployed-embedded-forms">configuration</a>.</p>
+<p>If you don&rsquo;t want to display form previews and execute the embedded scripts in Cockpit, you can disable it in the <a href="https://camunda-cn.shaochenfeng.com/webapps/cockpit/extend/configuration/#preview-deployed-embedded-forms">configuration</a>.</p>
 
 <h2 id="queries">Queries</h2>
 
 <h3 id="expressions-in-queries">Expressions in Queries</h3>
 
-<p>Consider disabling execution of expressions in queries. See also: <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/securing-custom-code/">Custom Code &amp; Security
+<p>Consider disabling execution of expressions in queries. See also: <a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/securing-custom-code/">Custom Code &amp; Security
 </a></p>
 
 <h3 id="native-queries">Native queries</h3>
@@ -8418,7 +8418,7 @@ results or querying  for a vast number of results can lead to a high memory cons
 out of memory exceptions.</p>
 
 <p>You can mitigate the risk of an attack by defining a limit for the maximum number of results
-(<code>queryMaxResultsLimit</code>) in the <a href="http://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#queryMaxResultsLimit">process engine configuration</a>.</p>
+(<code>queryMaxResultsLimit</code>) in the <a href="https://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#queryMaxResultsLimit">process engine configuration</a>.</p>
 
 
 <div class="note bg-info docs-info">
@@ -8428,15 +8428,15 @@ out of memory exceptions.</p>
 
 
 <p>Please see the User Guide to learn more about the
-<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-api/#query-maximum-results-limit">Query Maximum Results Limit</a>.</p>
+<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-api/#query-maximum-results-limit">Query Maximum Results Limit</a>.</p>
 
 <h2 id="csrf-prevention-in-the-webapps">CSRF Prevention in the Webapps</h2>
 
 <p>A CSRF filter is enabled by default, validating each modifying request performed through the webapps.
-Please also see the detailed overview on how to configure <a href="http://camunda-cn.shaochenfeng.com/webapps/shared-options/csrf-prevention/">CSRF Prevention</a>.</p>
+Please also see the detailed overview on how to configure <a href="https://camunda-cn.shaochenfeng.com/webapps/shared-options/csrf-prevention/">CSRF Prevention</a>.</p>
 
 <p>The CSRF Prevention makes use of a cookie. By default, some security-related configurations are present for this cookie.
-To ensure full security, please consult the documentation about <a href="http://camunda-cn.shaochenfeng.com/webapps/shared-options/cookie-security/">Cookie Security</a> to learn more about it.</p>
+To ensure full security, please consult the documentation about <a href="https://camunda-cn.shaochenfeng.com/webapps/shared-options/cookie-security/">Cookie Security</a> to learn more about it.</p>
 
 <h2 id="xml-security">XML Security</h2>
 
@@ -8447,7 +8447,7 @@ To ensure full security, please consult the documentation about <a href="http://
 <li>Feature Secure Processing (FSP) of XML files according to <a href="https://docs.oracle.com/javase/8/docs/api/javax/xml/XMLConstants.html#FEATURE_SECURE_PROCESSING">Oracle</a> which introduces <a href="https://docs.oracle.com/javase/tutorial/jaxp/limits/limits.html">limits</a> for several XML properties</li>
 </ul>
 
-<p>If the limitations on XML files introduced by XXE prevention need to be removed, XXE processing can be enabled via <code>enableXxeProcessing</code> in the <a href="http://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#configuration-properties">process engine configuration</a>.</p>
+<p>If the limitations on XML files introduced by XXE prevention need to be removed, XXE processing can be enabled via <code>enableXxeProcessing</code> in the <a href="https://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#configuration-properties">process engine configuration</a>.</p>
 
 <p>FSP itself can not be disabled in the engine. All properties that are influenced by this can however be configured in the environment via system properties and the <code>jaxp.properties</code> file. See the <a href="https://docs.oracle.com/javase/tutorial/jaxp/limits/using.html">Oracle documentation</a> on how to determine the right limits and how to set them.</p>
 
@@ -8467,25 +8467,25 @@ To ensure full security, please consult the documentation about <a href="http://
 <p>These headers enable browser-side security mechanisms which help to improve the protection against several attacking scenarios.</p>
 
 <p>According to your project requirements, some of these headers can be configured more strict or lax. Please see the
-documentation about the <a href="http://camunda-cn.shaochenfeng.com/webapps/shared-options/header-security/">HTTP Header Security</a> to learn more
+documentation about the <a href="https://camunda-cn.shaochenfeng.com/webapps/shared-options/header-security/">HTTP Header Security</a> to learn more
 about the several headers, the defaults and how to configure the HTTP headers according to your needs.</p>
 
 <h2 id="variable-values-from-untrusted-sources">Variable Values from Untrusted Sources</h2>
 
 <p>Process variables can be submitted as Java objects using the JDK built-in <code>application/x-java-serialized-object</code> data format, JSON or XML along with a Java class name via the Camunda REST API and web applications.
-On server side, they can then be deserialized into Java objects, so that Java code can work with them in a native way. See <a href="http://camunda-cn.shaochenfeng.com/user-guide/data-formats/configuring-spin-integration/">Camunda Spin</a> for details and this <a href="http://camunda-cn.shaochenfeng.com/reference/rest/execution/local-variables/put-local-variable/#example-2">REST API endpoint</a> for an example.</p>
+On server side, they can then be deserialized into Java objects, so that Java code can work with them in a native way. See <a href="https://camunda-cn.shaochenfeng.com/user-guide/data-formats/configuring-spin-integration/">Camunda Spin</a> for details and this <a href="https://camunda-cn.shaochenfeng.com/reference/rest/execution/local-variables/put-local-variable/#example-2">REST API endpoint</a> for an example.</p>
 
 <p>If an attacker can access these endpoints, they can exploit so-called <em>serialization gadgets</em>, i.e. classes that run vulnerable code during deserialization resulting in remote code execution in the general case. For example, consider a class constructor that makes a REST request based on a field value. An attacker could submit a forged variable value so that during deserialization, when the constructor is called, the application server would make an arbitrary REST request to a destination of the attacker&rsquo;s choice. For details, see <a href="https://www.owasp.org/index.php/Deserialization_of_untrusted_data">OWASP&rsquo;s description of Deserialization of untrusted data</a>.</p>
 
 <h3 id="java-objects-using-the-jdk-built-in-application-x-java-serialized-object-data-format">Java objects using the JDK built-in <code>application/x-java-serialized-object</code> data format</h3>
 
 <p>Starting with version 7.9, by default, it is not possible to set variables of type <code>Object</code> <strong>AND</strong> the data format <code>application/x-java-serialized-object</code>.
-The behavior can be restored with the process engine configuration flag <a href="http://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#javaSerializationFormatEnabled"><code>javaSerializationFormatEnabled</code></a>.
+The behavior can be restored with the process engine configuration flag <a href="https://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#javaSerializationFormatEnabled"><code>javaSerializationFormatEnabled</code></a>.
 However, please bear in mind that enabling the java serialization format might make the process engine vulnerable against the aforementioned attacking scenario.</p>
 
 <h3 id="json-xml-serialized-objects-using-spin">JSON/XML serialized objects using Spin</h3>
 
-<p>Therefore, we recommend enabling the whitelisting of allowed Java classes by enabling the property <a href="http://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#deserializationTypeValidationEnabled">deserializationTypeValidationEnabled</a> in the process engine configuration. With this, the process engine validates the class names of submitted variables against a whitelist of allowed Java class and package names. Any non-whitelisted content is rejected. The default values are safe, but may be too restrictive for your use case. You can use the engine properties <code>deserializationAllowedPackages</code> and <code>deserializationAllowedClasses</code> to extend the default whitelist with package and class names of Java types that you consider save to deserialize in your environment.</p>
+<p>Therefore, we recommend enabling the whitelisting of allowed Java classes by enabling the property <a href="https://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#deserializationTypeValidationEnabled">deserializationTypeValidationEnabled</a> in the process engine configuration. With this, the process engine validates the class names of submitted variables against a whitelist of allowed Java class and package names. Any non-whitelisted content is rejected. The default values are safe, but may be too restrictive for your use case. You can use the engine properties <code>deserializationAllowedPackages</code> and <code>deserializationAllowedClasses</code> to extend the default whitelist with package and class names of Java types that you consider save to deserialize in your environment.</p>
 
 <p>In case this default behavior needs further adjustment, a custom validator can be implemented and registered in the engine with the engine property <code>deserializationTypeValidator</code>.
 The provided object needs to be a subtype of <code>org.camunda.bpm.engine.runtime.DeserializationTypeValidator</code> and offer an implementation of the <code>#validate</code> method.
@@ -8506,7 +8506,7 @@ An implementation of this interface registered as validator will be provided wit
 <h2 id="database">Database</h2>
 
 <p>Camunda stores its data into a relational database. In order to protect access to this data, it must be configured correctly.
-The documentation section on <a href="http://camunda-cn.shaochenfeng.com/introduction/supported-environments/">supported environments</a> provides a list of supported databases.</p>
+The documentation section on <a href="https://camunda-cn.shaochenfeng.com/introduction/supported-environments/">supported environments</a> provides a list of supported databases.</p>
 
 <h3 id="data-encryption">Data encryption</h3>
 
@@ -8522,7 +8522,7 @@ The documentation section on <a href="http://camunda-cn.shaochenfeng.com/introdu
 
 <h2 id="web-server-applicable-when-using-rest-api-or-web-applications">Web Server (applicable when using REST API or Web Applications)</h2>
 
-<p>When deploying the REST API or the Camunda web applications, Camunda is integrated with a third party web server. The documentation section on <a href="http://camunda-cn.shaochenfeng.com/introduction/supported-environments/">supported environments</a> provides a list of supported web servers / application servers.
+<p>When deploying the REST API or the Camunda web applications, Camunda is integrated with a third party web server. The documentation section on <a href="https://camunda-cn.shaochenfeng.com/introduction/supported-environments/">supported environments</a> provides a list of supported web servers / application servers.
 It is strongly recommended to consider applying the following configurations.</p>
 
 <h3 id="enabling-ssl-https">Enabling SSL / HTTPS</h3>
@@ -8543,7 +8543,7 @@ It is strongly recommended to consider applying the following configurations.</p
 
 <h3 id="securing-cookies-web-applications">Securing Cookies (Web Applications)</h3>
 
-<p>The container provides the session cookie. Please consult the documentation about <a href="http://camunda-cn.shaochenfeng.com/webapps/shared-options/cookie-security/">Cookie Security</a> to learn what configurations are necessary to ensure full security for the session cookie.</p>
+<p>The container provides the session cookie. Please consult the documentation about <a href="https://camunda-cn.shaochenfeng.com/webapps/shared-options/cookie-security/">Cookie Security</a> to learn what configurations are necessary to ensure full security for the session cookie.</p>
 
 <h3 id="error-handling">Error handling</h3>
 
@@ -8708,9 +8708,9 @@ technical details are disclosed when an error occurs on the application server l
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="http://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="https://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
-            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2022
+            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2025
           </p>
           <p>
             <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a> The content on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
@@ -8723,7 +8723,7 @@ technical details are disclosed when an error occurs on the application server l
 
   
 
-  <script type="text/javascript" src="http://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

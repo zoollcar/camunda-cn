@@ -58,11 +58,11 @@ var _mtac = {};
   <title>Install the Standalone Webapplication (.war) | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="http://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="https://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="http://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
 </head>
 <body class="">
 
@@ -73,8 +73,8 @@ var _mtac = {};
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="http://camunda-cn.shaochenfeng.com/">
-      <img src="http://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="https://camunda-cn.shaochenfeng.com/">
+      <img src="https://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">中文站</span>
       </a>
@@ -8187,7 +8187,7 @@ var _mtac = {};
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="http://camunda-cn.shaochenfeng.com/">
+    <select id="version-select" data-basepath="/manual" base-url="https://camunda-cn.shaochenfeng.com/">
       
         <option  selected >develop</option>
       
@@ -8237,8 +8237,8 @@ var _mtac = {};
       
 
 <p>This document will guide you through the installation and configuration of the Camunda standalone web application.
-The Camunda web application combines <a href="http://camunda-cn.shaochenfeng.com/webapps/cockpit/">Cockpit</a> and <a href="http://camunda-cn.shaochenfeng.com/webapps/tasklist/">Tasklist</a>. The web application is self-contained and includes
-an <a href="http://camunda-cn.shaochenfeng.com/introduction/architecture/#embedded-process-engine">embedded process engine</a>, which is configured inside the application. The process engine is configured using the
+The Camunda web application combines <a href="https://camunda-cn.shaochenfeng.com/webapps/cockpit/">Cockpit</a> and <a href="https://camunda-cn.shaochenfeng.com/webapps/tasklist/">Tasklist</a>. The web application is self-contained and includes
+an <a href="https://camunda-cn.shaochenfeng.com/introduction/architecture/#embedded-process-engine">embedded process engine</a>, which is configured inside the application. The process engine is configured using the
 Spring Framework and will automatically start when the application is deployed. The process engine must be configured
 to connect to a database (see the <a href="#database-configuration">database configuration</a> section). By default the process engine will use a built-in
 identity service, which can be replaced with LDAP (see the <a href="#ldap-configuration">LDAP configuration</a> section).</p>
@@ -8246,7 +8246,7 @@ identity service, which can be replaced with LDAP (see the <a href="#ldap-config
 
 <div class="note ">
   <h3>Embedded vs. Shared Process Engine</h3>
-  <p>Note: Since the Camunda standalone web application uses an <a href="http://camunda-cn.shaochenfeng.com/introduction/architecture/#embedded-process-engine">embedded process engine</a> it must not be installed to an application server from a Camunda distribution download. Application servers contained in Camunda distributions already provide a <a href="http://camunda-cn.shaochenfeng.com/introduction/architecture/#shared-container-managed-process-engine">shared process engine</a></p>
+  <p>Note: Since the Camunda standalone web application uses an <a href="https://camunda-cn.shaochenfeng.com/introduction/architecture/#embedded-process-engine">embedded process engine</a> it must not be installed to an application server from a Camunda distribution download. Application servers contained in Camunda distributions already provide a <a href="https://camunda-cn.shaochenfeng.com/introduction/architecture/#shared-container-managed-process-engine">shared process engine</a></p>
 </div>
 
 
@@ -8352,12 +8352,12 @@ order to activate it, simply uncomment the lines shown below:</p>
 &lt;/bean&gt;
 </code></pre>
 
-<p>To configure the LDAP service please adjust the values of the bean named <code>ldapIdentityProviderPlugin</code> as described in the <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/identity-service/#configuration-properties-of-the-ldap-plugin">user guide</a>.
-Do not forget to configure the <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/authorization-service/#the-administrator-authorization-plugin">Administrator Authorization Plugin</a> as well.</p>
+<p>To configure the LDAP service please adjust the values of the bean named <code>ldapIdentityProviderPlugin</code> as described in the <a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/identity-service/#configuration-properties-of-the-ldap-plugin">user guide</a>.
+Do not forget to configure the <a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/authorization-service/#the-administrator-authorization-plugin">Administrator Authorization Plugin</a> as well.</p>
 
 <h1 id="hal-resource-caching">HAL Resource Caching</h1>
 
-<p>If you use LDAP as Indentity Provider, you should consider <a href="http://camunda-cn.shaochenfeng.com/reference/rest/overview/hal/#caching-of-hal-relations">activating caching</a> of Users and Groups in the Camunda webapplication. In order to activate this, add the following configuration to the <code>web.xml</code> file of Camunda webapplication:</p>
+<p>If you use LDAP as Indentity Provider, you should consider <a href="https://camunda-cn.shaochenfeng.com/reference/rest/overview/hal/#caching-of-hal-relations">activating caching</a> of Users and Groups in the Camunda webapplication. In order to activate this, add the following configuration to the <code>web.xml</code> file of Camunda webapplication:</p>
 
 <pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;web-app version=&quot;2.5&quot; xmlns=&quot;http://java.sun.com/xml/ns/javaee&quot;
@@ -8426,9 +8426,9 @@ Do not forget to configure the <a href="http://camunda-cn.shaochenfeng.com/user-
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="http://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="https://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
-            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2022
+            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2025
           </p>
           <p>
             <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a> The content on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
@@ -8441,7 +8441,7 @@ Do not forget to configure the <a href="http://camunda-cn.shaochenfeng.com/user-
 
   
 
-  <script type="text/javascript" src="http://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

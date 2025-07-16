@@ -58,11 +58,11 @@ var _mtac = {};
   <title>Install the Database Schema | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="http://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="https://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="http://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
 </head>
 <body class="">
 
@@ -73,8 +73,8 @@ var _mtac = {};
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="http://camunda-cn.shaochenfeng.com/">
-      <img src="http://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="https://camunda-cn.shaochenfeng.com/">
+      <img src="https://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">中文站</span>
       </a>
@@ -8187,7 +8187,7 @@ var _mtac = {};
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="http://camunda-cn.shaochenfeng.com/">
+    <select id="version-select" data-basepath="/manual" base-url="https://camunda-cn.shaochenfeng.com/">
       
         <option  selected >develop</option>
       
@@ -8236,14 +8236,14 @@ var _mtac = {};
     <div class="col-xs-12 content-text">
       
 
-<p>This document will guide you through the installation and update of the Camunda Platform <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/database/database-schema/">database schema</a> used by the process engine.
-Regardless of the <a href="http://camunda-cn.shaochenfeng.com/introduction/architecture/">architecture of your application setup</a>, the process engine always requires this database schema.
+<p>This document will guide you through the installation and update of the Camunda Platform <a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/database/database-schema/">database schema</a> used by the process engine.
+Regardless of the <a href="https://camunda-cn.shaochenfeng.com/introduction/architecture/">architecture of your application setup</a>, the process engine always requires this database schema.
 In a production environment, we recommend setting up this schema yourself and reference the prepared database instance in your application configuration.
-Consult the installation guide related to your setup to configure the database for a <a href="http://camunda-cn.shaochenfeng.com/installation/camunda-bpm-run/">remote engine</a>, <a href="http://camunda-cn.shaochenfeng.com/installation/full/">shared engine</a>, or <a href="http://camunda-cn.shaochenfeng.com/installation/spring-boot/">embedded engine</a> accordingly.</p>
+Consult the installation guide related to your setup to configure the database for a <a href="https://camunda-cn.shaochenfeng.com/installation/camunda-bpm-run/">remote engine</a>, <a href="https://camunda-cn.shaochenfeng.com/installation/full/">shared engine</a>, or <a href="https://camunda-cn.shaochenfeng.com/installation/spring-boot/">embedded engine</a> accordingly.</p>
 
 <p>This guide will not detail how to set up an instance of your target database or how to create a schema object on it.
 Consult the documentation of your target database on how to do that.
-Camunda Platform supports a variety of databases that are documented in the <a href="http://camunda-cn.shaochenfeng.com/introduction/supported-environments/#databases">supported environments</a>.</p>
+Camunda Platform supports a variety of databases that are documented in the <a href="https://camunda-cn.shaochenfeng.com/introduction/supported-environments/#databases">supported environments</a>.</p>
 
 <p>Camunda Platform supports the following ways of installing the database schema:</p>
 
@@ -8257,7 +8257,7 @@ Camunda Platform supports a variety of databases that are documented in the <a h
   <h3>Isolation level</h3>
   <p>READ COMMITED is the required isolation level for database systems to run Camunda Platform with.
 You may have to change the default setting on your database when installing Camunda.
-For more information see the documentation on <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/database/database-configuration/#isolation-level-configuration">isolation levels</a>.</p>
+For more information see the documentation on <a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/database/database-configuration/#isolation-level-configuration">isolation levels</a>.</p>
 </div>
 
 
@@ -8274,7 +8274,7 @@ This changelog defines which SQL statements to execute on a database.
 You can find the changelog and its referenced resources on our <a href="https://app.camunda.com/nexus/service/rest/repository/browse/camunda-bpm/org/camunda/bpm/distro/camunda-sql-scripts/">Nexus</a>.
 Select the respective version (<code>$PLATFORM_VERSION</code>) and download the resources as a <code>zip</code> or <code>tar.gz</code> file.
 Open the <code>camunda-sql-scripts-$PLATFORM_VERSION/liquibase</code> folder to find the changelog.
-In case you are using a <a href="http://camunda-cn.shaochenfeng.com/introduction/downloading-camunda/#full-distribution">pre-packaged distribution</a>, the Liquibase resources already reside in the <code>sql/liquibase</code> folder of the distribution.</p>
+In case you are using a <a href="https://camunda-cn.shaochenfeng.com/introduction/downloading-camunda/#full-distribution">pre-packaged distribution</a>, the Liquibase resources already reside in the <code>sql/liquibase</code> folder of the distribution.</p>
 
 <p>The <code>liquibase</code> folder contains the following resources:</p>
 
@@ -8298,7 +8298,7 @@ The <code>DATABASECHANGELOG</code> table keeps track of all applied changes. The
 
 <p>As you create the tables externally via Liquibase, you have to configure the engine to <strong>not</strong> create tables at startup as well.
 Set the <code>databaseSchemaUpdate</code> property to <code>false</code> (or, in case you are using Oracle, to <code>noop</code>).
-Consult the <a href="http://camunda-cn.shaochenfeng.com/installation/full/">manual installation guide</a> of your distribution for further information on how to achieve that.</p>
+Consult the <a href="https://camunda-cn.shaochenfeng.com/installation/full/">manual installation guide</a> of your distribution for further information on how to achieve that.</p>
 
 
 <div class="note bg-info docs-info">
@@ -8316,7 +8316,7 @@ Consult the <a href="http://camunda-cn.shaochenfeng.com/installation/full/">manu
 Those scripts create all required tables and default indices. You can find the provided SQL scripts on our <a href="https://app.camunda.com/nexus/service/rest/repository/browse/camunda-bpm/org/camunda/bpm/distro/camunda-sql-scripts/">Nexus</a>.
 Select the respective version (<code>$PLATFORM_VERSION</code>) and download the scripts as a <code>zip</code> or <code>tar.gz</code> file.
 Open the <code>camunda-sql-scripts-$PLATFORM_VERSION/create</code> folder to find all available scripts.
-In case you are using a <a href="http://camunda-cn.shaochenfeng.com/introduction/downloading-camunda/#full-distribution">pre-packaged distribution</a>, the SQL scripts already reside in the <code>sql/create</code> folder of the distribution.</p>
+In case you are using a <a href="https://camunda-cn.shaochenfeng.com/introduction/downloading-camunda/#full-distribution">pre-packaged distribution</a>, the SQL scripts already reside in the <code>sql/create</code> folder of the distribution.</p>
 
 <p>The <code>create</code> folder contains the following SQL scripts:</p>
 
@@ -8330,7 +8330,7 @@ Select the appropriate scripts for your database and run them with your database
 
 <p>As you create the tables manually, you have to configure the engine to <strong>not</strong> create tables at startup as well.
 Set the <code>databaseSchemaUpdate</code> property to <code>false</code> (or, in case you are using Oracle, to <code>noop</code>).
-Consult the <a href="http://camunda-cn.shaochenfeng.com/installation/full/">manual installation guide</a> of your distribution for further information on how to achieve that.</p>
+Consult the <a href="https://camunda-cn.shaochenfeng.com/installation/full/">manual installation guide</a> of your distribution for further information on how to achieve that.</p>
 
 
 <div class="note bg-info docs-info">
@@ -8362,7 +8362,7 @@ Based on that changelog and the tracking tables, Liquibase determines which chan
 <ol>
 <li>Select the respective version you want to update to (<code>$Y</code>) on our <a href="https://app.camunda.com/nexus/service/rest/repository/browse/camunda-bpm/org/camunda/bpm/distro/camunda-sql-scripts/">Nexus</a> and download the resources as a <code>zip</code> or <code>tar.gz</code> file.
 Open the <code>camunda-sql-scripts-$Y/liquibase</code> folder to find the changelog file.
-In case you are using a <a href="http://camunda-cn.shaochenfeng.com/introduction/downloading-camunda/#full-distribution">pre-packaged distribution</a>, the Liquibase resources already reside in the <code>sql/liquibase</code> folder of the distribution with version <code>$Y</code>.</li>
+In case you are using a <a href="https://camunda-cn.shaochenfeng.com/introduction/downloading-camunda/#full-distribution">pre-packaged distribution</a>, the Liquibase resources already reside in the <code>sql/liquibase</code> folder of the distribution with version <code>$Y</code>.</li>
 <li>Run Liquibase&rsquo;s <a href="https://docs.liquibase.com/commands/community/update.html">update command</a> referencing the new <code>camunda-changelog.xml</code> of version <code>$Y</code>.
 Liquibase takes care of determining the necessary changes and applying them to your database according to the new changelog.
 You can pass on the connection details to your database instance via parameters as described in the Liquibase documentation or <a href="https://docs.liquibase.com/workflows/liquibase-community/creating-config-properties.html">create a properties file</a>.</li>
@@ -8416,7 +8416,7 @@ Follow the outlined procedure to perform this update:</p>
 You can find the scripts on our <a href="https://app.camunda.com/nexus/service/rest/repository/browse/camunda-bpm/org/camunda/bpm/distro/camunda-sql-scripts/">Nexus</a>.
 Select the respective version you want to update to (<code>$Y</code>) and download the scripts as a <code>zip</code> or <code>tar.gz</code> file.
 Open the <code>camunda-sql-scripts-$Y/upgrade</code> folder to find all available scripts.
-In case you are using a <a href="http://camunda-cn.shaochenfeng.com/introduction/downloading-camunda/#full-distribution">pre-packaged distribution</a>, the SQL scripts already reside in the <code>sql/upgrade</code> folder of the distribution with version <code>$Y</code>.
+In case you are using a <a href="https://camunda-cn.shaochenfeng.com/introduction/downloading-camunda/#full-distribution">pre-packaged distribution</a>, the SQL scripts already reside in the <code>sql/upgrade</code> folder of the distribution with version <code>$Y</code>.
 We highly recommend executing these patches before updating.
 Execute those related to your database type (<code>$DATABASENAME</code>) in ascending order by version number.
 The naming pattern is <code>$DATABASENAME_engine_$X_patch_*.sql</code>.</p></li>
@@ -8438,7 +8438,7 @@ The scripts update the database from one minor version to the next and change th
 
 <h2 id="patch-level-update">Patch level update</h2>
 
-<p>This section explains how to perform a <a href="http://camunda-cn.shaochenfeng.com/update/patch-level/">patch-level update</a> for your database schema. The <em>patch level</em> is the version number &ldquo;after the second dot&rdquo;. For example, update from <code>7.14.2</code> to <code>7.14.3</code>.</p>
+<p>This section explains how to perform a <a href="https://camunda-cn.shaochenfeng.com/update/patch-level/">patch-level update</a> for your database schema. The <em>patch level</em> is the version number &ldquo;after the second dot&rdquo;. For example, update from <code>7.14.2</code> to <code>7.14.3</code>.</p>
 
 <div class="note enterprise-feature">
   <h3>企业版特征</h3>
@@ -8893,7 +8893,7 @@ Therefore, the procedure for patch-level updates is equivalent to that for <a hr
 <p>You can find the necessary scripts on our <a href="https://app.camunda.com/nexus/service/rest/repository/browse/camunda-bpm/org/camunda/bpm/distro/camunda-sql-scripts/">Nexus</a>.
 Select the respective patch version you want to update to (<code>$Y</code>) and download the scripts as a <code>zip</code> or <code>tar.gz</code> file.
 Open the <code>camunda-sql-scripts-$Y/upgrade</code> folder to find all available patch scripts.
-In case you are using a <a href="http://camunda-cn.shaochenfeng.com/introduction/downloading-camunda/#full-distribution">pre-packaged distribution</a>, the SQL scripts reside in the <code>sql/upgrade</code> folder of the distribution you want to update to.</p>
+In case you are using a <a href="https://camunda-cn.shaochenfeng.com/introduction/downloading-camunda/#full-distribution">pre-packaged distribution</a>, the SQL scripts reside in the <code>sql/upgrade</code> folder of the distribution you want to update to.</p>
 
 <p>The patch scripts are named <code>$DATABASENAME_engine_$MINOR_patch_$A_to_$B</code>, with <code>$A</code> being the patch level version to update from, <code>$B</code> the patch level to update to, and <code>$MINOR</code> the minor version they are on, e.g., <code>7.16</code>.
 If you do choose to apply a database patch, then you must apply all patch scripts that are within the bounds of your update path. This means if your current patch version is <code>X.X.1</code> and you update to <code>X.X.5</code> you have to execute all patch scripts first where <code>$A</code> &ge; <code>X.X.1</code> and <code>$B</code> &le; <code>X.X.5</code>.</p>
@@ -8942,9 +8942,9 @@ If you do choose to apply a database patch, then you must apply all patch script
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="http://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="https://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
-            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2022
+            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2025
           </p>
           <p>
             <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a> The content on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
@@ -8957,7 +8957,7 @@ If you do choose to apply a database patch, then you must apply all patch script
 
   
 
-  <script type="text/javascript" src="http://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

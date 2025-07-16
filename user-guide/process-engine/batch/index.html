@@ -58,11 +58,11 @@ var _mtac = {};
   <title>批处理 | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="http://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="https://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="http://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
 </head>
 <body class="">
 
@@ -73,8 +73,8 @@ var _mtac = {};
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="http://camunda-cn.shaochenfeng.com/">
-      <img src="http://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="https://camunda-cn.shaochenfeng.com/">
+      <img src="https://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">中文站</span>
       </a>
@@ -8187,7 +8187,7 @@ var _mtac = {};
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="http://camunda-cn.shaochenfeng.com/">
+    <select id="version-select" data-basepath="/manual" base-url="https://camunda-cn.shaochenfeng.com/">
       
         <option  selected >develop</option>
       
@@ -8238,7 +8238,7 @@ var _mtac = {};
 
 <p>批处理的概念是将当前执行的工作卸载到后台的过程。这允许执行大量的异步流程引擎命令而不会阻塞实例。它还对单独命令调用进行了分离。</p>
 
-<p>例如，<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-instance-migration/">流程实例迁移</a> 命令可以<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-instance-migration/#asynchronous-batch-migration-execution">使用批处理执行</a>。 这样可以异步迁移流程实例。 在同步流程实例迁移中，所有迁移都在单个事务中执行。 首先，这需要成功提交事务。 对于大量流程实例，事务可能变得太大，甚至无法提交到数据库。 随着使用批处理迁移，这情况发生了变化。 批处理以较小的块执行迁移，每个块使用单个事务。</p>
+<p>例如，<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-instance-migration/">流程实例迁移</a> 命令可以<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-instance-migration/#asynchronous-batch-migration-execution">使用批处理执行</a>。 这样可以异步迁移流程实例。 在同步流程实例迁移中，所有迁移都在单个事务中执行。 首先，这需要成功提交事务。 对于大量流程实例，事务可能变得太大，甚至无法提交到数据库。 随着使用批处理迁移，这情况发生了变化。 批处理以较小的块执行迁移，每个块使用单个事务。</p>
 
 <p>优点：</p>
 
@@ -8258,7 +8258,7 @@ var _mtac = {};
 
 <p>从技术上讲，批处理表示在流程引擎的上下文中执行命令的一组Job。</p>
 
-<p>批处理利用流程引擎的<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/">Job执行器</a>来执行批处理Job。单个批处理包含三种Job类型：</p>
+<p>批处理利用流程引擎的<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/">Job执行器</a>来执行批处理Job。单个批处理包含三种Job类型：</p>
 
 <ul>
 <li>种子Job（Seed job）：创建所有批处理Job的Job</li>
@@ -8277,18 +8277,18 @@ var _mtac = {};
 <p>当前支持的批处理类型：</p>
 
 <ul>
-<li><a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-instance-migration/#asynchronous-batch-migration-execution">流程实例迁移</a></li>
-<li><a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/batch-operations/#cancellation-of-running-process-instances">取消运行的流程实例</a></li>
-<li><a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/batch-operations/#deletion-of-historic-process-instances">删除历史流程实例</a></li>
-<li><a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/batch-operations/#update-suspend-state-of-process-instances">修改流程实例暂停状态</a></li>
-<li><a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/batch-operations/#setting-retries-of-jobs-associated-with-process-instances">设置与流程实例关联的Job的重试</a></li>
-<li><a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/batch-operations/#set-variables-to-process-instances">为流程实例设置变量</a></li>
-<li><a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-instance-modification/#modification-of-multiple-process-instances">流程实例修改</a></li>
-<li><a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-instance-restart/#asynchronous-batch-execution">流程实例重启</a></li>
-<li><a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/batch-operations/#setting-retries-of-external-tasks">设置外部任务的重试</a></li>
-<li><a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/batch-operations/#set-a-removal-time">为历史流程实例设置删除时间</a></li>
-<li><a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/batch-operations/#set-a-removal-time">为历史决策实例设置删除时间</a></li>
-<li><a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/batch-operations/#set-a-removal-time">为历史批处理设置删除时间</a></li>
+<li><a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-instance-migration/#asynchronous-batch-migration-execution">流程实例迁移</a></li>
+<li><a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/batch-operations/#cancellation-of-running-process-instances">取消运行的流程实例</a></li>
+<li><a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/batch-operations/#deletion-of-historic-process-instances">删除历史流程实例</a></li>
+<li><a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/batch-operations/#update-suspend-state-of-process-instances">修改流程实例暂停状态</a></li>
+<li><a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/batch-operations/#setting-retries-of-jobs-associated-with-process-instances">设置与流程实例关联的Job的重试</a></li>
+<li><a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/batch-operations/#set-variables-to-process-instances">为流程实例设置变量</a></li>
+<li><a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-instance-modification/#modification-of-multiple-process-instances">流程实例修改</a></li>
+<li><a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-instance-restart/#asynchronous-batch-execution">流程实例重启</a></li>
+<li><a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/batch-operations/#setting-retries-of-external-tasks">设置外部任务的重试</a></li>
+<li><a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/batch-operations/#set-a-removal-time">为历史流程实例设置删除时间</a></li>
+<li><a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/batch-operations/#set-a-removal-time">为历史决策实例设置删除时间</a></li>
+<li><a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/batch-operations/#set-a-removal-time">为历史批处理设置删除时间</a></li>
 </ul>
 
 <p>Java API 可用于创建批处理命令，具体使用示例请参考具体命令。</p>
@@ -8316,7 +8316,7 @@ var _mtac = {};
 
 <h2 id="批处理的历史">批处理的历史</h2>
 
-<p>当<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/history/#choose-a-history-level">历史等级</a> 为 <code>FULL</code> 时，会创建一个历史批处理条目。你可以使用历史服务（HistoryService）查询它。</p>
+<p>当<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/history/#choose-a-history-level">历史等级</a> 为 <code>FULL</code> 时，会创建一个历史批处理条目。你可以使用历史服务（HistoryService）查询它。</p>
 
 <pre><code class="language-java">HistoricBatch historicBatch = processEngine.getHistoryService()
   .createHistoricBatchQuery()
@@ -8335,7 +8335,7 @@ List&lt;HistoricJobLog&gt; batchExecutionJobLogs = processEngine.getHistoryServi
   .list();
 </code></pre>
 
-<p>你可以设置对已完成的历史批处理操作的<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/history/#history-time-to-live-for-batch-operations">历史清理</a>配置。</p>
+<p>你可以设置对已完成的历史批处理操作的<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/history/#history-time-to-live-for-batch-operations">历史清理</a>配置。</p>
 
 <h2 id="暂停批处理">暂停批处理</h2>
 
@@ -8380,9 +8380,9 @@ processEngine.getManagementService()
 
 <h2 id="批处理的优先级">批处理的优先级</h2>
 
-<p>由于所有批处理Job都是使用Job执行器执行的，因此可以使用 <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/#job-prioritization">Job优先级</a> 功能来调整批处理Job的优先级。 默认批处理Job优先级由流程引擎配置项 <code>batchJobPriority</code> 设置。</p>
+<p>由于所有批处理Job都是使用Job执行器执行的，因此可以使用 <a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/#job-prioritization">Job优先级</a> 功能来调整批处理Job的优先级。 默认批处理Job优先级由流程引擎配置项 <code>batchJobPriority</code> 设置。</p>
 
-<p>可以使用管理服务调整特定批处理的 <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/#override-priority-by-job-definition">Job定义</a> 甚至单个批处理 <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/#set-job-priorities-via-managementservice-api">Job</a> 的优先级。</p>
+<p>可以使用管理服务调整特定批处理的 <a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/#override-priority-by-job-definition">Job定义</a> 甚至单个批处理 <a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/#set-job-priorities-via-managementservice-api">Job</a> 的优先级。</p>
 
 <pre><code class="language-java">Batch batch = ...;
 
@@ -8400,7 +8400,7 @@ processEngine.getManagementService()
 
 <h2 id="种子job">种子Job</h2>
 
-<p>批处理最初会创建一个种子Job。 该种子将被重复执行以创建所有批处理执行Job。 例如，如果用户为 1000 个流程实例启动 <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-instance-migration/#asynchronous-batch-migration-execution">流程实例迁移批处理</a>。 使用默认流程引擎配置时，种子Job将在每次调用时创建 10 个批处理执行Job。 每个执行Job将迁移 1 个流程实例。 总之，种子Job将被调用 100 次，直到它创建了完成批处理所需的 1000 个执行Job。</p>
+<p>批处理最初会创建一个种子Job。 该种子将被重复执行以创建所有批处理执行Job。 例如，如果用户为 1000 个流程实例启动 <a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-instance-migration/#asynchronous-batch-migration-execution">流程实例迁移批处理</a>。 使用默认流程引擎配置时，种子Job将在每次调用时创建 10 个批处理执行Job。 每个执行Job将迁移 1 个流程实例。 总之，种子Job将被调用 100 次，直到它创建了完成批处理所需的 1000 个执行Job。</p>
 
 <p>可以使用 Java API 获取批处理种子Job的Job定义：</p>
 
@@ -8420,9 +8420,9 @@ JobDefinition seedJobDefinition = processEngine.getManagementService()
 
 <h2 id="执行job">执行Job</h2>
 
-<p>一个批处理的执行被分成几个执行Job。 具体Job数取决于批处理的总Job数和流程引擎配置（参见<a href="#种子Job">种子Job</a>）。 每个执行Job针对给定数量的调用执行实际的批处理命令，例如，迁移多个流程实例。执行Job将由<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/">Job执行器</a>执行。 它们的行为与其他Job一样，这意味着它们可能会失败并且Job执行器将 <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/#failed-jobs">重试</a> 失败的批处理执行Job。 此外，对于没有重试的失败的批处理执行Job，将产生 <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/incidents/">事件</a>。</p>
+<p>一个批处理的执行被分成几个执行Job。 具体Job数取决于批处理的总Job数和流程引擎配置（参见<a href="#种子Job">种子Job</a>）。 每个执行Job针对给定数量的调用执行实际的批处理命令，例如，迁移多个流程实例。执行Job将由<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/">Job执行器</a>执行。 它们的行为与其他Job一样，这意味着它们可能会失败并且Job执行器将 <a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/#failed-jobs">重试</a> 失败的批处理执行Job。 此外，对于没有重试的失败的批处理执行Job，将产生 <a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/incidents/">事件</a>。</p>
 
-<p>Java API 可用于获取批处理的执行Job的Job定义，例如，对于 <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-instance-migration/#asynchronous-batch-migration-execution">流程实例迁移批处理</a>：</p>
+<p>Java API 可用于获取批处理的执行Job的Job定义，例如，对于 <a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-instance-migration/#asynchronous-batch-migration-execution">流程实例迁移批处理</a>：</p>
 
 <pre><code class="language-java">Batch batch = ...;
 
@@ -8440,7 +8440,7 @@ JobDefinition executionJobDefinition = processEngine.getManagementService()
 
 <h2 id="监控job">监控Job</h2>
 
-<p>在 <a href="#种子Job">种子job</a> 创建所有批处理执行Job后，将为批处理创建一个监控Job。 此Job定期轮询批处理是否已完成，即所有批处理执行Job是否已完成。 轮询间隔可以通过<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-bootstrapping/">流程引擎配置</a>的<code>batchPollTime</code>（默认：30秒）属性进行配置。</p>
+<p>在 <a href="#种子Job">种子job</a> 创建所有批处理执行Job后，将为批处理创建一个监控Job。 此Job定期轮询批处理是否已完成，即所有批处理执行Job是否已完成。 轮询间隔可以通过<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-bootstrapping/">流程引擎配置</a>的<code>batchPollTime</code>（默认：30秒）属性进行配置。</p>
 
 <p>Java API 可用于获取批处理的监控Job的Job定义：</p>
 
@@ -8460,17 +8460,17 @@ JobDefinition monitorJobDefinition = processEngine.getManagementService()
 
 <h2 id="配置">配置</h2>
 
-<p>You can configure the number of jobs created by every seed job invocation <code>batchJobsPerSeed</code> (default: 100) and the number of invocations per batch execution job <code>invocationsPerBatchJob</code> (default: 1) in the <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-bootstrapping/">process engine configuration</a>.
-你可以在<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-bootstrapping/">流程引擎配置</a>中配置每个种子Job的调用创建Job数量<code>batchJobsPerSeed</code>（默认：100）和每个批量执行Job的调用数量<code>invocationsPerBatchJob</code>（默认：1）</p>
+<p>You can configure the number of jobs created by every seed job invocation <code>batchJobsPerSeed</code> (default: 100) and the number of invocations per batch execution job <code>invocationsPerBatchJob</code> (default: 1) in the <a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-bootstrapping/">process engine configuration</a>.
+你可以在<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-bootstrapping/">流程引擎配置</a>中配置每个种子Job的调用创建Job数量<code>batchJobsPerSeed</code>（默认：100）和每个批量执行Job的调用数量<code>invocationsPerBatchJob</code>（默认：1）</p>
 
-<p>通过使用流程引擎配置项 <a href="http://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#invocations-per-batch-job-by-batch-type"><code>invocationsPerBatchJobByBatchType</code></a>，可以为每个批处理操作类型单独更改每个批处理执行Job的调用次数。 如果你没有按类型指定每个批处理Job的调用，配置将回退到通过 <code>invocationsPerBatchJob</code> 指定的全局配置。</p>
+<p>通过使用流程引擎配置项 <a href="https://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#invocations-per-batch-job-by-batch-type"><code>invocationsPerBatchJobByBatchType</code></a>，可以为每个批处理操作类型单独更改每个批处理执行Job的调用次数。 如果你没有按类型指定每个批处理Job的调用，配置将回退到通过 <code>invocationsPerBatchJob</code> 指定的全局配置。</p>
 
 <p>你可以通过三种方式配置该属性：</p>
 
 <ol>
-<li>通过 <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-plugins/">流程引擎插件</a> 编程</li>
+<li>通过 <a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-plugins/">流程引擎插件</a> 编程</li>
 
-<li><p>在 Spring-based 环境中通过 <a href="http://camunda-cn.shaochenfeng.com/user-guide/spring-framework-integration/configuration/">Spring XML 配置文件</a></p>
+<li><p>在 Spring-based 环境中通过 <a href="https://camunda-cn.shaochenfeng.com/user-guide/spring-framework-integration/configuration/">Spring XML 配置文件</a></p>
 
 <pre><code class="language-xml">&lt;bean id=&quot;processEngineConfiguration&quot; 
       class=&quot;org.camunda.bpm.engine.impl.cfg.StandaloneInMemProcessEngineConfiguration&quot;&gt;
@@ -8489,7 +8489,7 @@ JobDefinition monitorJobDefinition = processEngine.getManagementService()
 &lt;/bean&gt;
 </code></pre></li>
 
-<li><p>在 Spring Boot 环境中通过 <a href="http://camunda-cn.shaochenfeng.com/user-guide/spring-boot-integration/configuration/#camunda-engine-properties"><code>application.yaml</code></a> 文件</p>
+<li><p>在 Spring Boot 环境中通过 <a href="https://camunda-cn.shaochenfeng.com/user-guide/spring-boot-integration/configuration/#camunda-engine-properties"><code>application.yaml</code></a> 文件</p>
 
 <pre><code class="language-yaml">camunda.bpm.generic-properties.properties:
   invocations-per-batch-job-by-batch-type:
@@ -8541,9 +8541,9 @@ JobDefinition monitorJobDefinition = processEngine.getManagementService()
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="http://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="https://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
-            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2022
+            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2025
           </p>
           <p>
             <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a> The content on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
@@ -8556,7 +8556,7 @@ JobDefinition monitorJobDefinition = processEngine.getManagementService()
 
   
 
-  <script type="text/javascript" src="http://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

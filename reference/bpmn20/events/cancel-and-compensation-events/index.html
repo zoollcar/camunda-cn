@@ -58,11 +58,11 @@ var _mtac = {};
   <title>Cancel and Compensation Events | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="http://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="https://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="http://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
 </head>
 <body class="">
 
@@ -73,8 +73,8 @@ var _mtac = {};
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="http://camunda-cn.shaochenfeng.com/">
-      <img src="http://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="https://camunda-cn.shaochenfeng.com/">
+      <img src="https://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">中文站</span>
       </a>
@@ -8187,7 +8187,7 @@ var _mtac = {};
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="http://camunda-cn.shaochenfeng.com/">
+    <select id="version-select" data-basepath="/manual" base-url="https://camunda-cn.shaochenfeng.com/">
       
         <option  selected >develop</option>
       
@@ -8240,13 +8240,13 @@ var _mtac = {};
 
 <h2 id="cancel-end-event">Cancel End Event</h2>
 
-<p>The cancel end event can only be used in combination with a <a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/subprocesses/transaction-subprocess/">transaction subprocess</a>. When the cancel end event is reached, a cancel event is thrown which must be caught by a cancel boundary event. The cancel boundary event then cancels the transaction and triggers compensation.</p>
+<p>The cancel end event can only be used in combination with a <a href="https://camunda-cn.shaochenfeng.com/reference/bpmn20/subprocesses/transaction-subprocess/">transaction subprocess</a>. When the cancel end event is reached, a cancel event is thrown which must be caught by a cancel boundary event. The cancel boundary event then cancels the transaction and triggers compensation.</p>
 
 <h2 id="cancel-boundary-event">Cancel Boundary Event</h2>
 
 <p>An attached intermediate catching cancel event on the boundary of a transaction subprocess, or, for short, a cancel boundary event, is triggered when a transaction is canceled. When the cancel boundary event is triggered, it first interrupts all active executions in the current scope. Next, it starts compensation of all active compensation boundary events in the scope of the transaction. Compensation is performed synchronously, i.e., the boundary event waits before compensation is completed before leaving the transaction. When compensation is completed, the transaction subprocess is left using the sequence flow(s) running out of the cancel boundary event.</p>
 
-<div class="bpmn-symbol"><img src="http://camunda-cn.shaochenfeng.com//img/short-codes/bpmn-cancel-intermediate-catch-event.png" /></div>
+<div class="bpmn-symbol"><img src="https://camunda-cn.shaochenfeng.com//img/short-codes/bpmn-cancel-intermediate-catch-event.png" /></div>
 
 
 <p>Note: Only a single cancel boundary event is allowed for a transaction subprocess.</p>
@@ -8270,7 +8270,7 @@ var _mtac = {};
 
 <p>An intermediate throwing compensation event can be used to trigger compensation.</p>
 
-<div class="bpmn-symbol"><img src="http://camunda-cn.shaochenfeng.com//img/short-codes/bpmn-compensation-intermediate-throw-event.png" /></div>
+<div class="bpmn-symbol"><img src="https://camunda-cn.shaochenfeng.com//img/short-codes/bpmn-compensation-intermediate-throw-event.png" /></div>
 
 
 <p>Triggering compensation: Compensation can either be triggered for a designated activity or for the scope that hosts the compensation event. Compensation is performed through execution of the compensation handler associated with an activity.</p>
@@ -8324,7 +8324,7 @@ var _mtac = {};
 
 <h2 id="compensation-end-event">Compensation End Event</h2>
 
-<div class="bpmn-symbol"><img src="http://camunda-cn.shaochenfeng.com//img/short-codes/bpmn-compensation-end-event.png" /></div>
+<div class="bpmn-symbol"><img src="https://camunda-cn.shaochenfeng.com//img/short-codes/bpmn-compensation-end-event.png" /></div>
 
 
 <p>A compensation end event triggers compensation and the current path of execution is ended. It has the same behavior and limitations as a compensation intermediate throwing event.</p>
@@ -8340,16 +8340,16 @@ var _mtac = {};
   <tr>
     <th>Attributes</th>
     <td>
-      <a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/extension-attributes/#asyncbefore">camunda:asyncBefore</a>,
-      <a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/extension-attributes/#asyncafter">camunda:asyncAfter</a>,
-      <a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/extension-attributes/#exclusive">camunda:exclusive</a>,
-      <a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/extension-attributes/#jobpriority">camunda:jobPriority</a>
+      <a href="https://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/extension-attributes/#asyncbefore">camunda:asyncBefore</a>,
+      <a href="https://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/extension-attributes/#asyncafter">camunda:asyncAfter</a>,
+      <a href="https://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/extension-attributes/#exclusive">camunda:exclusive</a>,
+      <a href="https://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/extension-attributes/#jobpriority">camunda:jobPriority</a>
     </td>
   </tr>
   <tr>
     <th>Extension Elements</th>
     <td>
-      <a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/extension-elements/#inputoutput">
+      <a href="https://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/extension-elements/#inputoutput">
         camunda:inputOutput</a>
     </td>
   </tr>
@@ -8363,7 +8363,7 @@ var _mtac = {};
 
 <p>An attached intermediate catching compensation on the boundary of an activity, or, for short, a compensation boundary event, can be used to attach a compensation handler to an activity or an embedded subprocess.</p>
 
-<div class="bpmn-symbol"><img src="http://camunda-cn.shaochenfeng.com//img/short-codes/bpmn-compensation-intermediate-boundary-event.png" /></div>
+<div class="bpmn-symbol"><img src="https://camunda-cn.shaochenfeng.com//img/short-codes/bpmn-compensation-intermediate-boundary-event.png" /></div>
 
 
 <p>The compensation boundary event must reference a single compensation handler using a directed association.</p>
@@ -8392,7 +8392,7 @@ var _mtac = {};
 
 <h2 id="compensation-start-event">Compensation Start Event</h2>
 
-<div class="bpmn-symbol"><img src="http://camunda-cn.shaochenfeng.com//img/short-codes/bpmn-compensation-event-subprocess-start-event.png" /></div>
+<div class="bpmn-symbol"><img src="https://camunda-cn.shaochenfeng.com//img/short-codes/bpmn-compensation-event-subprocess-start-event.png" /></div>
 
 
 <p>A compensation start event can only be used to trigger an Event Sub-Process - it <strong>cannot</strong> be used to start a process instance. This kind of event subprocess is called compensation event subprocess.</p>
@@ -8426,7 +8426,7 @@ var _mtac = {};
 <h2 id="additional-resources">Additional Resources</h2>
 
 <ul>
-<li><a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/subprocesses/transaction-subprocess/">Transaction subprocess</a></li>
+<li><a href="https://camunda-cn.shaochenfeng.com/reference/bpmn20/subprocesses/transaction-subprocess/">Transaction subprocess</a></li>
 <li><a href="http://camunda.org/bpmn/reference.html#events-compensation">Compensation Events</a> in the <a href="http://camunda.org/bpmn/reference.html">BPMN 2.0 Modeling Reference</a></li>
 </ul>
 
@@ -8468,9 +8468,9 @@ var _mtac = {};
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="http://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="https://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
-            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2022
+            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2025
           </p>
           <p>
             <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a> The content on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
@@ -8483,7 +8483,7 @@ var _mtac = {};
 
   
 
-  <script type="text/javascript" src="http://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

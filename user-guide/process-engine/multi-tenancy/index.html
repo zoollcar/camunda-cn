@@ -58,11 +58,11 @@ var _mtac = {};
   <title>多租户 | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="http://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="https://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="http://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
 </head>
 <body class="">
 
@@ -73,8 +73,8 @@ var _mtac = {};
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="http://camunda-cn.shaochenfeng.com/">
-      <img src="http://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="https://camunda-cn.shaochenfeng.com/">
+      <img src="https://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">中文站</span>
       </a>
@@ -8187,7 +8187,7 @@ var _mtac = {};
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="http://camunda-cn.shaochenfeng.com/">
+    <select id="version-select" data-basepath="/manual" base-url="https://camunda-cn.shaochenfeng.com/">
       
         <option  selected >develop</option>
       
@@ -8292,7 +8292,7 @@ var _mtac = {};
 
 <h3 id="通过部署描述符指定租户标识符">通过部署描述符指定租户标识符</h3>
 
-<p>如果一个流程应用程序，部署是由文件 <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-applications/the-processes-xml-deployment-descriptor/">processes.xml</a> 定义的。由于描述符可以包含多个流程-档案（即部署），可以在每个流程-档案上设置<code>tenantId</code>租户标识符属性。</p>
+<p>如果一个流程应用程序，部署是由文件 <a href="https://camunda-cn.shaochenfeng.com/user-guide/process-applications/the-processes-xml-deployment-descriptor/">processes.xml</a> 定义的。由于描述符可以包含多个流程-档案（即部署），可以在每个流程-档案上设置<code>tenantId</code>租户标识符属性。</p>
 
 <pre><code class="language-xml">&lt;process-application
   xmlns=&quot;http://www.camunda.org/schema/1.0/ProcessApplication&quot;
@@ -8311,7 +8311,7 @@ var _mtac = {};
 
 <h3 id="通过-spring配置-指定租户标识符">通过 Spring配置 指定租户标识符</h3>
 
-<p>如果使用Spring框架集成并使用<a href="http://camunda-cn.shaochenfeng.com/user-guide/spring-framework-integration/deployment/">自动资源部署</a>时，租户标识符可以在流程引擎配置中指定为<code>deploymentTenantId</code>属性。</p>
+<p>如果使用Spring框架集成并使用<a href="https://camunda-cn.shaochenfeng.com/user-guide/spring-framework-integration/deployment/">自动资源部署</a>时，租户标识符可以在流程引擎配置中指定为<code>deploymentTenantId</code>属性。</p>
 
 <pre><code class="language-xml">&lt;bean id=&quot;processEngineConfiguration&quot; class=&quot;org.camunda.bpm.engine.spring.SpringProcessEngineConfiguration&quot;&gt;
   &lt;property name=&quot;deploymentResources&quot;&gt;
@@ -8326,7 +8326,7 @@ var _mtac = {};
 
 <h3 id="租户特定定义的版本管理">租户特定定义的版本管理</h3>
 
-<p>当一个定义被部署到一个租户时，它被分配了一个版本，与其他租户的定义无关。例如，如果一个新的流程定义是为两个租户部署的，那么这两个定义都被分配为<code>1</code>版本。一个租户内的版本管理与不属于任何租户的<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-versioning/">定义的版本管理</a>一样。</p>
+<p>当一个定义被部署到一个租户时，它被分配了一个版本，与其他租户的定义无关。例如，如果一个新的流程定义是为两个租户部署的，那么这两个定义都被分配为<code>1</code>版本。一个租户内的版本管理与不属于任何租户的<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-versioning/">定义的版本管理</a>一样。</p>
 
 <h2 id="查询租户数据">查询租户数据</h2>
 
@@ -8393,7 +8393,7 @@ var _mtac = {};
 
 <h3 id="关联消息">关联消息</h3>
 
-<p><a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/events/message-events/#message-api">message API</a>可用于将消息与一个或所有租户相关联。如果消息可以与多个租户的定义或执行相关，则必须将租户标识传递给 <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/runtime/MessageCorrelationBuilder.html">MessageCorrelationBuilder</a>
+<p><a href="https://camunda-cn.shaochenfeng.com/reference/bpmn20/events/message-events/#message-api">message API</a>可用于将消息与一个或所有租户相关联。如果消息可以与多个租户的定义或执行相关，则必须将租户标识传递给 <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/runtime/MessageCorrelationBuilder.html">MessageCorrelationBuilder</a>
 。否则会抛出 <code>MismatchingMessageCorrelationException</code>。</p>
 
 <pre><code class="language-java">runtimeService
@@ -8411,7 +8411,7 @@ var _mtac = {};
 
 <h3 id="发送信号">发送信号</h3>
 
-<p><a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/events/signal-events/#signal-api">Signal API</a> 可用于向一个或所有租户发送信号。可以将租户标识传递给 <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/runtime/SignalEventReceivedBuilder.html">SignalEventReceivedBuilder</a>
+<p><a href="https://camunda-cn.shaochenfeng.com/reference/bpmn20/events/signal-events/#signal-api">Signal API</a> 可用于向一个或所有租户发送信号。可以将租户标识传递给 <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/runtime/SignalEventReceivedBuilder.html">SignalEventReceivedBuilder</a>
  用该来将信号传递给特定的租户。如果没有传递标识符，则信号将传递给所有租户。</p>
 
 <pre><code class="language-java">runtimeService
@@ -8527,19 +8527,19 @@ finally {
 
 <div class="note bg-info docs-info">
   <h3>LDAP身份服务</h3>
-  <p>上面的示例仅适用于<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/identity-service/#the-database-identity-service">数据库身份服务</a> (即, 默认实现). <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/identity-service/#the-ldap-identity-service">LDAP身份服务</a>不支持租户。</p>
+  <p>上面的示例仅适用于<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/identity-service/#the-database-identity-service">数据库身份服务</a> (即, 默认实现). <a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/identity-service/#the-ldap-identity-service">LDAP身份服务</a>不支持租户。</p>
 </div>
 
 
 <h3 id="camunda-rest-api和web应用程序">Camunda REST API和Web应用程序</h3>
 
-<p>Camunda <a href="http://camunda-cn.shaochenfeng.com/reference/rest/">Rest API</a>和Web应用程序Cockpit和Tasklist支持透明访问限制。当一个用户登录时，他只能看到也只能访问属于他的一个租户的数据（例如，流程定义）。</p>
+<p>Camunda <a href="https://camunda-cn.shaochenfeng.com/reference/rest/">Rest API</a>和Web应用程序Cockpit和Tasklist支持透明访问限制。当一个用户登录时，他只能看到也只能访问属于他的一个租户的数据（例如，流程定义）。</p>
 
-<p>租户及其成员资格可以在<a href="http://camunda-cn.shaochenfeng.com/webapps/admin/tenant-management/">Admin</a>网络应用中管理。</p>
+<p>租户及其成员资格可以在<a href="https://camunda-cn.shaochenfeng.com/webapps/admin/tenant-management/">Admin</a>网络应用中管理。</p>
 
 <h3 id="禁用透明访问限制">禁用透明访问限制</h3>
 
-<p>默认情况下，透明访问限制是启用的。要禁用这些限制，请在<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-bootstrapping/#processengineconfiguration-bean">ProcessEngineConfiguration</a>中设置<code>tenantCheckEnabled</code>属性为<code>false</code>。</p>
+<p>默认情况下，透明访问限制是启用的。要禁用这些限制，请在<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-bootstrapping/#processengineconfiguration-bean">ProcessEngineConfiguration</a>中设置<code>tenantCheckEnabled</code>属性为<code>false</code>。</p>
 
 <p>此外，也可以禁用单个命令的限制（例如，为维护任务）。使用<code>CommandContext</code>来禁用和启用对当前命令的限制。</p>
 
@@ -8667,7 +8667,7 @@ SPI的实现。</p>
 &lt;/beans&gt;
 </code></pre>
 
-<p>如果是共享的流程引擎，提供者可以通过<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-plugins/">流程引擎插件</a>来设置。</p>
+<p>如果是共享的流程引擎，提供者可以通过<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-plugins/">流程引擎插件</a>来设置。</p>
 
 <h3 id="租户的特定行为与call-activities">租户的特定行为与Call Activities</h3>
 
@@ -8681,9 +8681,9 @@ SPI的实现。</p>
 
 <ul>
 <li><a href="https://github.com/camunda/camunda-bpm-examples/tree/master/multi-tenancy/tenant-identifier-shared-definitions">共享资源示例</a></li>
-<li><a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/subprocesses/call-activity/#calledelement-tenant-id">Called Element Tenant Id</a></li>
-<li><a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/subprocesses/call-activity/#case-tenant-id">案例租户ID</a> for call activities.</li>
-<li><a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/tasks/business-rule-task/#decisionref-tenant-id">Decision Ref Tenant Id</a> for business rule tasks.</li>
+<li><a href="https://camunda-cn.shaochenfeng.com/reference/bpmn20/subprocesses/call-activity/#calledelement-tenant-id">Called Element Tenant Id</a></li>
+<li><a href="https://camunda-cn.shaochenfeng.com/reference/bpmn20/subprocesses/call-activity/#case-tenant-id">案例租户ID</a> for call activities.</li>
+<li><a href="https://camunda-cn.shaochenfeng.com/reference/bpmn20/tasks/business-rule-task/#decisionref-tenant-id">Decision Ref Tenant Id</a> for business rule tasks.</li>
 </ul>
 
 <h1 id="每个租户使用一个流程引擎">每个租户使用一个流程引擎</h1>
@@ -8710,7 +8710,7 @@ SPI的实现。</p>
 
 <h2 id="配置流程引擎">配置流程引擎</h2>
 
-<p>流程引擎可以在配置文件中或通过 Java API 进行配置。每个引擎都应该有一个与租户有关的名字，这样就可以根据租户来识别它。例如，每个引擎可以用它所服务的租户来命名。详情见<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-bootstrapping/">流程引擎自启动</a>章节。</p>
+<p>流程引擎可以在配置文件中或通过 Java API 进行配置。每个引擎都应该有一个与租户有关的名字，这样就可以根据租户来识别它。例如，每个引擎可以用它所服务的租户来命名。详情见<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-bootstrapping/">流程引擎自启动</a>章节。</p>
 
 <h3 id="数据库隔离">数据库隔离</h3>
 
@@ -8723,7 +8723,7 @@ SPI的实现。</p>
 <p>为了实现这一点，你需要：</p>
 
 <ul>
-<li>配置选项<a href="http://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#configuration-protperties">databaseTablePrefix</a>可用于配置数据库访问。</li>
+<li>配置选项<a href="https://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#configuration-protperties">databaseTablePrefix</a>可用于配置数据库访问。</li>
 <li>考虑打开 <code>useSharedSqlSessionFactory</code> 配置项。该设置控制每个流程引擎实例是否应该解析和维护mybatis映射文件的本地副本，或者是否可以使用单一的共享副本。由于映射需要大量的堆（&gt;30MB），建议将其打开。这样就只需要分配一个副本。</li>
 </ul>
 
@@ -8746,11 +8746,11 @@ SPI的实现。</p>
 
 <h3 id="多个流程引擎的job执行器">多个流程引擎的Job执行器</h3>
 
-<p>对于流程和任务的后台执行，流程引擎有一个叫做<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/">Job执行器</a>的组件。Job执行器定期从数据库中获取Job，并将其提交到线程池中执行。对于一台服务器上的所有流程应用，一个线程池用于Job执行。此外，有可能在多个引擎之间共享获取线程。这样，即使使用了大量的流程引擎，资源仍然是可管理的。详情请参见<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/#the-job-executor-and-multiple-process-engines">Job执行器与多个流程引擎</a>一节。</p>
+<p>对于流程和任务的后台执行，流程引擎有一个叫做<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/">Job执行器</a>的组件。Job执行器定期从数据库中获取Job，并将其提交到线程池中执行。对于一台服务器上的所有流程应用，一个线程池用于Job执行。此外，有可能在多个引擎之间共享获取线程。这样，即使使用了大量的流程引擎，资源仍然是可管理的。详情请参见<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/#the-job-executor-and-multiple-process-engines">Job执行器与多个流程引擎</a>一节。</p>
 
 <h3 id="schem隔离的示例配置">Schem隔离的示例配置</h3>
 
-<p>多租户设置可以应用于配置流程引擎的各种方式。下面是一个<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-bootstrapping/#configure-process-engine-in-bpm-platformxml">bpm-platform.xml</a>文件的例子，它为两个共享同一数据库但工作在不同模式下的租户指定引擎：</p>
+<p>多租户设置可以应用于配置流程引擎的各种方式。下面是一个<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-bootstrapping/#configure-process-engine-in-bpm-platformxml">bpm-platform.xml</a>文件的例子，它为两个共享同一数据库但工作在不同模式下的租户指定引擎：</p>
 
 <pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;bpm-platform xmlns=&quot;http://www.camunda.org/schema/1.0/BpmPlatform&quot;
@@ -8795,7 +8795,7 @@ SPI的实现。</p>
 
 <h2 id="部署租户的定义">部署租户的定义</h2>
 
-<p>在开发流程应用，即流程定义和补充代码时，一些流程可能会被部署到每个租户的引擎上，而另一些则是针对租户的。processes.xml部署描述符是每个流程应用程序的一部分，它通过 <em>流程归档</em> 的概念提供这种灵活性。一个应用程序可以包含任何数量的流程归档部署，每一个都可以部署到具有不同资源的不同流程引擎。详情见<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-applications/the-processes-xml-deployment-descriptor/">process.xml部署描述符</a>一节。</p>
+<p>在开发流程应用，即流程定义和补充代码时，一些流程可能会被部署到每个租户的引擎上，而另一些则是针对租户的。processes.xml部署描述符是每个流程应用程序的一部分，它通过 <em>流程归档</em> 的概念提供这种灵活性。一个应用程序可以包含任何数量的流程归档部署，每一个都可以部署到具有不同资源的不同流程引擎。详情见<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-applications/the-processes-xml-deployment-descriptor/">process.xml部署描述符</a>一节。</p>
 
 <p>下面是一个为两个租户部署不同流程定义的例子。它使用配置属性<code>resourceRootPath</code>，指定部署中包含要部署的流程定义的路径。因此，应用程序classpath上<code>processes/tenant1</code>下的所有流程被部署到引擎<code>tenant1</code>，而<code>processes/tenant2</code>下的所有流程被部署到引擎<code>tenant2</code>。</p>
 
@@ -8831,12 +8831,12 @@ SPI的实现。</p>
 <p>要在运行时访问一个特定租户的流程引擎，必须通过其名称来识别。Camunda引擎提供对各种编程模型中的命名引擎的访问。</p>
 
 <ul>
-<li><strong>清晰的 Java API</strong>: 通过 <a href="http://camunda-cn.shaochenfeng.com/user-guide/runtime-container-integration/bpm-platform-services/#processengineservice">ProcessEngineService</a> 可以访问任何命名引擎。</li>
-<li><strong>CDI 注入</strong>: 命名的引擎Bean可以开箱即注入。内置的<a href="http://camunda-cn.shaochenfeng.com/user-guide/cdi-java-ee-integration/built-in-beans/">CDI Bean生产者</a>专门用来动态地访问当前租户的引擎。</li>
-<li><strong>通过JBoss/Wildfly 的 JNDI</strong>: 在JBoss和Wildfly上，每一个容器管理的流程引擎都可以<a href="http://camunda-cn.shaochenfeng.com/user-guide/runtime-container-integration/jboss/#look-up-a-process-engine-in-jndi">通过JNDI查询</a>。</li>
+<li><strong>清晰的 Java API</strong>: 通过 <a href="https://camunda-cn.shaochenfeng.com/user-guide/runtime-container-integration/bpm-platform-services/#processengineservice">ProcessEngineService</a> 可以访问任何命名引擎。</li>
+<li><strong>CDI 注入</strong>: 命名的引擎Bean可以开箱即注入。内置的<a href="https://camunda-cn.shaochenfeng.com/user-guide/cdi-java-ee-integration/built-in-beans/">CDI Bean生产者</a>专门用来动态地访问当前租户的引擎。</li>
+<li><strong>通过JBoss/Wildfly 的 JNDI</strong>: 在JBoss和Wildfly上，每一个容器管理的流程引擎都可以<a href="https://camunda-cn.shaochenfeng.com/user-guide/runtime-container-integration/jboss/#look-up-a-process-engine-in-jndi">通过JNDI查询</a>。</li>
 </ul>
 
-<p>Camunda网络应用程序Cockpit、Tasklist和Admin通过<a href="http://camunda-cn.shaochenfeng.com/webapps/cockpit/dashboard/#multi-engine">在不同的流程引擎之间切换</a>提供租户特定的视图，开箱即用。</p>
+<p>Camunda网络应用程序Cockpit、Tasklist和Admin通过<a href="https://camunda-cn.shaochenfeng.com/webapps/cockpit/dashboard/#multi-engine">在不同的流程引擎之间切换</a>提供租户特定的视图，开箱即用。</p>
 
     </div>
   </div>
@@ -8913,9 +8913,9 @@ SPI的实现。</p>
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="http://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="https://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
-            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2022
+            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2025
           </p>
           <p>
             <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a> The content on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
@@ -8928,7 +8928,7 @@ SPI的实现。</p>
 
   
 
-  <script type="text/javascript" src="http://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

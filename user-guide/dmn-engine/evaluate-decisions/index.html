@@ -58,11 +58,11 @@ var _mtac = {};
   <title>Evaluating Decisions using the DMN Engine API | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="http://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="https://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="http://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
 </head>
 <body class="">
 
@@ -73,8 +73,8 @@ var _mtac = {};
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="http://camunda-cn.shaochenfeng.com/">
-      <img src="http://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="https://camunda-cn.shaochenfeng.com/">
+      <img src="https://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">中文站</span>
       </a>
@@ -8187,7 +8187,7 @@ var _mtac = {};
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="http://camunda-cn.shaochenfeng.com/">
+    <select id="version-select" data-basepath="/manual" base-url="https://camunda-cn.shaochenfeng.com/">
       
         <option  selected >develop</option>
       
@@ -8275,7 +8275,7 @@ List&lt;DmnDecision&gt; decisions = dmnEngine.parseDecisions(dmnModelInstance);
 
 <h2 id="the-decision-key">The Decision Key</h2>
 
-<p>A DMN XML file can contain multiple decisions - grouped by the <a href="http://camunda-cn.shaochenfeng.com/reference/dmn/drg/">decision requirements graph</a>. To distinguish the decisions,
+<p>A DMN XML file can contain multiple decisions - grouped by the <a href="https://camunda-cn.shaochenfeng.com/reference/dmn/drg/">decision requirements graph</a>. To distinguish the decisions,
 every decision must have an <code>id</code> attribute.</p>
 
 <pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
@@ -8311,7 +8311,7 @@ DmnDecision decision = dmnEngine.parseDecision(&quot;second-decision&quot;, inpu
 
 <h2 id="parse-decision-requirements-graph">Parse Decision Requirements Graph</h2>
 
-<p>In addition to parsing all contained decisions of a <a href="http://camunda-cn.shaochenfeng.com/reference/dmn/drg/">decision requirements graph</a> (DRG), the DMN engine can also parse the DRG itself from an <code>InputStream</code> or a <code>DmnModelInstance</code>.</p>
+<p>In addition to parsing all contained decisions of a <a href="https://camunda-cn.shaochenfeng.com/reference/dmn/drg/">decision requirements graph</a> (DRG), the DMN engine can also parse the DRG itself from an <code>InputStream</code> or a <code>DmnModelInstance</code>.</p>
 
 <pre><code class="language-java">// parse the drg from an input stream
 DmnDecisionRequirementsGraph drg = dmnEngine.parseDecisionRequirementsGraph(inputStream);
@@ -8330,7 +8330,7 @@ Collection&lt;DmnDecision&gt; decisions = drg.getDecisions();
 
 <h2 id="decision-tables-only">Decision Tables only</h2>
 
-<p>It is possible to check if a parsed decision is implemented as <a href="http://camunda-cn.shaochenfeng.com/reference/dmn/decision-table/">decision table</a> by using the method <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/dmn/engine/DmnDecision.html#isDecisionTable%28%29">isDecisionTable()</a>
+<p>It is possible to check if a parsed decision is implemented as <a href="https://camunda-cn.shaochenfeng.com/reference/dmn/decision-table/">decision table</a> by using the method <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/dmn/engine/DmnDecision.html#isDecisionTable%28%29">isDecisionTable()</a>
 .</p>
 
 <pre><code class="language-java">// create a default DMN engine
@@ -8403,10 +8403,10 @@ Use the <code>VariableContext</code> to support lazy-loading of variables.</p>
 <h2 id="interpret-the-decision-result">Interpret the Decision Result</h2>
 
 <p>The evaluation of a DMN decision returns a <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/dmn/engine/DmnDecisionResult.html">DmnDecisionResult</a>
-. If the decision is implemented as <a href="http://camunda-cn.shaochenfeng.com/reference/dmn/decision-table/">decision table</a> then the result is a list of the
+. If the decision is implemented as <a href="https://camunda-cn.shaochenfeng.com/reference/dmn/decision-table/">decision table</a> then the result is a list of the
 matching decision rule results. These results represent a mapping from an output name to an output value.</p>
 
-<p>If the decision is instead implemented as <a href="http://camunda-cn.shaochenfeng.com/reference/dmn/decision-literal-expression/">decision literal expression</a> then the result is a list
+<p>If the decision is instead implemented as <a href="https://camunda-cn.shaochenfeng.com/reference/dmn/decision-literal-expression/">decision literal expression</a> then the result is a list
 which contains only one entry. This entry represents the expression value and is mapped to the variable name.</p>
 
 <p>Assume the following example of making a decision to select a dish.</p>
@@ -8474,13 +8474,13 @@ decisionResult.getSingleEntry();
 
 <p>Note that the decision can also be evaluated using the
 <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/dmn/engine/DmnEngine.html##evaluateDecisionTable%28org.camunda.bpm.dmn.engine.DmnDecision,%20java.util.Map%29">evaluateDecisionTable()</a>
- method if it is implemented as <a href="http://camunda-cn.shaochenfeng.com/reference/dmn/decision-table/">decision table</a>. In this case, evaluation returns a <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/dmn/engine/DmnDecisionTableResult.html">DmnDecisionTableResult</a>
+ method if it is implemented as <a href="https://camunda-cn.shaochenfeng.com/reference/dmn/decision-table/">decision table</a>. In this case, evaluation returns a <a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/dmn/engine/DmnDecisionTableResult.html">DmnDecisionTableResult</a>
  which is semantically equal and provides the same methods as a
 <code>DmnDecisionResult</code>.</p>
 
 <h2 id="decisions-with-required-decisions">Decisions with Required Decisions</h2>
 
-<p>If a decision has one or more <a href="http://camunda-cn.shaochenfeng.com/reference/dmn/drg/#required-decisions">required decisions</a>, then the required decisions are evaluated first. The results of this evaluations are passed as input for the evaluation of the decision.</p>
+<p>If a decision has one or more <a href="https://camunda-cn.shaochenfeng.com/reference/dmn/drg/#required-decisions">required decisions</a>, then the required decisions are evaluated first. The results of this evaluations are passed as input for the evaluation of the decision.</p>
 
 <p>Assume the following example of making a decision to select beverages.</p>
 
@@ -8493,7 +8493,7 @@ decisionResult.getSingleEntry();
 </figure>
 
 
-<p>The following <a href="http://camunda-cn.shaochenfeng.com/reference/dmn/drg/">decision requirements diagram</a> shows that the <code>Beverages</code> decision requires the <code>Dish</code> decision (from the previous example).</p>
+<p>The following <a href="https://camunda-cn.shaochenfeng.com/reference/dmn/drg/">decision requirements diagram</a> shows that the <code>Beverages</code> decision requires the <code>Dish</code> decision (from the previous example).</p>
 
 <figure class="image">
   <span><img
@@ -8529,9 +8529,9 @@ List&lt;String&gt; beverages = decisionResult.collectEntries(&quot;beverages&quo
 
 <h2 id="hit-policy-of-required-decisions">Hit Policy of Required Decisions</h2>
 
-<p>The <a href="http://camunda-cn.shaochenfeng.com/reference/dmn/decision-table/hit-policy/">hit policy</a> of a required decision can affect the result that is passed as input to the requiring decision. If the required decision has a <a href="http://camunda-cn.shaochenfeng.com/reference/dmn/decision-table/hit-policy/#collect-hit-policy">COLLECT</a> hit policy with aggregator then the decision result (i.e. output value) is only the aggregated value.</p>
+<p>The <a href="https://camunda-cn.shaochenfeng.com/reference/dmn/decision-table/hit-policy/">hit policy</a> of a required decision can affect the result that is passed as input to the requiring decision. If the required decision has a <a href="https://camunda-cn.shaochenfeng.com/reference/dmn/decision-table/hit-policy/#collect-hit-policy">COLLECT</a> hit policy with aggregator then the decision result (i.e. output value) is only the aggregated value.</p>
 
-<p>In case of a hit policy with multiple matched rules (i.e., <a href="http://camunda-cn.shaochenfeng.com/reference/dmn/decision-table/hit-policy/#collect-hit-policy">COLLECT</a> without aggregator or <a href="http://camunda-cn.shaochenfeng.com/reference/dmn/decision-table/hit-policy/#rule-order-hit-policy">RULE ORDER</a>), the output variable is mapped to a list of output values, even if only one rule matched.</p>
+<p>In case of a hit policy with multiple matched rules (i.e., <a href="https://camunda-cn.shaochenfeng.com/reference/dmn/decision-table/hit-policy/#collect-hit-policy">COLLECT</a> without aggregator or <a href="https://camunda-cn.shaochenfeng.com/reference/dmn/decision-table/hit-policy/#rule-order-hit-policy">RULE ORDER</a>), the output variable is mapped to a list of output values, even if only one rule matched.</p>
 
     </div>
   </div>
@@ -8570,9 +8570,9 @@ List&lt;String&gt; beverages = decisionResult.collectEntries(&quot;beverages&quo
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="http://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="https://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
-            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2022
+            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2025
           </p>
           <p>
             <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a> The content on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
@@ -8585,7 +8585,7 @@ List&lt;String&gt; beverages = decisionResult.collectEntries(&quot;beverages&quo
 
   
 
-  <script type="text/javascript" src="http://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

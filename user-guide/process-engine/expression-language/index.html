@@ -58,11 +58,11 @@ var _mtac = {};
   <title>表达式语言 | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="http://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="https://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="http://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
 </head>
 <body class="">
 
@@ -73,8 +73,8 @@ var _mtac = {};
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="http://camunda-cn.shaochenfeng.com/">
-      <img src="http://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="https://camunda-cn.shaochenfeng.com/">
+      <img src="https://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">中文站</span>
       </a>
@@ -8187,7 +8187,7 @@ var _mtac = {};
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="http://camunda-cn.shaochenfeng.com/">
+    <select id="version-select" data-basepath="/manual" base-url="https://camunda-cn.shaochenfeng.com/">
       
         <option  selected >develop</option>
       
@@ -8283,7 +8283,7 @@ var _mtac = {};
   </tr>
   <tr>
     <td>
-      <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/#specifying-priorities-in-bpmn-xml">
+      <a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/#specifying-priorities-in-bpmn-xml">
         All Flow Nodes, Process Definition
       </a>
     </td>
@@ -8295,11 +8295,11 @@ var _mtac = {};
 
 <h2 id="委托代码">委托代码</h2>
 
-<p>除了Java代码，Camunda平台还支持将表达式作为委托代码进行计算。关于委托代码的信息，请参见相应的<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/delegation-code/">章节</a>.</p>
+<p>除了Java代码，Camunda平台还支持将表达式作为委托代码进行计算。关于委托代码的信息，请参见相应的<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/delegation-code/">章节</a>.</p>
 
 <p>目前表达式支持两种类型：<code>camunda:expression</code>和<code>camunda:delegateExpression</code>。</p>
 
-<p>通过<code>camunda:expression</code>，可以计算一个值表达式或调用一个方法表达式。你可以使用在表达式或Spring和CDI Bean中可用的特殊变量。关于<a href="#availability-of-variables-and-functions-inside-expression-language">变量</a>、<a href="http://camunda-cn.shaochenfeng.com/user-guide/spring-framework-integration/#expression-resolving">Spring</a>，以及<a href="http://camunda-cn.shaochenfeng.com/user-guide/cdi-java-ee-integration/expression-resolving/">CDI</a>bean的更多信息，请参见相应章节。</p>
+<p>通过<code>camunda:expression</code>，可以计算一个值表达式或调用一个方法表达式。你可以使用在表达式或Spring和CDI Bean中可用的特殊变量。关于<a href="#availability-of-variables-and-functions-inside-expression-language">变量</a>、<a href="https://camunda-cn.shaochenfeng.com/user-guide/spring-framework-integration/#expression-resolving">Spring</a>，以及<a href="https://camunda-cn.shaochenfeng.com/user-guide/cdi-java-ee-integration/expression-resolving/">CDI</a>bean的更多信息，请参见相应章节。</p>
 
 <pre><code class="language-xml">  &lt;process id=&quot;process&quot;&gt;
     &lt;extensionElements&gt;
@@ -8379,7 +8379,7 @@ var _mtac = {};
 
 <h2 id="外部任务错误处理">外部任务错误处理</h2>
 
-<p>外部任务可以定义 <a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/extension-elements/#erroreventdefinition">camunda:errorEventDefinition</a>元素，可以用JUEL表达式提供。该表达式在<code>ExternalTaskService#complete</code>和<code>ExternalTaskService#handleFailure</code>时被计算。如果表达式结果为 &ldquo;true&rdquo;，就会抛出一个BPMN错误，这个错误可以被<a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/events/error-events/#error-boundary-event">错误边界事件</a>捕获。</p>
+<p>外部任务可以定义 <a href="https://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/extension-elements/#erroreventdefinition">camunda:errorEventDefinition</a>元素，可以用JUEL表达式提供。该表达式在<code>ExternalTaskService#complete</code>和<code>ExternalTaskService#handleFailure</code>时被计算。如果表达式结果为 &ldquo;true&rdquo;，就会抛出一个BPMN错误，这个错误可以被<a href="https://camunda-cn.shaochenfeng.com/reference/bpmn20/events/error-events/#error-boundary-event">错误边界事件</a>捕获。</p>
 
 <p>在外部任务的范围内，表达式可以通过key <code>externalTask</code>对象访问<a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/externaltask/ExternalTask.html">ExternalTaskEntity</a>
 ，它为 &ldquo;errorMessage&rdquo;、&rdquo;errorDetails&rdquo;、&rdquo;workerId&rdquo;、&rdquo;retries&rdquo; 等提供getter方法。</p>
@@ -8404,11 +8404,11 @@ var _mtac = {};
 &lt;/bpmn:serviceTask&gt;
 </code></pre>
 
-<p>关于外部任务背景下错误事件定义功能的进一步细节，请查阅<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/external-tasks/#error-event-definitions">外部任务指南</a>.</p>
+<p>关于外部任务背景下错误事件定义功能的进一步细节，请查阅<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/external-tasks/#error-event-definitions">外部任务指南</a>.</p>
 
 <h2 id="value">Value</h2>
 
-<p>很多的BPMN和CMMN元素允许通过表达式指定其内容或属性值。请参阅参考文献中<a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/">BPMN</a>和<a href="http://camunda-cn.shaochenfeng.com/reference/cmmn11/">CMMN</a>的相应章节，以了解更详细的例子。</p>
+<p>很多的BPMN和CMMN元素允许通过表达式指定其内容或属性值。请参阅参考文献中<a href="https://camunda-cn.shaochenfeng.com/reference/bpmn20/">BPMN</a>和<a href="https://camunda-cn.shaochenfeng.com/reference/cmmn11/">CMMN</a>的相应章节，以了解更详细的例子。</p>
 
 <h1 id="表达式语言内变量与函数">表达式语言内变量与函数</h1>
 
@@ -8455,7 +8455,7 @@ var _mtac = {};
       <td><code>externalTask</code></td>
       <td><code><a href="https://docs.camunda.org/manual/latest/reference/javadoc/?org/camunda/bpm/engine/externaltask/ExternalTask.html">ExternalTask</a>
 </code></td>
-      <td>Available during an external task context activity (e.g. in <a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/extension-elements/#erroreventdefinition">camunda:errorEventDefinition</a> expressions).</td>
+      <td>Available during an external task context activity (e.g. in <a href="https://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/extension-elements/#erroreventdefinition">camunda:errorEventDefinition</a> expressions).</td>
     </tr>
     <tr>
       <td><code>caseExecution</code></td>
@@ -8483,7 +8483,7 @@ var _mtac = {};
 
 <h2 id="从-spring-和-cdi-的外部上下文中获取外部变量">从 Spring 和 CDI 的外部上下文中获取外部变量</h2>
 
-<p>如果流程引擎与 Spring 或 CDI 集成，则可以在表达式中访问 Spring 和 CDI Bean。请参阅 <a href="http://camunda-cn.shaochenfeng.com/user-guide/spring-framework-integration/#expression-resolving">Spring</a> 和 <a href="http://camunda-cn.shaochenfeng.com/user-guide/cdi-java-ee-integration/expression-resolving/">CDI</a> 的相应章节以了解更多信息。下面的例子显示了一个实现了 &ldquo;JavaDelegate &ldquo;接口的Bean作为委托表达式的用法。</p>
+<p>如果流程引擎与 Spring 或 CDI 集成，则可以在表达式中访问 Spring 和 CDI Bean。请参阅 <a href="https://camunda-cn.shaochenfeng.com/user-guide/spring-framework-integration/#expression-resolving">Spring</a> 和 <a href="https://camunda-cn.shaochenfeng.com/user-guide/cdi-java-ee-integration/expression-resolving/">CDI</a> 的相应章节以了解更多信息。下面的例子显示了一个实现了 &ldquo;JavaDelegate &ldquo;接口的Bean作为委托表达式的用法。</p>
 
 <pre><code class="language-xml">  &lt;serviceTask id=&quot;task1&quot; camunda:delegateExpression=&quot;${myBean}&quot; /&gt;
 </code></pre>
@@ -8544,7 +8544,7 @@ var _mtac = {};
 
 <h2 id="camunda-spin-内置的方法">Camunda Spin 内置的方法</h2>
 
-<p>如果激活了Camunda Spin流程引擎插件，Spin函数<code>S</code>、<code>XML</code>和<code>JSON</code>在表达式中也可用。参见<a href="http://camunda-cn.shaochenfeng.com/user-guide/data-formats/">数据格式部分</a>了解详情。</p>
+<p>如果激活了Camunda Spin流程引擎插件，Spin函数<code>S</code>、<code>XML</code>和<code>JSON</code>在表达式中也可用。参见<a href="https://camunda-cn.shaochenfeng.com/user-guide/data-formats/">数据格式部分</a>了解详情。</p>
 
 <pre><code class="language-xml">  &lt;serviceTask id=&quot;task&quot; camunda:expression=&quot;${XML(xml).attr('test').value()}&quot; resultVariable=&quot;test&quot; /&gt;
 </code></pre>
@@ -8589,9 +8589,9 @@ var _mtac = {};
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="http://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="https://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
-            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2022
+            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2025
           </p>
           <p>
             <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a> The content on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
@@ -8604,7 +8604,7 @@ var _mtac = {};
 
   
 
-  <script type="text/javascript" src="http://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

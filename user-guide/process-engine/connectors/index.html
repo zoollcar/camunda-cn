@@ -58,11 +58,11 @@ var _mtac = {};
   <title>连接器 | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="http://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="https://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="http://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
 </head>
 <body class="">
 
@@ -73,8 +73,8 @@ var _mtac = {};
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="http://camunda-cn.shaochenfeng.com/">
-      <img src="http://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="https://camunda-cn.shaochenfeng.com/">
+      <img src="https://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">中文站</span>
       </a>
@@ -8187,7 +8187,7 @@ var _mtac = {};
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="http://camunda-cn.shaochenfeng.com/">
+    <select id="version-select" data-basepath="/manual" base-url="https://camunda-cn.shaochenfeng.com/">
       
         <option  selected >develop</option>
       
@@ -8253,7 +8253,7 @@ var _mtac = {};
   </tr>
 </table>
 
-<p>也可以在camunda中实现你自己的自定义连接器。关于扩展连接器的更多信息，请访问<a href="http://camunda-cn.shaochenfeng.com/reference/connect/extending-connect/">外部连接器</a>章节。</p>
+<p>也可以在camunda中实现你自己的自定义连接器。关于扩展连接器的更多信息，请访问<a href="https://camunda-cn.shaochenfeng.com/reference/connect/extending-connect/">外部连接器</a>章节。</p>
 
 <h1 id="配置-camunda连接器">配置 Camunda连接器</h1>
 
@@ -8316,7 +8316,7 @@ var _mtac = {};
 
 <h2 id="配置流程引擎插件">配置流程引擎插件</h2>
 
-<p><code>camunda-engine-plugin-connect</code>包含一个名为<code>org.camunda.connect.plugin.impl.ConnectProcessEnginePlugin</code>的类，可以使用<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-plugins/">插件机制</a>在流程引擎中注册。 例如，如下<code>bpm-platform.xml</code>配置了该插件：</p>
+<p><code>camunda-engine-plugin-connect</code>包含一个名为<code>org.camunda.connect.plugin.impl.ConnectProcessEnginePlugin</code>的类，可以使用<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-engine-plugins/">插件机制</a>在流程引擎中注册。 例如，如下<code>bpm-platform.xml</code>配置了该插件：</p>
 
 <pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;bpm-platform xmlns=&quot;http://www.camunda.org/schema/1.0/BpmPlatform&quot;
@@ -8344,7 +8344,7 @@ var _mtac = {};
 
 <h1 id="使用连接器">使用连接器</h1>
 
-<p>你需要添加Camunda 额外元素<a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/extension-elements/#camunda-connector">connector</a>来使用连接器。connector使用唯一的<a href="http://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/extension-elements/#camunda-connectorid">connectorId</a>来配置的。它指定了所使用的连接器实现。目前支持的连接器的ID可以在本节的开头找到。此外，可以用<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/variables/#input-output-variable-mapping">输入/输出映射</a>配置连接器。所需的输入参数和可用的输出参数取决于连接器的实现。也可以提供额外的输入参数，以便在连接器中使用。</p>
+<p>你需要添加Camunda 额外元素<a href="https://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/extension-elements/#camunda-connector">connector</a>来使用连接器。connector使用唯一的<a href="https://camunda-cn.shaochenfeng.com/reference/bpmn20/custom-extensions/extension-elements/#camunda-connectorid">connectorId</a>来配置的。它指定了所使用的连接器实现。目前支持的连接器的ID可以在本节的开头找到。此外，可以用<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/variables/#input-output-variable-mapping">输入/输出映射</a>配置连接器。所需的输入参数和可用的输出参数取决于连接器的实现。也可以提供额外的输入参数，以便在连接器中使用。</p>
 
 <p>作为一个例子，我们展示了Camunda SOAP连接器实现的一个简略配置。可以在GitHub上的<a href="https://github.com/camunda/camunda-bpm-examples">Camunda示例库</a>找到完整的<a href="https://github.com/camunda/camunda-bpm-examples/tree/master/servicetask/soap-service">案例</a>源码。</p>
 
@@ -8408,9 +8408,9 @@ var _mtac = {};
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="http://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="https://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
-            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2022
+            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2025
           </p>
           <p>
             <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a> The content on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
@@ -8423,7 +8423,7 @@ var _mtac = {};
 
   
 
-  <script type="text/javascript" src="http://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

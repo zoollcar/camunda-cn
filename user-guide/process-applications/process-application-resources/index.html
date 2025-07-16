@@ -58,11 +58,11 @@ var _mtac = {};
   <title>Process Application 资源访问 | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="http://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="https://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="http://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
 </head>
 <body class="">
 
@@ -73,8 +73,8 @@ var _mtac = {};
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="http://camunda-cn.shaochenfeng.com/">
-      <img src="http://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="https://camunda-cn.shaochenfeng.com/">
+      <img src="https://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">中文站</span>
       </a>
@@ -8187,7 +8187,7 @@ var _mtac = {};
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="http://camunda-cn.shaochenfeng.com/">
+    <select id="version-select" data-basepath="/manual" base-url="https://camunda-cn.shaochenfeng.com/">
       
         <option  selected >develop</option>
       
@@ -8236,7 +8236,7 @@ var _mtac = {};
     <div class="col-xs-12 content-text">
       
 
-<p>流程应用程序提供特定于它们所包含的流程的资源并对其进行逻辑分组。 有些资源是应用程序本身的一部分，例如类加载器及其类和资源，以及在运行时由流程引擎管理的资源，例如一组 <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/scripting/">脚本引擎</a> 或 <a href="http://camunda-cn.shaochenfeng.com/user-guide/data-formats/">Spin 数据格式</a>。 本节描述了流程引擎在哪些条件下在流程应用程序级别查询资源以及如何执行该查询。</p>
+<p>流程应用程序提供特定于它们所包含的流程的资源并对其进行逻辑分组。 有些资源是应用程序本身的一部分，例如类加载器及其类和资源，以及在运行时由流程引擎管理的资源，例如一组 <a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/scripting/">脚本引擎</a> 或 <a href="https://camunda-cn.shaochenfeng.com/user-guide/data-formats/">Spin 数据格式</a>。 本节描述了流程引擎在哪些条件下在流程应用程序级别查询资源以及如何执行该查询。</p>
 
 <figure class="image">
   <span><img
@@ -8261,7 +8261,7 @@ var _mtac = {};
 
 <div class="note ">
   <h3>上下文切换背后的机制</h3>
-  <p>请注意，上下文切换背后的实际机制取决于平台。 例如：在Apache Tomcat这样的servlet容器中，只需要将Thread当前的Context Classloader设置为web应用的Classloader即可。 上下文特定的操作，例如应用程序本地 JNDI 名称的解析，都建立在此之上。 在 EJB 容器中，这更复杂。 这就是 ProcessApplication 类在该环境中本身就是 EJB 的原因（请参阅：<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-applications/the-process-application-class/#invocation-semantics- of-the-ejbprocessapplication">Ejb Process Application</a>)。 然后，流程引擎可以将对该 EJB 的业务方法的调用添加到调用堆栈中，并让应用服务器在后台执行其特定的逻辑。</p>
+  <p>请注意，上下文切换背后的实际机制取决于平台。 例如：在Apache Tomcat这样的servlet容器中，只需要将Thread当前的Context Classloader设置为web应用的Classloader即可。 上下文特定的操作，例如应用程序本地 JNDI 名称的解析，都建立在此之上。 在 EJB 容器中，这更复杂。 这就是 ProcessApplication 类在该环境中本身就是 EJB 的原因（请参阅：<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-applications/the-process-application-class/#invocation-semantics- of-the-ejbprocessapplication">Ejb Process Application</a>)。 然后，流程引擎可以将对该 EJB 的业务方法的调用添加到调用堆栈中，并让应用服务器在后台执行其特定的逻辑。</p>
 </div>
 
 
@@ -8278,7 +8278,7 @@ var _mtac = {};
 
 <h2 id="案例">案例</h2>
 
-<p>为了阐明用例，我们假设流程应用程序使用 <a href="http://camunda-cn.shaochenfeng.com/user-guide/data-formats/json/#serializing-process-variables">功能以 JSON 格式序列化对象类型变量</a>。 但是，对于该应用程序，应自定义 JSON 序列化（考虑将日期序列化为 JSON 字符串的多种方法）。 因此，流程应用程序包含一个 Camunda Spin 数据格式配置器实现，它以所需的方式配置 Spin JSON 数据格式。 反过来，流程引擎为该特定流程应用程序管理 Spin 数据格式以序列化对象值。 现在，我们假设一个 Java servlet 调用流程引擎 API 来提交一个 Java 对象并将其序列化为 JSON 格式。 代码可能如下所示：</p>
+<p>为了阐明用例，我们假设流程应用程序使用 <a href="https://camunda-cn.shaochenfeng.com/user-guide/data-formats/json/#serializing-process-variables">功能以 JSON 格式序列化对象类型变量</a>。 但是，对于该应用程序，应自定义 JSON 序列化（考虑将日期序列化为 JSON 字符串的多种方法）。 因此，流程应用程序包含一个 Camunda Spin 数据格式配置器实现，它以所需的方式配置 Spin JSON 数据格式。 反过来，流程引擎为该特定流程应用程序管理 Spin 数据格式以序列化对象值。 现在，我们假设一个 Java servlet 调用流程引擎 API 来提交一个 Java 对象并将其序列化为 JSON 格式。 代码可能如下所示：</p>
 
 <pre><code class="language-java">public class ObjectValueServlet extends HttpServlet {
 
@@ -8348,9 +8348,9 @@ var _mtac = {};
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="http://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="https://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
-            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2022
+            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2025
           </p>
           <p>
             <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a> The content on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
@@ -8363,7 +8363,7 @@ var _mtac = {};
 
   
 
-  <script type="text/javascript" src="http://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

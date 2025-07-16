@@ -58,11 +58,11 @@ var _mtac = {};
   <title>流程实例迁移 | docs.camunda.org</title>
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="shortcut icon" href="http://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="https://camunda-cn.shaochenfeng.com/img/favicon.ico" type="image/x-icon" />
 
   
 
-  <link rel="stylesheet" href="http://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://camunda-cn.shaochenfeng.com/css/docs.5e0ed6bdbf34f11a2f2b11263fa2518c7ace7f906a4a3208e959b36ab6a5a5a2.css" integrity="sha256-Xg7Wvb808RovKxEmP6JRjHrOf5BqSjII6VmzaralpaI=" crossorigin="anonymous">
 </head>
 <body class="">
 
@@ -73,8 +73,8 @@ var _mtac = {};
 <nav class="navbar navbar-fixed-top">
   <div class="navbar-container">
     <div class="navbar-header">
-      <a href="http://camunda-cn.shaochenfeng.com/">
-      <img src="http://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
+      <a href="https://camunda-cn.shaochenfeng.com/">
+      <img src="https://camunda-cn.shaochenfeng.com/img/Camunda-Circle.svg" style="width:35;height:35px; padding:0 5px 7px 0;">
         <span class="brand-name">Camunda</span>
         <span class="site-name">中文站</span>
       </a>
@@ -8187,7 +8187,7 @@ var _mtac = {};
 
   <div class="content">
     <label for="version-select">Version:</label>
-    <select id="version-select" data-basepath="/manual" base-url="http://camunda-cn.shaochenfeng.com/">
+    <select id="version-select" data-basepath="/manual" base-url="https://camunda-cn.shaochenfeng.com/">
       
         <option  selected >develop</option>
       
@@ -8252,7 +8252,7 @@ var _mtac = {};
 同样的原则也适用于其他BPMN元素类型。</p>
 
 <p>对于活动在语义上不等同的情况。
-我们建议将迁移与 <a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-instance-modification/">流程实例修改 API</a> 结合起来。例如：在迁移前取消一个活动实例，在迁移后启动一个新的实例。</p>
+我们建议将迁移与 <a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-instance-modification/">流程实例修改 API</a> 结合起来。例如：在迁移前取消一个活动实例，在迁移后启动一个新的实例。</p>
 
 <p>在本节的其余部分，除非另有说明，否则将使用以下流程模型来说明API和迁移的影响：</p>
 
@@ -8267,7 +8267,7 @@ var _mtac = {};
 <div class="note enterprise-feature">
   <h3>企业版特征</h3>
 
-  <p class="description">Camunda企业版的<a href="http://camunda-cn.shaochenfeng.com/webapps/cockpit/bpmn/process-instance-migration/">Camunda Cockpit</a>提供了一个用于迁移流程实例的用户界面。</p>
+  <p class="description">Camunda企业版的<a href="https://camunda-cn.shaochenfeng.com/webapps/cockpit/bpmn/process-instance-migration/">Camunda Cockpit</a>提供了一个用于迁移流程实例的用户界面。</p>
 
   <p>
     查看 <a href="http://camunda.com/bpm/enterprise/">Camunda 企业版主页</a>
@@ -8334,7 +8334,7 @@ runtimeService.newMigration(migrationPlan)
 
 <h1 id="api">API</h1>
 
-<p>下面给出了流程实例迁移的Java API的方法。请注意，这些操作也可以通过<a href="http://camunda-cn.shaochenfeng.com/reference/rest/migration/">REST</a>方式进行。</p>
+<p>下面给出了流程实例迁移的Java API的方法。请注意，这些操作也可以通过<a href="https://camunda-cn.shaochenfeng.com/reference/rest/migration/">REST</a>方式进行。</p>
 
 <h2 id="创建迁移计划">创建迁移计划</h2>
 
@@ -8412,7 +8412,7 @@ MigrationPlan migrationPlan = processEngine.getRuntimeService()
 <h4 id="已知的限制">已知的限制</h4>
 
 <p>目前，不可能异步设置瞬时变量。然而。
-你可以同步地<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/variables/#瞬时变量">设置瞬时变量</a>。</p>
+你可以同步地<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/variables/#瞬时变量">设置瞬时变量</a>。</p>
 
 <h2 id="生成迁移计划">生成迁移计划</h2>
 
@@ -8454,7 +8454,7 @@ MigrationPlan migrationPlan = processEngine.getRuntimeService()
 
 <p>迁移计划可以通过使用API方法 <code>RuntimeService#newMigration</code> 应用于一组流程实例。</p>
 
-<p>迁移既可以同步执行（阻塞的），也可以使用<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/batch/">batch</a>异步执行（非阻塞）。</p>
+<p>迁移既可以同步执行（阻塞的），也可以使用<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/batch/">batch</a>异步执行（非阻塞）。</p>
 
 <p>下面是两者的对比：</p>
 
@@ -8565,13 +8565,13 @@ Batch batch = runtimeService.newMigration(migrationPlan)
   .executeAsync();
 </code></pre>
 
-<p>使用批处理，流程实例迁移被分割成几个Job，这些Job被异步执行。这些批处理Job是由Job执行器执行的。更多信息请参见<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/batch/">批处理</a>部分。如果所有的批处理执行Job都成功完成，一个批处理就完成了。然而，与同步迁移相比，不能保证所有或没有流程实例被迁移。由于迁移被分割成几个独立的Job，每一个Job都可能失败或成功。</p>
+<p>使用批处理，流程实例迁移被分割成几个Job，这些Job被异步执行。这些批处理Job是由Job执行器执行的。更多信息请参见<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/batch/">批处理</a>部分。如果所有的批处理执行Job都成功完成，一个批处理就完成了。然而，与同步迁移相比，不能保证所有或没有流程实例被迁移。由于迁移被分割成几个独立的Job，每一个Job都可能失败或成功。</p>
 
 <p>如果一个迁移Job失败了，Job执行者会重试，如果没有重试，就会产生一个事件。在这种情况下，需要手动操作来完成批量迁移。Job的重试次数可以增加，也可以删除该Job。删除会取消特定实例的迁移，但不会影响到此后的批次。</p>
 
 <h4 id="异构集群中的批量迁移">异构集群中的批量迁移</h4>
 
-<p>正如用户指南的<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/#job-execution-in-heterogeneous-clusters">job执行器</a>部分所描述的，流程引擎可用于异构集群，其中程序不均匀地部署在集群节点上。
+<p>正如用户指南的<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/the-job-executor/#job-execution-in-heterogeneous-clusters">job执行器</a>部分所描述的，流程引擎可用于异构集群，其中程序不均匀地部署在集群节点上。
 <em>deployment-aware</em> 的Job执行器只执行在它那里注册的部署的Job。
 在一个异构集群中，这避免了访问部署资源的问题。</p>
 
@@ -8918,7 +8918,7 @@ the following requirements:</p>
 
 <ul>
 <li>Validation is skipped when the engine configuration flag <code>javaSerializationFormatEnabled</code> is set to <code>true</code></li>
-<li>Please see <a href="http://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#javaSerializationFormatEnabled">Process Engine Configuration Reference</a> for more details</li>
+<li>Please see <a href="https://camunda-cn.shaochenfeng.com/reference/deployment-descriptors/tags/process-engine/#javaSerializationFormatEnabled">Process Engine Configuration Reference</a> for more details</li>
 </ul></li>
 </ul>
 
@@ -8931,7 +8931,7 @@ validation errors.</p>
 <p>An activity must stay a descendant of its closest ancestor scope that migrates (i.e., that is not cancelled during migration).</p>
 
 <p>Consider the following migration plan for the example processes shown at the
-<a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-instance-migration/">beginning of this chapter</a>:</p>
+<a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/process-instance-migration/">beginning of this chapter</a>:</p>
 
 <pre><code class="language-java">MigrationPlan migrationPlan = processEngine.getRuntimeService()
   .createMigrationPlan(&quot;exampleProcess:1&quot;, &quot;exampleProcess:2&quot;)
@@ -9050,7 +9050,7 @@ Validation cannot ensure that such data is useful in the context of the target p
 
 <h4 id="对象变量的反序列化">对象变量的反序列化</h4>
 
-<p><a href="http://camunda-cn.shaochenfeng.com/user-guide/process-engine/variables/#supported-variable-values">Object type variables</a> represent Java objects. That means they have a serialized value along with a Java type name that is used to deserialize the value into a Java object. When migrating between processes of different process
+<p><a href="https://camunda-cn.shaochenfeng.com/user-guide/process-engine/variables/#supported-variable-values">Object type variables</a> represent Java objects. That means they have a serialized value along with a Java type name that is used to deserialize the value into a Java object. When migrating between processes of different process
 applications, it may occur that an Object variable refers to a Java class that does not exist in the process
 application of the target process.</p>
 
@@ -9189,9 +9189,9 @@ that situation:</p>
           </p>
 
           <p>
-            <a href="http://camunda.org">camunda.org</a> and <a href="http://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
+            <a href="http://camunda.org">camunda.org</a> and <a href="https://camunda-cn.shaochenfeng.com/">docs.camunda.org</a> are part of Camunda Platform
             <span class="splitter">|</span>
-            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2022
+            Built by <a href="http://www.camunda.com">camunda</a> and contributors &mdash; <a href="http://www.camunda.org/privacy.html">Privacy Statement</a> &mdash; camunda Services GmbH &copy; 2025
           </p>
           <p>
             <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a> The content on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
@@ -9204,7 +9204,7 @@ that situation:</p>
 
   
 
-  <script type="text/javascript" src="http://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://camunda-cn.shaochenfeng.com/js/docs.af35eac00e90e84ffb383bef9bc3effa643782ea23f739703814f958f5c6b32e.js" todo-integrity="sha256-rzXqwA6Q6E/7ODvvm8Pv&#43;mQ3guoj9zlwOBT5WPXGsy4=" crossorigin="anonymous"></script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
